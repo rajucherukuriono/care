@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LifeCare</fullName>
+    <fields>Name</fields>
+    <fields>Overall_satisfaction__c</fields>
+    <fields>Revised_Overall_Satisfaction__c</fields>
+    <fields>QA_Status__c</fields>
+    <fields>Assign_To__c</fields>
+    <label>LifeCare</label>
+</CompactLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Record_Type__c</name>
+    <picklistValues>
+        <masterLabel>AS - Child Care</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AS - Child Care Center</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AS - Housekeeping</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AS - Personal Assistant</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AS - Pet Care</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AS - Standard</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AS - Tutor</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Assisted Search Survey</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Assisted Search Survey - Provider</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BUC</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BUC US Surveys</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Call Center</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chargeback</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Member Care Case Survey</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Member Surveys</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile Help</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Selected</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Senior Care Case Survey</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Senior Care Consult</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Senior Care Event Survey</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Senior Care Provider Feedback Survey</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Media US</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Standard</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

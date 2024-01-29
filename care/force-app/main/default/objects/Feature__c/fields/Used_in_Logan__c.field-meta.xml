@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Used_in_Logan__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is this feature is used in the Logan Org?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check, if this feature is used in the Logan Org</inlineHelpText>
+    <label>Used in Logan</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

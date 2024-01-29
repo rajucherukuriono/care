@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Batch_Size_Link_Job__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>The number of Cases associated with Accounts per transaction.  Consider reducing if we&apos;re seeing CPU Limit errors.</inlineHelpText>
+    <label>Batch Size (Link Job)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

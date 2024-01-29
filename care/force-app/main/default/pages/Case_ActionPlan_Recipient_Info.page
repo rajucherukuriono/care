@@ -1,0 +1,60 @@
+<apex:page standardController="Case">
+ <style>
+ .hasMotif { margin: 0px; }
+ </style>
+ <apex:pageBlock html-width="100%">
+  <apex:pageBlockSection columns="1" title="Care recipient 1">
+    <apex:outputField value="{!Case.Type_of_Care_and_Frequency__c}"/>
+    <apex:outputField value="{!Case.Assistance_with_ADLs__c}"/>
+    <apex:outputField value="{!Case.Assistance_with_Instrumental_Activities__c}"/>
+    <apex:outputField value="{!Case.Mental_Status__c}"/>
+    <apex:outputField value="{!Case.Affect__c}"/>
+    <apex:outputField value="{!Case.Continent__c}"/>
+    <apex:outputField value="{!Case.Incontinent_consistent_or_intermittent__c}"/>
+    <apex:outputField value="{!Case.Medical_Issues_2__c}"/>
+    <apex:outputField value="{!Case.Functional_Issues__c}"/>
+    <apex:outputField value="{!Case.Diagnosis__c}"/>
+    <apex:outputField value="{!Case.Other_Needs__c}"/>
+    <apex:outputField value="{!Case.Changes_within_Past_Year__c}"/>
+    
+    
+    <apex:outputField value="{!Case.Dementia__c}"/>    
+    <apex:outputField value="{!Case.Behavioral_Challenges__c}"/>
+    <apex:outputField value="{!Case.X1_to_2_Person_Assist__c}"/>
+    <apex:outputField value="{!Case.Food_Allergies__c}"/>
+    <apex:outputField value="{!Case.Special_dietary_concerns__c}"/>    
+    <apex:outputField value="{!Case.Does_client_have_appetitie_disturbances__c}"/>
+    <apex:outputField value="{!Case.Other_Medical_Issues__c}"/>
+    <apex:outputField value="{!Case.Other_Functional_Issues__c}"/>
+    <apex:outputField value="{!Case.Hearing_and_Vision_Status__c}"/>
+    <apex:outputField value="{!Case.Assistive_Devices__c}"/>
+  </apex:pageBlockSection>
+
+  <apex:pageBlockSection columns="1" title="Care recipient 2">
+    <apex:outputField value="{!Case.Type_of_Care_and_Frequency_2__c}"/>
+    <apex:outputField value="{!Case.Assistance_with_ADLs_2__c}"/>
+    <apex:outputField value="{!Case.Assistance_with_IADLS_2__c}"/>
+    <apex:outputField value="{!Case.Mental_Status_2__c}"/>
+    <apex:outputField value="{!Case.Affect_2__c}"/>
+    <apex:outputField value="{!Case.Continent_2__c}"/>
+    <apex:outputField value="{!Case.Incontinence_consistence_intermittent_2__c}"/>
+    <apex:outputField value="{!Case.Medical_Issues_2__c}"/>
+    <apex:outputField value="{!Case.Functional_Issues_2__c}"/>
+    <apex:outputField value="{!Case.Diagnosis_2__c}"/>
+    <apex:outputField value="{!Case.Other_Needs_2__c}"/>
+    <apex:outputField value="{!Case.Changes_within_Past_Year_2__c}"/>
+    
+    <apex:outputField value="{!Case.Dementia_2__c}"/>
+    <apex:outputField value="{!Case.Behavioral_Challenges_2__c}"/>
+    <apex:outputField value="{!Case.X1_to_2_Person_Assist_2__c}"/>
+    <apex:outputField value="{!Case.Food_Allergies_2__c}"/>
+    <apex:outputField value="{!Case.Special_dietary_concerns_2__c}"/>
+    <apex:outputField value="{!Case.Does_recipient_have_appetite_disturbanc2__c}"/>
+    <apex:outputField value="{!Case.Other_Functional_Issues_2__c}"/>
+    <apex:outputField value="{!Case.Hearing_and_Vision_Status_2__c}"/>
+    <apex:outputField value="{!Case.Assistive_Devices_2__c}"/>
+  </apex:pageBlockSection>
+
+ </apex:pageBlock>
+
+</apex:page>

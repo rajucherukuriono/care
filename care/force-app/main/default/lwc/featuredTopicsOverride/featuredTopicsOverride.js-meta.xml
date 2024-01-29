@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Custom Featured Topics</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightningCommunity__Page</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="trustAndSafetyLink" label="Trust And Safety Article Url" type="String" description="Trust and Safety Topic Url"/>
+            <property name="trustAndSafetyBottomLeft" label="Trust And Safety Bottom Left Text" type="String" description="Trust And Safety Bottom Left Text"/>
+            <property name="trustAndSafetyTopLeft" label="Trust And Safety Top Left Text" type="String" description="Trust And Safety Top Left Text"/>
+            <property name="trustAndSafetyTopRight" label="Trust And Safety Top Right Text" type="String" description="Trust And Safety Top Right Text"/>
+            <property name="trustAndSafetyBottomRight" label="Trust And Safety Bottom Right Text" type="String" description="Trust And Safety Bottom Right Text"/>
+            <property name="trustAndSafetyCentered" label="Trust And Safety Centered Text" type="String" description="Trust And Safety Centered Text"/>
+        
+
+        <property name="companyLink" label="Company Article Url" type="String" description="Company Topic Url"/>
+        <property name="companyBottomLeft" label="Company Bottom Left Text" type="String" description="Company Bottom Left Text"/>
+        <property name="companyTopLeft" label="Company Top Left Text" type="String" description="Company Top Left Text"/>
+        <property name="companyTopRight" label="Company Top Right Text" type="String" description="Company Top Right Text"/>
+        <property name="companyBottomRight" label="Company Bottom Right Text" type="String" description="Company Bottom Right Text"/>
+        <property name="companyCentered" label="Company Centered Text" type="String" description="Company Centered Text"/>
+
+        <property name="subscriptionAndBillingLink" label="Subscription And Billing Article Url" type="String" description="Subscription And Billing Topic Url"/>
+        <property name="subscriptionAndBillingBottomLeft" label="Subscription And Billing Bottom Left Text" type="String" description="Subscription And Billing Bottom Left Text"/>
+        <property name="subscriptionAndBillingTopLeft" label="Subscription And Billing Top Left Text" type="String" description="Subscription And Billing Top Left Text"/>
+        <property name="subscriptionAndBillingTopRight" label="Subscription And Billing Top Right Text" type="String" description="Subscription And Billing Top Right Text"/>
+        <property name="subscriptionAndBillingBottomRight" label="Subscription And Billing Bottom Right Text" type="String" description="Subscription And Billing Bottom Right Text"/>
+        <property name="subscriptionAndBillingCentered" label="Subscription And Billing Centered Text" type="String" description="Subscription And Billing Centered Text"/>
+
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

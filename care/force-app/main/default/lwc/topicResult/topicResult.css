@@ -1,0 +1,7 @@
+a {
+    color: var(--colorTextDefault);
+}
+a:hover {
+    color: #3B71AA;
+    text-decoration: none;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_CGs_Passed__c</fullName>
+    <description>Sforce 2497</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Total number of Caregivers who passed verification audit successfully</inlineHelpText>
+    <label>Total CGs Passed</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

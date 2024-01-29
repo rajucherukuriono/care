@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Employer Program</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Failed</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invalid Record Type</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Premium</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTBF Anonymize</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTBF Complete</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTBF Do Not Process</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTBF Fail - Employer Program</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTBF Fail - Invalid Record Type</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTBF Fail - Premium</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTBF Fail - Safety Case</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTBF Fix</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RTBF Override</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Safety Case</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

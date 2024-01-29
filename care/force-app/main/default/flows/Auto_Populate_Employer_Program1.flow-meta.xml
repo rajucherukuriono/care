@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <description>SFORCE-3149 BUC UK-IRE: Punch List phase 2 - Create/update Fields</description>
+    <environments>Default</environments>
+    <interviewLabel>Auto Populate Employer Program {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Auto Populate Employer Program</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Employer_Program</name>
+        <label>Update Employer Program</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>Employer_Program__pc</field>
+            <value>
+                <elementReference>$Record.Employer_Program_Pick__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Employer_Program</targetReference>
+        </connector>
+        <filterFormula>IF({!$Record.RecordType.DeveloperName}=&apos;International_Person_Account&apos;, true, false)</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

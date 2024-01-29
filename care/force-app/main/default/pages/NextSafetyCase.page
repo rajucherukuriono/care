@@ -1,0 +1,16 @@
+<apex:page StandardController="Case" extensions="NextSafetyCaseUSController" showHeader="false" sidebar="false" lightningstylesheets="true">
+
+    <apex:includeScript value="/support/console/48.0/integration.js" />
+    <apex:includeScript value="/canvas/sdk/js/48.0/publisher.js" />
+    <apex:includeScript value="{!$Resource.CareDotComConsoleConroller}" />
+   
+    <apex:form id="all" style="width:100%">
+        <div align="center">
+            <apex:commandButton action="{!returnLinkAction}" 
+            disabled="true"
+            value="Next Safety Case" 
+            oncomplete="moveToNextCaseFromHome('{!dispError}', '{!DesiredURL}','{!tryAgain}');"
+            styleClass="slds-vf-button_brand"/>
+        </div>
+    </apex:form>
+</apex:page>

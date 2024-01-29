@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>Approval</label>
+            <name>Approval</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Background Checks</label>
+            <name>Background_Checks</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Billing</label>
+            <name>Billing</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Business Accounts</label>
+            <name>Business_Accounts</name>
+        </dataCategory>
+        <dataCategory>
+            <label>CareCheck</label>
+            <name>CareCheck</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Close Account</label>
+            <name>Close_Account</name>
+        </dataCategory>
+        <dataCategory>
+            <label>COVID 19</label>
+            <name>COVID_19</name>
+        </dataCategory>
+        <dataCategory>
+            <label>FCC</label>
+            <name>FCC</name>
+        </dataCategory>
+        <dataCategory>
+            <label>General/Other</label>
+            <name>General_Other</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Information/Resources</label>
+            <name>Information_Resources</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Mobile</label>
+            <name>Mobile</name>
+        </dataCategory>
+        <dataCategory>
+            <label>MSI Email Team</label>
+            <name>MSI_Email_Team</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Non Member</label>
+            <name>Non_Member</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Provider Features</label>
+            <name>Provider_Features</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Provider Website Help</label>
+            <name>Provider_Website_Help</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Recruiting</label>
+            <name>Recruiting</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Seeker Website Help</label>
+            <name>Seeker_Website_Help</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Senior Care Inquiry</label>
+            <name>Senior_Care_Inquiry</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Spanish</label>
+            <name>Spanish</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Supervisor/Senior Only</label>
+            <name>Supervisor_Senior_Only</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Technical Issues</label>
+            <name>Technical_Issues</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Teen Provider Related</label>
+            <name>Teen_Provider_Related</name>
+        </dataCategory>
+        <dataCategory>
+            <label>US Bugs</label>
+            <name>US_Bugs</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Billing Team Only</label>
+            <name>Billing_Team_Only</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Call Center</label>
+            <name>Call_Center</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Call Center Escalations</label>
+            <name>Call_Center_Escalations</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Call Center MSI</label>
+            <name>Call_Center_MSI</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <description>Topics to help organize internal responses for members.  This concept corresponds to Folder Names (when responses used to be stored in Email Templates).</description>
+    <label>Internal Topic</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

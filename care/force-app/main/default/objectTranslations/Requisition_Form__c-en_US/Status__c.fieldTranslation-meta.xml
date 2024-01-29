@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Complete</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Complete - N/A</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Progress</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incomplete</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Need More Info</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Approval</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

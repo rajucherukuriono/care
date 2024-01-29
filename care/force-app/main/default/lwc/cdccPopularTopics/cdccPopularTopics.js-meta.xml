@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Popular Topics</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property label="Heading" name="heading" type="String" default="Popular Topics"/>
+            <property label="Topic 1 ID" name="topic1Id" type="String"/>
+            <property label="Topic 1 Icon Name" name="topic1IconName" type="String" datasource="edit,jobs,profile,report"/>
+            <property label="Topic 2 ID" name="topic2Id" type="String"/>
+            <property label="Topic 2 Icon Name" name="topic2IconName" type="String" datasource="edit,jobs,profile,report"/>
+            <property label="Topic 3 ID" name="topic3Id" type="String"/>
+            <property label="Topic 3 Icon Name" name="topic3IconName" type="String" datasource="edit,jobs,profile,report"/>
+            <property label="Topic 4 ID" name="topic4Id" type="String"/>
+            <property label="Topic 4 Icon Name" name="topic4IconName" type="String" datasource="edit,jobs,profile,report"/>
+            <property label="Topic 5 ID" name="topic5Id" type="String"/>
+            <property label="Topic 5 Icon Name" name="topic5IconName" type="String" datasource="edit,jobs,profile,report"/>
+            <property label="Topic 6 ID" name="topic6Id" type="String"/>
+            <property label="Topic 6 Icon Name" name="topic6IconName" type="String" datasource="edit,jobs,profile,report"/>
+            <property label="Topic 7 ID" name="topic7Id" type="String"/>
+            <property label="Topic 7 Icon Name" name="topic7IconName" type="String" datasource="edit,jobs,profile,report"/>
+            <property label="Topic 8 ID" name="topic8Id" type="String"/>
+            <property label="Topic 8 Icon Name" name="topic8IconName" type="String" datasource="edit,jobs,profile,report"/>
+            <property label="Topic 9 ID" name="topic9Id" type="String"/>
+            <property label="Topic 9 Icon Name" name="topic9IconName" type="String" datasource="edit,jobs,profile,report"/>
+            <property label="Topic 10 ID" name="topic10Id" type="String"/>
+            <property label="Topic 10 Icon Name" name="topic10IconName" type="String" datasource="edit,jobs,profile,report"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

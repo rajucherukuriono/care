@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Resolution_Milestone__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the milestone to create</inlineHelpText>
+    <label>Final Resolution Milestone</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

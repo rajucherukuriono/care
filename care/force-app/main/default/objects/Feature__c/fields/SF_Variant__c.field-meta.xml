@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SF_Variant__c</fullName>
+    <description>Feature is availble for SFC, SFA, SF1 or LTE</description>
+    <externalId>false</externalId>
+    <label>SF Variant</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Salesforce Classic</fullName>
+                <default>false</default>
+                <label>Salesforce Classic</label>
+            </value>
+            <value>
+                <fullName>Lightning Experience</fullName>
+                <default>false</default>
+                <label>Lightning Experience</label>
+            </value>
+            <value>
+                <fullName>SFC &amp; LEX</fullName>
+                <default>false</default>
+                <label>SFC &amp; LEX</label>
+            </value>
+            <value>
+                <fullName>Salesforce1</fullName>
+                <default>false</default>
+                <label>Salesforce1</label>
+            </value>
+            <value>
+                <fullName>SalesforceA</fullName>
+                <default>false</default>
+                <label>SalesforceA</label>
+            </value>
+            <value>
+                <fullName>SFA &amp; SF1</fullName>
+                <default>false</default>
+                <label>SFA &amp; SF1</label>
+            </value>
+            <value>
+                <fullName>SFC &amp; LEX &amp; SFM</fullName>
+                <default>false</default>
+                <label>SFC &amp; LEX &amp; SFM</label>
+            </value>
+            <value>
+                <fullName>SFC &amp; SFM</fullName>
+                <default>false</default>
+                <label>SFC &amp; SFM</label>
+            </value>
+            <value>
+                <fullName>LEX &amp; SFM</fullName>
+                <default>false</default>
+                <label>LEX &amp; SFM</label>
+            </value>
+            <value>
+                <fullName>Einstein Analytics</fullName>
+                <default>false</default>
+                <label>Einstein Analytics</label>
+            </value>
+            <value>
+                <fullName>Salesforce Mobile</fullName>
+                <default>false</default>
+                <label>Salesforce Mobile</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

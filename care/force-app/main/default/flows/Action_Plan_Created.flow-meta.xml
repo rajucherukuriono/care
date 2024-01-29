@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>Migrated from the: Action Plan Created workflow rule
+Workflow rule description: &quot;</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>TodaysDateformula</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <label>Action Plan Created</label>
+    <migratedFromWorkflowRuleName>Action Plan Created</migratedFromWorkflowRuleName>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>This will time stamp the field &quot;Action Plan Created Date&quot; with today&apos;s date</description>
+        <name>Update_Action_Plan_Created_Date_to_Today_s_Date</name>
+        <label>Update &quot;Action Plan Created Date&quot; to Today&apos;s Date</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>Action_Plan_Created_date__c</field>
+            <value>
+                <elementReference>TodaysDateformula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Action_Plan_Created_Date_to_Today_s_Date</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Action_Plan_Needs__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

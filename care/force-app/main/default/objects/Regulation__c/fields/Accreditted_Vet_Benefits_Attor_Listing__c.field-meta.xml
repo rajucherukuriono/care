@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accreditted_Vet_Benefits_Attor_Listing__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Accreditted Veterans Benefits Attorneys Listing</inlineHelpText>
+    <label>Accreditted Vet. Benefits Attor. Listing</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

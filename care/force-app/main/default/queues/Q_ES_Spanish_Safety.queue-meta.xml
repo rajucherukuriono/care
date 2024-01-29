@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>fake@e.mail</email>
+    <name>Safety - Spanish</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>G_Spanish_Safety</publicGroup>
+        </publicGroups>
+        <roles>
+            <role>International_Operations_Manager</role>
+            <role>Non_DACH_Team_Manager</role>
+            <role>Spanish_Team_Lead</role>
+            <role>SystemAdmin</role>
+        </roles>
+        <users>
+            <user>anakarina.morales@care.com</user>
+            <user>ana.rincon@care.com</user>
+            <user>anke.zaroba@care.com</user>
+            <user>basma.diaz@care.com</user>
+            <user>bernardita.maturana@care.com</user>
+            <user>gonzalo.conde@care.com</user>
+            <user>isanez@care.com</user>
+            <user>karina.nunez-rimola@care.com</user>
+            <user>kimberly.raboin@care.com</user>
+            <user>leslie.gargiulo@care.com</user>
+            <user>maire.visker@care.com</user>
+            <user>nicole.molenda@care.com</user>
+            <user>stephanie.elliott@care.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

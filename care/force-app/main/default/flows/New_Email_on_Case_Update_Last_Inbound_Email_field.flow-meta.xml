@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <description>When a new Email Message is received on a Case - this Flow will timestamp the &quot;Last Inbound Email&quot; field on the Case record with the date and time.</description>
+    <environments>Default</environments>
+    <interviewLabel>New Email on Case - Field Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>New Email on Case - Update Last Inbound Email field</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>This will update the related Case field &quot;Last Inbound Email&quot; with the Date and Time that the email was recieved.</description>
+        <name>Update_related_Case_Fields</name>
+        <label>Update related Case Fields</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>Last_Inbound_Email__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Parent</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_related_Case_Fields</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Incoming</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ParentId</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>EmailMessage</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

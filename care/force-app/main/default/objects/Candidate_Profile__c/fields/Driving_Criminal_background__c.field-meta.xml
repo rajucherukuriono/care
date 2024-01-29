@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Driving_Criminal_background__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please describe your driving record and criminal background. (Note: enhanced BGC’s will be run on final candidates)</inlineHelpText>
+    <label>Driving/Criminal background</label>
+    <length>1000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,38 @@
+<aura:component>
+
+    <aura:attribute name="locationRecord" type="Opportunity_Service_Area__c" required="true" access="public" />
+    <aura:attribute name="checkboxFieldName" type="String" required="true" access="public" />
+    <aura:attribute name="currencyFieldName" type="String" required="true" access="public" />
+    <aura:attribute name="numberFieldName" type="String" required="true" access="public" />
+    <aura:attribute name="label" type="String" access="public" required="true" />
+
+    <aura:attribute name="checkboxValue" type="Boolean" access="private" />
+    <aura:attribute name="currencyValue" type="Decimal" access="private" />
+    <aura:attribute name="numberValue" type="Integer" access="private" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <tr class="slds-hint-parent">
+            
+        <!-- Table Column - Checkbox -->
+        <th>
+            <lightning:input aura:id="checkboxField" type="checkbox" label="{!v.label}" checked="{!v.checkboxValue}" onchange="{!c.handleFieldUpdate}" />
+        </th>
+
+        <!-- Table Column - Starting Rent -->
+        <th data-label="{!'Starting Rent for ' + v.label}" scope="row">
+            <div class="slds-truncate slds-p-around_x-small slds-text-align_left">
+                <lightning:input aura:id="currencyField" type="number" variant="label-hidden" value="{!v.currencyValue}" formatter="currency" step="0.01" onchange="{!c.handleFieldUpdate}" disabled="{!not(v.checkboxValue)}" pattern="[0-9]*" messageWhenPatternMismatch="Value must be positive" />
+            </div>
+        </th>
+
+        <!-- Table Column - Capacity -->
+        <th data-label="{!'Capacity for ' + v.label}" scope="row">
+            <div class="slds-truncate slds-p-around_x-small slds-text-align_left">
+                <lightning:input aura:id="numberField" type="number" variant="label-hidden" value="{!v.numberValue}" onchange="{!c.handleFieldUpdate}" disabled="{!not(v.checkboxValue)}" pattern="[0-9]*" messageWhenPatternMismatch="Value must be positive" />
+            </div>
+        </th>
+
+    </tr>
+
+</aura:component>

@@ -1,0 +1,37 @@
+<aura:component extends="c:CCCBase">
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <!-- Aura Attributes - Public -->
+    <aura:attribute name="cancelButtonLabel" type="String" default="Cancel" access="public" />
+    <aura:attribute name="iconAlternativeText" type="String" default="Info" access="public" />
+    <aura:attribute name="iconName" type="String" default="utility:info" access="public" />
+    <aura:attribute name="iconSize" type="String" default="large" access="public" />
+    <aura:attribute name="iconVariant" type="String" default="" access="public" />
+    <aura:attribute name="okButtonLabel" type="String" default="Ok" access="public" />
+    <aura:attribute name="okClicked" type="Boolean" default="false" access="public" />
+    <aura:attribute name="showCancelButton" type="Boolean" default="true" access="public" />
+
+    <!-- Modal -->
+    <div class="slds-text-heading_medium slds-text-align_center"><strong>Cancel Agreement Confirmation</strong></div>
+
+    <div class="slds-grid slds-m-top_medium slds-p-around_medium slds-grid_vertical-align-center">
+        <div class="slds-col slds-p-left_small slds-p-right_x-large slds-grow-none">
+            <lightning:icon iconName="{!v.iconName}" alternativeText="{!v.iconAlternativeText}"
+                variant="{!v.iconVariant}" size="{!v.iconSize}" />
+        </div>
+        <div class="slds-col">
+            <span class="slds-text-heading_small">Are you sure you wish to cancel this agreement?</span>
+        </div>
+    </div>
+
+    <div class="slds-clearfix slds-m-top_medium">
+        <div class="slds-float_right">
+            <aura:if isTrue="{!v.showCancelButton}">
+                <lightning:button label="{!v.cancelButtonLabel}" onclick="{!c.handleCancelClicked}"
+                    class="slds-m-horizontal_xx-small" />
+            </aura:if>
+            <lightning:button variant="brand" label="{!v.okButtonLabel}" onclick="{!c.handleOKClicked}"
+                class="slds-m-horizontal_xx-small" />
+        </div>
+    </div>
+</aura:component>

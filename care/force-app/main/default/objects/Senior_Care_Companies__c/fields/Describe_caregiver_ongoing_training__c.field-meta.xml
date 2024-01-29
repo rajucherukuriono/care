@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Describe_caregiver_ongoing_training__c</fullName>
+    <description>size expanded for SFORCE-1884 RT Non Medical Home Care 06/2018</description>
+    <externalId>false</externalId>
+    <label>Describe caregiver ongoing training</label>
+    <length>500</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

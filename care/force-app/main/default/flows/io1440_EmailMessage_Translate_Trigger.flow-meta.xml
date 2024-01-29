@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>This action translates the current sObject record driven by Translation Studio translationRules.  Please ensure you have a translatableObject and at least one (1) rule configured for this sObject -- and that the rule is active, and valid.</description>
+        <name>Translate_SObject</name>
+        <label>Translate SObject</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <actionName>transl8__Translate</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>IdList</name>
+            <value>
+                <stringValue>{!$Record.Id}</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>transl8__Translate</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <description>This Flow was created by Translation Studio -- and automates the translation of  Email Message records.  Please ensure that the Email Message object has been chosen as a translatableObject, and that it has at least one (1) valid translationRule is defined.  Happy Translating!</description>
+    <interviewLabel>Translate Email Message {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
+    <label>1440io: Email Message: Translate: Trigger</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Translate_SObject</targetReference>
+        </connector>
+        <object>EmailMessage</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

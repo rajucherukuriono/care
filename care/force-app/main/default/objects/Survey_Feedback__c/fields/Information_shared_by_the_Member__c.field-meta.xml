@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Information_shared_by_the_Member__c</fullName>
+    <description>Security/IT/Safety teams launching a Fraud Follow up survey to capture additional information on cases where the member has reported fraud.  Sforce - 1634</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Information shared by the Member</inlineHelpText>
+    <label>Information shared by the Member</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Email Address</fullName>
+                <default>false</default>
+                <label>Email Address</label>
+            </value>
+            <value>
+                <fullName>Phone Number</fullName>
+                <default>false</default>
+                <label>Phone Number</label>
+            </value>
+            <value>
+                <fullName>I haven&apos;t shared my information</fullName>
+                <default>false</default>
+                <label>I haven&apos;t shared my information</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

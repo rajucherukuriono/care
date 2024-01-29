@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ombudsman_Trends_NCC__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>tends to offer information, etc.</inlineHelpText>
+    <label>Ombudsman Trends NCC</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>This sends the Email Alert &quot;New Agency Application Account created&quot;</description>
+        <name>Email_Alert_New_Agency_Application</name>
+        <label>Email Alert - New Agency Application</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>Account.New_Agency_Application_Account_created</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Account.New_Agency_Application_Account_created</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <description>This will fire when the SuveyMonkey User creates a new Account record with the record type &quot;BUC Network Agency&quot; and the Owner is Jill Litz.</description>
+    <environments>Default</environments>
+    <interviewLabel>New Agency Applications Account created {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>New Agency Applications Account created</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Email_Alert_New_Agency_Application</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>CreatedById</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0055Y00000HePiP</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01239000000Uasy</stringValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

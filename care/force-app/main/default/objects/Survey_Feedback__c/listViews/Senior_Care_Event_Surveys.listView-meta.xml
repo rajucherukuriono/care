@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Senior_Care_Event_Surveys</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Case__c</columns>
+    <columns>Satisfaction_Rating__c</columns>
+    <columns>Recommendation_Score__c</columns>
+    <columns>Event__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>Senior Care Events Survey</value>
+    </filters>
+    <label>Senior Care Event Surveys</label>
+    <language>en_US</language>
+</ListView>

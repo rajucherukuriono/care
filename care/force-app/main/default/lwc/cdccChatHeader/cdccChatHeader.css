@@ -1,0 +1,86 @@
+.container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 14px;
+    height: 50px;
+    max-height: 50px;
+    background-color: #ffffff;
+    color: #000000;
+    border-bottom: 1px solid #e6e8ea;
+    font-size: 16px;
+    font-weight: 400;
+}
+.container.white-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+.container.blue-theme {
+    background-color: #3871aa;
+    color: #ffffff;
+}
+.container.red-theme {
+    background-color: #cf230c;
+    color: #ffffff;
+}
+.black-icon {
+    --sds-c-icon-color-foreground-default: #000000;
+}
+.white-icon {
+    --sds-c-icon-color-foreground-default: #ffffff;
+}
+img {
+    margin-top: 7px;
+    margin-right: 4px;
+}
+
+h2 {
+    margin: 0;
+    text-align: initial;
+    align-self: center;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: lighter;
+    font-size: inherit;
+    color: white;
+}
+
+button {
+    background: none;
+    border: none;
+    height: 32px;
+    min-height: 32px;
+    width: 32px;
+    min-width: 32px;
+}
+
+button:hover:before {
+    content: " ";
+    position: absolute;
+    top: 9px;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    opacity: .2;
+    border-radius: 4px;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+button.minimizeButton:hover:before {
+    right: 46px;
+}
+
+button.closeButton:hover:before {
+    right: 14px;
+}
+
+lightning-icon {
+    padding-left: 8px;
+    padding-bottom: 4px;
+}

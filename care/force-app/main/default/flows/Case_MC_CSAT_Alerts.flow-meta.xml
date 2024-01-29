@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>MC_CSAT_24h_Entry</name>
+        <label>MC-CSAT 24h - Entry</label>
+        <locationX>710</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>MC_CSAT_Alerts</name>
+            <conditionLogic>1 AND (2 OR (3 AND 4)) AND 5</conditionLogic>
+            <conditions>
+                <leftValueReference>MCFormula</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MC_Email__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Survey_Sent__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MC_CSAT_24hr_Closed</targetReference>
+            </connector>
+            <label>MC CSAT Alerts</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>MC_CSAT_On_Hold_Auto_Close_Status</name>
+        <label>MC-CSAT - On Hold (Auto-Close) Status</label>
+        <locationX>182</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>MC_CSAT_On_Hold_Auto_Close</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>MCFormula</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>On Hold (Auto-Close)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Survey_Sent__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MC_CSAT_ALERT</targetReference>
+            </connector>
+            <label>MC CSAT On-Hold(Auto-Close)</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>MCFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+OR( 
+ISBLANK({!$Record.Contact.Last_Survey_Response_Date__c}), 
+AND(
+NOT(ISBLANK({!$Record.Contact.Last_Survey_Response_Date__c})),
+TODAY()-DATEVALUE({!$Record.Contact.Last_Survey_Response_Date__c})&gt;90
+)),
+OR(
+NOT(ISPICKVAL({!$Record.Status}, &quot;Auto-Closed&quot;)),
+AND(
+NOT(ISPICKVAL({!$Record.Status}, &quot;Closed&quot;)),
+NOT(ISPICKVAL({!$Record.Closed_Reason__c},&quot;Auto Closed&quot;))
+),
+AND(
+NOT(ISPICKVAL({!$Record.Status},&quot;Auto-Closed&quot;)),
+NOT(ISPICKVAL({!$Record.Auto_Response_Status__c},&quot;Not Invoked&quot;))
+),
+NOT(ISPICKVAL({!$Record.Status},&quot;Reopened&quot;))
+),
+OR(AND(
+ISPICKVAL({!$Record.Contact_Reason__c},&quot;Account Management&quot;),
+NOT(ISPICKVAL({!$Record.Contact_Secondary_Reason__c},&quot;Privacy&quot;)),
+NOT(ISPICKVAL({!$Record.Contact_Secondary_Reason__c},&quot;Data Deletion&quot;))
+),
+AND(
+ISPICKVAL({!$Record.Contact_Reason__c},&quot;Payments&quot;),
+NOT(ISPICKVAL({!$Record.Contact_Secondary_Reason__c},&quot;Refunds&quot;)),
+NOT(ISPICKVAL({!$Record.Contact_Secondary_Reason__c},&quot;Chargebacks&quot;))
+),
+AND(
+ISPICKVAL({!$Record.Contact_Reason__c},&quot;Corporate&quot;),
+NOT(ISPICKVAL({!$Record.Contact_Secondary_Reason__c},&quot;Marketing&quot;)),
+NOT(ISPICKVAL({!$Record.Contact_Secondary_Reason__c},&quot;Public Relations&quot;)),
+NOT(ISPICKVAL({!$Record.Contact_Secondary_Reason__c},&quot;Brand/Reputation&quot;)),
+NOT(ISPICKVAL({!$Record.Contact_Secondary_Reason__c},&quot;Internal&quot;)),
+NOT(ISPICKVAL({!$Record.Contact_Secondary_Reason__c},&quot;Other&quot;))
+),
+AND(
+ISPICKVAL({!$Record.Contact_Reason__c},&quot;Trust and Safety&quot;),
+NOT(ISPICKVAL({!$Record.Contact_Secondary_Reason__c},&quot;Safety Violations&quot;)),
+NOT(ISPICKVAL({!$Record.Contact_Secondary_Reason__c},&quot;Legal&quot;))
+),
+AND(
+ISPICKVAL({!$Record.Contact_Reason__c},&quot;Care4Business&quot;),
+NOT(ISPICKVAL({!$Record.Contact_Secondary_Reason__c},&quot;BUC Transfer&quot;))
+)
+),
+    {!$Record.Owner:Group.DeveloperName}&lt;&gt;&apos;Careteam_care_com_Sunset&apos;,
+  	{!$Record.No_Agent_for_Live_Chat__c}=False,
+	{!$Record.Safety_Email__c}=False,
+	{!$Record.Cancel__c}=False,
+	ISBLANK({!$Record.ParentId}),
+	NOT(ISBLANK({!$Record.Contact.Email})),
+	NOT(ISBLANK({!$Record.ContactId})),
+	NOT(ISBLANK({!$Record.AccountId})),
+	NOT(ISPICKVAL({!$Record.Origin},&quot;Internal&quot;)),
+	NOT(ISPICKVAL({!$Record.Origin},&quot;In-house&quot;))
+)</expression>
+    </formulas>
+    <interviewLabel>Case - MC CSAT Alerts {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case - MC CSAT Alerts</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>MC_CSAT_On_Hold_Auto_Close_Status</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>MC_CSAT_24h_Alert</name>
+            <connector>
+                <targetReference>MC_CSAT_24h_Entry</targetReference>
+            </connector>
+            <label>MC-CSAT 24h Alert</label>
+            <offsetNumber>24</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>ClosedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>MC_CSAT_24hr_Closed</name>
+        <label>MC CSAT 24hr Closed</label>
+        <locationX>578</locationX>
+        <locationY>384</locationY>
+        <flowName>MC_CSAT_Alert_based_on_RecordType_Language</flowName>
+        <inputAssignments>
+            <name>MCRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>MC_CSAT_ALERT</name>
+        <label>MC CSAT ALERT</label>
+        <locationX>50</locationX>
+        <locationY>384</locationY>
+        <flowName>MC_CSAT_Alert_based_on_RecordType_Language</flowName>
+        <inputAssignments>
+            <name>MCRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

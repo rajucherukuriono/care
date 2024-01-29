@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Feedback_Category__c</name>
+    <picklistValues>
+        <masterLabel>Assisted Search</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Autorenewal</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B2B</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BUC: ABUC Provider Quality</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BUC: Agency Provider Quality</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BUC: Center Quality</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BUC: Policies &amp; Experience</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BUC: Product</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BUC: Service</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BUC: Trusted Provider Quality</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Background Checks</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Backup Care</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benefits Communication</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benefits Fair</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C@W App</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C@W Portal</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COVID-related</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consumer Backup Care</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Service</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Digital</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enrollment</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Care</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Experience - Offsite</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Experience - Onsite</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HR Dashboard</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home Pay</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jobs</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing/Admin Emails</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Messaging</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Policies</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Privacy</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Profile</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provider Quality (Digital)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provider Quality (Placements)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provider/Seeker Quality</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Safety/Fraud</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Senior Care Planning</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Site Navigation</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subscription</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>System Messages</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technology</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Value Added Services</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vetting</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

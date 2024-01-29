@@ -1,0 +1,156 @@
+<aura:component controller="CCCVettingController" extends="c:CCCModuleBase">
+
+    <!-- Dependencies for dynamically created components so we don't have to make extra trips to the server -->
+    <!-- <aura:dependency resource="markup://c:CCCSortableTableColumn" />
+    <aura:dependency resource="markup://c:CCCVettingContactModal" /> -->
+    <aura:dependency resource="markup://c:CCCLocationDetailsModal" />
+
+    <!-- Public Attributes -->
+    <aura:attribute name="confirmSaveClicked" type="Boolean" default="false" access="public" />
+
+    <!-- Private Attributes -->
+    <aura:attribute name="locationRecords" type="List" access="private" />
+    <aura:attribute name="composerServiceRecord" type="Composer_Service__c" access="private" />
+    <aura:attribute name="provinceOptions" type="List" access="private" />
+    <aura:attribute name="showLocationStatusFields" type="Boolean" default="true" access="private" />
+    <aura:attribute name="displayLocationSpecificContactInfo" type="Boolean" default="true" access="private" />
+    <aura:attribute name="minTuitionDiscountDollar" type="Decimal" access="private" />
+    <aura:attribute name="minTuitionDiscountPercent" type="Decimal" access="private" />
+
+    <!-- Aura Attributes - Modal Attributes -->
+    <aura:attribute name="locationRecord" type="Opportunity_Service_Area__c" access="public" />
+    <aura:attribute name="saveClicked" type="Boolean" default="false" access="public" />
+
+
+    <!-- Init -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <!-- Main Body -->
+    <div class="slds-m-top_large">
+
+        <div class="slds-grid slds-grid_vertical-align-start slds-gutters slds-wrap">
+
+            <div class="slds-col slds-size_1-of-1">
+                <div class="slds-text-heading_small slds-m-bottom_x-small">Licensing / Background Check Info</div>
+            </div>
+
+            <aura:if isTrue="{!not(empty(v.locationRecords))}">
+                <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+
+                    <table class="slds-table slds-table_bordered slds-border_right slds-border_left" role="grid">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+
+                                <!-- Column Header - Location -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Location">
+                                        Location
+                                    </div>
+                                </th>
+
+                                <!-- Column Header - Address -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Address">
+                                        Address
+                                    </div>
+                                </th>
+
+                                
+                                <aura:if isTrue="{!v.showLocationStatusFields}">
+
+                                    <!-- Column Header - License Check Passed -->
+                                    <th class="slds-text-title_caps" scope="col">
+                                        <div class="slds-truncate slds-p-around_x-small" title="License Check Passed">
+                                            License Check Passed
+                                        </div>
+                                    </th>
+
+                                    <!-- Column Header - Location Active -->
+                                    <th class="slds-text-title_caps" scope="col">
+                                        <div class="slds-truncate slds-p-around_x-small" title="Location Active">
+                                            Location Active
+                                        </div>
+                                    </th>
+
+                                </aura:if>
+
+                                <!-- Column Header - Actions -->
+                                <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Actions">
+                                        &nbsp;
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <aura:iteration items="{!v.locationRecords}"
+                                var="locationRecord">
+                                <tr class="slds-hint-parent">
+
+                                    <!-- Location -->
+                                    <th scope="row" tabindex="0">
+                                        <div class="slds-truncate slds-p-around_x-small">
+                                            {!locationRecord.Name}
+                                        </div>
+                                    </th>
+
+                                    <!-- Postal Codes -->
+                                    <td role="gridcell" scope="col" class="slds-cell-wrap">
+                                        <div class="slds-wrap slds-p-around_x-small">
+                                            {! locationRecord.Street__c + ' ' + locationRecord.City__c + ', ' + locationRecord.State__c + ' ' + locationRecord.Postal_Code__c }
+                                        </div>
+                                    </td>
+
+                                    <!-- License Check Passed -->
+                                    <aura:if isTrue="{!v.showLocationStatusFields}">
+    
+                                        <!-- License Check Passed -->
+                                        <th scope="row" tabindex="0">
+                                            <div class="slds-truncate slds-p-around_x-small">
+                                                <aura:if isTrue="{!equals(locationRecord.License_Status__c, 'Approved')}">
+                                                    <lightning:icon iconName="utility:check" alternativeText="Approved" variant="Success" title="Approved" />
+                                                </aura:if>
+                                                <aura:if isTrue="{!equals(locationRecord.License_Status__c, 'Rejected')}">
+                                                    <lightning:icon iconName="utility:close" alternativeText="Rejected" variant="error" title="Rejected" />
+                                                </aura:if>
+                                            </div>
+                                        </th>
+
+                                        <!-- Location Active -->
+                                        <th scope="row" tabindex="0">
+                                            <div class="slds-truncate slds-p-around_x-small">
+                                                <aura:if isTrue="{!equals(locationRecord.Active_Ads__c, 'Active')}">
+                                                    <lightning:icon iconName="utility:check" alternativeText="Active" variant="Success" title="Active" />
+                                                </aura:if>
+                                                <aura:if isTrue="{!equals(locationRecord.Active_Ads__c, 'Inactive')}">
+                                                    <lightning:icon iconName="utility:close" alternativeText="Inactive" variant="error" title="Inactive" />
+                                                </aura:if>
+                                            </div>
+                                        </th>
+
+                                    </aura:if>
+
+                                    <!-- Actions -->
+                                    <td role="gridcell">
+                                        <div class="slds-p-around_x-small slds-text-align_right">
+                                            <lightning:button variant="brand" label="Modify" iconName="utility:edit"
+                                                iconPosition="left" onclick="{!c.handleModifyLocationClicked}"
+                                                value="{!locationRecord.Id}"
+                                                disabled="{!not(v.allowEdit)}" />
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </aura:iteration>
+
+                        </tbody>
+                    </table>
+                </div>
+            </aura:if>
+
+        </div>
+
+    </div>
+
+</aura:component>

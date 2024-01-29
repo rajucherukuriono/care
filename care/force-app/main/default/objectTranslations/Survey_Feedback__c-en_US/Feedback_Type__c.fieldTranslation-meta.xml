@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Feedback_Type__c</name>
+    <picklistValues>
+        <masterLabel>Bug</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Complaint</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kudo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Negative</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Neutral</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Positive</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Suggestion</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

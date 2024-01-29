@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="Instantiated by CCCSortableTableColumn when clicked.">
+    <aura:attribute name="sortField" type="String" />
+</aura:event>

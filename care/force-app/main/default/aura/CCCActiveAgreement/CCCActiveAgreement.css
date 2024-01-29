@@ -1,0 +1,25 @@
+.THIS .capitalize {
+    text-transform: capitalize;
+}
+
+.THIS .locationHeader {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: var(--lwc-borderWidthThin,1px) solid var(--lwc-cardColorBorder,rgb(221, 219, 218));
+    margin: 0px;
+}
+
+.THIS .locationServicesTable {
+    border-bottom: 0px;
+}
+
+.THIS .locationServicesTableContainer {
+    margin: 0px;
+    padding: 0px;
+}
+
+.THIS .activeAgreementDiv {
+    width:100%;
+    overflow-y: scroll;
+    border:1px solid #ccc;
+}

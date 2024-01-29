@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>... this permissionSet is used by Translation Studio to associate administrators to newly created sObject translation destination fields (to make these fields visible).</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Translation Studio - Unmanaged</label>
+</PermissionSet>

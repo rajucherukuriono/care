@@ -1,0 +1,63 @@
+<aura:component implements="force:hasRecordId,force:hasSObjectName,flexipage:availableForRecordHome"
+    controller="CCCController" extends="c:CCCBase">
+
+    <lightning:messageChannel type="CCCMessageChannel__c" onMessage="{!c.onCCCMessageEvent}" scope="APPLICATION" />
+
+    <!-- Attribute for Session Id to use for interfacing with Mulesoft -->
+    <aura:attribute name="sessionId" type="String" />
+    <aura:attribute name="visualForceBaseURL" type="String" />
+
+    <!-- Attributes for tab management -->
+    <aura:attribute name="tabs" type="Object[]" />
+    <aura:attribute name="tabContentContainer" type="Aura.Component[]" />
+    <aura:attribute name="currentModuleName" type="String" />
+
+    <!-- Attribute and handler for stored events -->
+    <aura:attribute name="storedEvents" type="Object" />
+
+    <!-- Stores the names of modules that have been loaded (visited) -->
+    <aura:attribute name="loadedModules" type="List" />
+
+    <!-- Lightning Data Service and attribute for tracking opportunity StageName changes -->
+    <force:recordData aura:id="opportunityLoader" recordId="{!v.recordId}" targetFields="{!v.opportunityRecord}"
+        fields="['Name','StageName']" recordUpdated="{!c.handleOpportunityRecordChange}" />
+    <aura:attribute name="opportunityRecord" type="Object" />
+
+    <!-- Dependencies for $A.createComponent, if we don't specifiy a dependency for the components $A.createComponent has to make an asynchronous call to the server to get the definition, and will cause code to flow out of order -->
+    <aura:dependency resource="markup://aura:html" />
+    <aura:dependency resource="markup://c:CCCServiceModule" />
+    <aura:dependency resource="markup://c:CCCLocationModule" />
+    <aura:dependency resource="markup://c:CCCPricingModule" />
+    <aura:dependency resource="markup://c:CCCAdministrationModule" />
+    <aura:dependency resource="markup://c:CCCVettingModule" />
+    <aura:dependency resource="markup://c:CCCReviewModule" />
+    <aura:dependency resource="markup://c:CCCSummaryModule" />
+    <aura:dependency resource="markup://c:CCCScoreboard" />
+
+    <!-- Attribute Change Handlers-->
+    <aura:handler name="change" value="{!v.currentModuleName}" action="{!c.handleCurrentModuleNameChange}" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <!-- Don't load this until recordType comes back from the init call -->
+    <aura:if isTrue="{! notequals(v.recordType,null) }">
+        <c:CCCScoreboard recordId="{!v.recordId}" recordType="{!v.recordType}" oppType="{!v.oppType}" />
+    </aura:if>
+
+    <div class="slds-tabs_scoped slds-m-bottom_xx-small" aura:id="tabContainer">
+        <ul class="slds-tabs_scoped__nav" role="tablist">
+            <aura:iteration items="{!v.tabs}" var="tab" indexVar="index">
+                <li class="{!'slds-tabs_scoped__item ' + (tab.active ? 'slds-is-active slds-has-focus' : '')}"
+                    title="{!tab.label}" role="presentation">
+                    <a class="slds-tabs_scoped__link" href="javascript:void(0);" onclick="{!c.onTabClick}" role="tab"
+                        tabindex="0" aria-selected="true" aria-controls="{!tab.id}" id="{!tab.id + '__item'}"
+                        data-tab-id="{!tab.id}">
+                        <span class="slds-truncate" title="{!tab.label}" data-tab-id="{!tab.id}">{!tab.label}</span>
+                    </a>
+                </li>
+            </aura:iteration>
+        </ul>
+        {!v.tabContentContainer}
+    </div>
+
+</aura:component>

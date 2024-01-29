@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_CC__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>If a CC already exists, this value will be appended to the existing list of CC recipients.</inlineHelpText>
+    <label>Default CC</label>
+    <required>false</required>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

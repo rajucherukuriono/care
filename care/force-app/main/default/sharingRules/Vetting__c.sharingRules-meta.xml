@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>BUC_All_Vetting</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Read/Write to all BUC record types</description>
+        <label>BUC All Vetting</label>
+        <sharedTo>
+            <group>Share_Vettings</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>BUC Agency Caregiver Audit,US BUC Network Vetting,BUC Onsite Vetting,BUC Agency Audit,BUC Online Vetting</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>BUC_Vetting</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sforce 2497 -- Establish BUC Agency Audit/Verification Process and Reporting for Best Buy</description>
+        <label>BUC Audit Vetting</label>
+        <sharedTo>
+            <group>BUC_Agency_Center</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>BUC Agency Audit,BUC Agency Caregiver Audit</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Partner_Network_Safety</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Partner Network Safety</label>
+        <sharedTo>
+            <group>Partner_Network_Safety</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>US BUC Network Vetting,BUC Online Vetting</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

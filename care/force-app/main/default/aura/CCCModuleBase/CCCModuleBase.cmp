@@ -1,0 +1,16 @@
+<aura:component extensible="true" abstract="true" extends="c:CCCBase">
+    <!-- <aura:attribute name="moduleIsDirty" type="Boolean" /> -->
+
+    <lightning:messageChannel type="CCCMessageChannel__c" aura:id="CCCMessageChannel" />
+
+    <!-- Inherited via CCCBase -->
+    <aura:attribute name="opportunityRecord" type="Opportunity" />
+
+    <aura:method name="handleTabEvents" action="{!c.handleTabEvents}">
+        <aura:attribute name="events" type="Object" />
+    </aura:method>
+
+    <div class="slds-is-relative">
+        {!v.body}
+    </div>
+</aura:component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audit_Report_Verified_and_Uploaded__c</fullName>
+    <description>Sforce 2497</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Date Audit Report verified and uploaded to SF</inlineHelpText>
+    <label>Audit Report Verified and Uploaded</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

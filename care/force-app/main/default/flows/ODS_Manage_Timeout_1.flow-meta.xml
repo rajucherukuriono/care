@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>myWaitEvent_myWait_myRule_1_event_0_SA1</name>
+        <label>Handle Timeout</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>OnDemandSync</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>Cases</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>OnDemandSync</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <description>Migrated from the ODS Manage Timeout process using ODS Still ongoing criteria.
+If an ODS request has been going to on too long, this flow completes the ODS request.</description>
+    <label>ODS Manage Timeout_1</label>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ODS_Request_Status__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>None</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ODS_Request_Status__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Is_ODS_Complete__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>myWaitEvent_myWait_myRule_1_event_0</name>
+            <connector>
+                <targetReference>myWaitEvent_myWait_myRule_1_event_0_SA1</targetReference>
+            </connector>
+            <label>ScheduledPath_1</label>
+            <offsetNumber>0</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>ODS_Timeout__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

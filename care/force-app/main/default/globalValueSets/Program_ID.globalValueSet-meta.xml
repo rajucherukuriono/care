@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Children&apos;s Choice</fullName>
+        <default>false</default>
+        <label>Children&apos;s Choice</label>
+    </customValue>
+    <customValue>
+        <fullName>Federal Express Program</fullName>
+        <default>false</default>
+        <label>Federal Express Program</label>
+    </customValue>
+    <customValue>
+        <fullName>NYL Leave Coordinator</fullName>
+        <default>false</default>
+        <label>NYL Leave Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>Care Online</fullName>
+        <default>false</default>
+        <label>CAREONLINE</label>
+    </customValue>
+    <customValue>
+        <fullName>Disney</fullName>
+        <default>false</default>
+        <label>Disney</label>
+    </customValue>
+    <customValue>
+        <fullName>Homework Connection Only</fullName>
+        <default>false</default>
+        <label>Homework Connection Only</label>
+    </customValue>
+    <customValue>
+        <fullName>CAREATWORK</fullName>
+        <default>false</default>
+        <label>CAREATWORK</label>
+    </customValue>
+    <customValue>
+        <fullName>Magellan BSC</fullName>
+        <default>false</default>
+        <label>Magellan BSC</label>
+    </customValue>
+    <customValue>
+        <fullName>ADP</fullName>
+        <default>false</default>
+        <label>ADP</label>
+    </customValue>
+    <customValue>
+        <fullName>FOH MAGELLAN</fullName>
+        <default>false</default>
+        <label>FOH MAGELLAN</label>
+    </customValue>
+    <customValue>
+        <fullName>Leave Coordination</fullName>
+        <default>false</default>
+        <label>LEAVCOORD</label>
+    </customValue>
+    <customValue>
+        <fullName>Care.com LifeMart</fullName>
+        <default>false</default>
+        <label>Care.com LifeMart</label>
+    </customValue>
+    <customValue>
+        <fullName>LIFECARE</fullName>
+        <default>false</default>
+        <label>LIFECARE</label>
+    </customValue>
+    <customValue>
+        <fullName>Aetna Integrated EAP and Work Life</fullName>
+        <default>false</default>
+        <label>Aetna Integrated EAP and Work Life</label>
+    </customValue>
+    <customValue>
+        <fullName>Successful Aging</fullName>
+        <default>false</default>
+        <label>Successful Aging</label>
+    </customValue>
+    <customValue>
+        <fullName>Perfect Aging</fullName>
+        <default>false</default>
+        <label>Perfect Aging</label>
+    </customValue>
+    <customValue>
+        <fullName>Magellan</fullName>
+        <default>false</default>
+        <label>Magellan</label>
+    </customValue>
+    <customValue>
+        <fullName>Student Assistance Program</fullName>
+        <default>false</default>
+        <label>Student Assistance Program</label>
+    </customValue>
+    <customValue>
+        <fullName>Domestic Help Services</fullName>
+        <default>false</default>
+        <label>Domestic Help Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Subsidy Grant Program</fullName>
+        <default>false</default>
+        <label>Subsidy Grant Program</label>
+    </customValue>
+    <customValue>
+        <fullName>FOH</fullName>
+        <default>false</default>
+        <label>FOH</label>
+    </customValue>
+    <customValue>
+        <fullName>Benefits Communication</fullName>
+        <default>false</default>
+        <label>Benefits Communication</label>
+    </customValue>
+    <customValue>
+        <fullName>FedStrive</fullName>
+        <default>false</default>
+        <label>FedStrive</label>
+    </customValue>
+    <customValue>
+        <fullName>Perfect Aging Lite</fullName>
+        <default>false</default>
+        <label>Perfect Aging Lite</label>
+    </customValue>
+    <customValue>
+        <fullName>STAR - HOS</fullName>
+        <default>false</default>
+        <label>STAR - HOS</label>
+    </customValue>
+    <customValue>
+        <fullName>Magellan EAP</fullName>
+        <default>false</default>
+        <label>Magellan EAP</label>
+    </customValue>
+    <customValue>
+        <fullName>Expectant Parent Coordinator Program</fullName>
+        <default>false</default>
+        <label>Expectant Parent Coordinator Program</label>
+    </customValue>
+    <customValue>
+        <fullName>Admin Companies</fullName>
+        <default>false</default>
+        <label>Admin Companies</label>
+    </customValue>
+    <customValue>
+        <fullName>LifeMart Only</fullName>
+        <default>false</default>
+        <label>LifeMart Only</label>
+    </customValue>
+    <customValue>
+        <fullName>Adult Care Coordination</fullName>
+        <default>false</default>
+        <label>ACC</label>
+    </customValue>
+    <customValue>
+        <fullName>LEAVECOACH</fullName>
+        <default>false</default>
+        <label>LEAVECOACH</label>
+    </customValue>
+    <customValue>
+        <fullName>Magellan DOD</fullName>
+        <default>false</default>
+        <label>Magellan DOD</label>
+    </customValue>
+    <customValue>
+        <fullName>KCE</fullName>
+        <default>false</default>
+        <label>KCE</label>
+    </customValue>
+    <customValue>
+        <fullName>Subsidy</fullName>
+        <default>false</default>
+        <label>SUBSIDY</label>
+    </customValue>
+    <customValue>
+        <fullName>CARELM</fullName>
+        <default>false</default>
+        <label>CARELM</label>
+    </customValue>
+    <customValue>
+        <fullName>HOMEHELP</fullName>
+        <default>false</default>
+        <label>HOMEHELP</label>
+    </customValue>
+    <customValue>
+        <fullName>EPC</fullName>
+        <default>false</default>
+        <label>EPC</label>
+    </customValue>
+    <customValue>
+        <fullName>LCINTRL</fullName>
+        <default>false</default>
+        <label>LCINTRL</label>
+    </customValue>
+    <masterLabel>Program ID</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

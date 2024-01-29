@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Audit_Received__c</fullName>
+    <description>Sforce 2497</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Date audit was received from the agency</inlineHelpText>
+    <label>Date Audit Received</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

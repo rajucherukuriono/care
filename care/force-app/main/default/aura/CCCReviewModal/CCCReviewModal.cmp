@@ -1,0 +1,92 @@
+<aura:component controller="CCCReviewController" extends="c:CCCModuleBase">
+
+    <!-- Aura Attributes - Public -->
+    <aura:attribute name="saveClicked" type="Boolean" default="false" access="public" />
+    <aura:attribute name="saveDisabled" type="Boolean" default="false" access="public" />
+    <aura:attribute name="reviewRecord" type="Review_Reference__c" default="{}" access="public" />
+    <aura:attribute name="locationRecords" type="List" access="public" />
+    <aura:attribute name="businessId" type="String" access="public" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <div>
+        <!-- Form -->
+        <div class="slds-p-around_xx-small">
+            <div class="slds-grid slds-gutters slds-wrap">
+
+                <!-- First Name -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div class="slds-m-top_medium">
+                        <lightning:input aura:id="inputFirstName" name="inputFirstName" label="First Name"
+                            required="true" value="{!v.reviewRecord.First_Name__c}" maxlength="80" />
+                    </div>
+                </div>
+
+                <!-- Last Name -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div class="slds-m-top_medium">
+                        <lightning:input aura:id="inputLastName" name="inputLastName" label="Last Name" required="true"
+                            value="{!v.reviewRecord.Last_Name__c}" maxlength="100" />
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div class="slds-m-top_medium">
+                        <lightning:input aura:id="inputEmail" type="email" name="inputEmail" label="Email"
+                            required="false" value="{!v.reviewRecord.Email__c}" />
+                    </div>
+                </div>
+
+                <!-- Spacer -->
+                <div class="slds-col slds-size_1-of-2">&nbsp;</div>
+
+                <!-- Phone -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div class="slds-m-top_medium">
+                        <lightning:input aura:id="inputPhone" type="tel" name="inputPhone" label="Phone" required="true"
+                            value="{!v.reviewRecord.Phone__c}" pattern="[0-9]{10}" messageWhenPatternMismatch="Please enter a 10 digit phone number, without formatting"/>
+                    </div>
+                </div>
+
+                <!-- Spacer -->
+                <div class="slds-col slds-size_1-of-2">&nbsp;</div>
+
+                <!-- Locations -->
+                <aura:if isTrue="{! not(empty(v.locationRecords)) }">
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="slds-m-top_medium">
+                            <lightning:select aura:id="inputLocation" name="inputLocation" label="Location"
+                                value="{!v.reviewRecord.Location__c}" variant="standard"
+                                required="false">
+
+                                <option text="Select a Location" value="" />
+
+                                <aura:iteration items="{!v.locationRecords}" var="locationRecord">
+                                    <option text="{!locationRecord.Name}" value="{!locationRecord.Id}"
+                                        selected="{! equals(v.reviewRecord.Location__c, locationRecord.Id)}">
+                                    </option>
+                                </aura:iteration>
+
+                            </lightning:select>
+                        </div>
+                    </div>
+                </aura:if>
+
+            </div>
+        </div>
+
+        <!-- Button Management -->
+        <div class="slds-clearfix slds-m-top_large">
+            <div class="slds-float_right">
+                <lightning:button label="Cancel" onclick="{!c.handleCancelClicked}"
+                    class="slds-m-horizontal_xx-small" />
+                <lightning:button variant="brand" label="Save" onclick="{!c.handleSaveClicked}"
+                    class="slds-m-horizontal_xx-small" />
+            </div>
+        </div>
+
+    </div>
+
+
+</aura:component>

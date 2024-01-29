@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <interviewLabel>Deactivate User {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Deactivate User</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>This will stamp the field &quot;Deactivated Date&quot; with the current date when a User is deactivated.</description>
+        <name>Timestamp_Deactivated_Date</name>
+        <label>Timestamp Deactivated Date</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <inputAssignments>
+            <field>Deactivated_Date__c</field>
+            <value>
+                <elementReference>$System.OriginDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Timestamp_Deactivated_Date</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IsActive</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>IsActive</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>User</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

@@ -1,0 +1,75 @@
+<aura:component controller="CCCUserPermissionsController" extends="c:CCCModuleBase">
+
+    <!-- Public Attributes -->
+    <aura:attribute name="saveClicked" type="Boolean" default="false" access="public" />
+    <aura:attribute name="composerServiceRecords" type="List" access="public" />
+    <aura:attribute name="userRecord" type="User" access="public" />
+
+    <!-- Init -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <!-- Main Body -->
+    <div class="slds-var-m-top_large">
+
+        <div class="slds-grid slds-grid_vertical-align-start slds-gutters slds-wrap">
+
+            <aura:if isTrue="{!not(empty(v.composerServiceRecords))}">
+                <div class="slds-col slds-size_1-of-1 slds-var-m-top_medium">
+
+                    <table class="slds-table slds-table_bordered slds-border_right slds-border_left" role="grid">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+
+                                <!-- Column Header - Checkbox -->
+                                <th class="slds-text-title_caps slds-text-align_right" scope="col" style="width: 3.25rem;">
+                                    <div class="slds-truncate slds-assistive-text" id="column-group-header"
+                                        title="Choose Verticals">Choose Verticals</div>
+                                </th>
+
+                                <!-- Column Header - Vertical -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-var-p-around_x-small" title="Vertical">
+                                        Vertical
+                                    </div>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.composerServiceRecords}" var="cs">
+                                <tr class="slds-hint-parent">
+
+                                    <!-- Form Radial -->
+                                    <td class="slds-text-align_right" role="gridcell">
+                                        <lightning:input type="checkbox" aura:id="serviceRecord" name="serviceRecord"
+                                            value="{!cs.Id}" checked="{!cs.checked}" onchange="{!c.onComposerServiceChange}"/>
+                                    </td>
+
+                                    <!-- Name -->
+                                    <th scope="row" tabindex="0">
+                                        <div class="slds-truncate slds-var-p-around_x-small">
+                                            {!cs.Vertical__c}
+                                        </div>
+                                    </th>
+
+                                </tr>
+
+                            </aura:iteration>
+                        </tbody>
+                    </table>
+                </div>
+            </aura:if>
+
+        </div>
+
+    </div>
+
+    <div class="slds-clearfix slds-var-m-top_large">
+        <div class="slds-float_right">
+            <lightning:button label="Cancel" onclick="{!c.handleCancelClicked}" class="slds-var-m-horizontal_xx-small" />
+            <lightning:button variant="brand" label="Save" onclick="{!c.handleSaveClicked}"
+                class="slds-var-m-horizontal_xx-small" />
+        </div>
+    </div>
+
+</aura:component>

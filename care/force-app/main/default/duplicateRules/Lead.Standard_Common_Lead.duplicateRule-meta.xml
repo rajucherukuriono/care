@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionOnInsert>Allow</actionOnInsert>
+    <actionOnUpdate>Allow</actionOnUpdate>
+    <alertText>Use one of these records?</alertText>
+    <description>Sforce 1732 BUC Center Network Lead RT -- Standard Common Lead Duplicate records</description>
+    <duplicateRuleFilter xsi:nil="true"/>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Lead</matchRuleSObjectType>
+        <matchingRule>Standard_Common_Lead_matching_rule</matchingRule>
+        <objectMapping xsi:nil="true"/>
+    </duplicateRuleMatchRules>
+    <isActive>false</isActive>
+    <masterLabel>Standard Common Lead</masterLabel>
+    <operationsOnInsert>Alert</operationsOnInsert>
+    <operationsOnUpdate>Alert</operationsOnUpdate>
+    <securityOption>BypassSharingRules</securityOption>
+    <sortOrder>2</sortOrder>
+</DuplicateRule>

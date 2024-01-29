@@ -1,0 +1,71 @@
+<apex:page showHeader="false" sidebar="false" standardStyleSheets="false">
+
+    <head>
+        <apex:slds />
+        <style>
+            #map {
+                width: 100%;
+                height: 380px;
+            }
+        </style>
+
+        <apex:includeScript value="{!URLFOR($Resource.CCCMapBoxMap_js)}" />
+
+        <apex:includeScript value="{!URLFOR($Resource.mapbox_gl_js_1_12_0)}" />
+        <apex:Stylesheet value="{!URLFOR($Resource.mapbox_gl_css_1_12_0)}" />
+
+    <!-- <apex:includeScript value="{!URLFOR($Resource.mapbox_gl_geocoder_min_4_5_1)}" />
+        <apex:Stylesheet value="{!URLFOR($Resource.mapbox_gl_geocoder_4_5_1)}" /> -->
+
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+            type="text/css" />
+    </head>
+
+    <body>
+        <div id="map"></div>
+    </body>
+
+    <script>
+        const mapBoxApiKey = '{!$CurrentPage.parameters.mapBoxApiKey}';
+        const centerLat = parseFloat('{!$CurrentPage.parameters.centerLat}' || 38.3613);
+        const centerLng = parseFloat('{!$CurrentPage.parameters.centerLng}' || -98.7650);
+        const initialZoom = '{!$CurrentPage.parameters.centerLat}' === '' ? 3 : 9;
+
+        // ======= Message Handlers =======
+        let messageHandlers = {
+            loadInitialData: function (message) {
+                init(message);
+            },
+
+            setCenter: function (message) {
+                setCenter(message);
+            },
+
+            test: function (message) {
+                testDebugger(message);
+            }
+        };
+
+        // ======= Window event handlers =======
+        window.addEventListener('load', event => {
+            // The LeafletMap page has loaded so call the container's getDataFromServer()
+            sendMessage({ messageType: 'getDataFromServer', message: {} });
+        });
+
+        window.addEventListener('message', function (event) {
+            if (messageHandlers[event.data.messageType]) {
+                messageHandlers[event.data.messageType](event.data.message);
+            } else {
+                console.log('====> CCCMapBoxMap.page: Message type not handled:', event.data.messageType, '  Message:', event.data.message);
+            }
+        }, false);
+
+        // Send message to parent container
+        function sendMessage(message) {
+            message.channel = '{!$CurrentPage.parameters.channel}';
+            parent.postMessage(message, '*');
+        }
+    </script>
+
+</apex:page>

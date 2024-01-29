@@ -1,0 +1,10 @@
+.langComboContainer{
+    margin: auto;
+    width: var(--lwc-sizeLarge, 25rem);
+    font-size: 20px;
+    margin-top: 30px;
+
+    /* Styles inside open combo box */
+    --lwc-fontSize2: 18px; 
+    --lwc-spacingXSmall: 0px;
+}

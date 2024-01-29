@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Bezahlung__c</name>
+    <picklistValues>
+        <masterLabel>Minijob</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rechnung</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sozialversicherungspflichtige Anstellung</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

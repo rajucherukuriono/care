@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <constants>
+        <description>Record Type ID of &apos;International Social Contact&apos; for assigning to intl. social media contacts</description>
+        <name>varContactRecordTypeID</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>0121O000001ZYPlQAO</stringValue>
+        </value>
+    </constants>
+    <description>Updates the Contact record type for International Social Media Contacts, which default to Seeker (US). SFORCE-953.</description>
+    <interviewLabel>Social - Update International Contact Record Type {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Social - Update International Contact Record Type</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>set to &apos;Intl Social contact&apos; record type id</description>
+        <name>Update_Contact_Record_type</name>
+        <label>Update Contact Record type</label>
+        <locationX>244</locationX>
+        <locationY>44</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varContactID</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>varContactRecordTypeID</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <start>
+        <locationX>39</locationX>
+        <locationY>44</locationY>
+        <connector>
+            <targetReference>Update_Contact_Record_type</targetReference>
+        </connector>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <description>Contact ID of the current case</description>
+        <name>varContactID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

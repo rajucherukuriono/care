@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hospice_care__c</fullName>
+    <externalId>false</externalId>
+    <label>Hospice care</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes - by NH staff</fullName>
+                <default>false</default>
+                <label>Yes - by NH staff</label>
+            </value>
+            <value>
+                <fullName>Yes - through contracted agency</fullName>
+                <default>false</default>
+                <label>Yes - through contracted agency</label>
+            </value>
+            <value>
+                <fullName>Yes- through family arrangements with outside agency</fullName>
+                <default>false</default>
+                <label>Yes- through family arrangements with outside agency</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>administrative privileges for individuals who should be able to customize the Salesforce app.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sandbox: Administrative Power Users</label>
+    <license>Salesforce</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AllowViewKnowledge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CustomizeApplication</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ManageCertificates</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ManageCustomPermissions</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ManageTranslation</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ShareFilesWithNetworks</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewRoles</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewSetup</name>
+    </userPermissions>
+</PermissionSet>

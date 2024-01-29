@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adequate_number_of_providers__c</fullName>
+    <complianceGroup>CCPA</complianceGroup>
+    <description>Survey answer for the adequate number of providers?</description>
+    <externalId>false</externalId>
+    <label>Adequate number of providers?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I would have liked more provider options.</fullName>
+                <default>false</default>
+                <label>I would have liked more provider options.</label>
+            </value>
+            <value>
+                <fullName>The number of provider options was adequate.</fullName>
+                <default>false</default>
+                <label>The number of provider options was adequate.</label>
+            </value>
+            <value>
+                <fullName>The number of provider options was too many.</fullName>
+                <default>false</default>
+                <label>The number of provider options was too many.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Research-Daily Needs</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>LifeCare_Research_Team</publicGroup>
+        </publicGroups>
+        <roles>
+            <role>SystemAdmin</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

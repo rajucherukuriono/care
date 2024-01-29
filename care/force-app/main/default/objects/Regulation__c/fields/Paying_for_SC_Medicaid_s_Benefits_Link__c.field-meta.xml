@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Paying_for_SC_Medicaid_s_Benefits_Link__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Paying for Senior Care Medicaid&apos;s Benefits for Assisted Living Link</inlineHelpText>
+    <label>Paying for SC Medicaid&apos;s Benefits Link</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

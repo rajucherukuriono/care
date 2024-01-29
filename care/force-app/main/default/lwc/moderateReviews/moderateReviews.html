@@ -1,0 +1,128 @@
+<template>
+    <template if:true={recordId}>
+      <template if:true={isLoading}>
+          <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+      </template>
+      <template if:true={hasErrors}>
+        <div class="errors">
+          Errors:
+          <br />
+          <br />
+          <template for:each={errorMessages} for:item="error">
+            <p key={error}>{error}<br /><br /></p>
+          </template>
+        </div>
+      </template>
+      <template if:true={hasReviewUUId}>
+        <div class="base-styling">
+          <br/>
+          <p><b>Star Rating</b>: ({reviewRatingParenthesis})</p>
+          <div class="rate">
+              <input type="radio" id="star5ReadOnly" data-id="star5ReadOnly" name={reviewRatingName} value=5 />
+              <label for="star5" title="5">5 stars</label>
+              <input type="radio" id="star4ReadOnly" data-id="star4ReadOnly" name={reviewRatingName} value=4 />
+              <label for="star4" title="4">4 stars</label>
+              <input type="radio" id="star3ReadOnly" data-id="star3ReadOnly" name={reviewRatingName} value=3 />
+              <label for="star3" title="3">3 stars</label>
+              <input type="radio" id="star2ReadOnly" data-id="star2ReadOnly" name={reviewRatingName} value=2 />
+              <label for="star2" title="2">2 stars</label>
+              <input type="radio" id="star1ReadOnly" data-id="star1ReadOnly" name={reviewRatingName} value=1 />
+              <label for="star1" title="1">1 star</label>
+          </div>
+          
+          <br/>
+          <br/>
+
+          <br/>
+          <br/>
+          <b>Review Text</b>:<br /> 
+          &ensp;{reviewText}
+          <br/>
+          <br/>
+          <template if:true={caseStatusClosed}>
+            <br/>
+            <b>Action taken</b>:<br /> 
+            &ensp;{contactReason}
+            <br/>
+          </template>
+          <br/>
+          <br/>
+          <lightning-button icon-name="standard:approval" variant="brand" label="Approve" title="Approve" onclick={handleApprove} class="slds-m-horizontal_large button-styling" disabled={caseStatusClosed}></lightning-button>
+          <lightning-button padding="around-medium" icon-name="utility:delete" variant="destructive" label="Reject" title="Reject" onclick={handleReject} class="slds-m-horizontal_large button-styling" disabled={caseStatusClosed}></lightning-button>
+          <lightning-button icon-name="utility:edit" variant="brand-outline" label="Edit" title="Edit" onclick={openEditModal} class="slds-m-horizontal_large button-styling" disabled={caseStatusClosed}></lightning-button>
+          <template if:true={isModalOpen}>
+              
+              <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_medium slds-align_absolute-center slds-m-horizontal_large">
+                  <div class="slds-modal__container slds-m-horizontal_large modal-styling">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                      <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                      </svg>
+                      <span class="slds-assistive-text">Cancel and close</span>
+                    </button>
+                    <div class="slds-modal__header">
+                      <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate title-styling"><b>Edit Review</b></h1>
+                    </div>
+                    <template if:true={modalSpinner}>
+                      <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+                    </template>
+                    <div class="slds-modal__content slds-p-around_medium slds-m-horizontal_large" id="modal-content-id-1">
+                      <div class="modal-styling">
+                        <template if:true={modalError}>
+                          <div class="errors">
+                            <b>Error</b>: {modalErrorMessage}
+                            <br />
+                            <br />
+                          </div>
+                        </template>
+                      <p><b>Star Rating</b>: ({updatedReviewRatingParenthesis})</p>
+                      <div class="rate">
+                          <input type="radio" id="star5" name="ReviewRatingEdit" data-id="reviewRatingEdit5" value=5 onclick={rating} checked={is5checked} disabled={onRejectModal} />
+                          <label for="star5" title="text">5 stars</label>
+                          <input type="radio" id="star4" name="ReviewRatingEdit" data-id="reviewRatingEdit4" value=4 onclick={rating} checked={is4checked} disabled={onRejectModal}/>
+                          <label for="star4" title="text">4 stars</label>
+                          <input type="radio" id="star3" name="ReviewRatingEdit" data-id="reviewRatingEdit3" value=3 onclick={rating} checked={is3checked} disabled={onRejectModal}/>
+                          <label for="star3" title="text">3 stars</label>
+                          <input type="radio" id="star2" name="ReviewRatingEdit" data-id="reviewRatingEdit2" value=2 onclick={rating} checked={is2checked} disabled={onRejectModal}/>
+                          <label for="star2" title="text">2 stars</label>
+                          <input type="radio" id="star1" name="ReviewRatingEdit" data-id="reviewRatingEdit1" value=1 onclick={rating} checked={is1checked} disabled={onRejectModal}/>
+                          <label for="star1" title="text">1 star</label>
+                      </div>
+                      <br />
+                      <br />
+                      <br />
+                      <b>Review Text</b>:
+                      <lightning-textarea
+                          value={reviewTextModal}
+                          onchange={handleReviewTextChange}
+                          disabled={onRejectModal}>
+                      </lightning-textarea>
+                      <br />
+                      <br />
+                      <b>Case Comment</b>:
+                      <lightning-textarea
+                          value={caseCommentText}
+                          onchange={handleCommentChange}>
+                      </lightning-textarea>
+                    </div>
+                  </div>
+                    <div class="slds-modal__footer">
+                    <template lwc:if={onRejectModal}>
+                      <lightning-button icon-name="utility:delete" variant="destructive" label="Reject Review" title="Reject Review" onclick={handleReviewRejection} class="slds-m-right_x-small button-styling"></lightning-button>
+                    </template>
+                    <template lwc:else>
+                      <lightning-button icon-name="standard:approval" variant="brand" label="Publish Review" title="Publish Review" onclick={publish} class="slds-m-right_x-small button-styling"></lightning-button>
+                    </template>
+                      <lightning-button label="Cancel" title="Cancel" onclick={closeModal} class="slds-m-right_x-small button-styling"></lightning-button>
+                    </div>
+                  </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+          </template>
+        </div>
+        </template>
+        <template if:false={hasReviewUUId}>
+        </template>
+        <hr><br />
+    </template>
+</template>

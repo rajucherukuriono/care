@@ -1,0 +1,133 @@
+<aura:component extends="c:CCCModuleBase">
+
+    <!-- Public Attributes -->
+    <aura:attribute name="discountRecords" type="List" default="[]" access="public" />
+    <!-- <aura:attribute name="discountRecord" type="Discount__c" default="" access="public" /> -->
+    <aura:attribute name="opportunityRecord" type="Opportunity" access="public" />
+    <!-- <aura:attribute name="opportunityCategoryGroup" type="Map" access="public" /> -->
+    <aura:attribute name="saveClicked" type="Boolean" default="false" access="public" />
+    <aura:attribute name="saveDisabled" type="Boolean" default="false" access="public" />
+
+    <!-- Private Attributes -->
+    <!-- <aura:attribute name="selectedDiscountRecord" type="Discount__c" default="" access="private" /> -->
+
+    <!-- Change Handler - Init -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <!-- Discount Records -->
+    <div class="slds-grid slds-grid_vertical-align-start slds-gutters slds-wrap slds-scrollable_y">
+
+        <div class="slds-col slds-size_6-of-6">
+
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-border_right slds-border_left"
+                role="grid">
+                <thead>
+                    <tr class="slds-line-height_reset">
+
+                        <!-- Radial Input -->
+                        <th class="slds-text-title_caps" scope="col" style="width: 3.25rem;">
+                            <div class="slds-truncate slds-assistive-text slds-p-around_x-small"
+                                id="column-group-header" title="Choose a row to select">Choose
+                                a row to select</div>
+                        </th>
+
+                        <!-- Discount Name -->
+                        <th aria-label="Discount Name" aria-sort="none" class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate slds-p-around_x-small" title="Discount Name">Discount Name
+                            </div>
+                        </th>
+
+                        <!-- Account -->
+                        <th aria-label="Account" aria-sort="none" class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate slds-p-around_x-small" title="Account">Account</div>
+                        </th>
+
+                        <!-- Start Date -->
+                        <th aria-label="Start Date" aria-sort="none" class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate slds-p-around_x-small" title="Start Date">Start Date</div>
+                        </th>
+
+                        <!-- End Date -->
+                        <th aria-label="End Date" aria-sort="none" class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate slds-p-around_x-small" title="End Date">End Date</div>
+                        </th>
+
+                        <!-- Discount % -->
+                        <th aria-label="Discount %" aria-sort="none" class="slds-text-title_caps slds-text-align_right"
+                            scope="col">
+                            <div class="slds-truncate slds-p-around_x-small" title="Discount %">Discount %</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <aura:iteration items="{! v.discountRecords }" var="discountRecord">
+                        <tr class="slds-hint-parent">
+
+                            <td class="slds-text-align_center" role="gridcell">
+
+                                <!-- Radial Input -->
+                                <lightning:input type="radio" aura:id="discountRecord" name="discountRecord"
+                                    value="{!discountRecord}" onchange="{! c.onDiscountRecordChange}" checked="{!
+                                            equals(discountRecord.Id,v.selectedDiscountRecord.Id)}" />
+                            </td>
+
+                            <!-- Discount Name -->
+                            <th scope="row" tabindex="0">
+                                <div class="slds-truncate slds-p-around_x-small" title="{!discountRecord.Name}">
+                                    <lightning:formattedText value="{!discountRecord.Name}" />
+                                </div>
+                            </th>
+
+                            <!-- Account Name -->
+                            <td role="gridcell">
+                                <div class="slds-truncate slds-p-around_x-small"
+                                    title="{!discountRecord.Account__r.Name}">
+                                    <lightning:formattedText value="{!discountRecord.Account__r.Name}" />
+                                </div>
+                            </td>
+
+                            <!-- Start Date -->
+                            <td role="gridcell">
+                                <div class="slds-truncate slds-p-around_x-small"
+                                    title="{!discountRecord.Start_Date__c}">
+                                    <lightning:formattedDateTime value="{!discountRecord.Start_Date__c}" />
+                                </div>
+                            </td>
+
+                            <!-- End Date -->
+                            <td role="gridcell">
+                                <div class="slds-truncate slds-p-around_x-small" title="{!discountRecord.End_Date__c}">
+                                    <lightning:formattedDateTime value="{!discountRecord.End_Date__c}" />
+                                </div>
+                            </td>
+
+                            <!-- Discount % -->
+                            <td role="gridcell" class="slds-text-align_right">
+                                <div class="slds-truncate slds-p-around_x-small"
+                                    title="{!discountRecord.Discount_Percent__c}">
+
+                                    <lightning:formattedNumber value="{!discountRecord.Discount_Percent__c}"
+                                        style="percent-fixed" />
+                                </div>
+                            </td>
+
+                        </tr>
+                    </aura:iteration>
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="slds-clearfix slds-m-top_large">
+        <div class="slds-float_right">
+            <lightning:button label="Cancel" onclick="{!c.onCancelButtonClicked}" class="slds-m-horizontal_xx-small" />
+            <lightning:button variant="brand" label="Save" onclick="{!c.onSaveButtonClicked}"
+                class="slds-m-horizontal_xx-small" />
+        </div>
+    </div>
+
+</aura:component>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>International_CSAT_Surveys</fullName>
+    <booleanFilter>(1 OR 4) AND 2 AND 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Case__c</columns>
+    <columns>CSAT_Rating__c</columns>
+    <columns>NPS_Score__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>Member Care CSAT Survey</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>notEqual</operation>
+        <value>US Member Care CSAT - Closed Case Survey</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2018 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>Kundenservice CSAT Survey</value>
+    </filters>
+    <label>International CSAT Surveys</label>
+    <language>en_US</language>
+</ListView>

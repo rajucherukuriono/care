@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Belong_to_a_Healthcare_Organization__c</fullName>
+    <description>SFORCE-2796
+Create new Action Plan Need record type for Senior Care Planning &quot;Care Tasks&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate whether care recipient belongs to a healthcare organization and provide details of healthcare organization.</inlineHelpText>
+    <label>Belong to a Healthcare Organization?</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

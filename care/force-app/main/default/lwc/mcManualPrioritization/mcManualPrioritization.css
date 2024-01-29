@@ -1,0 +1,35 @@
+.priorityCell {
+    background : rgb(243, 168, 168);
+}
+.spinner-padding {
+    padding-top: 5%;
+}
+.mcStyleClass_td {
+    padding:5px;
+}
+.toastMessageSuccess {
+    color: green;
+}
+.toastMessageError {
+    color: red;
+}
+.priorityInput {
+    width: 100px;
+}
+.mcStyleClass_table{
+    padding: 0px;
+    margin: 0px;;
+}
+.mcStyleClass_table td {
+    padding: 5px;
+    margin: 0px;
+}
+.mcStyleClass_table2{
+    padding: 0px;
+    margin: 0px;
+    width: 30%;
+}
+.mcStyleClass_table2 td{
+    padding: 5px;
+    margin:0px;
+}

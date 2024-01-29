@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bypass_OnDemand_Sync__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Enabling this causes Salesforce to stop searching for members in remote platforms. Use only when either those platforms or ODS are suffering catastrophic failures. When enabled, all cases will be set with an ODS Request  Status of &quot;Complete - ODS Bypass&quot;.</inlineHelpText>
+    <label>Bypass OnDemand Sync</label>
+    <type>Checkbox</type>
+</CustomField>

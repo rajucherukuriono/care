@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Login__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>The URL of the Login Page for the given locale.</inlineHelpText>
+    <label>Login</label>
+    <required>false</required>
+    <type>Url</type>
+</CustomField>

@@ -1,0 +1,82 @@
+<aura:component extends="c:CCCModuleBase">
+
+    <!-- Aura Attributes - Public -->
+    <aura:attribute name="saveClicked" type="Boolean" default="false" access="public" />
+    <aura:attribute name="saveDisabled" type="Boolean" default="false" access="public" />
+    <aura:attribute name="contactRecord" type="Contact" access="public" />
+    <aura:attribute name="title" type="String" default="" access="public" />
+    <aura:attribute name="provinceOptions" type="List" access="public" />
+
+    <!-- Aura Attributes - Private -->
+    <aura:attribute name="nameFields" type="List" default="['salutation','firstName','lastName']" access="private" />
+    <aura:attribute name="countryOptions" type="List" access="private" />
+    <aura:attribute name="salutationOptions" type="List" access="private" />
+
+    <!-- Aura Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <!-- Contact Form -->
+    <div class="slds-p-around_xx-small">
+
+        <div class="slds-text-heading_medium slds-text-align_center slds-m-bottom_large">
+            <strong>{!v.title}</strong>
+        </div>
+
+        <div class="slds-grid slds-gutters slds-wrap">
+
+            <div class="slds-col slds-size_1-of-2">
+
+                <!-- inputName Lightning Component - Salutation, Firstname Lastname -->
+                <div>
+                    <lightning:inputName aura:id="inputName" name="inputName" required="true"
+                        fieldsToDisplay="{!v.nameFields}" label="Name" firstName="{!v.contactRecord.FirstName}"
+                        middleName="{!v.contactRecord.Middle_Name__c}"
+                        lastName="{!v.contactRecord.LastName}"
+                        suffix="{!v.contactRecord.Suffix__c}" salutation="{!v.contactRecord.Salutation}"
+                        options="{!v.salutationOptions}" class="nameCmp" variant="label-hidden"
+                        onblur="{!c.validateName}"/>
+                </div>
+
+                <!-- Phone -->
+                <div class="slds-m-top_small">
+                    <lightning:input aura:id="inputPhone" name="inputPhone" type="tel" required="true" label="Phone"
+                        value="{!v.contactRecord.Phone}" pattern="[0-9]{10}" messageWhenPatternMismatch="Please enter a 10 digit phone number, without formatting"/>
+                </div>
+
+                <!-- Email -->
+                <div class="slds-m-top_small">
+                    <lightning:input aura:id="inputEmail" name="inputEmail" type="email" required="true" label="Email"
+                        value="{!v.contactRecord.Email}" />
+                </div>
+
+            </div>
+
+            <div class="slds-col slds-size_1-of-2">
+
+                <!-- inputAddress Lightning Component - Country, State, Address, City -->
+                <div>
+                    <lightning:inputAddress aura:id="inputAddress" name="inputAddress" required="false"
+                        addressLabel="Address" streetLabel="Street" cityLabel="City" countryLabel="Country"
+                        provinceLabel="State" postalCodeLabel="Postal Code"
+                        street="{! v.contactRecord.MailingStreet }" city="{! v.contactRecord.MailingCity }"
+                        province="{! v.contactRecord.MailingState }" country="{! v.contactRecord.MailingCountry }"
+                        countryOptions="{! v.countryOptions }"
+                        postalCode="{! v.contactRecord.MailingPostalCode }" provinceOptions="{! v.provinceOptions }"
+                        class="addressCmp" variant="label-hidden" />
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Button Management -->
+    <div class="slds-clearfix slds-m-top_large">
+        <div class="slds-float_right">
+            <lightning:button label="Cancel" onclick="{!c.onCancelClicked}" class="slds-m-horizontal_xx-small" />
+            <lightning:button variant="brand" label="Save" onclick="{!c.onSaveClicked}"
+                class="slds-m-horizontal_xx-small" />
+        </div>
+    </div>
+
+</aura:component>

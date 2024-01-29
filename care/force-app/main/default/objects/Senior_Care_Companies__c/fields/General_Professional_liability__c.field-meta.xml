@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General_Professional_liability__c</fullName>
+    <description>Check if caregivers are covered under a policy</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If your caregivers have PVSC, are they covered under General/Professional liability insurance to verify caregiver are covered under this policy?</inlineHelpText>
+    <label>General/Professional liability</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

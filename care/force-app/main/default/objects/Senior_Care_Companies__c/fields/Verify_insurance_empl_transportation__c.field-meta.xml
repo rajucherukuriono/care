@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verify_insurance_empl_transportation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Added for NMHC Canada</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For NMHC Canada: Do you verify insurance of employees providing transportation services? In Canada the caregivers can have 6A coverage on their personal vehicles which allows them to carry passengers for business purposes.</inlineHelpText>
+    <label>Verify insurance empl. transportation?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

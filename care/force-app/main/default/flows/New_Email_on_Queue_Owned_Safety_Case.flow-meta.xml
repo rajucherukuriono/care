@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>This will send the Email Alert &quot;International Safety LE Requests&quot;</description>
+        <name>International_Safety_LE_Requests_Email_Alert</name>
+        <label>International Safety LE Requests - Email Alert</label>
+        <locationX>870</locationX>
+        <locationY>671</locationY>
+        <actionName>Case.Safety_New_Email_on_International_Safety_LE_Requests_Queue_Owned_Case</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.ParentId</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Safety_New_Email_on_International_Safety_LE_Requests_Queue_Owned_Case</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <description>This sends the Email Alert &quot;Safety - New Email on Safety-Legal Escalations Case&quot;</description>
+        <name>Legal_Escalations_Email_Alert</name>
+        <label>Legal Escalations - Email Alert</label>
+        <locationX>269</locationX>
+        <locationY>672</locationY>
+        <actionName>Case.Safety_New_Email_on_Safety_Legal_Escalations_Case</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.ParentId</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Safety_New_Email_on_Safety_Legal_Escalations_Case</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>Entry_Condition</name>
+        <label>Entry Condition</label>
+        <locationX>533</locationX>
+        <locationY>371</locationY>
+        <defaultConnectorLabel>False</defaultConnectorLabel>
+        <rules>
+            <name>True</name>
+            <conditionLogic>1 OR 2</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Parent.OwnerId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>00G70000001ZMISEA4</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Parent.OwnerId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>00G03000002kF06EAE</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Queue_Decision</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>This decision element will determine which Email Alert is fired depending on the Queue that owns the Case</description>
+        <name>Queue_Decision</name>
+        <label>Queue Decision</label>
+        <locationX>533</locationX>
+        <locationY>564</locationY>
+        <defaultConnectorLabel>None</defaultConnectorLabel>
+        <rules>
+            <name>Legal_Escalations_Queue</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Parent.OwnerId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>00G70000001ZMISEA4</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Legal_Escalations_Email_Alert</targetReference>
+            </connector>
+            <label>Legal Escalations Queue</label>
+        </rules>
+        <rules>
+            <name>International_Safety_LE_Requests</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Parent.OwnerId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>00G03000002kF06EAE</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>International_Safety_LE_Requests_Email_Alert</targetReference>
+            </connector>
+            <label>International Safety LE Requests</label>
+        </rules>
+    </decisions>
+    <description>This will send an email to a group of Safety Team managers when a new Email Message is created on a Case that is owned by one of two Safety Queues: &quot;Safety-Legal Escalations&quot; or &quot;International Safety LE Requests&quot;
+
+https://carecom.atlassian.net/browse/SFORCE-8032</description>
+    <environments>Default</environments>
+    <interviewLabel>New Email on Queue Owned Safety Case {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>New Email on Queue Owned Safety Case</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>407</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Entry_Condition</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Incoming</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>EmailMessage</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

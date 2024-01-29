@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lives_With__c</fullName>
+    <externalId>false</externalId>
+    <label>Lives With</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alone</fullName>
+                <default>false</default>
+                <label>Alone</label>
+            </value>
+            <value>
+                <fullName>Care Seeker</fullName>
+                <default>false</default>
+                <label>Care Seeker</label>
+            </value>
+            <value>
+                <fullName>Child</fullName>
+                <default>false</default>
+                <label>Child</label>
+            </value>
+            <value>
+                <fullName>Family Caregiver</fullName>
+                <default>false</default>
+                <label>Family Caregiver</label>
+            </value>
+            <value>
+                <fullName>Multiple</fullName>
+                <default>false</default>
+                <label>Multiple</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Paid Caregiver</fullName>
+                <default>false</default>
+                <label>Paid Caregiver</label>
+            </value>
+            <value>
+                <fullName>Spouse/Partner</fullName>
+                <default>false</default>
+                <label>Spouse/Partner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

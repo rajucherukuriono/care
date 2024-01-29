@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Assigns the single App permission to &apos;Run Macros on Multiple Records&apos;.Only assign to users, that do not already have the &apos;TP: Entitlement Mgmt, Service Resource, and Skills&apos; Permission Set</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Run Macros on Multiple Records</label>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Macro</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>BulkMacrosAllowed</name>
+    </userPermissions>
+</PermissionSet>

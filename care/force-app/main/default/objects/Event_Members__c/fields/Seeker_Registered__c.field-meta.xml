@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Seeker_Registered__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Seeker attending event/onsite group</description>
+    <externalId>false</externalId>
+    <label>Seeker Registered</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Event Members</relationshipLabel>
+    <relationshipName>Event_Members</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,223 @@
+<apex:page StandardController="Opportunity" extensions="DealSummaryController" showHeader="false" sidebar="false" lightningStylesheets="true">
+<!--
+<apex:sectionHeader title="Deal Summary" printUrl="/apex/Deal_Summary_Print_Only_Mode?Id={!oppObj.id}"/><br/>
+-->
+
+    <table width="98%" border="0" cellpadding="0" cellspacing="0">
+        <tr><td align="left"><font size="6">{!oppObj.name}</font></td></tr>
+    <tr><td align="right"><a href="javascript:window.print();">Print</a></td></tr>
+    </table>
+<style>
+label{
+white-space: nowrap;
+}
+th{
+white-space: nowrap;
+}
+</style>
+
+<apex:form >
+<apex:pageBlock >
+<apex:actionFunction name="refreshContDtls" action="{!refreshContDetailsCtrlMethod}" reRender="contactId1,contactId2"/>
+<apex:param name="param1" value="{!selectedContactId1_1}" assignTo="{!selectedContactId1_1}"/>
+<apex:param name="param1" value="{!selectedContactId1_2}" assignTo="{!selectedContactId1_2}"/>
+<apex:param name="param1" value="{!selectedContactId1_3}" assignTo="{!selectedContactId1_3}"/>
+<apex:param name="param1" value="{!selectedContactId1_4}" assignTo="{!selectedContactId1_4}"/>
+<apex:pageblock >
+    <apex:pageblockSection columns="2"> 
+     <apex:outputField label="Client Name" value="{!oppObj.account.name}"/>
+    <apex:outputField label="Opportunity Amount" value="{!oppObj.amount}"/>    
+    
+    <apex:outputField label="AE Name" value="{!oppObj.owner.name}"/>
+    <apex:outputField value="{!oppObj.Annual_Contract_Value__c}"/>
+    
+    <apex:outputField value="{!oppObj.Client_Success_Manager__c}"/>
+    <apex:outputField value="{!oppObj.State_Sales_Tax_Applicable__c}"/>        
+    
+    <apex:outputField value="{!oppObj.Account_Manager__c}"/>
+    <apex:outputField value="{!oppObj.Payment_Terms__c}"/>
+                
+    <apex:outputField value="{!oppObj.Implementation_Call_Date__c}"/>   
+    <apex:outputField label="Payment Terms/schedule" value="{!oppObj.Payment_Terms_schedule__c}"/>    
+    
+      
+    <apex:outputField label="Target Launch Date" value="{!oppObj.WPS_Target_Launch_Date__c}"/>    
+    <apex:outputField label="Care Select Fee" value="{!oppObj.Care_Select_Fee__c}"/>
+    
+    <apex:outputField label="Effective Date on agreement" value="{!oppObj.Effective_Date__c}"/>
+    <apex:outputField label="Total Contract Value" value="{!oppObj.Total_Contract_Value__c}"/>
+    
+    <apex:outputField value="{!oppObj.Term_End_Date__c}"/> 
+    <apex:outputField label="Type" value="{!oppObj.Type}"/>
+    
+    <apex:outputField label="Term (Months)" value="{!oppObj.Term_Months_or_Multi_year__c}"/>
+    <apex:outputField value="{!oppObj.stageName}"/>               
+
+    <apex:outputField label="Number of employees covered " value="{!oppObj.Covered_Headcount__c}"/>
+                <apex:inputHidden value="{!oppObj.Auto_Renew__c}"/>   
+    <apex:outputField label="International Employees" value="{!oppObj.International_Employees__c}"/>
+    <apex:outputText label="HQ Address of company" value="{!oppObj.Account.Company_Headquarters_Address__c}"/>
+    
+    
+
+        <apex:outputField value="{!oppObj.International_Description_of_Services__c}"/>     
+    <apex:outputText value="{!oppObj.Billing_Address__c}"/>
+    
+         <apex:inputHidden value="{!oppObj.Auto_Renew__c}"/>               
+    <apex:outputField value="{!oppObj.Account.Industry}"/>
+    
+    <apex:inputHidden value="{!oppObj.Auto_Renew__c}"/>
+    <apex:outputField label="List top 5-10 office locations (city & state)" value="{!oppObj.List_top_5_10_office_locations__c}" />
+    <apex:inputHidden value="{!oppObj.Auto_Renew__c}"/>
+    <apex:outputField value="{!oppObj.Client_Group_URL__c}"/>
+    
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+        
+<apex:pageblock >
+    <apex:pageblockSection columns="2">         
+        <apex:outputField label="Primary Competitor" value="{!oppObj.Competitor__c}"/>
+        <apex:outputField label="Secondary Competitor" value="{!oppObj.Secondary_Competitor__c}"/>
+        <apex:outputField label="Incumbent" value="{!oppObj.Incumbent__c}"/>                
+        <apex:outputField label="Publicity (reference/ investor call?)" value="{!oppObj.Publicity_reference_investor_call__c}"/>
+        <apex:outputField label="SLA's" value="{!oppObj.SLA_s__c}"/>
+        <apex:outputField label="Termination Provisions" value="{!oppObj.Termination_Provisions__c}"/>
+        <apex:outputField label="Non Standard Legal Terms" value="{!oppObj.Non_Standard_Legal_Terms__c}"/>
+        <apex:outputField value="{!oppObj.Auto_Renew__c}"/>
+        <apex:outputField value="{!oppObj.Cancellation_Notice_Requirement__c}"/>
+        <apex:outputField value="{!oppObj.Auto_Renewal_Terms__c}"/>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+         <apex:pageBlock >    
+    <apex:pageblockSection columns="1">
+    <apex:pageblockTable value="{!oppLineItemList}" var="oppLineItem">
+    <apex:column headerValue="Product">
+        <apex:outputfield value="{!oppLineItem.Product2.Name}"/>
+        </apex:column>
+        <apex:column headerValue="Description">
+        <apex:outputfield value="{!oppLineItem.Description}"/>
+        </apex:column>
+        <apex:column headerValue="Sales Price">
+        <apex:outputfield value="{!oppLineItem.UnitPrice}"/>
+        </apex:column>
+        <apex:column headerValue="# of Employees & Countries">
+        <apex:outputField value="{!oppLineItem.No_of_Employees_Countries__c}"/>
+        </apex:column>
+        <apex:column headerValue="Co Pay/Details">
+        <apex:outputField value="{!oppLineItem.Co_Pay_Details__c}"/>
+        </apex:column>
+        <apex:column headerValue="Notes">
+        <apex:outputField value="{!oppLineItem.Notes__c}"/>
+    </apex:column>
+    
+    </apex:pageblockTable>    
+    </apex:pageblockSection>
+        </apex:pageBlock>
+        
+        <apex:pageblock >
+    <apex:pageblockSection columns="2"> 
+            <apex:outputField label="Total BUC Days in Applicable Contract Term" value="{!oppObj.Total_Number_of_days_allowed_for_the_con__c}"/>            
+            <apex:outputField value="{!oppObj.Days_available_per_year_per_employee__c}"/>
+            
+            <apex:outputField value="{!oppObj.BUC_Special_Terms__c}"/>
+            <apex:outputField value="{!oppObj.In_home_BUC_Overage_Fee__c}"/>
+            
+            <apex:outputField value="{!oppObj.No_of_in_home_days__c}"/>
+            <apex:outputField value="{!oppObj.In_center_BUC_Overage_Fee__c}"/>
+
+            
+            <apex:outputField value="{!oppObj.No_of_in_center_days__c}"/>
+            <apex:outputField value="{!oppObj.Personal_Network_Overage_Fee_if_stated__c}"/>
+
+            
+
+             <apex:outputField value="{!oppObj.PAYG_BUC__c}"/>
+            <apex:pageBlockSectionItem helpText="{!$ObjectType.Opportunity.fields.Final_in_home_and_in_center_results_for__c.InlineHelpText}">
+            <apex:outputlabel value="Final in-home and in-center results for 15 miles" />
+            <apex:outputField label="Final in-home and in-center results for 15 miles" value="{!oppObj.Final_in_home_and_in_center_results_for__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:outputField value="{!oppObj.BUC_Rollover__c}"/>
+            <apex:outputField value="{!oppObj.Expansion_Plan_Notes__c}"/>
+            
+            <apex:outputField value="{!oppObj.Bundle_Price_per_Day__c}"/>
+            <apex:inputHidden value="{!oppObj.Auto_Renew__c}"/>
+            
+            <apex:outputField value="{!oppObj.Bundle_Overage_Notes__c}"/>
+            <apex:inputHidden value="{!oppObj.Auto_Renew__c}"/>
+            
+
+            
+            <apex:outputField value="{!oppObj.Bundle_Increments__c}"/>
+            <apex:inputHidden value="{!oppObj.Auto_Renew__c}"/>
+                        
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+           
+         <apex:pageBlock >
+        <apex:pageBlockSection columns="2">
+        <apex:outputField value="{!oppObj.Number_of_onsite_events__c}"/>
+                <apex:outputField label="Benefit Fair Dates or other important dates" value="{!oppObj.Benefit_Fair_Dates_or_other_important_da__c}"/>
+                        <apex:outputField value="{!oppObj.Is_KCE_involved_If_so_how__c}"/>
+        <apex:outputField value="{!oppObj.Areas_of_concern__c}"/>
+                <apex:outputField value="{!oppObj.Areas_of_opportunity__c}"/>
+        <apex:outputField value="{!oppObj.Marketing_Creative_special_requests__c}"/>
+                <apex:outputField value="{!oppObj.Services_with_BH__c}"/>
+            <apex:outputField value="{!oppObj.Other__c}"/> 
+        </apex:pageblockSection>
+        </apex:pageBlock>      
+       
+               <apex:pageBlock >   
+        <apex:pageBlockSection columns="2"> 
+        <apex:outputField value="{!oppObj.Care_Credits__c}"/>
+        <apex:outputField value="{!oppObj.Total_budget__c}"/>
+        <apex:outputField value="{!oppObj.Value_per_credit__c}"/>
+        <apex:outputField value="{!oppObj.Verticals_covered__c}"/>
+        <apex:outputField value="{!oppObj.Number_of_transactions__c}"/>
+        <apex:outputField value="{!oppObj.Employer_Transaction_Fee__c}"/>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+           
+       <apex:pageBlock >   
+        <apex:pageBlockSection columns="2"> 
+        <apex:outputField value="{!oppObj.Personal_Network_In_Home__c}"/>
+        <apex:outputField value="{!oppObj.Max_Reimbursement_In_home__c}"/>
+        <apex:outputField value="{!oppObj.Personal_Network_In_Center__c}"/>
+        <apex:outputField value="{!oppObj.Max_Reimbursement_In_Center__c}"/>
+        <apex:outputField value="{!oppObj.Personal_Network_Notes__c}"/>     
+        <apex:outputField value="{!oppObj.International_Personal_Network__c}"/>   
+        <apex:outputField value="{!oppObj.Personal_Network_Transaction_Fee__c}"/>   
+        <apex:outputField value="{!oppObj.International_PN_Notes__c}"/>
+        <apex:outputField value="{!oppObj.Personal_Network_Usage_Counting__c}"/>         
+        </apex:pageBlockSection>
+        </apex:pageBlock>    
+           
+        <apex:outputlabel rendered="{!oppObj.Type=='Existing Business'}">
+        <apex:pageBlock >
+        <apex:pageBlockSection columns="2"> 
+        
+        <apex:outputField value="{!oppObj.Previous_Contract_Value__c}"/>
+        <apex:outputField value="{!oppObj.Upsell_Amount__c}"/>
+        <apex:outputField value="{!oppObj.Price_Increase_Amount__c}"/>
+        <apex:outputField value="{!oppObj.Reason_for_increase_decrease__c}"/>
+        <apex:outputField value="{!oppObj.Organic_Growth_Amount__c}"/>
+        <apex:outputField value="{!oppObj.Previous_Year_Bundles_and_Overages__c}"/>
+
+                </apex:pageBlockSection>
+        </apex:pageBlock>
+                </apex:outputlabel>        
+      <apex:pageBlockButtons >
+<apex:commandButton value="Save Deal Summary" action="{!saveDealSummary}"/>
+<!-- <apex:commandButton value="Final Deal Summary" action="{!readOnlyDealSummary}"/> -->
+<apex:commandButton value="Edit Deal Summary" action="{!editDealSummary}"/>
+
+</apex:pageBlockButtons>
+</apex:pageBlock>  
+       <table width="98%" border="0" cellpadding="0" cellspacing="0">        
+    <tr><td align="left"><p style="color:blue"><b>Opportunity Id: </b>{!oppObj.id}</p></td></tr>
+    <tr><td align="right"><font size="6"></font></td></tr>
+    </table>        
+    </apex:form>
+</apex:page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Override_Employer_Program__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Boolean flag, upon checking this, Skips Employer Program validation while anonymizing account.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Check to override Employer Program validation.</inlineHelpText>
+    <label>Override Employer Program</label>
+    <type>Checkbox</type>
+</CustomField>

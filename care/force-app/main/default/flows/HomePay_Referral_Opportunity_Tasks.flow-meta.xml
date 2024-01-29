@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Carolyn Livingston (00570000002zvwdAAA)</description>
+        <name>Home_Pay_BD_Referral_TY</name>
+        <label>Home Pay BD Referral TY</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <actionName>NewTask</actionName>
+        <actionType>quickAction</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>contextId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Subject</name>
+            <value>
+                <stringValue>Home Pay BD Referral TY</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ActivityDate</name>
+            <value>
+                <elementReference>Tomorrow</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>OwnerId</name>
+            <value>
+                <stringValue>0055Y00000I4vx6</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>NewTask</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <description>Chelsea Mills (00539000005g02HAAQ)</description>
+        <name>HomePay_Authorized_Contact_Outreach</name>
+        <label>HomePay Authorized Contact Outreach</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <actionName>NewTask</actionName>
+        <actionType>quickAction</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>contextId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Subject</name>
+            <value>
+                <stringValue>HomePay Authorized Contact Outreach</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ActivityDate</name>
+            <value>
+                <elementReference>Tomorrow</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>OwnerId</name>
+            <value>
+                <stringValue>0055Y00000I4vx6</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>NewTask</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <description>Checks what type of update was made to the HomePay Referral Opportunity</description>
+        <name>Update_Type</name>
+        <label>Update Type</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Authorized_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Authorized Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>HomePay_Authorized_Contact_Outreach</targetReference>
+            </connector>
+            <label>Authorized Contact</label>
+        </rules>
+        <rules>
+            <name>Referral</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Product_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Referral</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.How_did_you_hear_about_Care_com__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Business Development</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>HomePay Holding Account</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Home_Pay_BD_Referral_TY</targetReference>
+            </connector>
+            <label>Referral</label>
+        </rules>
+    </decisions>
+    <description>Creates tasks for HomePay Referral Opportunity Record Types (01270000000HndfAAC) depending on the type of update</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Tomorrow&apos;s Date</description>
+        <name>Tomorrow</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Flow.CurrentDateTime} +1</expression>
+    </formulas>
+    <interviewLabel>HomePay Referral Tasks {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>HomePay Referral Opportunity Tasks</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Type</targetReference>
+        </connector>
+        <filterFormula>{!$Record.RecordType.Name}=&apos;HomePay Referral&apos; &amp;&amp; 
+(ISNEW() || ISCHANGED( {!$Record.StageName}))</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SFORCE-2794 Updates to the International BUC Case Page Layout
+This Flow is created from Process Builder to Flow as part of the ticket Sforce-7269</description>
+    <masterLabel>Assign Case Owner to Q BUC UK IRE</masterLabel>
+</FlowDefinition>

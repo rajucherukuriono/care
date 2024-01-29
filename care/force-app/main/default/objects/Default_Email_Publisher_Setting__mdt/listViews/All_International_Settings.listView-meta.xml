@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_International_Settings</fullName>
+    <columns>MasterLabel</columns>
+    <columns>Countries__c</columns>
+    <columns>Case_Origins__c</columns>
+    <columns>Default_From__c</columns>
+    <columns>Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MasterLabel</field>
+        <operation>contains</operation>
+        <value>International</value>
+    </filters>
+    <label>All International Settings</label>
+    <language>en_US</language>
+</ListView>

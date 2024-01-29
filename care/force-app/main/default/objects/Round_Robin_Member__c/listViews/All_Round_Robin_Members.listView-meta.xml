@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Round_Robin_Members</fullName>
+    <columns>Round_Robin__c</columns>
+    <columns>User__c</columns>
+    <columns>Active__c</columns>
+    <columns>Task_Counter__c</columns>
+    <columns>Real_Task_Count__c</columns>
+    <columns>Round_Robin_Vertical__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Round Robin Members</label>
+    <language>en_US</language>
+</ListView>

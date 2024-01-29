@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Processed_US_Open_Fulfillment_Date_CA</fullName>
+    <columns>NAME</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Request_Status__c</columns>
+    <columns>Universal_Member_Id__c</columns>
+    <columns>State_Province__c</columns>
+    <columns>Fulfillment_Date__c</columns>
+    <columns>Request_Date__c</columns>
+    <columns>Email__c</columns>
+    <columns>Fail_Decline_Reason__c</columns>
+    <columns>Case__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Source_System__c</field>
+        <operation>equals</operation>
+        <value>US Platform</value>
+    </filters>
+    <filters>
+        <field>State_Province__c</field>
+        <operation>equals</operation>
+        <value>,CA,California</value>
+    </filters>
+    <filters>
+        <field>Request_Status__c</field>
+        <operation>equals</operation>
+        <value>Request Accepted</value>
+    </filters>
+    <label>Processed US - (CA)</label>
+</ListView>

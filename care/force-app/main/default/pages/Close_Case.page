@@ -1,0 +1,230 @@
+<apex:page standardController="Case" extensions="CaseCommentExtension" showHeader="true" standardStylesheets="false"   lightningstylesheets="true">
+    <apex:outputpanel id="errorMessages">
+        <apex:pageMessages rendered="true"/>
+    </apex:outputpanel>
+    <apex:includeScript value="/support/console/48.0/integration.js" />
+    <apex:includeScript value="/canvas/sdk/js/48.0/publisher.js" />
+    <apex:includeScript value="{!$Resource.CareDotComConsoleConroller}" />
+    
+    <style>
+        .localInputClass {width:100%;}
+    </style>
+    
+    
+    <apex:form >
+        <apex:variable var="lightningExperienceOnly" value="{!IF($User.UIThemeDisplayed = 'Theme4d', true, false)}"/>
+        <apex:inputHidden value="{!Case.Member_Status__c}" />
+        <apex:inputHidden value="{!Case.Send_Cancellation_Email__c}" />
+        <apex:inputHidden value="{!Case.Member_Account_Type__c}" />
+        <apex:inputHidden value="{!Case.Current_Member_Type__c}" />
+        <apex:outputpanel id="out">
+            <apex:pageBlock id="bugFields">
+                <apex:pageBlockSection columns="2" id="theFields">
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.CaseComment.fields.CommentBody.inlineHelpText}">
+                        <apex:outputlabel style="white-space:nowrap" value="Case Comments"/>
+                        <apex:inputField label="" value="{!Comment.CommentBody}"
+                                         styleClass="localInputClass"                        
+                                         html-placeholder="Write something..."/>
+                    </apex:pageblocksectionItem>  
+                    
+                    <apex:inputHidden value="{!Case.Member_Status__c}" />                     
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Contact_Theme__c.inlineHelpText}">
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Contact_Theme__c.label}"/>
+                        <apex:inputField styleclass="requiredInput localInputClass"
+                                         value="{!Case.Contact_Theme__c}" />
+                    </apex:pageblocksectionItem>            
+                                        
+                    <!--Start FIELDS AS PER JIRA SFORCE-3483 --->
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Device__c.inlineHelpText}">
+                        <apex:outputPanel >
+                            <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Device__c.label}"/>
+                            <c:HelpTextCloseCase text="{!$ObjectType.Case.fields.Device__c.inlineHelpText}" rendered="{!lightningExperienceOnly}"/>
+                        </apex:outputPanel>
+                        <apex:inputField styleclass="requiredInput localInputClass" value="{!Case.Device__c}" />
+                    </apex:pageblocksectionItem>    
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Jira_Number__c.inlineHelpText}">
+                        <apex:outputPanel >
+                            <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Jira_Number__c.label}"/>
+                            <c:HelpTextCloseCase text="{!$ObjectType.Case.fields.Jira_Number__c.inlineHelpText}" rendered="{!lightningExperienceOnly}"/>
+                        </apex:outputPanel>
+                        <apex:inputField styleclass="requiredInput localInputClass" value="{!Case.Jira_Number__c}" />
+                    </apex:pageblocksectionItem> 
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Actions_Taken__c.inlineHelpText}">
+                        <apex:outputPanel >
+                            <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Actions_Taken__c.label}"/>
+                            <c:HelpTextCloseCase text="{!$ObjectType.Case.fields.Actions_Taken__c.inlineHelpText}" rendered="{!lightningExperienceOnly}"/>
+                        </apex:outputPanel>
+                        <apex:inputField styleclass="requiredInput localInputClass" value="{!Case.Actions_Taken__c}" />
+                    </apex:pageblocksectionItem> 
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Browsers_and_Versions__c.inlineHelpText}">
+                        <apex:outputPanel >
+                            <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Browsers_and_Versions__c.label}"/>
+                            <c:HelpTextCloseCase text="{!$ObjectType.Case.fields.Browsers_and_Versions__c.inlineHelpText}" rendered="{!lightningExperienceOnly}"/>
+                        </apex:outputPanel>
+                        <apex:inputField styleclass="requiredInput localInputClass" value="{!Case.Browsers_and_Versions__c}" />
+                    </apex:pageblocksectionItem> 
+                    <!--End FIELDS AS PER JIRA SFORCE-3483 --->
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Contact_Reason__c.inlineHelpText}">
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Contact_Reason__c.label}" />
+                        <apex:inputField styleclass="localInputClass" value="{!Case.Contact_Reason__c}"/>                                
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Cancel__c.inlineHelpText}">
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Cancel__c.label}"/>
+                        <apex:inputField value="{!Case.Cancel__c}">
+                            <apex:actionSupport event="onchange" reRender="theFields"
+                                                action="{!DefaultsForCancelOrDowngrade}" />
+                            <apex:param value="{!SendCancellationEmailUserInput}" name="SendCancellationEmailUserInput" assignTo="{!SendCancellationEmailUserInput}"/>
+                        </apex:inputField>
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Contact_Secondary_Reason__c.inlineHelpText}">
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Contact_Secondary_Reason__c.label}"/>
+                        <apex:inputField styleclass="localInputClass"
+                                         value="{!Case.Contact_Secondary_Reason__c}" />
+                    </apex:pageblocksectionItem>
+                    
+                    <!-- Display Logic: Action Time
+The "Action Time" field is shown to allow the agent to control whether to send the Case to sterling or not
+LOGIC:
+If is an international case that uses the "Close Case" button
+If Case Reason is Cancel or Downgrade
+-->                 
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Downgrade__c.inlineHelpText}">
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Downgrade__c.label}"/>
+                        <apex:inputField value="{!Case.Downgrade__c}">
+                            <apex:actionSupport event="onchange" reRender="theFields"
+                                                action="{!DefaultsForCancelOrDowngrade}" />
+                            <apex:param value="{!SendCancellationEmailUserInput}" name="SendCancellationEmailUserInput" assignTo="{!SendCancellationEmailUserInput}"/>
+                        </apex:inputField>
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Sentiment__c.inlineHelpText}"> 
+                        <apex:outputlabel value="{!$ObjectType.Case.fields.Sentiment__c.label}" style="" />
+                        <apex:inputField value="{!Case.Sentiment__c}" />
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Action_Time__c.inlineHelpText}"
+                                               rendered="{!(isInternationalCase && (Case.Cancel__c || Case.Downgrade__c))}">
+                        <apex:outputlabel value="{!$ObjectType.Case.fields.Action_Time__c.label}" />
+                        <apex:inputField styleclass="requiredInput localInputClass"
+                                         value="{!Case.Action_Time__c}" />
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:inputHidden value="{!Case.Member_Status__c}" rendered="{!NOT(isInternationalCase && (Case.Cancel__c || Case.Downgrade__c)) || NOT(isInternationalCase) }"/>
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Bug__c.inlineHelpText}">
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Bug__c.label}" />
+                        <apex:inputField id="BugField" value="{!Case.Bug__c}">
+                            <apex:actionSupport event="onchange" reRender="bugFields"/>
+                        </apex:inputField>        
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Appeal_Decision__c.inlineHelpText}">
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Appeal_Decision__c.label}"/>
+                        <apex:inputField styleclass="requiredInput localInputClass"
+                            value="{!Case.Appeal_Decision__c}" />
+                    </apex:pageblocksectionItem>
+  
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Appeal_Decision_Reason__c.inlineHelpText}">
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Appeal_Decision_Reason__c.label}"/>
+                        <apex:inputField styleclass="requiredInput localInputClass"
+                            value="{!Case.Appeal_Decision_Reason__c}" />
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Refund_Issued__c.inlineHelpText}">
+                        <apex:outputlabel value="{!$ObjectType.Case.fields.Refund_Issued__c.label}"
+                                          style="" />
+                        <apex:inputField value="{!Case.Refund_Issued__c}" />
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:inputHidden value="{!Case.Member_Status__c}" rendered="{!NOT(Case.Bug__c)}"/>
+                    
+                    <apex:pageblocksectionItem rendered="{!Case.Bug__c}" HelpText="{!$ObjectType.Case.fields.Bug_Summary__c.inlineHelpText}"> 
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Bug_Summary__c.label}" />
+                        <apex:inputField value="{!Case.Bug_Summary__c}"/>
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.IsEscalated.inlineHelpText}"> 
+                        <apex:outputlabel value="{!$ObjectType.Case.fields.IsEscalated.label}" style="" />
+                        <apex:inputField value="{!Case.IsEscalated}" />
+                    </apex:pageblocksectionItem>        
+                    
+                    <apex:pageblocksectionItem rendered="{!Case.Bug__c}" HelpText="{!$ObjectType.Case.fields.Jira_Number__c.inlineHelpText}">
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Jira_Number__c.label}"/>
+                        <apex:inputField value="{!Case.Jira_Number__c}"/>
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:inputHidden value="{!Case.Member_Status__c}" rendered="{!NOT(Case.Bug__c) || NOT(isInternationalCase && (Case.Cancel__c || Case.Downgrade__c))}"/>
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Send_Cancellation_Email__c.inlineHelpText}"
+                                               rendered="{!isInternationalCase && (Case.Member_Account_Type__c == 'Premium' || Case.Member_Account_Type__c == 'Basic') && (Case.Cancel__c || Case.Downgrade__c)}">
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Send_Cancellation_Email__c.label}" />
+                        <apex:inputCheckbox id="SendCancellationEmailUserInput"
+                                            value="{!SendCancellationEmailUserInput}" />
+                    </apex:pageblocksectionItem> 
+                    
+                    <!--
+<apex:pageblocksectionItem > 
+<apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Refund__c.label}" />
+<apex:inputField value="{!Case.Refund__c}" />
+</apex:pageblocksectionItem>
+-->
+                    
+                    <apex:pageblocksectionItem rendered="{!Case.Bug__c}" HelpText="{!$ObjectType.Case.fields.Actions_Taken__c.inlineHelpText}">
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Actions_Taken__c.label}"/>
+                        <apex:inputField value="{!Case.Actions_Taken__c}" />
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:inputHidden value="{!Case.Member_Status__c}" />
+                    
+                    <apex:pageblocksectionItem rendered="{!Case.Bug__c}" HelpText="{!$ObjectType.Case.fields.Browsers_and_Versions__c.inlineHelpText}">
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Browsers_and_Versions__c.label}"/>
+                        <apex:inputField value="{!Case.Browsers_and_Versions__c}" />
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:inputHidden value="{!Case.Member_Status__c}" />
+                    
+                    <apex:pageblocksectionItem rendered="{!Case.Bug__c}" HelpText="{!$ObjectType.Case.fields.Reproduced__c.inlineHelpText}">
+                        <apex:outputlabel style="white-space:nowrap" value="{!$ObjectType.Case.fields.Reproduced__c.label}"/>
+                        <apex:inputField value="{!Case.Reproduced__c}" />
+                    </apex:pageblocksectionItem>
+                    
+                    
+                    <apex:inputHidden value="{!Case.Member_Status__c}" />
+                    <!-- Display Logic: Send Cancellation Email
+The "Send Cancellation Email" field is shown to allow the agent to control whether to send a cancellation email tof the user or not
+LOGIC:
+If is an international case that uses the "Close Case" button
+If Member is premium or basic (only premiums or basic can get sent cancellation emails)
+If Case Reason is Cancel or Downgrade
+-->
+                    
+                    <apex:pageblocksectionItem rendered="{!hasChildCases}"
+                                               HelpText="Checking this will also deletes all child cases associated to this case.">
+                        <apex:outputlabel value="Automatically Close Child Cases?"
+                                          style="" />
+                        <apex:inputCheckbox value="{!deleteAcceptance}" />
+                    </apex:pageblocksectionItem>
+                    
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputpanel>
+        <div align="right">
+            <apex:commandButton action="{!validateandclose}" value="Close Case" styleClass="slds-vf-button_brand"
+                                rerender="theFields,errorMessages" oncomplete="if('{!displayValError}' !== 'true'); return false;"/>
+            <!--
+<apex:commandButton action="{!ValidateAndCloseAndNext}" value="Close & Next Case" styleClass="slds-vf-button_brand"
+rerender="theFields,errorMessages"
+oncomplete="moveToNextCase('{!displayValError}', '{!displayError}', '{!nextCaseId}', '{!nextCaseName}', '{!tryAgain}');" />
+
+-->
+        </div>
+        
+    </apex:form>
+    <apex:slds />
+</apex:page>

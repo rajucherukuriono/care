@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_Mentioned__c</fullName>
+    <externalId>false</externalId>
+    <label>Competitor Mentioned?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Angie&apos;s List</fullName>
+                <default>false</default>
+                <label>Angie&apos;s List</label>
+            </value>
+            <value>
+                <fullName>Sittercity</fullName>
+                <default>false</default>
+                <label>Sittercity</label>
+            </value>
+            <value>
+                <fullName>Nextdoor</fullName>
+                <default>false</default>
+                <label>Nextdoor</label>
+            </value>
+            <value>
+                <fullName>Urban Sitter</fullName>
+                <default>false</default>
+                <label>Urban Sitter</label>
+            </value>
+            <value>
+                <fullName>Craigslist</fullName>
+                <default>false</default>
+                <label>Craigslist</label>
+            </value>
+            <value>
+                <fullName>Rover</fullName>
+                <default>false</default>
+                <label>Rover</label>
+            </value>
+            <value>
+                <fullName>Handy</fullName>
+                <default>false</default>
+                <label>Handy</label>
+            </value>
+            <value>
+                <fullName>Thumbtack</fullName>
+                <default>false</default>
+                <label>Thumbtack</label>
+            </value>
+            <value>
+                <fullName>TaskRabbit</fullName>
+                <default>false</default>
+                <label>TaskRabbit</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

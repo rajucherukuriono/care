@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>CAW_Client_Onsite_Event2_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CAW Client Onsite Event2 - Edit</label>
+        <sharedTo>
+            <group>Share_CAWMKP_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CAW Client Onsite Event</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Int. WPS Service Event</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>SCP Onsite Group</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>US Event Care</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Intl_Ops_WPS_Event_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sets the sharing for the International WPS Ops Group</description>
+        <label>Intl Ops: WPS-Event - Edit</label>
+        <sharedTo>
+            <group>Share_Intl_Operations</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Int. WPS Service Event</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>SCP Onsite Group</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>CAW Client Onsite Event</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SeniorCare_WPS_Event_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>SeniorCare: WPS-Event - Edit</label>
+        <sharedTo>
+            <group>Share_Senior_Care</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SCP Onsite Group</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Int. WPS Service Event</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>CAW Client Onsite Event</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>US_Event_Care</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>SFORCE-1845
+Event Care process transition to Salesforce</description>
+        <label>US Event Care</label>
+        <sharedTo>
+            <group>Share_US_Event_Care</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>US Event Care</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

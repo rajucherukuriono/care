@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Event_Care</fullName>
+    <columns>NAME</columns>
+    <columns>Event_Contact_Name__c</columns>
+    <columns>Business_Account__c</columns>
+    <columns>Event_Care__c</columns>
+    <columns>Event_Date__c</columns>
+    <columns>Expert_Assistance__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Event__c.US_Event_Care</value>
+    </filters>
+    <label>US Event Care</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>G_Assisted_Search</group>
+    </sharedTo>
+</ListView>

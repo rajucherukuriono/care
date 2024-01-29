@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Types_of_care_available__c</name>
+    <picklistValues>
+        <masterLabel>Dementia Care</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Secure Dementia Unit</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Short term rehabilitation</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transitional Care Unit</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

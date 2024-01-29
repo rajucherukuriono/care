@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Marketplace</label>
+    <protected>false</protected>
+    <values>
+        <field>Case_Record_Type_ID__c</field>
+        <value xsi:type="xsd:string">01270000000DxzjAAC</value>
+    </values>
+    <values>
+        <field>Community_ID__c</field>
+        <value xsi:type="xsd:string">0DB1O000000TNQ0WAO</value>
+    </values>
+    <values>
+        <field>For_Businesses_Link_URL__c</field>
+        <value xsi:type="xsd:string">https://help.care.com/marketplace/s/</value>
+    </values>
+    <values>
+        <field>For_Caregivers_Link_URL__c</field>
+        <value xsi:type="xsd:string">https://help.care.com/caregivers/s/</value>
+    </values>
+    <values>
+        <field>For_Families_Link_URL__c</field>
+        <value xsi:type="xsd:string">https://help.care.com/families/s/</value>
+    </values>
+    <values>
+        <field>For_Marketing_Solutions_Link__c</field>
+        <value xsi:type="xsd:string">https://help.care.com/marketingsolutions/s/</value>
+    </values>
+    <values>
+        <field>For_Recruiting_Solutions_Link__c</field>
+        <value xsi:type="xsd:string">https://help.care.com/recruitingsolutions/s/</value>
+    </values>
+    <values>
+        <field>Join_Now_Link_URL__c</field>
+        <value xsi:type="xsd:string">https://www.care.com/app/vhp/get-started</value>
+    </values>
+    <values>
+        <field>Log_In_Link_URL__c</field>
+        <value xsi:type="xsd:string">https://www.care.com/visitor/captureLogin.do</value>
+    </values>
+    <values>
+        <field>Member_Type__c</field>
+        <value xsi:type="xsd:string">SMB Provider</value>
+    </values>
+    <values>
+        <field>Show_Chat_Lang__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Show_Chat__c</field>
+        <value xsi:type="xsd:string">Premium</value>
+    </values>
+    <values>
+        <field>Show_Email__c</field>
+        <value xsi:type="xsd:string">Basic</value>
+    </values>
+    <values>
+        <field>Show_For_Businesses_Link__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Show_For_Caregivers_Link__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Show_For_Families_Link__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Show_For_Marketing_Solutions_Link__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Show_For_Recruiting_Solutions_Link__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Upgrade_Link_URL__c</field>
+        <value xsi:type="xsd:string">https://www.care.com/seeker/upgradeMembershipPlanActual.do</value>
+    </values>
+    <values>
+        <field>Use_Article_Whitelist_for_Web_Cases__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

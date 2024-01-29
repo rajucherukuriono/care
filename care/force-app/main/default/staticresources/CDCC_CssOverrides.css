@@ -1,0 +1,411 @@
+@font-face {
+    font-family: 'proximanova-regular';
+    font-style: normal;
+    font-weight: 100;
+    src: url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-thin-webfont.woff2') format('woff2'),
+         url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-thin-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'proximanova-regular';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-light-webfont.woff2') format('woff2'),
+         url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-light-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'proximanova-regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-regular-webfont.woff2') format('woff2'),
+         url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-regular-webfont.woff') format('woff');
+}
+	
+@font-face {
+    font-family: 'proximanova-regular';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-medium-webfont.woff2') format('woff2'),
+         url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'proximanova-regular';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-semibold-webfont.woff2') format('woff2'),
+         url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-semibold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'proximanova-regular';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-bold-webfont.woff2') format('woff2'),
+         url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'proximanova-regular';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-extrabold-webfont.woff2') format('woff2'),
+         url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-extrabold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'proximanova-regular';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-black-webfont.woff2') format('woff2'),
+         url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/proximanova-black-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Lora';
+    font-size: normal;
+    src: url('/families/s/sfsites/c/resource/CDCC_Assets/fonts/Lora-Regular.ttf');
+}
+
+.forceCommunityThemeNav .mainNavItem { 
+    padding-left: 15px !important; 
+}
+@media screen and (min-width: 600px) {
+    .forceTopicFeaturedTopics .topicLabel { 
+        font-size: 2rem !important; 
+    }
+}
+.forceCommunityRichText img.sfdcCbImage { 
+    padding: 2px;
+}
+.comm-navigation__home-link {
+    display:none !important;
+}
+@media only screen and (min-aspect-ratio: 4/3) and (min-width: 48em), only screen and (min-width: 64.0625em) {
+    .forceCommunityRichText img.sfdcCbImage:focus, img.sfdcCbImage:hover {
+        background-color: #3333f3;
+    }
+}
+.forceCommunityRichText a {
+    color: rgb(99, 99, 246); 
+    text-decoration: none; 
+    transition: color 0.1s linear 0s; 
+}
+.forceCommunityRichText a:hover, .forceCommunityRichText a:focus {
+    color: #3c3cf4; 
+    text-decoration: underline;
+}
+@media screen and (min-width: 1074px) {
+    .forceCommunityRichText img.sfdcCbImage { 
+        width: 100%;
+    } 
+}
+.forceCommunityRichText {
+    text-align: center;
+}
+@media screen and (min-width: 780px) {
+    .forceCommunityRichText img.sfdcCbImage { 
+        width: 33% !important;
+    } 
+}
+.forceCommunityOmniBox .no-assigned-image .default-bg-overlay {
+    background: transparent;
+}
+.forceCommunitySearch .slds-border_right{
+    display:none;
+}
+
+.search-deflectionItemDetail{
+    display:none;
+}
+
+/* Search Results: Hide Article Number & Summary */
+.kbResultStencil .slds-tile__detail, .kbResultStencil .resultBody{
+    display:none;
+}
+
+.kbResultStencil .itemTitle{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.sfdc_richtext span[style] {
+  font-family:'proximanova-regular' !important;
+  font-size:10px;      
+}
+
+.websterHomeHero .contentTitle{
+    font-family:'proximanova-regular' !important;
+    font-size:36px !important;
+    font-weight:bold;
+	margin-top: 74px !important;
+    margin-bottom:16px;
+}
+
+/* Search Results Override*/
+.searchRegion{
+    margin-top:0rem !important;
+}
+
+.searchResultsSummaryText .sortingInfo{
+    display:none !important;
+}
+
+.searchResultsGridHeader .gridTitle{
+    width: 400px;
+    color: rgba(23,44,66,1) !important;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Proxima Nova;
+    font-weight: bold !important;
+    font-size: 38px;
+    line-height: 34px;
+    opacity: 1;
+	margin-top: 5px;
+    visibility:hidden;
+}
+
+.searchResultsGridHeader .gridTitle:before {
+    content:'Articles';
+    visibility:visible;
+    font-family:'proximanova-regular';
+}
+
+.kbStencilRecord {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: -10px !important;    
+}
+
+.kbStencilRecord a {
+	color: var(--colorTextDefault);
+}
+
+.kbStencilRecord a:hover {
+	color: #3B71AA;
+}
+
+.kbStencilRecord lightning-formatted-rich-text.formattedTextLookupTitle{
+	border-bottom: none  !important;
+}
+
+.forceCommunitySection .cb-section_column {
+    padding: 16px 0px 16px 0px !important; 
+}
+
+.slds-truncate {
+    white-space: normal !important;
+}
+
+/* FAQs */
+div.faq-section-header{
+    font-weight: bold; 
+    text-align:left;
+    font-size:21px;
+}
+
+div.faq-section-header a, div.faq-section-header a:hover, div.faq-section-header a:active, div.faq-section-header a:visited{
+    color: var(--colorTextDefault);
+    text-decoration: none;
+}
+
+.faq-container {
+    vertical-align:top;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    
+}
+
+@media screen and (max-device-width: 959px), (max-width: 959px) {
+    .faq-container {
+        vertical-align:top;
+        display:inline-flex;
+        flex-flow: row wrap;
+        /*justify-content: flex-start;*/
+        align-items: center;
+    }
+}
+
+div.faq-section-header div.faq-container{
+    /* styles for when faq container is contained within faq section header*/
+    background-color: #F6F7F8;
+}
+
+.faq-sub-container {
+    width: 325px;
+    vertical-align:top;
+    display: inline-flex;
+    flex-flow: column wrap;
+    align-items: center;    
+	padding: 15px;
+    text-align:left; 
+    font-size:16px;
+    font-weight: normal;
+}
+
+.faq-sub-container div{
+    width:100%;
+}
+
+div.faq-sub-container div:first-child {
+    font-size:18px;
+    font-family:'Lora';    
+}
+
+div.faq-sub-container div a{
+    color: var(--colorTextDefault);
+}
+
+div.faq-sub-container div a:hover{
+    color: #3B71AA;    
+    text-decoration: none;
+}
+
+div.faq-sub-container div:last-child{
+    font-weight:bold;
+}
+
+div.faq-sub-container div:last-child a{
+    color:var(--lwc-colorTextLink);    
+}
+
+div.faq-sub-container div:last-child a:hover{
+    color: #083093;
+}
+
+@media screen and (max-device-width: 1439px), (max-width: 1439px) {
+    .faq-sub-container {
+        width: 325px;
+        flex-basis: 30%; /* force 3 columns */		
+    }
+}
+@media screen and (max-device-width: 959px), (max-width: 959px) {
+    .faq-sub-container {
+        width: 325px;
+        flex-basis: auto; 
+    }
+}
+@media screen and (max-device-width: 375px), (max-width: 375px) {
+    .faq-sub-container {
+        width: 100%;
+        max-width: 375px;
+		padding: 15px 0px;
+        flex-basis: auto; 
+    }
+}
+
+
+
+/* Suggested for You - header*/
+community_article-topic-trending-articles-list h2, community_article-similar-articles-list h2{
+    font-size: 21px !important;
+    font-weight: 700 !important;
+    line-height: 26px !important;
+    margin-bottom: 12px !important;
+	margin-top: 40px !important;
+}
+
+/* Suggested for You - links*/
+community_article-topic-trending-articles-item span, community_article-similar-articles-item span{
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0px 0px 12px 0px !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    color: var(--colorTextDefault) !important;
+	font-weight: normal !important;
+	word-break: normal;
+}
+
+community_article-topic-trending-articles-item a, community_article-similar-articles-item a{
+    display: inline !important;
+    text-decoration: none !important;
+}
+
+community_article-topic-trending-articles-item a:hover, community_article-similar-articles-item a:hover{
+    display: inline !important;
+	color: #3B71AA !important;
+    text-decoration: none !important;
+}
+
+body.hide-chat .flatButton {
+    display: none;
+}
+mark {
+    background: none;
+    color: inherit;
+}
+.uiPanel.open {
+    DISPLAY: NONE !IMPORTANT;
+}
+
+.embeddedServiceLiveAgentStateChatButtonItem{
+    border-radius: 20px !important;
+    color: var(--lwc-colorBrand) !important;
+    border-color: var(--lwc-colorBrand) !important;
+}
+
+.embeddedServiceLiveAgentStateChatButtonItem:hover{
+    color: var(--lwc-colorTextInverse,#FFFFFF) !important;
+    background-color: var(--lwc-colorBrand) !important;
+    opacity: 1 !important;
+}
+
+.embeddedServiceLiveAgentStateChatItem.chatMessage button .bBody{
+    color: var(--lwc-colorBrand) !important;
+}
+
+.embeddedServiceLiveAgentStateChatItem.chatMessage button:hover .bBody{
+    color: var(--lwc-colorTextInverse,#FFFFFF) !important;
+}
+
+force-hoverable-link div a{
+	font-weight: bold;
+}
+
+/* Headline component Override */
+.forceCommunityHeadline h1.headlineTitle{
+	font-size: 32px;
+	text-align: left;
+	
+}
+
+/* Horizontal Divider */
+hr.horizontalDivider{
+	width: 100%; 
+	height: 1px; 
+	background: var(--lwc-colorBorder); 
+	border: none; 
+	display:inline-block;
+	padding: 0px; 
+	margin: 0px;
+}
+
+/* Topic Search Results */
+.selfServiceArticleListItem a:hover, .selfServiceArticleListItem .article-link:hover .article-head{
+	color: #3B71AA !important;
+}
+
+.selfServiceArticleListItem .footer, .selfServiceArticleListItem .article-summary{
+    display:none !important;
+}
+
+.selfServiceTopicArticleList .selfServiceArticleListItem{
+    margin: 0px !important;
+}
+
+/* Hack to try to remove weird padding on mobile hero on internal pages*/
+
+@media only screen and (max-width: 47.9375em){
+    .websterInnerHero.dummyCommThemeGroupId.commThemeCmp.comm-is-relative.forceCommunityThemeHeroBase.forceCommunityThemeHeroStarter {
+        padding: 48px 24px !important;
+    }
+}

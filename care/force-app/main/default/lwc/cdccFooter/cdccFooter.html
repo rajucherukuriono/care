@@ -1,0 +1,893 @@
+<template>
+    <footer class="container">
+        <div class="social-links" if:true={isUs}>
+            <iframe if:true={showFBLike} src={iframeSrc} loading="lazy" width="85" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+        
+        <template if:true={isUs}>
+            <div class="social-links">
+                <div>
+                    <a href="https://www.facebook.com/caredotcom" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                            <use xlink:href={facebookIconUrl}></use>
+                        </svg>
+
+                    </a>
+                </div>
+                <div>
+                    <a href="https://twitter.com/caredotcom" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                            <use xlink:href={twitterIconUrl}></use>
+                        </svg>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/caredotcom" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                            <use xlink:href={youtubeIconUrl}></use>
+                        </svg>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/caredotcom" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                            <use xlink:href={instagramIconUrl}></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </template>
+
+        <!-- US Footer -->
+        <div class="care-links" if:true={isEnUs}>
+            <div>
+                <h4>About Care.com</h4>
+                <ul>
+                    <li><a href="https://www.care.com/company-overview" target="_blank">About us</a></li>
+                    <li><a href="https://www.care.com/careers" target="_blank">Careers</a></li>
+                    <li><a href="https://www.care.com/terms-of-use-p1012.html" target="_blank">Terms of use</a></li>
+                    <li><a href="https://www.care.com/privacy-policy-p1013.html" target="_blank">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4>Get help</h4>
+                <ul>
+                    <li><a href="https://www.care.com/safety" target="_blank">Safety</a></li>
+                    <li><a href="https://www.care.com/c/" target="_blank">Advice</a></li>
+                    <li><a href="https://help.care.com/families/s/" target="_blank">Help Center</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Popular In</h4>
+                <ul>
+                    <li><a href="https://www.care.com/babysitters" target="_blank">Babysitters</a></li>
+                    <li><a href="https://www.care.com/nannies" target="_blank">Nannies</a></li>
+                    <li><a href="https://www.care.com/child-care" target="_blank">Child Care</a></li>
+                    <li><a href="https://www.care.com/tutors" target="_blank">Tutors</a></li>
+                    <li><a href="https://www.care.com/housekeepers" target="_blank">Housekeepers</a></li>
+                    <li><a href="https://www.care.com/senior-care" target="_blank">Senior Care</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Discover</h4>
+                <ul>
+                    <li><a href="https://www.care.com/homepay" target="_blank">HomePay℠</a></li>
+                    <li><a href="https://www.care.com/small-business-marketing-p1320-q18473957.html"
+                            target="_blank">List your business</a></li>
+                    <li><a href="https://www.care.com/business" target="_blank">Care for Business</a></li>
+                    <li><a href="https://www.care.com/affiliate-program-p1059.html" target="_blank">Become an
+                            affiliate</a></li>
+                    <li><a href="https://www.care.com/care-directory" target="_blank">Care directory</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- International Footers -->
+        <div class="footer-container slds-var-m-top_xx-large">
+
+            <template if:true={isDaDk}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/da-dk/om-os" class="aboutUsLink">Om os</a>
+                        <a href="https://www.care.com/da-dk/impressum" class="imprint">Aftryk</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Kontakt os</a>
+                        <a href="https://www.care.com/da-dk/sikkerhedscenter">Sikkerhedscenter</a>
+                        <a href="https://dk.care.com/online-magasin/">Magasin</a>
+                        <a href="https://www.care.com/da-dk/cancel-premium">Annuller Premium</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/da-dk/forretningsbetingelser" class="link4--inline">Forretningsbetingelser</a>
+                        <a href="https://www.care.com/da-dk/brugerbetingelser" class="link4--inline">Betingelser for brug</a>
+                        <a href="https://www.care.com/da-dk/fortrolighedspolitik" class="link4--inline">Fortrolighedspolitik</a>
+                        <a href="https://www.care.com/da-dk/sitemap" class="link4--inline">Sitemap</a>
+                    </div>
+
+                </div>
+            </template>
+
+            <template if:true={isDeAt}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.betreut.at/unternehmen-" class="aboutUsLink">Über uns</a>
+                        <a href="https://www.betreut.at/impressum" class="imprint">Impressum</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Kontakt</a>
+                        <a href="https://www.betreut.at/sicherheitsbereich/">Sicherheit</a>
+                        <a href="https://www.betreut.at/magazin/">Magazin</a>
+                        <a href="https://www.betreut.at/de-at/cancel-premium">Premium kündigen</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">        
+                        <a href="https://www.betreut.at/agb" class="link4--inline">AGB</a>
+                        <a href="https://www.betreut.at/nutzungsbedingungen" class="link4--inline">Nutzungsbedingungen</a>
+                        <a href="https://www.betreut.at/datenschutz" class="link4--inline">Datenschutzhinweise</a>
+                        <a href="https://www.betreut.at/sitemap" class="link4--inline">Sitemap</a>                
+                    </div>      
+                </div>
+            </template>
+
+            <template if:true={isDeCh}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://care.com/de-ch/unternehmen-" class="aboutUsLink">Über uns</a>
+                        <a href="https://care.com/de-ch/impressum" class="imprint">Impressum</a>
+                        <a href="https://care.com/de-ch/kontakt" class="contactUsLink">Kontakt</a>
+                        <a href="https://care.com/de-ch/sicherheitsbereich">Sicherheit</a>
+                        <a href="https://magazin.care.com/de-ch/">Magazin</a>                        
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://care.com/de-ch/agb" class="link4--inline">AGB</a>
+                        <a href="https://care.com/de-ch/nutzungsbedingungen" class="link4--inline">Nutzungsbedingungen</a>
+                        <a href="https://care.com/de-ch/datenschutz" class="link4--inline">Datenschutzhinweise</a>
+                        <a href="https://www.care.com/de-ch/sitemap" class="link4--inline">Sitemap</a>
+                </div>                
+            </div>
+            </template>
+
+            <template if:true={isDeDe}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.betreut.de/unternehmen-" class="aboutUsLink">Über uns</a>
+                        <a href="https://www.betreut.de/impressum" class="imprint">Impressum</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Kontakt</a>
+                        <a href="https://www.betreut.de/sicherheitsbereich/">Sicherheit</a>
+                        <a href="https://www.betreut.de/careers">Karriere</a>
+                        <a href="http://www.betreut.de/magazin">Magazin</a>
+                        <a href="https://www.betreut.de/de-de/cancel-premium">Premium kündigen</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.betreut.de/agb" class="link4--inline">AGB</a>
+                        <a href="https://www.betreut.de/nutzungsbedingungen" class="link4--inline">Nutzungsbedingungen</a>
+                        <a href="https://www.betreut.de/datenschutz" class="link4--inline">Datenschutzhinweise</a>
+                        <a href="https://www.betreut.de/sitemap" class="link4--inline">Sitemap</a>    
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isEnAu}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/en-au/about-us" class="aboutUsLink">About Us</a>
+                        <a href="https://www.care.com/en-au/contact-us" class="contactUsLink">Contact Us</a>
+                        <a href="https://www.care.com/en-au/safety-centre">Safety Centre</a>
+                        <a href="https://www.care.com/c/home/en-au">Magazine</a>                        
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/en-au/terms-of-use" class="link4--inline">Terms of Use</a>
+                        <a href="https://www.care.com/en-au/privacy-policy" class="link4--inline">Privacy Policy</a>
+                        <a href="https://www.care.com/en-au/sitemap" class="link4--inline">Site Map</a>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isEnCa}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/en-ca/about-us" class="aboutUsLink">About Us</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Contact Us</a>
+                        <a href="https://www.care.com/en-ca/safety-centre">Safety Centre</a>
+                        <a href="https://ca.care.com/articles/">Magazine</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/en-ca/terms-of-use" class="link4--inline">Terms of Use</a>
+                        <a href="https://www.care.com/en-ca/privacy-policy" class="link4--inline">Privacy Policy</a>
+                        <a href="https://www.care.com/en-ca/sitemap" class="link4--inline">Site Map</a>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isEnGb}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/en-gb/about-us" class="aboutUsLink">About Us</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Contact Us</a>
+                        <a href="https://www.care.com/en-gb/safety-centre">Safety Centre</a>
+                        <a href="https://www.care.com/c/home/en-gb">Magazine</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">                          
+                        <a href="https://www.care.com/en-gb/terms-of-use" class="link4--inline">Terms of Use</a>
+                        <a href="https://www.care.com/en-gb/en-gb/privacy-policy" class="link4--inline">Privacy Policy</a>
+                        <a href="https://www.care.com/en-gb/sitemap" class="link4--inline">Site Map</a>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isEnIe}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/en-ie/about-us" class="aboutUsLink">About Us</a>
+                        <a href="https://www.care.com/en-ie/imprint" class="imprint">Imprint</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Contact Us</a>
+                        <a href="https://www.care.com/en-ie/safety-centre">Safety Centre</a>
+                        <a href="https://www.care.com/c/home/en-ie">Magazine</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/en-ie/terms-conditions" class="link4--inline">Terms &amp; Conditions</a>
+                        <a href="https://www.care.com/en-ie/terms-of-use" class="link4--inline">Terms of Use</a>
+                        <a href="https://www.care.com/en-ie/privacy-policy" class="link4--inline">Privacy Policy</a>
+                        <a href="https://www.care.com/en-ie/sitemap"  class="link4--inline">Site Map</a>
+                        <a href="https://www.care.com/en-ie/cancel-premium">Cancel Premium</a>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isEnNz}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/en-nz/about-us" class="aboutUsLink">About Us</a>
+                        <a href="https://www.care.com/en-nz/contact-us" class="contactUsLink">Contact Us</a>
+                        <a href="https://www.care.com/en-nz/safety-centre">Safety Centre</a>
+                        <a href="https://www.care.com/c/home/en-nz">Magazine</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/en-nz/terms-of-use" class="link4--inline">Terms of Use</a>
+                        <a href="https://www.care.com/en-nz/privacy-policy" class="link4--inline">Privacy Policy</a>
+                        <a href="https://www.care.com/en-nz/sitemap" class="link4--inline">Site Map</a>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isEsEs}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/es-es/acerca-de-nosotros" class="aboutUsLink">Acerca de nosotros</a>
+                        <a href="https://www.care.com/es-es/aviso-legal" class="imprint">Aviso legal</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Contacto</a>
+                        <a href="https://www.care.com/es-es/centro-de-seguridad">Centro de seguridad</a>
+                        <a href="https://www.care.com/es-es/cancel-premium">Cancelar Premium</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/es-es/terminos-y-condiciones" class="link4--inline">Términos y condiciones</a>
+                        <a href="https://www.care.com/es-es/terminos-y-condiciones#revocationSection" class="link4--inline">Información de revocación</a>
+                        <a href="https://www.care.com/es-es/terminos-de-uso" class="link4--inline">Condiciones de uso</a>
+                        <a href="https://www.care.com/es-es/politica-de-privacidad" class="link4--inline">Política de privacidad</a>
+                        <a href="https://www.care.com/es-es/mapa-del-sitio" class="link4--inline">Mapa del sitio</a>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isFiFi}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/fi-fi/tietoa-meista" class="aboutUsLink">Tietoa meistä</a>
+                        <a href="https://www.care.com/fi-fi/yhteystiedot" class="imprint">Yhteystiedot</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Ota yhteyttä</a>
+                        <a href="https://www.care.com/fi-fi/turvallisuus">Turvallisuus</a>
+                        <a href="https://fi.care.com/verkkolehti">Verkkolehti</a>
+                        <a href="https://www.care.com/fi-fi/cancel-premium">Peruuta Premium</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/fi-fi/yleiset-sopimusehdot" class="link4--inline">Yleiset sopimusehdot</a>
+                        <a href="https://www.care.com/fi-fi/kayttoehdot" class="link4--inline">Käyttöehdot</a>
+                        <a href="https://www.care.com/fi-fi/yksityisyydensuoja" class="link4--inline">Yksityisyydensuoja</a>
+                        <a href="https://www.care.com/fi-fi/sivukartta" class="link4--inline">Sivukartta</a>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isFrBe}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/fr-be/a-propos" class="aboutUsLink">A propos</a>
+                        <a href="https://www.care.com/fr-be/mentions-legales" class="imprint">Mentions légales</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Contact</a>
+                        <a href="https://www.care.com/fr-be/centre-de-securite">Centre de Sécurité</a>
+                        <a href="https://fr-be.care.com/magazine/">Magazine</a>
+                        <a href="https://www.care.com/fr-be/cancel-premium">Annuler Premium</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/fr-be/cgv" class="link4--inline">Conditions de vente</a>
+                        <a href="https://www.care.com/fr-be/conditions-utilisations" class="link4--inline">Conditions d'utilisation</a>
+                        <a href="https://www.care.com/fr-be/protection-des-donnees" class="link4--inline">Protection des données</a>
+                        <a href="https://www.care.com/fr-be/plan-du-site" class="link4--inline">Plan du site</a>
+                        <a href="https://www.care.com/fr-be/faq/" class="link4--inline">FAQs</a>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isFrCa}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/fr-ca/a-propos" class="aboutUsLink">A propos</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Contact</a>
+                        <a href="https://www.care.com/fr-ca/centre-de-securite">Centre de Sécurité</a>
+                        <a href="https://ca.care.com/articles/">Magazine</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/fr-ca/conditions-utilisations" class="link4--inline">Conditions d'utilisation</a>
+                        <a href="https://www.care.com/fr-ca/protection-des-donnees" class="link4--inline">Protection des données</a>
+                        <a href="https://www.care.com/fr-ca/plan-du-site" class="link4--inline">Plan du site</a>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isFrFr}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/fr-fr/a-propos" class="aboutUsLink">A propos</a>
+                        <a href="https://www.care.com/fr-fr/mentions-legales" class="imprint">Mentions légales</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Contact</a>
+                        <a href="https://www.care.com/fr-fr/centre-de-securite">Centre de Sécurité</a>
+                        <a href="https://fr.care.com/magazine/">Magazine</a>
+                        <a href="https://www.care.com/fr-fr/cancel-premium">Annuler Premium</a>
+
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/fr-fr/cgv" class="link4--inline">Conditions de vente</a>
+                        <a href="https://www.care.com/fr-fr/conditions-utilisations" class="link4--inline">Conditions d'utilisation</a>
+                        <a href="https://www.care.com/fr-fr/protection-des-donnees" class="link4--inline">Protection des données</a>
+                        <a href="https://www.care.com/fr-fr/plan-du-site" class="link4--inline">Plan du site</a>
+                        <a href="https://www.care.com/fr-fr/familles-faq" class="link4--inline">FAQs</a>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isNlNl}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/nl-nl/over-ons" class="aboutUsLink">Over ons</a>
+                        <a href="https://www.care.com/nl-nl/bedrijfsgegevens" class="imprint">Bedrijfsgegevens</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Contact</a>
+                        <a href="https://nl.care.com/magazine/">Magazine</a>
+                        <a href="https://www.care.com/nl-nl/cancel-premium">Premium annuleren</a>
+
+                    </div>
+
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/nl-nl/algemene-voorwaarden" class="link4--inline">Algemene voorwaarden</a>
+                        <a href="https://www.care.com/nl-nl/gebruiksvoorwaarden" class="link4--inline">Gebruiksvoorwaarden</a>
+                        <a href="https://www.care.com/nl-nl/privacy" class="link4--inline">Privacybeleid</a>
+                        <a href="https://www.care.com/nl-nl/sitemap" class="link4--inline">Sitemap</a>
+                        <a href="http://blog.nl.care.com/faq-hulp/" class="link4--inline">FAQ</a>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isNlBe}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/nl-be/over-ons" class="aboutUsLink">Over ons</a>
+                        <a href="https://www.care.com/nl-be/bedrijfsgegevens" class="imprint">Bedrijfsgegevens</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Contact</a>
+                        <a href="https://www.care.com/nl-be/w/magazine/">Magazine</a>
+                        <a href="https://www.care.com/nl-be/cancel-premium">Premium annuleren</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/nl-be/algemene-voorwaarden" class="link4--inline">Algemene voorwaarden</a>
+                        <a href="https://www.care.com/nl-be/gebruiksvoorwaarden" class="link4--inline">Gebruiksvoorwaarden</a>
+                        <a href="https://www.care.com/nl-be/privacy" class="link4--inline">Privacybeleid</a>
+                        <a href="https://www.care.com/nl-be/sitemap" class="link4--inline">Sitemap</a>
+                        <a href="https://www.care.com/nl-be/w/faq-hulp/" class="link4--inline">FAQ</a>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isNoNo}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/no-no/om-oss" class="aboutUsLink">Om oss</a>
+                        <a href="https://www.care.com/no-no/impressum" class="imprint">Impressum </a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Kontakt oss</a>
+                        <a href="https://www.care.com/no-no/sikkerhetssenter">Sikkerhetssenter</a>
+                        <a href="https://www.care.com/no-no/cancel-premium">Si opp Premium</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/no-no/forretningsbetingelser" class="link4--inline">Forretningsvilkår</a>
+                        <a href="https://www.care.com/no-no/brukervilkaar" class="link4--inline">Brukervilkår</a>
+                        <a href="https://www.care.com/no-no/personvern" class="link4--inline">Personvern</a>
+                        <a href="https://www.care.com/no-no/sitemap" class="link4--inline">Sitemap</a>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={isSvSe}>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/sv-se/om-oss" class="aboutUsLink">Om oss</a>
+                        <a href="https://www.care.com/sv-se/impressum" class="imprint">Impressum</a>
+                        <a href="https://help.care.com/families/s/" class="contactUsLink">Kontakta oss</a>
+                        <a href="https://www.care.com/sv-se/sakerhet">Säkerhet</a>
+                        <a href="https://se.care.com/online-magasin">Magazine</a>
+                        <a href="https://www.care.com/sv-se/cancel-premium">Avbryt Premium</a>
+                    </div>
+                    <hr>
+                </div>
+                <div class="footer">
+                    <div class="footer__links">
+                        <a href="https://www.care.com/sv-se/affarsvillkor" class="link4--inline">Affärsvillkor</a>
+                        <a href="https://www.care.com/sv-se/allmanna-villkor" class="link4--inline">Allmänna villkor</a>
+                        <a href="https://www.care.com/sv-se/integritetspolicy" class="link4--inline">Integritetspolicy</a>
+                        <a href="https://www.care.com/sv-se/sidkarta" class="link4--inline">Sitemap</a>
+                    </div>
+
+                </div>
+            </template>
+        </div>
+
+        <!-- Language Changer -->
+        <template if:true={showChangeLang}>
+            <div class="lang-switcher">
+                <c-change-lang></c-change-lang>                
+            </div>
+        </template>
+
+        <!-- International Social Links -->
+        <div class="slds-var-m-top_xx-large">
+            <div class="social-links">
+                <template if:true={isDaDk}>
+                    <div>
+                        <a href="http://www.facebook.com/dk.caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/dkcarecom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isDeAt}>
+                    <div>
+                        <a href="http://www.facebook.com/Betreut.at" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.youtube.com/user/BesserBetreut" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template> 
+
+                <template if:true={isDeCh}>
+                    <div>
+                        <a href="https://www.facebook.com/Care.comCH/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.youtube.com/user/BesserBetreut" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isDeDe}>
+                    <div>
+                        <a href="http://www.facebook.com/Betreutde" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/#!/betreutde" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.youtube.com/user/BesserBetreut" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/betreut.de/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={instagramIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isEnAu}>
+                    <div>
+                        <a href="https://www.facebook.com/au.caredotcom/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/user/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isEnCa}>
+                    <div>
+                        <a href="https://www.facebook.com/ca.caredotcom/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://twitter.com/#!/CareDotComCA" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.youtube.com/user/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isEnGb}>
+                    <div>
+                        <a href="https://www.facebook.com/uk.caredotcom/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://twitter.com/#!/CareDotComUK" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.youtube.com/user/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/caredotcomuk/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={instagramIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isEnIe}>
+                    <div>
+                        <a href="https://www.facebook.com/uk.caredotcom/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://twitter.com/#!/CareDotComUK" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.youtube.com/user/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isEnNz}>
+                    <div>
+                        <a href="https://www.facebook.com/nz.caredotcom/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.youtube.com/user/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isEsEs}>
+                    <div>
+                        <a href="https://www.facebook.com/es.caredotcom/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.youtube.com/user/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isFiFi}>
+                    <div>
+                        <a href="http://www.facebook.com/fi.caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/carecomsuomi" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isFrBe}>
+                    <div>
+                        <a href="https://www.facebook.com/nz.caredotcom/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.youtube.com/user/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isFrCa}>
+                    <div>
+                        <a href="https://www.facebook.com/ca.caredotcom/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://twitter.com/#!/CareDotComCA" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.youtube.com/user/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isFrFr}>
+                    <div>
+                        <a href="https://www.facebook.com/fr.caredotcom?fref=ts" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/frcarecom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.youtube.com/user/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isNlNl}>
+                    <div>
+                        <a href="https://www.facebook.com/nl.caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/nlcarecom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.youtube.com/user/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isNlBe}>
+                    <div>
+                        <a href="https://www.facebook.com/belgie.caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/BECarecom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.youtube.com/user/caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={youtubeIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isNoNo}>
+                    <div>
+                        <a href="https://business.facebook.com/care.com.no/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/CareDotCom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+                <template if:true={isSvSe}>
+                    <div>
+                        <a href="http://www.facebook.com/se.caredotcom" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={facebookIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/carecomsverige" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                                <use xlink:href={twitterIconUrlIntl}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </template>
+
+            </div>
+        </div>
+
+        <div class="legal">
+            <div class="termsAndConditions">
+                <c-footer-disclaimer></c-footer-disclaimer>
+            </div>
+        </div>
+    </footer>
+</template>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>INTl_Member_Surveys_Categorization</fullName>
+    <booleanFilter>(1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8) AND 9 AND 10</booleanFilter>
+    <columns>OBJECT_ID</columns>
+    <columns>NAME</columns>
+    <columns>Survey_Member_ID__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Rating_comments__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>UK Premium Seeker,UK Basic Seeker,UK Premium Provider,UK Basic Provider</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>CA Premium Seeker,CA Basic Seeker,CA Premium Provider,CA Basic Provider</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>DE Premium Seeker,DE Basic Seeker,DE Premium Provider,DE Basic Provider</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>AT Premium Seeker,AT Premium Provider,AT Basic Provider,AT Basic Seeker</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>CH Premium Seeker,CH Premium Provider,CH Basic Seeker,CH Basic Provider</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>AU Premium Seeker,AU Premium Provider,AU Basic Seeker,AU Basic Provider</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>IE Premium Seeker,IE Premium Provider,IE Basic Seeker,IE Basic Provider</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>NZ Premium Seeker,NZ Premium Provider,NZ Basic Seeker,NZ Basic Provider</value>
+    </filters>
+    <filters>
+        <field>Feedback_Type__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>OWNER.FIRST_NAME</field>
+        <operation>notEqual</operation>
+        <value>Isabel</value>
+    </filters>
+    <label>INTl Member Surveys Categorization</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>VOC_NPS</group>
+    </sharedTo>
+</ListView>

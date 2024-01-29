@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Describe_night_staff_if_under_10_beds__c</name>
+</CustomFieldTranslation>

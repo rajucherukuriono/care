@@ -1,0 +1,86 @@
+<aura:component controller="CCCAdministrationController" extends="c:CCCBase">
+
+    <aura:attribute name="locationId" type="String" />   
+    <aura:attribute name="opportunityId" type="String" />   
+
+    <!-- Attributes for coupon code validation metadata settings -->
+    <aura:attribute name="minTuitionDiscountDollar" type="Decimal" access="public" />
+    <aura:attribute name="minTuitionDiscountPercent" type="Decimal" access="public" />
+    <aura:attribute name="tuitionDiscountBonusPoints" type="Integer" access="public" />
+
+    <aura:attribute name="hasError" type="Boolean" default="FALSE" />
+    <aura:attribute name="message" type="String" default="" />
+
+    <aura:attribute name="key" type="String" />
+    <aura:attribute name="definedCouponCodes" type="List" />
+
+    <aura:attribute name="couponCodeDiscountDollarAmountLimit" type="Decimal" />
+
+    <!-- Form values -->
+    <aura:attribute name="couponCodeOptions" type="List" default="[]" />
+    <aura:attribute name="fixedPercent" type="Integer" default="" />
+    <aura:attribute name="fixedAmount" type="Decimal" default="" />
+    <aura:attribute name="couponCodeSelection" type="String" default="--None--" />
+    <aura:attribute name="result" type="String" default="" />
+    <aura:attribute name="copyToAllLocations" type="Boolean" default="false" />
+    <aura:attribute name="exclusions" type="String" default="" />
+
+    <!-- Change handlers -->
+    <aura:handler name="change" value="{!v.fixedPercent}" action="{! c.updateResult }" />
+    <aura:handler name="change" value="{!v.fixedAmount}" action="{! c.updateResult }" />
+    <aura:handler name="change" value="{!v.couponCodeSelection}" action="{!c.updateCouponCodeSelection}" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <div class="slds-p-around_xx-small">
+
+
+        <div class="slds-grid slds-gutters slds-wrap">
+            <div class="slds-col slds-size_1-of-2">
+                <!-- Web Ad Coupon Code Selection -->
+                <lightning:radioGroup name="couponCodeSelection" aura:id="couponCodeSelection" label="Tuition Discount Options"
+                    options="{! v.couponCodeOptions }" value="{! v.couponCodeSelection }" type="radio" required="true" />
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <div class="slds-text-color_success">(+{!v.tuitionDiscountBonusPoints} bonus points if not none and ad budget is $400 or more)</div>
+            </div>
+        </div>
+
+        <!-- Fixed Percent -->
+        <aura:if isTrue="{! equals(v.couponCodeSelection, 'fixedPercent')}">
+            <div class="slds-m-top_medium">
+                <lightning:input aura:id="fixedPercent" type="number" name="fixedPercent" value="{!v.fixedPercent}"
+                    formatter="percent-fixed" maxlength="3" label="{! 'Specify Percent Off (' + v.minTuitionDiscountPercent + '% minimum)'}" onfocus="{!c.clearErrors}" required="true" />
+            </div>
+        </aura:if>
+
+        <!-- Fixed Amount -->
+        <aura:if isTrue="{! equals(v.couponCodeSelection, 'fixedAmount')}">
+            <div class="slds-m-top_medium">
+                <lightning:input aura:id="fixedAmount" type="number" name="fixedAmount" value="{!v.fixedAmount}"
+                    formatter="currency" label="{! 'Specify Amount Off ($' + v.minTuitionDiscountDollar + ' minimum)'}" onfocus="{!c.clearErrors}" required="true" />
+            </div>
+        </aura:if>
+
+        <!-- Resulting Web Ad Coupon Code -->
+        <div class="slds-m-top_medium">
+            <lightning:input aura:id="resultField" type="text" name="result" label="Resulting Tuition Discount" disabled="true"
+                value="{!v.result}" />
+        </div>
+
+        <div class="slds-m-top_medium">
+            <lightning:input  type="text" label="Exclusions" value="{!v.exclusions}" />
+        </div>
+
+        <!-- Copy to all locations checkbox -->
+        <div class="slds-m-top_medium">
+            <lightning:input checked="{!v.copyToAllLocations}" type="checkbox" label="Copy to all locations" />
+        </div>
+
+        <div class="slds-m-top_medium slds-text-align_right">
+            <lightning:button label="Cancel" onclick="{!c.handleCancel}" />
+            <lightning:button label="Save" variant="brand" onclick="{!c.handleSave}" />
+        </div>
+
+    </div>
+</aura:component>

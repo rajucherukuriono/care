@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_we_share_recipient_name_w_provider__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>Can we share recipient name w/ provider?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

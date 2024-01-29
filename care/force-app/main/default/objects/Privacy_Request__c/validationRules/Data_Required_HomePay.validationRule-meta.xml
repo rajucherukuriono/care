@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Required_HomePay</fullName>
+    <active>true</active>
+    <description>For Home Pay, the Data field cannot be blank to set status to &quot;Request Accepted&quot;</description>
+    <errorConditionFormula>ISPICKVAL(Source_System__c, &apos;HomePay&apos;) &amp;&amp;
+ISPICKVAL(Request_Type__c, &apos;Access Data&apos;) &amp;&amp;
+ISPICKVAL(Request_Status__c, &apos;Request Accepted&apos;) &amp;&amp;
+ISBLANK(  Data__c  )</errorConditionFormula>
+    <errorDisplayField>Data__c</errorDisplayField>
+    <errorMessage>Data is required before setting the status to &quot;Request Accepted&quot;.</errorMessage>
+</ValidationRule>

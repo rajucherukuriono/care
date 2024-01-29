@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSAT_Rating__c</fullName>
+    <complianceGroup>CCPA</complianceGroup>
+    <description>Servicing teams satisfaction question</description>
+    <externalId>false</externalId>
+    <label>CSAT Rating</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I am very satisfied – You answered my question in a fast, friendly way.</fullName>
+                <default>false</default>
+                <label>I am very satisfied – You answered my question in a fast, friendly way.</label>
+            </value>
+            <value>
+                <fullName>I am satisfied – You were helpful, but this could have been better.</fullName>
+                <default>false</default>
+                <label>I am satisfied – You were helpful, but this could have been better.</label>
+            </value>
+            <value>
+                <fullName>I am not satisfied – You didn’t provide the help I needed. I expected more.</fullName>
+                <default>false</default>
+                <label>I am not satisfied – You didn’t provide the help I needed. I expected more.</label>
+            </value>
+            <value>
+                <fullName>Extremely Satisfied</fullName>
+                <default>false</default>
+                <label>Extremely Satisfied</label>
+            </value>
+            <value>
+                <fullName>Somewhat Satisfied</fullName>
+                <default>false</default>
+                <label>Somewhat Satisfied</label>
+            </value>
+            <value>
+                <fullName>Neutral</fullName>
+                <default>false</default>
+                <label>Neutral</label>
+            </value>
+            <value>
+                <fullName>Somewhat Dissatisfied</fullName>
+                <default>false</default>
+                <label>Somewhat Dissatisfied</label>
+            </value>
+            <value>
+                <fullName>Extremely Dissatisfied</fullName>
+                <default>false</default>
+                <label>Extremely Dissatisfied</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

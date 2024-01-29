@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>All_Sales_CAW_Leads_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>All Sales: CAW Leads - View</label>
+        <sharedTo>
+            <group>Share_All_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WPS Lead,International B2B,International B2C,Marketplace ISR Lead,Marketplace National</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HomePay_B2C_Lead</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Rules for HomePay B2C Leads</description>
+        <label>HomePay B2C Lead</label>
+        <sharedTo>
+            <group>Share_HomePay_B2C_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>HomePay B2C Lead</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HomePay_Lead_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HomePay: Lead Edit</label>
+        <sharedTo>
+            <group>Share_HomePay_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>HomePay Lead</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Hubspot_Sharing_Lead</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Hubspot Sharing Lead</label>
+        <sharedTo>
+            <role>Hubspot_Integration_User</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>HomePay Lead</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Operations_BUC_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Operations: BUC - Edit</label>
+        <sharedTo>
+            <group>Share_BUC</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>BUC Agency Lead,BUC Center Lead</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Read_Write_Access_to_CAWMKP_Sales</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Given permission to C@W Sales to have read/edit access to Leads.</description>
+        <label>Read/Write Access to CAWMKP Sales</label>
+        <sharedTo>
+            <group>Share_CAWMKP_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WPS Lead,International B2B</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Q_Email_Escalations</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Allow members of this queue access to leads</description>
+        <label>Q: Email Escalations</label>
+        <sharedTo>
+            <role>E_Mail_Lead</role>
+        </sharedTo>
+        <sharedFrom>
+            <queue>Q_Email_Escalations</queue>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

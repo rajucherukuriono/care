@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Background_Check_Completed__c</fullName>
+    <externalId>false</externalId>
+    <label>BGC</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Preliminary</fullName>
+                <default>false</default>
+                <label>Preliminary</label>
+            </value>
+            <value>
+                <fullName>Criminal FAIL</fullName>
+                <default>false</default>
+                <label>Criminal FAIL</label>
+            </value>
+            <value>
+                <fullName>Criminal+MVR FAIL</fullName>
+                <default>false</default>
+                <label>Criminal+MVR FAIL</label>
+            </value>
+            <value>
+                <fullName>Premier FAIL</fullName>
+                <default>false</default>
+                <label>Premier FAIL</label>
+            </value>
+            <value>
+                <fullName>Family Decline</fullName>
+                <default>false</default>
+                <label>Family Decline</label>
+            </value>
+            <value>
+                <fullName>Criminal Pass</fullName>
+                <default>false</default>
+                <label>Criminal Pass</label>
+            </value>
+            <value>
+                <fullName>Criminal+MVR Pass</fullName>
+                <default>false</default>
+                <label>Criminal+MVR Pass</label>
+            </value>
+            <value>
+                <fullName>Premier Pass</fullName>
+                <default>false</default>
+                <label>Premier Pass</label>
+            </value>
+            <value>
+                <fullName>Passed</fullName>
+                <default>false</default>
+                <label>Passed</label>
+            </value>
+            <value>
+                <fullName>Failed</fullName>
+                <default>false</default>
+                <label>Failed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

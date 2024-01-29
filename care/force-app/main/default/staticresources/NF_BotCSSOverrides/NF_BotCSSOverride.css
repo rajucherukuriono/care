@@ -1,0 +1,20 @@
+/* Form background */
+.formcard-container[ebcm-einsteinBotFormCard_einsteinBotFormCard] {
+    background: none !important;
+}
+
+/* Form container */
+.form-card[ebcm-einsteinBotChatMessage_einsteinBotChatMessage] {
+margin-left: 0px !important;
+}
+
+/* Button under web form */
+.form-action-container[ebcm-einsteinBotAction_einsteinBotAction] .action.action-button:hover[ebcm-einsteinBotAction_einsteinBotAction] {
+background-color: rgb(239, 88, 68, 0.8) !important;
+border: 1px solid rgb(255 255 255) !important;
+}
+
+.form-action-container[ebcm-einsteinBotAction_einsteinBotAction] .action.action-button[ebcm-einsteinBotAction_einsteinBotAction] {
+background-color: rgb(239, 88, 68) !important;
+border: 1px solid rgb(255 255 255) !important;
+}

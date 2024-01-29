@@ -1,0 +1,20 @@
+<apex:page StandardController="Case" standardStylesheets="false" sidebar="false" showHeader="false">
+<apex:form >
+<script  type="text/javascript">
+
+document.getElementById('{!$Component.SendAnEmailCustom}').onClick=window.top.location.href='/_ui/core/email/author/EmailAuthor?p2_lkid={!Case.contactid}&rtype=003&p3_lkid={!Case.id}&retURL=%2F{!Case.id}';
+
+</script>
+<!--
+<apex:commandLink id="SendAnEmailCustom" value="Click Here" onclick="alert('Again Hi...');window.top.location.href='/_ui/core/email/author/EmailAuthor?p2_lkid={!Case.contactid}&rtype=003&p3_lkid={!Case.id}&retURL=%2F{!Case.id}';"/>
+-->
+<!--
+<apex:outputlink value="https://cs92.salesforce.com/_ui/core/email/author/EmailAuthor?p2_lkid=v&rtype=003&p3_lkid={!Case.id}&retURL=%2F{!Case.id}">Send An Email Custom</apex:outputLink>
+<br/>
+
+<apex:commandLink id="SendAnEmailCustom" value="Send An Email Custom" onClick="window.top.location.href='/_ui/core/email/author/EmailAuthor?p2_lkid={!Case.contactid}&rtype=003&p3_lkid={!Case.id}&retURL=%2F{!Case.id}';"/>
+-->
+
+</apex:form>
+
+</apex:page>

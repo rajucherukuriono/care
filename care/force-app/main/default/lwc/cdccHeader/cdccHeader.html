@@ -1,0 +1,95 @@
+<template>
+    <div class="container">
+        <div class="left-content">
+
+            <c-extended-menu if:true={isMobile} is-mobile={isMobile} community-settings={communitySettings} locale-settings={localeSettings} show-join-now-link={showJoinNowLink} show-upgrade-link={showUpgradeLink} show-login-link={showLoginLink} ></c-extended-menu>
+            <div class="logo">
+                <a href={logoLink} target="_blank">
+                    <svg if:true={isMobile} xmlns="http://www.w3.org/2000/svg" width="116" height="32">
+                        <use xlink:href={svgLogoUrl}></use>
+                    </svg>
+                    <svg if:false={isMobile} xmlns="http://www.w3.org/2000/svg" width="145" height="40">
+                        <use xlink:href={svgLogoUrl} ></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="help-center">
+                <p><a href={homeUrl} onclick={handleHelpCenterClick} class="help-center-link">{label.hc_help_center}</a></p>
+            </div>
+        </div>
+        <div class="right-content">
+            <!--
+            <template if:true={isMobile}>
+                <div class="nav-menu-button-wrapper">
+                    <lightning-button-icon 
+                        icon-name={navMenuIconName} 
+                        variant="bare" size="large" class="nav-menu-show-hide"
+                        alternative-text="Open nav" title="Open nav" 
+                        onclick={handleNavMenuIconClick}>
+                            <label>Open nav</label>
+                    </lightning-button-icon>
+                </div>
+                
+                <template if:true={mobileNavOpen}>
+                    <div class="nav-menu">
+                        <div class="nav-menu-content">
+                            <div class="nav-menu-header"></div>
+                            <div class="nav-menu-body">
+                                <ul>
+                                    <template if:true={showApplyToJobsLink}>
+                                        <li>
+                                            <span><a class="btn-nav-link bold-link" href="https://www.care.com/enroll-care-seeker-p1042-q111085935.html">Apply to Jobs</a></span>
+                                        </li>
+                                    </template>
+
+                                    <template if:true={showLoginLink}>
+                                        <li>
+                                            <span><a class="btn-nav-link bold-link" href={localeSettings.Login__c}>{label.hc_log_in}</a></span>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
+                            <div class="nav-menu-footer">
+                                <div class="btn-bar">
+                                    <template if:true={showJoinNowLink}>
+                                        <a class="btn-nav-link btn-cta" href={localeSettings.Join_Now__c}>
+                                            <span>{label.hc_join_now}</span>
+                                        </a>
+                                    </template>
+                                    <template if:true={showUpgradeLink}>
+                                        <a class="btn-nav-link btn-cta" href={localeSettings.Upgrade__c}>
+                                            <span>{label.hc_upgrade}</span>
+                                        </a>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </template>
+            -->
+
+            <template if:false={isMobile}>
+                <ul class="links">
+                    <template if:true={showApplyToJobsLink}>
+                        <li><a href={localeSettings.Apply_to_Jobs__c}>Apply to Jobs</a></li>
+                    </template>
+                </ul>
+                <ul  class="links">
+                    <template if:true={showLoginLink}>
+                        <li class="bold-link"><a href={loginUrl}>{label.hc_log_in}</a></li>
+                    </template>
+                </ul>
+                <template if:true={showJoinNowLink}>
+                    <c-cdcc-button onclick={handleJoinNowClick}>{label.hc_join_now}</c-cdcc-button>
+                </template>
+                <template if:true={showUpgradeLink}>
+                    <c-cdcc-button onclick={handleUpgradeClick}>{label.hc_upgrade}</c-cdcc-button>
+                </template>
+
+                <c-extended-menu is-mobile={isMobile}></c-extended-menu>                
+            </template>
+        </div>
+    </div>
+
+</template>

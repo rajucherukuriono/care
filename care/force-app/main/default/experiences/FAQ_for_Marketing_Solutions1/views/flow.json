@@ -1,0 +1,34 @@
+{
+  "appPageId" : "2d058e16-187e-4e83-97b0-fa718366cc99",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "3990d5c8-63b0-4551-a796-314228c37f9e",
+  "label" : "Flow",
+  "regions" : [ {
+    "id" : "a102071f-7459-4dd1-ae93-f377e28c29f8",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "flowArguments" : "",
+        "flowName" : "{!flowName}"
+      },
+      "componentName" : "forceCommunity:flowCommunity",
+      "id" : "6438012b-d348-4ade-b973-d638a869f433",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5fd3fe7d-3a78-462d-b6c2-d73b1be0d11a",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "49cfab9c-cbb5-4863-8462-7afea6129d0f",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "flow"
+}

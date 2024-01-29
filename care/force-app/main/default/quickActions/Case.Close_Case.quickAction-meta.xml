@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Close Case Action for Member Care.  Includes &quot;Cose Case&quot; &amp; &quot;Close &amp; Next Case&quot;  buttons.  Handled via VisualForce &amp; Apex controller.</description>
+    <height>700</height>
+    <label>Close Case</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <page>Close_Case</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

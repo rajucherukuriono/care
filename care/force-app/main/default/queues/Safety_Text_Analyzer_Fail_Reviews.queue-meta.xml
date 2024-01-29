@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Safety - Text Analyzer Fail Reviews</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>G_Global_Safety</publicGroup>
+        </publicGroups>
+        <roles>
+            <role>Safety_Agent</role>
+            <role>Safety_Manager</role>
+        </roles>
+    </queueMembers>
+    <queueRoutingConfig>Email</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

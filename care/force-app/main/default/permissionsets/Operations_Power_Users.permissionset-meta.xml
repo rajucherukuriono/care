@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>A series of permissions that should be granted to the Power Users in the administration group.  Not included in Operations Manager profile because they negatively affect UI.  Includes: Manage public documents.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Operations Power Users</label>
+    <license>Salesforce</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AllowViewKnowledge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CreateCustomizeFilters</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ShareFilesWithNetworks</name>
+    </userPermissions>
+</PermissionSet>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Task for Laureen Granger Force2</label>
+    <protected>false</protected>
+    <values>
+        <field>Environment__c</field>
+        <value xsi:type="xsd:string">Force2</value>
+    </values>
+    <values>
+        <field>Name__c</field>
+        <value xsi:type="xsd:string">Laureen Granger</value>
+    </values>
+    <values>
+        <field>Task_assignee_ID__c</field>
+        <value xsi:type="xsd:string">005390000056cIU</value>
+    </values>
+    <values>
+        <field>Task_record_type__c</field>
+        <value xsi:type="xsd:string">01270000000HluNAAS</value>
+    </values>
+</CustomMetadata>

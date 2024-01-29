@@ -1,0 +1,86 @@
+<template>
+<div class="tabMenuWrapper">
+    <div class="tabMenu">
+
+        <template if:true={communitySettings.showForFamiliesLink}>
+            <template if:true={isFamiliesSelected}>
+                <div class={familiesLinkClass}>
+                    {label.hc_families}
+                </div>
+            </template>
+        
+            <template if:false={isFamiliesSelected}>
+                <a href={familiesLinkUrl}>
+                    <div class={familiesLinkClass}>
+                        {label.hc_families}
+                    </div>
+                </a>
+            </template>
+
+        </template>
+        <template if:true={communitySettings.showForCaregiversLink}>
+            <template if:true={isCaregiversSelected}>
+                <div class={caregiversLinkClass}>
+                    {label.hc_caregivers}
+                </div>
+            </template>
+            <template if:false={isCaregiversSelected}>
+                <a href={caregiversLinkUrl}>
+                    <div class={caregiversLinkClass}>
+                        {label.hc_caregivers}
+                    </div>
+                </a>
+            </template>
+        </template>
+        <template if:true={showForBusinessesLink}>
+            <template if:true={isBusinessSelected}>
+                <div class={businessesLinkClass}>
+                    Partners
+                </div>
+            </template>
+            <template if:false={isBusinessSelected}>
+                <a href={businessesLinkUrl}>
+                    <div class={businessesLinkClass}>
+                        Partners
+                    </div>
+                </a>
+            </template>
+
+        </template>
+        
+    </div>
+</div>
+</template>
+
+<!-- 
+    
+
+
+-->
+
+
+
+<!-- 
+            <template if:true={communitySettings.showForFamiliesLink}>
+            <div class={familiesLinkClass}>
+                <a href={familiesLinkUrl}>
+                    {label.hc_families}
+                </a>
+            </div>
+    </template>
+        <template if:true={communitySettings.showForCaregiversLink}>
+            <div class={caregiversLinkClass}>
+                <a href={caregiversLinkUrl}>
+                    {label.hc_caregivers}
+                </a>
+            </div>
+        </template>
+        <template if:true={showForBusinessesLink}>
+            <div class={businessesLinkClass}>
+                <a href={businessesLinkUrl}>
+                    Partners
+                </a>
+            </div>
+        </template>
+
+-->

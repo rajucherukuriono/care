@@ -1,0 +1,11 @@
+{
+  "cmsSettings" : { },
+  "currentThemeId" : "8826ba33-c381-4f85-90b9-60922b2949c0",
+  "headMarkup" : "<link rel=\"shortcut icon\" href=\"/families/s/sfsites/c/resource/1682970651000/FavIcon\" />\n<meta name=\"google-site-verification\" content=\"roIH15EFVQzqHqODBVrKLrvtFjnW5hKA2jBJ8-zJ8So\" />\n<script src=\"/families/s/sfsites/c/resource/1669151008000/cookieController?fa=6\"></script>\n<script src=\"/families/s/sfsites/c/resource/1651157668000/ga\"></script>\n<link rel=\"stylesheet\" href=\"/sfsites/c/resource/CDCC_CssOverrides?fa=42\">\n\n<!-- NF Changes -->\n<link rel=\"stylesheet\" href=\"/sfsites/c/resource/NF_BotCSSOverrides/NF_BotCSSOverride.css\">\n<script src=\"https://caredotcom.my.site.com/families/resource/ebcm__EinsteinBotResources/Intentcall.js\"></script>\n<!-- NF Changes -->",
+  "id" : "b040d84e-9c82-4aea-b263-8e3486fad169",
+  "isLockerServiceEnabled" : true,
+  "isRelaxedCSPLevel" : true,
+  "label" : "main",
+  "templateName" : "Help Center Template",
+  "type" : "appPage"
+}

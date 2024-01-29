@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#CCCCCC</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#00BCE4</color>
+        <height>5</height>
+    </bottomLine>
+    <description>Created for use with Welcome Call email follow ups but generic enough to be used for all.</description>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <verticalAlignment>Top</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>Images_Letterhead/Care_com_There_for_you_Logo.gif</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#AAAAFF</color>
+        <height>0</height>
+    </middleLine>
+    <name>Care.com Logo - Retired 11.5.15</name>
+    <topLine>
+        <color>#AAAAFF</color>
+        <height>0</height>
+    </topLine>
+</Letterhead>

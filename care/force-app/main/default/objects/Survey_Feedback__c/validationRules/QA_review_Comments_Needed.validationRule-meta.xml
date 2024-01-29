@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QA_review_Comments_Needed</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(RecordType.DeveloperName = &quot;Expert_Assist_Survey_Feedback&quot;,
+       RecordType.DeveloperName = &quot;Senior_Care_Survey_feedback&quot;),
+    OR(Overall_satisfaction__c =&apos;Dissatisfied&apos;,Overall_satisfaction__c =&apos;Very Dissatisfied&apos;),
+       ISBLANK(QA_Review_Comments__c) 
+)</errorConditionFormula>
+    <errorDisplayField>QA_Review_Comments__c</errorDisplayField>
+    <errorMessage>Please Add the QA Review Comments</errorMessage>
+</ValidationRule>

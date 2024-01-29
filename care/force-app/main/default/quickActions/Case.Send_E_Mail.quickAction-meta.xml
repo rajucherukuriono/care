@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This button overrides the default Feed view email action whose purpose is to Display the description column while choosing email emplate</description>
+    <height>250</height>
+    <label>Send E-Mail</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <page>Send_An_Email_Override_On_Case</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

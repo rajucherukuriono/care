@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RTBF_Retention__c</fullName>
+    <description>Provide option to choose the process type is RTBF or Retention</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Choose RTBF or Retention process and provide the corresponding validation on/off checks  like Safety Case/Premium/Employer Program/Record Type.</inlineHelpText>
+    <label>RTBF/Retention</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RTBF</fullName>
+                <default>true</default>
+                <label>RTBF</label>
+            </value>
+            <value>
+                <fullName>Retention</fullName>
+                <default>false</default>
+                <label>Retention</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

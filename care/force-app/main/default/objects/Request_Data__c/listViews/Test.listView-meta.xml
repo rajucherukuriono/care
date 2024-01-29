@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>Global_Member_ID__c</columns>
+    <columns>Last_Validation_Date__c</columns>
+    <columns>Response_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>Validation_Status__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Additional_Info__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Test</value>
+    </filters>
+    <filters>
+        <field>Additional_Info__c</field>
+        <operation>contains</operation>
+        <value>test</value>
+    </filters>
+    <label>Test</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SF Jira Tracker</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SF Jira Trackers</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Resolution_Summary_for_Done_Status</name>
+    </validationRules>
+</CustomObjectTranslation>

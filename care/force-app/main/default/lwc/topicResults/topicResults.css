@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    background-color: var(--lwc-colorBackground);
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.list-section {
+    font-weight: 700;
+}
+
+.article {
+    border-bottom: 1px solid var(--lwc-colorBorder);
+    padding: 24px 0px;
+}
+.article:last-child {
+    border-bottom: none;
+}

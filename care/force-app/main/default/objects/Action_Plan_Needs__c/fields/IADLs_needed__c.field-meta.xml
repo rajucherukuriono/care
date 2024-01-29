@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IADLs_needed__c</fullName>
+    <externalId>false</externalId>
+    <label>IADLs needed</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Shopping</fullName>
+                <default>false</default>
+                <label>Shopping</label>
+            </value>
+            <value>
+                <fullName>Meal Preparation</fullName>
+                <default>false</default>
+                <label>Meal Preparation</label>
+            </value>
+            <value>
+                <fullName>Medication Reminders</fullName>
+                <default>false</default>
+                <label>Medication Reminders</label>
+            </value>
+            <value>
+                <fullName>Laundry</fullName>
+                <default>false</default>
+                <label>Laundry</label>
+            </value>
+            <value>
+                <fullName>Housecleaning</fullName>
+                <default>false</default>
+                <label>Housecleaning</label>
+            </value>
+            <value>
+                <fullName>Bill Paying</fullName>
+                <default>false</default>
+                <label>Bill Paying</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>Yard Work</fullName>
+                <default>false</default>
+                <label>Yard Work</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

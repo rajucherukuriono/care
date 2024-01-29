@@ -1,0 +1,43 @@
+<template>
+    <div class="container">
+        <h3 class="heading">{heading}</h3>
+        <ul class="links">
+            <template if:true={showLink1}>
+                <li>
+                    <a href={link1Url} target="_blank">{link1Title}</a>
+                    <lightning-icon class="icon" icon-name="utility:chevronright" alternative-text={link1Title} title={link1Title} size="xx-small"></lightning-icon>
+                </li>
+            </template>
+            <template if:true={showLink2}>
+                <li>
+                    <a href={link2Url} target="_blank">{link2Title}</a>
+                    <lightning-icon class="icon" icon-name="utility:chevronright" alternative-text={link2Title} title={link2Title} size="xx-small"></lightning-icon>
+                </li>
+            </template>
+            <template if:true={showLink3}>
+                <li>
+                    <a href={link3Url} target="_blank">{link3Title}</a>
+                    <lightning-icon class="icon" icon-name="utility:chevronright" alternative-text={link3Title} title={link3Title} size="xx-small"></lightning-icon>
+                </li>
+            </template>
+            <template if:true={showLink4}>
+                <li>
+                    <a href={link4Url} target="_blank">{link4Title}</a>
+                    <lightning-icon class="icon" icon-name="utility:chevronright" alternative-text={link4Title} title={link4Title} size="xx-small"></lightning-icon>
+                </li>
+            </template>
+            <template if:true={showLink5}>
+                <li>
+                    <a href={link5Url} target="_blank">{link5Title}</a>
+                    <lightning-icon class="icon" icon-name="utility:chevronright" alternative-text={link5Title} title={link5Title} size="xx-small"></lightning-icon>
+                </li>
+            </template>
+            <template if:true={showLink6}>
+                <li>
+                    <a href={link6Url} target="_blank">{link6Title}</a>
+                    <lightning-icon class="icon" icon-name="utility:chevronright" alternative-text={link6Title} title={link6Title} size="xx-small"></lightning-icon>
+                </li>
+            </template>
+        </ul>
+    </div>
+</template>

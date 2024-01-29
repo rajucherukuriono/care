@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State_Regulations_Adult_Day_Health__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>State Regulations (e.g. staffing &amp; training requirements, etc.)</inlineHelpText>
+    <label>State Regulations Adult Day Health</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

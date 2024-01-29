@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Geolocation_Coordinates__c</fullName>
+    <description>Stores the geolocation of the Opportunity Service Area</description>
+    <displayLocationInDecimal>true</displayLocationInDecimal>
+    <externalId>false</externalId>
+    <label>Geolocation Coordinates</label>
+    <required>false</required>
+    <scale>4</scale>
+    <trackTrending>false</trackTrending>
+    <type>Location</type>
+</CustomField>

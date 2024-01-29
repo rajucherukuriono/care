@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Could_they_follow_a_schedule__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>How were they at following the schedule you laid out for them?</inlineHelpText>
+    <label>Could they follow a schedule?</label>
+    <length>1000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

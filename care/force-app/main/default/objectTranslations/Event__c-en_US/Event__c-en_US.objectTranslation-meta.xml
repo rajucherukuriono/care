@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>WPS Event</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>WPS Events</value>
+    </caseValues>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CAW_Client_Onsite_Event</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Int_WPS_Service_Event</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>SCP_Onsite_Group</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>US_Event_Care</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Business_Account_Not_Null</name>
+    </validationRules>
+</CustomObjectTranslation>

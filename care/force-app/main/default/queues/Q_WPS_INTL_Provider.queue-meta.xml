@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>fake@e.mail</email>
+    <name>Q: WPS INTL Provider</name>
+    <queueMembers>
+        <roles>
+            <role>International_WPS_Ops</role>
+            <role>International_WPS_Ops_Manager</role>
+            <role>SystemAdmin</role>
+        </roles>
+        <users>
+            <user>roxana.ludwig1@betreut.de</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Survey_Feedback__c</sobjectType>
+    </queueSobject>
+</Queue>

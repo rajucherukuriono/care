@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pay_Period_End__c</fullName>
+    <externalId>false</externalId>
+    <formula>Pay_Period_Start__c + 13</formula>
+    <inlineHelpText>Pay Period Start + 13 days</inlineHelpText>
+    <label>Pay Period End</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

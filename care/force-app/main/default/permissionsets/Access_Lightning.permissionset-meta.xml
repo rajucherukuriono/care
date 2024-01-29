@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Provides permissions to see the switcher and login to Lightning Experience. 
+Lightning Experience User: Access Lightning Experience and switch between LEX and Classic.
+Lightning Login User:  allows SF Authenticator instead of a password.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Access Lightning</label>
+    <license>Salesforce</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AllowLightningLogin</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>LightningExperienceUser</name>
+    </userPermissions>
+</PermissionSet>

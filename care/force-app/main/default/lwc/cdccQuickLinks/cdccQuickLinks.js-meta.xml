@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Quick Links</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property label="Heading" name="heading" type="String" required="true" default="Quicklinks"/>
+            <property label="Link 1 URL" name="link1Url" type="String"/>
+             
+            <property label="Link 1 Title" name="link1Title" type="String"/>
+             
+            <property label="Link 2 URL" name="link2Url" type="String"/>
+             
+            <property label="Link 2 Title" name="link2Title" type="String"/>
+             
+            <property label="Link 3 URL" name="link3Url" type="String"/>
+             
+            <property label="Link 3 Title" name="link3Title" type="String"/>
+             
+            <property label="Link 4 URL" name="link4Url" type="String"/>
+             
+            <property label="Link 4 Title" name="link4Title" type="String"/>
+             
+            <property label="Link 5 URL" name="link5Url" type="String"/>
+             
+            <property label="Link 5 Title" name="link5Title" type="String"/>
+             
+            <property label="Link 6 URL" name="link6Url" type="String"/>
+             
+            <property label="Link 6 Title" name="link6Title" type="String"/>
+             
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

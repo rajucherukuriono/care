@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Section__c</fullName>
+    <description>Release Notes Section. First level of feature hierarchy in terms of Cloud Assignement.</description>
+    <externalId>false</externalId>
+    <label>Section</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+                <label>Analytics</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <default>false</default>
+                <label>Service</label>
+            </value>
+            <value>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+                <label>Mobile</label>
+            </value>
+            <value>
+                <fullName>Communities</fullName>
+                <default>false</default>
+                <label>Communities</label>
+            </value>
+            <value>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+                <label>Chatter</label>
+            </value>
+            <value>
+                <fullName>Files</fullName>
+                <default>false</default>
+                <label>Files</label>
+            </value>
+            <value>
+                <fullName>Search</fullName>
+                <default>false</default>
+                <label>Search</label>
+            </value>
+            <value>
+                <fullName>Data.com</fullName>
+                <default>false</default>
+                <label>Data.com</label>
+            </value>
+            <value>
+                <fullName>Customization</fullName>
+                <default>false</default>
+                <label>Customization</label>
+            </value>
+            <value>
+                <fullName>Security and Identity</fullName>
+                <default>false</default>
+                <label>Security, Privacy and Identity</label>
+            </value>
+            <value>
+                <fullName>Deployment</fullName>
+                <default>false</default>
+                <label>Deployment</label>
+            </value>
+            <value>
+                <fullName>Development</fullName>
+                <default>false</default>
+                <label>Development</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Salesforce Overall</fullName>
+                <default>false</default>
+                <label>Salesforce Overall</label>
+            </value>
+            <value>
+                <fullName>Critical Updates</fullName>
+                <default>false</default>
+                <label>Critical Updates</label>
+            </value>
+            <value>
+                <fullName>Doc Content</fullName>
+                <default>false</default>
+                <label>Doc Content</label>
+            </value>
+            <value>
+                <fullName>Other Salesforce Products</fullName>
+                <default>false</default>
+                <label>Other Salesforce Products</label>
+            </value>
+            <value>
+                <fullName>Lightning Experience Adoption</fullName>
+                <default>false</default>
+                <label>Lightning Experience Adoption</label>
+            </value>
+            <value>
+                <fullName>Salesforce Surveys</fullName>
+                <default>false</default>
+                <label>Salesforce Surveys</label>
+            </value>
+            <value>
+                <fullName>Einstein Analytics</fullName>
+                <default>false</default>
+                <label>Einstein Analytics</label>
+            </value>
+            <value>
+                <fullName>Salesforce App</fullName>
+                <default>false</default>
+                <label>Salesforce App</label>
+            </value>
+            <value>
+                <fullName>Lightning App Builder</fullName>
+                <default>false</default>
+                <label>Lightning App Builder</label>
+            </value>
+            <value>
+                <fullName>Lightning Flow</fullName>
+                <default>false</default>
+                <label>Lightning Flow</label>
+            </value>
+            <value>
+                <fullName>Data Protection and Privacy</fullName>
+                <default>false</default>
+                <label>Data Protection and Privacy</label>
+            </value>
+            <value>
+                <fullName>General Setup</fullName>
+                <default>false</default>
+                <label>General Setup</label>
+            </value>
+            <value>
+                <fullName>Supported Browsers</fullName>
+                <default>false</default>
+                <label>Supported Browsers</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

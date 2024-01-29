@@ -1,0 +1,94 @@
+{
+  "appPageId" : "372b8d47-e2cd-405f-817c-9731a6b8defe",
+  "componentName" : "siteforce:sldsTwoCol84SidebarFeaturedLayout",
+  "dataProviders" : [ ],
+  "id" : "d4363e5c-aa56-4af7-b2d5-fa2e1d30e440",
+  "label" : "Article Detail",
+  "regions" : [ {
+    "id" : "b574a2f2-2eda-441b-aef3-9c7867ab3518",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "uniqueNameOrId" : "{!urlName}"
+      },
+      "componentName" : "forceCommunity:breadcrumbs",
+      "id" : "c4deac61-e3cc-4da8-afc7-fdbdb34ed75c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "c:knowledgeArticle",
+      "id" : "80e4f2ef-87c0-43f9-bf0b-2f2fdc0c7fa9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "holidayMonth1" : "January",
+        "holidayMonth2" : "January",
+        "holidayMonth3" : "January",
+        "holidayMonth4" : "January",
+        "memberType" : "Company",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "c:createCaseFromArticle",
+      "id" : "8ccaf452-f4db-4c8f-86de-45893accedb5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9c62bb06-b92a-4581-86b5-07cc0ac11413",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "numberOfItems" : 5,
+        "showViewCounts" : true,
+        "title" : "Related Articles"
+      },
+      "componentName" : "selfService:similarArticles42",
+      "id" : "5cfeb772-ea07-4dce-9b7e-6e1d16adb56e",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "numberOfArticles" : 5,
+        "title" : "Trending Articles",
+        "topicId" : "{!topicId}"
+      },
+      "componentName" : "selfService:topicTrendingArticles42",
+      "id" : "f1ad9e3a-e7b4-463d-a961-5c1b09f8a0e6",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0d530a0c-97cd-4cb1-a943-f912faa6a370",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "{!Record.Summary}",
+        "title" : "{!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "4c8564b3-45a6-428c-bc06-a548fef10eb8",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "59b20662-7389-4b6f-9583-42a88757cf4b",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "article"
+}

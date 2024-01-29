@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <assignments>
+        <name>Set_Close_Date</name>
+        <label>Set Close Date</label>
+        <locationX>182</locationX>
+        <locationY>311</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.CloseDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_Composer_Service</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_RS_Points</name>
+        <label>Set RS Points</label>
+        <locationX>50</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Base_Points__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Composer_Service__r.Base_Points__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Bonus_Points__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Composer_Service__r.Bonus_Points__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check_Composer_Service</name>
+        <label>Check Composer Service</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>RS</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Composer_Service__r.Vertical__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Recruiting Solutions</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_RS_Points</targetReference>
+            </connector>
+            <label>RS</label>
+        </rules>
+    </decisions>
+    <description>If the record type is Sales Origination, and the Stage is changed to Closed Won, set the Close Date to TODAY.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>CurrentDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>Sales Origination set Close Date on Closed Won {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Sales Origination set Close Date on Closed Won</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Close_Date</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0125Y0000023pEUQAY</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

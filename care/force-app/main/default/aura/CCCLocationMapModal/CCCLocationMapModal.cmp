@@ -1,0 +1,94 @@
+<aura:component controller="CCCLocationController" extends="c:CCCModuleBase">
+
+    <!-- Public Attributes -->
+    <aura:attribute name="saveClicked" type="Boolean" default="false" access="public" />
+    <aura:attribute name="saveDisabled" type="Boolean" default="false" access="public" />
+    <aura:attribute name="opportunityId" type="String" access="public" />
+    <aura:attribute name="accountRecord" type="Account" access="public" />
+    <aura:attribute name="locationRecord" type="Opportunity_Service_Area__c" default="{}" access="public" />
+    <aura:attribute name="composerServiceRecords" type="List" access="public" />
+    <aura:attribute name="selectedComposerServiceRecordIds" type="List" access="public" />
+    <aura:attribute name="primaryServiceVerticalName" type="String" access="public" />
+    <aura:attribute name="mapBoxApiKey" type="String" access="public" />
+    <aura:attribute name="maxPostalCodes" type="Integer" default="9999999" access="public"
+        description="The maximum # of postal codes the user can select for a location" />
+    <aura:attribute name="provinceOptions" type="List" default="[]" access="public" />
+    <aura:attribute name="enableAdditionalServices" type="Boolean" default="false" access="public" />
+    <aura:attribute name="stateAbbreviationMap" type="Object" default="{}" access="public" />
+
+    <!-- Private Attributes -->
+    <aura:attribute name="selectedTabId" type="String" default="address" description="Selected tab indicator" />
+    <aura:attribute name="channel" type="String" default="CCCLocationMapModal" access="private" description="A unique key for passing between the map and the message handler so that multiple versions of the Leaflet map do not cross-communicate" />
+    <aura:attribute name="mapUrl" type="String" default="/apex/CCCMapBoxMap" access="private" description="Configurable url to use for map visualforce page" />
+
+    <!-- Init -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <div>
+        <lightning:tabset aura:id="tabs" selectedTabId="{!v.selectedTabId}" variant="scoped">
+            <lightning:tab label="Location Details" id="address">
+                <div class="slds-p-around_xx-small">
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning:button label="Use Account Address" onclick="{!c.handleUseAccountAddressClick}" class="slds-m-horizontal_xx-small" />
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning:input aura:id="inputName" name="inputName" label="Name" required="true" value="{!v.locationRecord.Name}" />
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <div class="slds-m-top_xx-small">
+                                <lightning:inputAddress aura:id="inputAddress" required="true"
+                                    streetLabel="Street" cityLabel="City" provinceLabel="State" postalCodeLabel="Postal Code"
+                                    provinceOptions="{!v.provinceOptions}" street="{!v.locationRecord.Street__c}" city="{!v.locationRecord.City__c}"
+                                    province="{!v.locationRecord.State__c}" postalCode="{!v.locationRecord.Postal_Code__c}" country="US" />
+                                    <div class="slds-size_1-of-4">
+                                        <lightning:input aura:id="inputPhone" name="inputPhone" type="tel" required="true" label="Phone"
+                                            value="{!v.locationRecord.Phone__c}" pattern="[0-9]{10}" messageWhenPatternMismatch="Please enter a 10 digit phone number, without formatting"/>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </lightning:tab>
+
+            <!-- Only show map tab if geolocation is populated -->
+            <aura:if isTrue="{! not(empty(v.locationRecord.Geolocation_Coordinates__Latitude__s)) }">
+
+                <lightning:tab label="Postal Code map" id="map">
+                    <div>
+                        <iframe aura:id="vfFrame" src="{! v.mapUrl + '?channel=' + v.channel + '&amp;mapBoxApiKey=' + v.mapBoxApiKey + '&amp;centerLat=' + v.locationRecord.Geolocation_Coordinates__Latitude__s + '&amp;centerLng=' + v.locationRecord.Geolocation_Coordinates__Longitude__s }" width="100%" height="400px" frameBorder="0" />
+                    </div>
+                </lightning:tab>
+
+                <aura:if isTrue="{!v.enableAdditionalServices}">
+                    <lightning:tab label="Additional Services" id="additionalservices">
+                        <c:CCCAdditionalServicesPicker composerServiceRecords="{!v.composerServiceRecords}"
+                            selectedComposerServiceRecordIds="{!v.selectedComposerServiceRecordIds}"
+                            primaryServiceVerticalName="{!v.primaryServiceVerticalName}" />
+                    </lightning:tab>
+                </aura:if>
+
+            </aura:if>
+
+        </lightning:tabset>
+
+        <div class="slds-clearfix slds-m-top_medium">
+            <div class="slds-float_right">
+                <lightning:button label="Cancel" onclick="{!c.handleCancelClicked}" class="slds-m-horizontal_xx-small" />
+
+                <!-- Show Next button if geolocation is not yet populated -->
+                <aura:if isTrue="{! empty(v.locationRecord.Geolocation_Coordinates__Latitude__s) }">
+                    <lightning:button variant="brand" label="Next" onclick="{!c.handleNextClicked}" class="slds-m-horizontal_xx-small" />
+                </aura:if>
+
+                <!-- Show Save button if geolocation is populated -->
+                <aura:if isTrue="{! not(empty(v.locationRecord.Geolocation_Coordinates__Latitude__s)) }">
+                    <lightning:button variant="brand" label="Save" onclick="{!c.handleSaveClicked}" class="slds-m-horizontal_xx-small" />
+                </aura:if>
+
+            </div>
+        </div>
+
+    </div>
+
+</aura:component>

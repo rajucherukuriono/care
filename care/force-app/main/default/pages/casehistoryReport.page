@@ -1,0 +1,180 @@
+<apex:page sidebar="false" controller="CaseHistory_ctrlr" doctype="html-5.0">
+    <link href="{!URLFOR($Resource.bootStrap, 'normalbootstrap/css/bootstrap.min.css')}" rel="stylesheet" media="screen"/>
+    <link href="{!URLFOR($Resource.fontawesome, 'font-awesome/css/font-awesome.css')}" rel="stylesheet" media="screen"/>
+    <html>
+        <head>
+            <style>
+                .hideonload {}
+                .blue {
+                    color: #0099CC;
+                }
+            </style>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            <script>
+                var $ = $.noConflict();
+                
+                function hidehideonload(){
+                    $(".hideonload").hide();
+                }
+                
+                function tableshow(UserNum) {
+                    $("#Hidden" + UserNum).toggle("slow");
+                    $("#downbutton" + UserNum).hide();
+                    $("#upbutton" + UserNum).show();
+                }
+                
+                function tablehide(UserNum) {
+                    $("#Hidden" + UserNum).toggle("slow");
+                    $("#downbutton" + UserNum).show();
+                    $("#upbutton" + UserNum).hide();
+                }
+                
+                var usrsqclicked = null;
+                function recordUserSeq(usersq){
+                  usrsqclicked = usersq;
+                }
+                
+                function hideCaseHistTables(){
+                  $( "tr[id^='Hidden']" ).hide();
+                  $( "img[id^='hideCaseHist']" ).hide();
+                }
+ 
+                 function showCaseHistTable(){
+                  if(usrsqclicked != null){
+                    $("#Hidden" + usrsqclicked).show();
+	              }
+                }  
+                
+                var hiddenCommand = null;
+                function hideCommand(){
+                  if(usrsqclicked != null){
+                    $("#cdc" + usrsqclicked).children('input').hide();
+                    $("#hideCaseHist" + usrsqclicked).show();
+	              }                  
+                } 
+                
+                function showCommand(){
+                  if(usrsqclicked != null){
+                    $("#hideCaseHist" + usrsqclicked).hide();
+                    $("#Hidden" + usrsqclicked).hide();
+                    $("#cdc" + usrsqclicked).children('input').show();
+                  }
+                }                                            
+            </script>
+        </head>
+        <div class="bs">
+        <body>
+            <!--<apex:form >-->
+            <table class="table">
+                <caption><h4>Case History Report</h4></caption>
+                <tbody>
+                    <apex:form >
+                    <apex:outputPanel id="MessagePanel">
+                      <apex:messages style="color:red"/>
+                    </apex:outputPanel>
+                    <tr>
+                        <td>Start Date</td>
+                        <td><apex:input value="{!StartDate}" type="date"/></td>
+                        <td>End Date</td>
+                        <td><apex:input value="{!EndDate}" type="date"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="100%" style="text-align:center;">Roles &nbsp; &nbsp;
+                            <apex:SelectList size="1" value="{!theRole}">
+                                <apex:SelectOptions value="{!RoleSelect}"/>
+                            </apex:SelectList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="100%" style="text-align:center;">
+                            <apex:actionStatus startText="Loading..." id="LoadingUsersId"/>
+                            <apex:commandButton oncomplete="hidehideonload(); hideCaseHistTables();" value="Show Users" action="{!refreshUsers}" 
+                                                rerender="MainPanel,MessagePanel" status="LoadingUsersId"/>
+                            
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td colspan="100%">
+                            <apex:outputPanel id="MainPanel">                         
+                            <apex:outputPanel id="MainInnerPannel" rendered="{!showtable}">
+                            <table style="width:100%;border-color:#993D5C;" class="table table-bordered table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th style="width:15%; border-left-color:#993D5C;"><i class="fa fa-user blue"></i> User</th>
+                                        <th style="width:50%;"><i class="fa fa-bar-chart-o blue"></i> Number of Cases Reassigned</th>
+                                        <th style="width:35%;"><i class="fa fa-external-link blue"></i> Show Cases</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:variable var="UserNum" value="{!0}"/>
+                                    <apex:repeat value="{!WrapperList}" var="userWrap">
+                                        <tr>
+                                            <td style="border-left-color:#993D5C;{!IF(UserNum = 0,'border-top-color:#993D5C;','')}"><a href="/{!userWrap.CurrUser.Id}">{!userWrap.CurrUser.Name}</a></td>
+                                            <td style="{!IF(UserNum = 0,'border-top-color:#993D5C;','')}">{!userWrap.NumberReassigned}</td>
+                                            <td style="{!IF(UserNum = 0,'border-top-color:#993D5C;','')}">  
+                                              <a href="#" onClick="recordUserSeq({!userWrap.UserNumber});" id="cdc{!userWrap.UserNumber}">   
+ 	                                            <apex:commandButton image="/img/arrow_dwn.gif" action="{!refreshUsers}" rerender="MainInnerPannel" 
+ 	                                            oncomplete="hideCaseHistTables(); showCaseHistTable(); hideCommand();">
+	                                                   <apex:param name="userId" assignTo="{!userId}" value="{!userWrap.CurrUser.Id}"/> 
+	                                                   <apex:param name="userSeq" assignTo="{!userSeq}" value="{!userWrap.UserNumber}"/> 
+	                                            </apex:commandButton>   
+	                                            
+	                                            <img src="/img/arrow_up.gif" id="hideCaseHist{!userWrap.UserNumber}" onClick="showCommand();"/>  
+	                                          </a>                                     
+                                            </td>                                                              
+                                        </tr>
+
+                                        <tr style="background-color:#993D5C;" id="Hidden{!UserNum}" >
+                                          
+                                            <td></td>
+                                            <td colspan="2">
+                                                <table style="margin-bottom:0px;" class="table table-bordered table-condensed">
+                                                    <thead>
+                                                        <tr>
+                                                            <th ><i class="fa fa-spin fa-cog blue"></i> Case Number</th>
+                                                            <th ><i class="fa fa-user blue"></i> Contact</th>
+                                                            <th ><i class="fa fa-tags blue"></i> Subject</th>
+                                                            <th ><i class="fa fa-tasks blue"></i> Current Status</th>
+                                                            <th ><i class="fa fa-hand-o-right blue"></i> Reassigned To</th>
+                                                            <th ><i class="fa fa-calendar blue"></i> Date Reassigned</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <apex:variable value="{!0}" var="casevar"/>
+                                                        <apex:repeat value="{!userWrap.CaseHistoryList}" var="CH">
+                                                            <tr>
+                                                                <td style="{!IF(casevar = 0,'border-top-color:#993D5C;','')}"><a href="/{!CH.CaseId}">{!CH.Case.CaseNumber}</a></td>
+                                                                <td style="{!IF(casevar = 0,'border-top-color:#993D5C;','')}"><a href="/{!CH.Case.ContactId}">{!CH.Case.Contact.Name}</a></td>
+                                                                <td style="{!IF(casevar = 0,'border-top-color:#993D5C;','')}">{!CH.Case.Subject}</td>
+                                                                <td style="{!IF(casevar = 0,'border-top-color:#993D5C;','')}">{!CH.Case.Status}</td>
+                                                                <td style="{!IF(casevar = 0,'border-top-color:#993D5C;','')}">{!newvalueNameMap[CH.NewValue]}</td>
+                                                                <td style="{!IF(casevar = 0,'border-top-color:#993D5C;','')}">{!userWrap.CreatedDates[casevar]}</td>
+                                                            </tr>
+                                                        <apex:variable value="{!casevar + 1}" var="casevar"/>
+                                                        </apex:repeat>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                          
+                                        </tr>
+
+
+    
+                                    <apex:variable var="UserNum" value="{!UserNum + 1}"/>
+                                    </apex:repeat>
+                                                                           
+                                </tbody>
+                            </table>
+                            </apex:outputPanel>
+                            </apex:outputPanel>
+                        </td>
+                    </tr>
+                     </apex:form> 
+                </tbody>
+            </table>
+            <!--</apex:form>-->
+        </body>
+        </div>
+    </html>
+</apex:page>

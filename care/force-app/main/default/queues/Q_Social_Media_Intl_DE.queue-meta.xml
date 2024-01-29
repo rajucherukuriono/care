@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>fake@e.mail</email>
+    <name>Q: Social Media Intl DE</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>SF_Admin_Team</publicGroup>
+        </publicGroups>
+        <users>
+            <user>socialstudio@care.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

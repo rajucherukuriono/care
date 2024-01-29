@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Academics</fullName>
+        <default>false</default>
+        <label>Academics</label>
+    </customValue>
+    <customValue>
+        <fullName>ACC - Adult Care Coordination</fullName>
+        <default>false</default>
+        <label>ACC - Adult Care Coordination</label>
+    </customValue>
+    <customValue>
+        <fullName>Adoption</fullName>
+        <default>false</default>
+        <label>Adoption</label>
+    </customValue>
+    <customValue>
+        <fullName>Adoption/Surrogacy</fullName>
+        <default>false</default>
+        <label>Adoption/Surrogacy</label>
+    </customValue>
+    <customValue>
+        <fullName>Adoption Reimbursement</fullName>
+        <default>false</default>
+        <label>Adoption Reimbursement</label>
+    </customValue>
+    <customValue>
+        <fullName>Adoption Subsidy</fullName>
+        <default>false</default>
+        <label>Adoption Subsidy</label>
+    </customValue>
+    <customValue>
+        <fullName>Adult Care</fullName>
+        <default>false</default>
+        <label>Adult Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Adult Learning</fullName>
+        <default>false</default>
+        <label>Adult Learning</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto and Home Services</fullName>
+        <default>false</default>
+        <label>Auto and Home Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Basic Financial</fullName>
+        <default>false</default>
+        <label>Basic Financial</label>
+    </customValue>
+    <customValue>
+        <fullName>Basic Financial Unlimited</fullName>
+        <default>false</default>
+        <label>Basic Financial Unlimited</label>
+    </customValue>
+    <customValue>
+        <fullName>Basic Legal</fullName>
+        <default>false</default>
+        <label>Basic Legal</label>
+    </customValue>
+    <customValue>
+        <fullName>Basic Legal Unlimited</fullName>
+        <default>false</default>
+        <label>Basic Legal Unlimited</label>
+    </customValue>
+    <customValue>
+        <fullName>Benefits Referral</fullName>
+        <default>false</default>
+        <label>Benefits Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>Biometrics</fullName>
+        <default>false</default>
+        <label>Biometrics</label>
+    </customValue>
+    <customValue>
+        <fullName>Book Order</fullName>
+        <default>false</default>
+        <label>Book Order</label>
+    </customValue>
+    <customValue>
+        <fullName>Breastfeeding Support</fullName>
+        <default>false</default>
+        <label>Breastfeeding Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Caregiver Search Assistance - Benefits Referral</fullName>
+        <default>false</default>
+        <label>Caregiver Search Assistance - Benefits Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>Child Care</fullName>
+        <default>false</default>
+        <label>Child Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Convenience and Community Resources</fullName>
+        <default>false</default>
+        <label>Convenience and Community Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Disaster Assistance</fullName>
+        <default>false</default>
+        <label>Disaster Assistance</label>
+    </customValue>
+    <customValue>
+        <fullName>Domestic Services - Child Care</fullName>
+        <default>false</default>
+        <label>Domestic Services - Child Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Domestic Services - Education</fullName>
+        <default>false</default>
+        <label>Domestic Services - Education</label>
+    </customValue>
+    <customValue>
+        <fullName>Domestic Services - Elder Care</fullName>
+        <default>false</default>
+        <label>Domestic Services - Elder Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Domestic Services - Estate Services</fullName>
+        <default>false</default>
+        <label>Domestic Services - Estate Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Domestic Services - Insurance</fullName>
+        <default>false</default>
+        <label>Domestic Services - Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Domestic Services - Legal</fullName>
+        <default>false</default>
+        <label>Domestic Services - Legal</label>
+    </customValue>
+    <customValue>
+        <fullName>Domestic Services - Payroll/Tax Services</fullName>
+        <default>false</default>
+        <label>Domestic Services - Payroll/Tax Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Domestic Services - Personal Services</fullName>
+        <default>false</default>
+        <label>Domestic Services - Personal Services</label>
+    </customValue>
+    <customValue>
+        <fullName>EAP Services</fullName>
+        <default>false</default>
+        <label>EAP Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Education</fullName>
+        <default>false</default>
+        <label>Education</label>
+    </customValue>
+    <customValue>
+        <fullName>Elder Law Enhanced</fullName>
+        <default>false</default>
+        <label>Elder Law Enhanced</label>
+    </customValue>
+    <customValue>
+        <fullName>Enhanced Financial</fullName>
+        <default>false</default>
+        <label>Enhanced Financial</label>
+    </customValue>
+    <customValue>
+        <fullName>Enhanced Financial Plus</fullName>
+        <default>false</default>
+        <label>Enhanced Financial Plus</label>
+    </customValue>
+    <customValue>
+        <fullName>Enhanced Legal</fullName>
+        <default>false</default>
+        <label>Enhanced Legal</label>
+    </customValue>
+    <customValue>
+        <fullName>Events</fullName>
+        <default>false</default>
+        <label>Events</label>
+    </customValue>
+    <customValue>
+        <fullName>Family Planning</fullName>
+        <default>false</default>
+        <label>Family Planning</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Hardship</fullName>
+        <default>false</default>
+        <label>Financial Hardship</label>
+    </customValue>
+    <customValue>
+        <fullName>Government Basic + Plan Ahead Kit</fullName>
+        <default>false</default>
+        <label>Government Basic + Plan Ahead Kit</label>
+    </customValue>
+    <customValue>
+        <fullName>Health</fullName>
+        <default>false</default>
+        <label>Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Health Fair</fullName>
+        <default>false</default>
+        <label>Health Fair</label>
+    </customValue>
+    <customValue>
+        <fullName>Help Desk</fullName>
+        <default>false</default>
+        <label>Help Desk</label>
+    </customValue>
+    <customValue>
+        <fullName>Identity Theft Enhanced - LAP</fullName>
+        <default>false</default>
+        <label>Identity Theft Enhanced - LAP</label>
+    </customValue>
+    <customValue>
+        <fullName>LifeCare Financial</fullName>
+        <default>false</default>
+        <label>LifeCare Financial</label>
+    </customValue>
+    <customValue>
+        <fullName>LifeCare Legal</fullName>
+        <default>false</default>
+        <label>LifeCare Legal</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Requests</fullName>
+        <default>false</default>
+        <label>Marketing Requests</label>
+    </customValue>
+    <customValue>
+        <fullName>Maternity Mentoring</fullName>
+        <default>false</default>
+        <label>Maternity Mentoring</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Disability</fullName>
+        <default>false</default>
+        <label>Medical Disability</label>
+    </customValue>
+    <customValue>
+        <fullName>Military Leave</fullName>
+        <default>false</default>
+        <label>Military Leave</label>
+    </customValue>
+    <customValue>
+        <fullName>MilkShip</fullName>
+        <default>false</default>
+        <label>MilkShip</label>
+    </customValue>
+    <customValue>
+        <fullName>Mind and Body</fullName>
+        <default>false</default>
+        <label>Mind and Body</label>
+    </customValue>
+    <customValue>
+        <fullName>Mothers at Work</fullName>
+        <default>false</default>
+        <label>Mothers at Work</label>
+    </customValue>
+    <customValue>
+        <fullName>Moving and Relocation</fullName>
+        <default>false</default>
+        <label>Moving and Relocation</label>
+    </customValue>
+    <customValue>
+        <fullName>On-Site Seminars</fullName>
+        <default>false</default>
+        <label>On-Site Seminars</label>
+    </customValue>
+    <customValue>
+        <fullName>Panels</fullName>
+        <default>false</default>
+        <label>Panels</label>
+    </customValue>
+    <customValue>
+        <fullName>PCM</fullName>
+        <default>false</default>
+        <label>PCM</label>
+    </customValue>
+    <customValue>
+        <fullName>Pet Care</fullName>
+        <default>false</default>
+        <label>Pet Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Placeholder</fullName>
+        <default>false</default>
+        <label>Placeholder</label>
+    </customValue>
+    <customValue>
+        <fullName>Post Birth Event</fullName>
+        <default>false</default>
+        <label>Post Birth Event</label>
+    </customValue>
+    <customValue>
+        <fullName>Pregnancy</fullName>
+        <default>false</default>
+        <label>Pregnancy</label>
+    </customValue>
+    <customValue>
+        <fullName>Prenatal</fullName>
+        <default>false</default>
+        <label>Prenatal</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional Care Management</fullName>
+        <default>false</default>
+        <label>Professional Care Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Seminar Publications</fullName>
+        <default>false</default>
+        <label>Seminar Publications</label>
+    </customValue>
+    <customValue>
+        <fullName>Senior Care Advisor - Benefits Referral</fullName>
+        <default>false</default>
+        <label>Senior Care Advisor - Benefits Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>Special Event</fullName>
+        <default>false</default>
+        <label>Special Event</label>
+    </customValue>
+    <customValue>
+        <fullName>Special Needs</fullName>
+        <default>false</default>
+        <label>Special Needs</label>
+    </customValue>
+    <customValue>
+        <fullName>Subsidy Administration</fullName>
+        <default>false</default>
+        <label>Subsidy Administration</label>
+    </customValue>
+    <customValue>
+        <fullName>Teleconference</fullName>
+        <default>false</default>
+        <label>Teleconference</label>
+    </customValue>
+    <customValue>
+        <fullName>Travel Services</fullName>
+        <default>false</default>
+        <label>Travel Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Unfulfilled</fullName>
+        <default>false</default>
+        <label>Unfulfilled</label>
+    </customValue>
+    <customValue>
+        <fullName>Webinar</fullName>
+        <default>false</default>
+        <label>Webinar</label>
+    </customValue>
+    <masterLabel>Service ID</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

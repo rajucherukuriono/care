@@ -1,0 +1,143 @@
+{
+  "appPageId" : "2d058e16-187e-4e83-97b0-fa718366cc99",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "5a1553ac-dc59-4a4f-ab00-1614a192d489",
+  "label" : "Search",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "45d243f1-ae4b-448e-b3d6-5cb45aefc540",
+          "columns" : [ {
+            "UUID" : "51730549-4ed3-41a9-8870-503342d9757a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "8",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "37f1ea10-ff71-4ddf-abdf-b39849e9ef1d",
+            "columnKey" : "790f5",
+            "columnName" : "Column 2",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "d108f39b-3658-4d91-b881-0ee9d185083c",
+            "columnKey" : "1c3d4",
+            "columnName" : "Column 3",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "45d243f1-ae4b-448e-b3d6-5cb45aefc540",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "scopes" : [ {
+              "isPublic" : true,
+              "name" : "US_Knowledge__kav"
+            } ],
+            "searchResultFiltering" : false,
+            "searchTerm" : "{!term}",
+            "showTopResults" : true
+          },
+          "componentName" : "forceCommunity:search",
+          "id" : "aa2859e1-f155-4ae9-9d39-da276c161a59",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "51730549-4ed3-41a9-8870-503342d9757a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "37f1ea10-ff71-4ddf-abdf-b39849e9ef1d",
+        "regionLabel" : "Column 2",
+        "regionName" : "790f5",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "numberOfArticles" : 5,
+            "title" : "Suggested for you",
+            "topicId" : "{!topicId}"
+          },
+          "componentName" : "selfService:topicTrendingArticles42",
+          "id" : "88b64f43-d3cc-42d2-a155-6252d8547421",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "c:gaHelper",
+          "id" : "26d3c143-127d-4935-bdb5-0e900c63e411",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "allowPrepopulatePrechatFields" : true,
+            "avatarImgURL" : "",
+            "codeSettingsName" : "",
+            "defaultMinimizedText" : "Contact Us",
+            "displayHelpButton" : true,
+            "eswConfigurationJSON" : {
+              "baseCoreURL" : "https://caredotcom.my.salesforce.com",
+              "baseLiveAgentContentURL" : "https://c.la3-c2-ia5.salesforceliveagent.com/content",
+              "baseLiveAgentURL" : "https://d.la3-c2-ia5.salesforceliveagent.com/chat",
+              "buttonId" : "5735Y000000oLkU",
+              "deploymentId" : "5725Y000000oLke",
+              "enabledFeatures" : [ "LiveAgent" ],
+              "entryFeature" : "LiveAgent",
+              "eswConfigDevName" : "Help_Center_Chat",
+              "eswConfigId" : "04I5Y000000oLkjUAE",
+              "eswLiveAgentDevName" : "EmbeddedServiceLiveAgent_Parent04I5Y000000oLkjUAE_17784ad95fa",
+              "gslbBaseURL" : "https://service.force.com",
+              "isOfflineCasesEnabled" : "0",
+              "orgId" : "00D700000008kOO"
+            },
+            "externalScripts" : "",
+            "externalStyles" : "",
+            "fallbackRouting" : "",
+            "offlineSupportMinimizedText" : "Contact Us",
+            "offlineText" : "Contact Us",
+            "onlineLoadingText" : "Loading",
+            "prechatBackgroundImgURL" : "",
+            "smallCompanyLogoImgURL" : "",
+            "snippetSettingsFile" : "",
+            "storageDomain" : "",
+            "waitingStateBackgroundImgURL" : ""
+          },
+          "componentName" : "forceCommunity:embeddedService",
+          "id" : "68c7e2d5-74d0-4013-9071-c38ae664716d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d108f39b-3658-4d91-b881-0ee9d185083c",
+        "regionLabel" : "Column 3",
+        "regionName" : "1c3d4",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "15d246d3-f042-4b3e-9d13-1286ad602e80",
+    "regionName" : "content",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "global-search"
+}

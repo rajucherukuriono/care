@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Care_Work__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This feature is used by this Team.</description>
+    <externalId>false</externalId>
+    <label>Care@Work</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

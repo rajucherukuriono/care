@@ -1,0 +1,18 @@
+<template>
+    
+<div class="container">
+    <h1>{topicLabel}</h1>
+    <div class="list-section slds-var-m-vertical_small">
+
+        <ul>
+            <template for:each={articles} for:item="article">
+                <li key={article.Id} class="article">
+                    <c-topic-result article={article} language={language}></c-topic-result>
+                </li>
+            </template>
+        </ul>
+    </div>        
+     <c-cdcc-button if:false={hideMore} onclickfromchild={handleMoreClick} color="#213F5F">More</c-cdcc-button>
+</div>
+
+</template>

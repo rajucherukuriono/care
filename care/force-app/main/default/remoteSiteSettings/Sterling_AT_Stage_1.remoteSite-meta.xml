@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Care.com&apos;s International Server (AKA Sterling/Smithers). AT server number 1.</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://at-stg1.euw.carezen.net</url>
+</RemoteSiteSetting>

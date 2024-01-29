@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Ability to Apply</fullName>
+        <default>false</default>
+        <label>Ability to Apply</label>
+    </customValue>
+    <customValue>
+        <fullName>Account Approval</fullName>
+        <default>false</default>
+        <label>Account Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Account Navigation</fullName>
+        <default>false</default>
+        <label>Account Navigation</label>
+    </customValue>
+    <customValue>
+        <fullName>Account Settings Navigation</fullName>
+        <default>false</default>
+        <label>Account Settings Navigation</label>
+    </customValue>
+    <customValue>
+        <fullName>Account Sharing</fullName>
+        <default>false</default>
+        <label>Account Sharing</label>
+    </customValue>
+    <customValue>
+        <fullName>Account Verification</fullName>
+        <default>false</default>
+        <label>Account Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>Accuracy of Job Posting</fullName>
+        <default>false</default>
+        <label>Accuracy of Job Posting</label>
+    </customValue>
+    <customValue>
+        <fullName>Accuracy of Profile</fullName>
+        <default>false</default>
+        <label>Accuracy of Profile</label>
+    </customValue>
+    <customValue>
+        <fullName>Accuracy of Results</fullName>
+        <default>false</default>
+        <label>Accuracy of Results</label>
+    </customValue>
+    <customValue>
+        <fullName>Add a Service Profile</fullName>
+        <default>false</default>
+        <label>Add a Service Profile</label>
+    </customValue>
+    <customValue>
+        <fullName>Add-Ons</fullName>
+        <default>false</default>
+        <label>Add-Ons</label>
+    </customValue>
+    <customValue>
+        <fullName>Age</fullName>
+        <default>false</default>
+        <label>Age</label>
+    </customValue>
+    <customValue>
+        <fullName>Age of Applicant</fullName>
+        <default>false</default>
+        <label>Age of Applicant</label>
+    </customValue>
+    <customValue>
+        <fullName>Alerts</fullName>
+        <default>false</default>
+        <label>Alerts</label>
+    </customValue>
+    <customValue>
+        <fullName>Amount of Caregivers in Area</fullName>
+        <default>false</default>
+        <label>Amount of Caregivers in Area</label>
+    </customValue>
+    <customValue>
+        <fullName>Amount of Reviews/Review on Seekers</fullName>
+        <default>false</default>
+        <label>Amount of Reviews/Review on Seekers</label>
+    </customValue>
+    <customValue>
+        <fullName>Applicant Certification</fullName>
+        <default>false</default>
+        <label>Applicant Certification</label>
+    </customValue>
+    <customValue>
+        <fullName>Approval Guidelines</fullName>
+        <default>false</default>
+        <label>Approval Guidelines</label>
+    </customValue>
+    <customValue>
+        <fullName>Audio of Agent</fullName>
+        <default>false</default>
+        <label>Audio of Agent</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Jobs</fullName>
+        <default>false</default>
+        <label>Auto Jobs</label>
+    </customValue>
+    <customValue>
+        <fullName>Background Noise</fullName>
+        <default>false</default>
+        <label>Background Noise</label>
+    </customValue>
+    <customValue>
+        <fullName>Backup Care</fullName>
+        <default>false</default>
+        <label>Backup Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Basic Free Upgrade</fullName>
+        <default>false</default>
+        <label>Basic Free Upgrade</label>
+    </customValue>
+    <customValue>
+        <fullName>Basic vs. Premium</fullName>
+        <default>false</default>
+        <label>Basic vs. Premium</label>
+    </customValue>
+    <customValue>
+        <fullName>BGC on Seeker</fullName>
+        <default>false</default>
+        <label>BGC on Seeker</label>
+    </customValue>
+    <customValue>
+        <fullName>BGC Outcome</fullName>
+        <default>false</default>
+        <label>BGC Outcome</label>
+    </customValue>
+    <customValue>
+        <fullName>Bookings</fullName>
+        <default>false</default>
+        <label>Bookings</label>
+    </customValue>
+    <customValue>
+        <fullName>Brand/Reputation</fullName>
+        <default>false</default>
+        <label>Brand/Reputation</label>
+    </customValue>
+    <customValue>
+        <fullName>BUC Transfer</fullName>
+        <default>false</default>
+        <label>BUC Transfer</label>
+    </customValue>
+    <customValue>
+        <fullName>Business</fullName>
+        <default>false</default>
+        <label>Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Inquiries</fullName>
+        <default>false</default>
+        <label>Business Inquiries</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancel- Booking</fullName>
+        <default>false</default>
+        <label>Cancel- Booking</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancellation</fullName>
+        <default>false</default>
+        <label>Cancellation</label>
+    </customValue>
+    <customValue>
+        <fullName>Care in the News</fullName>
+        <default>false</default>
+        <label>Care in the News</label>
+    </customValue>
+    <customValue>
+        <fullName>CBUC</fullName>
+        <default>false</default>
+        <label>CBUC</label>
+    </customValue>
+    <customValue>
+        <fullName>Change Primary Service Profile</fullName>
+        <default>false</default>
+        <label>Change Primary Service Profile</label>
+    </customValue>
+    <customValue>
+        <fullName>Chargebacks</fullName>
+        <default>false</default>
+        <label>Chargebacks</label>
+    </customValue>
+    <customValue>
+        <fullName>Charges after Cancellation</fullName>
+        <default>false</default>
+        <label>Charges after Cancellation</label>
+    </customValue>
+    <customValue>
+        <fullName>Chat Connection</fullName>
+        <default>false</default>
+        <label>Chat Connection</label>
+    </customValue>
+    <customValue>
+        <fullName>Community</fullName>
+        <default>false</default>
+        <label>Community</label>
+    </customValue>
+    <customValue>
+        <fullName>Cost</fullName>
+        <default>false</default>
+        <label>Cost</label>
+    </customValue>
+    <customValue>
+        <fullName>Cost of Fees</fullName>
+        <default>false</default>
+        <label>Cost of Fees</label>
+    </customValue>
+    <customValue>
+        <fullName>Create- Booking</fullName>
+        <default>false</default>
+        <label>Create- Booking</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit Card Error</fullName>
+        <default>false</default>
+        <label>Credit Card Error</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit Card on File</fullName>
+        <default>false</default>
+        <label>Credit Card on File</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Service Response</fullName>
+        <default>false</default>
+        <label>Customer Service Response</label>
+    </customValue>
+    <customValue>
+        <fullName>Customization</fullName>
+        <default>false</default>
+        <label>Customization</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Deletion</fullName>
+        <default>false</default>
+        <label>DSARS Request</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Request</fullName>
+        <default>false</default>
+        <label>Data Request</label>
+    </customValue>
+    <customValue>
+        <fullName>Date of Job Posting</fullName>
+        <default>false</default>
+        <label>Date of Job Posting</label>
+    </customValue>
+    <customValue>
+        <fullName>Definition</fullName>
+        <default>false</default>
+        <label>Definition</label>
+    </customValue>
+    <customValue>
+        <fullName>Delete a Service Profile</fullName>
+        <default>false</default>
+        <label>Delete a Service Profile</label>
+    </customValue>
+    <customValue>
+        <fullName>Deleting Messages</fullName>
+        <default>false</default>
+        <label>Deleting Messages</label>
+    </customValue>
+    <customValue>
+        <fullName>Discounts</fullName>
+        <default>false</default>
+        <label>Discounts</label>
+    </customValue>
+    <customValue>
+        <fullName>Discrimination</fullName>
+        <default>false</default>
+        <label>Discrimination</label>
+    </customValue>
+    <customValue>
+        <fullName>Documents</fullName>
+        <default>false</default>
+        <label>Documents</label>
+    </customValue>
+    <customValue>
+        <fullName>Downgrade</fullName>
+        <default>false</default>
+        <label>Downgrade</label>
+    </customValue>
+    <customValue>
+        <fullName>Downgrades</fullName>
+        <default>false</default>
+        <label>Downgrades</label>
+    </customValue>
+    <customValue>
+        <fullName>Edit</fullName>
+        <default>false</default>
+        <label>Edit</label>
+    </customValue>
+    <customValue>
+        <fullName>Email/Chat/SM templates</fullName>
+        <default>false</default>
+        <label>Email/Chat/SM templates</label>
+    </customValue>
+    <customValue>
+        <fullName>E-mail Deliverability</fullName>
+        <default>false</default>
+        <label>E-mail Deliverability</label>
+    </customValue>
+    <customValue>
+        <fullName>E-mail Verification</fullName>
+        <default>false</default>
+        <label>E-mail Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>Enrollment Steps</fullName>
+        <default>false</default>
+        <label>Enrollment Steps</label>
+    </customValue>
+    <customValue>
+        <fullName>Excessive Number of Applicants</fullName>
+        <default>false</default>
+        <label>Excessive Number of Applicants</label>
+    </customValue>
+    <customValue>
+        <fullName>Excessive Number of Jobs in Area</fullName>
+        <default>false</default>
+        <label>Excessive Number of Jobs in Area</label>
+    </customValue>
+    <customValue>
+        <fullName>Experience Level</fullName>
+        <default>false</default>
+        <label>Experience Level</label>
+    </customValue>
+    <customValue>
+        <fullName>Expert Assistance</fullName>
+        <default>false</default>
+        <label>Expert Assistance</label>
+    </customValue>
+    <customValue>
+        <fullName>Extend Job</fullName>
+        <default>false</default>
+        <label>Extend Job</label>
+    </customValue>
+    <customValue>
+        <fullName>FAQ/Contact Us Experience</fullName>
+        <default>false</default>
+        <label>FAQ/Contact Us Experience</label>
+    </customValue>
+    <customValue>
+        <fullName>Favorites</fullName>
+        <default>false</default>
+        <label>Favorites</label>
+    </customValue>
+    <customValue>
+        <fullName>Filing Complaint</fullName>
+        <default>false</default>
+        <label>Filing Complaint</label>
+    </customValue>
+    <customValue>
+        <fullName>Filtering/Sorting Applicants</fullName>
+        <default>false</default>
+        <label>Filtering/Sorting Applicants</label>
+    </customValue>
+    <customValue>
+        <fullName>Filter Options</fullName>
+        <default>false</default>
+        <label>Filter Options</label>
+    </customValue>
+    <customValue>
+        <fullName>Fraud</fullName>
+        <default>false</default>
+        <label>Fraud</label>
+    </customValue>
+    <customValue>
+        <fullName>Free Trial Premium</fullName>
+        <default>false</default>
+        <label>Free Trial Premium</label>
+    </customValue>
+    <customValue>
+        <fullName>Gating</fullName>
+        <default>false</default>
+        <label>Gating</label>
+    </customValue>
+    <customValue>
+        <fullName>General Privacy Request</fullName>
+        <default>false</default>
+        <label>General Privacy Request</label>
+    </customValue>
+    <customValue>
+        <fullName>Getting Started</fullName>
+        <default>false</default>
+        <label>Getting Started</label>
+    </customValue>
+    <customValue>
+        <fullName>Guidelines and Policies</fullName>
+        <default>false</default>
+        <label>Guidelines and Policies</label>
+    </customValue>
+    <customValue>
+        <fullName>Helpfulness of Response</fullName>
+        <default>false</default>
+        <label>Helpfulness of Response</label>
+    </customValue>
+    <customValue>
+        <fullName>Hide/Customize Results View</fullName>
+        <default>false</default>
+        <label>Hide/Customize Results View</label>
+    </customValue>
+    <customValue>
+        <fullName>Hide/Show Profile</fullName>
+        <default>false</default>
+        <label>Hide/Show Profile</label>
+    </customValue>
+    <customValue>
+        <fullName>Hire Count</fullName>
+        <default>false</default>
+        <label>Hire Count</label>
+    </customValue>
+    <customValue>
+        <fullName>Hiring Guidance</fullName>
+        <default>false</default>
+        <label>Hiring Guidance</label>
+    </customValue>
+    <customValue>
+        <fullName>HomePay</fullName>
+        <default>false</default>
+        <label>HomePay</label>
+    </customValue>
+    <customValue>
+        <fullName>How it works</fullName>
+        <default>false</default>
+        <label>How it works</label>
+    </customValue>
+    <customValue>
+        <fullName>How it works- Booking</fullName>
+        <default>false</default>
+        <label>How it works- Booking</label>
+    </customValue>
+    <customValue>
+        <fullName>How to Contact</fullName>
+        <default>false</default>
+        <label>How to Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Identity Verification</fullName>
+        <default>false</default>
+        <label>Identity Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>Inclusion of BGC</fullName>
+        <default>false</default>
+        <label>Inclusion of BGC</label>
+    </customValue>
+    <customValue>
+        <fullName>Information Request</fullName>
+        <default>false</default>
+        <label>Information Request</label>
+    </customValue>
+    <customValue>
+        <fullName>Insufficient Number of Applicants</fullName>
+        <default>false</default>
+        <label>Insufficient Number of Applicants</label>
+    </customValue>
+    <customValue>
+        <fullName>Insufficient Number of Jobs in Area</fullName>
+        <default>false</default>
+        <label>Insufficient Number of Jobs in Area</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance</fullName>
+        <default>false</default>
+        <label>Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Internal</fullName>
+        <default>false</default>
+        <label>Internal</label>
+    </customValue>
+    <customValue>
+        <fullName>Internal Transfers</fullName>
+        <default>false</default>
+        <label>Internal Transfers</label>
+    </customValue>
+    <customValue>
+        <fullName>Interview Help</fullName>
+        <default>false</default>
+        <label>Interview Help</label>
+    </customValue>
+    <customValue>
+        <fullName>Invoice</fullName>
+        <default>false</default>
+        <label>Invoice</label>
+    </customValue>
+    <customValue>
+        <fullName>Job/Applicant Match</fullName>
+        <default>false</default>
+        <label>Job/Applicant Match</label>
+    </customValue>
+    <customValue>
+        <fullName>Job/Applicant Match Ability</fullName>
+        <default>false</default>
+        <label>Job/Applicant Match Ability</label>
+    </customValue>
+    <customValue>
+        <fullName>Job/Applicant Match Timeline</fullName>
+        <default>false</default>
+        <label>Job/Applicant Match Timeline</label>
+    </customValue>
+    <customValue>
+        <fullName>Job/Hire Garauntee</fullName>
+        <default>false</default>
+        <label>Job/Hire Garauntee</label>
+    </customValue>
+    <customValue>
+        <fullName>Job Auto Closing</fullName>
+        <default>false</default>
+        <label>Job Auto Closing</label>
+    </customValue>
+    <customValue>
+        <fullName>Job Requirement Match</fullName>
+        <default>false</default>
+        <label>Job Requirement Match</label>
+    </customValue>
+    <customValue>
+        <fullName>Job Wage</fullName>
+        <default>false</default>
+        <label>Job Wage</label>
+    </customValue>
+    <customValue>
+        <fullName>Knowledge/Understanding of issue</fullName>
+        <default>false</default>
+        <label>Knowledge/Understanding of issue</label>
+    </customValue>
+    <customValue>
+        <fullName>Language/Speech of Agent</fullName>
+        <default>false</default>
+        <label>Language/Speech of Agent</label>
+    </customValue>
+    <customValue>
+        <fullName>Lead/Referrals</fullName>
+        <default>false</default>
+        <label>Lead/Referrals</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal</fullName>
+        <default>false</default>
+        <label>Legal</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal/Authority</fullName>
+        <default>false</default>
+        <label>Legal/Authority</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal Information</fullName>
+        <default>false</default>
+        <label>Legal Information</label>
+    </customValue>
+    <customValue>
+        <fullName>Legitimacy</fullName>
+        <default>false</default>
+        <label>Legitimacy</label>
+    </customValue>
+    <customValue>
+        <fullName>Legitimacy of Email</fullName>
+        <default>false</default>
+        <label>Legitimacy of Email</label>
+    </customValue>
+    <customValue>
+        <fullName>Login Help</fullName>
+        <default>false</default>
+        <label>Login Help</label>
+    </customValue>
+    <customValue>
+        <fullName>Manage Subscription</fullName>
+        <default>false</default>
+        <label>Manage Subscription</label>
+    </customValue>
+    <customValue>
+        <fullName>Managing Availability</fullName>
+        <default>false</default>
+        <label>Managing Availability</label>
+    </customValue>
+    <customValue>
+        <fullName>Managing Email Preferences</fullName>
+        <default>false</default>
+        <label>Managing Email Preferences</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing</fullName>
+        <default>false</default>
+        <label>Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Report</fullName>
+        <default>false</default>
+        <label>Member Report</label>
+    </customValue>
+    <customValue>
+        <fullName>Message Deliverability</fullName>
+        <default>false</default>
+        <label>Message Deliverability</label>
+    </customValue>
+    <customValue>
+        <fullName>Message Limit</fullName>
+        <default>false</default>
+        <label>Message Limit</label>
+    </customValue>
+    <customValue>
+        <fullName>MVR</fullName>
+        <default>false</default>
+        <label>MVR</label>
+    </customValue>
+    <customValue>
+        <fullName>Nanny Share?</fullName>
+        <default>false</default>
+        <label>Nanny Share?</label>
+    </customValue>
+    <customValue>
+        <fullName>National Accounts</fullName>
+        <default>false</default>
+        <label>National Accounts</label>
+    </customValue>
+    <customValue>
+        <fullName>Navigation</fullName>
+        <default>false</default>
+        <label>Navigation</label>
+    </customValue>
+    <customValue>
+        <fullName>New Jobs/Caregives Near You</fullName>
+        <default>false</default>
+        <label>New Jobs/Caregives Near You</label>
+    </customValue>
+    <customValue>
+        <fullName>New Message Notification</fullName>
+        <default>false</default>
+        <label>New Message Notification</label>
+    </customValue>
+    <customValue>
+        <fullName>New User</fullName>
+        <default>false</default>
+        <label>New User</label>
+    </customValue>
+    <customValue>
+        <fullName>On-Demand</fullName>
+        <default>false</default>
+        <label>On-Demand</label>
+    </customValue>
+    <customValue>
+        <fullName>Online Status</fullName>
+        <default>false</default>
+        <label>Online Status</label>
+    </customValue>
+    <customValue>
+        <fullName>On-the-job Guide</fullName>
+        <default>false</default>
+        <label>On-the-job Guide</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Payment Options</fullName>
+        <default>false</default>
+        <label>Other Payment Options</label>
+    </customValue>
+    <customValue>
+        <fullName>Payment Delays</fullName>
+        <default>false</default>
+        <label>Payment Delays</label>
+    </customValue>
+    <customValue>
+        <fullName>Payments</fullName>
+        <default>false</default>
+        <label>Payments</label>
+    </customValue>
+    <customValue>
+        <fullName>Payments and Upgrades</fullName>
+        <default>false</default>
+        <label>Payments and Upgrades</label>
+    </customValue>
+    <customValue>
+        <fullName>Payments- Booking</fullName>
+        <default>false</default>
+        <label>Payments- Booking</label>
+    </customValue>
+    <customValue>
+        <fullName>Pay to Contact</fullName>
+        <default>false</default>
+        <label>Pay to Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Phone System</fullName>
+        <default>false</default>
+        <label>Phone System</label>
+    </customValue>
+    <customValue>
+        <fullName>Photo/Video</fullName>
+        <default>false</default>
+        <label>Photo/Video</label>
+    </customValue>
+    <customValue>
+        <fullName>Post a Review</fullName>
+        <default>false</default>
+        <label>Post a Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Premium Plus</fullName>
+        <default>false</default>
+        <label>Premium Plus</label>
+    </customValue>
+    <customValue>
+        <fullName>Press</fullName>
+        <default>false</default>
+        <label>Press</label>
+    </customValue>
+    <customValue>
+        <fullName>Pricing</fullName>
+        <default>false</default>
+        <label>Pricing</label>
+    </customValue>
+    <customValue>
+        <fullName>Pricing/Pricing Tests</fullName>
+        <default>false</default>
+        <label>Pricing/Pricing Tests</label>
+    </customValue>
+    <customValue>
+        <fullName>Privacy</fullName>
+        <default>false</default>
+        <label>Privacy</label>
+    </customValue>
+    <customValue>
+        <fullName>Privacy Preferences</fullName>
+        <default>false</default>
+        <label>Privacy Preferences</label>
+    </customValue>
+    <customValue>
+        <fullName>Professionalism</fullName>
+        <default>false</default>
+        <label>Professionalism</label>
+    </customValue>
+    <customValue>
+        <fullName>Profile Quality</fullName>
+        <default>false</default>
+        <label>Profile Quality</label>
+    </customValue>
+    <customValue>
+        <fullName>Public Relations</fullName>
+        <default>false</default>
+        <label>Public Relations</label>
+    </customValue>
+    <customValue>
+        <fullName>Quality of Job Posting</fullName>
+        <default>false</default>
+        <label>Quality of Job Posting</label>
+    </customValue>
+    <customValue>
+        <fullName>Quality of Response</fullName>
+        <default>false</default>
+        <label>Quality of Response</label>
+    </customValue>
+    <customValue>
+        <fullName>Quotes</fullName>
+        <default>false</default>
+        <label>Quotes</label>
+    </customValue>
+    <customValue>
+        <fullName>Reactivation</fullName>
+        <default>false</default>
+        <label>Reactivation</label>
+    </customValue>
+    <customValue>
+        <fullName>Read Receipt</fullName>
+        <default>false</default>
+        <label>Read Receipt</label>
+    </customValue>
+    <customValue>
+        <fullName>Receipt</fullName>
+        <default>false</default>
+        <label>Receipt</label>
+    </customValue>
+    <customValue>
+        <fullName>Received Complaint</fullName>
+        <default>false</default>
+        <label>Received Complaint</label>
+    </customValue>
+    <customValue>
+        <fullName>Reference Checking</fullName>
+        <default>false</default>
+        <label>Reference Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>Refund Refusal</fullName>
+        <default>false</default>
+        <label>Refund Refusal</label>
+    </customValue>
+    <customValue>
+        <fullName>Refunds</fullName>
+        <default>false</default>
+        <label>Refunds</label>
+    </customValue>
+    <customValue>
+        <fullName>Reliability</fullName>
+        <default>false</default>
+        <label>Reliability</label>
+    </customValue>
+    <customValue>
+        <fullName>Reminders</fullName>
+        <default>false</default>
+        <label>Reminders</label>
+    </customValue>
+    <customValue>
+        <fullName>Representation</fullName>
+        <default>false</default>
+        <label>Representation</label>
+    </customValue>
+    <customValue>
+        <fullName>Request Process</fullName>
+        <default>false</default>
+        <label>Request Process</label>
+    </customValue>
+    <customValue>
+        <fullName>Reschedule- Booking</fullName>
+        <default>false</default>
+        <label>Reschedule- Booking</label>
+    </customValue>
+    <customValue>
+        <fullName>Response Received</fullName>
+        <default>false</default>
+        <label>Response Received</label>
+    </customValue>
+    <customValue>
+        <fullName>Response Time</fullName>
+        <default>false</default>
+        <label>Response Time</label>
+    </customValue>
+    <customValue>
+        <fullName>Response to Review</fullName>
+        <default>false</default>
+        <label>Response to Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Responsiveness</fullName>
+        <default>false</default>
+        <label>Responsiveness</label>
+    </customValue>
+    <customValue>
+        <fullName>Results Timeline</fullName>
+        <default>false</default>
+        <label>Results Timeline</label>
+    </customValue>
+    <customValue>
+        <fullName>Review Attributes</fullName>
+        <default>false</default>
+        <label>Review Attributes</label>
+    </customValue>
+    <customValue>
+        <fullName>Review Rating</fullName>
+        <default>false</default>
+        <label>Review Rating</label>
+    </customValue>
+    <customValue>
+        <fullName>Review Removal Policy</fullName>
+        <default>false</default>
+        <label>Review Removal Policy</label>
+    </customValue>
+    <customValue>
+        <fullName>Reviews</fullName>
+        <default>false</default>
+        <label>Reviews</label>
+    </customValue>
+    <customValue>
+        <fullName>Revocation</fullName>
+        <default>false</default>
+        <label>Revocation</label>
+    </customValue>
+    <customValue>
+        <fullName>Rich Media</fullName>
+        <default>false</default>
+        <label>Rich Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Safety Center Content</fullName>
+        <default>false</default>
+        <label>Safety Center Content</label>
+    </customValue>
+    <customValue>
+        <fullName>Safety Violations</fullName>
+        <default>false</default>
+        <label>Safety Violations</label>
+    </customValue>
+    <customValue>
+        <fullName>Scheduling</fullName>
+        <default>false</default>
+        <label>Scheduling</label>
+    </customValue>
+    <customValue>
+        <fullName>Screening and Verifications</fullName>
+        <default>false</default>
+        <label>Screening and Verifications</label>
+    </customValue>
+    <customValue>
+        <fullName>Search Results/Rank</fullName>
+        <default>false</default>
+        <label>Search Results/Rank</label>
+    </customValue>
+    <customValue>
+        <fullName>Senior Care Planning</fullName>
+        <default>false</default>
+        <label>Senior Care Planning</label>
+    </customValue>
+    <customValue>
+        <fullName>Snooze</fullName>
+        <default>false</default>
+        <label>Snooze</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Media Activity</fullName>
+        <default>false</default>
+        <label>Social Media Activity</label>
+    </customValue>
+    <customValue>
+        <fullName>Sorting</fullName>
+        <default>false</default>
+        <label>Sorting</label>
+    </customValue>
+    <customValue>
+        <fullName>Sort Options</fullName>
+        <default>false</default>
+        <label>Sort Options</label>
+    </customValue>
+    <customValue>
+        <fullName>Sound/Connection</fullName>
+        <default>false</default>
+        <label>Sound/Connection</label>
+    </customValue>
+    <customValue>
+        <fullName>Spam</fullName>
+        <default>false</default>
+        <label>Spam</label>
+    </customValue>
+    <customValue>
+        <fullName>SSN Verification</fullName>
+        <default>false</default>
+        <label>SSN Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>Sufficiency of Response</fullName>
+        <default>false</default>
+        <label>Sufficiency of Response</label>
+    </customValue>
+    <customValue>
+        <fullName>Sufficiency of Screening</fullName>
+        <default>false</default>
+        <label>Sufficiency of Screening</label>
+    </customValue>
+    <customValue>
+        <fullName>Talking points</fullName>
+        <default>false</default>
+        <label>Talking points</label>
+    </customValue>
+    <customValue>
+        <fullName>Tech Team Transfer</fullName>
+        <default>false</default>
+        <label>Tech Team Transfer</label>
+    </customValue>
+    <customValue>
+        <fullName>Terms of Use</fullName>
+        <default>false</default>
+        <label>Terms of Use</label>
+    </customValue>
+    <customValue>
+        <fullName>Testimonial</fullName>
+        <default>false</default>
+        <label>Testimonial</label>
+    </customValue>
+    <customValue>
+        <fullName>Text Alerts</fullName>
+        <default>false</default>
+        <label>Text Alerts</label>
+    </customValue>
+    <customValue>
+        <fullName>Time Tracking</fullName>
+        <default>false</default>
+        <label>Time Tracking</label>
+    </customValue>
+    <customValue>
+        <fullName>Timing</fullName>
+        <default>false</default>
+        <label>Timing</label>
+    </customValue>
+    <customValue>
+        <fullName>Tinder Cards</fullName>
+        <default>false</default>
+        <label>Tinder Cards</label>
+    </customValue>
+    <customValue>
+        <fullName>Transparency</fullName>
+        <default>false</default>
+        <label>Transparency</label>
+    </customValue>
+    <customValue>
+        <fullName>Troubleshooting</fullName>
+        <default>false</default>
+        <label>Troubleshooting</label>
+    </customValue>
+    <customValue>
+        <fullName>Unsubscribe</fullName>
+        <default>false</default>
+        <label>Unsubscribe</label>
+    </customValue>
+    <customValue>
+        <fullName>Unsubscribe Process</fullName>
+        <default>false</default>
+        <label>Unsubscribe Process</label>
+    </customValue>
+    <customValue>
+        <fullName>Update- Booking</fullName>
+        <default>false</default>
+        <label>Update- Booking</label>
+    </customValue>
+    <customValue>
+        <fullName>Upgrade</fullName>
+        <default>false</default>
+        <label>Upgrade</label>
+    </customValue>
+    <customValue>
+        <fullName>Upgrade Marketing</fullName>
+        <default>false</default>
+        <label>Upgrade Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Value of Service</fullName>
+        <default>false</default>
+        <label>Value of Service</label>
+    </customValue>
+    <customValue>
+        <fullName>Verification Outcome</fullName>
+        <default>false</default>
+        <label>Verification Outcome</label>
+    </customValue>
+    <customValue>
+        <fullName>Volume of Emails</fullName>
+        <default>false</default>
+        <label>Volume of Emails</label>
+    </customValue>
+    <customValue>
+        <fullName>Wait Times</fullName>
+        <default>false</default>
+        <label>Wait Times</label>
+    </customValue>
+    <customValue>
+        <fullName>Why Closed</fullName>
+        <default>false</default>
+        <label>Why Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Why Someone Else Closed</fullName>
+        <default>false</default>
+        <label>Why Someone Else Closed</label>
+    </customValue>
+    <masterLabel>Contact Secondary Reason</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

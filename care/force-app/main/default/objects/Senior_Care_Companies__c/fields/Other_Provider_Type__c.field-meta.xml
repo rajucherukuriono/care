@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Provider_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Other Provider Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adult Day Program</fullName>
+                <default>false</default>
+                <label>Adult Day Program</label>
+            </value>
+            <value>
+                <fullName>Aging Life Care Manager</fullName>
+                <default>false</default>
+                <label>Aging Life Care Manager</label>
+            </value>
+            <value>
+                <fullName>Assisted Living Community</fullName>
+                <default>false</default>
+                <label>Assisted Living Community</label>
+            </value>
+            <value>
+                <fullName>Cont. Care Retirement Community</fullName>
+                <default>false</default>
+                <label>Cont. Care Retirement Community</label>
+            </value>
+            <value>
+                <fullName>Durable Medical Supplies</fullName>
+                <default>false</default>
+                <label>Durable Medical Supplies</label>
+            </value>
+            <value>
+                <fullName>Elder Law Attorney</fullName>
+                <default>false</default>
+                <label>Elder Law Attorney</label>
+            </value>
+            <value>
+                <fullName>Emergency Response System</fullName>
+                <default>false</default>
+                <label>Emergency Response System</label>
+            </value>
+            <value>
+                <fullName>Home Health Care</fullName>
+                <default>false</default>
+                <label>Home Health Care</label>
+            </value>
+            <value>
+                <fullName>Hospice</fullName>
+                <default>false</default>
+                <label>Hospice</label>
+            </value>
+            <value>
+                <fullName>Independent Living</fullName>
+                <default>false</default>
+                <label>Independent Living</label>
+            </value>
+            <value>
+                <fullName>In-patient Rehab</fullName>
+                <default>false</default>
+                <label>In-patient Rehab</label>
+            </value>
+            <value>
+                <fullName>Meals on Wheels/Food Service</fullName>
+                <default>false</default>
+                <label>Meals on Wheels/Food Service</label>
+            </value>
+            <value>
+                <fullName>Non-Medical Home Care</fullName>
+                <default>false</default>
+                <label>Non-Medical Home Care</label>
+            </value>
+            <value>
+                <fullName>Nursing Home</fullName>
+                <default>false</default>
+                <label>Nursing Home</label>
+            </value>
+            <value>
+                <fullName>Senior Move Manager</fullName>
+                <default>false</default>
+                <label>Senior Move Manager</label>
+            </value>
+            <value>
+                <fullName>Support Groups</fullName>
+                <default>false</default>
+                <label>Support Groups</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Member Care - EN Tier 1</name>
+    <queueMembers>
+        <users>
+            <user>vivian.lowery@care.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Email</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

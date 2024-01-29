@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timeframe_Needed_to_Resolve_this__c</fullName>
+    <externalId>false</externalId>
+    <label>Timeframe Needed to Resolve this?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

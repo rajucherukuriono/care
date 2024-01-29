@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>United States</label>
+    <protected>false</protected>
+    <values>
+        <field>Apply_to_Jobs__c</field>
+        <value xsi:type="xsd:string">https://www.care.com/enroll-care-seeker-p1042-q111085935.html</value>
+    </values>
+    <values>
+        <field>Case_Origin__c</field>
+        <value xsi:type="xsd:string">Email</value>
+    </values>
+    <values>
+        <field>Country_Code__c</field>
+        <value xsi:type="xsd:string">us</value>
+    </values>
+    <values>
+        <field>Http_Request_Time_Out__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Join_Now__c</field>
+        <value xsi:type="xsd:string">https://www.care.com/app/vhp/get-started</value>
+    </values>
+    <values>
+        <field>Language__c</field>
+        <value xsi:type="xsd:string">English</value>
+    </values>
+    <values>
+        <field>Locale__c</field>
+        <value xsi:type="xsd:string">en_US</value>
+    </values>
+    <values>
+        <field>Login__c</field>
+        <value xsi:type="xsd:string">https://www.care.com/api/id-oidc-proxy/care/login</value>
+    </values>
+    <values>
+        <field>Password__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Production_URL_Root__c</field>
+        <value xsi:type="xsd:string">www.care.com</value>
+    </values>
+    <values>
+        <field>QA_Email__c</field>
+        <value xsi:type="xsd:string">surya.saride@care.com</value>
+    </values>
+    <values>
+        <field>Staging_URL_Root__c</field>
+        <value xsi:type="xsd:string">SEE_NAMED_CREDENTIALS</value>
+    </values>
+    <values>
+        <field>Upgrade__c</field>
+        <value xsi:type="xsd:string">https://www.care.com/seeker/upgradeMembershipPlanActual.do</value>
+    </values>
+    <values>
+        <field>User_Name__c</field>
+        <value xsi:type="xsd:string">SEE_NAMED_CREDENTIALS</value>
+    </values>
+</CustomMetadata>

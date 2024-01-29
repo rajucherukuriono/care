@@ -1,0 +1,46 @@
+<template>
+    <div class="container">
+            <div class="text-section headline">
+                <p>{prompt}</p>
+            </div>
+            <div class="button-section slds-m-vertical_small">
+                <button class={yesButtonClass} onclick={onYesClick} disabled={hasVoted}>
+                    <label>{yesLabel}</label>
+                </button>
+                <button class={noButtonClass} onclick={onNoClick} disabled={hasVoted}>
+                    <label>{noLabel}</label>
+                </button>
+            </div>
+            <template if:true={showYesResponse}>
+                <div class="text-section">
+                    <p>{yesResponse}</p>
+                </div>
+            </template>
+        <template if:true={showArticles}>
+            <template if:true={showSpinner}>
+                <lightning-spinner variant="brand" size="small"></lightning-spinner>
+            </template>
+            <template if:true={hasArticles}>
+                <div class="text-section">
+                    <p>{articlesHeader}:</p>
+                </div>
+                <div class="list-section slds-var-m-vertical_small">
+                    <ul >
+                        <template for:each={topArticles} for:item="article">
+                            <li key={article.id} class="article"><a href="javascript:void(0);" data-urlname={article.urlName} onclick={handleArticleClick} >{article.title}</a></li>
+                        </template>
+                    </ul>
+                </div>
+            </template>
+            <div class="help-section slds-var-p-horizontal_small">
+                <div>
+                    <lightning-icon class="info-icon" icon-name="utility:info" alternative-text="Info" title="Info"></lightning-icon>
+                </div>
+                <div class="help-section-text">
+                    <h5>{moreHelpHeading}</h5>
+                    <p><lightning-formatted-rich-text value={moreHelpPrompt}></lightning-formatted-rich-text></p>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

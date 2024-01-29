@@ -1,0 +1,167 @@
+<aura:component controller="CCCPricingController" extends="c:CCCModuleBase">
+
+    <!-- Aura Attributes - Public -->
+    <aura:attribute name="saveClicked" type="Boolean" default="false" access="public" />
+    <aura:attribute name="saveDisabled" type="Boolean" default="false" access="public" />
+    <aura:attribute name="locationRecord" type="Map" access="public" />
+    <aura:attribute name="customPricingIndividualMinAmount" type="Decimal" access="public" />
+
+    <!-- Aura Attributes - Private -->
+    <aura:attribute name="customAmountErrors" type="String" default="" access="private" />
+
+    <!-- Popover Attributes -->
+    <aura:attribute name="timeoutReference" type="Integer" access="private" />
+    <aura:attribute name="popoverPromiseCustomPricing" type="Object" access="public" />
+
+    <!-- This access needs to be public for the hide callback to work -->
+    <aura:attribute name="popoverReferenceCustomPricing" type="String"
+        default="{!v.locationRecord.id+'_CustomPricing'}" access="public" />
+
+    <aura:attribute name="popoverBodyCustomPricing" type="String"
+        default="{!'Custom pricing is only available for values of $'+v.customPricingIndividualMinAmount+' or more.'}"
+        access="private" />
+
+    <table
+        class="slds-table slds-table_cell-buffer slds-table_bordered slds-border_right slds-border_left slds-m-top_medium">
+        <thead>
+            <tr class="slds-line-height_reset">
+
+                <!-- Choose Radial -->
+                <th class="slds-text-title_caps slds-text-align_right" scope="col" style="width: 3.25rem;">
+                    <div class="slds-truncate slds-p-around_x-small slds-assistive-text" id="column-group-header"
+                        title="Choose a row to select">Choose
+                        a row to select</div>
+                </th>
+
+                <!-- Ad Budget -->
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate slds-p-around_x-small" title="Ad Budget">Ad Budget</div>
+                </th>
+
+                <!-- Points -->
+                <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                    <div class="slds-truncate slds-p-around_x-small" title="Points">Points</div>
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <aura:iteration items="{!v.locationRecord.pricingTierRecords}" var="pricingTierRecord">
+                <tr class="slds-hint-parent">
+
+                    <!-- Table Column - Radial -->
+                    <th>
+                        <aura:if isTrue="{! notequals(pricingTierRecord.tier,'Custom')}">
+
+                            <lightning:input type="radio" name="{!v.locationRecord.id}"
+                                disabled="{!equals(v.allowEdit,false)}"
+                                value="{!pricingTierRecord.tier}"
+                                checked="{! equals(v.locationRecord.pricingTier,
+                                pricingTierRecord.tier)}"
+                                onchange="{!c.onTierChange}" />
+
+                        </aura:if>
+
+                        <aura:if isTrue="{! equals(pricingTierRecord.tier,'Custom')}">
+
+                            <lightning:input aura:id="custom_radio" type="radio"
+                                name="{!v.locationRecord.id}"
+                                disabled="{!equals(v.allowEdit,false)}"
+                                value="{!pricingTierRecord.tier}"
+                                checked="{! equals(v.locationRecord.pricingTier,
+                                pricingTierRecord.tier)}"
+                                onchange="{!c.onTierChange}" />
+
+                        </aura:if>
+                    </th>
+
+                    <!-- Table Column - Ad Budget -->
+                    <th data-label="Ad Budget" scope="row">
+                        <div class="slds-truncate slds-p-around_x-small slds-text-align_left">
+
+                            <!-- A static tier is selected, show the static tier's amount -->
+                            <aura:if isTrue="{! notequals(pricingTierRecord.tier,'Custom')}">
+                                <lightning:formattedNumber value="{!pricingTierRecord.amount}" style="currency"
+                                    currencyCode="USD" />
+                            </aura:if>
+
+                            <!-- Show a Custom Amount input Field -->
+                            <aura:if isTrue="{! equals(pricingTierRecord.tier,'Custom')}">
+
+                                <div class="slds-grid slds-grid_vertical-align-center">
+                                    <div class="slds-col">
+                                        <lightning:input variant="label-hidden" aura:id="custom_input" type="number"
+                                            name="{!pricingTierRecord.amount}" label="Custom Ad Budget"
+                                            value="{!pricingTierRecord.amount}"
+                                            disabled="{!
+                                                notequals(v.locationRecord.pricingTier,'Custom')}"
+                                            formatter="currency" step="0.01" onchange="{!c.onCustomAmountChange}" />
+                                    </div>
+
+                                    <div class="slds-col slds-grow-none">
+                                        <div class="{!'slds-m-left_small '+ v.popoverReferenceCustomPricing}"
+                                            onmouseover="{!c.onShowCustomPricingPopover}">
+                                            <lightning:icon iconName="utility:help"
+                                                alternativeText="{!v.popoverBodyCustomPricing}" size="x-small" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Custom Amount Errors -->
+                                <aura:if isTrue="{! !empty(v.customAmountErrors) }">
+                                    <ul>
+                                        <aura:iteration items="{!v.customAmountErrors}" var="customError">
+                                            <li class="slds-text-color_error">{!customError}</li>
+                                        </aura:iteration>
+                                    </ul>
+                                </aura:if>
+
+                            </aura:if>
+
+                        </div>
+
+                    </th>
+
+                    <!-- Table Column - Points -->
+                    <td data-label="Points">
+
+                        <!-- Not Custom Tier -->
+                        <aura:if isTrue="{! notequals(pricingTierRecord.tier,'Custom')}">
+
+                            <div class="slds-truncate slds-p-around_x-small slds-text-align_right"
+                                title="{!pricingTierRecord.bonusPoints}">
+                                <lightning:formattedNumber value="{!pricingTierRecord.bonusPoints}"
+                                    maximumFractionDigits="2" />
+                            </div>
+
+                        </aura:if>
+
+                        <!-- Custom Tier -->
+                        <aura:if isTrue="{! equals(pricingTierRecord.tier,'Custom')}">
+
+                            <div class="slds-truncate slds-p-around_x-small slds-text-align_right"
+                                title="{!pricingTierRecord.bonusPoints}">
+                                <lightning:formattedNumber value="{!pricingTierRecord.bonusPoints}"
+                                    maximumFractionDigits="2" />
+                            </div>
+
+                        </aura:if>
+                    </td>
+
+                </tr>
+            </aura:iteration>
+
+        </tbody>
+    </table>
+
+    <!-- Button Management -->
+    <div class="slds-clearfix slds-m-top_large">
+        <div class="slds-float_right">
+            <lightning:button label="Cancel" onclick="{!c.handleCancelClicked}" class="slds-m-horizontal_xx-small" />
+            <lightning:button variant="brand" label="Save Pricing" onclick="{!c.handleSaveClicked}"
+                class="slds-m-horizontal_xx-small" />
+        </div>
+    </div>
+
+</aura:component>

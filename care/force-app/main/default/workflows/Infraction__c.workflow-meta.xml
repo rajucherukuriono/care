@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_Violation_Record_Name</fullName>
+        <description>Update Violation Record Name</description>
+        <field>Name</field>
+        <formula>&apos;VIOL-&apos;+if(YEAR(DateValue(CreatedDate))&lt;10,&apos;0&apos;,&apos;&apos;)+Text(YEAR(DateValue(CreatedDate)))+if(MONTH(DateValue(CreatedDate))&lt;10,&apos;0&apos;,&apos;&apos;)+Text(MONTH(DateValue(CreatedDate)))+if(DAY(DateValue(CreatedDate))&lt;10,&apos;0&apos;,&apos;&apos;)+Text(DAY(DateValue(CreatedDate)))+&apos;-&apos;+Text( if(BUC_Center_Name__r.Violation_Record_Count__c==null,1,BUC_Center_Name__r.Violation_Record_Count__c))</formula>
+        <name>Update Violation Record Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Violation record name and count update</fullName>
+        <actions>
+            <name>Update_Violation_Record_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>This rule updates the Violation record count on account and updates Violation record name in the format VIOL-YYYYMMDD-1</description>
+        <formula>true</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

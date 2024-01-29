@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <formulas>
+        <description>Creates a formatted version of the phone field. It removes common characters in a phone number and returns the rightmost 10 characters.</description>
+        <name>formatPhoneFormula</name>
+        <dataType>String</dataType>
+        <expression>RIGHT(
+TRIM(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE(
+SUBSTITUTE({!$Record.Phone},
+&apos;-&apos;,NULL),
+&apos;_&apos;,NULL),
+&apos;(&apos;,NULL),
+&apos;)&apos;,NULL),
+&apos;.&apos;,NULL),
+&apos; &apos;,NULL),
+&apos;+&apos;,NULL)
+)
+, 10)</expression>
+    </formulas>
+    <interviewLabel>Marketing Solutions Account Format Phone {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Marketing Solutions Account Format Phone</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Updates the MS_Formatted_Phone field with a formatted version of the Phone field value</description>
+        <name>Update_MS_Formatted_Phone_field</name>
+        <label>Update MS_Formatted_Phone field</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>MS_Formatted_Phone__c</field>
+            <value>
+                <elementReference>formatPhoneFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_MS_Formatted_Phone_field</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0125Y0000023W3uQAE</stringValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

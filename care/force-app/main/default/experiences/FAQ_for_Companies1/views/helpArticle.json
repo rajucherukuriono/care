@@ -1,0 +1,169 @@
+{
+  "appPageId" : "372b8d47-e2cd-405f-817c-9731a6b8defe",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "fc21cfd4-9fbf-43ad-85c8-291f6598081d",
+  "label" : "Help Article",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "0a80169d-5028-4e6c-9322-12b702179f79",
+          "columns" : [ {
+            "UUID" : "2f9277ec-dc2e-4e0c-8f13-5fb9a4cb054c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "8",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5f89bfff-f04d-4b20-bf25-f4ba7dad3420",
+            "columnKey" : "6273c",
+            "columnName" : "Column 2",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "decdb5dd-3b16-4100-9ae6-a7cc6e620fbd",
+            "columnKey" : "11fcc",
+            "columnName" : "Column 3",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0a80169d-5028-4e6c-9322-12b702179f79",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "c:knowledgeArticle",
+          "id" : "34ee52ff-9696-4d23-8533-6569a563f8e4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "articlesHeader" : "These articles might help",
+            "moreHelpHeading" : "Still need more help?",
+            "moreHelpPrompt" : "Select <strong>Contact Us</strong> to connect with our Member Care team.",
+            "noLabel" : "No",
+            "numArticles" : 5,
+            "prompt" : "Did you get the help you needed?",
+            "recordId" : "{!recordId}",
+            "yesLabel" : "Yes",
+            "yesResponse" : "Great! Thanks for letting us know."
+          },
+          "componentName" : "c:cdccCaseDeflection",
+          "id" : "cf0b58fc-ac73-47bc-9311-478571d27c2b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2f9277ec-dc2e-4e0c-8f13-5fb9a4cb054c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "5f89bfff-f04d-4b20-bf25-f4ba7dad3420",
+        "regionLabel" : "Column 2",
+        "regionName" : "6273c",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "numberOfItems" : 5,
+            "showViewCounts" : false,
+            "title" : "Related Articles"
+          },
+          "componentName" : "selfService:similarArticles42",
+          "id" : "9fc785f0-681b-458d-b2fa-9780074fa2d0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "allowPrepopulatePrechatFields" : true,
+            "avatarImgURL" : "",
+            "codeSettingsName" : "",
+            "defaultMinimizedText" : "Contact Us",
+            "displayHelpButton" : true,
+            "eswConfigurationJSON" : {
+              "baseCoreURL" : "https://caredotcom.my.salesforce.com",
+              "baseLiveAgentContentURL" : "https://c.la3-c2-ia5.salesforceliveagent.com/content",
+              "baseLiveAgentURL" : "https://d.la3-c2-ia5.salesforceliveagent.com/chat",
+              "buttonId" : "5735Y000000oLkU",
+              "deploymentId" : "5725Y000000oLke",
+              "enabledFeatures" : [ "LiveAgent" ],
+              "entryFeature" : "LiveAgent",
+              "eswConfigDevName" : "Help_Center_Chat",
+              "eswConfigId" : "04I5Y000000oLkjUAE",
+              "eswLiveAgentDevName" : "EmbeddedServiceLiveAgent_Parent04I5Y000000oLkjUAE_17784ad95fa",
+              "gslbBaseURL" : "https://service.force.com",
+              "isOfflineCasesEnabled" : "0",
+              "orgId" : "00D700000008kOO"
+            },
+            "externalScripts" : "",
+            "externalStyles" : "",
+            "fallbackRouting" : "",
+            "offlineSupportMinimizedText" : "Contact Us",
+            "offlineText" : "Contact Us",
+            "onlineLoadingText" : "Loading",
+            "prechatBackgroundImgURL" : "",
+            "smallCompanyLogoImgURL" : "",
+            "snippetSettingsFile" : "ChatSnippetSettingsFile",
+            "storageDomain" : "",
+            "waitingStateBackgroundImgURL" : ""
+          },
+          "componentName" : "forceCommunity:embeddedService",
+          "id" : "84d11e4e-9cef-4a52-a5a4-488aecb55b5d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "c:gaHelper",
+          "id" : "ac4366c8-da32-4660-b559-259b3243808f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "decdb5dd-3b16-4100-9ae6-a7cc6e620fbd",
+        "regionLabel" : "Column 3",
+        "regionName" : "11fcc",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a812d873-080c-4e70-8696-bd7887e80ad3",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "{!Record.Summary}",
+        "title" : "{!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "215f419f-f948-42a3-8b68-d5768f7d307b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fa1e1232-d265-4739-a008-e7f156d7142a",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "vMXeg4hDt6z9cF7oOAdkF68ZePR0PF",
+  "type" : "view",
+  "viewType" : "article"
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meals_and_Snacks__c</fullName>
+    <externalId>false</externalId>
+    <label>Meals and Snacks</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Continental breakast</fullName>
+                <default>false</default>
+                <label>Continental breakast</label>
+            </value>
+            <value>
+                <fullName>Hot breakfast</fullName>
+                <default>false</default>
+                <label>Hot breakfast</label>
+            </value>
+            <value>
+                <fullName>Morning Snack</fullName>
+                <default>false</default>
+                <label>Morning Snack</label>
+            </value>
+            <value>
+                <fullName>Hot Lunch</fullName>
+                <default>false</default>
+                <label>Hot Lunch</label>
+            </value>
+            <value>
+                <fullName>Afternoon Snack</fullName>
+                <default>false</default>
+                <label>Afternoon Snack</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Assign_Case_to_PBC_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Q_Premier_Background_Checks</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Assign Case to PBC Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Owner_to_Q_Mobile_Help</fullName>
+        <description>Assigns a case to the Q:Mobile Help queue.  This is being used to reopen cases when users send an email in regards to a case that has been auto-closed.  But it can be used pretty generically.</description>
+        <field>OwnerId</field>
+        <lookupValue>Q_Mobile_Help</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Set Case Owner to Q: Mobile Help</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Status_to_New</fullName>
+        <description>A rule to reopen cases based on email activity.</description>
+        <field>Status</field>
+        <literalValue>New</literalValue>
+        <name>Set Case Status to New</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <rules>
+        <fullName>First Response Email Sent Date</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Standard,International Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>EmailMessage.Incoming</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.First_Response_Email_Sent_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>Populates the First Response Email Sent Date on the Case for the first outgoing email on Standard and International Email record types.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Incoming Email Associated with Auto-Closed Mobile Help Case</fullName>
+        <actions>
+            <name>Set_Case_Owner_to_Q_Mobile_Help</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Case_Status_to_New</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>We use salesforce to send autoreplies when users send emails to &quot;emailsupport@care.com&quot; and then auto-close those cases.  However, if users reply to the auto-response, then we need to re-open the case and put it on the Q: Mobile Help queue.</description>
+        <formula>AND(Parent.RecordType.Name=&apos;Mobile Help&apos;, TEXT(Parent.Status)=&apos;Auto-Closed&apos;, TEXT(Parent.Origin)=&apos;Email - Auto Response&apos;, ToAddress=&apos;Email - Auto Response&apos;, ($Setup.Override_Validation_Rules__c.Override_Case_Workflow_Rules__c = FALSE) )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Premier Background Check Email</fullName>
+        <actions>
+            <name>Assign_Case_to_PBC_Queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Reassign the PBC case to the queue if a new email arrives from PFCResults@care.com and the case is not currently in the queue.</description>
+        <formula>AND(OR(ToAddress=&apos;PFCResults@care.com&apos;,ToAddress=&apos;pfcresults@l1rbeibtc0924k4pjbg0zr5ggb38nk934myjhachlv74u3sc5.7-8kooeay.na5.case.salesforce.com&apos;), Parent.RecordType.Name=&apos;Premier Background Check&apos;, Parent.Owner:Queue.QueueName = &apos;Q: Premier Background Checks&apos;, ($Setup.Override_Validation_Rules__c.Override_Task_Workflow_Rules__c = FALSE))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Universal_Member_Id_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (NOT(ISBLANK(Case__r.Universal_Member_Id_Formula__c)),Case__r.Universal_Member_Id_Formula__c,
+Case__r.Web_Member_Id__c)</formula>
+    <inlineHelpText>Formula to determine the Universal Member Id</inlineHelpText>
+    <label>Universal Member Id (Formula)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

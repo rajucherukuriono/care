@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Make_default_user_required_field</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK( Default_User__c )</errorConditionFormula>
+    <errorMessage>Please fill a default user for Round Robin</errorMessage>
+</ValidationRule>

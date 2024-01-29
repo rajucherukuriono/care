@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Users assigned this permission set are able to use the Care.com Sterling App to connect to Salesforce.  Designed to be used by the Sterling User.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Care.com Sterling App 2</label>
+    <license>Salesforce</license>
+</PermissionSet>

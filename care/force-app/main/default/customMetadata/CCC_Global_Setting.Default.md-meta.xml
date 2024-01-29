@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Default</label>
+    <protected>false</protected>
+    <values>
+        <field>Active_Agreements_Nav_To_Opportunity__c</field>
+        <value xsi:type="xsd:string">System Administrator,Contract Administrator</value>
+    </values>
+    <values>
+        <field>Admin_Additional_Location_Platform_Fee__c</field>
+        <value xsi:type="xsd:double">50.0</value>
+    </values>
+    <values>
+        <field>Admin_Initial_Platform_Fee__c</field>
+        <value xsi:type="xsd:double">200.0</value>
+    </values>
+    <values>
+        <field>CS_Record_Types__c</field>
+        <value xsi:type="xsd:string">Client_Success</value>
+    </values>
+    <values>
+        <field>Cancel_Agreement_Profiles__c</field>
+        <value xsi:type="xsd:string">System Administrator,View: Ops: Galore</value>
+    </values>
+    <values>
+        <field>Custom_Pricing_Individual_Minimum_Amount__c</field>
+        <value xsi:type="xsd:double">800.0</value>
+    </values>
+    <values>
+        <field>Default_Monthly_Web_Ad_Pricing__c</field>
+        <value xsi:type="xsd:double">300.0</value>
+    </values>
+    <values>
+        <field>Display_Location_Specific_Contact_Info__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Earliest_Web_Renewal_Months__c</field>
+        <value xsi:type="xsd:double">2.0</value>
+    </values>
+    <values>
+        <field>Enable_Additional_Services__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Estimated_Termination_Fee_Percentage__c</field>
+        <value xsi:type="xsd:double">0.35</value>
+    </values>
+    <values>
+        <field>Galore_API_Key__c</field>
+        <value xsi:type="xsd:string">ZvahTWJfDjAQG9depVN5S1NU</value>
+    </values>
+    <values>
+        <field>Min_Months_for_Remaining_Supersede__c</field>
+        <value xsi:type="xsd:double">3.0</value>
+    </values>
+    <values>
+        <field>Min_Tuition_Discount_Dollar__c</field>
+        <value xsi:type="xsd:double">500.0</value>
+    </values>
+    <values>
+        <field>Min_Tuition_Discount_Percent__c</field>
+        <value xsi:type="xsd:double">5.0</value>
+    </values>
+    <values>
+        <field>Points_Web_Ad_Point_Ratio__c</field>
+        <value xsi:type="xsd:double">0.01</value>
+    </values>
+    <values>
+        <field>Points_Web_Ad_Pricing_Tier_Bonus_Thresh__c</field>
+        <value xsi:type="xsd:double">5400.0</value>
+    </values>
+    <values>
+        <field>Points_Web_Ad_Yearly_Bonus__c</field>
+        <value xsi:type="xsd:double">10.0</value>
+    </values>
+    <values>
+        <field>SO_Record_Types__c</field>
+        <value xsi:type="xsd:string">Sales_Origination</value>
+    </values>
+    <values>
+        <field>Tuition_Discount_Bonus_Point_Multiplier__c</field>
+        <value xsi:type="xsd:double">2.0</value>
+    </values>
+    <values>
+        <field>Valid_Stages_for_Modifying_Agreement__c</field>
+        <value xsi:type="xsd:string">Prospecting,In Progress</value>
+    </values>
+    <values>
+        <field>Valid_Stages_for_Publish__c</field>
+        <value xsi:type="xsd:string">Prospecting,In Progress,Contract Sent</value>
+    </values>
+    <values>
+        <field>Valid_Stages_for_Void__c</field>
+        <value xsi:type="xsd:string">Contract Sent,Contract Under Review,Contract Signed-Payment Failure,Contract Signed-License Failure</value>
+    </values>
+    <values>
+        <field>Waive_Platform_Fee_Profiles__c</field>
+        <value xsi:type="xsd:string">System Administrator,Sales Origination Executive, Sales Origination Manager</value>
+    </values>
+    <values>
+        <field>Web_Ad_Start_Date_Max__c</field>
+        <value xsi:type="xsd:double">14.0</value>
+    </values>
+    <values>
+        <field>Webhook_API_Key__c</field>
+        <value xsi:type="xsd:string">qhf9J0kXgGQ4E2ABjHueNyYbHFNQfG</value>
+    </values>
+</CustomMetadata>

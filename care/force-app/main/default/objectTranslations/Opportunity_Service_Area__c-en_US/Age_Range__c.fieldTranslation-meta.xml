@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Age_Range__c</name>
+    <picklistValues>
+        <masterLabel>0-1 (infant)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1-2 (toddler)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3-4 (preschool)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5+ (school age)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

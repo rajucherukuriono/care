@@ -1,0 +1,20 @@
+h1{ 
+    font-size: 120%;
+}
+
+.PhoneDetails h2{ 
+    font-size: 110%;
+}
+
+.wasThisHelpfulWrapper, .submitButtonWrapper, .welcomeWrapper{
+    width: 100%; text-align:center; 
+}
+
+.wasThisHelpful, .submitButton, .welcome{
+    display:inline-block;
+}
+
+.hidden{
+    display: none;
+}
+.disclaimer-text{font-size:90%;}

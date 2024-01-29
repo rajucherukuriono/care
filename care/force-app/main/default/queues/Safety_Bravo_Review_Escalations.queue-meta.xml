@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Safety - Bravo Review Escalations</name>
+    <queueMembers>
+        <users>
+            <user>abby.denshaw@care.com</user>
+            <user>allison.decoff@care.com</user>
+            <user>amy.corliss@care.com</user>
+            <user>bethany.elliott@care.com</user>
+            <user>corin.mitchell@care.com</user>
+            <user>nicole.sheehan@care.com</user>
+            <user>soshaughnessy@care.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

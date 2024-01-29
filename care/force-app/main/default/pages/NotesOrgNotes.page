@@ -1,0 +1,5 @@
+<apex:page controller="OrgNotesController" lightningstylesheets="true">
+       <apex:PageBlock title="Notes for {!label}">
+              <apex:outputText value="{!message}" style="font-size:1.2em; color:red; font-weight:bold;" ></apex:outputText><br />
+        </apex:PageBlock>  
+</apex:page>

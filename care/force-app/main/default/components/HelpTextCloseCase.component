@@ -1,0 +1,9 @@
+<apex:component selfClosing="false">
+	<apex:attribute name="text" description="Help Text." type="String" required="true"/>
+	<div class="mouseOverInfoOuter" id="searchInvoiceHelper" onfocus="addMouseOver(this)" onmouseover="addMouseOver(this)" tabindex="0">
+	    <apex:image value="/s.gif" styleClass="helpOrb" style="vertical-align: top;"/>
+	    <div class="mouseOverInfo" id="searchInvoiceHelperText" style="display: block; opacity: -0.19999999999999996; text-align: left;">
+	        <div class="body">{!text}</div>
+	    </div>
+	</div>
+</apex:component>

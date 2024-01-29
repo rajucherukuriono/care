@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Availability_Type__c</fullName>
+    <description>Availability Type as stated in the Release Notes or Source</description>
+    <externalId>false</externalId>
+    <label>Availability Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Enabled for users</fullName>
+                <default>true</default>
+                <label>Enabled for users</label>
+            </value>
+            <value>
+                <fullName>Enabled for administrators/​developers</fullName>
+                <default>false</default>
+                <label>Enabled for administrators/​developers</label>
+            </value>
+            <value>
+                <fullName>Requires administrator setup</fullName>
+                <default>false</default>
+                <label>Requires administrator setup</label>
+            </value>
+            <value>
+                <fullName>Contact Salesforce to enable</fullName>
+                <default>false</default>
+                <label>Contact Salesforce to enable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

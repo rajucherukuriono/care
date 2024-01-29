@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Spring19</fullName>
+    <columns>NAME</columns>
+    <columns>Section__c</columns>
+    <columns>Action_Notes__c</columns>
+    <columns>Subsection__c</columns>
+    <columns>Availability_Type__c</columns>
+    <columns>Include_In_User_Info_Email__c</columns>
+    <columns>Include_in_Dev_Info_Email__c</columns>
+    <columns>End_of_Service_date__c</columns>
+    <columns>Release_Version__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Release_Version__c</field>
+        <operation>equals</operation>
+        <value>Spring19</value>
+    </filters>
+    <label>Spring19</label>
+    <language>en_US</language>
+</ListView>

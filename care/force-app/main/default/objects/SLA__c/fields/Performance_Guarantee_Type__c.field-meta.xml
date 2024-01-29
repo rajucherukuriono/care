@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Performance_Guarantee_Type__c</fullName>
+    <description>SFORCE-2239
+SLA fields and sections on WPS record types</description>
+    <externalId>false</externalId>
+    <label>SLA Name</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DIG email performance/availability</fullName>
+                <default>false</default>
+                <label>DIG email performance/availability</label>
+            </value>
+            <value>
+                <fullName>BUC email performance/availability</fullName>
+                <default>false</default>
+                <label>BUC email performance/availability</label>
+            </value>
+            <value>
+                <fullName>BUC telephony performance/call center availability</fullName>
+                <default>false</default>
+                <label>BUC telephony performance/call center availability</label>
+            </value>
+            <value>
+                <fullName>BUC request average response time</fullName>
+                <default>false</default>
+                <label>BUC request average response time</label>
+            </value>
+            <value>
+                <fullName>BUC customer satisfaction</fullName>
+                <default>false</default>
+                <label>BUC customer satisfaction</label>
+            </value>
+            <value>
+                <fullName>BUC fill rate</fullName>
+                <default>false</default>
+                <label>BUC fill rate</label>
+            </value>
+            <value>
+                <fullName>SCP email performance/availability</fullName>
+                <default>false</default>
+                <label>SCP email performance/availability</label>
+            </value>
+            <value>
+                <fullName>SCP telephony performance/call center availability</fullName>
+                <default>false</default>
+                <label>SCP telephony performance/call center availability</label>
+            </value>
+            <value>
+                <fullName>SCP request average response time</fullName>
+                <default>false</default>
+                <label>SCP request average response time</label>
+            </value>
+            <value>
+                <fullName>SCP customer satisfaction</fullName>
+                <default>false</default>
+                <label>SCP customer satisfaction</label>
+            </value>
+            <value>
+                <fullName>Site uptime</fullName>
+                <default>false</default>
+                <label>Site uptime</label>
+            </value>
+            <value>
+                <fullName>Usage Reports Availability and Accuracy</fullName>
+                <default>false</default>
+                <label>Usage Reports Availability and Accuracy</label>
+            </value>
+            <value>
+                <fullName>Implementation</fullName>
+                <default>false</default>
+                <label>Implementation</label>
+            </value>
+            <value>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+                <label>Account Management</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

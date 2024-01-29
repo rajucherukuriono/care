@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Action used on Related Object On Lightning Page for LifeCare</description>
+    <label>Update Business Account</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Name</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>LifeCare_Company_Id__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Program_ID__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+    </quickActionLayout>
+    <type>Update</type>
+</QuickAction>

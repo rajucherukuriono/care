@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Average_time_to_fill_care_request__c</fullName>
+    <externalId>false</externalId>
+    <label>Average time to fill care request</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

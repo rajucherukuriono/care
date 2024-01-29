@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The User&apos;s Data.  Intended to be used by the HomePay only (as the other teams will use Data URL instead).  The HomePay team will need to delete this Privacy Request record during a delete request.</inlineHelpText>
+    <label>Data</label>
+    <length>8000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

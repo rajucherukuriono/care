@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CareatWork</fullName>
+    <active>true</active>
+    <label>CareatWork</label>
+    <picklistValues>
+        <picklist>Feedback_Category__c</picklist>
+        <values>
+            <fullName>BUC%3A ABUC Provider Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUC%3A Agency Provider Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUC%3A Center Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUC%3A Policies %26 Experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUC%3A Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUC%3A Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUC%3A Trusted Provider Quality</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Feedback_Source__c</picklist>
+        <values>
+            <fullName>Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Feedback_Theme__c</picklist>
+        <values>
+            <fullName>Adult</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefit Changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefits Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CG Transgression</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Care%2Ecom Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Covid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kudo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not a good fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reliability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Messages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terms of Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unfulfilled Job</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Feedback_Type__c</picklist>
+        <values>
+            <fullName>Bug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kudo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suggestion</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,103 @@
+{
+  "appPageId" : "b040d84e-9c82-4aea-b263-8e3486fad169",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "f98546f6-9a3e-4f4a-9f62-69449a73fbee",
+  "label" : "Top Articles",
+  "regions" : [ {
+    "id" : "e8f42927-e219-41ee-bba4-d665865d2814",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "numberOfArticles" : 5,
+        "showTitle" : false,
+        "title" : "Top Articles",
+        "topicList" : [ {
+          "isPublic" : true,
+          "name" : "0TO1O0000026iXmWAI"
+        }, {
+          "isPublic" : true,
+          "name" : "0TO1O0000026iY1WAI"
+        }, {
+          "isPublic" : true,
+          "name" : "0TO1O0000026iXwWAI"
+        }, {
+          "isPublic" : true,
+          "name" : "0TO1O0000026iXrWAI"
+        } ]
+      },
+      "componentName" : "forceCommunity:topArticleList",
+      "id" : "92540fa8-0eaa-4e10-81c3-b8947771278c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "50be25dd-e118-4967-9bd1-37035a0d4afb",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "allowPrepopulatePrechatFields" : true,
+        "avatarImgURL" : "",
+        "codeSettingsName" : "",
+        "defaultMinimizedText" : "Contact Us",
+        "displayHelpButton" : true,
+        "eswConfigurationJSON" : {
+          "baseCoreURL" : "https://caredotcom--force1.my.salesforce.com",
+          "baseLiveAgentContentURL" : "https://c.la2-c1cs-ia4.salesforceliveagent.com/content",
+          "baseLiveAgentURL" : "https://d.la2-c1cs-ia4.salesforceliveagent.com/chat",
+          "buttonId" : "5734C000000GncV",
+          "deploymentId" : "5724C000000GmlC",
+          "enabledFeatures" : [ "LiveAgent" ],
+          "entryFeature" : "LiveAgent",
+          "eswConfigDevName" : "Help_Center_Chat",
+          "eswConfigId" : "04I4C000000GmgqUAC",
+          "eswLiveAgentDevName" : "Help_Center_Chat",
+          "gslbBaseURL" : "https://service.force.com",
+          "isOfflineCasesEnabled" : "0",
+          "orgId" : "00D4C00000019dd"
+        },
+        "externalScripts" : "",
+        "externalStyles" : "",
+        "fallbackRouting" : "",
+        "offlineSupportMinimizedText" : "Contact Us",
+        "offlineText" : "Contact Us",
+        "onlineLoadingText" : "Loading",
+        "prechatBackgroundImgURL" : "",
+        "smallCompanyLogoImgURL" : "",
+        "snippetSettingsFile" : "",
+        "storageDomain" : "",
+        "waitingStateBackgroundImgURL" : ""
+      },
+      "componentName" : "forceCommunity:embeddedService",
+      "id" : "e890fb54-121d-40c3-9a7a-f57b8caa6704",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8d2eb499-b97a-45da-bf6c-13cc35a35912",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Top Articles"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "e0216b7b-def3-4399-a55b-213205d51761",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4d23fa0b-2908-40a9-9442-127b6f813a4c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "top-articles"
+}

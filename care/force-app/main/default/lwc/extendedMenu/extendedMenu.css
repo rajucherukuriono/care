@@ -1,0 +1,391 @@
+/* Care.com CSS for extended menu*/
+.MuiSvgIcon-root {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.MuiTypography-root {
+    margin: 0;
+}
+
+.MuiTypography-body1 {
+    font-size: 1.125rem;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.MuiLink-root .MuiTypography-root {
+    display: inline;
+}
+
+.jss10 {
+    margin: -8px 0px -8px -2px;
+}
+
+.jss11 {
+    display: inline-block;
+    position: relative;
+}
+
+.jss11 ul {
+    height: 100%;
+    padding-left: 0;
+}
+
+.jss11 ul li {
+    list-style-type: none;
+}
+
+.jss13.DW {
+    top: 60px;
+    right: 0;
+    width: 768px;
+    border: 1px solid #E6E8EA;
+    height: 394px;
+    display: none;
+    padding: 16px 0px;
+    z-index: 1200;
+    position: absolute;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    background-color: var(--lwc-colorBackground);
+}
+
+.jss13.open {
+    display: flex;
+}
+
+.jss13 button {
+    color: #172C42;
+    width: 100%;
+    border: none;
+    display: flex;
+    padding: 8px 16px;
+    font-size: 18px;
+    text-align: left;
+    align-items: center;
+    background-color: var(--lwc-colorBackground);
+}
+
+.jss13 button.active, .jss13 button:hover, .jss13 button:focus {
+    background-color: #E6E8EA;
+}
+
+.jss13 button.active span {
+    font-weight: 700;
+}
+
+.jss13 button > svg:first-child {
+    margin-right: 16px;    
+}
+
+.jss13 button > span {
+    flex: 1 0 auto;
+}
+
+.jss13 button > svg {
+    flex: 0 0 auto;
+}
+
+.jss13 button.DW > svg:last-child {
+    display: none;
+}
+
+.jss13 button.MW > svg:last-child {
+    display: inline-block;
+}
+
+.jss13 button.active > svg:last-child, .jss13 button:hover > svg:last-child, .jss13 button:focus > svg:last-child {
+    display: inline-block;
+}
+
+
+.jss15 {
+    flex: 0 1 auto;
+}
+
+.jss15.DW {
+    width: 223px;
+    border-right: 1px solid var(--lwc-colorBorder);
+}
+
+.jss15.MW {
+    width: 340px;
+    padding: 40px 40px 0px;
+}
+
+.jss15 ul {
+    margin: 0;
+}
+
+.jss16 {
+    flex: 1 1 auto;
+}
+
+.jss16.MW {
+    top: 0;
+    width: 340px;
+    bottom: 0;
+    display: none;
+    padding: 16px 40px;
+    z-index: 300;
+    position: fixed;
+    overflow-y: scroll;
+    background-color: var(--lwc-colorBackground);
+}
+
+.jss16.MW.open {
+    left: 0;
+    display: block;
+}
+
+.jss17 {
+    margin: 24px 0px 8px;
+    display: block;
+    font-weight: 700;
+}
+
+.jss18 {
+    width: 45px;
+    border: none;
+    cursor: pointer;
+    height: 45px;
+    background: none;
+    margin-left: 20px;
+}
+
+.jss18 span {
+    position: relative;
+}
+
+.jss18 span, .jss18 span:before, .jss18 span:after {
+    width: 3px;
+    height: 3px;
+    margin: 0 auto;
+    content: "";
+    display: block;
+    transition: 0.15s ease all;
+    border-radius: 3px;
+    background-color: var(--colorTextDefault);
+}
+
+.jss53 {
+    display: none;
+}
+
+.jss53.open {
+    display: block;
+}
+
+.jss53.DW {
+    height: 394px;
+}
+
+.jss53.MW {
+    height: auto;
+    flex-wrap: nowrap;
+    border-top: 1px solid #213F5F;
+}
+
+.jss53 ul {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.jss53.DW li {
+    width: 50%;
+}
+
+.jss53.MW li {
+    width: 100%;
+    display: block;
+}
+
+.jss53 ul li {
+    flex: 0 1 auto;
+}
+
+.jss53 ul li a, ul.applyToJobs li a {
+    color: var(--colorTextDefault);
+    width: 100%;
+    height: 40px;
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.jss53 ul li a:hover, .jss53 ul li a:focus {
+    color: var(--colorTextDefault);
+    background-color: #E6E8EA;
+}
+
+.jss56 .MuiTypography-root {
+    font-style: normal;
+    font-weight: 700;
+}
+
+.jss186 {
+    top: 0;
+    left: 0;
+    width: 340px;
+    bottom: 0;
+    display: flex;
+    padding: 48px 0px;
+    z-index: 1200;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--lwc-colorBackground);
+}
+
+@media (max-width: 1279.95px){
+    .jss186 {
+    position: fixed;
+    }
+}
+
+.jss187 {
+    transform: translateX(-101%);
+    transition: transform .15s cubic-bezier(0,0,.3,1);
+    will-change: transform;
+}
+
+.jss188 {
+    transform: none;
+    transition: transform .33s cubic-bezier(0,0,.3,1);
+}
+
+.jss307 {
+    cursor: pointer;    
+}
+
+@media (max-width: 1279.95px){
+    .jss307 {
+        display: flex;
+        padding: 0px 12px 0px 8px;
+    }
+}
+
+@media (max-width: 1279.95px){
+    .jss308 {
+        
+    }
+}
+
+.jss310 {
+    top: 0;
+    left: 0;
+    width: 340px;
+    bottom: 0;
+    display: flex;
+    padding: 48px 0px;
+    z-index: 1200;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--lwc-colorBackground);
+}
+
+@media (max-width: 1279.95px){
+    .jss310 {
+        position: fixed;
+    }
+}
+
+.jss312 {
+    transform: none;
+    transition: transform .33s cubic-bezier(0,0,.3,1);
+}
+
+.jss313 {
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+    display: none;
+    z-index: 1500;
+    position: absolute;
+    background-color: var(--lwc-colorBackground);
+}
+
+@media (max-width: 1279.95px){
+    .jss313 {
+        display: flex;
+    }
+}
+
+.jss313 > svg {
+    width: 24px;
+    height: 24px;
+    margin-top: 0;
+}
+
+/* customizations to care.com CSS */
+ul.applyToJobs li{
+    margin-left: 40px;
+}
+
+/* tab menu css */
+.tabMenuWrapper{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.tabMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px;    
+    width: 85%;
+    height: 56px;    
+    /*background: #F3F4F6;*/
+    border-radius: 56px;
+}
+
+.tabMenu div, .tabMenu a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 8px;
+    width: 100%;
+    height: 40px;
+}
+.tabMenu div{
+    border-radius: 40px;
+    border: 1px solid;
+}
+
+/*
+.tabMenu a:hover{
+    background: #E6E8EA;
+}
+*/
+
+.tabMenu div.selected {
+    background: #213F5F;
+    color: var(--lwc-colorTextInverse);
+}
+
+.tabMenu > a {
+    text-decoration: none;
+    color: var(--colorTextDefault);
+}
+
+
+/* other styles */
+.em-launcher{
+    --sds-c-button-text-color-hover: var(--lwc-colorTextIconDefault);
+    --sds-c-button-text-color-active: var(--lwc-colorTextIconDefault);
+}

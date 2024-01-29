@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auto_Expire__c</fullName>
+    <externalId>false</externalId>
+    <formula>Request_Date__c  + $CustomMetadata.Retention_Custom_Metadata__mdt.CCPA_Auto_Expire_Unverified_Requests.Days__c</formula>
+    <label>Auto Expire Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

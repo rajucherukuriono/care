@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Populate_Case_Reason</name>
+        <label>Populate Case Reason</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Reason</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Partner Agency</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <environments>Default</environments>
+    <interviewLabel>Case - Populate Case Reason For BUC Record type {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case - Populate Case Reason For BUC Record type</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Populate_Case_Reason</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01239000000N22rAAC</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Priority</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Medium</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Origin</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Email - CBUC</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>OwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>00G1O000004erF6UAI</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

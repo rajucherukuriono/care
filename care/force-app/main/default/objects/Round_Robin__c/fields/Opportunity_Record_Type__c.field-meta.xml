@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Record_Type__c</fullName>
+    <defaultValue>&quot;Sales Origination&quot;</defaultValue>
+    <externalId>false</externalId>
+    <label>Opportunity Record Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+                <label>Business Development</label>
+            </value>
+            <value>
+                <fullName>Center Network Development</fullName>
+                <default>false</default>
+                <label>Center Network Development</label>
+            </value>
+            <value>
+                <fullName>Community</fullName>
+                <default>false</default>
+                <label>Community</label>
+            </value>
+            <value>
+                <fullName>Home Care Seeker Opportunity</fullName>
+                <default>false</default>
+                <label>Home Care Seeker Opportunity</label>
+            </value>
+            <value>
+                <fullName>HomePay Partner</fullName>
+                <default>false</default>
+                <label>HomePay Partner</label>
+            </value>
+            <value>
+                <fullName>HomePay Referral</fullName>
+                <default>false</default>
+                <label>HomePay Referral</label>
+            </value>
+            <value>
+                <fullName>International WPS Opportunity</fullName>
+                <default>false</default>
+                <label>International WPS Opportunity</label>
+            </value>
+            <value>
+                <fullName>KU Opportunity</fullName>
+                <default>false</default>
+                <label>KU Opportunity</label>
+            </value>
+            <value>
+                <fullName>Marketplace ISR Opportunity</fullName>
+                <default>false</default>
+                <label>Marketplace ISR Opportunity</label>
+            </value>
+            <value>
+                <fullName>MKP National Opportunity</fullName>
+                <default>false</default>
+                <label>MKP National Opportunity</label>
+            </value>
+            <value>
+                <fullName>Provider</fullName>
+                <default>false</default>
+                <label>Provider</label>
+            </value>
+            <value>
+                <fullName>Safety Monitoring Seeker Opportunity</fullName>
+                <default>false</default>
+                <label>Safety Monitoring Seeker Opportunity</label>
+            </value>
+            <value>
+                <fullName>Sales Origination</fullName>
+                <default>false</default>
+                <label>Sales Origination</label>
+            </value>
+            <value>
+                <fullName>Seeker</fullName>
+                <default>false</default>
+                <label>Seeker</label>
+            </value>
+            <value>
+                <fullName>Senior Care Welcome Call</fullName>
+                <default>false</default>
+                <label>Senior Care Welcome Call</label>
+            </value>
+            <value>
+                <fullName>Transportation Seeker Opportunity</fullName>
+                <default>false</default>
+                <label>Transportation Seeker Opportunity</label>
+            </value>
+            <value>
+                <fullName>WPS Opportunity</fullName>
+                <default>false</default>
+                <label>WPS Opportunity</label>
+            </value>
+            <value>
+                <fullName>WPS Opportunity (KCE Lead)</fullName>
+                <default>false</default>
+                <label>WPS Opportunity (KCE Lead)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

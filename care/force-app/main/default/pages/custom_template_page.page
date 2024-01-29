@@ -1,0 +1,57 @@
+<apex:page controller="Lookup_class" tabStyle="EmailTemplate" sidebar="false" showHeader="false">
+     <apex:SectionHeader subTitle="Template"/>
+     <script>
+     
+         function populateTemplate(obj)
+         {
+             var trNode = obj.parentNode.parentNode;
+             var tdNodes = trNode.getElementsByTagName('td');
+             var Id= (tdNodes[0].getElementsByTagName('span')[0]).innerHTML;
+             var Name = (tdNodes[1].getElementsByTagName('a')[0]).innerHTML;  
+             var body= (tdNodes[2].getElementsByTagName('span')[0]).innerHTML;   
+             var htmlbody= (tdNodes[3].getElementsByTagName('span')[0]).innerHTML;
+             top.window.opener.setSelectedTemplateDetails(Id , Name, body, htmlbody);     
+             top.window.opener.setSelectedDetailsId(Id);                   
+             return false;
+         }
+         
+     </script>
+     <apex:form >
+         <apex:outputPanel id="main" >
+            <apex:outputPanel rendered="{!NOT(showSearch)}">
+                <div style="text-align:center; font-weight:bold; color:red">There are no Templates selected.</div>  
+            </apex:outputPanel>
+             <apex:outputPanel rendered="{!showSearch}"> 
+                 <table id="tblSearch">
+                     <tr>
+                         <td><B>Search</B></td>
+                         <td><apex:InputText value="{!likeString}"/></td>
+                         <td><apex:CommandButton value="Go!" action="{!findTemplate}" reRender="detail"/></td>
+                     </tr>
+                 </table>
+             </apex:outputPanel>
+             <br/>
+             <br/>
+             <apex:outputPanel id="detail" >
+                 <apex:pageBlock title="Choose Template" rendered="{!showSearch}" >
+                    <apex:pageBlockTable value="{!showTemplate}" var="rec">
+                        <apex:column >
+                           <span style="display: none" width="0">{!rec.Id}</span>
+                        </apex:column>
+                        <apex:column headerValue="Name">
+                            <apex:outputLink value="{!rec.Name}" onClick="javascript:return populateTemplate(this)">{!rec.Name} </apex:outputLink>
+                            <!--apex:actionSupport event="onclick" action="{!SetFlag}"/-->
+                        </apex:column> 
+                         <apex:column >
+                           <span style="display: none" width="0">{!rec.body}</span>
+                        </apex:column>  
+                        <apex:column >
+                           <span style="display: none" width="0">{!rec.HtmlValue}</span>
+                        </apex:column>                                     
+                    </apex:pageBlockTable> 
+                    <!--apex:actionFunction name="setflag1()" action="{!setflag}"/-->
+                </apex:pageBlock>
+              </apex:outputPanel> 
+        </apex:outputPanel>
+    </apex:form> 
+</apex:page>

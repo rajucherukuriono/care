@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>SFORCE-3200 UK/IE BUC Phase 2 - New ClickTool Survey, BUC UK/IRE FlowSFORCE-3258
+3200 - Automatically Create International Person Account with Button/Action and link to Case</description>
+    <label>CreateIntlPersonAccount</label>
+</ApexPage>

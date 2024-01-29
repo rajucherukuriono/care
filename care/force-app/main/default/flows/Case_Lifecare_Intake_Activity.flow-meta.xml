@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <name>Check_if_the_user_is_MHp</name>
+        <label>Check if the user is MHp</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Case_Intake_Activity_for_manual</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>if_user_is_MHp</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$User.Alias</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>mapi</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Case_Intake_Activity</targetReference>
+            </connector>
+            <label>if user is MHp</label>
+        </rules>
+    </decisions>
+    <description>when ever LifeCare record is created. this flow create a Case Intake Activity Task Record. 
+this is moved from Workflow to Flow Sforce-6884.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>DueDate +1</description>
+        <name>DueDate</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.CreatedDate} + 1</expression>
+    </formulas>
+    <interviewLabel>Case: Lifecare Intake Activity {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case: Lifecare Intake Activity</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Case_Intake_Activity</name>
+        <label>Case Intake Activity</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>DueDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>Please complete your task and close this activity.</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lifecare_Activity_Type__c</field>
+            <value>
+                <stringValue>Needs Assessment Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>Normal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>0125Y000002WGupQAG	</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Case Intake Activity</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Case_Intake_Activity_for_manual</name>
+        <label>Case Intake Activity for manual</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Lifecare_Activity_Type__c</field>
+            <value>
+                <stringValue>Needs Assessment Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>Normal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>0125Y000002WGupQAG	</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Case Intake Activity</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_if_the_user_is_MHp</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0125Y000002WGuoQAG</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

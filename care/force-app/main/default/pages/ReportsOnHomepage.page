@@ -1,0 +1,9 @@
+<apex:page >
+    
+   <apex:outputPanel id="theReportPanel" layout="block">
+     <apex:outputLink target="_blank" hreflang="/00O70000004jJX9" style="valign:center; font-size: 16px; font-style: bold;"><h1>WPS Pipeline Report</h1></apex:outputLink><br /><br />
+ 
+  </apex:outputPanel>
+
+
+</apex:page>

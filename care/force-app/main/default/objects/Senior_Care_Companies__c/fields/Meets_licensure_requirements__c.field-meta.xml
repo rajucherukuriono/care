@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meets_licensure_requirements__c</fullName>
+    <description>should be retired with SFORCE-1854, but is still synced with clicktools. business to decide on usage.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>In case of Assisted Living Communities: Administrator meets state licensure requirements?</inlineHelpText>
+    <label>Meets state/city licensure requirements</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Whos_Car_Caregiver_Drive__c</name>
+    <picklistValues>
+        <masterLabel>Both</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Caregiver&apos;s Car</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client&apos;s Car</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

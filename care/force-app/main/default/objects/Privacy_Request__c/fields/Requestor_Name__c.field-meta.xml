@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requestor_Name__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is used if the request is being made by someone other than the member.</inlineHelpText>
+    <label>Requestor Name</label>
+    <length>80</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

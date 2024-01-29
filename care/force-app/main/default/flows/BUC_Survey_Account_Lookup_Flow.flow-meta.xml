@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <description>Checks whether an account Id has been found or not</description>
+        <name>Does_Account_ID_exist</name>
+        <label>Does Account ID exist</label>
+        <locationX>182</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Account ID not found</defaultConnectorLabel>
+        <rules>
+            <name>Account_ID_found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varAccountId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_BUC_Account_ID</targetReference>
+            </connector>
+            <label>Account ID found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Returns the record type of the Survey Response Record</description>
+        <name>Record_Type</name>
+        <label>Record Type</label>
+        <locationX>336</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BUC_US_Surveys</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>BUC_US_Surveys</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lookup_Account_ID</targetReference>
+            </connector>
+            <label>BUC US Surveys</label>
+        </rules>
+    </decisions>
+    <description>Looks for the account id from the member id in the Survey Feedback and populates the missing field on the Survey Feedback record.</description>
+    <environments>Default</environments>
+    <interviewLabel>BUC Survey Account Lookup {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>BUC Survey Account Lookup</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Lookup_Account_ID</name>
+        <label>Lookup Account ID</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Does_Account_ID_exist</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>MemberID__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Survey_Member_ID_Number__c</elementReference>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <outputAssignments>
+            <assignToReference>varAccountId</assignToReference>
+            <field>AccountId</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>varName</assignToReference>
+            <field>Name</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <description>Updates the Account field on the survey feedback record.</description>
+        <name>Update_BUC_Account_ID</name>
+        <label>Update BUC Account ID</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>BUC_Account_ID__c</field>
+            <value>
+                <elementReference>varAccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Member_Full_Name__c</field>
+            <value>
+                <elementReference>varName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>210</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Record_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>BUC_Account_ID__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Survey_Feedback__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>varAccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

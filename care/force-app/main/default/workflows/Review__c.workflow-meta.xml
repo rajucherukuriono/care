@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_Review_Record_Name</fullName>
+        <description>Update Review Record Name</description>
+        <field>Name</field>
+        <formula>&apos;R-&apos;+if(YEAR(DateValue(CreatedDate))&lt;10,&apos;0&apos;,&apos;&apos;)+Text(YEAR(DateValue(CreatedDate)))+if(MONTH(DateValue(CreatedDate))&lt;10,&apos;0&apos;,&apos;&apos;)+Text(MONTH(DateValue(CreatedDate)))+if(DAY(DateValue(CreatedDate))&lt;10,&apos;0&apos;,&apos;&apos;)+Text(DAY(DateValue(CreatedDate)))+&apos;-&apos;+Text( if(BUC_Center_Name__r.Review_Record_Count__c==null,1,BUC_Center_Name__r.Review_Record_Count__c))</formula>
+        <name>Update Review Record Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Review record name and count update</fullName>
+        <actions>
+            <name>Update_Review_Record_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>This rule updates the Review record count on account and updates Review record name in the format R-YYYYMMDD-1</description>
+        <formula>true</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reviews Escalations Review Decision Probation Followup</fullName>
+        <actions>
+            <name>Probation_Followup</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Review__c.Review_Decision__c</field>
+            <operation>equals</operation>
+            <value>Probation</value>
+        </criteriaItems>
+        <description>Reviews Escalations Review Decision Probation Followup</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Probation_Followup</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Probation Account followup</description>
+        <dueDateOffset>14</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Probation Followup</subject>
+    </tasks>
+</Workflow>

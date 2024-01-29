@@ -1,0 +1,53 @@
+<aura:component controller="CCCPricingController" extends="c:CCCModuleBase">
+
+    <!-- Aura Attributes - Public -->
+    <aura:attribute name="saveClicked" type="Boolean" default="false" access="public" />
+    <aura:attribute name="saveDisabled" type="Boolean" default="false" access="public" />
+    <aura:attribute name="location" type="Map" access="public" />
+
+    <div>
+
+        <div class="slds-m-bottom_small slds-text-heading_small">{!v.location.primaryService.name}</div>
+
+        <c:CCCPricingTierPicker
+            aura:id="pricingTierPicker"
+            id="{!v.location.primaryService.id}"
+            amount="{!v.location.primaryService.amount}"
+            name="{!v.location.primaryService.pricingTierName}"
+            bonusPoints="{!v.location.primaryService.bonusPoints}"
+            pricingTiers="{!v.location.primaryService.pricingTiers}"
+            tierCustomThreshold="{!v.location.primaryService.tierCustomThreshold}"
+            isFlatRate="{!v.location.primaryService.isFlatRate}"
+            flatRateBudgetAmount="{!v.location.primaryService.flatRate.flatRateMonthlyBudget}"
+            flatRateBudgetCadence="{!v.location.primaryService.flatRate.flatRateCadence}" />
+
+        <aura:iteration items="{!v.location.additionalServices}" var="service">
+
+            <div class="slds-m-top_large slds-m-bottom_small slds-text-heading_small">{!service.name}</div>
+
+            <c:CCCPricingTierPicker
+                aura:id="pricingTierPicker"
+                id="{!service.id}"
+                amount="{!service.amount}"
+                name="{!service.pricingTierName}"
+                bonusPoints="{!service.bonusPoints}"
+                pricingTiers="{!service.pricingTiers}"
+                tierCustomThreshold="{!service.tierCustomThreshold}"
+                isFlatRate="{!v.location.primaryService.isFlatRate}"
+                flatRateBudgetAmount="{!v.location.primaryService.flatRate.flatRateMonthlyBudget}"
+                flatRateBudgetCadence="{!v.location.primaryService.flatRate.flatRateCadence}" />
+
+        </aura:iteration>
+
+        <!-- Button Management -->
+        <div class="slds-clearfix slds-m-top_large">
+            <div class="slds-float_right">
+                <lightning:button label="Cancel" onclick="{!c.handleCancelClicked}" class="slds-m-horizontal_xx-small" />
+                <lightning:button variant="brand" label="Save Pricing" onclick="{!c.handleSaveClicked}"
+                    class="slds-m-horizontal_xx-small" />
+            </div>
+        </div>
+
+    </div>
+
+</aura:component>

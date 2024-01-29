@@ -1,0 +1,5 @@
+<apex:page standardController="Case" extensions="MemberExt" recordSetVar="Cases" action="{!acceptCases}">
+   <apex:form >
+     
+   </apex:form>
+</apex:page>

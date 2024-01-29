@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.container > c-cdcc-tile {
+    padding: 0 10px;
+}
+.container > c-cdcc-tile:first-child {
+    padding-left: 0;
+}
+.container > c-cdcc-tile:last-child {
+    padding-right: 0;
+}
+@media screen and (max-device-width: 959px), (max-width: 959px) {
+    .container {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .container > c-cdcc-tile {
+        padding: 10px 0;
+    }
+    .container > c-cdcc-tile:first-child {
+        padding-top: 0;
+    }
+    .container > c-cdcc-tile:last-child {
+        padding-bottom: 0;
+    }
+}

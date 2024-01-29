@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Production_URL_Root__c</fullName>
+    <description>The root of the URL to hit the production servers for a given country.</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>Production URL Root</label>
+    <length>100</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

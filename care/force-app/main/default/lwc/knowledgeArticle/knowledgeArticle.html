@@ -1,0 +1,32 @@
+<template>
+    <div class="articleWrapper">
+        
+        <div if:false={displaySpinner}>
+            <!-- 2023-04-27: Jack Odell: decided to stop using breadcrum component, so that we can make the b5readrcumbs more customizeable
+            <lightning-breadcrumbs class="slds-var-p-bottom_x-small">
+                <lightning-breadcrumb
+                    label={homePageLabel}
+                    href={homePageUrl} onclick={handleHomePageClick}>
+                </lightning-breadcrumb>
+                <lightning-breadcrumb
+                    label={topicName}
+                    href={topicDetailUrl} onclick={handleTopicDetailClick}>
+                </lightning-breadcrumb>
+            </lightning-breadcrumbs>
+            -->
+            <div class="breadcrumbContainer slds-var-p-bottom_x-small">
+                <a href={homePageUrl} onclick={handleHomePageClick}>{homePageLabel}</a> 
+                &nbsp;<span class="breadcrumbSeparator">/</span>&nbsp; 
+                <a href={topicDetailUrl} onclick={handleTopicDetailClick}>{topicName}</a> 
+            </div>
+            <h1 class="slds-var-m-bottom_x-small article-headline">{title}</h1>
+            <div class="slds-var-m-bottom_x-small slds-text-body_small last-published-date">{lastPublishedDateFormatted}</div>
+            <lightning-formatted-rich-text value={body} class="article-text" disable-linkify></lightning-formatted-rich-text>
+        </div>
+        <div if:true={displaySpinner} class="slds-is-relative slds-m-bottom_xx-large  slds-var-p-bottom_xx-large">
+                <lightning-spinner variant="brand" size="large" alternative-text="Loading" ></lightning-spinner>
+        </div>
+        <hr></hr>
+    
+    </div>
+</template>

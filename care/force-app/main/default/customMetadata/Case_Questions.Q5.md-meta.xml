@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Q5</label>
+    <protected>false</protected>
+    <values>
+        <field>AnswersetId__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Qnumber__c</field>
+        <value xsi:type="xsd:double">5.0</value>
+    </values>
+    <values>
+        <field>QuestionId__c</field>
+        <value xsi:type="xsd:string">302330</value>
+    </values>
+    <values>
+        <field>Questions__c</field>
+        <value xsi:type="xsd:string">What was the case type?</value>
+    </values>
+</CustomMetadata>

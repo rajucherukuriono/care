@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Feedback_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Feedback Category</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Assisted Search</fullName>
+                <default>false</default>
+                <label>Assisted Search</label>
+            </value>
+            <value>
+                <fullName>Autorenewal</fullName>
+                <default>false</default>
+                <label>Autorenewal</label>
+            </value>
+            <value>
+                <fullName>B2B</fullName>
+                <default>false</default>
+                <label>B2B</label>
+            </value>
+            <value>
+                <fullName>Background Checks</fullName>
+                <default>false</default>
+                <label>Background Checks</label>
+            </value>
+            <value>
+                <fullName>Backup Care</fullName>
+                <default>false</default>
+                <label>Backup Care</label>
+            </value>
+            <value>
+                <fullName>Benefits Communication</fullName>
+                <default>false</default>
+                <label>Benefits Communication</label>
+            </value>
+            <value>
+                <fullName>Benefits Fair</fullName>
+                <default>false</default>
+                <label>Benefits Fair</label>
+            </value>
+            <value>
+                <fullName>BUC: ABUC Provider Quality</fullName>
+                <default>false</default>
+                <label>BUC: ABUC Provider Quality</label>
+            </value>
+            <value>
+                <fullName>BUC: Agency Provider Quality</fullName>
+                <default>false</default>
+                <label>BUC: Agency Provider Quality</label>
+            </value>
+            <value>
+                <fullName>BUC: Center Quality</fullName>
+                <default>false</default>
+                <label>BUC: Center Quality</label>
+            </value>
+            <value>
+                <fullName>BUC: Policies &amp; Experience</fullName>
+                <default>false</default>
+                <label>BUC: Policies &amp; Experience</label>
+            </value>
+            <value>
+                <fullName>BUC: Product</fullName>
+                <default>false</default>
+                <label>BUC: Product</label>
+            </value>
+            <value>
+                <fullName>BUC: Service</fullName>
+                <default>false</default>
+                <label>BUC: Service</label>
+            </value>
+            <value>
+                <fullName>BUC: Trusted Provider Quality</fullName>
+                <default>false</default>
+                <label>BUC: Trusted Provider Quality</label>
+            </value>
+            <value>
+                <fullName>C@W App</fullName>
+                <default>false</default>
+                <label>C@W App</label>
+            </value>
+            <value>
+                <fullName>C@W Portal</fullName>
+                <default>false</default>
+                <label>C@W Portal</label>
+            </value>
+            <value>
+                <fullName>Consumer Backup Care</fullName>
+                <default>false</default>
+                <label>Consumer Backup Care</label>
+            </value>
+            <value>
+                <fullName>COVID-related</fullName>
+                <default>false</default>
+                <label>COVID-related</label>
+            </value>
+            <value>
+                <fullName>Customer Service</fullName>
+                <default>false</default>
+                <label>Customer Service</label>
+            </value>
+            <value>
+                <fullName>Digital</fullName>
+                <default>false</default>
+                <label>Digital</label>
+            </value>
+            <value>
+                <fullName>Enrollment</fullName>
+                <default>false</default>
+                <label>Enrollment</label>
+            </value>
+            <value>
+                <fullName>Event Care</fullName>
+                <default>false</default>
+                <label>Event Care</label>
+            </value>
+            <value>
+                <fullName>Experience Offsite</fullName>
+                <default>false</default>
+                <label>Experience - Offsite</label>
+            </value>
+            <value>
+                <fullName>Experience Onsite</fullName>
+                <default>false</default>
+                <label>Experience - Onsite</label>
+            </value>
+            <value>
+                <fullName>Home Pay</fullName>
+                <default>false</default>
+                <label>Home Pay</label>
+            </value>
+            <value>
+                <fullName>HR Dashboard</fullName>
+                <default>false</default>
+                <label>HR Dashboard</label>
+            </value>
+            <value>
+                <fullName>Jobs</fullName>
+                <default>false</default>
+                <label>Jobs</label>
+            </value>
+            <value>
+                <fullName>Marketing/Admin Emails</fullName>
+                <default>false</default>
+                <label>Marketing/Admin Emails</label>
+            </value>
+            <value>
+                <fullName>Messaging</fullName>
+                <default>false</default>
+                <label>Messaging</label>
+            </value>
+            <value>
+                <fullName>Policies</fullName>
+                <default>false</default>
+                <label>Policies</label>
+            </value>
+            <value>
+                <fullName>Privacy</fullName>
+                <default>false</default>
+                <label>Privacy</label>
+            </value>
+            <value>
+                <fullName>Profile</fullName>
+                <default>false</default>
+                <label>Profile</label>
+            </value>
+            <value>
+                <fullName>Provider/Seeker Quality</fullName>
+                <default>false</default>
+                <label>Provider/Seeker Quality</label>
+            </value>
+            <value>
+                <fullName>Provider Quality (Digital)</fullName>
+                <default>false</default>
+                <label>Provider Quality (Digital)</label>
+            </value>
+            <value>
+                <fullName>Provider Quality  (placements)</fullName>
+                <default>false</default>
+                <label>Provider Quality (Placements)</label>
+            </value>
+            <value>
+                <fullName>Safety/Fraud</fullName>
+                <default>false</default>
+                <label>Safety/Fraud</label>
+            </value>
+            <value>
+                <fullName>Senior Care Planning</fullName>
+                <default>false</default>
+                <label>Senior Care Planning</label>
+            </value>
+            <value>
+                <fullName>Site Navigation</fullName>
+                <default>false</default>
+                <label>Site Navigation</label>
+            </value>
+            <value>
+                <fullName>Subscription</fullName>
+                <default>false</default>
+                <label>Subscription</label>
+            </value>
+            <value>
+                <fullName>System Messages</fullName>
+                <default>false</default>
+                <label>System Messages</label>
+            </value>
+            <value>
+                <fullName>Technology</fullName>
+                <default>false</default>
+                <label>Technology</label>
+            </value>
+            <value>
+                <fullName>Value Added Services</fullName>
+                <default>false</default>
+                <label>Value Added Services</label>
+            </value>
+            <value>
+                <fullName>Vetting</fullName>
+                <default>false</default>
+                <label>Vetting</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>for some IT SFDC Team members to create and manage custom report types, incl. View Setup and Conf. and view Roles and Roles Hierachie</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Manage Custom Report Types</label>
+    <license>Salesforce</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ManageCustomReportTypes</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewRoles</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewSetup</name>
+    </userPermissions>
+</PermissionSet>

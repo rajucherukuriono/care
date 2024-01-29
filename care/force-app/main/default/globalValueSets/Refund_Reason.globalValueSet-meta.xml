@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Sitter did not show up</fullName>
+        <default>false</default>
+        <label>Sitter did not show up</label>
+    </customValue>
+    <customValue>
+        <fullName>Sitter paid offline</fullName>
+        <default>false</default>
+        <label>Sitter paid offline</label>
+    </customValue>
+    <customValue>
+        <fullName>Sitter needs to cancel</fullName>
+        <default>false</default>
+        <label>Sitter needs to cancel</label>
+    </customValue>
+    <customValue>
+        <fullName>My plans changed</fullName>
+        <default>false</default>
+        <label>My plans changed</label>
+    </customValue>
+    <customValue>
+        <fullName>I&apos;d like to reschedule</fullName>
+        <default>false</default>
+        <label>I&apos;d like to reschedule</label>
+    </customValue>
+    <customValue>
+        <fullName>Duplicate Booking</fullName>
+        <default>false</default>
+        <label>Duplicate Booking</label>
+    </customValue>
+    <customValue>
+        <fullName>I&apos;m uncomfortable with this caregiver</fullName>
+        <default>false</default>
+        <label>I&apos;m uncomfortable with this caregiver</label>
+    </customValue>
+    <customValue>
+        <fullName>Chargeback</fullName>
+        <default>false</default>
+        <label>Chargeback</label>
+    </customValue>
+    <masterLabel>Refund Reason</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

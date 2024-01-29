@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Survey_Catcher__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>User Lookup for the system user, that catches errors, while creating a task from the clicktools survey. If the user is a queue the task creation will fail.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is set by the &apos;I Am Not satisfied - create a case task&apos; - Process</inlineHelpText>
+    <label>Survey Catcher</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Survey_Feedbacks_Catcher</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

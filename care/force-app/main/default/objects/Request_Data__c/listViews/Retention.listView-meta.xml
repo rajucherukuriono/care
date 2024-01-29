@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retention</fullName>
+    <columns>NAME</columns>
+    <columns>Global_Member_ID__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>Response_Date__c</columns>
+    <columns>Validation_Status__c</columns>
+    <columns>Last_Validation_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Request_Type__c</field>
+        <operation>equals</operation>
+        <value>Retention</value>
+    </filters>
+    <label>Retention</label>
+    <language>en_US</language>
+</ListView>

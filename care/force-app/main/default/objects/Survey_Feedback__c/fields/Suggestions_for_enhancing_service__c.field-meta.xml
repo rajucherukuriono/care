@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Suggestions_for_enhancing_service__c</fullName>
+    <complianceGroup>CCPA</complianceGroup>
+    <description>added for SFORCE-2425 BUC Surveys</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Q: Please share your suggestions for how we might enhance our service.</inlineHelpText>
+    <label>Suggestions to enhance our service</label>
+    <length>1000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

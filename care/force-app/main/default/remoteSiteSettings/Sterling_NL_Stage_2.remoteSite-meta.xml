@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Care.com&apos;s International Server (AKA Sterling/Smithers). NL server number 2.</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://nl-stg2.euw.carezen.net</url>
+</RemoteSiteSetting>

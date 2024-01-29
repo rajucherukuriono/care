@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pending_Zip_Code_Files_Requests</fullName>
+    <columns>NAME</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Products__c</columns>
+    <columns>Request_Comments__c</columns>
+    <columns>Requested_Completion_Date__c</columns>
+    <columns>Expected_completion_date__c</columns>
+    <columns>In_Center_Complete__c</columns>
+    <columns>In_Center_Comments__c</columns>
+    <columns>In_Home_Complete__c</columns>
+    <columns>In_Home_Comments__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Requisition_Form__c.Zip_Code_File</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Complete,Complete - N/A</value>
+    </filters>
+    <label>Pending Zip Code Files Requests</label>
+    <sharedTo>
+        <group>Requisition_Forms_Zip_Code_Approver</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weekly_Monthly_Tuition_Rates__c</fullName>
+    <description>Weekly/Monthly Tuition Rates ?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Weekly/Monthly Tuition Rates ?</inlineHelpText>
+    <label>Weekly/Monthly Tuition Rates ?</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

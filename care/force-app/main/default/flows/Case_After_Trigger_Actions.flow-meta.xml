@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Alert_for_Background_Check_Escalations</name>
+        <label>Alert for Background Check Escalations</label>
+        <locationX>1634</locationX>
+        <locationY>431</locationY>
+        <actionName>Case.Alert_for_Background_Check_Escalations</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Alert_for_Background_Check_Escalations</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Alert_for_Senior_Care_Consult_Case</name>
+        <label>Alert for Senior Care Consult Case</label>
+        <locationX>1898</locationX>
+        <locationY>431</locationY>
+        <actionName>Case.INTERNAL_Alert_to_SCC_Team_when_New_SCC_Case_is_Created</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.INTERNAL_Alert_to_SCC_Team_when_New_SCC_Case_is_Created</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>CaseVariable</name>
+        <label>CaseVariable</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <actionName>Case.New_IBUC_Case_from_SurveyMonkey</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Owner_Q_INTL_BUC</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.New_IBUC_Case_from_SurveyMonkey</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_on_a_Closed_Case</name>
+        <label>Email on a Closed Case</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <actionName>Case.New_Email_on_a_Closed_Case</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.New_Email_on_a_Closed_Case</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_when_Case_Status_is_Closed</name>
+        <label>Email when Case Status is Closed</label>
+        <locationX>2690</locationX>
+        <locationY>431</locationY>
+        <actionName>Case.Email_when_Case_Status_is_Closed</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Set_Case_Status_Closed</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Email_when_Case_Status_is_Closed</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Sunset_Email_alert_for_Careteam_care_com</name>
+        <label>Sunset Email alert for Careteam@care.com</label>
+        <locationX>842</locationX>
+        <locationY>539</locationY>
+        <actionName>Case.Email2Case_AutoResponse_Care_com_Sunset</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Email2Case_AutoResponse_Care_com_Sunset</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>Account_Email_Update</name>
+        <label>Account Email Update</label>
+        <locationX>1898</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Account_Email_Populate</name>
+            <conditionLogic>(1 AND 2 AND 3) AND (4 OR 5)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.IsPersonAccount</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.PersonEmail</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>LifeCare</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Seeker</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Person_Account</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Account_Email_Populate_for_LifeCare</targetReference>
+            </connector>
+            <label>Account Email Populate</label>
+        </rules>
+        <rules>
+            <name>International_BUC_From_SurveyMonkey</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LastModifiedById</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0055Y00000GlHpVQAV</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0121O000001ZY2YQAW</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CaseVariable</targetReference>
+            </connector>
+            <label>International BUC - From SurveyMonkey</label>
+        </rules>
+        <rules>
+            <name>Case_reopened_for_Galore_Marketing_Solutions</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Reopened</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Galore_Marketing_Solutions</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_on_a_Closed_Case</targetReference>
+            </connector>
+            <label>Case reopened for Galore Marketing Solutions</label>
+        </rules>
+        <rules>
+            <name>Auto_Close_Careteam_care_com_Cases</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>AutoClose</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Case_Status_to_Auto_Closed</targetReference>
+            </connector>
+            <label>Auto Close Careteam@care.com Cases</label>
+        </rules>
+        <rules>
+            <name>InternationalImprintType</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Origin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Email - Imprint</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Origin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Email - AT - Imprint</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Origin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Email - CH - Imprint</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Origin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Email - DE - Imprint</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Origin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Email - ES - Imprint</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Origin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Email - FR - Imprint</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CaseType_to_Imprint</targetReference>
+            </connector>
+            <label>InternationalImprintType</label>
+        </rules>
+        <rules>
+            <name>Safety_Closed_In_Queue</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>SafetyClosedQueue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Owner_to_MemberCare_Closed</targetReference>
+            </connector>
+            <label>Safety Closed In Queue</label>
+        </rules>
+        <rules>
+            <name>MC_Notify_BGC_Escalation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Q_Background_Check_Escalations</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Alert_for_Background_Check_Escalations</targetReference>
+            </connector>
+            <label>MC-Notify BGC Escalation</label>
+        </rules>
+        <rules>
+            <name>SC_Notify_on_SCC_Case</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>QSeniorCareConsult</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Alert_for_Senior_Care_Consult_Case</targetReference>
+            </connector>
+            <label>SC-Notify on SCC Case</label>
+        </rules>
+        <rules>
+            <name>BUC_Escalated_Q</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>BUC</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Escalated</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Origin</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>ABUC</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Origin</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Email - Nannies</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Q_BUC_Escalated</targetReference>
+            </connector>
+            <label>BUC Escalated Q</label>
+        </rules>
+        <rules>
+            <name>BUC_ABUC_Q</name>
+            <conditionLogic>1 AND 2 AND (3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>BUC</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Origin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ABUC</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Needs Review</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Escalated</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Q_ABUC</targetReference>
+            </connector>
+            <label>BUC - ABUC Q</label>
+        </rules>
+        <rules>
+            <name>Assisted_Search_Notify</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4 OR 5 OR 6) AND 7 AND 8</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contact.Email</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>AS_Child_Care</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>AS_Child_Care_Center</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>AS_Housekeeping</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>AS_Pet_Care</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>AS_Tutor</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Case_Status_Closed__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_when_Case_Status_is_Closed</targetReference>
+            </connector>
+            <label>Assisted Search Notify</label>
+        </rules>
+        <rules>
+            <name>Assisted_Search_AS_Escalations_Q</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>AS_Standard</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Escalated</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Q_AS_Escalations</targetReference>
+            </connector>
+            <label>Assisted Search AS Escalations Q</label>
+        </rules>
+        <rules>
+            <name>SC_Notify_on_Care_Plan_Type</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Care_Plan_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Custom Care Plan</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Auto-Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>On Hold</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Task_Send_Action_Plan_in_Process_email</targetReference>
+            </connector>
+            <label>SC-Notify on Care Plan Type</label>
+        </rules>
+        <rules>
+            <name>International_Email_Status_to_Auto_Closed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>AutoClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>International_Email_Status</targetReference>
+            </connector>
+            <label>International Email Status to Auto-Closed</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>AutoClose</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(ISNEW(),{!$Record.Owner:Group.DeveloperName}=&apos;Careteam_care_com_Sunset&apos;, TEXT({!$Record.Origin})=&apos;Email&apos;,{!$Record.RecordType.DeveloperName}=&apos;Standard&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>AutoClosed</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(ISNEW(),
+    {!$Record.Owner:Group.DeveloperName} =&apos;Careteam_care_com_Sunset&apos;,
+	{!$Record.RecordType.DeveloperName} =&apos;International_Email&apos;,
+	{!$Record.SuppliedEmail}&lt;&gt; &apos;message@inbound.efax.com&apos;,
+	OR(
+	  TEXT({!$Record.Origin})=&apos;Email - AU&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - ENCA&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - IE&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - NZ&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - UK&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - AT&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - DE&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - CH&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - FRBE&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - FR&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - FRCA&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - BE&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - NL&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - DK&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - NO&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - SE&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - FI&apos;,
+	  TEXT({!$Record.Origin})=&apos;Email - ES&apos;  
+))</expression>
+    </formulas>
+    <formulas>
+        <name>SafetyClosedQueue</name>
+        <dataType>Boolean</dataType>
+        <expression>AND({!$Record.IsClosed}=TRUE, NOT({!$Record.Owner:Group.DeveloperName}=&apos;Q_Legal_Escalations&apos;),
+OR(
+{!$Record.Owner:Group.Email}=&apos;fakeemail@example.com.invalid&apos;,
+{!$Record.Owner:Group.Email}=&apos;fake@e.mail&apos;
+),
+OR({!$Record.RecordType.DeveloperName}=&apos;Safety_Alert&apos;,
+     {!$Record.RecordType.DeveloperName}=&apos;International_Safety_Alert&apos;,
+     {!$Record.RecordType.DeveloperName}=&apos;Premier_Background_Check&apos;))</expression>
+    </formulas>
+    <formulas>
+        <name>TodaysDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>Case Trigger {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case After Trigger Actions</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Task_Send_Action_Plan_in_Process_email</name>
+        <label>Task - Send Action Plan in Process email</label>
+        <locationX>3218</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>TodaysDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Owner:User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>Normal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>SubjectText</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <name>Account_Email_Populate_for_LifeCare</name>
+        <label>Account Email Populate for LifeCare</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0125Y000002WGuoQAG</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Account_Email__c</field>
+            <value>
+                <elementReference>$Record.Account.PersonEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Case_Status_to_Auto_Closed</name>
+        <label>Case Status to Auto-Closed</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Sunset_Email_alert_for_Careteam_care_com</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Auto-Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>CaseType_to_Imprint</name>
+        <label>CaseType to Imprint</label>
+        <locationX>1106</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>International Imprint</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>International_Email_Status</name>
+        <label>International Email Status</label>
+        <locationX>3482</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Auto-Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>This will change ownership of the record to the queue &quot;Q: INTL BUC&quot;</description>
+        <name>Owner_Q_INTL_BUC</name>
+        <label>Owner - Q:INTL BUC</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G1O0000056HFa</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Owner_to_MemberCare_Closed</name>
+        <label>Owner to MemberCare - Closed</label>
+        <locationX>1370</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G5Y000005PcSpUAK</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Q_ABUC</name>
+        <label>Q: ABUC</label>
+        <locationX>2426</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G39000004xva0EAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Q_AS_Escalations</name>
+        <label>Q: AS Escalations</label>
+        <locationX>2954</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G39000004Uv1FEAS</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Q_BUC_Escalated</name>
+        <label>Q: BUC - Escalated</label>
+        <locationX>2162</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G5Y000006k0LCUAY</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Case_Status_Closed</name>
+        <label>Set Case Status Closed</label>
+        <locationX>2690</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Case_Status_Closed__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>1772</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Account_Email_Update</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>SubjectText</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Send Action Plan in Process email</stringValue>
+        </value>
+    </variables>
+</Flow>

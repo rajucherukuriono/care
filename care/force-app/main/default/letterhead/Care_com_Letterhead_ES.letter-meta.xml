@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#FFFFFF</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#CCCCCC</color>
+        <height>1</height>
+    </bottomLine>
+    <description>Care.com Black Logo for Spain</description>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>Images_Letterhead/FooterES_2017.png</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>Images_Letterhead/Care_com_Logo_11_6_2015.jpg</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#AAAAFF</color>
+        <height>1</height>
+    </middleLine>
+    <name>Care.com Letterhead - ES</name>
+    <topLine>
+        <color>#AAAAFF</color>
+        <height>1</height>
+    </topLine>
+</Letterhead>

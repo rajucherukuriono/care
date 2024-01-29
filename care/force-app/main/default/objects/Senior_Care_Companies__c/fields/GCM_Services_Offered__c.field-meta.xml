@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GCM_Services_Offered__c</fullName>
+    <description>Picklist values for ALCM, Home Mod provider pages</description>
+    <externalId>false</externalId>
+    <label>Services Offered</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Arrange and participate in medical appointments</fullName>
+                <default>false</default>
+                <label>Arrange and participate in medical appointments</label>
+            </value>
+            <value>
+                <fullName>Arrange/monitor in-home services</fullName>
+                <default>false</default>
+                <label>Arrange/monitor in-home services</label>
+            </value>
+            <value>
+                <fullName>Assistance w housing placement (NH, AL)</fullName>
+                <default>false</default>
+                <label>Assistance w housing placement (NH, AL)</label>
+            </value>
+            <value>
+                <fullName>Completion of Medicaid Applications</fullName>
+                <default>false</default>
+                <label>Completion of Medicaid Applications</label>
+            </value>
+            <value>
+                <fullName>Comprehensive Assessment</fullName>
+                <default>false</default>
+                <label>Comprehensive Assessment</label>
+            </value>
+            <value>
+                <fullName>Family Liaison</fullName>
+                <default>false</default>
+                <label>Family Liaison</label>
+            </value>
+            <value>
+                <fullName>Individualized Care Plan</fullName>
+                <default>false</default>
+                <label>Individualized Care Plan</label>
+            </value>
+            <value>
+                <fullName>Medication Management</fullName>
+                <default>false</default>
+                <label>Medication Management</label>
+            </value>
+            <value>
+                <fullName>Dementia cognitive testing</fullName>
+                <default>false</default>
+                <label>Dementia cognitive testing</label>
+            </value>
+            <value>
+                <fullName>Counseling</fullName>
+                <default>false</default>
+                <label>Counseling</label>
+            </value>
+            <value>
+                <fullName>Crisis intervention</fullName>
+                <default>false</default>
+                <label>Crisis intervention</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>Discharge planning</fullName>
+                <default>false</default>
+                <label>Discharge planning</label>
+            </value>
+            <value>
+                <fullName>Family conflict resolution</fullName>
+                <default>false</default>
+                <label>Family conflict resolution</label>
+            </value>
+            <value>
+                <fullName>Public benefits application</fullName>
+                <default>false</default>
+                <label>Public benefits application</label>
+            </value>
+            <value>
+                <fullName>Home care</fullName>
+                <default>false</default>
+                <label>Home care</label>
+            </value>
+            <value>
+                <fullName>Private duty nursing</fullName>
+                <default>false</default>
+                <label>Private duty nursing</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Chair/stair lift - curved</fullName>
+                <default>false</default>
+                <label>Chair/stair lift - curved</label>
+            </value>
+            <value>
+                <fullName>Chair/stair lift - straight</fullName>
+                <default>false</default>
+                <label>Chair/stair lift - straight</label>
+            </value>
+            <value>
+                <fullName>Elevator/lifts</fullName>
+                <default>false</default>
+                <label>Elevator/lifts</label>
+            </value>
+            <value>
+                <fullName>Emergency Response Systems</fullName>
+                <default>false</default>
+                <label>Emergency Response Systems</label>
+            </value>
+            <value>
+                <fullName>Grab bars/bathroom safety</fullName>
+                <default>false</default>
+                <label>Grab bars/bathroom safety</label>
+            </value>
+            <value>
+                <fullName>Safety tub/shower</fullName>
+                <default>false</default>
+                <label>Safety tub/shower</label>
+            </value>
+            <value>
+                <fullName>Wheelchair ramp</fullName>
+                <default>false</default>
+                <label>Wheelchair ramp</label>
+            </value>
+            <value>
+                <fullName>Widen doorways</fullName>
+                <default>false</default>
+                <label>Widen doorways</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

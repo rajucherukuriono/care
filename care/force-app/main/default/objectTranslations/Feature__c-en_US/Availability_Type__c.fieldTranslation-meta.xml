@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Availability_Type__c</name>
+    <picklistValues>
+        <masterLabel>Contact Salesforce to enable</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enabled for administrators/​developers</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enabled for users</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Requires administrator setup</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

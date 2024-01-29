@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <description>source of the information about this feature</description>
+    <externalId>false</externalId>
+    <label>Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Release Notes</fullName>
+                <default>true</default>
+                <label>Release Notes</label>
+            </value>
+            <value>
+                <fullName>Notification message</fullName>
+                <default>false</default>
+                <label>Notification message</label>
+            </value>
+            <value>
+                <fullName>Critical Messages</fullName>
+                <default>false</default>
+                <label>Critical Messages</label>
+            </value>
+            <value>
+                <fullName>A. Executives</fullName>
+                <default>false</default>
+                <label>A. Executives</label>
+            </value>
+            <value>
+                <fullName>Help and Training</fullName>
+                <default>false</default>
+                <label>Help and Training</label>
+            </value>
+            <value>
+                <fullName>Success Community</fullName>
+                <default>false</default>
+                <label>Success Community</label>
+            </value>
+            <value>
+                <fullName>Technical Support</fullName>
+                <default>false</default>
+                <label>Technical Support</label>
+            </value>
+            <value>
+                <fullName>Release Readiness</fullName>
+                <default>false</default>
+                <label>Release Readiness</label>
+            </value>
+            <value>
+                <fullName>Training and Certification</fullName>
+                <default>false</default>
+                <label>Training and Certification</label>
+            </value>
+            <value>
+                <fullName>Web</fullName>
+                <default>false</default>
+                <label>Web</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

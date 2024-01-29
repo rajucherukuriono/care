@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>LifeCare_CSAT_Survey</name>
+        <label>LifeCare CSAT Survey</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>LifeCare_Survey_satisfied</name>
+            <conditionLogic>1 AND (NOT(2 OR 3))</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>LifeCare_Case_Survey</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Overall_satisfaction__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Dissatisfied</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Overall_satisfaction__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Very Dissatisfied</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>LifeCare_Survey_Feedback_Close</targetReference>
+            </connector>
+            <label>LifeCare Survey - satisfied</label>
+        </rules>
+        <rules>
+            <name>LifeCare_Survey_Dissatisfied</name>
+            <conditionLogic>1 AND (2 OR 3) and 4</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>LifeCare_Case_Survey</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Overall_satisfaction__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Dissatisfied</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Overall_satisfaction__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Very Dissatisfied</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.QA_Review_Comments__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>LifeCare_CSAT_Survey_QA_Status_Open</targetReference>
+            </connector>
+            <label>LifeCare Survey - Dissatisfied</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>SurveyFeedback - LifeCare Negative CSAT {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SurveyFeedback - LifeCare Negative CSAT Survey</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>LifeCare_CSAT_Survey_QA_Status_Open</name>
+        <label>LifeCare CSAT Survey QA Status Open</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Assign_To__c</field>
+            <value>
+                <elementReference>AmyBorecki</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>QA_Status__c</field>
+            <value>
+                <stringValue>Pending</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>LifeCare_Survey_Feedback_Close</name>
+        <label>LifeCare Survey Feedback Close</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>QA_Status__c</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>LifeCare_CSAT_Survey</targetReference>
+        </connector>
+        <object>Survey_Feedback__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>AmyBorecki</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>0055Y00000HeojP</stringValue>
+        </value>
+    </variables>
+</Flow>

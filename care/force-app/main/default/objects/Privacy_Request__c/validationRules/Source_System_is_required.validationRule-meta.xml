@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_System_is_required</fullName>
+    <active>true</active>
+    <description>Privacy Requests require a source system, since each system has different business logic.</description>
+    <errorConditionFormula>ISBLANK(TEXT(Source_System__c))</errorConditionFormula>
+    <errorDisplayField>Source_System__c</errorDisplayField>
+    <errorMessage>Source System is required</errorMessage>
+</ValidationRule>

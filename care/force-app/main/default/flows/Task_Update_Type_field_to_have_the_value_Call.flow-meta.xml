@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>This is for Tasks created by the Zoom integration.  Any new Tasks will have a value of &quot;Call&quot; applied to the Type field.</description>
+    <environments>Default</environments>
+    <interviewLabel>Task - Update Type field to have the value Call {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Task - Update Type field to have the value Call</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update the Task field &quot;Type&quot; to have the value &quot;Call&quot;</description>
+        <name>Update_Task_field_Type_value_to_be_Call</name>
+        <label>Update Task field Type value to be Call</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Call</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Task_field_Type_value_to_be_Call</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>CallType</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <object>Task</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

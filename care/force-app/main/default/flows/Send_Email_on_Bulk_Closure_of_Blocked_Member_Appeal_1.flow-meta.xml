@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>myRule_1_A1</name>
+        <label>Blocklist Appeal Closed- Email Address Not Linked to Account</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <actionName>Case.Email_upon_Blocklist_Member_Appeal_Auto_Close</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Email_upon_Blocklist_Member_Appeal_Auto_Close</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>Meets_Criteria</name>
+        <label>Meets Criteria</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>1 AND (2 OR 3) AND 4 AND 5 AND 6</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Standard</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>International Email</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Blocked Member Appeal</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Member_ID__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Setup.Override_Validation_Rules__c.Override_Case_Processes__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Migrated from the Send Email on Bulk Closure of Blocked Member Appeal process using Auto Close Blocked Member Appeal Case criteria.</description>
+    <environments>Default</environments>
+    <label>Send Email on Bulk Closure of Blocked Member Appeal_1</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Meets_Criteria</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

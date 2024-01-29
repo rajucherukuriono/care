@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SF Jira Tracker Create/Delete Access, used by PL  (Product Liaison) Team on Membercare side</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SF_Jira_Tracker__c.Jira_Resolution_Summary__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SF_Jira_Tracker__c.Jira_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SF_Jira_Tracker__c.Jira_Subject__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SF Jira Tracker Create/Delete Access</label>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>SF_Jira_Tracker__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <tabSettings>
+        <tab>SF_Jira_Tracker__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>

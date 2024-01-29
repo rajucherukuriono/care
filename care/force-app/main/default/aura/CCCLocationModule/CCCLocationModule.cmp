@@ -1,0 +1,152 @@
+<aura:component controller="CCCLocationController"  extends="c:CCCModuleBase">
+
+    <aura:dependency resource="markup://c:CCCSortableTableColumn" />
+    <aura:dependency resource="markup://c:CCCLocationMapModal" />
+
+    <!-- Public Attributes -->
+    <aura:attribute name="confirmSaveClicked" type="Boolean" default="false" access="public" />
+
+    <!-- Private Attributes -->
+    <aura:attribute name="opportunityRecord" type="Opportunity" access="private" />
+    <aura:attribute name="accountRecord" type="Account" access="private" />
+    <aura:attribute name="locationRecords" type="List" default="[]" access="private" />
+    <aura:attribute name="locationRecord" type="Opportunity_Service_Area__c" access="private" />
+    <aura:attribute name="composerServiceRecords" type="List" access="private" />
+    <aura:attribute name="primaryServiceVerticalName" type="String" access="private" />
+    <aura:attribute name="mapBoxApiKey" type="String" access="private" />
+    <aura:attribute name="addLocationEnabled" type="Boolean" default="true" access="private" />
+    <aura:attribute name="provinceOptions" type="List" default="[]" access="private" />
+    <aura:attribute name="enableAdditionalServices" type="Boolean" default="false" access="private" />
+    <aura:attribute name="stateAbbreviationMap" type="Object" default="{}" access="private" />
+    <aura:attribute name="addLocationLock" type="Boolean" default="false" access="private" />
+
+    <!-- CCCSortableTableColumn attributes -->
+    <aura:attribute name="sortField" type="String" default="Name" access="private" />
+    <aura:attribute name="sortDirection" type="String" default="ascending" access="private" />
+
+    <!-- Init -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <!-- Main Body -->
+    <div>
+
+        <!-- Don't allow locations to be added if a primary service has not been selected -->
+        <aura:if isTrue="{!empty(v.opportunityRecord.Composer_Service__c)}">
+
+            <div class="slds-grid slds-grid_align-center slds-grid_vertical-align-center slds-p-around_medium">
+                <div class="slds-col slds-grow-none slds-p-right_medium">
+                    <lightning:icon iconName="utility:info" alternativeText="warning" size="large" />
+                </div>
+                <div class="slds-col slds-grow-none">
+                    <p class="slds-text-heading_small">Please select a service before adding a location.</p>
+                </div>
+            </div>
+
+        </aura:if>
+
+        <aura:if isTrue="{!not(empty(v.opportunityRecord.Composer_Service__c))}">
+            <!-- Table -->
+            <div class="slds-m-top_large">
+                <div class="slds-grid slds-grid_vertical-align-start slds-gutters_direct slds-wrap">
+
+                    <div class="slds-col slds-size_4-of-4 slds-grid slds-grid_align-spread">
+                        <div class="slds-col">
+                            <span class="slds-text-heading_small">Locations</span>
+                        </div>
+                        <div class="slds-col">
+                            <aura:if isTrue="{!v.addLocationLock}">
+                                <lightning:button variant="brand" iconName="utility:add" iconPosition="left" label="Add Location"
+                                onclick="{!c.handleAddLocationClicked}" disabled="{!v.addLocationLock}"/>
+                            
+                            <aura:set attribute="else">
+                                <lightning:button variant="brand" iconName="utility:add" iconPosition="left" label="Add Location"
+                                onclick="{!c.handleAddLocationClicked}" disabled="{!equals(v.allowEdit,false)}"/>
+                            </aura:set>
+                        </aura:if>
+                        </div>
+                    </div>
+
+                    <div class="slds-col slds-size_4-of-4 slds-m-top_medium">
+
+                        <table class="slds-table slds-table_bordered slds-border_right slds-border_left" role="grid">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+
+                                    <!-- Column Header - Name -->
+                                    <c:CCCSortableTableColumn title="Name" field="name"
+                                        sortField="{!v.sortField}" sortDirection="{!v.sortDirection}"
+                                        onsort="{!c.handleSortLocations}" />
+
+                                    <!-- Column Header - Postal Codes -->
+                                    <th class="slds-text-title_caps" scope="col">
+                                        <div class="slds-p-around_x-small" title="Postal Codes">Postal Codes</div>
+                                    </th>
+
+                                    <!-- Column Header - Additional Services -->
+                                    <aura:if isTrue="{!v.enableAdditionalServices}">
+                                        <th class="slds-text-title_caps" scope="col">
+                                            <div class="slds-p-around_x-small" title="Additional Services">Additional Services</div>
+                                        </th>
+                                    </aura:if>
+
+                                    <!-- Column Header - Actions -->
+                                    <th aria-label="Actions" aria-sort="none" class="slds-text-title_caps" scope="col">
+                                        <div>&nbsp;</div>
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <aura:iteration items="{!v.locationRecords}" var="location">
+                                    <tr class="slds-hint-parent">
+
+                                        <!-- Name -->
+                                        <th scope="row" tabindex="0">
+                                            <div class="slds-truncate slds-p-around_x-small">
+                                                {!location.Name}
+                                            </div>
+                                        </th>
+
+                                        <!-- Postal Codes -->
+                                        <td role="gridcell" scope="col" class="slds-cell-wrap">
+                                            <div class="slds-wrap slds-p-around_x-small">
+                                                {!location.Postal_Codes__c}
+                                            </div>
+                                        </td>
+
+                                        <!-- Additional Service Names -->
+                                        <aura:if isTrue="{!v.enableAdditionalServices}">
+                                            <td role="gridcell" scope="col" class="slds-cell-wrap">
+                                                <div class="slds-wrap slds-p-around_x-small">
+                                                    {!location.additionalServiceNames}
+                                                </div>
+                                            </td>
+                                        </aura:if>
+
+                                        <!-- Actions -->
+                                        <td role="gridcell">
+                                            <div class="slds-p-around_x-small slds-text-align_right">
+                                                <lightning:button variant="brand" label="Modify" iconName="utility:edit"
+                                                    iconPosition="left" onclick="{!c.handleModifyLocationClicked}"
+                                                    value="{!location.Id}" disabled="{!not(v.allowEdit)}"
+                                                    class="slds-m-horizontal_xx-small"/>
+                                                <lightning:button variant="destructive" label="Delete" iconName="utility:delete"
+                                                    iconPosition="left" onclick="{!c.handleDeleteLocationClicked}"
+                                                    value="{!location.Id}" disabled="{!not(v.allowEdit)}" />
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </aura:iteration>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+
+    </div>
+
+</aura:component>

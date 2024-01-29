@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <decisions>
+        <description>Checks whether an account Id has been found or not</description>
+        <name>Does_Account_ID_exist</name>
+        <label>Does Account ID exist</label>
+        <locationX>590</locationX>
+        <locationY>51</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Account_ID_found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Lookup_Account_ID</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Survey_Feedback_AccountID</targetReference>
+            </connector>
+            <label>Account ID found</label>
+        </rules>
+        <rules>
+            <name>Account_ID_not_found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Lookup_Account_ID</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Account ID not found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision. A task will be created, if the member wants contact.</description>
+        <name>Does_Member_wants_contact</name>
+        <label>Does Member wants contact</label>
+        <locationX>1036</locationX>
+        <locationY>265</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Member_wants_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varWantsContact</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>YES</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lookup_Task_settings</targetReference>
+            </connector>
+            <label>Member wants Contact</label>
+        </rules>
+    </decisions>
+    <description>Lookup AccountID from MemberID for BUC US Surveys. SFORCE-2425</description>
+    <interviewLabel>Lookup AccountID from MemberID {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lookup AccountID from MemberID</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create a follow up task for Kelly Jones , if BUC member wants to be contacted.</description>
+        <name>Create_task</name>
+        <label>Create task</label>
+        <locationX>308</locationX>
+        <locationY>263</locationY>
+        <assignRecordIdToReference>varTaskId</assignRecordIdToReference>
+        <inputAssignments>
+            <field>Contact_Name__c</field>
+            <value>
+                <elementReference>varContactID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>varEmailRecipients</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>Normal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>varTaskRecordtype</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>BUC Survey - Member wants contact</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>varSurveyFeedbackID</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordCreates>
+    <recordLookups>
+        <description>Looks for the Account ID of the member that submitted the survey</description>
+        <name>Lookup_Account_ID</name>
+        <label>Lookup Account ID</label>
+        <locationX>284</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Does_Account_ID_exist</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>MemberID__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varMemberIDNumber</elementReference>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <outputAssignments>
+            <assignToReference>varAccountID</assignToReference>
+            <field>AccountId</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>varContactID</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>varMemberFullName</assignToReference>
+            <field>Name</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <description>Lookup the settings for creating a task (assignee and record type, name)</description>
+        <name>Lookup_Task_settings</name>
+        <label>Lookup Task settings</label>
+        <locationX>613</locationX>
+        <locationY>265</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_task</targetReference>
+        </connector>
+        <object>BUC_US_Survey_Task_Assignment__mdt</object>
+        <outputAssignments>
+            <assignToReference>varEmailRecipients</assignToReference>
+            <field>Task_assignee_ID__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>varTaskRecordtype</assignToReference>
+            <field>Task_record_type__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <description>Updates the Account field on the survey feedback record.</description>
+        <name>Update_Survey_Feedback_AccountID</name>
+        <label>Update Survey Feedback AccountID</label>
+        <locationX>1044</locationX>
+        <locationY>54</locationY>
+        <connector>
+            <targetReference>Does_Member_wants_contact</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>BUC_Account_ID__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varSurveyFeedbackID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>BUC_Account_ID__c</field>
+            <value>
+                <elementReference>varAccountID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Member_Full_Name__c</field>
+            <value>
+                <elementReference>varMemberFullName</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Survey_Feedback__c</object>
+    </recordUpdates>
+    <startElementReference>Lookup_Account_ID</startElementReference>
+    <status>Obsolete</status>
+    <variables>
+        <description>Holds the AccountID found in Lookup</description>
+        <name>varAccountID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Holds the name of the Flow</description>
+        <name>varCallingFlowName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Holds the contact ID of the member</description>
+        <name>varContactID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Holds the Email Recipients</description>
+        <name>varEmailRecipients</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Holds the full name of the member taken from the account</description>
+        <name>varMemberFullName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Holds the member Id submitted with the survey</description>
+        <name>varMemberID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Holds the Member ID in Number format</description>
+        <name>varMemberIDNumber</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <description>Holds the OrgName</description>
+        <name>varOrgName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Holds the ID of the Survey Feedback, that started the process and the flow.</description>
+        <name>varSurveyFeedbackID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Holds the Id of the task created.</description>
+        <name>varTaskId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Holds the Record type ID of the task that should be created (Default)</description>
+        <name>varTaskRecordtype</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Holds the answer, if the member wants to be contacted by the team. Needed as criteria for task creation.</description>
+        <name>varWantsContact</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

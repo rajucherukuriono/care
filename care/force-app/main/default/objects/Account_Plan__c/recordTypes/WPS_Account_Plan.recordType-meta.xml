@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WPS_Account_Plan</fullName>
+    <active>true</active>
+    <description>This is used by  WPS team</description>
+    <label>WPS Account Plan</label>
+    <picklistValues>
+        <picklist>Cross_Functional_Opportunities__c</picklist>
+        <values>
+            <fullName>CSR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channel Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Homepay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Homestart</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

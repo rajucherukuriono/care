@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Behaviors_conditions_cant_accommodate__c</fullName>
+    <externalId>false</externalId>
+    <label>Behaviors/conditions cannot accommodate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Exit-seeking</fullName>
+                <default>false</default>
+                <label>Exit-seeking</label>
+            </value>
+            <value>
+                <fullName>Verbal or physical agression</fullName>
+                <default>false</default>
+                <label>Verbal or physical agression</label>
+            </value>
+            <value>
+                <fullName>Feeding tube</fullName>
+                <default>false</default>
+                <label>Feeding tube</label>
+            </value>
+            <value>
+                <fullName>Ventilator</fullName>
+                <default>false</default>
+                <label>Ventilator</label>
+            </value>
+            <value>
+                <fullName>Late stage Alzheimer&apos;s</fullName>
+                <default>false</default>
+                <label>Late stage Alzheimer&apos;s</label>
+            </value>
+            <value>
+                <fullName>Two person transfer</fullName>
+                <default>false</default>
+                <label>Two person transfer</label>
+            </value>
+            <value>
+                <fullName>Bed bound</fullName>
+                <default>false</default>
+                <label>Bed bound</label>
+            </value>
+            <value>
+                <fullName>Wheelchairs</fullName>
+                <default>false</default>
+                <label>Wheelchairs</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <narrowComponents>standard-CreateNew</narrowComponents>
+    <narrowComponents>Anonymize GDPR</narrowComponents>
+    <narrowComponents>Precheck GDPR</narrowComponents>
+    <narrowComponents>Stop GDPR</narrowComponents>
+    <narrowComponents>standard-RecentItems</narrowComponents>
+    <narrowComponents>standard-UsefulLinks</narrowComponents>
+    <narrowComponents>Refresh</narrowComponents>
+    <narrowComponents>standard-MessagesAndAlerts</narrowComponents>
+    <wideComponents>OrgNotes</wideComponents>
+    <wideComponents>standard-Dashboard</wideComponents>
+    <wideComponents>standard-Calendar</wideComponents>
+    <wideComponents>standard-ProcessWorkitems</wideComponents>
+    <wideComponents>standard-Tasks</wideComponents>
+    <wideComponents>Safety Next Case</wideComponents>
+    <wideComponents>standard-PendingInterviews</wideComponents>
+</HomePageLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Researcher: Daily Needs</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>LifeCare</publicGroup>
+        </publicGroups>
+        <roles>
+            <role>SystemAdmin</role>
+        </roles>
+        <users>
+            <user>bokai.lu@care.com</user>
+            <user>courtney.leonard@care.com</user>
+            <user>samantha.ives@care.com</user>
+            <user>shazia.nagi@care.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

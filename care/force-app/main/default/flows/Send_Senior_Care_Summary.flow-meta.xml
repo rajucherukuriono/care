@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Email the &quot;EmailTemplateAssistedLiving&quot; if the record&apos;s Record Type is &quot;Assisted Living&quot;</description>
+        <name>Assisted_Living_Communities_Email_Alert</name>
+        <label>Assisted Living Communities Email Alert</label>
+        <locationX>182</locationX>
+        <locationY>566</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Confirmation_Screen_0</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailTemplateAssistedLiving</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$User.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Senior Care Provider Option - {!Senior_Care_Company_record.Company_Name__c}</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <description>Email the &quot;EmailTemplateNursingHome&quot; if the record&apos;s Record Type is &quot;Nursing Home&quot;</description>
+        <name>Nursing_Home_Email_Alert</name>
+        <label>Nursing Home Email Alert</label>
+        <locationX>663</locationX>
+        <locationY>565</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Confirmation_Screen_0</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailTemplateNursingHome</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$User.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Senior Care Provider Option - {!Senior_Care_Company_record.Company_Name__c}</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <description>This decision will determine which Email Alert needs to be sent out depending on the Record Type of the Record that triggered the Flow.</description>
+        <name>Find_Record_Type</name>
+        <label>Find Record Type</label>
+        <locationX>446</locationX>
+        <locationY>446</locationY>
+        <defaultConnectorLabel>Default</defaultConnectorLabel>
+        <rules>
+            <name>Assisted_Living_Communities</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Senior_Care_Company_record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Assisted Living Communities</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assisted_Living_Communities_Email_Alert</targetReference>
+            </connector>
+            <label>Assisted Living Communities</label>
+        </rules>
+        <rules>
+            <name>Nursing_Homes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Senior_Care_Company_record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Nursing Homes</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Nursing_Home_Email_Alert</targetReference>
+            </connector>
+            <label>Nursing Homes</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Send {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Email Provider Profile</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Senior_Care_Company_record</name>
+        <label>Senior Care Company record</label>
+        <locationX>446</locationX>
+        <locationY>206</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Proceed_Screen</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Senior_Care_Companies__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>Confirmation_Screen_0</name>
+        <label>Confirmation Screen</label>
+        <locationX>445</locationX>
+        <locationY>785</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Confirmation_Dialogue_0</name>
+            <fieldText>&lt;p&gt;The email has been sent.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Proceed_Screen</name>
+        <label>Proceed Screen</label>
+        <locationX>446</locationX>
+        <locationY>326</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Find_Record_Type</targetReference>
+        </connector>
+        <fields>
+            <name>Display_text</name>
+            <fieldText>&lt;p&gt;Do you want to email a Profile record?&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>320</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Senior_Care_Company_record</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <description>Email Template for records with Record Type &quot;Assisted Living&quot;</description>
+        <name>EmailTemplateAssistedLiving</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;strong style=&quot;font-size: 12px;&quot;&gt;&lt;u&gt;Provider Type&lt;/u&gt;&lt;/strong&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.Provider_Type__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 12px;&quot;&gt;Contact Information&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Name&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:   {!Senior_Care_Company_record.Company_Name__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Phone&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:  {!Senior_Care_Company_record.Phone__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Website&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:   {!Senior_Care_Company_record.Company_Website__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Address&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:   {!Senior_Care_Company_record.Address_Line_1__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;City&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:   {!Senior_Care_Company_record.City__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;State&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:   {!Senior_Care_Company_record.State__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Zip Code&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:   {!Senior_Care_Company_record.Zip_Code__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Primary Contact&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:  {!Senior_Care_Company_record.Primary_Contact__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Primary Contact&apos;s Title&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:  {!Senior_Care_Company_record.Primary_Contact_Title__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px; color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;Primary Contact&apos;s Phone&lt;/u&gt;&lt;span style=&quot;font-size: 12px; color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;: {!Senior_Care_Company_record.Primary_Contact_Phone__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Primary Contact’s Email&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:  {!Senior_Care_Company_record.Primary_Contact_Email__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 12px;&quot;&gt;Vetting&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;State Specific Information&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.State_specific_information__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Passed Vetting&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.Passed_Vetting_all__c} &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Vetting Findings&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:  {!Senior_Care_Company_record.Comments__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;BBB rating&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.BBB_Rating__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 12px;&quot;&gt;Rates&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;One-time community fee&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.Community_fee__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Traditional assisted living shared studio&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;{!Senior_Care_Company_record.AL_Shared_studio__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Traditional assisted living private studio&lt;/u&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;: {!Senior_Care_Company_record.Studio__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Traditional assisted living one-bedroom&lt;/u&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;: {!Senior_Care_Company_record.One_bedroom__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Memory care private studio&lt;/u&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;: {!Senior_Care_Company_record.Special_care_unit_private_studio__c} &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Memory care shared studio&lt;/u&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;: {!Senior_Care_Company_record.Special_care_unit_shared__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Personal care services&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;font-size: 12px; color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;{!Senior_Care_Company_record.Personal_care_services__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Medication management&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:  {!Senior_Care_Company_record.Medication_management1__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Other amenities/fees&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.Other_amenities_fees__c}&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Email Template for records with Record Type Nursing Home</description>
+        <name>EmailTemplateNursingHome</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;u&gt;Provider Type&lt;/u&gt;&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.Provider_Type__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;Contact Information&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Name&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:   {!Senior_Care_Company_record.Company_Name__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Phone&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:  {!Senior_Care_Company_record.Phone__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Website&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:   {!Senior_Care_Company_record.Company_Website__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Address&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:   {!Senior_Care_Company_record.Address_Line_1__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;City&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:   {!Senior_Care_Company_record.City__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;State&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:   {!Senior_Care_Company_record.State__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Zip Code&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:   {!Senior_Care_Company_record.Zip_Code__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Primary Contact&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:  {!Senior_Care_Company_record.Primary_Contact__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Primary Contact&apos;s Title&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:  {!Senior_Care_Company_record.Primary_Contact_Title__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;background-color: rgb(255, 255, 255); font-size: 12px;&quot;&gt;Primary Contact&apos;s Phone&lt;/u&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.Primary_Contact_Phone__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Primary Contact’s Email&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:  {!Senior_Care_Company_record.Primary_Contact_Email__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;Vetting&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Vetting Results&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.GCM_1_Passed_Vetting__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Vetting Findings&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:  {!Senior_Care_Company_record.Comments__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Overall star rating on Medicare.gov (out of five stars)&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.Overall_Rating__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Fines/Payment Denials in the last 3 years?&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.Fines_Payment_Denials_last_3years__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;If Yes, details&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.Fines_Payment_Denials_Details__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Details of deficiencies from the last 3 years&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;:{!Senior_Care_Company_record.Details_Deficiences_Last_3years__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;Rates&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Private room rate&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.Private_room_rate__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Semi-private room rate&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.Semi_private_room_rate__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;General Information&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Beds currently available?&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.Beds_currently_available__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;u style=&quot;font-size: 12px;&quot;&gt;Payment Options&lt;/u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;: {!Senior_Care_Company_record.Payment_Options__c}&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <variables>
+        <description>Stores the Id of the record that launched the flow.</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>RecordType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

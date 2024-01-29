@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Schedule_Mode__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked when GDPR in Schedule run mode</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Check to GDPR in Schedule Mode</inlineHelpText>
+    <label>Schedule Mode</label>
+    <type>Checkbox</type>
+</CustomField>

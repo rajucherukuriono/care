@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <name>Created_By</name>
+        <label>Created By</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Cretaed_BY</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Parent.OwnerId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.CreatedById</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Parent.OwnerId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>005</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Parent.Owner:User.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Setup.Override_Validation_Rules__c.Override_Case_Processes__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Last_Comment_on_Case_Record</targetReference>
+            </connector>
+            <label>Cretaed BY</label>
+        </rules>
+    </decisions>
+    <description>This rule determines whether the Case Owner should be notified about a new Case Comment.  Current logic includes: preventing alerts when Cases are owned by queues or when Comments are added by the owner of the case.</description>
+    <environments>Default</environments>
+    <interviewLabel>Determine whether Case Owner should be alerted about new Case Comment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Determine whether Case Owner should be alerted about new Case Comment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Last_Comment_on_Case_Record</name>
+        <label>Update Last Comment on Case Record</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <inputAssignments>
+            <field>Last_Comment__c</field>
+            <value>
+                <elementReference>$Record.CommentBody</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Parent</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Created_By</targetReference>
+        </connector>
+        <object>CaseComment</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

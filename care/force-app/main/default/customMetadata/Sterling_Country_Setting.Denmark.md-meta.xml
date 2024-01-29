@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Denmark</label>
+    <protected>false</protected>
+    <values>
+        <field>Apply_to_Jobs__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Case_Origin__c</field>
+        <value xsi:type="xsd:string">Email - DK</value>
+    </values>
+    <values>
+        <field>Country_Code__c</field>
+        <value xsi:type="xsd:string">dk</value>
+    </values>
+    <values>
+        <field>Http_Request_Time_Out__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Join_Now__c</field>
+        <value xsi:type="xsd:string">https://www.care.com/da-dk/join-now</value>
+    </values>
+    <values>
+        <field>Language__c</field>
+        <value xsi:type="xsd:string">Danish</value>
+    </values>
+    <values>
+        <field>Locale__c</field>
+        <value xsi:type="xsd:string">da_DK</value>
+    </values>
+    <values>
+        <field>Login__c</field>
+        <value xsi:type="xsd:string">https://www.care.com/da-dk/login</value>
+    </values>
+    <values>
+        <field>Password__c</field>
+        <value xsi:type="xsd:string">RfxdLT6i</value>
+    </values>
+    <values>
+        <field>Production_URL_Root__c</field>
+        <value xsi:type="xsd:string">www.care.com/da-dk</value>
+    </values>
+    <values>
+        <field>QA_Email__c</field>
+        <value xsi:type="xsd:string">surya.saride@care.com</value>
+    </values>
+    <values>
+        <field>Staging_URL_Root__c</field>
+        <value xsi:type="xsd:string">intl-stg3.care.com/da-dk</value>
+    </values>
+    <values>
+        <field>Upgrade__c</field>
+        <value xsi:type="xsd:string">https://www.care.com/da-dk/my-account/billing/upgrade</value>
+    </values>
+    <values>
+        <field>User_Name__c</field>
+        <value xsi:type="xsd:string">stg3</value>
+    </values>
+</CustomMetadata>

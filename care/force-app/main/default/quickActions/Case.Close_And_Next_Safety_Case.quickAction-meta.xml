@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>A Visual Force Action built for the Safety Team.  But they don&apos;t really want this since most of their cases are closed in the CSR.  I replaced it with a standard Close Case action.  This Action can be deleted.</description>
+    <height>450</height>
+    <label>Close Case</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <page>Next_Safety_Close_Case</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Round_Robin_required_fields</fullName>
+    <active>true</active>
+    <description>ensure default Round Robin contains all necesary fields</description>
+    <errorConditionFormula>AND( 
+    Default_Round_Robin__c,
+    NOT ISBLANK(Vertical__c)
+
+)</errorConditionFormula>
+    <errorMessage>Keep Vertical blank for Default Round Robin</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_Opportunities_Offered__c</fullName>
+    <description>Sforce 2497</description>
+    <externalId>false</externalId>
+    <inlineHelpText>List the training opportunities offered to employees</inlineHelpText>
+    <label>Training Opportunities Offered</label>
+    <length>5000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

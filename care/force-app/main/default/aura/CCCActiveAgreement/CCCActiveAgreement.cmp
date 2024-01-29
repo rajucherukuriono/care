@@ -1,0 +1,315 @@
+<aura:component controller="CCCActiveAgreementController" implements="flexipage:availableForRecordHome"
+    extends="c:CCCBase">
+
+    <!-- Aura Dependencies -->
+    <aura:dependency resource="markup://c:CCCActiveAgreementModifyLocationModal" />
+    <aura:dependency resource="markup://c:CCCActiveAgreementModifyReviewModal" />
+    <aura:dependency resource="markup://c:CCCConfirmationModal" />
+
+    <!-- Aura Attributes - Public Attributes -->
+    <aura:attribute name="locationRecord" type="Map" access="public" />
+    <aura:attribute name="confirmSaveClicked" type="Boolean" default="false" access="public" />
+    <aura:attribute name="confirmCancelAgreementClicked" type="Boolean" default="false" access="public" />
+
+    <!-- Aura Attributes - Private -->
+    <aura:attribute name="showCancelAgreementButton" type="Boolean" access="private" default="false" />
+    <aura:attribute name="showModifyLocationButton" type="Boolean" access="private" default="false" />
+    <aura:attribute name="accountRecord" type="Account" access="private" />
+    <aura:attribute name="businessRecord" type="Map" default="{}" />
+    <aura:attribute name="reviewRecords" type="List" access="private" />
+    <aura:attribute name="locationRecords" type="List" access="private" />
+
+    <!-- Review Modal Attributes -->
+    <aura:attribute name="reviewRecord" type="Map" access="public" />
+
+    <!-- Init -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <div class="slds-p-around_medium">
+
+        <aura:if isTrue="{!not(empty(v.locationRecords))}">
+
+            <!-- Locations -->
+            <div class="activeAgreementDiv">
+                <div class="slds-grid slds-grid_vertical-align-start slds-gutters_direct slds-wrap">
+
+                    <div class="slds-col slds-size_4-of-4 slds-grid slds-grid_align-spread">
+                        <div class="slds-col">
+                            <span class="slds-text-heading_small">Locations</span>
+                        </div>
+                        <div class="slds-col">
+
+                            <!-- Button - Cancel Leads -->
+                            <aura:if isTrue="{! equals(v.showCancelAgreementButton, true)}">
+                                <aura:if
+                                    isTrue="{!and(not(empty(v.businessRecord)), not(empty(v.businessRecord.sales_contract_uuid)))}">
+                                    <lightning:button variant="destructive" label="Cancel Leads"
+                                        iconName="utility:close" iconPosition="left"
+                                        onclick="{!c.onCancelLeadsClick}" />
+                                </aura:if>
+                            </aura:if>
+                        </div>
+                    </div>
+
+                    <div class="slds-col slds-size_4-of-4 slds-m-top_medium">
+
+                        <table class="slds-table slds-table_bordered slds-border_right slds-border_left" role="grid">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+
+                                    <!-- Column Header - Location -->
+                                    <th class="slds-text-title_caps" scope="col">
+                                        <div class="slds-truncate slds-p-around_x-small" title="Location">Location
+                                        </div>
+                                    </th>
+
+                                    <!-- Column Header - Address -->
+                                    <th class="slds-text-title_caps" scope="col">
+                                        <div class="slds-truncate slds-p-around_x-small" title="Address">Address
+                                        </div>
+                                    </th>
+
+                                    <!-- Column Header - Advertising Spend -->
+                                    <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                                        <div class="slds-truncate slds-p-around_x-small" title="Advertising Spend">
+                                            Advertising
+                                            Spend
+                                        </div>
+                                    </th>
+
+                                    <!-- Column Header - Services -->
+                                    <th class="slds-text-title_caps" scope="col">
+                                        <div class="slds-truncate slds-p-around_x-small" title="Services">Services</div>
+                                    </th>
+
+                                    <!-- Column Header - Status -->
+                                    <th class="slds-text-title_caps slds-text-align_center" scope="col">
+                                        <div class="slds-truncate slds-p-around_x-small" title="Status">Status</div>
+                                    </th>
+
+                                    <!-- Column Header - Actions -->
+                                    <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                                        <div class="slds-truncate slds-p-around_x-small" title="Actions">&nbsp;</div>
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <aura:iteration items="{!v.locationRecords}" var="location">
+                                    <tr class="slds-hint-parent">
+
+                                        <!-- Location -->
+                                        <th scope="row" tabindex="0">
+                                            <div class="slds-truncate slds-p-around_x-small">
+                                                {!location.name}
+                                            </div>
+                                        </th>
+
+                                        <!-- Address -->
+                                        <td role="gridcell" scope="col" class="slds-cell-wrap">
+                                            <div class="slds-wrap slds-p-around_x-small">
+                                                <lightning:formattedAddress street="{! if(not(empty(location.address.line2)), join(' ',location.address.line1,
+                                        location.address.line2), location.address.line1)}"
+                                                    city="{!location.address.city}" province="{!location.address.state}"
+                                                    postalCode="{!location.address.postal}" disabled="true" />
+                                            </div>
+                                        </td>
+
+                                        <!-- Advertising Spend -->
+                                        <td role="gridcell" scope="col">
+                                            <div class="slds-truncate slds-p-around_x-small slds-text-align_right">
+                                                <lightning:formattedNumber
+                                                    value="{!location.monthly_advertising_budget}" style="currency"
+                                                    currencyCode="{!location.currencyCode}" />
+                                            </div>
+                                        </td>
+
+                                        <!-- Services -->
+                                        <td role="gridcell" scope="col">
+                                            <div class="slds-truncate slds-p-around_x-small capitalize">
+                                                {!location.offeringNames}
+                                            </div>
+                                        </td>
+
+                                        <!-- Status -->
+                                        <td role="gridcell" scope="col">
+                                            <div
+                                                class="slds-truncate slds-p-around_x-small capitalize slds-text-align_center">
+
+                                                <!-- Active -->
+                                                <aura:if isTrue="{!equals(location.active, true)}">
+                                                    <lightning:icon iconName="utility:check" alternativeText="Active"
+                                                        size="small" title="Active" variant="Success" />
+                                                </aura:if>
+
+                                                <!-- Inactive -->
+                                                <aura:if isTrue="{!equals(location.active, false)}">
+                                                    <lightning:icon iconName="utility:close" alternativeText="Inactive"
+                                                        size="small" title="Inactive" variant="error" />
+                                                </aura:if>
+
+                                            </div>
+                                        </td>
+
+                                        <!-- Actions -->
+                                        <td role="gridcell">
+                                            <div class="slds-p-around_x-small slds-text-align_right">
+
+                                                <aura:if isTrue="{!equals(v.showModifyLocationButton,true)}">
+
+                                                    <!-- Modify -->
+                                                    <lightning:button variant="brand" label="Modify"
+                                                        iconName="utility:edit" iconPosition="left"
+                                                        onclick="{!c.onModifyLocationClicked}"
+                                                        value="{!location.uuid}" />
+                                                </aura:if>
+
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                </aura:iteration>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+
+        <!-- No Locations -->
+        <aura:if isTrue="{! empty(v.locationRecords)}">
+            <div class="slds-text-heading_medium slds-text-align_center slds-m-top_medium slds-p-around_large">
+                This Account has no active locations</div>
+        </aura:if>
+
+        <!-- References -->
+        <div class="slds-m-top_xx-large">
+            <div class="slds-grid slds-grid_vertical-align-start slds-gutters_direct slds-wrap">
+
+                <div class="slds-col slds-size_4-of-4 slds-grid slds-grid_align-spread">
+                    <div class="slds-col">
+                        <span class="slds-text-heading_small">References</span>
+                    </div>
+                    <div class="slds-col">
+
+                        <!-- Add Reference button -->
+                        <lightning:button variant="brand" iconName="utility:add" iconPosition="left"
+                            label="Add Reference" onclick="{!c.onAddReviewClicked}" />
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_4-of-4 slds-m-top_medium">
+
+                    <table class="slds-table slds-table_bordered slds-border_right slds-border_left" role="grid">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+
+                                <!-- Column Header - Name -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Name">Name
+                                    </div>
+                                </th>
+
+                                <!-- Column Header - Email -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Email">Email
+                                    </div>
+                                </th>
+
+                                <!-- Column Header - Phone -->
+                                <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Phone">Phone
+                                    </div>
+                                </th>
+
+                                <!-- Column Header - Location -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Location">Location</div>
+                                </th>
+
+                                <!-- Column Header - Actions -->
+                                <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Actions">&nbsp;</div>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <aura:iteration items="{!v.reviewRecords}" var="review">
+                                <tr class="slds-hint-parent">
+
+                                    <!-- Name -->
+                                    <th scope="row" tabindex="0">
+                                        <div class="slds-truncate slds-p-around_x-small">
+                                            <lightning:formattedName firstName="{!review.first_name}"
+                                                lastName="{!review.last_name}" />
+                                        </div>
+                                    </th>
+
+                                    <!-- Email -->
+                                    <td role="gridcell" scope="col" class="slds-cell-wrap">
+                                        <div class="slds-truncate slds-p-around_x-small">
+                                            <lightning:formattedEmail value="{!review.email}" />
+                                        </div>
+                                    </td>
+
+                                    <!-- Phone -->
+                                    <td role="gridcell" scope="col">
+                                        <div class="slds-truncate slds-p-around_x-small slds-text-align_right">
+                                            <lightning:formattedPhone value="{!review.phone}" />
+                                        </div>
+                                    </td>
+
+                                    <!-- Location -->
+                                    <td role="gridcell" scope="col">
+                                        <div class="slds-truncate slds-p-around_x-small ">
+                                            {!review.location_name}
+                                        </div>
+                                    </td>
+
+                                    <!-- Actions -->
+                                    <td role="gridcell">
+                                        <div class="slds-p-around_x-small slds-text-align_right">
+
+                                            <!-- Button - Verified -->
+                                            <aura:if isTrue="{! equals(review.verified,true)}">
+                                                <lightning:button variant="neutral" label="Verified"
+                                                    iconName="utility:error"
+                                                    iconPosition="left"/>
+                                            </aura:if>
+
+                                            <!-- Button - Modify -->
+                                            <aura:if isTrue="{! not(equals(review.verified,true))}">
+                                                <lightning:button variant="brand" label="Modify" iconName="utility:edit"
+                                                    iconPosition="left" onclick="{!c.onModifyReviewClicked}"
+                                                    value="{!review.uuid}" />
+                                            </aura:if>
+
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </aura:iteration>
+
+                            <!-- No records -->
+                            <aura:if isTrue="{!empty(v.reviewRecords)}">
+                                <tr>
+                                    <td colspan="4">
+                                        <div class="slds-p-around_x-small">There have been no References created yet.
+                                        </div>
+                                    </td>
+                                </tr>
+                            </aura:if>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

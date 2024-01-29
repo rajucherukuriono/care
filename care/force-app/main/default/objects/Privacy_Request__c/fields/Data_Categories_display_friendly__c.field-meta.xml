@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Categories_display_friendly__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains a display friendly version of the Data Categories for use in emails.  The content of field is driven by changes to the Data Categories field (Data_Categories__c), which is a field that contains a comma delimited list of categories.</inlineHelpText>
+    <label>Data Categories (display friendly)</label>
+    <length>3000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Member_Full_Name__c</fullName>
+    <description>Full Name of the Member, added for SFORCE-2425 BUC Surveys</description>
+    <externalId>false</externalId>
+    <label>Member Full Name</label>
+    <length>40</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

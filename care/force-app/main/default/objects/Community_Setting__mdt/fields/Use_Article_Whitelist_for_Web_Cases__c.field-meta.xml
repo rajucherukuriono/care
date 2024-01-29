@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Use_Article_Whitelist_for_Web_Cases__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>We usually control whether the Web Form is shown if the user matches the Member Account Type listed on the &quot;Show Email&quot; field.  
+
+This field expands on that logic for Basics.  If this field is enabled, Basics won&apos;t be able to use the Web Form unless they are in a Whitelisted Article.
+
+Supported values are Locales.  Multiple may be provided separated by semicolons.
+
+Locales that are included in the list, will use the Article Whitelist.  Locales not listed will use the default logic.</inlineHelpText>
+    <label>Use Article Whitelist for Web Cases</label>
+    <length>20</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

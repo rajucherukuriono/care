@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Provider_Utilization_Reasons__c</name>
+    <picklistValues>
+        <masterLabel>I was not satisfied with the provider options given.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>My loved one does not have care needs at this time.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>My loved one is not willing to accept care from any formal resources.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>My loved one was not ready to initiate care, though they do have care needs.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>My loved one’s care needs have changed.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The cost is too great.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Modified_Today</fullName>
+    <columns>OBJECT_ID</columns>
+    <columns>NAME</columns>
+    <columns>Type__c</columns>
+    <columns>Assignee__c</columns>
+    <columns>Assignee_Manager__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Sells_Childcare__c</columns>
+    <columns>Sells_Sr_Care__c</columns>
+    <columns>Pay_Period_Start__c</columns>
+    <columns>Transition_Date__c</columns>
+    <columns>Pay_Period_End__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LAST_UPDATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Last Modified Today</label>
+</ListView>

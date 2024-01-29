@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Round Robin</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Round Robins</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Default_Round_Robin_required_fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Make_default_user_required_field</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Require_Create_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Require_Vertical</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Required_fields_to_Create_Opportunity</name>
+    </validationRules>
+</CustomObjectTranslation>

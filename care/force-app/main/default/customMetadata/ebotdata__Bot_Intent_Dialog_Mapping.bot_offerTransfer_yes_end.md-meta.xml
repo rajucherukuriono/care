@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>bot_offerTransfer_yes_end</label>
+    <protected>false</protected>
+    <values>
+        <field>ebotdata__Bot_Name__c</field>
+        <value xsi:type="xsd:string">Help_Center_Bot</value>
+    </values>
+    <values>
+        <field>ebotdata__Data_Field_1__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ebotdata__Data_Field_2__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ebotdata__Data_Field_3__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ebotdata__Data_Field_4__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ebotdata__Data_Field_5__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ebotdata__Dialog_Api_Name__c</field>
+        <value xsi:type="xsd:string">bot_offerTransfer_yes_end</value>
+    </values>
+    <values>
+        <field>ebotdata__Escalation_Outcome__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ebotdata__Escalation_Reason__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ebotdata__Metric__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ebotdata__Topic_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ebotdata__Type__c</field>
+        <value xsi:type="xsd:string">Generic</value>
+    </values>
+</CustomMetadata>

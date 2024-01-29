@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Impact__c</fullName>
+    <description>Guessed Impact that the Feature could have on our Orgs.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the Impact Level that this featuere might have in our Orgs.</inlineHelpText>
+    <label>Impact</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>true</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Check</fullName>
+                <default>false</default>
+                <label>Check</label>
+            </value>
+            <value>
+                <fullName>Moderate</fullName>
+                <default>false</default>
+                <label>Moderate</label>
+            </value>
+            <value>
+                <fullName>Limited</fullName>
+                <default>false</default>
+                <label>Limited</label>
+            </value>
+            <value>
+                <fullName>Significant</fullName>
+                <default>false</default>
+                <label>Significant</label>
+            </value>
+            <value>
+                <fullName>Future</fullName>
+                <default>false</default>
+                <label>Future</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

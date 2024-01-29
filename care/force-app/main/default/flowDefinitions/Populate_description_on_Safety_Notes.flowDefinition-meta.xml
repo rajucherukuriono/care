@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>If &quot;Legal Case Type&quot; is selected, auto populate case &quot;Description&quot; field into &quot;Safety Notes&quot; field
+this is converted from Workflow to Flow Sforce-6880.</description>
+    <masterLabel>Populate description on Safety Notes</masterLabel>
+</FlowDefinition>

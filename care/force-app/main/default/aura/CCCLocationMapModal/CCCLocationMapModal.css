@@ -1,0 +1,9 @@
+.THIS textarea {
+    resize: none;
+}
+.THIS input[name="country"] {
+    display: none;
+}
+.THIS legend.slds-form-element__label.slds-form-element__legend {
+    display: none;
+}

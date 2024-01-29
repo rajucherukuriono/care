@@ -1,0 +1,122 @@
+<template>
+    <div class="footer-text slds-var-p-horizontal_x-large">
+        <template if:true={isEnUs}>
+            <div class="slds-var-m-top_small">Care.com is the world's largest online destination for care. We connect families with caregivers and caring companies to help you be there for the ones you love.</div>
+            <div class="slds-var-m-top_small">Care.com does not employ any care provider or care seeker nor is it responsible for the conduct of any care provider or care seeker. Care.com provides information and tools to help care seekers and care providers connect and make informed decisions.
+            However, each individual is solely responsible for selecting an appropriate care provider or care seeker for themselves or their families and for complying with all applicable laws in connection with any employment relationship they establish.
+            The information contained in member profiles, job posts and applications are supplied by care providers and care seekers themselves and is not information generated or verified by Care.com. Care.com does not provide medical advice, diagnosis or
+            treatment or engage in any conduct that requires a professional license.</div>
+            <div class="slds-var-m-top_small">Care.com and "There for you" are service marks or registered service marks of Care.com, Inc. © 2007-{currentYear} Care.com, Inc. All rights reserved.</div>
+            <div class="slds-var-m-top_small">Care.com® HomePay℠ is a service provided by Breedlove and Associates, LLC, a Care.com company.</div>
+        </template>
+
+        <template if:true={isDaDk}>
+            <div class="slds-var-m-top_small">Care.com er en online platform, der forbinder familier og hjælpere med hinanden. Vi formidler ikke hjælpere til familier, ligesom vi heller ikke udvælger specielle hjælpere til familier eller familier til hjælpere. Care.com verificerer ikke identiteten på, eller oplysninger indsendt af, hjælpere eller familier. For yderligere information, klik på 'Sikkerhed' og læs, hvordan identitet og andre oplysninger kan verificeres. </div>
+            <div class="slds-var-m-top_small">Care.com er et varemærke tilhørende Care.com, Inc. © 2023 Care.com Europe GmbH <br> Alle rettigheder forbeholdes.</div>
+            <div class="slds-var-m-top_small">Care.com Europe GmbH, Rotherstr. 17, 10245 Berlin, Tyskland| Byretten i Berlin Charlottenburg HRB 110588 B | Momsreg.nr: DE258126229 <br> Direktør: Dirk Kasten</div>
+        </template>
+
+        <template if:true={isDeAt}>
+            <div class="slds-var-m-top_small">Auf Betreut.at können Familien und Betreuer miteinander in Kontakt treten, Informationen austauschen und Absprachen treffen. Weder stellen wir direkt Betreuung zur Verfügung, noch suchen wir persönlich bestimmte Betreuer aus und schlagen sie Betreuungssuchenden vor oder umgekehrt. Betreut.at überprüft nicht die Identität und persönlichen Angaben der Betreuer. Bitte informieren Sie sich in unserem <a href="https://www.betreut.at/sicherheitsbereich">Sicherheitsbereich</a> darüber, wie Sie dies selbst tun können.</div>
+            <div class="slds-var-m-top_small">Betreut.at ist eine Marke der Care.com Europe GmbH. © 2013-2023 Care.com Europe GmbH<br>Alle Rechte vorbehalten.</div>
+            <div class="slds-var-m-top_small">Care.com Europe GmbH, Rotherstr. 17, 10245 Berlin| Amtsgericht Berlin Charlottenburg, HRB 110588 B | USt-Identifikationsnummer: DE258126229 <br> Geschäftsführer: Dirk Kasten</div>
+        </template>
+
+        <template if:true={isDeCh}>
+            <div class="slds-var-m-top_small">Auf Care.com können Familien und Betreuer miteinander in Kontakt treten, Informationen austauschen und Absprachen treffen. Weder stellen wir direkt Betreuung zur Verfügung, noch suchen wir persönlich bestimmte Betreuer aus und schlagen sie Betreuungssuchenden vor oder umgekehrt. Care.com überprüft nicht die Identität und persönlichen Angaben der Betreuer. Bitte informieren Sie sich in unserem <a href="https://www.care.com/de-ch/sicherheitsbereich">Sicherheitsbereich</a> darüber, wie Sie dies selbst tun können.</div>
+            <div class="slds-var-m-top_small">Care.com ist eine Marke der Care.com Switzerland AG, einem Tochterunternehmen von Care.com, Inc. © 2023 Care.com Switzerland AG<br>Alle Rechte vorbehalten.</div>
+            <div class="slds-var-m-top_small">Care.com Switzerland AG, Konstanzerstrasse 60, 8274 Tägerwilen | Handelsregister des Kantons Thurgau, CHE-357.930.116  | Verwaltungsrat: Anke Rosendahl, Benjamin Stahl</div>
+        </template>
+
+        <template if:true={isDeDe}>
+            <div class="slds-var-m-top_small">Auf Betreut.de können Familien und Betreuer miteinander in Kontakt treten, Informationen austauschen und Absprachen treffen. Weder stellen wir direkt Betreuung zur Verfügung, noch suchen wir persönlich bestimmte Betreuer aus und schlagen sie Betreuungssuchenden vor oder umgekehrt. Betreut.de überprüft nicht die Identität und persönlichen Angaben der Betreuer. Bitte informieren Sie sich in unserem <a href="https://www.betreut.de/sicherheitsbereich">Sicherheitsbereich</a> darüber, wie Sie dies selbst tun können.</div>
+            <div class="slds-var-m-top_small">Betreut.de ist eine Marke der Care.com Europe GmbH. © 2013-2023 Care.com Europe GmbH <br>Alle Rechte vorbehalten.</div>
+            <div class="slds-var-m-top_small">Care.com Europe GmbH, Rotherstr. 17, 10245 Berlin| Amtsgericht Berlin Charlottenburg, HRB 110588 B | USt-Identifikationsnummer: DE258126229 <br> Geschäftsführer: Dirk Kasten</div>
+        </template>
+
+        <template if:true={isEnAu}>
+            <div class="slds-var-m-top_small">Care.com is an online venue for care seekers and care providers to connect with each other. We do not introduce or supply carers to those seeking care, nor do we select or propose specific carers to those seeking care or care seekers to carers. Care.com does not verify the identity of, or information posted by, care seekers or carers. Please see our Safety Centre for guidance on how to verify the identity of, and information posted by, other users.</div>
+            <div class="slds-var-m-top_small">Care.com and "There for you" are trademarks of Care.com Inc., the parent of Care.com Australia Pty Limited. © 2023. <br>All rights reserved.</div>
+            <div class="slds-var-m-top_small">Care.com Australia Pty Limited, PO Box 629, North Sydney NSW 2059. Australia Australian Business Number (ABN): 85 161 047 123</div>
+        </template>
+
+        <template if:true={isEnCa}>
+            <div class="slds-var-m-top_small">Care.com is an online venue for care seekers and caregivers to connect with each other. We do not introduce or supply caregivers to those seeking care, nor do we select or propose specific caregivers to those seeking care or care seekers to caregivers. Care.com does not verify the identity of, or information posted by, care seekers or caregivers. Please see our Safety Centre for guidance on how to verify the identity of, and information posted by, other users.</div>
+            <div class="slds-var-m-top_small">Care.com and "There for you" are trademarks of Care.com, Inc., the parent of CareZen Family Solutions, Inc. © 2023 CareZen Family Solutions Inc. <br>All rights reserved.</div>
+            <div class="slds-var-m-top_small">CareZen Family Solutions, Inc.<br>20th Floor, 250 Howe Street<br>Vancouver, BC  V6C 3R8<br>Canada</div>
+        </template>
+
+        <template if:true={isEnGb}>
+            <div class="slds-var-m-top_small">Care.com is an online venue for care seekers and care providers to connect with each other. We do not introduce or supply carers to those seeking care, nor do we select or propose specific carers to those seeking care or care seekers to carers. Care.com does not verify the identity of, or information posted by, care seekers or carers. Please see our Safety Centre for guidance on how to verify the identity of, and information posted by, other users.</div>
+            <div class="slds-var-m-top_small">Care.com and "There for you" are trademarks of Care.com Inc., the parent of Care.com Europe LTD. © 2011-2023 Care.com Europe LTD. <br>All rights reserved.</div>
+            <div class="slds-var-m-top_small">Care.com Europe LTD., Suite 4, 7th Floor, 50 Broadway, London SW1H 0DB &nbsp;|&nbsp;Company Number: 7813677. Data Protection Registration Number: Z2941631. VAT no. GB 137 6882 75</div>
+        </template>
+
+        <template if:true={isEnIe}>
+            <div class="slds-var-m-top_small">Care.com is an online venue for care seekers and care providers to connect with each other. We do not introduce or supply carers to those seeking care, nor do we select or propose specific carers to those seeking care or care seekers to carers. Care.com does not verify the identity of, or information posted by, care seekers or carers. Please see our Safety Centre for guidance on how to verify the identity of, and information posted by, other users.</div>
+            <div class="slds-var-m-top_small">Care.com and "There for you" are trademarks of Care.com Inc., the parent of Care.com Europe GmbH. © 2011-2023 Care.com Europe GmbH.<br>All rights reserved. </div>
+            <div class="slds-var-m-top_small">Care.com Europe GmbH, Rotherstr. 17, 10245 Berlin| Company Number HRB 110588 B | Vat No: DE258126229 <br>     Company Director: Dirk Kasten</div>
+        </template>
+
+        <template if:true={isEnNz}>
+            <div class="slds-var-m-top_small">Care.com is an online venue for care seekers and care providers to connect with each other. We do not introduce or supply carers to those seeking care, nor do we select or propose specific carers to those seeking care or care seekers to carers. Care.com does not verify the identity of, or information posted by, care seekers or carers. Please see our Safety Centre for guidance on how to verify the identity of, and information posted by, other users.</div>
+            <div class="slds-var-m-top_small">Care.com and "There for you" are trademarks of Care.com Inc., the parent of Care.com Australia Pty Limited. © 2023. <br>All rights reserved.</div>
+            <div class="slds-var-m-top_small">Care.com Australia Pty Limited, PO Box 629, North Sydney NSW 2059. <br>Australian Business Number (ABN): 85 161 047 123</div>
+        </template>
+
+        <template if:true={isEsEs}>
+            <div class="slds-var-m-top_small">Care.com es una plataforma online donde las familias y buscadores de empleo pueden entrar en contacto unos con otros.  No gestionamos la selección en concreto de usuarios para aquellos que están buscando servicios en el sector del cuidado. Tampoco proponemos perfiles concretos de usuarios a las familias que están buscando servicios en el sector del cuidado ni recomendamos perfiles determinados de familias a los usuarios buscadores de empleo. Care.com no verifica la identidad o información publicada por los usuarios. Por favor, visita nuestro centro de seguridad donde encontrarás consejos y recomendaciones sobre como verificar la identidad y toda la información publicada por otros usuarios.</div>
+            <div class="slds-var-m-top_small">Care.com es una marca registrada de Care.com Europe GmbH. © 2013-2023 Care.com Europe GmbH <br>Todos los derechos reservados. </div>
+            <div class="slds-var-m-top_small">Care.com Europe GmbH, Rotherstr. 17, 10245 Berlin| Registro Berlin Charlottenburg, HRB 110588 B | VAT ID: DE258126229 <br> Director: Dirk Kasten</div>
+        </template>
+
+        <template if:true={isFiFi}>
+            <div class="slds-var-m-top_small">Care.com-sivustolla apua tarvitsevat ja palveluntarjoajat voivat olla yhteydessä toisiinsa, vaihtaa tietoa ja järjestää arjen apua. Me emme toimi henkilöstövuokrauspalveluna, emmekä siten suoraan valitse kullekin apua tarvitsevalle sopivaa palveluntarjoajaa. Care.com ei tarkasta palveluntarjoajien henkilöllisyyttä. Lisätietoja henkilöllisyyden tarkastamisesta löydät sivulta <a href="https://www.care.com/fi-fi/turvallisuus">Turvallisuus</a>.</div>
+            <div class="slds-var-m-top_small">Care.com on osa tavaramerkkiä Care.com, Inc. © 2023 Care.com Europe GmbH<br>Kaikki oikeudet pidätetään.</div>
+            <div class="slds-var-m-top_small">Care.com Europe GmbH, Rotherstr. 17, 10245 Berliini, Saksa | Amtsgericht Berlin Charlottenburg, HRB 110588 B | ALV-numero: DE258126229 <br> Toimitusjohtajat: Dirk Kasten</div>
+        </template>
+
+        <template if:true={isFrBe}>
+            <div class="slds-var-m-top_small">Care.com est un site où les familles et les intervenants peuvent entrer en contact. Nous ne mettons pas directement en contact les familles et les intervenants, ni ne sélectionnons d’annonces pour les intervenants ou de profils d’intervenants à destination des familles. Care.com ne vérifie pas l’identité ou la véracité des informations communiquées par les familles ou les intervenants. Pour plus d’informations sur la vérification de l’identité et des informations postées par les autres membres, nous vous invitons à visiter notre Centre de Sécurité.</div>
+            <div class="slds-var-m-top_small">Care.com est une marque déposée de Care.com, Inc. © 2011-2023 Care.com Europe GmbH.<br>Tous droits réservés. </div>
+            <div class="slds-var-m-top_small">Besser Betreut GmbH, Rotherstr. 17, 10245 Berlin, Allemagne | Registre du commerce de Berlin Charlottenburg, HRB 110 588 B | N° TVA : DE 258 126 229 | Direction : Dirk Kasten</div>
+        </template>
+
+        <template if:true={isFrCa}>
+            <div class="slds-var-m-top_small">Care.com est une plateforme en ligne où familles et intervenants peuvent entrer en contact. Nous ne mettons pas directement en contact les familles et les intervenants, ni ne sélectionnons d’annonces pour les intervenants ou de profils d’intervenants à destination des familles. Care.com ne vérifie pas l’identité ou la véracité des informations communiquées par les familles ou les intervenants. Pour plus d’informations sur la vérification de l’identité et des informations postées par les autres membres, nous vous invitons à visiter notre Centre de Sécurité.</div>
+            <div class="slds-var-m-top_small">Care.com et « There for you » sont des marques déposées de Care.com, Inc., société mère de CareZen Family Solutions, Inc © 2023 CareZen Family Solutions Inc. <br>Tous droits réservés.</div>
+            <div class="slds-var-m-top_small">CareZen Family Solutions, Inc.<br>20th Floor, 250 Howe Street<br>Vancouver, BC  V6C 3R8<br>Canada&nbsp;</div>
+        </template>
+
+        <template if:true={isFrFr}>
+            <div class="slds-var-m-top_small">Care.com est un site où les familles et les intervenants peuvent entrer en contact. Nous ne mettons pas directement en contact les familles et les intervenants, ni ne sélectionnons d’annonces pour les intervenants ou de profils d’intervenants à destination des familles. Care.com ne vérifie pas l’identité ou la véracité des informations communiquées par les familles ou les intervenants. Pour plus d’informations sur la vérification de l’identité et des informations postées par les autres membres, nous vous invitons à visiter notre Centre de Sécurité.</div>
+            <div class="slds-var-m-top_small">Care.com est une marque déposée de Care.com, Inc. © 2011-2023 Care.com Europe GmbH.<br>Tous droits réservés. </div>
+            <div class="slds-var-m-top_small">Besser Betreut GmbH, Rotherstr. 17, 10245 Berlin, Allemagne | Registre du commerce de Berlin Charlottenburg, HRB 110 588 B | N° TVA : DE 258 126 229 | Direction : Dirk Kasten</div>
+        </template>
+
+        <template if:true={isNlNl}>
+            <div class="slds-var-m-top_small">Care.com is een online platform waar gezinnen en zorgverleners met elkaar in contact kunnen komen. Wij introduceren of bevelen geen zorgverleners bij zorgzoekenden aan, noch selecteren of introduceren we specifieke zorgverleners bij zorgzoekenden - of omgekeerd. Care.com verifieert de identiteit en/of de informatie die door haar leden wordt gepubliceerd, niet. Bekijk ons veiligheidscentrum voor meer informatie over hoe u de identiteit van andere leden alsmede de door hen openbaar gemaakte gegevens op echtheid kunt controleren.</div>
+            <div class="slds-var-m-top_small">Care.com is een online platform waar gezinnen en zorgverleners met elkaar in contact kunnen komen. Wij introduceren of bevelen geen zorgverleners bij zorgzoekenden aan, noch selecteren of introduceren we specifieke zorgverleners bij zorgzoekenden - of omgekeerd. Care.com verifieert de identiteit en/of de informatie die door haar leden wordt gepubliceerd, niet. Bekijk ons veiligheidscentrum voor meer informatie over hoe u de identiteit van andere leden alsmede de door hen openbaar gemaakte gegevens op echtheid kunt controleren.</div>
+            <div class="slds-var-m-top_small">Care.com Europe GmbH, Rotherstr. 17, 10245 Berlin, Duitsland| Kantongerecht Berlijn Charlottenburg, HRB 110588 B | BTW-nummer: DE258126229 <br>      Managing Director: Dirk Kasten</div>
+        </template>
+
+        <template if:true={isNlBe}>
+            <div class="slds-var-m-top_small">Care.com is een online platform waar gezinnen en zorgverleners met elkaar in contact kunnen komen. Wij introduceren of bevelen geen zorgverleners bij zorgzoekenden aan, noch selecteren of introduceren we specifieke zorgverleners bij zorgzoekenden - of omgekeerd. Care.com verifieert de identiteit en/of de informatie die door haar leden wordt gepubliceerd, niet. Bekijk ons veiligheidscentrum voor meer informatie over hoe u de identiteit van andere leden alsmede de door hen openbaar gemaakte gegevens op echtheid kunt controleren.</div>
+            <div class="slds-var-m-top_small">Care.com is een handelsnaam van Care.com, Inc. © 2013-2023 Care.com Europe GmbH<br>Alle rechten voorbehouden.</div>
+            <div class="slds-var-m-top_small">Care.com Europe GmbH, Rotherstr. 17, 10245 Berlin, Duitsland| Kantongerecht Berlijn Charlottenburg, HRB 110588 B | BTW-nummer: DE258126229 <br>      Managing Director: Dirk Kasten</div>
+        </template>
+
+        <template if:true={isNoNo}>
+            <div class="slds-var-m-top_small">Care.com er en online plattform hvor familier og hjelpere eller omsorgspersoner kan komme i kontakt med hverandre, utveksle informasjon og hjelpe hverandre. Vi formidler ikke hjelpere til familier, på samme måte som vi heller ikke utvelger eller kobler spesielle hjelpere til familier eller familier til hjelpere. Care.com verifiserer ikke identiteten til, eller opplysningene innsendt av, hjelpere eller familier. For videre informasjon kan du klikke deg inn på "Sikkerhetssenteret" hvor du kan lese om hvordan du selv kan verifisere noens identitet og andre opplysninger. </div>
+            <div class="slds-var-m-top_small">Care.com er et varemerke fra Care.com Europe GmbH. © 2013-2023 Care.com Europe GmbH <br> Alle rettigheter reservert.</div>
+            <div class="slds-var-m-top_small">Care.com Europe GmbH, Rotherstr. 17, 10245 Berlin, Tyskland| Tingretten i Berlin Charlottenburg, HRB 110588 B | VAT-nummer: DE258126229 <br> Direktør: Dirk Kasten</div>
+        </template>
+
+        <template if:true={isSvSv}>
+            <div class="slds-var-m-top_small">Care.com är endast en mötesplats för tjänstesökande och tjänsteleverantörer. Vi introducerar och tillhandahåller inte tjänsteleverantörer för tjänstesökande. Vi väljer inte heller ut och föreslår specifika tjänsteleverantörer för tjänstesökande eller tjänstesökande för tjänsteleverantörer. Care.com verifierar inte användares identitet eller information som är upplagd av tjänsteleverantörer och tjänstesökande. Vänligen se under Säkerhet hur du kan verifiera andra användares identitet och information som de har lagt upp.  </div>
+            <div class="slds-var-m-top_small">Care.com är ett varumärke från Care.com, Inc.© 2023 Care.com Europe GmbH<br>Alla rättigheter förbehålls.</div>
+            <div class="slds-var-m-top_small">Care.com Europe GmbH, Rotherstr. 17, 10245 Berlin , Tyskland| Tingsrätten i Berlin Charlottenburg HRB 110588 B | Momsreg.nr: DE258126229 | Verkställande direktörer: Dirk Kasten</div>
+        </template>
+    </div>    
+
+</template>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Action_Plan_Completed_date</fullName>
+        <field>Action_Plan_Completed_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Action Plan Completed date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Action_Plan_Created_Date</fullName>
+        <field>Action_Plan_Created_date__c</field>
+        <formula>TODAY()</formula>
+        <name>Action Plan Created Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_Recommendations</fullName>
+        <field>Recommendations__c</field>
+        <formula>Case__r.Recommendations__c</formula>
+        <name>Copy Recommendations</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_Resources_and_Fact_Sheets</fullName>
+        <field>Resources_and_Fact_Sheets__c</field>
+        <formula>Case__r.Resources__c</formula>
+        <name>Copy Resources and Fact Sheets</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_Summary_Of_Care_Recipient_Needs</fullName>
+        <field>Summary_of_Care_Recipient_Needs__c</field>
+        <formula>Case__r.Summary_of_Recipient_s_Needs__c</formula>
+        <name>Copy Summary of Care Recipient Needs</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Is_Day_Light_Saving</fullName>
+        <field>DST__c</field>
+        <literalValue>1</literalValue>
+        <name>Is Day Light Saving</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Action Plan Completed date</fullName>
+        <actions>
+            <name>Action_Plan_Completed_date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Action_Plan_Needs__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Closed,Request Canceled</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Action Plan Created</fullName>
+        <actions>
+            <name>Action_Plan_Created_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Action_Plan_Needs__c.RecordTypeId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Copy Case Fields To Action Plan Need</fullName>
+        <actions>
+            <name>Copy_Recommendations</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_Resources_and_Fact_Sheets</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Copy_Summary_Of_Care_Recipient_Needs</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>As part of SFORCE-1132, Case fieds
+ a.	Summary of Recipient&apos;s Needs 
+b.	Recommendations 
+c.	Resources 
+are changed as Text Area(long) fields are copied to Action Plan Need corresponding fields which also eliminates the usage of formula fields.</description>
+        <formula>true</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Is Day Light Saving</fullName>
+        <actions>
+            <name>Is_Day_Light_Saving</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calculates the day has day light saving or not</description>
+        <formula>AND(  DATEVALUE(CreatedDate) &gt;=  CASE(MOD(DATE(YEAR(DATEVALUE(CreatedDate)),3,8) - DATE(1900,1,7),7),  0, DATE(YEAR(DATEVALUE(CreatedDate)),3,8),  1, DATE(YEAR(DATEVALUE(CreatedDate)),3,8)+6,  2, DATE(YEAR(DATEVALUE(CreatedDate)),3,8)+5,  3, DATE(YEAR(DATEVALUE(CreatedDate)),3,8)+4,  4, DATE(YEAR(DATEVALUE(CreatedDate)),3,8)+3,  5, DATE(YEAR(DATEVALUE(CreatedDate)),3,8)+2,  DATE(YEAR(DATEVALUE(CreatedDate)),3,8)+1),  DATEVALUE(CreatedDate) &lt; CASE(MOD(DATE(YEAR(DATEVALUE(CreatedDate)),11,1) - DATE(1900,1,7),7),  0, DATE(YEAR(DATEVALUE(CreatedDate)),11,1),  1, DATE(YEAR(DATEVALUE(CreatedDate)),11,1)+6,  2, DATE(YEAR(DATEVALUE(CreatedDate)),11,1)+5,  3, DATE(YEAR(DATEVALUE(CreatedDate)),11,1)+4,  4, DATE(YEAR(DATEVALUE(CreatedDate)),11,1)+3,  5, DATE(YEAR(DATEVALUE(CreatedDate)),11,1)+2,  DATE(YEAR(DATEVALUE(CreatedDate)),11,1)+1))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#ffffff</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#AAAAFF</color>
+        <height>0</height>
+    </bottomLine>
+    <description>Letterhead for all Care @ Work related teams (like Backup Care &amp; Assisted Search).</description>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <verticalAlignment>Top</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>Images_Letterhead/Care_for_Business_Logo_5_1_23.png</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#AAAAFF</color>
+        <height>0</height>
+    </middleLine>
+    <name>Care @ Work</name>
+    <topLine>
+        <color>#ffffff</color>
+        <height>10</height>
+    </topLine>
+</Letterhead>

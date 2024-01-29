@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_spent_week_caring_for_recipient__c</fullName>
+    <externalId>false</externalId>
+    <label>Time spent /week caring for recipient?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0-5 hr</fullName>
+                <default>false</default>
+                <label>0-5 hr</label>
+            </value>
+            <value>
+                <fullName>5-10 hrs</fullName>
+                <default>false</default>
+                <label>5-10 hrs</label>
+            </value>
+            <value>
+                <fullName>10-15 hrs</fullName>
+                <default>false</default>
+                <label>10-15 hrs</label>
+            </value>
+            <value>
+                <fullName>15-20 hrs</fullName>
+                <default>false</default>
+                <label>15-20 hrs</label>
+            </value>
+            <value>
+                <fullName>20+ hrs</fullName>
+                <default>false</default>
+                <label>20+ hrs</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

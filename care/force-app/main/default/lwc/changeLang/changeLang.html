@@ -1,0 +1,15 @@
+<template>
+    <div class="langComboContainer">
+        <lightning-combobox 
+            name="langCombo" 
+            label="Language"
+            value={langComboValue}
+            onchange={handleLangComboChange}
+            options={langComboOptions}
+            dropdown-alignment="auto"
+            variant="label-hidden"
+        >
+        </lightning-combobox>
+    </div>
+    <div></div>  
+</template>

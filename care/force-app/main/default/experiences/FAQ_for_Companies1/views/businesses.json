@@ -1,0 +1,228 @@
+{
+  "appPageId" : "372b8d47-e2cd-405f-817c-9731a6b8defe",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "5e20d60a-7681-43ed-92ef-638b02d8de17",
+  "label" : "Businesses",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e2fb6110-205d-460a-b2f7-aa6a49c8d75a",
+          "columns" : [ {
+            "UUID" : "6edd66c0-44ba-497f-8e58-d876276d3d03",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e2fb6110-205d-460a-b2f7-aa6a49c8d75a",
+      "regions" : [ {
+        "id" : "6edd66c0-44ba-497f-8e58-d876276d3d03",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(255,255,255,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "268a00bb-f88f-4e65-a660-c91fc96cb660",
+          "columns" : [ {
+            "UUID" : "94396416-bbcf-48e9-a377-b1001caeffee",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "268a00bb-f88f-4e65-a660-c91fc96cb660",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:tabMenu",
+          "id" : "8a16f80d-6462-4e9e-b4d8-a25de0c78a58",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "94396416-bbcf-48e9-a377-b1001caeffee",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(255,255,255,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "c47f253e-991c-43fb-932f-31d90f33255d",
+          "columns" : [ {
+            "UUID" : "bc673716-fad3-41dd-b2fe-b2219f1f6999",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 85
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c47f253e-991c-43fb-932f-31d90f33255d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"slds-p-vertical_small faq-section-header\">\n    <div>Marketplace<img src=\"/sfsites/c/resource/CDCC_Assets/imgs/Chevron-Up.png\" style=\"float: right;\"/></div>\n    <div class=\"faq-container\">\n        <div class=\"faq-sub-container\">\n            <div class=\"slds-m-bottom_small\">Getting Started</div>\n            <div class=\"slds-m-bottom_small\" >\n                <a href=\"/marketplace/s/article/Help-Me-Choose\">What is Marketplace?</a> \n            </div>\n            <div class=\"slds-m-bottom_small\">\n                <a href=\"/marketplace/s/article/I-m-having-trouble-enrolling-on-Care-com\">I'm having trouble enrolling on Care.com</a>\n            </div>\n            <div class=\"slds-m-bottom_small\">\n                <a href=\"/marketplace/s/article/How-do-I-search-for-jobs-1560430849016\">How do I search for jobs?</a>\n            </div>\n            <div>\n                <a href=\"/marketplace/s/topic/0TO5Y000009m2tiWAA/\">View All Articles&nbsp; &gt;</a>\n            </div>\n        </div>\n        <div class=\"faq-sub-container\">\n            <div class=\"slds-m-bottom_small\">Running My Business</div>\n            <div class=\"slds-m-bottom_small\">\n                <a href=\"/marketplace/s/article/How-do-I-edit-my-account-information-1560430850834\">How do I edit my account information?</a> \n            </div>\n            <div class=\"slds-m-bottom_small\" >\n                <a href=\"/marketplace/s/article/How-do-I-reset-my-password-1560430847002\" >How do I reset my password?</a> \n            </div>\n            <div class=\"slds-m-bottom_small\" >\n                <a href=\"/marketplace/s/article/Why-haven-t-I-heard-back-from-Care-com\" >Why haven’t I heard back from Care.com? </a> \n            </div>\n            <div class=\"slds-m-top_small\" >\n                <a href=\"/marketplace/s/topic/0TO5Y000009m2u2WAA/\" >View All Articles&nbsp; &gt;</a>\n            </div>\n        </div>\n        <div class=\"faq-sub-container\">\n            <div class=\"slds-m-bottom_small\" >Payments</div>\n            <div class=\"slds-m-bottom_small\" >\n                <a href=\"/marketplace/s/article/What-are-the-benefits-of-upgrading-1560430850835\" >What are the benefits of upgrading?</a> \n            </div>\n            <div class=\"slds-m-bottom_small\" >\n                <a href=\"/marketplace/s/article/What-if-my-credit-card-is-lost-or-expires\" >What if my credit card is lost or expires?</a>\n            </div>\n            <div class=\"slds-m-bottom_small\">\n                <a href=\"/marketplace/s/article/How-do-I-edit-my-credit-card-1560430851243\" >How do I edit my credit card?</a>\n            </div>\n            <div class=\"slds-m-top_small\">\n                <a href=\"/marketplace/s/topic/0TO5Y000009m2tsWAA/\" >View All Articles&nbsp; &gt;</a>\n            </div>\n        </div>\n            <div class=\"faq-sub-container\">\n            <div class=\"slds-m-bottom_small\">Trust &amp; Safety</div>\n            <div class=\"slds-m-bottom_small\">\n                <a href=\"/marketplace/s/article/How-do-I-report-a-safety-concern-1560430849909\" >How do I report a safety concern?</a> \n            </div>\n            <div class=\"slds-m-bottom_small\" >\n                <a href=\"/marketplace/s/article/What-is-the-Member-Account-Closure-Policy\" >What is the Member Account Closure Policy?</a> \n            </div>\n            <div class=\"slds-m-top_small\">\n                <a href=\"/marketplace/s/topic/0TO1O0000026iYfWAI/\" >View All Articles&nbsp; &gt;</a>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"slds-p-vertical_small slds-border_top faq-section-header\">\n    <a href=\"/marketingsolutions/s/\">\n        <div>Marketing Solutions<img src=\"/sfsites/c/resource/CDCC_Assets/imgs/Chevron.png\" style=\"float: right;\"/> </div>\n    </a>\t\n</div>        \n\n<div class=\"slds-p-vertical_small slds-border_top faq-section-header\">\n    <a href=\"/recruitingsolutions/s/\">\n        <div>Recruiting Solutions<img src=\"/sfsites/c/resource/CDCC_Assets/imgs/Chevron.png\" style=\"float: right;\"/></div>\n    </a>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "21216985-904f-473f-a664-a84633da64d2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "bc673716-fad3-41dd-b2fe-b2219f1f6999",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "3b8fb19e-5794-4d3b-b4ef-1b90723b3148",
+          "columns" : [ {
+            "UUID" : "deabf410-eeb1-491e-b51d-d88b03dd989b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3b8fb19e-5794-4d3b-b4ef-1b90723b3148",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "d43583cd-ca1c-40c1-a8eb-a2ee6a56a450",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "allowPrepopulatePrechatFields" : true,
+            "avatarImgURL" : "",
+            "codeSettingsName" : "",
+            "defaultMinimizedText" : "Contact Us",
+            "displayHelpButton" : true,
+            "eswConfigurationJSON" : {
+              "baseCoreURL" : "https://caredotcom.my.salesforce.com",
+              "baseLiveAgentContentURL" : "https://c.la3-c2-ia5.salesforceliveagent.com/content",
+              "baseLiveAgentURL" : "https://d.la3-c2-ia5.salesforceliveagent.com/chat",
+              "buttonId" : "5735Y000000oLkU",
+              "deploymentId" : "5725Y000000oLke",
+              "enabledFeatures" : [ "LiveAgent" ],
+              "entryFeature" : "LiveAgent",
+              "eswConfigDevName" : "Help_Center_Chat",
+              "eswConfigId" : "04I5Y000000oLkjUAE",
+              "eswLiveAgentDevName" : "EmbeddedServiceLiveAgent_Parent04I5Y000000oLkjUAE_17784ad95fa",
+              "gslbBaseURL" : "https://service.force.com",
+              "isOfflineCasesEnabled" : "0",
+              "orgId" : "00D700000008kOO"
+            },
+            "externalScripts" : "",
+            "externalStyles" : "",
+            "fallbackRouting" : "",
+            "offlineSupportMinimizedText" : "Contact Us",
+            "offlineText" : "Contact Us",
+            "onlineLoadingText" : "Loading",
+            "prechatBackgroundImgURL" : "",
+            "smallCompanyLogoImgURL" : "",
+            "snippetSettingsFile" : "ChatSnippetSettingsFile",
+            "storageDomain" : "",
+            "waitingStateBackgroundImgURL" : ""
+          },
+          "componentName" : "forceCommunity:embeddedService",
+          "id" : "e84ed62e-e348-46ee-a08a-8b9d50d32132",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "76aa9463-d06f-49c4-a4f6-c72d5f85d836",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "6959496c-534b-4326-b84f-cc8bb3ca6a78",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "deabf410-eeb1-491e-b51d-d88b03dd989b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "51128a07-2603-43bf-ad87-290a6aaf6e4c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Care Help Center for Families, Caregivers & Partners"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "e9434554-3cd3-469b-9efb-d97307244fea",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "587fca5f-9162-4c4d-8d32-e532109111cb",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

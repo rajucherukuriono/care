@@ -1,0 +1,40 @@
+.minimizedContainer {
+    position: fixed;
+    left: auto;
+    bottom: 0;
+    right: 12px;
+    margin: 0;
+    min-width: 12em;
+    max-width: 14em;
+    height: 46px;
+    width: 192px;
+    max-height: 100%;
+    border-radius: 8px 8px 0 0;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+    pointer-events: all;
+    overflow: hidden;
+    background-color: var(--lwc-colorBrand);
+    font-size: 16px;
+}
+.minimizedContainer:focus,
+.minimizedContainer:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    outline: none;
+    background-color: var(--lwc-colorBrand);
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+}
+.messageContent {
+    padding: 0 8px;
+    color: rgb(255, 255, 255);
+}
+.icon {
+    --sds-c-icon-color-foreground-default: #ffffff;
+}
+.logo {
+    margin-left: 18px;
+    margin-top: 8px;
+}

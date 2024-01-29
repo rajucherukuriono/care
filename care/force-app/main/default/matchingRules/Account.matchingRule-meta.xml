@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MatchingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <matchingRules>
+        <fullName>Account_to_Account</fullName>
+        <description>SFORCE-2430 Fix Duplicate Rules</description>
+        <label>Account to Account</label>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>Name</fieldName>
+            <matchingMethod>CompanyName</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>Converted_Lead_B2B_Account_Record_Type__c</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>Phone</fieldName>
+            <matchingMethod>Phone</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>BillingStreet</fieldName>
+            <matchingMethod>Street</matchingMethod>
+        </matchingRuleItems>
+        <ruleStatus>Active</ruleStatus>
+    </matchingRules>
+    <matchingRules>
+        <fullName>BUC_Network_Center_Accounts_matching_rule</fullName>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <description>SFORCE-2573
+BUC Center Network Account Page Enhancements</description>
+        <label>BUC Network Center Accounts matching rule</label>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>Name</fieldName>
+            <matchingMethod>CompanyName</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>BillingCity</fieldName>
+            <matchingMethod>City</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>BillingPostalCode</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>Phone</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <ruleStatus>Active</ruleStatus>
+    </matchingRules>
+    <matchingRules>
+        <fullName>Homepay_Business_Account_matching_rule</fullName>
+        <booleanFilter>(1 AND 2 AND 3) OR (4 AND 5 AND 6)</booleanFilter>
+        <description>Sforce 1815 -- Homepay duplicate records research</description>
+        <label>Homepay Business Account matching rule</label>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>Name</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>Phone</fieldName>
+            <matchingMethod>Phone</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>Website</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>Name</fieldName>
+            <matchingMethod>CompanyName</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>Phone__c</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>Website</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <ruleStatus>Inactive</ruleStatus>
+    </matchingRules>
+    <matchingRules>
+        <fullName>Lead_to_Account</fullName>
+        <description>SFORCE-2430 Fix Duplicate Rules</description>
+        <label>Lead to Account</label>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>Name</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>Converted_Lead_B2B_Account_Record_Type__c</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <ruleStatus>Inactive</ruleStatus>
+    </matchingRules>
+    <matchingRules>
+        <fullName>Lead_to_Account_Fuzzy</fullName>
+        <description>SFORCE-2430 Fix Duplicate Rules</description>
+        <label>Lead to Account Fuzzy</label>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>Name</fieldName>
+            <matchingMethod>CompanyName</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>Converted_Lead_B2B_Account_Record_Type__c</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>BillingStreet</fieldName>
+            <matchingMethod>Street</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>MatchBlanks</blankValueBehavior>
+            <fieldName>Phone</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <ruleStatus>Active</ruleStatus>
+    </matchingRules>
+    <matchingRules>
+        <fullName>Marketing_Solutions_Account_Lead_Intake</fullName>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <description>Matching rule to be used for Accounts created by MarketingSolutionsAccountRestService Apex REST class</description>
+        <label>Marketing Solutions Account Lead Intake</label>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>MS_Formatted_Phone__c</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>Alternate_Email__c</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <ruleStatus>Active</ruleStatus>
+    </matchingRules>
+    <matchingRules>
+        <fullName>Marketing_Solutions_Account_Lead_Intake_v2</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <label>Marketing Solutions Account Lead Intake v2</label>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>Name</fieldName>
+            <matchingMethod>CompanyName</matchingMethod>
+        </matchingRuleItems>
+        <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
+            <fieldName>Alternate_Email__c</fieldName>
+            <matchingMethod>Exact</matchingMethod>
+        </matchingRuleItems>
+        <ruleStatus>Active</ruleStatus>
+    </matchingRules>
+</MatchingRules>

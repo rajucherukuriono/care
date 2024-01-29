@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Help Center Chat</name>
+    <queueMembers>
+        <roleAndSubordinates>
+            <roleAndSubordinate>Operations_Manager</roleAndSubordinate>
+        </roleAndSubordinates>
+        <users>
+            <user>caitlin@gearscrm.com.care</user>
+            <user>chris.santos@gearscrm.com.care</user>
+            <user>derek@gearscrm.com.care</user>
+            <user>jesse.fox@gearscrm.com.care</user>
+            <user>kristen.spada@care.com</user>
+            <user>seshavataram.venkata@care.com</user>
+            <user>surya.saride@care.com</user>
+            <user>patricia.leighton@care.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Chat</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>LiveChatTranscript</sobjectType>
+    </queueSobject>
+</Queue>

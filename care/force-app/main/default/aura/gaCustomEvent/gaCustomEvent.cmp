@@ -1,0 +1,8 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+<lightning:messageChannel
+    type="CDCC_Chat__c"
+    aura:id="CDCCChat"
+    onMessage="{!c.fireGAEvent}"
+/>
+
+</aura:component>

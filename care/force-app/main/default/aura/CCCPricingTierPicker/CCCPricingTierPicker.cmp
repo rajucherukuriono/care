@@ -1,0 +1,259 @@
+<aura:component extends="c:CCCModuleBase">
+
+    <!-- Aura Attributes - Public -->
+    <aura:attribute name="id" type="String" access="public" />
+    <aura:attribute name="name" type="String" access="public" />
+    <aura:attribute name="amount" type="Decimal" access="public" />
+    <aura:attribute name="bonusPoints" type="Integer" access="public" />
+    <aura:attribute name="pricingTiers" type="List" default="[]" access="public" />
+    <aura:attribute name="tierCustomThreshold" type="Decimal" access="public" />
+
+    <!--Flat Rate-->
+    <aura:attribute name="isFlatRate" type="Boolean" access="public" default="true"/>
+    <aura:attribute name="flatRateBudgetAmount" type="Decimal" access="public" />
+    <aura:attribute name="flatRateBudgetCadence" type="String" access="public" />
+
+    <!-- Aura Attributes - Private -->
+    <aura:attribute name="customAmountErrors" type="String" default="" access="private" />
+    <aura:attribute name="customPricingHelpText" type="String"
+        default="{!'Custom pricing is only available for values of $' + v.tierCustomThreshold + ' or more.'}"
+        access="private" />
+    <aura:attribute name="debounceTimeoutId" type="String" description="Used to store timeoutId in helper.debounce()" />
+
+    <!-- Aura Method to retrieve validity -->
+    <aura:method name="getValidity" action="{!c.getValidity}"></aura:method>
+    <aura:if isTrue="{!v.isFlatRate}">
+    <table
+        class="slds-table slds-table_cell-buffer slds-border_right slds-border_left ">
+        <thead>
+            <tr class="slds-line-height_reset">
+                
+                <!-- Billing Cadence -->
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate slds-p-around_x-small" title="Billing Cadence">Billing Cadence</div>
+                </th>
+
+                <!-- Minimum Monthly Budget -->
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate slds-p-around_x-small" title="Minimum Monthly Budget">Minimum Budget</div>
+                </th>
+
+                <!-- Monthly Ad Budget -->
+                <th class="slds-text-title_caps slds-align_absolute-center" scope="col">
+                    <div class="slds-truncate slds-p-around_x-small" title="Monthly Budget">Monthly Budget</div>
+                </th>
+
+                <!-- Bonus Points -->
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate slds-p-around_x-small" title="Bonus Points">Bonus Points</div>
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="slds-hint-parent">
+
+                <!-- Table Column - Monthly Cadence -->
+                <td data-label="Billing Cadence">
+                    <th data-label="Monthly Budget" scope="row" class="slds-align_absolute-center">
+                        <div class="slds-truncate slds-p-bottom_medium slds-text-align_left slds-align_absolute-center">
+                            <lightning:select value="{!v.flatRateBudgetCadence}" label="" variant="label-hidden" onchange="{!c.onBillingCadenceChange}">
+                                <!--<option value="Monthly">Monthly</option>-->
+                                <option value="Quarterly">Quarterly</option>
+                                <option value="Annually">Annually</option>
+                            </lightning:select>
+                        </div>
+                    </th>
+                </td>
+
+                <!-- Table Column - Monthly Budget -->
+                <td data-label="Minimum Monthly Budget">
+                    <th data-label="Monthly Budget Minimum" scope="row" class="slds-align_absolute-center">
+                        <div class="slds-truncate slds-p-around_x-small slds-text-align_left slds-align_absolute-center">
+                            <lightning:formattedNumber value="{!v.tierCustomThreshold}" style="currency" currencyCode="USD" label="" variant="label-hidden" />
+                        </div>
+                    </th>
+                </td>
+
+                <!-- Table Column - Monthly Budget Amount -->
+                <td data-label="Monthly Budget">
+                    <th data-label="Monthly Budget" scope="row" class="slds-align_absolute-center">
+                        <div class="slds-truncate slds-p-around_x-small slds-text-align_left">
+                            <lightning:input label="Input" variant="label-hidden" type="number" formatter="currency"  value="{!v.flatRateBudgetAmount}" onchange="{!c.onFlatRateAmountChange}" step="1"></lightning:input>
+                        </div>
+                    </th>
+
+                    <!-- Custom Amount Errors -->
+                    <aura:if isTrue="{! not(empty(v.customAmountErrors)) }">
+                        <ul>
+                            <aura:iteration items="{!v.customAmountErrors}" var="customError">
+                                <li class="slds-text-color_error">{!customError}</li>
+                            </aura:iteration>
+                        </ul>
+                    </aura:if>
+                </td>
+
+                <!-- Table Column - Bonus Points -->
+                <td data-label="Bonus Points">
+                    <th data-label="Bonus Points" scope="row" class="slds-align_absolute-center">
+                        <div class="slds-truncate slds-p-around_x-small slds-text-align_left">
+                                <lightning:formattedNumber maximumFractionDigits="2" label="" variant="label-hidden" value="{!v.bonusPoints}" style="decimal" />
+                        </div>
+                    </th>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <aura:set attribute="else">
+    <table
+        class="slds-table slds-table_cell-buffer slds-table_bordered slds-border_right slds-border_left slds-m-top_medium">
+        <thead>
+            <tr class="slds-line-height_reset">
+
+                <!-- Choose Radial -->
+                <th class="slds-text-title_caps slds-text-align_right" scope="col" style="width: 3.25rem;">
+                    <div class="slds-truncate slds-p-around_x-small slds-assistive-text" id="column-group-header"
+                        title="Choose a row to select">Choose
+                        a row to select</div>
+                </th>
+
+                <!-- Ad Budget -->
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate slds-p-around_x-small" title="Ad Budget">Ad Budget</div>
+                </th>
+
+
+                <!-- Cost per Lead -->
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate slds-p-around_x-small" title="Cost per Lead">Cost per Lead</div>
+                </th>
+
+                <!-- Bonus Points -->
+                <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                    <div class="slds-truncate slds-p-around_x-small" title="Bonus Points">Bonus Points</div>
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <aura:iteration items="{!v.pricingTiers}" var="pricingTier">
+                <tr class="slds-hint-parent">
+
+                    <!-- Table Column - Radial -->
+                    <th>
+                        <aura:if isTrue="{! notequals(pricingTier.name, 'Custom') }">
+
+                            <lightning:input type="radio" name="{!v.id}"
+                                disabled="{! equals(v.allowEdit, false) }"
+                                value="{!pricingTier.name}"
+                                checked="{! equals(v.name, pricingTier.name) }"
+                                onchange="{!c.onTierChange}" />
+
+                        </aura:if>
+
+                        <aura:if isTrue="{! equals(pricingTier.name, 'Custom') }">
+
+                            <lightning:input aura:id="custom_radio" type="radio"
+                                name="{!v.id}"
+                                disabled="{! equals(v.allowEdit, false) }"
+                                value="{!pricingTier.name}"
+                                checked="{! equals(v.name, pricingTier.name) }"
+                                onchange="{!c.onTierChange}" />
+
+                        </aura:if>
+                    </th>
+
+                    <!-- Table Column - Ad Budget -->
+                    <th data-label="Ad Budget" scope="row">
+                        <div class="slds-truncate slds-p-around_x-small slds-text-align_left">
+
+                            <!-- A static tier is selected, show the static tier's amount -->
+                            <aura:if isTrue="{! notequals(pricingTier.name, 'Custom') }">
+                                <lightning:formattedNumber value="{!pricingTier.amount}" style="currency" currencyCode="USD" />
+                            </aura:if>
+
+                            <!-- Show a Custom Amount input Field -->
+                            <aura:if isTrue="{! equals(pricingTier.name, 'Custom') }">
+
+                                <div class="slds-grid slds-grid_vertical-align-center">
+                                    <div class="slds-col">
+                                        <lightning:input variant="label-hidden" aura:id="custom_input" type="number"
+                                            name="{!pricingTier.amount}" label="Custom Ad Budget"
+                                            value="{!pricingTier.amount}"
+                                            disabled="{! notequals(v.name, 'Custom') }"
+                                            formatter="currency" step="0.01" onchange="{!c.onCustomAmountChange}" />
+                                    </div>
+
+                                    <div class="slds-col slds-grow-none slds-m-left_small">
+                                        <lightning:helptext content="{!v.customPricingHelpText}" class="helptext" />
+                                        <!-- <div class="{!'slds-m-left_small ' + v.popoverReferenceCustomPricing}"
+                                            onmouseover="{!c.onShowCustomPricingPopover}">
+                                            <lightning:icon iconName="utility:help"
+                                                alternativeText="{!v.popoverBodyCustomPricing}" size="x-small" />
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                                <!-- Custom Amount Errors -->
+                                <aura:if isTrue="{! not(empty(v.customAmountErrors)) }">
+                                    <ul>
+                                        <aura:iteration items="{!v.customAmountErrors}" var="customError">
+                                            <li class="slds-text-color_error">{!customError}</li>
+                                        </aura:iteration>
+                                    </ul>
+                                </aura:if>
+
+                            </aura:if>
+
+                        </div>
+
+                    </th>
+
+                    <!-- Table Column - Cost per Lead -->
+                    <td data-label="Cost per Lead">
+
+                        <div class="slds-truncate slds-p-around_x-small slds-text-align_right"
+                            title="{!pricingTier.costPerLead}">
+                            {!pricingTier.costPerLead}
+                        </div>
+
+                    </td>
+
+                    <!-- Table Column - Bonus Points -->
+                    <td data-label="Bonus Points">
+
+                        <!-- Not Custom Tier -->
+                        <aura:if isTrue="{! notequals(pricingTier.name, 'Custom') }">
+
+                            <div class="slds-truncate slds-p-around_x-small slds-text-align_right"
+                                title="{!pricingTier.bonusPoints}">
+                                <lightning:formattedNumber value="{!pricingTier.bonusPoints}"
+                                    maximumFractionDigits="2" />
+                            </div>
+
+                        </aura:if>
+
+                        <!-- Custom Tier -->
+                        <aura:if isTrue="{! equals(pricingTier.name, 'Custom') }">
+
+                            <div class="slds-truncate slds-p-around_x-small slds-text-align_right"
+                                title="{!pricingTier.bonusPoints}">
+                                <lightning:formattedNumber value="{!pricingTier.bonusPoints}"
+                                    maximumFractionDigits="2" />
+                            </div>
+
+                        </aura:if>
+                    </td>
+
+                </tr>
+            </aura:iteration>
+
+        </tbody>
+    </table>
+    </aura:set>
+</aura:if>
+
+</aura:component>

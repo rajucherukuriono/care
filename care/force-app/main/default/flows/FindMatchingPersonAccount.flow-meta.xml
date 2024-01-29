@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <description>This decision will have two outcomes: 
+1. A match was found for an existing Person account with the same email as in the Case field Web Email
+2. No match was found for an existing Person account with the same email as in the Case field Web Email</description>
+        <name>Does_a_Record_Currently_Exist</name>
+        <label>Does a Record Currently Exist?</label>
+        <locationX>182</locationX>
+        <locationY>398</locationY>
+        <defaultConnector>
+            <targetReference>Create_New_Person_Account_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Record Does Not Exist</defaultConnectorLabel>
+        <rules>
+            <name>Record_Does_Exist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>caseRecordId.SuppliedEmail</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Get_Person_Account_Records.PersonEmail</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Existing_Case_with_Person_Account_0</targetReference>
+            </connector>
+            <label>Record Does Exist</label>
+        </rules>
+    </decisions>
+    <dynamicChoiceSets>
+        <name>EmployerProgramPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Employer_Program_Pick__c</picklistField>
+        <picklistObject>Account</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <interviewLabel>FindMatchingPersonAccount {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Find Matching Person Account</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <description>This action will create the new Person Account with the Record Type &quot;International Person Account&quot;</description>
+        <name>Create_New_Person_Account_Action_0</name>
+        <label>Create New Person Account</label>
+        <locationX>314</locationX>
+        <locationY>638</locationY>
+        <connector>
+            <targetReference>Update_Case_with_New_Person_Account</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>TOU accepted in Case #{!caseRecordId.CaseNumber}</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Email__c</field>
+            <value>
+                <elementReference>caseRecordId.SuppliedEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Employer_ID_external__c</field>
+            <value>
+                <elementReference>Employee_ID_Only_for_Google</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Employer_Program_Pick__c</field>
+            <value>
+                <elementReference>Employer_Program</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FirstName</field>
+            <value>
+                <elementReference>First_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <elementReference>Last_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PersonEmail</field>
+            <value>
+                <elementReference>Email</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PersonMailingCountry</field>
+            <value>
+                <elementReference>Mailing_Country</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>caseRecordId.SuppliedPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>0121O000001ZY2aQAG</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>This will search for Person Account Records with the email address used in the Case field Web Email</description>
+        <name>Get_Person_Account_Records</name>
+        <label>Get Person Account Records</label>
+        <locationX>182</locationX>
+        <locationY>278</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Does_a_Record_Currently_Exist</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IsPersonAccount</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>PersonEmail</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>caseRecordId.SuppliedEmail</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0121O000001ZY2aQAG</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <sortField>Id</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>This will perform an update on the existing case on the Account field with the ID of the newly created Person Account record.</description>
+        <name>Update_Case_with_New_Person_Account</name>
+        <label>Update Case with New Person Account</label>
+        <locationX>314</locationX>
+        <locationY>758</locationY>
+        <connector>
+            <targetReference>Success_Added_New_Person_Account_to_this_Case</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>caseRecordId.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>Create_New_Person_Account_Action_0</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>This will take the Person Account ID found in the Get Records element and populate it in the Account field on the Case record.</description>
+        <name>Update_Existing_Case_with_Person_Account_0</name>
+        <label>Update Existing Case with Person Account</label>
+        <locationX>50</locationX>
+        <locationY>518</locationY>
+        <connector>
+            <targetReference>successMatchingPersonAccount</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>caseRecordId.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>Get_Person_Account_Records.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <screens>
+        <description>This will have a series of fields that can be used to create a new Person Account.  The fields are required to create new record.</description>
+        <name>Create_New_Person_Account_0</name>
+        <label>Create New Person Account</label>
+        <locationX>314</locationX>
+        <locationY>518</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Create_New_Person_Account_Action_0</targetReference>
+        </connector>
+        <fields>
+            <name>Instructions</name>
+            <fieldText>&lt;p&gt;No existing Contact/Person Account record was found with that email address.  Enter the following information to create a new Person Account.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>First_Name</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>caseRecordId.Web_First_Name__c</elementReference>
+            </defaultValue>
+            <fieldText>First Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Last_Name</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>caseRecordId.Web_Last_Name__c</elementReference>
+            </defaultValue>
+            <fieldText>Last Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Email</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>caseRecordId.SuppliedEmail</elementReference>
+            </defaultValue>
+            <fieldText>Email</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Mailing_Country</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>caseRecordId.Member_Locale__c</elementReference>
+            </defaultValue>
+            <fieldText>Mailing Country</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Employer_Program</name>
+            <choiceReferences>EmployerProgramPicklist</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Employer Program</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Employee_ID_Only_for_Google</name>
+            <dataType>String</dataType>
+            <fieldText>Employee ID (Only for Google)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Employer_Program</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Google</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>This is a screen of text stating that you can check for existing Person Accounts with the same email as the &quot;Web Email&quot; on the Case record.</description>
+        <name>InitialScreen</name>
+        <label>Initial Screen</label>
+        <locationX>182</locationX>
+        <locationY>158</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Get_Person_Account_Records</targetReference>
+        </connector>
+        <fields>
+            <name>Check</name>
+            <fieldText>&lt;p&gt;Check for existing Person Accounts with the email address in the &quot;Web Email&quot; field.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>A success message saying that the new Person Account has been created and added to the existing case.</description>
+        <name>Success_Added_New_Person_Account_to_this_Case</name>
+        <label>Success Added New Person Account to this Case</label>
+        <locationX>314</locationX>
+        <locationY>878</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>SuccessMessageNewPersonAccountAdded</name>
+            <fieldText>&lt;p&gt;The new Person Account was added to the Case!  &lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Click Finish to complete.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Screen that displays if an existing Person Account was added to the Case.</description>
+        <name>successMatchingPersonAccount</name>
+        <label>Success Matching Person Account</label>
+        <locationX>50</locationX>
+        <locationY>638</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>successMessage_0</name>
+            <fieldText>&lt;p&gt;The existing Person Account was added to this Case.  Click Finish to complete.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>InitialScreen</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>accountRecordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <name>caseRecordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <name>old_test</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

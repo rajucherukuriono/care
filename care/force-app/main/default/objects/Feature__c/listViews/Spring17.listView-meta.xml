@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Spring17</fullName>
+    <columns>NAME</columns>
+    <columns>Section__c</columns>
+    <columns>Subsection__c</columns>
+    <columns>Action_Notes__c</columns>
+    <columns>Availability_Type__c</columns>
+    <columns>SF_Variant__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>End_of_Service_date__c</columns>
+    <columns>End_of_Service_release__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Release_Version__c</field>
+        <operation>equals</operation>
+        <value>Spring17</value>
+    </filters>
+    <label>Spring17</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>SystemAdmin</role>
+    </sharedTo>
+</ListView>

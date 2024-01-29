@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SCP_ABUC_program_interest__c</fullName>
+    <externalId>false</externalId>
+    <label>SCP/ABUC program interest</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Senior Care Planning</fullName>
+                <default>false</default>
+                <label>Senior Care Planning</label>
+            </value>
+            <value>
+                <fullName>Adult Backup Care</fullName>
+                <default>false</default>
+                <label>Adult Backup Care</label>
+            </value>
+            <value>
+                <fullName>Both Senior Care Planning and Adult Backup Care</fullName>
+                <default>false</default>
+                <label>Both Senior Care Planning and Adult Backup Care</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

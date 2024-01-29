@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Tier 1</fullName>
+        <default>true</default>
+        <label>Tier 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Tier 2</fullName>
+        <default>false</default>
+        <label>Tier 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Tier 3</fullName>
+        <default>false</default>
+        <label>Tier 3</label>
+    </customValue>
+    <customValue>
+        <fullName>Tier 4</fullName>
+        <default>false</default>
+        <label>Tier 4</label>
+    </customValue>
+    <customValue>
+        <fullName>Tier 5</fullName>
+        <default>false</default>
+        <label>Tier 5</label>
+    </customValue>
+    <customValue>
+        <fullName>Custom</fullName>
+        <default>false</default>
+        <label>Custom</label>
+    </customValue>
+    <masterLabel>Pricing Tier</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

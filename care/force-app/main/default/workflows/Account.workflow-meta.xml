@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>COI_Survey_Email</fullName>
+        <description>COI Survey Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Center_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>BUC_Growth_Email_Templates/COI_Request_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Network_Partner_Re_launch_Alert</fullName>
+        <description>Network Partner Re launch Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jacqueline.frongello@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jennifer.goncalves@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kiran.vemu@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mary.buttrick@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>melanie.tremblay@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>raju.cherukuri@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>noreply@care.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>BUC_C_W_General/Network_Partner_Re_launch_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Network_Partner_Removal_Alert</fullName>
+        <description>Network Partner Removal Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kiran.vemu@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>raju.cherukuri@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>noreply@care.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>BUC_C_W_General/Network_Partner_Removal_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Agency_Application_Account_created</fullName>
+        <ccEmails>partnernetwork@care.com</ccEmails>
+        <description>New Agency Application Account created</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>BUC_Partner_Agencies/New_Agency_Application_Created</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Backup_Child_Care_Partner_Application_survey</fullName>
+        <description>New “Backup Child Care Partner Application” survey</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jill.litz@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>megan.lynch@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/New_Backup_Child_Care_Partner_Application_survey</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Case_Owner_to_Naquan</fullName>
+        <description>Changed to Donna Biscotti w SFORCE-3252</description>
+        <field>OwnerId</field>
+        <lookupValue>dbiscotti@care.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Case Owner to Donna</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Website_Field</fullName>
+        <field>Website</field>
+        <name>Clear Website Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_MemberID_from_Contact_to_Account</fullName>
+        <field>MemberID__c</field>
+        <formula>TEXT(MemberID__pc)</formula>
+        <name>Copy MemberID from Contact to Account</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NDA_Status_Update</fullName>
+        <description>Update Field NDA_Status_Last_Changed__c to current date upon every time value change for the field NDA_Status_Update</description>
+        <field>NDA_Status_Last_Changed__c</field>
+        <formula>NOW()</formula>
+        <name>NDA Status Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Search_Field_1_Type</fullName>
+        <field>Search_Field_1_Type__c</field>
+        <formula>TEXT( Type)</formula>
+        <name>Search Field 1 - Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>USAA_Member</fullName>
+        <description>update the account USAA member checkbox if the contact USAA member checkbox is true</description>
+        <field>USAA_Member_Account__c</field>
+        <literalValue>1</literalValue>
+        <name>USAA Member</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Center_DateOfNextOSV_To_After_1Yr</fullName>
+        <description>Update Center DateOfNextOSV To After 1Yr</description>
+        <field>Date_Of_Next_OSV__c</field>
+        <formula>IF(
+  AND(
+    MONTH( OSV_Completed__c ) = 2,
+    DAY( OSV_Completed__c ) = 29,
+    NOT( 
+      OR( 
+        MOD( YEAR( OSV_Completed__c ), 400 ) = 0, 
+        AND( 
+          MOD( YEAR( OSV_Completed__c ), 4 ) = 0,
+          MOD( YEAR( OSV_Completed__c ), 100 ) != 0
+        )
+      )
+    ) 
+  ),
+  DATE( YEAR( OSV_Completed__c ) + 1, 3, 1),
+  DATE( YEAR( OSV_Completed__c ) + 1, MONTH( OSV_Completed__c ), DAY( OSV_Completed__c ) )
+)</formula>
+        <name>Update Center DateOfNextOSV To After 1Yr</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Center_Date_of_Next_Vetting</fullName>
+        <description>Update Center Date of Next Vetting To 6 months after Date Of Last Vetting
+2020/02/11 - updated this logic based on the Vetting Status Picklist Values -- JIRA: Sforce 2486, Sforce 2487</description>
+        <field>Date_Of_Next_Vetting__c</field>
+        <formula>IF(OR(ISpickval(Vetting_Status__c, &quot;No Current Inspection Reports (NCIR)&quot;),ISpickval(Vetting_Status__c, &quot;Probation&quot;)),
+(DATE(
+YEAR( Date_Of_Last_Vetting__c ) + FLOOR( ( MONTH ( Date_Of_Last_Vetting__c ) + 3 - 1 ) / 12 ),
+MOD( MONTH ( Date_Of_Last_Vetting__c ) + 3 - 1 +
+IF( DAY ( Date_Of_Last_Vetting__c ) &gt; CASE( MOD( MONTH( Date_Of_Last_Vetting__c ) + 3 - 1, 12 ) + 1,
+2, 28,
+4, 30,
+6, 30,
+9, 30,
+11, 30,
+31 ), 1, 0 ), 12 ) + 1,
+IF( DAY( Date_Of_Last_Vetting__c ) &gt; CASE( MOD( MONTH( Date_Of_Last_Vetting__c ) + 3 - 1, 12 ) + 1,
+2, 28,
+4, 30,
+6, 30,
+9, 30,
+11, 30,
+31 ),
+1, DAY( Date_Of_Last_Vetting__c )
+)
+))
+, IF(ISpickval(Vetting_Status__c, &quot;Automatic Fail&quot;),
+(DATE(
+YEAR( Date_Of_Last_Vetting__c ) + FLOOR( ( MONTH ( Date_Of_Last_Vetting__c ) + 12 - 1 ) / 12 ),
+MOD( MONTH ( Date_Of_Last_Vetting__c ) + 12 - 1 +
+IF( DAY ( Date_Of_Last_Vetting__c ) &gt; CASE( MOD( MONTH( Date_Of_Last_Vetting__c ) + 12 - 1, 12 ) + 1,
+2, 28,
+4, 30,
+6, 30,
+9, 30,
+11, 30,
+31 ), 1, 0 ), 12 ) + 1,
+IF( DAY( Date_Of_Last_Vetting__c ) &gt; CASE( MOD( MONTH( Date_Of_Last_Vetting__c ) + 12 - 1, 12 ) + 1,
+2, 28,
+4, 30,
+6, 30,
+9, 30,
+11, 30,
+31 ),
+1, DAY( Date_Of_Last_Vetting__c )
+)
+))
+, null
+)
+)</formula>
+        <name>Update Center Date of Next Vetting</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Overall_Score_On_Account_Network</fullName>
+        <description>Update Overall Score On Account(Network Center)</description>
+        <field>Overall_Score__c</field>
+        <formula>if(OR(Vetting_Records_Present__c == 0,ISBLANK(Vetting_Records_Present__c)),null,
+(100- If(ISBLANK(Sum_Of_Automatic_Fail_Violations__c),0,Sum_Of_Automatic_Fail_Violations__c)*21-If(ISBLANK(Sum_Of_Critical_Violations__c),0,Sum_Of_Critical_Violations__c)*7-If(ISBLANK(Sum_Of_Sub_Critical_Violations__c),0,Sum_Of_Sub_Critical_Violations__c)*3))</formula>
+        <name>Update Overall Score On Account(Network</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Assign to Donna Biscotti</fullName>
+        <actions>
+            <name>Case_Owner_to_Naquan</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Sforce 1845 -- Event Care Process transition to Salesforce. Fallback for BUC Event Care Only accounts not assigned to teammembers to be assigned to Donna Biscotti (before to Naquan Cooper).</description>
+        <formula>AND ( $Setup.Override_Validation_Rules__c.Override_Case_Workflow_Rules__c = False, RecordType.Name=&apos;Business Account&apos;,   ISPICKVAL(Type, &apos;Event Care Only&apos;), OR(OwnerId = &apos;00570000002JkAS&apos;, OwnerId =&apos;00570000001THJ5&apos;, OwnerId = &apos;0053900000582PO&apos;,  OwnerId = &apos;00539000005KjOc&apos;, OwnerId = &apos;00570000001TUqX&apos; ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>NDA Status Update</fullName>
+        <actions>
+            <name>NDA_Status_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>SFORCE-2468 
+Sets the datetime everytime the field NDA_Status_Update is changed.</description>
+        <formula>AND ( $Setup.Override_Validation_Rules__c.Override_Account_Workflow_Rules__c = False, RecordType.Name=&apos;CAW Broker Account&apos;, OR (ISCHANGED(NDA_Status__c), NOT(ISBLANK(TEXT(NDA_Status__c)))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Search Fields</fullName>
+        <actions>
+            <name>Search_Field_1_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Jason Cooke (Innoveer) 10/18/11 - Copy the Type field to a custom field to enable this on the Global Search</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sync Language to Language Code</fullName>
+        <active>false</active>
+        <description>This rule updates the Language Code field whenever an agent changes the Language picklist.  This rule is only invoked when the Language field changes because it is assumed that agents will never manually create a Person Account record.</description>
+        <formula>ISCHANGED(Language__pc)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sync Locale to Language Code</fullName>
+        <active>false</active>
+        <description>This rule keeps the Locale and Language Code field in Sync.  The rule is invoked whenever a new record is created or whenever the Locale is changed.
+Added as part of INTL-353: https://wiki.carezen.local/x/fons</description>
+        <formula>ISNEW() || ISCHANGED(Locale__pc)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>USAA Member</fullName>
+        <actions>
+            <name>USAA_Member</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.USAA_Member__pc</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>update the account USAA member checkbox if the contact USAA member checkbox is true</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Center Date Of Next OSV  To After 1 Yr</fullName>
+        <actions>
+            <name>Update_Center_DateOfNextOSV_To_After_1Yr</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Date of next OSV: needs to auto populate 1 year out from OSV completed date</description>
+        <formula>not( Override_Date_Of_Next_OSV__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Center Date of Next Vetting To After 6 Mnths</fullName>
+        <actions>
+            <name>Update_Center_Date_of_Next_Vetting</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Update default Date Of Next Vetting as 6 months after Date Of Last Vetting</description>
+        <formula>not( Override_Date_Of_Next_Vetting__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Overall Score On Account%28Network Center%29</fullName>
+        <actions>
+            <name>Update_Overall_Score_On_Account_Network</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Update Overall Score On Account(Network Center)</description>
+        <formula>not(Override_Overall_Score__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Why_prefer_type_of_care__c</fullName>
+    <description>added for SFORCE-2425 BUC Surveys</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Q: Why do you prefer that type of care? Choose the most important attribute. Relates to Preference utilizing BUC.</inlineHelpText>
+    <label>Why do you prefer that type of care?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Quality</fullName>
+                <default>false</default>
+                <label>Quality</label>
+            </value>
+            <value>
+                <fullName>Cost</fullName>
+                <default>false</default>
+                <label>Cost</label>
+            </value>
+            <value>
+                <fullName>Socialization with others</fullName>
+                <default>false</default>
+                <label>Socialization with others</label>
+            </value>
+            <value>
+                <fullName>Time flexibility</fullName>
+                <default>false</default>
+                <label>Time flexibility</label>
+            </value>
+            <value>
+                <fullName>Multiple children</fullName>
+                <default>false</default>
+                <label>Multiple children</label>
+            </value>
+            <value>
+                <fullName>Accomodates sick child</fullName>
+                <default>false</default>
+                <label>Accomodates sick child</label>
+            </value>
+            <value>
+                <fullName>1-on-1 care</fullName>
+                <default>false</default>
+                <label>1-on-1 care</label>
+            </value>
+            <value>
+                <fullName>Distance</fullName>
+                <default>false</default>
+                <label>Distance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

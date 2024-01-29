@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agent_CSAT_Rating__c</fullName>
+    <description>{Agent first name}, the Member Care representative, made it easy to address my issue.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>{Agent first name}, the Member Care representative, made it easy to address my issue.</inlineHelpText>
+    <label>Agent CSAT Rating</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Very Good</fullName>
+                <default>false</default>
+                <label>Very Good</label>
+            </value>
+            <value>
+                <fullName>Good</fullName>
+                <default>false</default>
+                <label>Good</label>
+            </value>
+            <value>
+                <fullName>Neutral</fullName>
+                <default>false</default>
+                <label>Neutral</label>
+            </value>
+            <value>
+                <fullName>Bad</fullName>
+                <default>false</default>
+                <label>Bad</label>
+            </value>
+            <value>
+                <fullName>Very Bad</fullName>
+                <default>false</default>
+                <label>Very Bad</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

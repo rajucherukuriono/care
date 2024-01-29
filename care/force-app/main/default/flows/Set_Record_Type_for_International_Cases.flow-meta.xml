@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>&quot;Embedded Service Deployment&quot; only lets you manipulate fields that are defined in the &quot;Pre Chat Form&quot;.  Sadly, at this time, Record Type Ids are not allowed in the &quot;Pre Chat Form&quot;.  This means that if we want to change the Record Type of international chat cases, we have to resort to using a Before Insert Flow (which is what this is).</description>
+    <interviewLabel>Set Record Type for International Cases {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Set Record Type for International Chat Cases</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>If it&apos;s a Chat Case (identified by an Origin of Chat) 
+And if it&apos;s outside the US (identified by Case.Member_Locale__c)
+Then change Record Type to &quot;International Email&quot; &amp; ODS Request Platform to &quot;International&quot;</description>
+        <name>Set_Record_Type</name>
+        <label>Set Record Type</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <inputAssignments>
+            <field>ODS_Request_Platform__c</field>
+            <value>
+                <stringValue>International</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>01270000000HmqcAAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Record_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Origin</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Chat</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Member_Locale__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>en_US</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Member_Locale__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

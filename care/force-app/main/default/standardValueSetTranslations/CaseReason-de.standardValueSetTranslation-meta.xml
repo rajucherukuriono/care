@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Account</masterLabel>
+        <translation>Account/Konto</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Account Features</masterLabel>
+        <translation><!-- Account Features --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Account Management</masterLabel>
+        <translation><!-- Account Management --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Approval</masterLabel>
+        <translation>Check-Freigabe</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Assisted Search/Consultation</masterLabel>
+        <translation><!-- Assisted Search/Consultation --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Auto-renew</masterLabel>
+        <translation><!-- Auto-renew --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>BUC</masterLabel>
+        <translation><!-- BUC --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>BUC Requests</masterLabel>
+        <translation><!-- BUC Requests --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Background Check</masterLabel>
+        <translation><!-- Background Check --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Billing</masterLabel>
+        <translation>Rechnungslegung</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Blacklist Flag Match</masterLabel>
+        <translation><!-- Blacklist Flag Match --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Blocklist Flag Match</masterLabel>
+        <translation><!-- Blocklist Flag Match --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Booking Activity</masterLabel>
+        <translation><!-- Booking Activity --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Business Inquiries</masterLabel>
+        <translation>Geschäftsanfragen</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCPA</masterLabel>
+        <translation><!-- CCPA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>COVID-19</masterLabel>
+        <translation><!-- COVID-19 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Call- No Answer</masterLabel>
+        <translation>Anruf/AB - keine Antwort</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Cancel</masterLabel>
+        <translation>Account schließen</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Cancelled</masterLabel>
+        <translation><!-- Cancelled --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Care Check</masterLabel>
+        <translation><!-- Care Check --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Caregiver</masterLabel>
+        <translation><!-- Caregiver --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Chargeback</masterLabel>
+        <translation><!-- Chargeback --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Chat</masterLabel>
+        <translation><!-- Chat --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Client</masterLabel>
+        <translation><!-- Client --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Concerns</masterLabel>
+        <translation>Beschwerden/Anliegen/Bedenken</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Content Flag Audit</masterLabel>
+        <translation><!-- Content Flag Audit --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Delight Feature: Follow-up note from Mom</masterLabel>
+        <translation><!-- Delight Feature: Follow-up note from Mom --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Delight Feature: Note from Sheila</masterLabel>
+        <translation><!-- Delight Feature: Note from Sheila --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Digital</masterLabel>
+        <translation><!-- Digital --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Downgrade</masterLabel>
+        <translation>Paket kündigen/downgraden</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Duplicate Case</masterLabel>
+        <translation><!-- Duplicate Case --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>EAP</masterLabel>
+        <translation><!-- EAP --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Escalation</masterLabel>
+        <translation><!-- Escalation --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Event Care</masterLabel>
+        <translation><!-- Event Care --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Features</masterLabel>
+        <translation>Funktionen der Webseite</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Feedback</masterLabel>
+        <translation><!-- Feedback --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Filled</masterLabel>
+        <translation><!-- Filled --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>General</masterLabel>
+        <translation><!-- General --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Information</masterLabel>
+        <translation><!-- Information --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Inquiry Only</masterLabel>
+        <translation><!-- Inquiry Only --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Invoice Inquiry</masterLabel>
+        <translation><!-- Invoice Inquiry --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Job Status Update</masterLabel>
+        <translation><!-- Job Status Update --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Jobs</masterLabel>
+        <translation>Aufträge/Jobs</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mobile</masterLabel>
+        <translation><!-- Mobile --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>N: Biz Dev</masterLabel>
+        <translation><!-- N: Biz Dev --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>N: Can&apos;t locate in CSR</masterLabel>
+        <translation><!-- N: Can&apos;t locate in CSR --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>N: Feedback: Testimonials</masterLabel>
+        <translation><!-- N: Feedback: Testimonials --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>N: Prospective Provider</masterLabel>
+        <translation><!-- N: Prospective Provider --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>N: Prospective Seeker</masterLabel>
+        <translation><!-- N: Prospective Seeker --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>N: Reference for Provider</masterLabel>
+        <translation><!-- N: Reference for Provider --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>N: Solicitor</masterLabel>
+        <translation><!-- N: Solicitor --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Non-Member</masterLabel>
+        <translation><!-- Non-Member --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>PN</masterLabel>
+        <translation><!-- PN --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Partner</masterLabel>
+        <translation><!-- Partner --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Partner Agency</masterLabel>
+        <translation><!-- Partner Agency --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Personal Network Claims</masterLabel>
+        <translation><!-- Personal Network Claims --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Positive Feedback</masterLabel>
+        <translation><!-- Positive Feedback --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Process took to long</masterLabel>
+        <translation><!-- Process took to long --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Recorded Reference</masterLabel>
+        <translation><!-- Recorded Reference --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>References</masterLabel>
+        <translation><!-- References --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Refund</masterLabel>
+        <translation>Erstattung</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Removed from Site</masterLabel>
+        <translation><!-- Removed from Site --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Request for Different Department</masterLabel>
+        <translation><!-- Request for Different Department --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>SEO Lead</masterLabel>
+        <translation><!-- SEO Lead --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Safety</masterLabel>
+        <translation><!-- Safety --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Safety Alert</masterLabel>
+        <translation><!-- Safety Alert --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Safety Team Closures</masterLabel>
+        <translation><!-- Safety Team Closures --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Senior Care Consult</masterLabel>
+        <translation><!-- Senior Care Consult --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Senior Care Counseling</masterLabel>
+        <translation><!-- Senior Care Counseling --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Site Dissatisfaction</masterLabel>
+        <translation><!-- Site Dissatisfaction --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Site Errors</masterLabel>
+        <translation><!-- Site Errors --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Site Usage</masterLabel>
+        <translation>Nutzung der Webseite</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Spam</masterLabel>
+        <translation><!-- Spam --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Unfulfilled</masterLabel>
+        <translation><!-- Unfulfilled --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

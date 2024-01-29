@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Suspicious_Communication_Receive__c</fullName>
+    <description>Security/IT/Safety teams launching a Fraud Follow up survey to capture additional information on cases where the member has reported fraud. Sforce - 1634</description>
+    <externalId>false</externalId>
+    <label>Date Suspicious Communication Receive</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

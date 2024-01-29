@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>transl8__OnDemandTranslateController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>transl8__OnDemandTranslateControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>transl8__Translation_Studio_Ad_Hoc_Translation</name>
+    </customPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Translation Studio - Ad Hoc Translation (Custom)</label>
+</PermissionSet>

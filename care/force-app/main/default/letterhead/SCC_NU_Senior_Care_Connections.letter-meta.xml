@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#CCCCCC</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#CCCCFF</color>
+        <height>3</height>
+    </bottomLine>
+    <description>A letterhead for use with NU for senior care</description>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <verticalAlignment>Top</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>80</height>
+        <horizontalAlignment>Center</horizontalAlignment>
+        <logo>Images_Letterhead/NU_Senior_Care_Connections.jpg</logo>
+        <verticalAlignment>Middle</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#CCCCFF</color>
+        <height>3</height>
+    </middleLine>
+    <name>SCC - NU Senior Care Connections</name>
+    <topLine>
+        <color>#CCCCFF</color>
+        <height>3</height>
+    </topLine>
+</Letterhead>

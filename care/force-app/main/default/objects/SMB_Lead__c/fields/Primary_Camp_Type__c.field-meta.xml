@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Camp_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Primary Camp Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Outdoors/Adventure/Travel</fullName>
+                <default>false</default>
+                <label>Outdoors/Adventure/Travel</label>
+            </value>
+            <value>
+                <fullName>Academic</fullName>
+                <default>false</default>
+                <label>Academic</label>
+            </value>
+            <value>
+                <fullName>Technology</fullName>
+                <default>false</default>
+                <label>Technology</label>
+            </value>
+            <value>
+                <fullName>Specialty</fullName>
+                <default>false</default>
+                <label>Specialty</label>
+            </value>
+            <value>
+                <fullName>Art</fullName>
+                <default>false</default>
+                <label>Art</label>
+            </value>
+            <value>
+                <fullName>Sports</fullName>
+                <default>false</default>
+                <label>Sports</label>
+            </value>
+            <value>
+                <fullName>Special Needs</fullName>
+                <default>false</default>
+                <label>Special Needs</label>
+            </value>
+            <value>
+                <fullName>Religious</fullName>
+                <default>false</default>
+                <label>Religious</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

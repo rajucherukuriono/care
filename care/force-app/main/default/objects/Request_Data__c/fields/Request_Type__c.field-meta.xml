@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type__c</fullName>
+    <description>Tells whether the request is RTBF or Retention</description>
+    <externalId>false</externalId>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RTBF</fullName>
+                <default>false</default>
+                <label>RTBF</label>
+            </value>
+            <value>
+                <fullName>Retention</fullName>
+                <default>false</default>
+                <label>Retention</label>
+            </value>
+            <value>
+                <fullName>Delete</fullName>
+                <default>false</default>
+                <label>Delete</label>
+            </value>
+            <value>
+                <fullName>RTBF Fail - Invalid Record Type</fullName>
+                <default>false</default>
+                <label>RTBF Fail - Invalid Record Type</label>
+            </value>
+            <value>
+                <fullName>RTBF Fail - Employer Program</fullName>
+                <default>false</default>
+                <label>RTBF Fail - Employer Program</label>
+            </value>
+            <value>
+                <fullName>RTBF Fail - Safety Case</fullName>
+                <default>false</default>
+                <label>RTBF Fail - Safety Case</label>
+            </value>
+            <value>
+                <fullName>RTBF Fail - Premium</fullName>
+                <default>false</default>
+                <label>RTBF Fail - Premium</label>
+            </value>
+            <value>
+                <fullName>RTBF Fix</fullName>
+                <default>false</default>
+                <label>RTBF Fix</label>
+            </value>
+            <value>
+                <fullName>RTBF Override</fullName>
+                <default>false</default>
+                <label>RTBF Override</label>
+            </value>
+            <value>
+                <fullName>RTBF Complete</fullName>
+                <default>false</default>
+                <label>RTBF Complete</label>
+            </value>
+            <value>
+                <fullName>RTBF Do Not Process</fullName>
+                <default>false</default>
+                <label>RTBF Do Not Process</label>
+            </value>
+            <value>
+                <fullName>RTBF Anonymize</fullName>
+                <default>false</default>
+                <label>RTBF Anonymize</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

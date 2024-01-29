@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="titleText" label="Title/Header for component" type="String" default=""/>
+            <property name="fieldSetName" label="Field Set API Name" type="String" default=""/>
+            <property name="ObjectComponentIsOn" label="Object that the component is placed on" type="String" default="Account"
+                      description="Which object is this component being placed on (Account or Case)"/>
+            <property name="SetColumnAsHyperlink" label="Column As RecordHyperLink" 
+                      type="String" datasource="Yes,No" default="Yes"
+                      description="This column will be a hyperlink to the record"/>
+            <property name="SetColumnAsHyperlinkField" label="Field used for hyperlink" 
+                      type="String" default=""
+                      description="This field will be a hyperlink to the record"/>
+           <property name="CaseFilterField" label="Field used to filter cases" 
+                      type="String" description="This field will be used to filter cases"/> 
+            <property name="CaseFilterValue" label="Value of field used to filter cases" 
+                      type="String" description="This value will be used to filter cases."/>                            
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

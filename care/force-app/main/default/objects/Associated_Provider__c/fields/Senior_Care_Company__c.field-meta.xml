@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Senior_Care_Company__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Senior Care Company Name</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the Senior Care Company that the Provider is associated with.</inlineHelpText>
+    <label>Senior Care Company</label>
+    <referenceTo>Senior_Care_Companies__c</referenceTo>
+    <relationshipLabel>Associated Providers</relationshipLabel>
+    <relationshipName>Associated_Providers</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

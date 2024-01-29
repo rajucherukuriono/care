@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Notes__c</fullName>
+    <description>Added for SFORCE-1936 - Benefit Fair Requests</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Include logistical notes including parking, rules for event or any other information marketing and on-site staff should know.</inlineHelpText>
+    <label>Additional Notes</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

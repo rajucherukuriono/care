@@ -1,0 +1,63 @@
+{
+  "appPageId" : "69e852b7-4ea0-40f9-8d13-19c7c8c11258",
+  "componentName" : "siteforce:sldsTwoCol66Layout",
+  "dataProviders" : [ ],
+  "id" : "9b4933c5-67ae-4ff0-b242-90d7cf31fc12",
+  "label" : "Contact Support",
+  "regions" : [ {
+    "id" : "656703f4-1446-4814-9154-19775b290364",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "66a812e8-7319-41a2-a7e4-88fa9ed32593",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "askConfirmationQuestion" : true,
+        "confirmationMessageLabel" : "Got it!",
+        "deflectionSubtitle" : "Find what you need here.",
+        "deflectionTitle" : "Need Answers Fast?",
+        "firstQuestion" : "Did this content solve your issue?",
+        "maxResults" : 6,
+        "measureDeflection" : true,
+        "redirectUrl" : "",
+        "secondQuestion" : "Stop creating your case?",
+        "showArticles" : true,
+        "showDiscussions" : false,
+        "topicId" : ""
+      },
+      "componentName" : "forceCommunity:caseDeflection",
+      "id" : "9ee2893d-5ee0-45f6-8011-37181880ab92",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "57b114d4-a9bf-42c7-94e5-7d37477dff39",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "f2fe06a7-53c9-4888-92ec-818e3cd381a1",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Contact Support"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "9fd62f5b-f54c-409b-bb7d-da2a0e1f21a4",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "376fbc01-022f-44f2-88aa-47fbc6c0a921",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "contactsupport"
+}

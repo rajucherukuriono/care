@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Email_upon_Blocklist_Member_Appeal_Auto_Close</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A1</name>
+        <label>Blocklist Appeal Closed- Email Address Not Linked to Account</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <actionName>Case.Email_upon_Blocklist_Member_Appeal_Auto_Close</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Email_upon_Blocklist_Member_Appeal_Auto_Close</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Auto Close Blocked Member Appeal Case</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND(
+	[Case].isClosed=True,
+	OR(
+		[Case].RecordType.Name=&apos;Standard&apos;,
+		[Case].RecordType.Name=&apos;International Email&apos;
+	),
+	[Case].Subject=&apos;Blocked Member Appeal&apos;,
+	[Case].Member_ID__c =&apos;0&apos;,
+	$Setup.Override_Validation_Rules__c.Override_Case_Processes__c= FALSE
+)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_1</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+	{!myVariable_current.IsClosed}=True,
+	OR(
+		{!myVariable_current.RecordType.Name}=&apos;Standard&apos;,
+		{!myVariable_current.RecordType.Name}=&apos;International Email&apos;
+	),
+	{!myVariable_current.Subject}=&apos;Blocked Member Appeal&apos;,
+	{!myVariable_current.Member_ID__c} =&apos;0&apos;,
+	{!$Setup.Override_Validation_Rules__c.Override_Case_Processes__c}= FALSE
+)</expression>
+    </formulas>
+    <interviewLabel>Send_Email_on_Bulk_Closure_of_Blocked_Member_Appeal-1_InterviewLabel</interviewLabel>
+    <label>Send Email on Bulk Closure of Blocked Member Appeal</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>Case</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <startElementReference>myDecision</startElementReference>
+    <status>Obsolete</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+</Flow>

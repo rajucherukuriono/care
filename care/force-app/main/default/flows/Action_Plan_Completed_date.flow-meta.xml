@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>Migrated from the: Action Plan Completed date workflow rule
+Workflow rule description: &quot;</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>TodaysDateFormula</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <label>Action Plan Completed date</label>
+    <migratedFromWorkflowRuleName>Action Plan Completed date</migratedFromWorkflowRuleName>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>This will update the Completed Date field on the record to reflect today&apos;s date.</description>
+        <name>Update_Completed_Date_field_value_to_Today_s_date</name>
+        <label>Update Completed Date field value to Today&apos;s date</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>Action_Plan_Completed_Date__c</field>
+            <value>
+                <elementReference>TodaysDateFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Completed_Date_field_value_to_Today_s_date</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>(1 OR 2)</filterLogic>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Request Canceled</stringValue>
+            </value>
+        </filters>
+        <object>Action_Plan_Needs__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

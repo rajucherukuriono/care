@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>The Case Reason field will change to Approval when either:
+1. The Case is new and the Record Type is &quot;Enrollment&quot;
+2. The existing Case is edited to change the Record Type to &quot;Enrollment&quot;</description>
+    <environments>Default</environments>
+    <interviewLabel>Update Case Reason to Approval {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Case Reason to Approval</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>When this Flow is triggered, the Case record will be updated to change the &quot;Case Reason&quot; field to &quot;Approval&quot; and &quot;Secondary Case Reason&quot; field to &quot;Opt-In&quot;</description>
+        <name>Update_Case_Reason_and_Secondary_Case_Reason</name>
+        <label>Update Case Reason and Secondary Case Reason</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>Reason</field>
+            <value>
+                <stringValue>Approval</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Secondary_Case_Reason__c</field>
+            <value>
+                <stringValue>Opt-In</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Case_Reason_and_Secondary_Case_Reason</targetReference>
+        </connector>
+        <filterFormula>OR(
+AND(
+ISNEW(),
+{!$Record.RecordType.DeveloperName}=&quot;Enrollment&quot;
+),
+AND(
+ISCHANGED({!$Record.RecordTypeId}),
+{!$Record.RecordType.DeveloperName}=&quot;Enrollment&quot;
+)
+)</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

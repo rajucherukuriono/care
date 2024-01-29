@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WPS_Account_Plan_Contact_Role</fullName>
+    <active>true</active>
+    <description>This is used by  WPS team</description>
+    <label>WPS Account Plan Contact Role</label>
+    <picklistValues>
+        <picklist>Contact_Role__c</picklist>
+        <values>
+            <fullName>Champion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Influencer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_Type__c</picklist>
+        <values>
+            <fullName>Coaches</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Economic Buyers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Buyers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Buyers</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

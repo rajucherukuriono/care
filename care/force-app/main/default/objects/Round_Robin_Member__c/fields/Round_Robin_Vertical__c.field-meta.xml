@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Round_Robin_Vertical__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( INCLUDES ( Round_Robin__r.Vertical__c , &quot;Childcare&quot; ), &quot;Childcare; &quot;,null ) &amp;
+IF ( INCLUDES ( Round_Robin__r.Vertical__c , &quot;Senior Care&quot; ), &quot;Senior Care; &quot;,null ) &amp;
+IF ( INCLUDES ( Round_Robin__r.Vertical__c , &quot;Child or Senior Care Agency&quot; ), &quot;Child or Senior Care Agency; &quot;,null ) &amp;
+IF ( INCLUDES ( Round_Robin__r.Vertical__c , &quot;Children&apos;s Camp&quot; ), &quot;Children&apos;s Camp &quot;,null ) &amp;
+IF ( INCLUDES ( Round_Robin__r.Vertical__c , &quot;Children&apos;s Class or Activity Center&quot; ), &quot;Children&apos;s Class or Activity Center; &quot;,null ) &amp;
+IF ( INCLUDES ( Round_Robin__r.Vertical__c , &quot;Licensed Daycare Facility&quot; ), &quot;Licensed Daycare Facility; &quot;,null ) &amp;
+IF ( INCLUDES ( Round_Robin__r.Vertical__c , &quot;Licensed In-home daycare facility&quot; ), &quot;Licensed In-home daycare facility; &quot;,null ) &amp;
+IF ( INCLUDES ( Round_Robin__r.Vertical__c , &quot;Pet Daycare&quot; ), &quot;Pet Daycare; &quot;,null ) &amp;
+IF ( INCLUDES ( Round_Robin__r.Vertical__c , &quot;Preschool Facility&quot; ), &quot;Preschool Facility; &quot;,null ) &amp;
+IF ( INCLUDES ( Round_Robin__r.Vertical__c , &quot;Senior Assisted Living Facility&quot; ), &quot;Senior Assisted Living Facility; &quot;,null )</formula>
+    <label>Round Robin Vertical</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

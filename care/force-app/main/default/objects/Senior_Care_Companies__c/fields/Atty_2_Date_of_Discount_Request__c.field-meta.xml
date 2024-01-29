@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Atty_2_Date_of_Discount_Request__c</fullName>
+    <description>SFORCE-2936
+Dev - Add fields to Senior Care Companies object</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the date you requested a discount from Attorney 2</inlineHelpText>
+    <label>Atty 2 Date of Discount Request</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

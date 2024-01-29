@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Services_Available__c</fullName>
+    <externalId>false</externalId>
+    <label>Services Available - ADP</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Medication Management</fullName>
+                <default>false</default>
+                <label>Medication Management</label>
+            </value>
+            <value>
+                <fullName>Physical Therapy</fullName>
+                <default>false</default>
+                <label>Physical Therapy</label>
+            </value>
+            <value>
+                <fullName>Occupational Therapy</fullName>
+                <default>false</default>
+                <label>Occupational Therapy</label>
+            </value>
+            <value>
+                <fullName>Speech Therapy</fullName>
+                <default>false</default>
+                <label>Speech Therapy</label>
+            </value>
+            <value>
+                <fullName>Mental Health Service</fullName>
+                <default>false</default>
+                <label>Mental Health Service</label>
+            </value>
+            <value>
+                <fullName>Pet Therapy</fullName>
+                <default>false</default>
+                <label>Pet Therapy</label>
+            </value>
+            <value>
+                <fullName>Nap Room Available</fullName>
+                <default>false</default>
+                <label>Nap Room Available</label>
+            </value>
+            <value>
+                <fullName>Handicap Accessible Transportation Provided</fullName>
+                <default>false</default>
+                <label>Handicap Accessible Transportation Provided</label>
+            </value>
+            <value>
+                <fullName>Chair/stair lift - curved</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chair/stair lift - curved</label>
+            </value>
+            <value>
+                <fullName>Chair/stair lift - straight</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chair/stair lift - straight</label>
+            </value>
+            <value>
+                <fullName>Elevator/lifts</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Elevator/lifts</label>
+            </value>
+            <value>
+                <fullName>Emergency response systems</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Emergency response systems</label>
+            </value>
+            <value>
+                <fullName>Safety tub/shower</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Safety tub/shower</label>
+            </value>
+            <value>
+                <fullName>Wheelchair ram</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wheelchair ram</label>
+            </value>
+            <value>
+                <fullName>Widen doorways</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Widen doorways</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

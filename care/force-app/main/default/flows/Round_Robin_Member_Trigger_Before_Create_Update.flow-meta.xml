@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <name>assign_Task_Counter</name>
+        <label>assign Task Counter</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Task_Counter__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Round_Robin__r.Lowest_Active_Task_Counter__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>dec_New_or_changed_to_Active</name>
+        <label>New or changed to Active</label>
+        <locationX>182</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>New_or_changed_to_Active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Active__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Active__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Active__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Round_Robin__r.Lowest_Active_Task_Counter__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>assign_Task_Counter</targetReference>
+            </connector>
+            <label>New or changed to Active</label>
+        </rules>
+    </decisions>
+    <description>v1.: initial development</description>
+    <interviewLabel>Round Robin Member | Trigger | Before Create/Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Round Robin Member | Trigger | Before Create/Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>dec_New_or_changed_to_Active</targetReference>
+        </connector>
+        <object>Round_Robin_Member__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CG_Verification_Audit_Report_Received__c</fullName>
+    <description>Sforce 2497</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the date the Caregiver Verification Audit Report was received from agency</inlineHelpText>
+    <label>CG Verification Audit Report Received</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,31 @@
+<template>
+	<div class="container">
+		<div>
+			<img src={iconUrl}>
+		</div>
+		<div>
+			<h2>{title}</h2>
+		</div>
+		<div>
+			<p>{description}</p>
+		</div>
+		<div>
+			<template if:true={linkUrl}>
+				<a href={linkUrl} target="_blank">
+					<div class="link">
+						{linkText}&nbsp;
+						<lightning-icon class="icon" icon-name="utility:chevronright" alternative-text="Learn More" title="Learn More" size="xx-small"></lightning-icon>
+					</div>
+				</a>
+			</template>
+			<template if:false={linkUrl}>
+				<a href="javascript:void(0);" onclick={handleLinkClick}>
+					<div class="link">
+						{linkText}&nbsp;
+						<lightning-icon class="icon" icon-name="utility:chevronright" alternative-text="Learn More" title="Learn More" size="xx-small"></lightning-icon>
+					</div>
+				</a>
+			</template>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,12 @@
+<apex:page >
+       <apex:PageBlock title="Salesforce Announcement">
+              <apex:outputText value="On " style="font-size:1.2em"></apex:outputText>
+              <font color="red" style="font-size:1.2em"><b>March 3, 2019</b></font>
+              <apex:outputText value=" Salesforce URL will change to " style="font-size:1.2em"></apex:outputText>
+              <a href="https://caredotcom.my.salesforce.com" style="color:blue;font-size:1.2em" target="_blank">https://caredotcom.my.salesforce.com</a>
+              <apex:outputText value=".  Please make sure you update any bookmarks or favorites you have saved beforehand." style="font-size:1.2em" ></apex:outputText><br/>
+              <apex:outputText value="Starting on 3/3, " style="font-size:1.2em" ></apex:outputText>
+              <b><apex:outputText value=" the old URL will no longer work." style="font-size:1.2em;color:red" ></apex:outputText></b>
+              <br/>
+       </apex:PageBlock>  
+</apex:page>

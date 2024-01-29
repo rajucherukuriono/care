@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Alert_G_HomePay_Leads_group_members</name>
+        <label>Alert G: HomePay Leads group members</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <actionName>Lead.Alert_G_HomePay_Leads_group_members</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Lead.Alert_G_HomePay_Leads_group_members</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <description>This rule fires whenever a lead is assigned to the Q: HomePay Lead queue. It is used to alert agents of the new lead.</description>
+    <environments>Default</environments>
+    <interviewLabel>Alert agents of new HomePay Lead {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Alert agents of new HomePay Lead</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Alert_G_HomePay_Leads_group_members</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01270000000Hn8BAAS</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>OwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>00G70000001aG7OEAU</stringValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

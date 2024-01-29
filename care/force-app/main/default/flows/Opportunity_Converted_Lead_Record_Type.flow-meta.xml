@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <assignments>
+        <name>Set_Center_Network_Development</name>
+        <label>Set Center Network Development</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>01239000000UQX0</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_HomePay_Partner</name>
+        <label>Set HomePay Partner</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>01270000000Hnde</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_HomePay_Referral</name>
+        <label>Set HomePay Referral</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>01270000000Hndf</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Marketplace_ISR_Opportunity</name>
+        <label>Set Marketplace ISR Opportunity</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>01270000000HouM</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_MKP_National_Opportunity</name>
+        <label>Set MKP National Opportunity</label>
+        <locationX>1106</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>01270000000HozP</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>Actions depend on the Opportunity.Converted_Lead_Record_Type__c</description>
+        <name>Converted_Lead_Record_Type</name>
+        <label>Converted Lead Record Type</label>
+        <locationX>710</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>HomePay_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>HomePay Lead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_HomePay_Partner</targetReference>
+            </connector>
+            <label>HomePay Lead</label>
+        </rules>
+        <rules>
+            <name>Center_Network_Development_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Center Network Development Lead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Center_Network_Development</targetReference>
+            </connector>
+            <label>Center Network Development Lead</label>
+        </rules>
+        <rules>
+            <name>Marketplace_ISR_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Marketplace ISR Lead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Marketplace_ISR_Opportunity</targetReference>
+            </connector>
+            <label>Marketplace ISR Lead</label>
+        </rules>
+        <rules>
+            <name>HomePay_B2C_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>HomePay B2C Lead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_HomePay_Referral</targetReference>
+            </connector>
+            <label>HomePay B2C Lead</label>
+        </rules>
+        <rules>
+            <name>Marketplace_National</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Marketplace National</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_MKP_National_Opportunity</targetReference>
+            </connector>
+            <label>Marketplace National</label>
+        </rules>
+    </decisions>
+    <description>Converted process builder &quot;Convert Lead - Match Opportunity Record Types&quot; (Match_Record_Types)
+Sets the Opportunity Record Type based on the Opportunity.Converted_Lead_Record_Type__c
+This process sees little use and is a prime candidate for cleanup.</description>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity Converted Lead Record Type {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Converted Lead Record Type</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>584</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Converted_Lead_Record_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Converted_Lead_Record_Type__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

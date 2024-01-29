@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Name__c</fullName>
+    <description>Describes the Username which needs deletion access. To provide multiple values, use the delimiter ;</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Mention the Username which needs deletion access. To provide multiple values, use the delimiter ;</inlineHelpText>
+    <label>Username</label>
+    <length>32768</length>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

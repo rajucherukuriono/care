@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LifeCare_Case_Dissatisfaction_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND((RecordType.Name = &quot;LifeCare Case Survey&quot;),
+     NOT(ISPICKVAL(Revised_Overall_Satisfaction__c, &apos;&apos;)),
+     ISBLANK(QA_Review_Comments__c)
+)</errorConditionFormula>
+    <errorDisplayField>QA_Review_Comments__c</errorDisplayField>
+    <errorMessage>Please Add the QA Review Comments</errorMessage>
+</ValidationRule>

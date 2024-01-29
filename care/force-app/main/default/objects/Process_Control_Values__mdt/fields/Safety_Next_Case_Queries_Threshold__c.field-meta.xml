@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Safety_Next_Case_Queries_Threshold__c</fullName>
+    <description>Holds the value to control number of Queries can be executed while retrying the Safety Next case automatically</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Holds the value to control number of Queries can be executed while retrying the Safety Next case automatically</inlineHelpText>
+    <label>Safety Next Case Queries Threshold</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <description>2023-12-07: Deactivated by Jack Odell because I think this flow is redundant with &quot;Set Case Owner for Chat - Case RT&quot; &amp; &quot;Set Case Owner for Chat - Chat RT&quot; &amp; also because it was throwing row lock errors.</description>
+    <environments>Default</environments>
+    <interviewLabel>NF Bot Update Case Ownership {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>NF Bot Update Case Ownership</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Case_Owner</name>
+        <label>Update Case Owner</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.CaseId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Case_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>InProgress</stringValue>
+            </value>
+        </filters>
+        <object>LiveChatTranscript</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

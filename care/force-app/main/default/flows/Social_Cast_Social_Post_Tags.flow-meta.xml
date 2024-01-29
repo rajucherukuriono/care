@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <description>Workaround to read Social Post tags Longtextarea into a new field for comparison.</description>
+        <name>Update_Post_Tags_Short</name>
+        <label>Update Post Tags Short</label>
+        <locationX>390</locationX>
+        <locationY>50</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Post_Tags_Short__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.PostTags</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Reads Post Tags (LongTextArea) into Post_Tags_Short__c (String) to be comparable. SFORCE-953.</description>
+    <interviewLabel>Social - Cast Social Post Tags {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Social - Cast Social Post Tags</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Update_Post_Tags_Short</targetReference>
+        </connector>
+        <object>SocialPost</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Owner_Abuse_Neglect__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&apos;https://www.google.com/search?q=&apos;+Business_Stakeholder__c+&apos; Abuse and Neglect&apos;, Business_Stakeholder__c+&apos; Abuse and Neglect&apos;, &apos;_blank&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Owner Abuse &amp; Neglect</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

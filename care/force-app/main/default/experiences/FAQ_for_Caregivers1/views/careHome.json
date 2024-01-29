@@ -1,0 +1,324 @@
+{
+  "appPageId" : "69e852b7-4ea0-40f9-8d13-19c7c8c11258",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "6936e5cd-a340-433a-a401-49b0d630498c",
+  "label" : "CareHome",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "3fcb6634-0c29-43a6-a275-3d771888bb09",
+          "columns" : [ {
+            "UUID" : "a4382c0e-4d0f-4463-8b41-b82722f50e5b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "8",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "11af3281-0ca1-48ec-a871-637e1ae55646",
+            "columnKey" : "d05cf",
+            "columnName" : "Column 2",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "002be962-188d-4ba3-9576-a98da25095d4",
+            "columnKey" : "ae2e3",
+            "columnName" : "Column 3",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3fcb6634-0c29-43a6-a275-3d771888bb09",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "866aa2a3-20d7-4060-a7f2-8bccdd1ff27c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "heading" : "Most Common",
+            "topic10IconName" : "edit",
+            "topic1IconName" : "edit",
+            "topic1Id" : "",
+            "topic2IconName" : "jobs",
+            "topic2Id" : "",
+            "topic3IconName" : "profile",
+            "topic3Id" : "",
+            "topic4IconName" : "report",
+            "topic4Id" : "",
+            "topic5IconName" : "edit",
+            "topic6IconName" : "edit",
+            "topic7IconName" : "edit",
+            "topic8IconName" : "edit",
+            "topic9IconName" : "edit"
+          },
+          "componentName" : "c:cdccPopularTopics",
+          "id" : "a127fe57-daf3-40b7-9e0f-c9c883dd7f86",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a4382c0e-4d0f-4463-8b41-b82722f50e5b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "a1a5d11d-299a-41b5-a02b-1a66359888a1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "11af3281-0ca1-48ec-a871-637e1ae55646",
+        "regionLabel" : "Column 2",
+        "regionName" : "d05cf",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ddf6e11d-7684-4a54-ab5a-ad71a850b87b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "heading" : "Quicklinks",
+            "link1Title" : "Reset my password",
+            "link1Url" : "https://www.google.com",
+            "link2Title" : "Remove my credit card",
+            "link2Url" : "https://www.google.com",
+            "link3Title" : "Update my email address",
+            "link3Url" : "https://www.google.com",
+            "link4Title" : "Close my account",
+            "link4Url" : "https://www.google.com"
+          },
+          "componentName" : "c:cdccQuickLinks",
+          "id" : "ec5d7768-7fff-43c2-91a4-68aadae17674",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "002be962-188d-4ba3-9576-a98da25095d4",
+        "regionLabel" : "Column 3",
+        "regionName" : "ae2e3",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "55c0db28-4963-455e-bf7e-ac9a2d6fd614",
+          "columns" : [ {
+            "UUID" : "8659b5c6-85a4-4a2f-aaf9-9b48ded2c408",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "55c0db28-4963-455e-bf7e-ac9a2d6fd614",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"font-weight: bold; text-align:center;font-size:28px\">FAQs</h1>\n<br>\n<br>\n\n<div class=\"slds-grid\">\n  <div class=\"slds-col\"> <p style=\"font-weight: bold; text-align:left;font-size:21px;\">Trust and safety\n      \n<p style=\"text-align:left;font-size:16px;\">\n\n\t<a href=\"http://www.google.com/\">What is the difference between a basicand a premium membership?</a> \n</p>\n<br>\n<p style=\"text-align:left;font-size:16px;\">\n   <a href=http://www.google.com>How can I message with a caregiver?</a>\n    <br>\n    <br>\n    <p style=\"text-align:left;font-size:16px;\">\n    <a href=http://www.google.com>Why wasn't my job approved?</a>\n<br>\n<br>\n<p style=\"text-align:left;font-size:16px;\">\n   <a href=http://www.google.com>What is the Payment Center?</a>\n    <br>\n    <br>\n    <p style=\"text-align:left;font-size:16px;\">  \n   <a href=http://www.google.com>How do I access CareChat?</a>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n<p style=\"font-weight: bold; text-align:left;font-size:16px;\">\n    <a href=\"http://www.google.com\" style=\"color: #3A94ED\">View All Articles \t&nbsp; &gt</a>\n    <br>\n    <br>\n  </div>\n    \n  <div class=\"slds-col\"> <p style=\"font-weight: bold; text-align:left;font-size:21px;\">Account management\n    <br>\n   <p style=\"text-align:left;font-size:16px;\">\n          <br>\n            <a href=http://www.google.com>Why wasn't my photo approved?</a>\n    <br>\n    <br>\n\n                     \n    <p style=\"text-align:left;font-size:16px;\">\n             <a href=http://www.google.com>How do I find the email address I used to enroll?</a>\n    <br>\n    <br>\n    <p style=\"text-align:left;font-size:16px;\">\n             <a href=http://www.google.com>How do I post a job?</a>\n    <br>\n    <br>\n    <p style=\"text-align:left;font-size:16px;\">\n             <a href=http://www.google.com>How do I close a job?</a>\n    <br>\n    <br>\n    <p style=\"text-align:left;font-size:16px;\"   >\n              <a href=http://www.google.com>How do I upgrade my account?</a>\n    <br>\n          <br>\n          <br>\n          <br>\n      \n<br>\n<br>\n<p style=\"font-weight: bold; text-align:left;font-size:16px;\">\n    <a href=\"http://www.google.com\" style=\"color: #3A94ED\">View All Articles \t&nbsp; &gt</a>\n    <br>\n    <br>\n  </div>\n\n  <div class=\"slds-col\"> <p style=\"font-weight: bold; text-align:left;font-size:21px;\">Subscriptions and billing\n        <p style=\"text-align:left;font-size:16px;\">\n              <br>\n             <a href=http://www.google.com>How do I cancel my premium membership?</a>\n    <br>\n    <br>\n    <p style=\"text-align:left;font-size:16px;\">\n             <a href=http://www.google.com>How do I remove my credit card?</a>\n    <br>\n    <br>\n    <p style=\"text-align:left;font-size:16px;\">\n              <a href=http://www.google.com>Does Care.com offer refunds?</a>\n    <br>\n    <br>\n    <p style=\"text-align:left;font-size:16px;\"   >\n              <a href=http://www.google.com>Why isn't my credit card being accepted?</a>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n                  <p style=\"font-weight: bold; text-align:left;font-size:16px;\">\n    <a href=\"http://www.google.com\" style=\"color: #3A94ED\">View All Articles \t&nbsp; &gt</a>\n    <br>\n    <br>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "34c7df99-4219-4ea5-a395-6638c949d068",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8659b5c6-85a4-4a2f-aaf9-9b48ded2c408",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "675e054d-c05e-409a-b95d-7c9e65ae6b43",
+          "columns" : [ {
+            "UUID" : "a387d6e6-eb8a-4930-b8b9-b0cb09de1f1b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "675e054d-c05e-409a-b95d-7c9e65ae6b43",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "tile1Description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "tile1IconName" : "shield.png",
+            "tile1LinkText" : "Learn More",
+            "tile1LinkUrl" : "https://www.care.com",
+            "tile1Title" : "Trust & Safety",
+            "tile2Description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "tile2IconName" : "cog.png",
+            "tile2LinkText" : "Troubleshoot",
+            "tile2LinkUrl" : "https://www.care.com",
+            "tile2Title" : "Trouble Signing-in",
+            "tile3Description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "tile3IconName" : "message.png",
+            "tile3LinkText" : "Reach Out",
+            "tile3LinkUrl" : "https://www.care.com",
+            "tile3Title" : "Contact Us"
+          },
+          "componentName" : "c:cdccTiles",
+          "id" : "f1e69efc-986a-4c19-a75b-dab1b604348f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a387d6e6-eb8a-4930-b8b9-b0cb09de1f1b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "ede78511-1298-438a-af9c-b18ad87f7179",
+          "columns" : [ {
+            "UUID" : "fa4383ff-d297-4ed0-9451-e9c88d15a324",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ede78511-1298-438a-af9c-b18ad87f7179",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "allowPrepopulatePrechatFields" : true,
+            "avatarImgURL" : "",
+            "codeSettingsName" : "",
+            "defaultMinimizedText" : "Chat with an Expert",
+            "displayHelpButton" : true,
+            "eswConfigurationJSON" : {
+              "baseCoreURL" : "https://caredotcom--gearsdev.my.salesforce.com",
+              "baseLiveAgentContentURL" : "https://c.la2-c1cs-ia4.salesforceliveagent.com/content",
+              "baseLiveAgentURL" : "https://d.la2-c1cs-ia4.salesforceliveagent.com/chat",
+              "buttonId" : "57339000000PCq7",
+              "deploymentId" : "572390000008Q9d",
+              "enabledFeatures" : [ "LiveAgent" ],
+              "entryFeature" : "LiveAgent",
+              "eswConfigDevName" : "STCTest",
+              "eswConfigId" : "04I020000008OKQEA2",
+              "eswLiveAgentDevName" : "EmbeddedServiceLiveAgent_Parent04I020000008OKQEA2_17570163f33",
+              "gslbBaseURL" : "https://service.force.com",
+              "isOfflineCasesEnabled" : "0",
+              "orgId" : "00D020000008aOq"
+            },
+            "externalScripts" : "",
+            "externalStyles" : "",
+            "fallbackRouting" : "",
+            "offlineSupportMinimizedText" : "Contact Us",
+            "offlineText" : "Agent Offline",
+            "onlineLoadingText" : "Loading",
+            "prechatBackgroundImgURL" : "",
+            "smallCompanyLogoImgURL" : "",
+            "snippetSettingsFile" : "",
+            "storageDomain" : "",
+            "waitingStateBackgroundImgURL" : ""
+          },
+          "componentName" : "forceCommunity:embeddedService",
+          "id" : "feb29413-8f92-4d8d-aca8-f09edf6e71c5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "567b1b1b-0df9-4b94-935e-77eb9f1c5cb2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "fa4383ff-d297-4ed0-9451-e9c88d15a324",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "452b87c5-d26d-46ba-815b-bcb756c189c1",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Care Help Center for Families, Caregivers & Partners"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "15a33626-214a-479c-b682-b6f357bf0001",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f7e13e3d-63ec-43a5-b917-a1130c9b5e6d",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Fail_Decline_Reason__c</field>
+        <formula>&quot;Withdrawn by User&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Request_Status__c</field>
+        <literalValue>Completed - Declined - Salesforce Platform</literalValue>
+    </fieldOverrides>
+    <label>Withdrawn by User</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns/>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <successMessage>Request withdrawn by user</successMessage>
+    <type>Update</type>
+</QuickAction>

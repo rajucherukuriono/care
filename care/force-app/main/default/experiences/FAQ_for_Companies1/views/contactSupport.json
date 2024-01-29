@@ -1,0 +1,103 @@
+{
+  "appPageId" : "372b8d47-e2cd-405f-817c-9731a6b8defe",
+  "componentName" : "siteforce:sldsTwoCol66Layout",
+  "dataProviders" : [ ],
+  "id" : "ad76b1fc-3b4b-4d49-83bd-cc1097db532b",
+  "label" : "Contact Support",
+  "regions" : [ {
+    "id" : "c842f478-e938-4d1c-aefe-08df57af6ac1",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "b9542549-b784-428a-822d-210fd28fc1f6",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "askConfirmationQuestion" : true,
+        "confirmationMessageLabel" : "Got it!",
+        "deflectionSubtitle" : "Find what you need here.",
+        "deflectionTitle" : "Need Answers Fast?",
+        "firstQuestion" : "Did this content solve your issue?",
+        "maxResults" : 6,
+        "measureDeflection" : true,
+        "redirectUrl" : "",
+        "secondQuestion" : "Stop creating your case?",
+        "showArticles" : true,
+        "showDiscussions" : false,
+        "topicId" : ""
+      },
+      "componentName" : "forceCommunity:caseDeflection",
+      "id" : "7daee8eb-d08c-43da-b824-f9908669a058",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7d84ea25-9797-479b-ba54-c5c8c5590433",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "allowPrepopulatePrechatFields" : true,
+        "avatarImgURL" : "",
+        "codeSettingsName" : "",
+        "defaultMinimizedText" : "Contact Us",
+        "displayHelpButton" : true,
+        "eswConfigurationJSON" : {
+          "baseCoreURL" : "https://caredotcom--force1.my.salesforce.com",
+          "baseLiveAgentContentURL" : "https://c.la2-c1cs-ia4.salesforceliveagent.com/content",
+          "baseLiveAgentURL" : "https://d.la2-c1cs-ia4.salesforceliveagent.com/chat",
+          "buttonId" : "5734C000000GncV",
+          "deploymentId" : "5724C000000GmlC",
+          "enabledFeatures" : [ "LiveAgent" ],
+          "entryFeature" : "LiveAgent",
+          "eswConfigDevName" : "Help_Center_Chat",
+          "eswConfigId" : "04I4C000000GmgqUAC",
+          "eswLiveAgentDevName" : "Help_Center_Chat",
+          "gslbBaseURL" : "https://service.force.com",
+          "isOfflineCasesEnabled" : "0",
+          "orgId" : "00D4C00000019dd"
+        },
+        "externalScripts" : "",
+        "externalStyles" : "",
+        "fallbackRouting" : "",
+        "offlineSupportMinimizedText" : "Contact Us",
+        "offlineText" : "Contact Us",
+        "onlineLoadingText" : "Loading",
+        "prechatBackgroundImgURL" : "",
+        "smallCompanyLogoImgURL" : "",
+        "snippetSettingsFile" : "",
+        "storageDomain" : "",
+        "waitingStateBackgroundImgURL" : ""
+      },
+      "componentName" : "forceCommunity:embeddedService",
+      "id" : "2366b4a3-ba54-4384-bf46-e9b078669d79",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "732458d9-55f4-4d55-b0be-3247c2bee25a",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Contact Support"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "cdfa9e48-bbcf-4992-8507-48e42c50c57b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "aa59bdc4-a0a6-429f-a9d1-52fc64a07540",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "contactsupport"
+}

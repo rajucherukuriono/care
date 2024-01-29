@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Tiles</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property label="Tile 1 Icon Name" name="tile1IconName" type="String"/>
+            <property label="Tile 1 Title" name="tile1Title" type="String"/>
+            <property label="Tile 1 Description" name="tile1Description" type="String"/>
+            <property label="Tile 1 Link URL" name="tile1LinkUrl" type="String"/>
+            <property label="Tile 1 Link Text" name="tile1LinkText" type="String"/>
+            <property label="Tile 2 Icon Name" name="tile2IconName" type="String"/>
+            <property label="Tile 2 Title" name="tile2Title" type="String"/>
+            <property label="Tile 2 Description" name="tile2Description" type="String"/>
+            <property label="Tile 2 Link URL" name="tile2LinkUrl" type="String"/>
+            <property label="Tile 2 Link Text" name="tile2LinkText" type="String"/>
+            <property label="Tile 3 Icon Name" name="tile3IconName" type="String"/>
+            <property label="Tile 3 Title" name="tile3Title" type="String"/>
+            <property label="Tile 3 Description" name="tile3Description" type="String"/>
+            <property label="Tile 3 Link URL" name="tile3LinkUrl" type="String"/>
+            <property label="Tile 3 Link Text" name="tile3LinkText" type="String"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

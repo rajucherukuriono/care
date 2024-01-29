@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Privacy Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Privacy Requests</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Data_Categories_Required_US</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Data_Required_HomePay</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Data_URL_Required_Galore</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Data_URL_Required_US</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Email_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Name_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>PR_Universal_Member_Id_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Request_Date_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Request_Status_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Source_System_is_required</name>
+    </validationRules>
+</CustomObjectTranslation>

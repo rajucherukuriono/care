@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Composer_Service__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Composer Service</label>
+    <referenceTo>Composer_Service__c</referenceTo>
+    <relationshipLabel>Composer Service Permissions</relationshipLabel>
+    <relationshipName>Composer_Service_Permissions</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

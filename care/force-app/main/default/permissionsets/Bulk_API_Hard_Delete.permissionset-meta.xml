@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>For System Admins to be able to Bulk Hard delete records, which are not sent to the Recycle Bin.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Bulk API Hard Delete</label>
+    <license>Salesforce</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>BulkApiHardDelete</name>
+    </userPermissions>
+</PermissionSet>

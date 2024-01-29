@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Event_Care</fullName>
+    <active>true</active>
+    <description>SFORCE-1845 Event Care process transition to Salesforce</description>
+    <label>US Event Care</label>
+    <picklistValues>
+        <picklist>Assigned_To__c</picklist>
+        <values>
+            <fullName>Erin McKenna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jess Marble</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Collateral__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Duration__c</picklist>
+        <values>
+            <fullName>1-4 Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%2B Hours</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Staff_Type__c</picklist>
+        <values>
+            <fullName>Account Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUC Caregiver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Careforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FTE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Team Member</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Status__c</picklist>
+        <values>
+            <fullName>Agreement %26 DR sent to legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agreement sent to AM for filling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agreement sent to client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client decline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client unresponsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coverage not available%2Fclosed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fully executed agreement to client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice sent to AR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice sent to client by AR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price calculator approval pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fair_Type__c</picklist>
+        <values>
+            <fullName>On-site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virtual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Headquarters__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Parking__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Photos_Attached__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Raffle__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Staffing__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Swag__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Toys_Activities__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cross_Functional_Opportunities__c</fullName>
+    <description>Cross-Functional Opportunities</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select cross-functional Opportunities</inlineHelpText>
+    <label>Cross-Functional Opportunities</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CSR</fullName>
+                <default>false</default>
+                <label>CSR</label>
+            </value>
+            <value>
+                <fullName>Homepay</fullName>
+                <default>false</default>
+                <label>Homepay</label>
+            </value>
+            <value>
+                <fullName>Homestart</fullName>
+                <default>false</default>
+                <label>Homestart</label>
+            </value>
+            <value>
+                <fullName>Channel Partner</fullName>
+                <default>false</default>
+                <label>Channel Partner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

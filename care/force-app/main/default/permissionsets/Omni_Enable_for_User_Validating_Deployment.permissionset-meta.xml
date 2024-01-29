@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grants users Presence Status: Available for Cases so they can validate and deploy a change set. The agent work unit tests in particular need it as a salesforce requirement</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Omni - Enable for User Validating Deployment</label>
+</PermissionSet>

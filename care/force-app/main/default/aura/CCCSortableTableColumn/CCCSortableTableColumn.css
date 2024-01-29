@@ -1,0 +1,21 @@
+.THIS {
+    cursor: pointer;
+}
+
+.THIS .inactive {
+    color: #514F4D;
+}
+
+.THIS .active {
+    color: #1e5778;
+}
+
+.THIS svg {
+    fill: #1e5778;
+    height: .7rem;
+    width: .7rem;
+}
+
+.THIS .invisible {
+    opacity: 0.0;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>adds a value to the count, whenever a case is closed. Record Types: Standard, Call Center, Int. Email, Int. Call Center. This flow is converted as part of the ticket Sforce-6888</description>
+    <masterLabel>Case Re-open Count</masterLabel>
+</FlowDefinition>

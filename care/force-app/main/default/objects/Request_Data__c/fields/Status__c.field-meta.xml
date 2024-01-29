@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>This field is used to hold the status of delete request.</description>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Premium</fullName>
+                <default>false</default>
+                <label>Premium</label>
+            </value>
+            <value>
+                <fullName>Safety Case</fullName>
+                <default>false</default>
+                <label>Safety Case</label>
+            </value>
+            <value>
+                <fullName>Failed</fullName>
+                <default>false</default>
+                <label>Failed</label>
+            </value>
+            <value>
+                <fullName>Invalid Record Type</fullName>
+                <default>false</default>
+                <label>Invalid Record Type</label>
+            </value>
+            <value>
+                <fullName>Employer Program</fullName>
+                <default>false</default>
+                <label>Employer Program</label>
+            </value>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <label>Test</label>
+            </value>
+            <value>
+                <fullName>RTBF Fail - Invalid Record Type</fullName>
+                <default>false</default>
+                <label>RTBF Fail - Invalid Record Type</label>
+            </value>
+            <value>
+                <fullName>RTBF Fail - Employer Program</fullName>
+                <default>false</default>
+                <label>RTBF Fail - Employer Program</label>
+            </value>
+            <value>
+                <fullName>RTBF Fail - Safety Case</fullName>
+                <default>false</default>
+                <label>RTBF Fail - Safety Case</label>
+            </value>
+            <value>
+                <fullName>RTBF Fail - Premium</fullName>
+                <default>false</default>
+                <label>RTBF Fail - Premium</label>
+            </value>
+            <value>
+                <fullName>RTBF Fix</fullName>
+                <default>false</default>
+                <label>RTBF Fix</label>
+            </value>
+            <value>
+                <fullName>RTBF Override</fullName>
+                <default>false</default>
+                <label>RTBF Override</label>
+            </value>
+            <value>
+                <fullName>RTBF Complete</fullName>
+                <default>false</default>
+                <label>RTBF Complete</label>
+            </value>
+            <value>
+                <fullName>RTBF Do Not Process</fullName>
+                <default>false</default>
+                <label>RTBF Do Not Process</label>
+            </value>
+            <value>
+                <fullName>RTBF Anonymize</fullName>
+                <default>false</default>
+                <label>RTBF Anonymize</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

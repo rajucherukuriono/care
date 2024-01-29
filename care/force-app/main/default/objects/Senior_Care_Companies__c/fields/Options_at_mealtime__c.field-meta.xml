@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Options_at_mealtime__c</fullName>
+    <description>Sforce 1854 ---- changed from Picklist to Text Area on 18/05/2018</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Such as alternate times, pureed food, room delivery</inlineHelpText>
+    <label>Are there options at mealtime?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

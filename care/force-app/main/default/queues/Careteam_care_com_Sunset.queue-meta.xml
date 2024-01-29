@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Member Care - Auto-Close</name>
+    <queueMembers>
+        <users>
+            <user>andrew.duclaw@care.com</user>
+            <user>dvitale@care.com</user>
+            <user>kristen.spada@care.com</user>
+            <user>lauren.dwyer@care.com</user>
+            <user>ramaganesh.guttula@care.com</user>
+            <user>sarah.mcbride@care.com</user>
+            <user>surya.saride@care.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

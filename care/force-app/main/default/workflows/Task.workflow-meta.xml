@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_Task_Comment_Summary</fullName>
+        <description>Updates the activities_comment_summary field with the first 255 chars. of Task comment</description>
+        <field>Comment_Summary__c</field>
+        <formula>LEFT(Description , 255)</formula>
+        <name>Update Task Comment Summary</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>WF Update Task Comment Summary</fullName>
+        <actions>
+            <name>Update_Task_Comment_Summary</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Updates the activities.comment_summary with the first 255 characters of the Task Comment to show up on a related list.</description>
+        <formula>($Setup.Override_Validation_Rules__c.Override_Task_Workflow_Rules__c = FALSE)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

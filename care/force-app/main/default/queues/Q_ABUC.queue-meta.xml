@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>fake@e.mail</email>
+    <name>Q: ABUC</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>Share_Senior_Care</publicGroup>
+            <publicGroup>Sutherland_Email_BUC_Team</publicGroup>
+        </publicGroups>
+        <roleAndSubordinates>
+            <roleAndSubordinate>Backup_Care_Manager</roleAndSubordinate>
+        </roleAndSubordinates>
+        <roles>
+            <role>SCP_Vetting_Agent</role>
+        </roles>
+        <users>
+            <user>mary.buttrick@care.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

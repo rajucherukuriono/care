@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="liveagent">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="deploymentId" label="Deployment Id" type="String" description="The Live Agent Deployment Id.  The code is hardcoded to use '572390000008Q9d' but this setting is being provided to allow admins to override it if necessary."/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

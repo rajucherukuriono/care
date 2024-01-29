@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flagger__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>This is the accusing member or &quot;flagging&quot; member who created a &quot;flag&quot; against another member.</description>
+    <externalId>false</externalId>
+    <label>Flagger</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Flags</relationshipLabel>
+    <relationshipName>Flags</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

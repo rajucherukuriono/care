@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Senior_Care_Adviser__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SFORCE-2956
+Dev - Family Care Hub - Salesforce Config</description>
+    <externalId>false</externalId>
+    <label>Senior Care Advisor</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Family_Hub_Projects</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

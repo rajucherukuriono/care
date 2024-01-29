@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>myRule_1_A1</name>
+        <label>Create Agent Work record on case</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>CaseAgentWorkTracking</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>CaseIds</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>CaseAgentWorkTracking</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <description>Migrated from the Case Agent Work Tracking process using Pass Case Owner Id criteria.</description>
+    <label>Case Agent Work Tracking_1</label>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>myRule_1_A1</targetReference>
+        </connector>
+        <filterFormula>AND(
+	{!$Setup.Override_Validation_Rules__c.Override_Case_Processes__c} = FALSE,
+	NOT(isNew()),
+	{!$Record.Safety_Email__c} = False,
+        ISCHANGED({!$Record.Assigned_from_Queue__c}), 
+	{!$Record.Assigned_from_Queue__c} =TRUE,
+	OR(
+		{!$Record.RecordType.DeveloperName} = &apos;Standard&apos;,
+		{!$Record.RecordType.DeveloperName} = &apos;Call_Center&apos;,
+		{!$Record.RecordType.DeveloperName} = &apos;International_Call_Center&apos;,
+		{!$Record.RecordType.DeveloperName} = &apos;International_Email&apos;,
+		{!$Record.RecordType.DeveloperName} = &apos;Chargeback&apos;,
+		{!$Record.RecordType.DeveloperName} = &apos;SocialMedia&apos;,
+		{!$Record.RecordType.DeveloperName} = &apos;Social_Media_International&apos;,
+		{!$Record.RecordType.DeveloperName} = &apos;Social_Media_US&apos;
+	)
+)</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

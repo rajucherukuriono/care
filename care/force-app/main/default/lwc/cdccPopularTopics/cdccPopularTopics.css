@@ -1,0 +1,17 @@
+.heading {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-bottom: 5px;
+}
+.topics {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    /*padding: 5px 0;*/
+}
+.topic {
+    padding: 5px 0;
+    margin-right: 10px;
+}

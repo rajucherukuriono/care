@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Service that allows Salesforce to communicate with the Silverpop API.  This configuration was required for the Silverpop Plugin to work.</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://api2.silverpop.com</url>
+</RemoteSiteSetting>

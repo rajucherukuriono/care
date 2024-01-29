@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internal_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Internal Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Bad Number/Mailbox Full</fullName>
+                <default>false</default>
+                <label>Bad Number/Mailbox Full</label>
+            </value>
+            <value>
+                <fullName>hired</fullName>
+                <default>false</default>
+                <label>hired</label>
+            </value>
+            <value>
+                <fullName>Initial Decline</fullName>
+                <default>false</default>
+                <label>Initial Decline</label>
+            </value>
+            <value>
+                <fullName>Interviewed</fullName>
+                <default>false</default>
+                <label>Interviewed</label>
+            </value>
+            <value>
+                <fullName>Pending Call Back</fullName>
+                <default>false</default>
+                <label>Pending Call Back</label>
+            </value>
+            <value>
+                <fullName>Pending Verification</fullName>
+                <default>false</default>
+                <label>Pending Verification</label>
+            </value>
+            <value>
+                <fullName>rejected</fullName>
+                <default>false</default>
+                <label>rejected</label>
+            </value>
+            <value>
+                <fullName>send to client</fullName>
+                <default>false</default>
+                <label>send to client</label>
+            </value>
+            <value>
+                <fullName>Under Review</fullName>
+                <default>false</default>
+                <label>Under Review</label>
+            </value>
+            <value>
+                <fullName>verified</fullName>
+                <default>false</default>
+                <label>verified</label>
+            </value>
+            <value>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+                <label>Voicemail</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

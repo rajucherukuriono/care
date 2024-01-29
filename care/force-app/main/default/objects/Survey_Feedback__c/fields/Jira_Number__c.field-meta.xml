@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jira_Number__c</fullName>
+    <description>Created as part of SFORCE-3306
+2962 - Configure Survey Feedbacks</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Jira number associated with Bug reported, if Jira already filed</inlineHelpText>
+    <label>Jira Number</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

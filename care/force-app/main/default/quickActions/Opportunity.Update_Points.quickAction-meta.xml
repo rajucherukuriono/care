@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Update the Base and Bonus points for a Marketing Solutions Opportunity.</description>
+    <label>Update Points</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Base_Points__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Bonus_Points__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <successMessage>Points Updated</successMessage>
+    <type>Update</type>
+</QuickAction>

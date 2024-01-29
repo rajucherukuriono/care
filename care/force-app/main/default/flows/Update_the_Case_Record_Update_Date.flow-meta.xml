@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <name>International_BUC_Record_type</name>
+        <label>International BUC Record type</label>
+        <locationX>182</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BUC_Record_Type</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.RecordTypeId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_the_Case_Type_Change_Date_0</targetReference>
+            </connector>
+            <label>BUC Record Type</label>
+        </rules>
+    </decisions>
+    <description>Stamp the date if the any case record type is updated to BUC</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Update the Date when the Record type is Changed</description>
+        <name>UpdateTheCaseDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>Update the Case Record Update Date {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update the Case Type Changed Date field</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update the Case Type Change Date when the record type is Changed.</description>
+        <name>Update_the_Case_Type_Change_Date_0</name>
+        <label>Update the Case Type Change Date</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Case_Type_Change_Date__c</field>
+            <value>
+                <elementReference>UpdateTheCaseDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Record_Type_Changed__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>International_BUC_Record_type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01239000000N22rAAC</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

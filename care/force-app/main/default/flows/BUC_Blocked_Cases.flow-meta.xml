@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <assignments>
+        <name>Update_BUC_Case_Records</name>
+        <label>Update BUC Case Records</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Reason</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Partner</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Secondary_Case_Reason__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Inquiry</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Case_Records_Update</name>
+        <label>Case Records Update</label>
+        <locationX>182</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Get_Records_to_Update</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.OwnerId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>005700000012X5uAAE</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.MemberID__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>50114676</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_BUC_Case_Records</targetReference>
+            </connector>
+            <label>Get Records to Update</label>
+        </rules>
+    </decisions>
+    <description>Alerts to the BUC team turned off/blocked SForce-- 6001</description>
+    <environments>Default</environments>
+    <interviewLabel>BUC Blocked Cases {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>BUC Blocked Cases</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Case_Records_Update</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01239000000N22rAAC</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Subject</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Care.com: KCE Backup Care Booking Sync Failure</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SuppliedEmail</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>careteam@care.com</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

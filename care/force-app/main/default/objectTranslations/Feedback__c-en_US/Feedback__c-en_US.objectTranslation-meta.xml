@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Feedback</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Feedbacks</value>
+    </caseValues>
+    <recordTypes>
+        <label></label>
+        <name>CareatWork</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>International</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>US_Consumer</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>BUC_Job_ID_required</name>
+    </validationRules>
+</CustomObjectTranslation>

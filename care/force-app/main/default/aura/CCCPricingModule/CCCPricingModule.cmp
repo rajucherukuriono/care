@@ -1,0 +1,284 @@
+<aura:component controller="CCCPricingController" extends="c:CCCModuleBase">
+    
+    <!-- Aura Dependencies -->
+    <aura:dependency resource="markup://c:CCCPricingLocationModal" />
+
+    <!-- Aura Attributes - Public -->
+    <aura:attribute name="confirmSaveClicked" type="Boolean" default="false" access="public" />
+   
+    <!-- Aura Attributes - Private -->
+    <aura:attribute name="locations" type="List" access="private" />
+
+    <aura:attribute name="contactRecords" type="List" default="[]" access="private" />
+    <aura:attribute name="primaryContactId" type="String" access="private" />
+    <aura:attribute name="userCanWaivePlatformFee" type="Boolean" default="false" access="private" />
+    <aura:attribute name="platformFeeWaived" type="Decimal" access="private" />
+    <aura:attribute name="maxPlatformFeeWaived" type="Decimal" access="private" />
+    <aura:attribute name="provinceOptions" type="List" access="private" />
+    <aura:attribute name="composerServiceRecord" type="Composer_Service__c" access="private" />
+    <aura:attribute name="showModifyButton" type="Boolean" default='false' access="private" />
+
+    <!-- Aura Attributes - Private - CCCSortableTableColumn attributes -->
+	<aura:attribute name="contactSortField" type="String" default="Name" access="private" />
+    <aura:attribute name="contactSortDirection" type="String" default="ascending" access="private" />
+
+	<!-- Aura Attributes - Private - Modal Attributes -->
+	<aura:attribute name="contactRecord" type="Contact" access="private" />
+
+	<!-- Aura Attributes - Modal Attributes -->
+    <aura:attribute name="location" type="Map" access="public" />
+    <aura:attribute name="saveClicked" type="Boolean" default="false" access="public" />
+
+    <!-- Aura Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <!-- Warning message for showing that more districts have been selected than are allowed by the current max-pricing tier -->
+    <!-- <aura:if isTrue="{!not(empty(v.warningMessages))}">
+        <c:CCCStaticPopover headerText="Review warning(s):" type="warning" messages="{!v.warningMessages}"
+            cssClass="slds-m-bottom_small" />
+    </aura:if> -->
+
+    <!-- Handle no Service Areas selected by displaying a No Records row -->
+    <aura:if isTrue="{!empty(v.locations)}">
+
+        <div class="slds-grid slds-grid_align-center slds-grid_vertical-align-center slds-p-around_medium">
+            <div class="slds-col slds-grow-none slds-p-right_medium">
+                <lightning:icon iconName="utility:info" alternativeText="warning" size="large" />
+            </div>
+            <div class="slds-col slds-grow-none">
+                <p class="slds-text-heading_small">Pricing selections are not available until Service Area has been
+                    defined.</p>
+            </div>
+        </div>
+
+    </aura:if>
+
+
+    <aura:if isTrue="{!not(empty(v.locations))}">
+        <div class="slds-col slds-size_4-of-4 slds-m-top_medium">
+
+            <table class="slds-table slds-table_bordered slds-border_right slds-border_left" role="grid">
+                <thead>
+                    <tr class="slds-line-height_reset">
+
+                        <!-- Column Header - Location -->
+                        <th class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate slds-p-around_x-small" title="Location">Location
+                            </div>
+                        </th>
+
+                        <!-- Column Header - Additional Services -->
+                        <th class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate slds-p-around_x-small" title="Additional Services">Additional Services
+                            </div>
+                        </th>
+
+                        <!-- Column Header - Monthly Ad Budget -->
+                        <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                            <div class="slds-truncate slds-p-around_x-small" title="Monthly Ad Budget">Monthly Ad Budget</div>
+                        </th>
+
+                        <!-- Column Header - Bonus Points -->
+                        <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                            <div class="slds-truncate slds-p-around_x-small" title="Bonus Points">Bonus Points</div>
+                        </th>
+
+                        <!-- Column Header - Actions -->
+                        <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                            <div class="slds-truncate slds-p-around_x-small" title="Actions">&nbsp;</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <aura:iteration items="{!v.locations}" var="location">
+                        <tr class="slds-hint-parent">
+
+                            <!-- Location -->
+                            <th scope="row" tabindex="0">
+                                <div class="slds-truncate slds-p-around_x-small">
+                                    {!location.name}
+                                </div>
+                            </th>
+
+                            <!-- Additional Service Names -->
+                            <td role="gridcell" scope="col" class="slds-cell-wrap">
+                                <div class="slds-wrap slds-p-around_x-small">
+                                    {!location.additionalServicesSummarized}
+                                </div>
+                            </td>
+
+                            <!-- Monthly Ad Budget -->
+                            <td role="gridcell" scope="col">
+                                <div class="slds-truncate slds-p-around_x-small slds-text-align_right">
+                                    <lightning:formattedNumber value="{!location.totalMonthlyAdBudget}"
+                                        style="currency" currencyCode="USD" />
+                                </div>
+                            </td>
+
+                            <!-- Bonus Points -->
+                            <td role="gridcell" scope="col">
+                                <div class="slds-truncate slds-p-around_x-small slds-text-align_right">
+                                    <lightning:formattedNumber value="{!location.totalBonusPoints}"
+                                        maximumFractionDigits="2" />
+
+                                </div>
+                            </td>
+
+                            <!-- Actions -->
+                            <td role="gridcell">
+                                <div class="slds-p-around_x-small slds-text-align_right">
+                                    <aura:if isTrue="{!equals(v.showModifyButton, true)}">
+                                        <lightning:button variant="brand" label="Modify" iconName="utility:edit"
+                                            iconPosition="left" onclick="{!c.onModifyClicked}"
+                                            value="{!location.id}" disabled="{!not(v.allowEdit)}" />
+                                    </aura:if>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </aura:iteration>
+
+                </tbody>
+            </table>
+        </div>
+    </aura:if>
+
+    <div class="slds-m-top_large">
+
+        <!-- Contract Recipient Table -->
+        <div class="slds-m-top_xx-large">
+            <div class="slds-grid slds-grid_vertical-align-start slds-gutters_direct slds-wrap">
+
+                <div class="slds-col slds-size_4-of-4 slds-grid slds-grid_align-spread">
+                    <div class="slds-col">
+                        <span class="slds-text-heading_small">Contract Recipient</span>
+                    </div>
+                    <div class="slds-col">
+                        <lightning:button variant="brand" iconName="utility:add" iconPosition="left" label="Add Contact"
+                            onclick="{!c.onAddContactClicked}" disabled="{!not(v.allowEdit)}" />
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_4-of-4 slds-m-top_medium">
+
+                    <table class="slds-table slds-table_bordered slds-border_right slds-border_left" role="grid">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+
+                                <!-- Column Header - Form Radial -->
+                                <th class="slds-text-title_caps slds-text-align_right" scope="col" style="width: 3.25rem;">
+                                    <div class="slds-truncate slds-assistive-text" id="column-group-header"
+                                        title="Choose a row to select">Choose
+                                        a row to select</div>
+                                </th>
+
+                                <!-- Column Header - Name -->
+                                <c:CCCSortableTableColumn title="Name" field="FirstName"
+                                    sortField="{!v.contactSortField}" sortDirection="{!v.contactSortDirection}"
+                                    onsort="{!c.onSortContacts}" />
+
+                                <!-- Column Header - Email -->
+                                <c:CCCSortableTableColumn title="Email" field="Email" sortField="{!v.contactSortField}"
+                                    sortDirection="{!v.contactSortDirection}" onsort="{!c.onSortContacts}" />
+
+                                <!-- Column Header - Phone -->
+                                <c:CCCSortableTableColumn title="Phone" field="Phone" sortField="{!v.contactSortField}"
+                                    sortDirection="{!v.contactSortDirection}" onsort="{!c.onSortContacts}" />
+
+                                <!-- Column Header - Address -->
+                                <c:CCCSortableTableColumn title="Address" field="OtherStreet"
+                                    sortField="{!v.contactSortField}" sortDirection="{!v.contactSortDirection}"
+                                    onsort="{!c.onSortContacts}" />
+
+                                <!-- Column Header - Actions -->
+                                <th aria-label="Actions" aria-sort="none" class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate">&nbsp;</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <aura:if isTrue="{! empty(v.contactRecords)}">
+                                <tr>
+                                    <td colspan="6" class="slds-m-around_medium">No records</td>
+                                </tr>
+
+                            </aura:if>
+
+                            <aura:iteration items="{! v.contactRecords }" var="contact">
+                                <tr class="slds-hint-parent">
+
+                                    <!-- Form Radial -->
+                                    <td class="slds-text-align_right" role="gridcell">
+                                        <lightning:input type="radio" aura:id="contact" name="contact"
+                                            value="{!contact.Id}" checked="{! equals(contact.Id,v.primaryContactId)}"
+                                            onchange="{! c.onPrimaryContactChange}" disabled="{! not(v.allowEdit) }" />
+                                    </td>
+
+                                    <!-- Name -->
+                                    <th scope="row" tabindex="0">
+                                        <div class="slds-truncate">
+                                            <lightning:formattedName firstName="{!contact.FirstName}"
+                                                middleName="{!contact.Middle_Name__c}" lastName="{!contact.LastName}"
+                                                salutation="{!contact.Salutation}" />
+                                        </div>
+                                    </th>
+
+                                    <!-- Email -->
+                                    <td role="gridcell">
+                                        <div class="slds-truncate">
+                                            <lightning:formattedEmail value="{!contact.Email}" />
+                                        </div>
+                                    </td>
+
+                                    <!-- Phone -->
+                                    <td role="gridcell">
+                                        <div class="slds-truncate">
+                                            <lightning:formattedPhone value="{!contact.Phone}" />
+                                        </div>
+                                    </td>
+
+                                    <!-- Address -->
+                                    <td role="gridcell">
+                                        <div class="slds-truncate">
+                                            <lightning:formattedAddress street="{!contact.MailingStreet}"
+                                                city="{!contact.MailingCity}" country="{!contact.MailingCountry}"
+                                                province="{!contact.Mailingtate}"
+                                                postalCode="{!contact.MailingPostalCode}" />
+                                        </div>
+                                    </td>
+
+                                    <!-- Actions -->
+                                    <td role="gridcell">
+                                        <div class="slds-p-around_x-small slds-text-align_right">
+                                        	<lightning:button variant="brand" label="Modify" iconName="utility:edit"
+                                            iconPosition="left" onclick="{!c.onModifyContactClicked}"
+                                            value="{!contact.Id}" disabled="{! not(v.allowEdit) }" />
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </aura:iteration>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Platform Fee Waived -->
+        <aura:if isTrue="{!v.userCanWaivePlatformFee}">
+            <div class="slds-m-top_xx-large">
+                <div class="slds-col slds-size_1-of-1">
+                    <div class="slds-text-heading_small slds-m-bottom_x-small">Platform Fee Waived</div>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning:input type="number" variant="label-hidden" value="{!v.platformFeeWaived}" max="{!v.maxPlatformFeeWaived}" formatter="currency" step="0.01" onblur="{!c.handlePlatformFeeWaivedChanged}" />
+                </div>
+            </div>
+        </aura:if>
+
+    </div>
+
+</aura:component>

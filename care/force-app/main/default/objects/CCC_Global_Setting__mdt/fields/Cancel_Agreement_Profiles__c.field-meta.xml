@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancel_Agreement_Profiles__c</fullName>
+    <description>A comma separated list of Salesforce Profiles that can see and are allowed to perform Cancel Agreement on the Active Agreement tab</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>A comma separated list of Salesforce Profiles that can see and are allowed to perform Cancel Agreement on the Active Agreement tab</inlineHelpText>
+    <label>Cancel Agreement Profiles</label>
+    <length>255</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

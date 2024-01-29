@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stop_Fail_Over_Notification_To_Sterling__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this to stop fail over records to notify sterling after RTBF processing.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Check this to stop fail over records to notify sterling after RTBF processing.</inlineHelpText>
+    <label>Process FailOver Notification To Sterlng</label>
+    <type>Checkbox</type>
+</CustomField>

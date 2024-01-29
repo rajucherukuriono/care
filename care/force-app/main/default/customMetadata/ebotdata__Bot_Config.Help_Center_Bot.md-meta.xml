@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Help Center Bot</label>
+    <protected>false</protected>
+    <values>
+        <field>ebotdata__Agent_Availabilty_By_Metadata__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>ebotdata__Business_Hours_Record_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ebotdata__Calculate_Escalation_by_Intent_Name__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>ebotdata__Delete_Logs__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>ebotdata__Log_Chat__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>ebotdata__Retain_Data_For_X_Days__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Method_Communication_was_Received__c</fullName>
+    <description>Security/IT/Safety teams launching a Fraud Follow up survey to capture additional information on cases where the member has reported fraud.  Sforce - 1653</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Method Communication was Received</inlineHelpText>
+    <label>Method Communication was Received</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Care.com Messaging</fullName>
+                <default>false</default>
+                <label>Care.com Messaging</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Text</fullName>
+                <default>false</default>
+                <label>Text</label>
+            </value>
+            <value>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+                <label>Phone Call</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

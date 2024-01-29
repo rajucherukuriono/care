@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alert_G_HomePay_Leads_group_members</fullName>
+        <description>Alert G: HomePay Leads group members</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>G_HomePay_Lead</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>HomePay/New_Lead_in_Q_HomePay_Lead_queue</template>
+    </alerts>
+    <alerts>
+        <fullName>Alert_Owner_on_Possible_Account_Match</fullName>
+        <description>Alert Owner on Possible Account Match</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Alert_Owner_on_Possible_Account_Match</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Address</fullName>
+        <field>Street</field>
+        <formula>Street__c</formula>
+        <name>Address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Status_to_Closed</fullName>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+        <name>Change Status to Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>City</fullName>
+        <field>City</field>
+        <formula>City__c</formula>
+        <name>City</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Country</fullName>
+        <field>Country</field>
+        <formula>TEXT(Country__c )</formula>
+        <name>Country</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Product_Type</fullName>
+        <field>Product_Type_2__c</field>
+        <formula>TEXT ( Product_Type__c )</formula>
+        <name>Lead Product Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Other_Unqualified_Reason</fullName>
+        <field>Unqualified_Other__c</field>
+        <name>Other Unqualified Reason</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending</fullName>
+        <field>Status</field>
+        <literalValue>Pending</literalValue>
+        <name>Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetVersendetZielgruppe_TO_Pflege</fullName>
+        <field>Versendet_Zielgruppe__c</field>
+        <formula>&quot;Pflege.de&quot;</formula>
+        <name>XSetVersendetZielgruppe_TO_Pflege</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_to_Pending</fullName>
+        <field>Status</field>
+        <literalValue>Pending</literalValue>
+        <name>Set to Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>State</fullName>
+        <field>State</field>
+        <formula>TEXT( State2__c )</formula>
+        <name>State</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>WPS_Lead_FU_Mentor_Tech_ID</fullName>
+        <description>Field update for Lead Conversion. SFORCe-1287</description>
+        <field>Mentor_Tech_ID_2_WF__c</field>
+        <formula>Mentor_Tech_ID__c</formula>
+        <name>WPS-Lead FU Mentor_Tech_ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Zip</fullName>
+        <field>PostalCode</field>
+        <formula>Zip_Code__c</formula>
+        <name>Zip</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Contact_Cycle_Day1</fullName>
+        <field>Contact_Cycle__c</field>
+        <formula>&quot;Day 1&quot;</formula>
+        <name>update Contact Cycle Day1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Contact_Cycle_Day10</fullName>
+        <description>Update field Contact Cycle by value &quot;Day 10&quot;</description>
+        <field>Contact_Cycle__c</field>
+        <formula>&quot;Day 10&quot;</formula>
+        <name>update Contact Cycle Day10</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Contact_Cycle_Day14</fullName>
+        <description>Update field Contact Cycle by value &quot;Day 14&quot;</description>
+        <field>Contact_Cycle__c</field>
+        <formula>&quot;Day 14&quot;</formula>
+        <name>update Contact Cycle Day14</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Contact_Cycle_Day2</fullName>
+        <description>Update field Contact Cycle by value &quot;Day 2&quot;</description>
+        <field>Contact_Cycle__c</field>
+        <formula>&quot;Day 2&quot;</formula>
+        <name>update_Contact Cycle Day2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Contact_Cycle_Day3</fullName>
+        <description>Update field Contact Cycle by value &quot;Day 3&quot;</description>
+        <field>Contact_Cycle__c</field>
+        <formula>&quot;Day 3&quot;</formula>
+        <name>update Contact Cycle Day3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Contact_Cycle_Day5</fullName>
+        <description>Update field Contact Cycle by value &quot;Day 5&quot;</description>
+        <field>Contact_Cycle__c</field>
+        <formula>&quot;Day 5&quot;</formula>
+        <name>update Contact Cycle Day5</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Contact_Cycle_Day8</fullName>
+        <description>Update field Contact Cycle by value &quot;Day 8&quot;</description>
+        <field>Contact_Cycle__c</field>
+        <formula>&quot;Day 8&quot;</formula>
+        <name>update Contact Cycle Day8</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Address Updates</fullName>
+        <actions>
+            <name>Address</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>City</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Country</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>State</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Zip</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SCR Seeker,SCR Provider</value>
+        </criteriaItems>
+        <description>Jason Cooke (Innoveer) 10/18/11 - Copy the custom address fields to the OOTB Address field for Seeker leads</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Alert Owner on Possible Account Match</fullName>
+        <actions>
+            <name>Alert_Owner_on_Possible_Account_Match</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.Possible_Account_Match__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Triggered whenever the Possible Account Match checkbox is checked.  Alerts the owner of the Lead.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Alert agents of new HomePay Lead</fullName>
+        <actions>
+            <name>Alert_G_HomePay_Leads_group_members</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>HomePay Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.OwnerId</field>
+            <operation>equals</operation>
+            <value>Q: HomePay Leads</value>
+        </criteriaItems>
+        <description>This rule fires whenever a lead is assigned to the Q: HomePay Lead queue. It is used to alert agents of the new lead.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Assigned Task to Lead</fullName>
+        <actions>
+            <name>Set_to_Pending</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>update_Contact_Cycle_Day1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Remember_to_Call_Send_Introductory_Email</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <description>Vaibhav Kulkarni (10/19/2011) If Lead status is pending then fire immediate as well as time dependent workflow</description>
+        <formula>OR(AND( $RecordType.DeveloperName = &apos;SCR_Seeker&apos;, ISPICKVAL(Status, &apos;Pending&apos;)), AND( $RecordType.DeveloperName = &apos;SCR_Seeker&apos;, ISPICKVAL(Status, &apos;Unassigned&apos;), OwnerId = $User.Id ))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>update_Contact_Cycle_Day2</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Call_Followup_Email</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>update_Contact_Cycle_Day5</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Call</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>4</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>update_Contact_Cycle_Day8</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Follow_up_Call</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>update_Contact_Cycle_Day14</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Final_Email</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>13</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>update_Contact_Cycle_Day3</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Send_Email</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>2</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>update_Contact_Cycle_Day10</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Call_Email</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>9</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Cleard Other Unqualified Reason</fullName>
+        <actions>
+            <name>Other_Unqualified_Reason</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>notEqual</operation>
+            <value>Unqualified</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Unqualified_Reasons__c</field>
+            <operation>notEqual</operation>
+            <value>Other</value>
+        </criteriaItems>
+        <description>When I change the status to a different status (like Unqualified Reason), the Unqualified Reason field is cleared but the &quot;Other Unqualified Reason&quot; field is not. Sforce - 1679</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Follow up tasks for Senior Care Leads</fullName>
+        <actions>
+            <name>Remember_to_Call_Send_Introductory_Email</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <description>This workflow rule assigns follow up tasks to the user who claims a Senior Care from a Queue.</description>
+        <formula>OR(
+   AND( 
+      $RecordType.DeveloperName = &apos;SCR_Person_Inquiry_Record_Type&apos;,
+      ISPICKVAL(Status, &apos;Unassigned&apos;), 
+      OwnerId = $User.Id
+   )
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Assignment Notifications for Hubspot</fullName>
+        <active>false</active>
+        <description>Lead assignment notifications were not going to owner via Assignment rules. This is happening only to hubspot users. So, creating this workflow.</description>
+        <formula>AND(
+OR(
+RecordType.Id = &quot;01270000000Hl9W&quot;,
+RecordType.Id = &quot;01270000000UQGT&quot;
+),
+CreatedBy.Profile.Name = &quot;Hubspot&quot;
+)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>SCC Auto-Close Leads</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SCC Lead Record Type</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>equals</operation>
+            <value>Contacted</value>
+        </criteriaItems>
+        <description>Auto-Close SCC Leads if they have been in the Contacted Status for more than 7 days.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Change_Status_to_Closed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Update Lead Duplicate Fields</fullName>
+        <actions>
+            <name>Lead_Product_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.Company</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>JC 11/23/11 - Added to copy Lead fields to allow a field to be mapped to 2 places</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WPS - Create Tasks</fullName>
+        <actions>
+            <name>Follow_Up</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WPS Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>Conference,Minisite/VHP Lead Form,Webinar</value>
+        </criteriaItems>
+        <description>This workflow will create a task for new WPD leads. See the criteria filter for specifics.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>WPS_Lead_MentorTechID_FU</fullName>
+        <actions>
+            <name>WPS_Lead_FU_Mentor_Tech_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WPS Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Mentor_Tech_ID__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Workflow for Field Update for WPS Lead conversation for field Mentor Tech ID. SFORCE-1287</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Call</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Day 5: Call</subject>
+    </tasks>
+    <tasks>
+        <fullName>Call_Email</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Day 10: Call &amp; Email</subject>
+    </tasks>
+    <tasks>
+        <fullName>Call_Followup_Email</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Day 2: Call &amp; Followup Email</subject>
+    </tasks>
+    <tasks>
+        <fullName>Final_Email</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Final Email</subject>
+    </tasks>
+    <tasks>
+        <fullName>Follow_Up</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Lead.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Follow Up</subject>
+    </tasks>
+    <tasks>
+        <fullName>Follow_up_Call</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Day 8: Follow up Call</subject>
+    </tasks>
+    <tasks>
+        <fullName>Remember_to_Call_Send_Introductory_Email</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Remember to Call &amp; Send Introductory Email</subject>
+    </tasks>
+    <tasks>
+        <fullName>Send_Email</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Day 3: Send Email</subject>
+    </tasks>
+</Workflow>

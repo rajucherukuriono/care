@@ -1,0 +1,90 @@
+<aura:component>
+
+    <!-- Dependencies for dynamically created components so we don't have to make extra trips to the server -->
+    <aura:dependency resource="markup://c:CCCColumnSortEvent" />
+
+    <!-- public attributes -->
+    <aura:attribute name="title" type="String" required="true" description="The title to display in the column header"
+        access="public" />
+    <aura:attribute name="field" type="String" required="true"
+        description="The javascript attribute name for this column" access="public" />
+    <aura:attribute name="sortField" type="String" description="The Aura attribute for the current sort field"
+        access="public" />
+    <aura:attribute name="sortDirection" type="String" description="The Aura attribute for the current sort direction"
+        access="public" />
+    <aura:attribute name="rendered" type="Boolean" description="Determines if column is rendered" access="public"
+        default="True" />
+    <aura:attribute name="horizontalAlign" type="String"
+        description="Spread layout items out horizontally based on the following values" access="public" default="" />
+    <aura:attribute name="verticalAlign" type="String"
+        description="Spread layout items out vertically based on the following values" access="public" default="" />
+
+    <!-- public event -->
+    <aura:registerEvent name="onsort" type="c:CCCColumnSortEvent"
+        description="The javascript controller handler to call when the column header is clicked" />
+
+    <!-- private attributes -->
+    <aura:attribute name="isHovered" type="Boolean" default="false" access="private" />
+    <aura:attribute name="ariaSort" type="String" default="none" access="private" />
+
+    <!-- change handlers -->
+    <aura:handler name="change" value="{!v.sortField}" action="{!c.sortFieldChangeHandler}" />
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <aura:if isTrue="{!v.rendered}">
+
+        <th class="slds-text-title_caps" scope="col" aria-sort="{!v.ariaSort}" aria-label="{!v.title}">
+
+            <div onclick="{!c.sortHandler}" onmouseover="{!c.mouseoverHandler}" onmouseout="{!c.mouseoutHandler}">
+
+                <lightning:layout horizontalAlign="{!v.horizontalAlign}" verticalAlign="{!v.verticalAlign}">
+
+                    <lightning:layoutItem>
+                        <div aura:id="title" class="slds-truncate" title="{!v.title}">{!v.title}</div>
+                    </lightning:layoutItem>
+
+                    <lightning:layoutItem padding="horizontal-x-small">
+
+                        <aura:if isTrue="{! equals(v.sortField, v.field) }">
+
+                            <aura:if isTrue="{! equals(v.sortDirection, 'ascending') }">
+
+                                <lightning:icon iconName="utility:arrowup" alternativeText="Sort" size="xx-small" />
+
+                                <aura:set attribute="else">
+
+                                    <lightning:icon iconName="utility:arrowdown" alternativeText="Sort" size="xx-small"
+                                        class="active" />
+                                </aura:set>
+
+                            </aura:if>
+
+                            <aura:set attribute="else">
+
+                                <aura:if isTrue="{!v.isHovered}">
+
+                                    <lightning:icon iconName="utility:arrowup" alternativeText="Sort" size="xx-small"
+                                        class="active" style="pointer-events: none;" />
+
+                                    <aura:set attribute="else">
+
+                                        <lightning:icon iconName="utility:arrowup" alternativeText="Sort"
+                                            size="xx-small" class="invisible" style="pointer-events: none;" />
+                                    </aura:set>
+                                </aura:if>
+
+                            </aura:set>
+
+                        </aura:if>
+
+                    </lightning:layoutItem>
+
+                </lightning:layout>
+
+            </div>
+
+        </th>
+
+    </aura:if>
+
+</aura:component>

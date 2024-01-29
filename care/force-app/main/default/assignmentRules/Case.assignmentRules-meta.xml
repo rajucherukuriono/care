@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Care%2Ecom Membercare Case Assignment</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <assignedTo>Q_Blocked_Member_Appeal</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>equals</operation>
+                <value>Blocked Member Appeal</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_International_Senior_Care_Consult</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International Senior Care Consult</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_UK_IRE</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International BUC</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_International_CAW</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International CAW,International Personal Network</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - IntlCAW,Email - IntlCAW Amazon</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Intl_CAW_Agency</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International CAW Agency</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - IntlCAW Agency</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Assisted_Search</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR ((1 OR 4) AND 2 AND 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>AS - Child Care,AS - Housekeeping,AS - Pet Care,AS - Tutor,AS - Standard,AS - Child Care Center</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Owner_Active__c</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerIsQueue__c</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>AS - Personal Assistant</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Premier_Background_Checks</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Premier Background Check</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_International_CAW</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International WPS Services</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International WPS Service EventCare</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_International_CAW</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International WPS Services</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - WPS DE Family</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_ABUC</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>ABUC</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Nanny_Placements</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Nannies</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_Centers</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Centers</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_Google</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Google</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_BestBuy</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email – BestBuy</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_Starbucks</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email – Starbucks</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_Providers</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Provider</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>QSeniorCareConsult</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2) OR (3 AND 4) OR (5 AND 6)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>equals</operation>
+                <value>SCC New Enrollment</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ContactEmail</field>
+                <operation>equals</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>equals</operation>
+                <value>SCC New Enrollment</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Senior Care Consult</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>equals</operation>
+                <value>Initial Care Assessment</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Chat</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Care%2Ecom Queue Assignment</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Blocked_Member_Appeal</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>equals</operation>
+                <value>Blocked Member Appeal</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_International_Senior_Care_Consult</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International Senior Care Consult</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_UK_IRE</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International BUC</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_International_CAW</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International CAW</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - IntlCAW,Email - IntlCAW Amazon</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Intl_CAW_Agency</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International CAW Agency</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - IntlCAW Agency</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Assisted_Search</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR ((1 OR 4) AND 2 AND 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>AS - Child Care,AS - Housekeeping,AS - Pet Care,AS - Tutor,AS - Standard,AS - Child Care Center</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Owner_Active__c</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerIsQueue__c</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>AS - Personal Assistant</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Premier_Background_Checks</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Premier Background Check</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_International_CAW</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International WPS Services</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International WPS Service EventCare</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_International_CAW</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International WPS Services</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - WPS DE Family</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_WPS_INTL_Provider</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - WPS DE Provider</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International WPS Services</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_ABUC</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>ABUC</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_Centers</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Centers</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_Google</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Google</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_BestBuy</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email – BestBuy</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_Starbucks</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email – Starbucks</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_Providers</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Provider</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>QSeniorCareConsult</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2) OR (3 AND 4) OR (5 AND 6)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>equals</operation>
+                <value>SCC New Enrollment</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ContactEmail</field>
+                <operation>equals</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>equals</operation>
+                <value>SCC New Enrollment</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Senior Care Consult</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>equals</operation>
+                <value>Initial Care Assessment</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>(1 OR 2) AND (3 OR 4)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Standard</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International Email</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.LastModifiedByAlias</field>
+                <operation>equals</operation>
+                <value>autoproc</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.LastModifiedByAlias</field>
+                <operation>equals</operation>
+                <value>api:</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MC_Temporary</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>OR(RecordType.DeveloperName = &apos;Standard&apos;,	   RecordType.DeveloperName = &apos;International_Email&apos;)</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <formula>OR(RecordType.DeveloperName = &apos;Safety_Alert&apos;, 	   RecordType.DeveloperName = &apos;International_Safety_Alert&apos;)</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Provider_Marketing_Solutions</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Galore Marketing Solutions</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Chat</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Social Media US</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Social Media International</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Safety Alert</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>startsWith</operation>
+                <value>005</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LifeCare_MHP_Cases</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LifeCare</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Enrollment</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Enrollment</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International CAW</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Care%2Ecom Queue Assignment bckp</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Blocked_Member_Appeal</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>equals</operation>
+                <value>Blocked Member Appeal</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_International_Senior_Care_Consult</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International Senior Care Consult</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_UK_IRE</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International BUC</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_International_CAW</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International CAW</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - IntlCAW,Email - IntlCAW Amazon</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Intl_CAW_Agency</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International CAW Agency</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - IntlCAW Agency</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Assisted_Search</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR ((1 OR 4) AND 2 AND 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>AS - Child Care,AS - Housekeeping,AS - Pet Care,AS - Tutor,AS - Standard,AS - Child Care Center</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Owner_Active__c</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerIsQueue__c</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>AS - Personal Assistant</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Premier_Background_Checks</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Premier Background Check</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_International_CAW</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International WPS Services</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International WPS Service EventCare</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_International_CAW</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International WPS Services</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - WPS DE Family</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_WPS_INTL_Provider</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - WPS DE Provider</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International WPS Services</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_ABUC</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>ABUC</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_Centers</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Centers</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_Google</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Google</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_BestBuy</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email – BestBuy</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_Starbucks</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email – Starbucks</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC_Providers</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email - Provider</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_BUC</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>BUC</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>QSeniorCareConsult</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2) OR (3 AND 4) OR (5 AND 6)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>equals</operation>
+                <value>SCC New Enrollment</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ContactEmail</field>
+                <operation>equals</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>equals</operation>
+                <value>SCC New Enrollment</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Senior Care Consult</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>equals</operation>
+                <value>Initial Care Assessment</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MC_Temporary</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>OR(AND(Is_ODS_Complete__c =False,        Creator_License__c=&apos;Guest&apos;), 	AND(isNew(), 	OR(RecordType.DeveloperName = &apos;Standard&apos;,	   RecordType.DeveloperName = &apos;International_Email&apos;)))</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Q_Provider_Marketing_Solutions</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Galore Marketing Solutions</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Chat</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

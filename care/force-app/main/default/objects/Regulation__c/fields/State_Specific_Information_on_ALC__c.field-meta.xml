@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State_Specific_Information_on_ALC__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>State-Specific Information on Assisted Livings</inlineHelpText>
+    <label>State-Specific Information on ALC</label>
+    <length>32000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

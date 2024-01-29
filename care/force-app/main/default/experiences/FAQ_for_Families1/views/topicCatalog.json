@@ -1,0 +1,102 @@
+{
+  "appPageId" : "b040d84e-9c82-4aea-b263-8e3486fad169",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "74cbab6b-f2a2-4517-8dea-9b1340aaf087",
+  "label" : "Topic Catalog",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "bannerText" : "",
+        "bannerTextWithKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineArticles\">articles</a> and <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "bannerTextWithoutKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "pageType" : "",
+        "showSubTopics" : true,
+        "title" : "Topics",
+        "uniqueNameOrId" : ""
+      },
+      "componentName" : "forceCommunity:headline",
+      "id" : "d31019d9-e6bc-457c-a128-865dd800b8db",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8b1feaf2-8670-43c7-8696-4d4059d8472c",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "forceCommunity:topicCatalog",
+      "id" : "9b7a31cf-c14c-4ec1-9634-44cf0d8377db",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0233cf30-832a-4cab-b9db-abbc978f29b8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "allowPrepopulatePrechatFields" : true,
+        "avatarImgURL" : "",
+        "codeSettingsName" : "",
+        "defaultMinimizedText" : "Contact Us",
+        "displayHelpButton" : true,
+        "eswConfigurationJSON" : {
+          "baseCoreURL" : "https://caredotcom--force1.my.salesforce.com",
+          "baseLiveAgentContentURL" : "https://c.la2-c1cs-ia4.salesforceliveagent.com/content",
+          "baseLiveAgentURL" : "https://d.la2-c1cs-ia4.salesforceliveagent.com/chat",
+          "buttonId" : "5734C000000GncV",
+          "deploymentId" : "5724C000000GmlC",
+          "enabledFeatures" : [ "LiveAgent" ],
+          "entryFeature" : "LiveAgent",
+          "eswConfigDevName" : "Help_Center_Chat",
+          "eswConfigId" : "04I4C000000GmgqUAC",
+          "eswLiveAgentDevName" : "Help_Center_Chat",
+          "gslbBaseURL" : "https://service.force.com",
+          "isOfflineCasesEnabled" : "0",
+          "orgId" : "00D4C00000019dd"
+        },
+        "externalScripts" : "",
+        "externalStyles" : "",
+        "fallbackRouting" : "",
+        "offlineSupportMinimizedText" : "Contact Us",
+        "offlineText" : "Contact Us",
+        "onlineLoadingText" : "Loading",
+        "prechatBackgroundImgURL" : "",
+        "smallCompanyLogoImgURL" : "",
+        "snippetSettingsFile" : "",
+        "storageDomain" : "",
+        "waitingStateBackgroundImgURL" : ""
+      },
+      "componentName" : "forceCommunity:embeddedService",
+      "id" : "e97760af-7786-4cba-a8e4-3d45b0c08453",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fc4ba75c-91c8-460e-9ddd-1bde0bc4d745",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Topic Catalog"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "0d16c903-e27d-4640-8df2-ded86da5eb12",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6c6e0402-db90-4994-9e09-038738b512f2",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "topic-catalog"
+}

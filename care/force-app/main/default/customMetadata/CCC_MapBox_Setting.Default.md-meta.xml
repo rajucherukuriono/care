@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Default</label>
+    <protected>false</protected>
+    <values>
+        <field>Geocoding_Endpoint__c</field>
+        <value xsi:type="xsd:string">https://api.mapbox.com/geocoding/v5/mapbox.places/</value>
+    </values>
+    <values>
+        <field>MapBox_API_Key__c</field>
+        <value xsi:type="xsd:string">pk.eyJ1IjoiY2FyZWRvdGNvbSIsImEiOiJja2lxYXlwY2YxdXF5MnlwN2lwa2VnOTR3In0.oswQYQQOzzegaYUYWG36tQ</value>
+    </values>
+</CustomMetadata>

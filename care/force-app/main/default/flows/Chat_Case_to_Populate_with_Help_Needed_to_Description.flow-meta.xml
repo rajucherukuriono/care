@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Populate_the_value_with_Help_Needed</name>
+        <label>Populate the value with Help Needed</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Help_Needed__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>This is converted from WFR to Flow. Flow to add the Chat&apos;s request Help Needed to the Case description when there are no Agents online and the User decides to create a case</description>
+    <environments>Default</environments>
+    <interviewLabel>Chat Case to Populate with Help Needed to Description {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Chat Case to Populate with Help Needed to Description</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Populate_the_value_with_Help_Needed</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Help_Needed__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Description</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

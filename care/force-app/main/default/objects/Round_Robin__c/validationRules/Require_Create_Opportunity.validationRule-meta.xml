@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Create_Opportunity</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+    Is_Primary_Vertical__c &amp;&amp; NOT Create_Opportunity__c,
+    NOT Is_Primary_Vertical__c &amp;&amp; Create_Opportunity__c
+)</errorConditionFormula>
+    <errorDisplayField>Create_Opportunity__c</errorDisplayField>
+    <errorMessage>Check &quot;Create Opportunity&quot; when &quot;Is Primary Vertical&quot;, and vice versa</errorMessage>
+</ValidationRule>

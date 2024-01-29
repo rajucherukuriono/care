@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>It is used to save the Id of Template named  Provider Referrals for Family, this custom setting is used in Email functionality to inject the dynamic string in body.</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <label>gtTemplateId</label>
+    <visibility>Protected</visibility>
+</CustomObject>

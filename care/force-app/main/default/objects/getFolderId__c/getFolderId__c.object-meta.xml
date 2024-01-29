@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>It stores the folder id for folder in which we will store the temporary templates which will be created on the fly(Updated template by user).</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <label>getFolderId</label>
+    <visibility>Protected</visibility>
+</CustomObject>

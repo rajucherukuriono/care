@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Liability_Limits_Automobile__c</fullName>
+    <description>Edited for NMHC Canada, SFORCE-1587</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Limits for Automobile Liability. For NMHC Canada: Automobile limit of $1,000,000 (In Canada Cg have 6A coverage on personal vehicles. It allows to carry passengers for business purposes. Some agencies have company vehicles &amp; need riders on their policy).</inlineHelpText>
+    <label>Liability Limits</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

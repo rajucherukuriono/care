@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PR_Universal_Member_Id_Required</fullName>
+    <active>true</active>
+    <description>Universal Member ID is required once Request Status = Request Accepted</description>
+    <errorConditionFormula>AND(
+$Setup.Override_Validation_Rules__c.Override_Privacy_Request_Validation__c = False,
+ISPICKVAL(Request_Status__c, &apos;Request Accepted&apos;),
+ISPICKVAL(Source_System__c, &apos;US Platform&apos;),
+ISBLANK(Universal_Member_Id__c)
+)</errorConditionFormula>
+    <errorDisplayField>Universal_Member_Id__c</errorDisplayField>
+    <errorMessage>Universal Member ID is required when Request Status is &quot;Request Accepted&quot;</errorMessage>
+</ValidationRule>

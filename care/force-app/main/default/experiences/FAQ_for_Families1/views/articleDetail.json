@@ -1,0 +1,96 @@
+{
+  "appPageId" : "b040d84e-9c82-4aea-b263-8e3486fad169",
+  "componentName" : "siteforce:sldsTwoCol84SidebarFeaturedLayout",
+  "dataProviders" : [ ],
+  "id" : "4198f5b8-6850-48d3-afa3-7c33229901a2",
+  "label" : "Article Detail",
+  "regions" : [ {
+    "id" : "64441ebf-f13c-4813-90af-dbd00d410ae1",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "uniqueNameOrId" : "{!urlName}"
+      },
+      "componentName" : "forceCommunity:breadcrumbs",
+      "id" : "4fa06dcd-83a4-41b5-a172-e152427553d3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "c:knowledgeArticle",
+      "id" : "4755593e-58bc-4025-ac06-f5a1ee50de39",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "chatInitUrl" : "https://d.la4-c1-phx.salesforceliveagent.com/chat",
+        "displayLiveAgentProperty" : true,
+        "holidayMonth1" : "January",
+        "holidayMonth2" : "January",
+        "holidayMonth3" : "January",
+        "holidayMonth4" : "January",
+        "memberType" : "Seeker",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "c:createCaseFromArticle",
+      "id" : "926f933a-38e2-498a-b549-43235474f9dd",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9c75dc0d-1eee-4e56-acc0-beecf9a0d588",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "numberOfItems" : 5,
+        "showViewCounts" : true,
+        "title" : "Related Articles"
+      },
+      "componentName" : "selfService:similarArticles42",
+      "id" : "bb8a70fa-67b5-4916-ad51-584fae0d9dd1",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "numberOfArticles" : 5,
+        "title" : "Trending Articles",
+        "topicId" : "{!topicId}"
+      },
+      "componentName" : "selfService:topicTrendingArticles42",
+      "id" : "09a2f772-2fa5-463d-89a7-087156cb5ed0",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "611cfdc3-8000-4237-97a8-cdd2a06c71af",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "{!Record.Summary}",
+        "title" : "{!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "09fd7bb8-f175-490e-8c03-bad064af0c5d",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "196716b2-c878-4758-9879-0f622bd6f0e3",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "jZUeegpV0W94ELDnDdoeTUDGFeRpjf",
+  "type" : "view",
+  "viewType" : "article"
+}

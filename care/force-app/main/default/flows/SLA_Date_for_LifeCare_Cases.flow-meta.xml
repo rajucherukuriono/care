@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <description>Update the SLA Date field to +7days upon Created date for LifeCare Cases.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>SLA_Date_update_CaseRecord</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.CreatedDate}+7</expression>
+    </formulas>
+    <interviewLabel>SLA Date for LifeCare Cases {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SLA Date for LifeCare Cases</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>SLA_Date_for_LifeCare_Cases</name>
+        <label>SLA Date for LifeCare Cases</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>SLA_Date__c</field>
+            <value>
+                <elementReference>SLA_Date_update_CaseRecord</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>SLA_Date_for_LifeCare_Cases</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0125Y000002WGuoQAG</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

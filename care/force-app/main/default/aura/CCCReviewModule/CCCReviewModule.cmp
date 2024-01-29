@@ -1,0 +1,133 @@
+<aura:component controller="CCCReviewController" extends="c:CCCModuleBase">
+
+    <!-- Aura Attributes - Private -->
+    <aura:attribute name="reviewRecords" type="List" access="private" />
+    <aura:attribute name="locationRecords" type="List" access="private" />
+    <aura:attribute name="opportunityRecord" type="Opportunity" access="private" />
+
+    <!-- Aura Attributes - Modal Attributes -->
+    <aura:attribute name="reviewRecord" type="Map" access="public" />
+    <aura:attribute name="confirmSaveClicked" type="Boolean" default="false" access="public" />
+
+    <!-- Aura Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <!-- Main Body -->
+    <div>
+
+        <!-- Table -->
+        <div class="slds-m-top_large">
+            <div class="slds-grid slds-grid_vertical-align-start slds-gutters_direct slds-wrap">
+
+                <div class="slds-col slds-size_4-of-4 slds-grid slds-grid_align-spread">
+                    <div class="slds-col">
+                        <span class="slds-text-heading_small">References</span>
+                    </div>
+                    <div class="slds-col">
+
+                        <!-- Add Reference button -->
+                        <lightning:button variant="brand" iconName="utility:add" iconPosition="left" label="Add Reference"
+                            onclick="{!c.handleAddReviewClicked}" />
+                    </div>
+                </div>
+
+                <div class="slds-col slds-size_4-of-4 slds-m-top_medium">
+
+                    <table class="slds-table slds-table_bordered slds-border_right slds-border_left" role="grid">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+
+                                <!-- Column Header - Name -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Name">Name
+                                    </div>
+                                </th>
+
+                                <!-- Column Header - Email -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Email">Email
+                                    </div>
+                                </th>
+
+                                <!-- Column Header - Phone -->
+                                <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Phone">Phone
+                                    </div>
+                                </th>
+
+                                <!-- Column Header - Location -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Location">Location</div>
+                                </th>
+
+                                <!-- Column Header - Actions -->
+                                <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Actions">&nbsp;</div>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <aura:iteration items="{!v.reviewRecords}" var="review">
+                                <tr class="slds-hint-parent">
+
+                                    <!-- Name -->
+                                    <th scope="row" tabindex="0">
+                                        <div class="slds-truncate slds-p-around_x-small">
+                                            <lightning:formattedName firstName="{!review.First_Name__c}"
+                                                lastName="{!review.Last_Name__c}" />
+                                        </div>
+                                    </th>
+
+                                    <!-- Email -->
+                                    <td role="gridcell" scope="col" class="slds-cell-wrap">
+                                        <div class="slds-truncate slds-p-around_x-small">
+                                            <lightning:formattedEmail value="{!review.Email__c}" />
+                                        </div>
+                                    </td>
+
+                                    <!-- Phone -->
+                                    <td role="gridcell" scope="col">
+                                        <div class="slds-truncate slds-p-around_x-small slds-text-align_right">
+                                            <lightning:formattedPhone value="{!review.Phone__c}" />
+                                        </div>
+                                    </td>
+
+                                    <!-- Location -->
+                                    <td role="gridcell" scope="col">
+                                        <div class="slds-truncate slds-p-around_x-small ">
+                                            {!review.Location__r.Name}
+                                        </div>
+                                    </td>
+
+                                    <!-- Actions -->
+                                    <td role="gridcell">
+                                        <div class="slds-p-around_x-small slds-text-align_right">
+                                            <lightning:button variant="brand" label="Modify" iconName="utility:edit"
+                                                iconPosition="left" onclick="{!c.onModifyClicked}"
+                                                value="{!review.Id}" />
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </aura:iteration>
+
+                            <!-- No records -->
+                            <aura:if isTrue="{!empty(v.reviewRecords)}">
+                                <tr>
+                                    <td colspan="4">
+                                        <div class="slds-p-around_x-small">There have been no References created yet.</div>
+                                    </td>
+                                </tr>
+                            </aura:if>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</aura:component>

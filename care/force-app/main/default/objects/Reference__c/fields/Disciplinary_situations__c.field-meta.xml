@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disciplinary_situations__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Was there ever a disciplinary issue the person had to deal with? How were they at handling that?</inlineHelpText>
+    <label>Disciplinary situations</label>
+    <length>1000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

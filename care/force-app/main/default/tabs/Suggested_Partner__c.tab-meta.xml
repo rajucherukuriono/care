@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customObject>true</customObject>
+    <description>Suggested Partners are used by Senior Care to suggest a Provider to an Action Plan Need, working for a special Senior Care Company.</description>
+    <motif>Custom43: Jewel</motif>
+</CustomTab>

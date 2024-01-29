@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <assignments>
+        <name>Vetting_Name_Populate</name>
+        <label>Vetting Name Populate</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>VettingName</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>This rule updates the vetting record name in the format V-YYYYMMDD-1(Count). 
+This is Converted from Workflow to Flow Sforce-7189</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>VettingName</name>
+        <dataType>String</dataType>
+        <expression>&quot;V-&quot;+SUBSTITUTE(TEXT(DATEVALUE(NOW())), &quot;-&quot;, &quot;&quot;)+&apos;-&apos;
+ +Text( if({!$Record.BUC_Center_Name__r.Vetting_Record_Count__c} = null, 1,{!$Record.BUC_Center_Name__r.Vetting_Record_Count__c}+1))</expression>
+    </formulas>
+    <interviewLabel>Vetting record name and count update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Vetting record name and count update for US BUC Network Vetting</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Vetting_Name_Populate</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0121O000001ZYFEQA4</stringValue>
+            </value>
+        </filters>
+        <object>Vetting__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

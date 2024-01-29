@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Override_Account_Record_Type__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Boolean flag, upon checking this, Skips Account Record Type validation while anonymyzing account.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Check to override Account Record Type validation.</inlineHelpText>
+    <label>Override Account Record Type</label>
+    <type>Checkbox</type>
+</CustomField>

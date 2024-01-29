@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Agree_to_implement_NSOR_check_in_future__c</name>
+    <picklistValues>
+        <masterLabel>No - I do not agree to check the NSOR</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes - I agree to check the NSOR</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

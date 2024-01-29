@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission to delete International cases</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Delete International CAW Cases</label>
+    <license>Salesforce</license>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Case</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <recordTypeVisibilities>
+        <recordType>Case.International_BUC</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.International_Senior_Care_Consult</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.International_WPS_Services</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

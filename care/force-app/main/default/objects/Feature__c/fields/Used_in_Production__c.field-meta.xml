@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Used_in_Production__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field should indicate, if we are using a certain feature in production or not.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please check, if we are using a certain feature in production.</inlineHelpText>
+    <label>Used in Production</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

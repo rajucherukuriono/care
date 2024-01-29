@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Open_Action_Plans</fullName>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Type_of_Care_Needed__c</columns>
+    <columns>Status__c</columns>
+    <columns>Age__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>New,Pending</value>
+    </filters>
+    <label>My Open Action Plans</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>SCCAssociates</role>
+    </sharedTo>
+</ListView>

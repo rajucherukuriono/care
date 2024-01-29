@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Coach_Impact__c</fullName>
+    <description>Field used for Lifecare LEAVECOACH Survey.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Did your experience with the Coach positively impact your view of your employer as an employer of choice?</inlineHelpText>
+    <label>Coach Impact</label>
+    <length>25</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

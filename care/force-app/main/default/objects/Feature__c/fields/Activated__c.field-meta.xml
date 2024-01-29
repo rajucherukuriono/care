@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activated__c</fullName>
+    <description>Date of Feature Activation date, like for Critical Updates</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Set, if Feature has an Activation date, like for Critical Updates</inlineHelpText>
+    <label>Activated</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

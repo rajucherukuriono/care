@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <interviewLabel>Auto Share Account with Connections {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Auto Share Account with Connections</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Auto_share_record</name>
+        <label>Auto share record</label>
+        <locationX>300</locationX>
+        <locationY>314</locationY>
+        <inputAssignments>
+            <field>ConnectionId</field>
+            <value>
+                <elementReference>var_ConnectionID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LocalRecordId</field>
+            <value>
+                <elementReference>var_recordID</elementReference>
+            </value>
+        </inputAssignments>
+        <object>PartnerNetworkRecordConnection</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>51</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Auto_share_record</targetReference>
+        </connector>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <name>var_ConnectionID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_recordID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

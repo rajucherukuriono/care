@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Childcare</fullName>
+        <default>false</default>
+        <label>Childcare</label>
+    </customValue>
+    <customValue>
+        <fullName>Senior Care</fullName>
+        <default>false</default>
+        <label>Senior Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Licensed In-home Daycare Facility</fullName>
+        <default>false</default>
+        <label>Licensed In-home Daycare Facility</label>
+    </customValue>
+    <customValue>
+        <fullName>Children&apos;s Camp</fullName>
+        <default>false</default>
+        <label>Children&apos;s Camp</label>
+    </customValue>
+    <customValue>
+        <fullName>Children&apos;s Class or Activity Center</fullName>
+        <default>false</default>
+        <label>Children&apos;s Class or Activity Center</label>
+    </customValue>
+    <customValue>
+        <fullName>Pet Daycare</fullName>
+        <default>false</default>
+        <label>Pet Daycare</label>
+    </customValue>
+    <customValue>
+        <fullName>Senior Assisted Living Facility</fullName>
+        <default>false</default>
+        <label>Senior Assisted Living Facility</label>
+    </customValue>
+    <customValue>
+        <fullName>Licensed Daycare Facility</fullName>
+        <default>false</default>
+        <label>Licensed Daycare Facility</label>
+    </customValue>
+    <customValue>
+        <fullName>Preschool Facility</fullName>
+        <default>false</default>
+        <label>Preschool Facility</label>
+    </customValue>
+    <customValue>
+        <fullName>Child or Senior Care Agency</fullName>
+        <default>false</default>
+        <label>Child or Senior Care Agency</label>
+    </customValue>
+    <masterLabel>Primary vertical</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

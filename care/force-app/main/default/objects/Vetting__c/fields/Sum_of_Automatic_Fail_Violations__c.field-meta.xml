@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sum_of_Automatic_Fail_Violations__c</fullName>
+    <description>Sum of Automatic Fail Violations</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Sum of Automatic Fail Violations</inlineHelpText>
+    <label>Sum of Automatic Fail Violations</label>
+    <summaryFilterItems>
+        <field>Infraction__c.Violation_Level__c</field>
+        <operation>equals</operation>
+        <value>Automatic Fail</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Infraction__c.Vetting_Object__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

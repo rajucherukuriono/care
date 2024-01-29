@@ -1,0 +1,65 @@
+<apex:page showHeader="false" controller="LiveAgentPostChatController">
+	<head>
+        <style>
+			html, body, form {height: 100%; margin: 0;padding: 0; width: 100%;font-family:arial}
+            body {}
+            #toolbar{height:34px;background-color: #333;}
+            #logo{}
+            #tableWrapper{display: table;height:70%;width:100%;}
+            #messageWrapper{padding-right:20px;padding-left:20px; font-size:13px; display:table-cell;vertical-align: middle;}
+            #messageBody{font-size:13px; padding-left: 9px; padding-right: 9px; padding-top: 5px; border: 0px solid #ccc}
+            #downloadLinkWrapper{display:none}
+        </style>
+    </head>
+	<body>
+        <apex:form >
+        <div id="downloadLinkWrapper">
+            <a id="downloadLink" href="data:text/plain;charset=utf-8;base64,{!FileContents}" download="transcript.txt">Save Chat </a>
+        </div>
+        <div id="toolbar">
+            <apex:commandButton action="{!save}" onclick="document.getElementById('downloadLink').click(); return false;" value="Save Chat" style="background:#6D7391;color: #fff; font-size:1em; display:inline-block; float: left; margin: 5px 10px 5px 10px; padding: 2px 8px;"></apex:commandButton>
+        </div>
+		<div id="logo">
+            <img src="/resource/1528367795000/LABanner"/>
+        </div>
+        
+        <div id="tableWrapper">
+            
+            <div id="messageWrapper">
+                
+                <apex:pageMessage severity="info" strength="3" rendered="{!$CurrentPage.parameters.disconnectedBy == 'agent'}"
+                                      Title="Chat has ended" 
+                                      Summary="{!AgentName} has ended the chat session. Thank you for contacting Care.com. It was our pleasure to help you today!">
+                </apex:pageMessage>
+                
+                <apex:pageMessage severity="info" strength="3" rendered="{!$CurrentPage.parameters.disconnectedBy == 'client'}"
+                                      Title="Chat has ended" summary="Thank you for contacting Care.com. It was our pleasure to help you today!">
+                </apex:pageMessage>
+                    
+                <apex:pageMessage severity="info" strength="3" rendered="{!$CurrentPage.parameters.disconnectedBy == 'agentsUnavailable' 
+                                                                         || $CurrentPage.parameters.disconnectedBy == 'error'
+                                                                         || $CurrentPage.parameters.startTime == null}"
+                                      Title="Chat has ended" summary="We apologize – no one is available to chat at this time.">
+                    <div id="messageBody">
+                             Please try again or you can email us at 
+                            <a href="mailto:careteam@care.com">careteam@care.com</a>. We look forward to helping you!
+                    </div>
+                </apex:pageMessage>
+                    
+                <apex:pageMessage severity="info" strength="3" rendered="{!$CurrentPage.parameters.disconnectedBy == 'clientIdleTimeout'}"
+                                      Title="Chat has ended" 
+                                      Summary="Thank you for contacting Care.com. Your chat session has ended due to inactivity.">
+                    <div id="messageBody">
+                             
+                            Please try again or you can email us at <a href="mailto:careteam@care.com">careteam@care.com</a>. 
+                            We look forward to helping you!
+                    </div>
+                </apex:pageMessage>
+            </div>
+        </div>
+        </apex:form>
+
+        
+    </body>
+
+</apex:page>

@@ -1,0 +1,26 @@
+<apex:page standardController="Case" extensions="CreateIntlPersonAccount" >
+    <apex:form >
+        <apex:pageBlock title="Create New Person Account" mode="new" >
+<apex:outputText value="Member Already Linked" style="color:red" rendered="{!memberAlreadyLinked}"></apex:outputText>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save" rendered="{!not(memberAlreadyLinked)}"/>
+                <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection columns="1">
+                <apex:inputText label="First Name" value="{!fname}"/>
+                <apex:inputText label="Last Name" value="{!lname}"/>
+                <apex:inputText label="Contact Phone" value="{!cPhone}"/>
+                <apex:inputText label="Contact Email" value="{!cEmail}"/>
+               <apex:pageblockSectionItem >
+                <apex:outputlabel value="Employer Program"/>
+                    <apex:selectlist size="1" value="{!Eprog}">
+                       <apex:selectoptions value="{!EmpProg}" />
+                    </apex:selectlist>
+                    </apex:pageblockSectionItem>
+             <!--   <apex:inputText label="Employer Program" value="{!Eprog}" /> -->
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

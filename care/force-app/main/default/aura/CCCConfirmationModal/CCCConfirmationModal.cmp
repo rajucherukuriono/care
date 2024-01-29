@@ -1,0 +1,38 @@
+<aura:component>
+    <lightning:overlayLibrary aura:id="overlayLibModal" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <aura:attribute name="okClicked" type="Boolean" default="false" />
+    <aura:attribute name="title" type="String" />
+    <aura:attribute name="message" type="String" />
+    <aura:attribute name="iconName" type="String" default="utility:info" />
+    <!-- eg. utility:info, utility:question_mark, utility:error, utility:warning  -->
+    <aura:attribute name="iconVariant" type="String" default="" /> <!-- eg. inverse, warning, error -->
+    <aura:attribute name="iconAlternativeText" type="String" default="Info" />
+    <aura:attribute name="iconSize" type="String" default="large" />
+    <aura:attribute name="cancelButtonLabel" type="String" default="Cancel" />
+    <aura:attribute name="okButtonLabel" type="String" default="Ok" />
+    <aura:attribute name="showCancelButton" type="Boolean" default="true" />
+
+    <div class="slds-text-heading_medium slds-text-align_center"><strong>{!v.title}</strong></div>
+    <div class="slds-grid slds-m-top_medium slds-p-around_medium">
+        <div class="slds-col slds-p-left_small slds-p-right_x-large">
+            <lightning:icon iconName="{!v.iconName}" alternativeText="{!v.iconAlternativeText}"
+                variant="{!v.iconVariant}" size="{!v.iconSize}" />
+        </div>
+        <div class="slds-col">
+            <p class="slds-text-heading_small">{!v.message}</p>
+        </div>
+    </div>
+    <div class="slds-clearfix slds-m-top_medium">
+        <div class="slds-float_right">
+            <aura:if isTrue="{!v.showCancelButton}">
+                <lightning:button label="{!v.cancelButtonLabel}" onclick="{!c.handleCancelClicked}"
+                    class="slds-m-horizontal_xx-small" />
+            </aura:if>
+            <lightning:button variant="brand" label="{!v.okButtonLabel}" onclick="{!c.handleOKClicked}"
+                class="slds-m-horizontal_xx-small" />
+        </div>
+    </div>
+</aura:component>

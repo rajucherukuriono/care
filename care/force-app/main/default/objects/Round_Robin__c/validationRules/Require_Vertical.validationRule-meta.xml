@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Vertical</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT Default_Round_Robin__c, 
+    ISBLANK(Vertical__c)
+)</errorConditionFormula>
+    <errorMessage>Please select Vertical</errorMessage>
+</ValidationRule>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DelegateGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groups>G: English: MC</groups>
+    <groups>G: German: MC</groups>
+    <groups>Share: US Event Care</groups>
+    <groups>G: Scandinavian</groups>
+    <groups>G: Email-Rep with Refund</groups>
+    <groups>G: US Ops: Email Templates</groups>
+    <groups>Share: Galore Operations</groups>
+    <groups>Share: HP Operations</groups>
+    <groups>Share: Information Security</groups>
+    <groups>G: Social Media International Team</groups>
+    <groups>Share Vettings</groups>
+    <groups>G: EU: Covid</groups>
+    <groups>Share: All CC Internal Users</groups>
+    <groups>G: International Senior Care</groups>
+    <groups>xG: Member Care Next Safety Settings</groups>
+    <groups>G: Global Safety</groups>
+    <groups>G: Norwegian: Safety</groups>
+    <groups>G: Spanish: Safety</groups>
+    <groups>G: Mike</groups>
+    <groups>G: International WPS Sales Team</groups>
+    <groups>Center Network Development</groups>
+    <groups>G: Senior Home Care Applications</groups>
+    <groups>G: DeleteCases</groups>
+    <groups>Share: HomePay B2C Sales</groups>
+    <groups>Share: BUC</groups>
+    <groups>Share: CAW Ops</groups>
+    <groups>Operations Agent with Senior Care</groups>
+    <groups>Sutherland Email + BUC Team</groups>
+    <groups>G: Assisted Search</groups>
+    <groups>C@W Marketing</groups>
+    <groups>Share: All Sales</groups>
+    <groups>Share: All Sales and Operations</groups>
+    <groups>Share: CAWMKP Sales</groups>
+    <groups>Share: CAW Sales AM</groups>
+    <groups>Share: Care Operations</groups>
+    <groups>Share: HomePay</groups>
+    <groups>Share: HomePay Ops</groups>
+    <groups>Share: HomePay Sales</groups>
+    <groups>Share: HubSpot - HomePay</groups>
+    <groups>Share: ISR MKP</groups>
+    <groups>Share: Intl CAW Ops</groups>
+    <groups>Share: Intl Operations</groups>
+    <groups>Share: Senior Care</groups>
+    <groups>Share: US CAW Ops</groups>
+    <groups>Share: US Operations</groups>
+    <groups>G: International WPS Dual Sales - Ops</groups>
+    <groups>G: Contracts Manager</groups>
+    <groups>BUC Agency/Center</groups>
+    <groups>Share: CAWMKP: Sales</groups>
+    <groups>Caroline Zadow Team</groups>
+    <groups>Christine Glen Team</groups>
+    <groups>Diana Vitale Team</groups>
+    <groups>Jacqui Saluti Team</groups>
+    <groups>Kristen Spada Team</groups>
+    <groups>Laurie Bazarian Team</groups>
+    <groups>Mirza Dolic Team</groups>
+    <groups>Sarah McBride Team</groups>
+    <groups>Tricia Leighton Team</groups>
+    <groups>G: Danish: MC</groups>
+    <groups>G: Dutch: MC</groups>
+    <groups>G: Finnish: MC</groups>
+    <groups>G: French: MC</groups>
+    <groups>G: Norwegian: MC</groups>
+    <groups>G: Spanish: MC</groups>
+    <groups>G: Swedish: MC</groups>
+    <groups>G: Galore Marketing Solutions</groups>
+    <groups>G: Blocked Member Appeal</groups>
+    <groups>MC Galore</groups>
+    <groups>G:Call Center Call Back</groups>
+    <groups>Safety</groups>
+    <groups>ROW Member Care Team</groups>
+    <groups>Partner Network Safety</groups>
+    <groups>LifeCare</groups>
+    <groups>LifeCare Cases Group</groups>
+    <groups>LifeCare Managers Group</groups>
+    <groups>LifeCare QA</groups>
+    <groups>LifeCare Account Managers</groups>
+    <groups>BUC Email Template Access</groups>
+    <groups>Q: Premier Background Check</groups>
+    <groups>Product Management Team</groups>
+    <groups>G: International Operations Managers</groups>
+    <groups>G: Operations Agents - Dual Role</groups>
+    <groups>G: English: Operations Managers: Dual</groups>
+    <groups>G: HomePay Lead</groups>
+    <groups>G: Social Media Team</groups>
+    <groups>G: Dutch: Safety</groups>
+    <groups>G: English: Safety</groups>
+    <groups>G: French: Safety</groups>
+    <groups>G: German: Safety</groups>
+    <groups>G: Honorary Operations Member</groups>
+    <groups>G: Danish: Safety</groups>
+    <groups>G: Finnish: Safety</groups>
+    <groups>G: Swedish: Safety</groups>
+    <groups>G: US Safety Team</groups>
+    <groups>AS - Senior Care</groups>
+    <groups>G: English: Email Templates</groups>
+    <groups>Requisition Forms - Zip Code Approver</groups>
+    <groups>Reporting: Sales Operations</groups>
+    <groups>Sharing: Community</groups>
+    <groups>G: DACH Team Reporting</groups>
+    <groups>CAW - Sales Team</groups>
+    <groups>CAW - AE</groups>
+    <groups>Clicktools NPS Cases</groups>
+    <groups>VOC/NPS</groups>
+    <label>DG: IT Support</label>
+    <loginAccess>false</loginAccess>
+    <permissionSets>US Knowledge Editors</permissionSets>
+    <permissionSets>C: International BUC</permissionSets>
+    <permissionSets>C Ops: Galore Case</permissionSets>
+    <permissionSets>C Ops: HomePay Case</permissionSets>
+    <permissionSets>IT: Information Security and Compliance</permissionSets>
+    <permissionSets>C BUC: Network Center Vetting Director</permissionSets>
+    <permissionSets>Manage Email Templates</permissionSets>
+    <permissionSets>Access Lightning</permissionSets>
+    <permissionSets>Manage Custom Report Types</permissionSets>
+    <permissionSets>Live Agent Supervisors</permissionSets>
+    <permissionSets>Live Agent Users</permissionSets>
+    <permissionSets>Operations Agents - Multiple Support Role</permissionSets>
+    <permissionSets>Delete US Cases</permissionSets>
+    <permissionSets>C Sales B2C: HomePay</permissionSets>
+    <permissionSets>Access: CAW Objects</permissionSets>
+    <permissionSets>C Ops: AS</permissionSets>
+    <permissionSets>C Ops: Senior Care</permissionSets>
+    <permissionSets>C Sales B2B: Homepay</permissionSets>
+    <permissionSets>C Sales B2B: MarketPlace</permissionSets>
+    <permissionSets>Care: Manager</permissionSets>
+    <permissionSets>IT: Prod/Eng/QA</permissionSets>
+    <permissionSets>IT: SFDC Team</permissionSets>
+    <permissionSets>Requisition Form - Read Write</permissionSets>
+    <permissionSets>Transfer Cases</permissionSets>
+    <permissionSets>Omni - Available for Cases</permissionSets>
+    <permissionSets>Omni - Available for Chat</permissionSets>
+    <permissionSets>Omni - Available for Chat and Cases</permissionSets>
+    <permissionSets>TP: Entitlement Mgmt, Service Resource, and Skills</permissionSets>
+    <permissionSets>TP: Supervisor - BREeze</permissionSets>
+    <permissionSets>Omni - OmniSupervisor</permissionSets>
+    <permissionSets>Access: CAW Objects Read Only</permissionSets>
+    <permissionSets>Run Macros on Multiple Records</permissionSets>
+    <permissionSets>Translation Studio</permissionSets>
+    <permissionSets>Translation Studio - User</permissionSets>
+    <permissionSets>Stripe Connector Data User</permissionSets>
+    <permissionSets>Stripe Refunds</permissionSets>
+    <permissionSets>Zoom User</permissionSets>
+    <permissionSets>TP: Marketing Solutions Agent</permissionSets>
+    <permissionSets>Five9 Open CTI user</permissionSets>
+    <permissionSets>Fee Rate - Read Write</permissionSets>
+    <permissionSets>Sales Ops Team</permissionSets>
+    <permissionSets>Reputation Studio</permissionSets>
+    <permissionSets>Reputation Studio - Approver</permissionSets>
+    <permissionSets>Reputation Studio - Create Cases</permissionSets>
+    <permissionSets>Reputation Studio - LWC Timer</permissionSets>
+    <permissionSets>Reputation Studio - Manage Columns</permissionSets>
+    <permissionSets>Reputation Studio - Manage Columns Platform</permissionSets>
+    <permissionSets>Reputation Studio - Platform Approver</permissionSets>
+    <permissionSets>Reputation Studio - Require Question Answer Approval</permissionSets>
+    <permissionSets>Reputation Studio - Require Review Response Approval</permissionSets>
+    <permissionSets>Reputation Studio - Custom</permissionSets>
+    <permissionSets>Access to Life Care Case</permissionSets>
+    <permissionSets>Access to LifeCare Survey fields</permissionSets>
+    <permissionSets>Export Reports</permissionSets>
+    <permissionSets>Requisition Form Approvers</permissionSets>
+    <permissionSets>C Ops: Senior Care Companies</permissionSets>
+    <permissionSets>Requisition Form - Read Only</permissionSets>
+    <profiles>View: Ops: Galore</profiles>
+    <profiles>View: Sales: HomePay</profiles>
+    <profiles>xEmployee - No Access</profiles>
+    <profiles>Care: Read Only</profiles>
+    <profiles>View: Sales</profiles>
+    <profiles>Marketing Solutions</profiles>
+    <profiles>T: Provider Network Safety</profiles>
+    <profiles>T: Provider Network Development</profiles>
+    <profiles>Sales Origination Rep</profiles>
+    <profiles>Sales Origination Manager</profiles>
+    <profiles>Sales Origination Executive</profiles>
+    <profiles>Galore Ops</profiles>
+    <profiles>LifeCare</profiles>
+    <profiles>BUC Agent</profiles>
+    <profiles>Read Only</profiles>
+    <profiles>SCP + SCR (transitional)</profiles>
+    <profiles>Operations Agent</profiles>
+    <profiles>Operations Manager</profiles>
+    <profiles>International Operations Agent</profiles>
+    <profiles>HomePay Agent</profiles>
+    <profiles>HomePay BD Agent</profiles>
+    <profiles>Assisted Search User</profiles>
+    <profiles>International WPS Ops</profiles>
+    <roles>Galore</roles>
+    <roles>xEmployee</roles>
+    <roles>CAWMKP: Sales Ops</roles>
+    <roles>CAW: Operation</roles>
+    <roles>Care: Read Only</roles>
+    <roles>Marketing Solutions Executive</roles>
+    <roles>Marketing Solutions Manager</roles>
+    <roles>Marketing Solutions Rep</roles>
+    <roles>Sales</roles>
+    <roles>LifeCare : Agent</roles>
+    <roles>LifeCare : Manager</roles>
+    <roles>LifeCare : Senior Manager</roles>
+    <roles>Senior Care Manager</roles>
+    <roles>Operations Manager</roles>
+    <roles>International Operations Manager</roles>
+    <roles>HomePay Manager</roles>
+</DelegateGroup>

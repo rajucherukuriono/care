@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>fake@e.mail</email>
+    <name>Safety - Danish</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>G_Danish_Safety</publicGroup>
+        </publicGroups>
+        <roleAndSubordinates>
+            <roleAndSubordinate>Danish_Team_Lead</roleAndSubordinate>
+        </roleAndSubordinates>
+        <roles>
+            <role>International_Operations_Manager</role>
+            <role>Non_DACH_Team_Manager</role>
+        </roles>
+        <users>
+            <user>anne.christiansen@care.com</user>
+            <user>bernardita.maturana@care.com</user>
+            <user>bjoern.husted@care.com</user>
+            <user>dan.andersen@care.com</user>
+            <user>eeva.bode@care.com</user>
+            <user>gonzalo.conde@care.com</user>
+            <user>isanez@care.com</user>
+            <user>jacoblau.pedersen@care.com</user>
+            <user>jesper.nielsen@care.com</user>
+            <user>joacim.jorgensen@care.com</user>
+            <user>mark.cremin@care.com</user>
+            <user>miranda.lundin@care.com</user>
+            <user>mirza.dolic@care.com</user>
+            <user>peter.jensen@care.com</user>
+            <user>sara.vogelius@care.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

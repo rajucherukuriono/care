@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Care Type Senior Care Assisted Living</label>
+    <protected>false</protected>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:type="xsd:string">Care_Type__c</value>
+    </values>
+    <values>
+        <field>Galore_Value__c</field>
+        <value xsi:type="xsd:string">senior_care_assisted_living</value>
+    </values>
+    <values>
+        <field>Picklist_Value__c</field>
+        <value xsi:type="xsd:string">Senior Care Assisted Living</value>
+    </values>
+</CustomMetadata>

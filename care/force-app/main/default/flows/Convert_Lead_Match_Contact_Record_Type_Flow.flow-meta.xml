@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Desision_Criteria</name>
+        <label>Desision Criteria</label>
+        <locationX>842</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>WPS_Contact_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>WPS Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Wps_Contact</targetReference>
+            </connector>
+            <label>WPS Contact Lead</label>
+        </rules>
+        <rules>
+            <name>International_WPS_Contact_Lead</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>International WPS Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>International_WPS_Contact</targetReference>
+            </connector>
+            <label>International WPS Contact Lead</label>
+        </rules>
+        <rules>
+            <name>Homepay_Business_Contact_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Homepay Business Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Homepay_Business_Contact</targetReference>
+            </connector>
+            <label>Homepay Business Contact Lead</label>
+        </rules>
+        <rules>
+            <name>Marketplace_ISR_Contact_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Marketplace ISR Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Marketplace_ISR_Contact</targetReference>
+            </connector>
+            <label>Marketplace ISR Contact_Lead</label>
+        </rules>
+        <rules>
+            <name>MKP_National_Contact_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MKP National Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MKP_National_Contact</targetReference>
+            </connector>
+            <label>MKP National Contact Lead</label>
+        </rules>
+        <rules>
+            <name>BUC_Contact_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>BUC Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>BUC_Contact</targetReference>
+            </connector>
+            <label>BUC Contact_Lead</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Convert Lead - Match Contact Record Type Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Convert Lead - Match Contact Record Type Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>BUC_Contact</name>
+        <label>BUC Contact</label>
+        <locationX>1370</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>01270000000Hn6UAAS</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Homepay_Business_Contact</name>
+        <label>Homepay Business Contact</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>012390000001jmoAAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>International_WPS_Contact</name>
+        <label>International WPS Contact</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>01270000000UQCWAA4</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Marketplace_ISR_Contact</name>
+        <label>Marketplace ISR Contact</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>01270000000HouKAAS</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>MKP_National_Contact</name>
+        <label>MKP National Contact</label>
+        <locationX>1106</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>01239000000UQW7AAO</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Wps_Contact</name>
+        <label>Wps Contact</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>01270000000Hl9gAAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>716</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Desision_Criteria</targetReference>
+        </connector>
+        <object>Contact</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

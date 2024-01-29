@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Lead Assignment Rules</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>SMB_Basic_Sign_Up</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Marketplace ISR Lead</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>carolyn.livingston@myhomepay.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>HomePay Lead</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>roxana.ludwig1@betreut.de</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>International B2B</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Country</field>
+                <operation>notEqual</operation>
+                <value>CA,Canada,US,United States</value>
+            </criteriaItems>
+            <template>Care_Work_Templates/New_Lead_assignment</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

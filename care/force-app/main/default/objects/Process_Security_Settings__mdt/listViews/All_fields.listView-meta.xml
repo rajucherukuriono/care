@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_fields</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>NamespacePrefix</columns>
+    <columns>IsProtected</columns>
+    <columns>AES_KEY__c</columns>
+    <columns>Description__c</columns>
+    <columns>Initialization_Vector__c</columns>
+    <columns>Process_Name__c</columns>
+    <columns>Switch__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All fields</label>
+    <language>en_US</language>
+</ListView>

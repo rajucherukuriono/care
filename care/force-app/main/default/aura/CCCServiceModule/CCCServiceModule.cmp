@@ -1,0 +1,126 @@
+<aura:component controller="CCCServiceController" extends="c:CCCModuleBase">
+
+    <!-- Aura Attributes - Private-->
+    <aura:attribute name="opportunityRecord" type="Opportunity" access="private" />
+    <aura:attribute name="composerServiceRecords" type="List" access="private" />
+
+    <!-- Aura Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <!-- Main Body -->
+    <div>
+
+        <!-- Composer Service Table -->
+        <div class="">
+            <div class="slds-grid slds-grid_vertical-align-start slds-gutters_direct slds-wrap">
+
+                <div class="slds-col slds-size_4-of-4 slds-m-top_medium">
+
+                    <table class="slds-table slds-table_bordered slds-border_right slds-border_left" role="grid">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+
+                                <!-- Column Header - Form Radial -->
+                                <th class="slds-text-title_caps slds-text-align_right" scope="col"
+                                    style="width: 3.25rem;">
+                                    <div class="slds-truncate slds-assistive-text" id="column-group-header"
+                                        title="Choose a row to select">Choose
+                                        a row to select</div>
+                                </th>
+
+                                <!-- Column Header - Vertical -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Vertical">Vertical</div>
+                                </th>
+
+                                <!-- Column Header - License Level -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="License Level">License Level
+                                    </div>
+                                </th>
+
+                                <!-- Column Header - Cost per Lead -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Cost per Lead">Cost per Lead
+                                    </div>
+                                </th>
+
+                                <!-- Column Header - Base Points -->
+                                <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Base Points">Base Points
+                                    </div>
+                                </th>
+
+                                <!-- Column Header - Bonus Points -->
+                                <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                                    <div class="slds-truncate slds-p-around_x-small" title="Bonus Points">Bonus Points
+                                    </div>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <aura:iteration items="{! v.composerServiceRecords }" var="serviceRecord">
+                                <tr class="slds-hint-parent">
+
+                                    <!-- Form Radial -->
+                                    <td class="slds-text-align_right" role="gridcell">
+                                        <lightning:input type="radio" aura:id="serviceRecord" name="serviceRecord"
+                                            value="{!serviceRecord.Id}" checked="{!
+                                            equals(serviceRecord.Id,v.opportunityRecord.Composer_Service__c)}"
+                                            onchange="{! c.onComposerServiceChange}" disabled="{!not(v.allowEdit)}" />
+                                    </td>
+
+                                    <!-- Vertical -->
+                                    <th scope="row" tabindex="0">
+                                        <div class="slds-truncate slds-p-around_x-small"
+                                            title="{!serviceRecord.Vertical__c}">
+                                            <lightning:formattedText value="{!serviceRecord.Vertical__c}" />
+                                        </div>
+                                    </th>
+
+                                    <!-- License Level -->
+                                    <td role="gridcell">
+                                        <div class="slds-truncate slds-p-around_x-small"
+                                            title="{!serviceRecord.License_Level__c}">
+                                            <lightning:formattedText value="{!serviceRecord.License_Level__c}" />
+                                        </div>
+                                    </td>
+
+                                    <!-- Cost per Lead -->
+                                    <td role="gridcell">
+                                        <div class="slds-truncate slds-p-around_x-small"
+                                            title="{!serviceRecord.Cost_per_Lead_Info__c}">
+                                            <lightning:formattedText value="{!serviceRecord.Cost_per_Lead_Info__c}" />
+                                        </div>
+                                    </td>
+
+                                    <!-- Base Points -->
+                                    <td role="gridcell">
+                                        <div class="slds-truncate slds-p-around_x-small slds-text-align_right"
+                                            title="{!serviceRecord.Base_Points__c}">
+                                            <lightning:formattedNumber value="{!serviceRecord.Base_Points__c}" />
+                                        </div>
+                                    </td>
+
+                                    <!-- Bonus Points -->
+                                    <td role="gridcell">
+                                        <div class="slds-truncate slds-p-around_x-small slds-text-align_right"
+                                            title="{!serviceRecord.Bonus_Points__c}">
+                                            <lightning:formattedNumber value="{!serviceRecord.Bonus_Points__c}" />
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                            </aura:iteration>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

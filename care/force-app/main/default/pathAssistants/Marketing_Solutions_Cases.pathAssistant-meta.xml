@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Marketing Solutions Cases</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>MS_Case_Closed_Resolution__c</fieldNames>
+        <picklistValueName>Closed</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Galore_Marketing_Solutions</recordTypeName>
+</PathAssistant>

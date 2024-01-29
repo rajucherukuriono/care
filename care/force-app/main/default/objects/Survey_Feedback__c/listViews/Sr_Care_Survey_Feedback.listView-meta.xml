@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sr_Care_Survey_Feedback</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Assign_To__c</columns>
+    <columns>Overall_satisfaction__c</columns>
+    <columns>NPS__c</columns>
+    <columns>QA_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Survey_Feedback__c.Senior_Care_Survey_feedback</value>
+    </filters>
+    <label>Sr.Care Survey Feedback</label>
+    <language>en_US</language>
+</ListView>

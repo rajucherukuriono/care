@@ -1,0 +1,70 @@
+<template>
+    <div class="wasThisHelpfulWrapper slds-p-bottom_x-large">
+        <div class="wasThisHelpful">
+            <lightning-radio-group name="radioGroup" label="Did this article answer your question?" options={options} value={value} type="button" onchange={handleRadioChange}></lightning-radio-group>
+        </div>
+    </div>
+
+    <div class="contactFormWrapper slds-p-horizontal_x-large">
+        <lightning-record-edit-form object-api-name="Case" onsuccess={handleCaseCreated} onsubmit={handleSubmit} onerror={handleFormError} if:true={displayForm} onload={handleFormLoad}>
+            <div class="slds-grid">
+                <div class="slds-col slds-size_2-of-2">
+                    <lightning-messages if:false={hideLightningMessages}></lightning-messages>
+                </div>
+            </div>
+
+            <div class="slds-grid slds-wrap slds-gutters slds-p-top_x-small" >
+
+                <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+                    <h1>Email Us</h1>
+
+                    <div if:true={displaySpinner} >
+                        <lightning-spinner variant="brand" size="large" alternative-text="Trying to email support" ></lightning-spinner>
+                    </div>
+
+                    <div if:false={hideFormLoadSpinner} class="slds-is-relative slds-m-bottom_xx-large  slds-p-bottom_xx-large">
+                        <lightning-spinner variant="brand" size="large" alternative-text="Loading Contact Form" ></lightning-spinner>
+                    </div>
+
+                    <lightning-input-field field-name={nameField}></lightning-input-field>
+                    <lightning-input-field field-name={emailField}></lightning-input-field>
+                    <lightning-input-field field-name={descriptionField}></lightning-input-field>                        
+                    <lightning-input-field field-name={subjectField} value={subject} class="hidden"></lightning-input-field>
+                    <lightning-input-field field-name={typeField} value={caseTypeValue}  class="hidden"></lightning-input-field>
+                    <lightning-input-field field-name={originField} value="Web" class="hidden"></lightning-input-field>
+                    <lightning-input-field field-name={statusField} value="New" class="hidden"></lightning-input-field>
+                    <lightning-input-field field-name={webExternalMemberIdField} value={webExternalMemberId} class="hidden"></lightning-input-field>
+                    <lightning-input-field field-name={articleTopicField} value={caseArticleTopic} class="hidden"></lightning-input-field>
+
+                    <div class="submitButtonWrapper slds-m-top_small">
+                        <div class="submitButton">
+                                <lightning-button type="submit" variant="brand" label="Email Support" disabled={disableSubmitButton} class=""></lightning-button>    
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+
+                    <div class="slds-p-top_small" if:true={displayLiveAgent}>
+                        <c-liveagent topic-button-id={topicButtonId} org-id={orgId} deployment-id={deploymentId} chat-init-url={chatInitUrl} member-type={memberType} live-agent-site-url={liveAgentSiteUrl}></c-liveagent>
+                    </div>
+
+                    <c-phone-details display-phone-property={displayPhoneProperty} webemid={webExternalMemberId} member-visibility={memberVisibility} visitor-visibility={visitorVisibility} display-live-agent={displayLiveAgent} holiday-month1={holidayMonth1} holiday-date1={holidayDate1} holiday-month2={holidayMonth2} holiday-date2={holidayDate2} holiday-month3={holidayMonth3} holiday-date3={holidayDate3} holiday-month4={holidayMonth4} holiday-date4={holidayDate4}></c-phone-details>
+
+                </div>
+            </div>
+        </lightning-record-edit-form>
+    </div>
+
+    <div class="welcomeWrapper slds-p-horizontal_x-large" if:true={displayWelcome}>
+        <div class="welcome">
+            <h1>We're glad we could help!</h1>
+        </div>
+    </div>
+    <div class="disclaimer-text slds-p-horizontal_x-large">
+        <div class="slds-form-element__label slds-no-flex">
+        Email communications with Care.com are not encrypted or secured. We recommend you do not share personal sensitive information; however, if you do so we may remove it prior to responding to your inquiry.
+        </div>
+    </div>
+</template>

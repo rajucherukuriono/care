@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DelegateGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groups>G: Global Safety</groups>
+    <groups>G: Norwegian: Safety</groups>
+    <groups>G: Spanish: Safety</groups>
+    <groups>Christine Glen Team</groups>
+    <groups>Jacqui Saluti Team</groups>
+    <groups>Laurie Bazarian Team</groups>
+    <groups>Safety</groups>
+    <groups>G: Dutch: Safety</groups>
+    <groups>G: English: Safety</groups>
+    <groups>G: French: Safety</groups>
+    <groups>G: German: Safety</groups>
+    <groups>G: Danish: Safety</groups>
+    <groups>G: Finnish: Safety</groups>
+    <groups>G: Swedish: Safety</groups>
+    <label>DG Ops: Safety</label>
+    <loginAccess>false</loginAccess>
+    <permissionSets>Omni - Available for Cases</permissionSets>
+    <permissionSets>Omni - Available for Chat</permissionSets>
+    <permissionSets>Omni - Available for Chat and Cases</permissionSets>
+    <permissionSets>TP: Entitlement Mgmt, Service Resource, and Skills</permissionSets>
+    <permissionSets>TP: Supervisor - BREeze</permissionSets>
+    <permissionSets>Translation Studio</permissionSets>
+    <permissionSets>Translation Studio - User</permissionSets>
+    <permissionSets>Stripe Connector Data User</permissionSets>
+    <permissionSets>Stripe Refunds</permissionSets>
+    <profiles>Operations Agent</profiles>
+    <profiles>Operations Manager</profiles>
+    <profiles>International Operations Agent</profiles>
+    <roles>Safety Manager</roles>
+    <roles>International Operations Manager</roles>
+</DelegateGroup>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Other Details</label>
+    <protected>false</protected>
+    <values>
+        <field>ebcm__Bot_Name__c</field>
+        <value xsi:type="xsd:string">Digital Assistant</value>
+    </values>
+    <values>
+        <field>ebcm__Dialog_Request_Payload__c</field>
+        <value xsi:type="xsd:string">{
+  &quot;title&quot;: &quot;Additional details&quot;,
+  &quot;syncDialogCall&quot;: true,
+  &quot;class&quot;: &quot;formcard_transfeConnectrAdvocate&quot;,
+  &quot;disableOnSubmit&quot;: true,
+  &quot;actions&quot;: [
+    {
+      &quot;type&quot;: &quot;button&quot;,
+      &quot;label&quot;: &quot;Continue&quot;,
+      &quot;params&quot;: &quot;#bot_handle_return_dialog#&quot;,
+      &quot;disableOnSubmit&quot;: true
+    }
+  ],
+  &quot;inputs&quot;: [
+    {
+      &quot;isRequired&quot;: false,
+      &quot;label&quot;: &quot;Detail Description&quot;,
+      &quot;type&quot;: &quot;textarea&quot;,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;fApi&quot;: &quot;IssueDescription__c&quot;,
+      &quot;validateOn&quot;: &quot;input&quot;,
+      &quot;messageWhenValueMissing&quot;: &quot;Please add a description&quot;,
+      &quot;placeholder&quot;: &quot;Type a short description of your details you&apos;d like to share...&quot;
+    }
+  ],
+  &quot;submission&quot;: {
+    &quot;server&quot;: &quot;*&quot;,
+    &quot;browser&quot;: &quot;*&quot;
+  }
+}</value>
+    </values>
+    <values>
+        <field>ebcm__Type__c</field>
+        <value xsi:type="xsd:string">Form</value>
+    </values>
+</CustomMetadata>

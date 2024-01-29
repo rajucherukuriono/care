@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>9</activeVersionNumber>
+    <description>This will reopen Closed Cases when the customer replies to an existing email with the thread ID.
+this is for &quot;Galore marketing Solutions&quot;, International CAW&quot;, &quot;International BUC&quot; and &quot;BUC&quot; Record type.</description>
+    <masterLabel>Email Message - Reopen Case when new Email comes in</masterLabel>
+</FlowDefinition>

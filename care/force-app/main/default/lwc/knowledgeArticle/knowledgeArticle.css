@@ -1,0 +1,33 @@
+.articleWrapper a:hover {
+  color: #083093;
+  text-decoration: none;
+}
+
+.article-text{
+    font-size: 16px;    
+}
+
+.article-text a {
+  text-decoration: underline;
+}
+
+.article-text a:hover {
+  color: #083093;
+  text-decoration: underline;
+}
+
+.article-headline{
+    font-weight:bold;
+    font-size: 36px; 
+    line-height: 42px;
+}
+
+/* Breadcrumbs */
+.breadcrumbContainer a:hover {
+    text-decoration: none;
+    color: #083093;
+  }
+
+.breadcrumbSeparator{
+    color: var(--lwc-colorTextWeak);
+  }

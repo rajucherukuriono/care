@@ -1,0 +1,4 @@
+<apex:page >
+    <apex:outputLink value="https://caredotcom.my.salesforce.com/01Z39000000feZv">ODS Dashboard</apex:outputLink><br/>
+    <apex:outputLink value="https://caredotcom.my.salesforce.com/setup/org/orgstorageusage.jsp?id=00D700000008kOO&setupid=CompanyResourceDisk&retURL=%2Fui%2Fsetup%2FSetup%3Fsetupid%3DDataManagement">Storage Usage</apex:outputLink>
+</apex:page>

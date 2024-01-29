@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BGC_Street__c</fullName>
+    <description>Background check contact street address</description>
+    <externalId>false</externalId>
+    <label>BGC Street</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

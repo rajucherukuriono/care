@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Acquisition</fullName>
+        <default>false</default>
+        <label>Acquisition</label>
+    </customValue>
+    <customValue>
+        <fullName>Bad Contact Info</fullName>
+        <default>false</default>
+        <label>Bad Contact Info</label>
+    </customValue>
+    <customValue>
+        <fullName>Bad Fit</fullName>
+        <default>false</default>
+        <label>Bad Fit</label>
+    </customValue>
+    <customValue>
+        <fullName>Broker Recommendation</fullName>
+        <default>false</default>
+        <label>Broker Recommendation</label>
+    </customValue>
+    <customValue>
+        <fullName>Clean-Up/Duplicate</fullName>
+        <default>false</default>
+        <label>Clean-Up/Duplicate</label>
+    </customValue>
+    <customValue>
+        <fullName>Competitive Loss</fullName>
+        <default>false</default>
+        <label>Competitive Loss</label>
+    </customValue>
+    <customValue>
+        <fullName>Cost/Budget</fullName>
+        <default>false</default>
+        <label>Cost/Budget</label>
+    </customValue>
+    <customValue>
+        <fullName>Do not call</fullName>
+        <default>false</default>
+        <label>Do not call</label>
+    </customValue>
+    <customValue>
+        <fullName>Duplicate</fullName>
+        <default>false</default>
+        <label>Duplicate</label>
+    </customValue>
+    <customValue>
+        <fullName>Duplicate/Child Account</fullName>
+        <default>false</default>
+        <label>Duplicate/Child Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Exploratory Exercise</fullName>
+        <default>false</default>
+        <label>Exploratory Exercise</label>
+    </customValue>
+    <customValue>
+        <fullName>Failed Vetting</fullName>
+        <default>false</default>
+        <label>Failed Vetting</label>
+    </customValue>
+    <customValue>
+        <fullName>FCC under 3 years</fullName>
+        <default>false</default>
+        <label>FCC under 3 years</label>
+    </customValue>
+    <customValue>
+        <fullName>Found care on their own</fullName>
+        <default>false</default>
+        <label>Found care on their own</label>
+    </customValue>
+    <customValue>
+        <fullName>Future Opportunity</fullName>
+        <default>false</default>
+        <label>Future Opportunity</label>
+    </customValue>
+    <customValue>
+        <fullName>Head Start</fullName>
+        <default>false</default>
+        <label>Head Start</label>
+    </customValue>
+    <customValue>
+        <fullName>In Period Cancellation</fullName>
+        <default>false</default>
+        <label>In Period Cancellation</label>
+    </customValue>
+    <customValue>
+        <fullName>Insufficient BUC Match</fullName>
+        <default>false</default>
+        <label>Insufficient BUC Match</label>
+    </customValue>
+    <customValue>
+        <fullName>Job Seeker</fullName>
+        <default>false</default>
+        <label>Job Seeker</label>
+    </customValue>
+    <customValue>
+        <fullName>Language Barrier</fullName>
+        <default>false</default>
+        <label>Language Barrier</label>
+    </customValue>
+    <customValue>
+        <fullName>Liability Concerns</fullName>
+        <default>false</default>
+        <label>Liability Concerns</label>
+    </customValue>
+    <customValue>
+        <fullName>License</fullName>
+        <default>false</default>
+        <label>License</label>
+    </customValue>
+    <customValue>
+        <fullName>Low Income/Can&apos;t Afford</fullName>
+        <default>false</default>
+        <label>Low Income/Can&apos;t Afford</label>
+    </customValue>
+    <customValue>
+        <fullName>Member prefers individuals</fullName>
+        <default>false</default>
+        <label>Member prefers individuals</label>
+    </customValue>
+    <customValue>
+        <fullName>Never contacted</fullName>
+        <default>false</default>
+        <label>Never contacted</label>
+    </customValue>
+    <customValue>
+        <fullName>Non paid provider</fullName>
+        <default>false</default>
+        <label>Non paid provider</label>
+    </customValue>
+    <customValue>
+        <fullName>Non Profit</fullName>
+        <default>false</default>
+        <label>Non Profit</label>
+    </customValue>
+    <customValue>
+        <fullName>Not a Priority</fullName>
+        <default>false</default>
+        <label>Not a Priority</label>
+    </customValue>
+    <customValue>
+        <fullName>Not interested</fullName>
+        <default>false</default>
+        <label>Not interested</label>
+    </customValue>
+    <customValue>
+        <fullName>Nursing home</fullName>
+        <default>false</default>
+        <label>Nursing home</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Out of business</fullName>
+        <default>false</default>
+        <label>Out of business</label>
+    </customValue>
+    <customValue>
+        <fullName>Placed search on hold</fullName>
+        <default>false</default>
+        <label>Placed search on hold</label>
+    </customValue>
+    <customValue>
+        <fullName>Provider</fullName>
+        <default>false</default>
+        <label>Provider</label>
+    </customValue>
+    <customValue>
+        <fullName>Public School</fullName>
+        <default>false</default>
+        <label>Public School</label>
+    </customValue>
+    <customValue>
+        <fullName>Recipient has passed</fullName>
+        <default>false</default>
+        <label>Recipient has passed</label>
+    </customValue>
+    <customValue>
+        <fullName>Referred to another product</fullName>
+        <default>false</default>
+        <label>Referred to another product</label>
+    </customValue>
+    <customValue>
+        <fullName>Religious Exemption</fullName>
+        <default>false</default>
+        <label>Religious Exemption</label>
+    </customValue>
+    <customValue>
+        <fullName>Safety Issue/Violation</fullName>
+        <default>false</default>
+        <label>Safety Issue/Violation</label>
+    </customValue>
+    <customValue>
+        <fullName>Territory assignment</fullName>
+        <default>false</default>
+        <label>Territory assignment</label>
+    </customValue>
+    <customValue>
+        <fullName>Territory Reassignment</fullName>
+        <default>false</default>
+        <label>Territory Reassignment</label>
+    </customValue>
+    <customValue>
+        <fullName>Unqualified</fullName>
+        <default>false</default>
+        <label>Unqualified</label>
+    </customValue>
+    <customValue>
+        <fullName>Unreachable</fullName>
+        <default>false</default>
+        <label>Unreachable</label>
+    </customValue>
+    <customValue>
+        <fullName>Working with competitor</fullName>
+        <default>false</default>
+        <label>Working with competitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Too small</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Too small</label>
+    </customValue>
+    <customValue>
+        <fullName>Unqualified - a Placement co.</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unqualified - a Placement co.</label>
+    </customValue>
+    <customValue>
+        <fullName>Already a Member</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Already a Member</label>
+    </customValue>
+    <customValue>
+        <fullName>Fake</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fake</label>
+    </customValue>
+    <customValue>
+        <fullName>4 Bed Home</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>4 Bed Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Email Bounced</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Email Bounced</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospective Client Inquiry</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prospective Client Inquiry</label>
+    </customValue>
+    <customValue>
+        <fullName>Hang up</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Hang up</label>
+    </customValue>
+    <description>Reasons for setting an opportunity to Closed Lost, and setting the account to an Unqualified status</description>
+    <masterLabel>Lost Reason</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

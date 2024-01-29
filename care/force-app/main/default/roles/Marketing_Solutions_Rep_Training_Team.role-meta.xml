@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Marketing Solutions Rep Training Team</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Marketing Solutions Rep Training Team</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Marketing_Solutions_Training_Manager</parentRole>
+</Role>

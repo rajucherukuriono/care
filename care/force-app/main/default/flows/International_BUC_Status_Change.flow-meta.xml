@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <assignments>
+        <name>Set_Owner</name>
+        <label>Set Owner</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>00G1O0000056HFaUAM</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Status_Check</name>
+        <label>Status Check</label>
+        <locationX>182</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>On_Hold_Escalated_Reopened_NOT_owned_by_queue</name>
+            <conditionLogic>(1 OR 2 OR 3) AND (NOT 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>On Hold</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Escalated</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Reopened</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>00G</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Owner</targetReference>
+            </connector>
+            <label>On Hold, Escalated, Reopened NOT owned by queue</label>
+        </rules>
+    </decisions>
+    <description>For Cases with the Record Type &apos;International BUC&apos; where the status changes</description>
+    <environments>Default</environments>
+    <interviewLabel>International BUC Status Change {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>International BUC Status Change</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Status_Check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0121O000001ZY2YQAW</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

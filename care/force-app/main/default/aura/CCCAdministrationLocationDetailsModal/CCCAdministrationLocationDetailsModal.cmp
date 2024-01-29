@@ -1,0 +1,17 @@
+<aura:component controller="CCCAdministrationController" extends="c:CCCBase">
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <div class="slds-p-around_xx-small">
+        TODO: add location specific variables
+    </div>
+
+    <div class="slds-clearfix slds-m-top_large">
+        <div class="slds-float_right">
+            <lightning:button label="Cancel" onclick="{!c.handleCancelClicked}" class="slds-m-horizontal_xx-small" />
+            <lightning:button variant="brand" label="Save" onclick="{!c.handleSaveClicked}"
+                class="slds-m-horizontal_xx-small" />
+        </div>
+    </div>
+
+</aura:component>

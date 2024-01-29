@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Fair_Enrollment__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of client employees enrolled in Care@Work benefits prior to event?</inlineHelpText>
+    <label>Pre-Fair Enrollment</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

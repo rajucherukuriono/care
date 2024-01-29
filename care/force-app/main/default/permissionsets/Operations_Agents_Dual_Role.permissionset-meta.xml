@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Agents that need to handle US &amp; International cases at the same time.</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Member_ID_CSR__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Operations Agents - Dual Role</label>
+    <license>Salesforce</license>
+    <recordTypeVisibilities>
+        <recordType>Case.International_Call_Center</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.International_Email</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.Standard</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ShareFilesWithNetworks</name>
+    </userPermissions>
+</PermissionSet>

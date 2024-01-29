@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Devices__c</fullName>
+    <description>SFORCE-2340</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate device(s) used when bug happened, i.e. iOS, Android, App, Desktop/Laptop, Tablet, iPad, MW, etc</inlineHelpText>
+    <label>Devices</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

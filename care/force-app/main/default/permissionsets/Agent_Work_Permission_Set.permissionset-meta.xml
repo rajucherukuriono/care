@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Agent Work Permission Set</label>
+    <license>Salesforce</license>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Agent_Work__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <tabSettings>
+        <tab>Agent_Work__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>

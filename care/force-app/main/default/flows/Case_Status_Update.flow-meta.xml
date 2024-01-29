@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <assignments>
+        <description>Set Case Reason to Safety Alert</description>
+        <name>Set_Case_Reason_to_Safety_Alert</name>
+        <label>Set Case Reason to Safety Alert</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Reason</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Safety Alert</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Reopened_Values</name>
+        <label>Set Reopened Values</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Re_Open_Count__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ReopenedCount</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Reopened_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.InterviewStartTime</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Reopen_Criteria_Met__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Status_Check</name>
+        <label>Status Check</label>
+        <locationX>314</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Reopened</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Reopened</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Reopened_Values</targetReference>
+            </connector>
+            <label>Reopened</label>
+        </rules>
+        <rules>
+            <name>Closed_Safety_Case</name>
+            <conditionLogic>1 AND 2 AND (3 OR 4) AND (5 OR 6)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Safety Alert</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Rejected-Other</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Rejected-Agency as Individual</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Member_Care_Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>QSafetyAlert</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Case_Reason_to_Safety_Alert</targetReference>
+            </connector>
+            <label>Closed Safety Case</label>
+        </rules>
+    </decisions>
+    <description>Updates values on the case if the case status is changed.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>the reopened count + 1</description>
+        <name>ReopenedCount</name>
+        <dataType>Number</dataType>
+        <expression>BLANKVALUE({!$Record.Re_Open_Count__c}, 0) +1</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Case Status Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case Status Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Status_Check</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

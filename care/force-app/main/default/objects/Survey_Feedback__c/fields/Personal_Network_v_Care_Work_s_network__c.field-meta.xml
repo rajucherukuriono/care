@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Personal_Network_v_Care_Work_s_network__c</fullName>
+    <externalId>false</externalId>
+    <label>Personal Network v Care@Work&apos;s network</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I prefer using my Personal Network</fullName>
+                <default>false</default>
+                <label>I prefer using my Personal Network</label>
+            </value>
+            <value>
+                <fullName>Either suits me</fullName>
+                <default>false</default>
+                <label>Either suits me</label>
+            </value>
+            <value>
+                <fullName>I prefer to use Care@Work&apos;s Network</fullName>
+                <default>false</default>
+                <label>I prefer to use Care@Work&apos;s Network</label>
+            </value>
+            <value>
+                <fullName>Other (Specify below)</fullName>
+                <default>false</default>
+                <label>Other (Specify below)</label>
+            </value>
+            <value>
+                <fullName>Ich bevorzuge die Nutzung meines persönlichen Netzwerks</fullName>
+                <default>false</default>
+                <label>Ich bevorzuge die Nutzung meines persönlichen Netzwerks</label>
+            </value>
+            <value>
+                <fullName>Beides passt mir</fullName>
+                <default>false</default>
+                <label>Beides passt mir</label>
+            </value>
+            <value>
+                <fullName>Ich bevorzuge das Netzwerk von Care for Business</fullName>
+                <default>false</default>
+                <label>Ich bevorzuge das Netzwerk von Care for Business</label>
+            </value>
+            <value>
+                <fullName>Sonstiges (bitte angeben)</fullName>
+                <default>false</default>
+                <label>Sonstiges (bitte angeben)</label>
+            </value>
+            <value>
+                <fullName>Sehr zufrieden</fullName>
+                <default>false</default>
+                <label>Sehr zufrieden</label>
+            </value>
+            <value>
+                <fullName>Etwas zufrieden</fullName>
+                <default>false</default>
+                <label>Etwas zufrieden</label>
+            </value>
+            <value>
+                <fullName>Weder zufrieden noch unzufrieden</fullName>
+                <default>false</default>
+                <label>Weder zufrieden noch unzufrieden</label>
+            </value>
+            <value>
+                <fullName>Etwas unzufrieden</fullName>
+                <default>false</default>
+                <label>Etwas unzufrieden</label>
+            </value>
+            <value>
+                <fullName>Sehr unzufrieden</fullName>
+                <default>false</default>
+                <label>Sehr unzufrieden</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

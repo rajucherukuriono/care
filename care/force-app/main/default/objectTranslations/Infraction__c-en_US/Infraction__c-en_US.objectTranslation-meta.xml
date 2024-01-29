@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Infraction</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Infractions</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>BUC_Vetting_Object_Name_Edit_Only_For_Ad</name>
+    </validationRules>
+</CustomObjectTranslation>

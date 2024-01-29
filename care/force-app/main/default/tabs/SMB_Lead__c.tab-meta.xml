@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customObject>true</customObject>
+    <description>The SMB Lead Database will house all SMB Companies to be vetted.</description>
+    <motif>Custom24: Building</motif>
+</CustomTab>

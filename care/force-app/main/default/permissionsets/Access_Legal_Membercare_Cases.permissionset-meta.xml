@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>for Operation Managers that should have access to legal-related fields on the case.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.Contact_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.Legal_Case_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.Safety_Notes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Access Legal Membercare Cases</label>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Case</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <recordTypeVisibilities>
+        <recordType>Case.Call_Center</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.Standard</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

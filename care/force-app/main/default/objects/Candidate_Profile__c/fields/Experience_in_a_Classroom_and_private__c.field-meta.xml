@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Experience_in_a_Classroom_and_private__c</fullName>
+    <description>Do you have experience caring for individuals needing accommodations a classroom environment and in private homes ?, field used by AS Users</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Do you have experience caring for individuals needing accommodations a classroom environment and in private homes ?</inlineHelpText>
+    <label>Experience in a classroom/private home?</label>
+    <length>1000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,97 @@
+{
+  "appPageId" : "69e852b7-4ea0-40f9-8d13-19c7c8c11258",
+  "componentName" : "siteforce:sldsTwoCol84SidebarFeaturedLayout",
+  "dataProviders" : [ ],
+  "id" : "4fcbab57-674d-4dbc-9945-0289428a9045",
+  "label" : "Topic Detail",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "bannerText" : "",
+        "bannerTextWithKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineArticles\">articles</a> and <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "bannerTextWithoutKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "pageType" : "topic",
+        "showSubTopics" : true,
+        "title" : "Welcome!",
+        "uniqueNameOrId" : ""
+      },
+      "componentName" : "forceCommunity:headline",
+      "id" : "febb4182-2d78-48b5-a153-881c00cf1dd7",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "adbc5624-a35e-45ca-9812-8056a9efc9cc",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "53a1e222-dbe7-4b89-ae4a-b45e7636c679",
+    "regionName" : "featured",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "articleListPageSize" : 10,
+        "showTitle" : true,
+        "title" : "",
+        "topicId" : "{!recordId}"
+      },
+      "componentName" : "selfService:topicRelatedArticle",
+      "id" : "3bcdbfc4-b3da-4d66-9a49-aaa627024d38",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5221a642-89dc-4872-8a0c-922f07ae46b2",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "title" : "Description",
+        "topicId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:topicDescription",
+      "id" : "27ab7761-6f5c-46f5-9c1a-e597dc4c7f94",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "showTopicsMetric" : true,
+        "title" : "Related Topics",
+        "topicId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:relatedTopics",
+      "id" : "feb8ea21-43be-4843-b95a-20361220f48e",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "40c7b7ef-2cf8-4f6e-bb94-a3683df5e48d",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "85fc9565-b157-4c14-a68b-75e0aaa03bcf",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "{!Record.Description}",
+        "title" : "{!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c4b7199b-22b8-4463-b9d0-7274939fc606",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f7de00f4-e67a-4fce-b6ab-3ad9dddb65b0",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "topic"
+}

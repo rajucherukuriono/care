@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Canada</label>
+    <protected>false</protected>
+    <values>
+        <field>Apply_to_Jobs__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Case_Origin__c</field>
+        <value xsi:type="xsd:string">Email - ENCA</value>
+    </values>
+    <values>
+        <field>Country_Code__c</field>
+        <value xsi:type="xsd:string">ca</value>
+    </values>
+    <values>
+        <field>Http_Request_Time_Out__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Join_Now__c</field>
+        <value xsi:type="xsd:string">https://www.care.com/en-ca/join-now</value>
+    </values>
+    <values>
+        <field>Language__c</field>
+        <value xsi:type="xsd:string">English</value>
+    </values>
+    <values>
+        <field>Locale__c</field>
+        <value xsi:type="xsd:string">en_CA</value>
+    </values>
+    <values>
+        <field>Login__c</field>
+        <value xsi:type="xsd:string">https://www.care.com/en-ca/login</value>
+    </values>
+    <values>
+        <field>Password__c</field>
+        <value xsi:type="xsd:string">RfxdLT6i</value>
+    </values>
+    <values>
+        <field>Production_URL_Root__c</field>
+        <value xsi:type="xsd:string">www.care.com/en-ca</value>
+    </values>
+    <values>
+        <field>QA_Email__c</field>
+        <value xsi:type="xsd:string">surya.saride@care.com</value>
+    </values>
+    <values>
+        <field>Staging_URL_Root__c</field>
+        <value xsi:type="xsd:string">intl-stg3.care.com/en-ca</value>
+    </values>
+    <values>
+        <field>Upgrade__c</field>
+        <value xsi:type="xsd:string">https://www.care.com/en-ca/my-account/billing/upgrade</value>
+    </values>
+    <values>
+        <field>User_Name__c</field>
+        <value xsi:type="xsd:string">stg3</value>
+    </values>
+</CustomMetadata>

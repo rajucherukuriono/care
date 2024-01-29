@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Researcher: Goldman Sachs</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>LifeCare</publicGroup>
+        </publicGroups>
+        <roles>
+            <role>SystemAdmin</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

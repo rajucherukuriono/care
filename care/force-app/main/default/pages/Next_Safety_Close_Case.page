@@ -1,0 +1,74 @@
+<apex:page standardController="Case" extensions="SafetyCloseNextCase" showheader="true" lightningstylesheets="true">
+    <apex:includeScript value="/support/console/48.0/integration.js" />
+    <apex:includeScript value="/canvas/sdk/js/48.0/publisher.js" />
+    <apex:includeScript value="{!$Resource.CareDotComConsoleConroller}" />
+
+    <style>
+        .localInputClass {width:100%;}
+    </style>
+    <apex:form >
+        <apex:inputHidden value="{!Case.Member_Status__c}" />
+        <apex:inputHidden value="{!Case.Send_Cancellation_Email__c}" />
+        <apex:inputHidden value="{!Case.Member_Account_Type__c}" />
+        <apex:inputHidden value="{!Case.Reason}" />
+        <apex:inputHidden value="{!Case.Secondary_Case_Reason__c}" />
+        <apex:inputHidden value="{!Case.Current_Member_Type__c}" />
+        <apex:outputPanel id="errorMessages" >
+        <apex:pageMessage summary="Unable to close the case. Please wait a few moments and try again." severity="fatal" strength="2" rendered="{!AND(NOT(FIND('FIELD_CUSTOM_VALIDATION_EXCEPTION',exceptionMsg)>0),exceptionMsg<>'')}"/>
+     </apex:outputPanel>
+        <apex:outputpanel id="out">
+            <apex:pageBlock >
+                <apex:pageBlockSection columns="1" id="theFields">
+                    <apex:inputField label="" value="{!Comment.CommentBody}"
+                        styleClass="localInputClass"
+                        html-placeholder="Write something..." />
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Reason.inlineHelpText}">
+                        <apex:outputlabel value="{!$ObjectType.Case.fields.Reason.label}" />
+                        <apex:inputField styleclass="requiredInput localInputClass" value="{!Case.Reason}"/>
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Status.inlineHelpText}">
+                        <apex:outputlabel value="{!$ObjectType.Case.fields.Status.label}" />
+                        <apex:inputField styleclass="requiredInput localInputClass" value="{!Case.Status}"/>                           
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:pageblocksectionItem HelpText="{!$ObjectType.Case.fields.Closed_Reason__c.inlineHelpText}">
+                        <apex:outputlabel value="{!$ObjectType.Case.fields.Closed_Reason__c.label}" />
+                        <apex:inputField styleclass="requiredInput localInputClass" value="{!Case.Closed_Reason__c}"/>    
+                    </apex:pageblocksectionItem>
+                    
+                    <apex:pageblocksectionItem >
+                        <apex:outputlabel value="{!$ObjectType.Case.fields.Refund_Issued__c.label}"/>
+                        <apex:inputField value="{!Case.Refund_Issued__c}" />
+                    </apex:pageblocksectionItem>
+                    <apex:pageblocksectionItem rendered="{!hasChildCases}"
+                        HelpText="Checking this will also deletes all child cases associated to this case.">
+                        <apex:outputlabel value="Automatically Close Child Cases?" />
+                        <apex:inputCheckbox value="{!deleteAcceptance}" />
+                    </apex:pageblocksectionItem>
+                </apex:pageBlockSection>
+
+            </apex:pageBlock>
+        </apex:outputpanel>
+
+        <div align="right">
+            <apex:commandButton styleclass="slds-vf-button_brand"
+                action="{!validateandclose}" value="Close Case"
+                rerender="theFields,errorMessages" oncomplete="refreshFeed()" status="actStatusId"/>
+<!--
+            <apex:commandButton styleclass="slds-vf-button_brand"
+                action="{!ValidateAndCloseAndNext}" value="Close & Next Safety Case"
+                rerender="theFields,errorMessages"
+                oncomplete="moveToNextCase('{!displayValError}', '{!displayError}', '{!nextCaseId}', '{!nextCaseName}');" 
+                status="actStatusId" rendered="{!isQSafetyAlertMember}"/>
+-->
+        </div>
+
+        <apex:actionStatus id="actStatusId" >
+            <apex:facet name="start" >
+                <img src="/img/loading.gif" />                    
+            </apex:facet>
+        </apex:actionStatus>
+    </apex:form>
+
+</apex:page>

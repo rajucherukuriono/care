@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELA_Services_Needed__c</fullName>
+    <externalId>false</externalId>
+    <label>ELA Services Needed</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Power of Attorney/Health Care Proxy/HIPAA forms</fullName>
+                <default>false</default>
+                <label>Power of Attorney/Health Care Proxy/HIPAA forms</label>
+            </value>
+            <value>
+                <fullName>Wills and trusts</fullName>
+                <default>false</default>
+                <label>Wills and trusts</label>
+            </value>
+            <value>
+                <fullName>Asset preservation</fullName>
+                <default>false</default>
+                <label>Asset preservation</label>
+            </value>
+            <value>
+                <fullName>Medicaid planning</fullName>
+                <default>false</default>
+                <label>Medicaid planning</label>
+            </value>
+            <value>
+                <fullName>Medicaid application</fullName>
+                <default>false</default>
+                <label>Medicaid application</label>
+            </value>
+            <value>
+                <fullName>Veterans benefits/planning</fullName>
+                <default>false</default>
+                <label>Veterans benefits/planning</label>
+            </value>
+            <value>
+                <fullName>Long-term care planning</fullName>
+                <default>false</default>
+                <label>Long-term care planning</label>
+            </value>
+            <value>
+                <fullName>Special Needs Planning</fullName>
+                <default>false</default>
+                <label>Special Needs Planning</label>
+            </value>
+            <value>
+                <fullName>Real estate purchase/sale/transfer</fullName>
+                <default>false</default>
+                <label>Real estate purchase/sale/transfer</label>
+            </value>
+            <value>
+                <fullName>Probate administration</fullName>
+                <default>false</default>
+                <label>Probate administration</label>
+            </value>
+            <value>
+                <fullName>Guardianship/Conservatorship</fullName>
+                <default>false</default>
+                <label>Guardianship/Conservatorship</label>
+            </value>
+            <value>
+                <fullName>Life insurance/long-term care insurance</fullName>
+                <default>false</default>
+                <label>Life insurance/long-term care insurance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

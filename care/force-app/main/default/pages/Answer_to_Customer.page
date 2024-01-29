@@ -1,0 +1,5 @@
+<apex:page standardController="Case" >
+ <apex:emailPublisher entityId="{!case.id}"
+  emailBodyFormat="textAndHTML"
+  toAddresses="{!case.SuppliedEmail}"/>
+</apex:page>

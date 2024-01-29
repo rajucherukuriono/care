@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>fake@e.mail</email>
+    <name>xxx_Q: International Catch-All</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>G_International_Operations_Managers</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

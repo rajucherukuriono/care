@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Candidate_Notes__c</fullName>
+    <description>Notes regarding provider phone call – tone, special notes, feeling/sense from phone conversation</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Notes regarding provider phone call – tone, special notes, feeling/sense from phone conversation</inlineHelpText>
+    <label>Additional Candidate Notes</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

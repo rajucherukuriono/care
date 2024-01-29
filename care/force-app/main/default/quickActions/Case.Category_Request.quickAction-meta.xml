@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Request_Date__c</field>
+        <formula>Case.CreatedDate</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Request_Status__c</field>
+        <literalValue>Request Accepted</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Request_Type__c</field>
+        <literalValue>Data Categories</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Source_System__c</field>
+        <literalValue>HomePay</literalValue>
+    </fieldOverrides>
+    <label>Category Request</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns/>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <targetObject>Privacy_Request__c</targetObject>
+    <targetParentField>Case__c</targetParentField>
+    <type>Create</type>
+</QuickAction>

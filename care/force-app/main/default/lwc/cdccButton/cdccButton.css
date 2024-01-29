@@ -1,0 +1,15 @@
+.care-btn {
+    display: inline-block;
+    min-width: 144px;
+    border: none;
+    border-radius: 20px;
+    color: var(--lwc-colorBackground);
+    background-color: var(--lwc-colorBrand);
+    font-size: 18px;
+    line-height: 24px;
+    padding: 8px 20px;
+}
+
+.care-btn:hover {
+    background-color: #F38172;
+  }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NC_Percent_Client_Saved__c</fullName>
+    <description>SFORCE-2936
+Dev - Add fields to Senior Care Companies object</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please note the percentage the nursing care center agreed to give our clients</inlineHelpText>
+    <label>NC Percent Client Saved</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

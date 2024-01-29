@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Account_w_Benefits__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Lookup to Account with Benefits.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please provide the Business Account with Benefits.</inlineHelpText>
+    <label>Business Account w Benefits</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1</booleanFilter>
+        <errorMessage>Account must have &quot;Provide Benefits for Employee&quot; checked off, except for &apos;View Sales&apos; Profile users</errorMessage>
+        <filterItems>
+            <field>Account.Provide_Benefits_for_Employee__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>WPS Events</relationshipLabel>
+    <relationshipName>WPS_Events</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

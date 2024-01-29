@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Where_Care_Will_Take_Place__c</fullName>
+    <description>SFORCE-1845 Event Care process transition to Salesforce</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please provide exact location where care will take place at the event.</inlineHelpText>
+    <label>Where Care Will Take Place</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

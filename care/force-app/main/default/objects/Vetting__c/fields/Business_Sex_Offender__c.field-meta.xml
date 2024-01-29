@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Sex_Offender__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SFORCE-2848
+Modify Vetting Custom Object
+SFORCE-3477 - Modified field name</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When there is a &quot;Hit&quot; click on the Checkbox</inlineHelpText>
+    <label>Business: Sex Offender</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

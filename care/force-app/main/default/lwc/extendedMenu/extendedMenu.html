@@ -1,0 +1,535 @@
+<template>
+
+    <template lwc:if={isMobile}>
+        <div>
+            <div role="button" data-testid="menu-hamburger-open-button" tabindex="0" class="jss307 jss308" onclick={handleMobileNavMenuIconClick}>
+                <svg class="MuiSvgIcon-root jss473" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#182c42" d="M3.39 5.1a.4.4 0 0 0-.39.44.39.39 0 0 0 .39.46h17.22a.39.39 0 0 0 .39-.46.4.4 0 0 0-.39-.44Z"></path><path fill="#182c42" d="M20.61 6.22H3.39a.64.64 0 0 1-.64-.68.64.64 0 0 1 .64-.69h17.22a.64.64 0 0 1 .64.69.64.64 0 0 1-.64.68ZM3.39 5.35c-.09 0-.14.06-.14.19s0 .18.14.18h17.22c.09 0 .14-.06.14-.18s-.05-.19-.14-.19Zm0 6.21a.44.44 0 0 0 0 .88h17.22a.44.44 0 0 0 0-.88Z"></path>
+                    <path fill="#182c42" d="M20.61 12.69H3.39a.69.69 0 0 1 0-1.38h17.22a.69.69 0 0 1 0 1.38Zm-17.22-.88c-.09 0-.14.07-.14.19s0 .19.14.19h17.22c.09 0 .14-.07.14-.19s-.05-.19-.14-.19Zm0 6.19a.39.39 0 0 0-.39.43.4.4 0 0 0 .39.44h17.22a.4.4 0 0 0 .39-.44.39.39 0 0 0-.39-.43Z"></path><path fill="#182c42" d="M20.61 19.15H3.39a.64.64 0 0 1-.64-.69.64.64 0 0 1 .64-.68h17.22a.64.64 0 0 1 .64.68.64.64 0 0 1-.64.69Zm-17.22-.87c-.09 0-.14.06-.14.18s0 .19.14.19h17.22c.09 0 .14-.06.14-.19s-.05-.18-.14-.18Z"></path>
+                </svg>
+            </div>
+            <div class={firstLevelMenuMWClass}>
+                <div data-testid="Header-menu-close-button" role="button" tabindex="0" class="jss313" onclick={handleMobileNavMenuCloseButton}>
+                    <svg class="MuiSvgIcon-root jss474" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="#223f5f" fill-rule="evenodd" d="M4.93 4.93a.61.61 0 0 1 .88 0l13.26 13.26a.61.61 0 0 1 0 .88s0 .05-.11.08a.74.74 0 0 1-.28.05.54.54 0 0 1-.24-.05.67.67 0 0 1-.2-.14L4.93 5.81a.61.61 0 0 1 0-.88Z"></path>
+                        <path fill="#223f5f" d="m5.81 4.93-.29.28Zm-.88 0 .28.28Zm14.14 13.26.28-.28Zm0 .88-.28-.28Zm0 0-.28-.29-.05.05v.06Zm0 0-.41-.07Zm-.11.08.15.37Zm-.52 0 .16-.36Zm-.2-.14-.28.28ZM4.93 5.81l.28-.29Zm1.16-1.16a1 1 0 0 0-1.44 0l.56.56a.21.21 0 0 1 .31 0Zm13.26 13.26L6.09 4.65l-.57.56 13.27 13.27Zm0 1.44a1 1 0 0 0 0-1.44l-.56.57a.21.21 0 0 1 0 .31Zm0 0-.56-.56Zm.06-.07-.72-.36Zm-.32.27a.6.6 0 0 0 .32-.27l-.75-.28c0-.05.07-.08.08-.1Zm-.43.08a1.22 1.22 0 0 0 .43-.08l-.3-.74a.31.31 0 0 1-.13 0Zm-.4-.08a1 1 0 0 0 .4.08v-.8h-.08Zm-.32-.23a1 1 0 0 0 .32.23l.32-.73a.18.18 0 0 1-.07-.06ZM4.65 6.09l13.26 13.26.57-.56L5.21 5.52Zm0-1.44a1 1 0 0 0 0 1.44l.56-.57a.21.21 0 0 1 0-.31Z"></path>
+                        <path fill="#223f5f" fill-rule="evenodd" d="M18.19 4.93a.62.62 0 1 1 .88.88L5.9 19.07a.72.72 0 0 1-.52.19.54.54 0 0 1-.24-.05.56.56 0 0 1-.2-.14.61.61 0 0 1 0-.88Z"></path>
+                        <path fill="#223f5f" d="m19.07 4.93.28-.28Zm-.88 0-.28-.28Zm.88.88-.28-.29Zm0 0-.29-.28ZM5.9 19.07l.28.28Zm0 0 .29.28Zm-.76.14-.14.37Zm-.2-.14.28-.28Zm0-.88-.28-.28ZM19.35 4.65a1 1 0 0 0-1.44 0l.57.56a.21.21 0 0 1 .31 0Zm0 1.44a1 1 0 0 0 0-1.44l-.56.56a.21.21 0 0 1 0 .31Zm0 0-.56-.57ZM6.18 19.35 19.35 6.09l-.57-.56L5.61 18.79Zm0 0-.57-.56Zm-.81.31a1.16 1.16 0 0 0 .81-.31l-.57-.56a.39.39 0 0 1-.24.07ZM5 19.58a1 1 0 0 0 .4.08v-.8h-.11Zm-.32-.23a1 1 0 0 0 .32.23l.32-.73a.24.24 0 0 1-.08-.06Zm0-1.44a1 1 0 0 0 0 1.44l.56-.56a.21.21 0 0 1 0-.31ZM17.91 4.65 4.65 17.91l.56.57L18.48 5.21Z"></path>
+                    </svg>
+                </div>
+                <div class="jss11">
+                    <div aria-label="extended menu" class="jss13" data-testid="internal-linking-menu" >
+                        <div aria-label="extended menu navigation" aria-orientation="vertical" class="jss15 MW" data-testid="internal-linking-menu-navigation" role="tablist" >
+                            <ul lwc:if={isEnUs}>
+                                <li>
+                                    <button aria-controls="child care content" aria-label="child care button" aria-selected="true" class="MW" legacy-id="child care content" role="tab" type="button" onclick={handleChildCareClick}>
+                                        <svg class="MuiSvgIcon-root jss315" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#23405f" d="M12 18.83a4.19 4.19 0 0 1-2.49-.93.63.63 0 1 1 .8-1c.17.12 1.69 1.35 3 0a.61.61 0 0 1 .89 0 .62.62 0 0 1 0 .89 2.91 2.91 0 0 1-2.2 1.04Zm-3-4.31a.64.64 0 0 0 .63-.64.63.63 0 0 0-.63-.63.64.64 0 0 0-.64.63.64.64 0 0 0 .64.64Zm6.07 0a.64.64 0 0 0 .63-.64.63.63 0 0 0-.63-.63.64.64 0 0 0-.64.63.64.64 0 0 0 .64.64ZM4.11 12.66a.62.62 0 0 1-.55-.34.63.63 0 0 1 .26-.85 19.25 19.25 0 0 1 8.33-1.77c.84 0 1.69 0 2.49.08a1 1 0 0 0 .21-.3c.26-.38.64-.84 1.19-.8s.8.55 1.05 1.06c.05.12.13.25.17.34a11 11 0 0 1 2.63.67.65.65 0 0 1 .29.85.64.64 0 0 1-.84.29 10.23 10.23 0 0 0-2.46-.59c-.46-.08-.72-.51-.93-1v-.13c-.3.38-.63.89-1.23.85a23.77 23.77 0 0 0-2.57-.02 18.32 18.32 0 0 0-7.74 1.61.8.8 0 0 1-.3.05Z"></path>
+                                            <path fill="#23405f" d="M12 22A8.71 8.71 0 0 1 7.71 5.72a.62.62 0 0 1 .59 1.1 7.46 7.46 0 1 0 7.4 0 .62.62 0 0 1 .59-1.1 8.76 8.76 0 0 1 4.4 7.57A8.66 8.66 0 0 1 12 22Z"></path>
+                                            <path fill="#23405f" d="M16 6.9a.66.66 0 0 1-.3-.08 7.66 7.66 0 0 0-7.4 0 .62.62 0 0 1-.55 0 .67.67 0 0 1-.38-.38 2.51 2.51 0 0 1-.17-.93C7.24 3.56 9.36 2 12 2s4.8 1.56 4.8 3.55a2.52 2.52 0 0 1-.17 1 .78.78 0 0 1-.38.38Zm-4-2.32a8.89 8.89 0 0 1 3.51.72c-.21-1.14-1.73-2-3.51-2s-3.3.89-3.51 2A8.92 8.92 0 0 1 12 4.58Z"></path>
+                                        </svg>
+                                        <span class="MuiTypography-root MuiTypography-body1">Child care</span>
+                                        <svg class="MuiSvgIcon-root jss475" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path fill="#223f5f" d="M8 5.79a.91.91 0 0 1 0-1.2.91.91 0 0 1 1.2 0l6.8 6.8a.91.91 0 0 1 0 1.2l-6.8 6.8a.91.91 0 0 1-1.2 0 .91.91 0 0 1 0-1.2L14.2 12Z"></path>
+                                        <path fill="#223f5f" d="M8.6 19.77a1 1 0 0 1-.71-.27 1.08 1.08 0 0 1 0-1.41L14 12 7.89 5.9a1.08 1.08 0 0 1 0-1.41 1.12 1.12 0 0 1 1.42 0l6.79 6.8a1.06 1.06 0 0 1 0 1.41l-6.79 6.8a1 1 0 0 1-.71.27Zm0-15.25a.74.74 0 0 0-.5.18.77.77 0 0 0 0 1l6.31 6.3-.1.11L8.1 18.3a.77.77 0 0 0 0 1 .77.77 0 0 0 1 0l6.8-6.8a.7.7 0 0 0 .18-.5.69.69 0 0 0-.18-.49L9.09 4.7a.7.7 0 0 0-.49-.18Z"></path>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button aria-controls="tutoring content" aria-label="tutoring button" aria-selected="false" class="MW" legacy-id="tutoring content" role="tab" type="button" onclick={handleTutoringClick}>
+                                        <svg class="MuiSvgIcon-root jss317" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#23405f" d="M8.68 15.12h-.09L7.77 15A6.24 6.24 0 0 1 6 14.25a1.74 1.74 0 0 0-1.18-.14l-1.14.32A1.34 1.34 0 0 1 2.27 14a1.38 1.38 0 0 1-.09-1.5l.5-.87a1.72 1.72 0 0 0 .14-1.23 5.24 5.24 0 0 1 0-2.91 6.36 6.36 0 0 1 7.92-4.23 6.55 6.55 0 0 1 5.14 6 .68.68 0 0 1-.69.68.67.67 0 0 1-.68-.68 5.17 5.17 0 0 0-4.09-4.73C7.6 3.84 4.78 5.3 4.14 7.8a4 4 0 0 0 0 2.19 2.9 2.9 0 0 1-.32 2.27l-.46.74 1.05-.27a2.86 2.86 0 0 1 2.23.27 5.89 5.89 0 0 0 1.45.59l.69.14a.71.71 0 0 1-.1 1.41Z"></path>
+                                            <path fill="#23405f" d="M14.92 21a6.6 6.6 0 0 1-3.73-1.09 5.67 5.67 0 0 1-2.64-4c-.5-3.27 2-6.41 5.64-7a6.21 6.21 0 0 1 .91-.09 6.33 6.33 0 0 1 6.59 5 5.71 5.71 0 0 1-.27 2.78 1.68 1.68 0 0 0 0 1.32l.46.91a1.32 1.32 0 0 1-.23 1.45 1.37 1.37 0 0 1-1.46.37l-1.09-.41a1.88 1.88 0 0 0-1.32 0 7.31 7.31 0 0 1-1.73.5 3 3 0 0 1-1.13.26Zm.41-10.73h-.19a4.56 4.56 0 0 0-.77.09c-2.87.45-4.91 2.91-4.5 5.46a4.38 4.38 0 0 0 2 3 5.51 5.51 0 0 0 3.91.77 6.55 6.55 0 0 0 1.41-.41 3.22 3.22 0 0 1 2.32-.09l1 .37-.41-.87a3 3 0 0 1-.09-2.36 4.86 4.86 0 0 0 .22-2.1 4.76 4.76 0 0 0-4.9-3.88ZM8.68 11a.7.7 0 0 1-.68-.66V7.16a.69.69 0 1 1 1.37 0v3.18a.7.7 0 0 1-.69.66Z"></path>
+                                            <path fill="#23405f" d="M10.28 9.43H7.09a.69.69 0 0 1 0-1.37h3.19a.69.69 0 0 1 0 1.37Zm6.82 6.5h-3.91a.68.68 0 1 1 0-1.36h3.91a.7.7 0 0 1 .68.68.69.69 0 0 1-.68.68Zm-1.96 1.96a.68.68 0 1 0 0-1.36.68.68 0 0 0 0 1.36Zm0-3.89a.69.69 0 1 0-.68-.68.69.69 0 0 0 .68.68Z"></path>
+                                        </svg>
+                                        <span class="MuiTypography-root MuiTypography-body1">Tutoring</span>
+                                        <svg class="MuiSvgIcon-root jss476" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#223f5f" d="M8 5.79a.91.91 0 0 1 0-1.2.91.91 0 0 1 1.2 0l6.8 6.8a.91.91 0 0 1 0 1.2l-6.8 6.8a.91.91 0 0 1-1.2 0 .91.91 0 0 1 0-1.2L14.2 12Z"></path>
+                                            <path fill="#223f5f" d="M8.6 19.77a1 1 0 0 1-.71-.27 1.08 1.08 0 0 1 0-1.41L14 12 7.89 5.9a1.08 1.08 0 0 1 0-1.41 1.12 1.12 0 0 1 1.42 0l6.79 6.8a1.06 1.06 0 0 1 0 1.41l-6.79 6.8a1 1 0 0 1-.71.27Zm0-15.25a.74.74 0 0 0-.5.18.77.77 0 0 0 0 1l6.31 6.3-.1.11L8.1 18.3a.77.77 0 0 0 0 1 .77.77 0 0 0 1 0l6.8-6.8a.7.7 0 0 0 .18-.5.69.69 0 0 0-.18-.49L9.09 4.7a.7.7 0 0 0-.49-.18Z"></path>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button aria-controls="senior care content" aria-label="senior care button" aria-selected="false" class="MW" legacy-id="senior care content" role="tab" type="button" onclick={handleSeniorCareClick}>
+                                        <svg class="MuiSvgIcon-root jss319" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#23405f" fill-rule="evenodd" d="m7 10.27-1.15-1A.47.47 0 0 1 5.7 9a.21.21 0 0 1 .07-.18.46.46 0 0 1 .28-.15.19.19 0 0 1 .18.07l1.15 1a.82.82 0 0 0 .68.22.89.89 0 0 0 .51-.23l.34-.34H9a1.54 1.54 0 0 1 1.95-.24l2.49 1.58a1.15 1.15 0 0 0 .78.16 1.18 1.18 0 0 0 .68-.31l.06-.06v-.07a1.57 1.57 0 0 0 .2-.69 1 1 0 0 0-.49-.85l-3.9-2.65a.32.32 0 0 1-.08-.48.31.31 0 0 1 .47-.08l3.9 2.65a1.87 1.87 0 0 1 .79 1.24A1.64 1.64 0 0 1 15.4 11a1.73 1.73 0 0 1-1.28.48 1.86 1.86 0 0 1-1-.26L10.6 9.65a.89.89 0 0 0-1.08.18l-.33.33a1.49 1.49 0 0 1-2.19.12Z"></path>
+                                            <path fill="#23405f" d="m5.84 9.29-.22.2Zm1.15 1 .2-.22ZM5.7 9h-.3Zm.07-.18-.21-.21Zm.28-.15v-.3H6Zm.18.07L6 9Zm0 0L6 9Zm0 0L6.06 9Zm1.15 1 .21-.21Zm.68.22v.3ZM9 9.41l.21.22Zm0 0 .22.2Zm1.95-.24.16-.25Zm2.49 1.58.16-.25Zm.78.16v.3Zm.68-.31.21.21Zm.06-.06.21.22Zm0-.07-.27-.13Zm0 0-.27-.13Zm-.29-1.54-.17.25Zm-3.9-2.65-.17.25Zm0 0 .17-.28Zm0 0-.16.26Zm-.08-.48-.26-.15Zm.47-.08.17-.25Zm3.9 2.65.18-.24Zm.79 1.24h.3ZM15.4 11l-.21-.21Zm0 0-.21-.21Zm0 0 .23.19Zm-2.27.22-.16.25ZM10.6 9.65l-.16.25Zm0 0 .16-.25Zm0 0-.14.27Zm-.6-.13v.3Zm-.54.28.21.21Zm-.33.33.21.22Zm0 0-.21-.21Zm0 0 .22.2ZM7 10.28l-.22-.2-.2.23.22.2Zm0 0 .22.2.21-.22-.24-.21Zm-1.36-.76 1.16 1 .39-.45L6 9.06Zm-.24-.47a.77.77 0 0 0 .22.44l.44-.41A.13.13 0 0 1 6 9Zm.16-.42a.5.5 0 0 0-.16.42L6 9ZM6 8.39a.77.77 0 0 0-.46.24l.46.42.05-.05Zm.42.15A.52.52 0 0 0 6 8.39l.06.6H6Zm0 0L6 9Zm0 0L6.05 9Zm1.16 1-1.16-1-.36.46 1.16 1Zm.44.15a.57.57 0 0 1-.43-.14l-.38.45a1.11 1.11 0 0 0 .91.3Zm.34-.16a.64.64 0 0 1-.34.16l.07.59a1.18 1.18 0 0 0 .7-.32Zm.33-.33-.33.33.43.43.33-.33Zm0 0 .43.43Zm0 0 .45.4Zm2.33-.3a1.85 1.85 0 0 0-2.33.3l.45.4a1.23 1.23 0 0 1 1.57-.18Zm2.5 1.59-2.45-1.58-.32.51L13.24 11Zm.59.11a.83.83 0 0 1-.59-.11l-.33.5a1.52 1.52 0 0 0 1 .21Zm.5-.22a.91.91 0 0 1-.5.22l.07.6a1.51 1.51 0 0 0 .85-.4Zm0-.06v.06l.42.42.06-.05Zm0 0v.07l.53.27v-.07Zm0 0 .54.27Zm.17-.56a1.37 1.37 0 0 1-.17.56l.53.27a1.87 1.87 0 0 0 .24-.83Zm-.34-.59a.67.67 0 0 1 .34.59h.6a1.25 1.25 0 0 0-.65-1.11Zm-3.83-2.68 3.9 2.65.34-.5L11 6Zm0 0L11 6Zm0 0 .32-.49Zm-.18-.89a.71.71 0 0 0-.1.51.61.61 0 0 0 .28.38l.3-.49a.15.15 0 0 1 0-.06Zm.88-.19a.64.64 0 0 0-.5-.09.61.61 0 0 0-.38.28l.52.31h.06Zm3.92 2.66-3.9-2.65-.33.48 3.9 2.66Zm.92 1.45a2.2 2.2 0 0 0-.91-1.44l-.35.49a1.63 1.63 0 0 1 .67 1Zm-.53 1.67a1.93 1.93 0 0 0 .53-1.66l-.59.07a1.4 1.4 0 0 1-.36 1.17Zm0 0-.42-.42Zm0 0-.47-.38Zm-1.51.59a2 2 0 0 0 1.51-.59l-.47-.38a1.41 1.41 0 0 1-1 .37ZM13 11.49a2.17 2.17 0 0 0 1.14.3v-.6a1.58 1.58 0 0 1-.84-.22ZM10.44 9.9l2.5 1.58.32-.5-2.5-1.59Zm0 0 .32-.51Zm0 0 .26-.53Zm-.36-.07a.62.62 0 0 1 .36.07l.27-.53a1.24 1.24 0 0 0-.7-.14Zm-.39.17a.63.63 0 0 1 .37-.19L10 9.22a1.25 1.25 0 0 0-.72.37Zm-.33.34.33-.34-.42-.42-.34.33Zm0 0-.43-.43Zm0 0-.45-.4Zm-2.55.16a1.79 1.79 0 0 0 2.55-.16L8.91 10a1.19 1.19 0 0 1-1.71.11Zm0-.43.44.4Zm0 .42.39-.46Z"></path>
+                                            <path fill="#23405f" fill-rule="evenodd" d="m7.18 15.85 2.92-3.08a.29.29 0 0 1 .45 0 .3.3 0 0 1 0 .46l-2.67 2.83h-.11a.29.29 0 0 1-.34 0 1 1 0 0 0-.27-.18Z"></path>
+                                            <path fill="#23405f" d="m7.19 15.85-.19.21.22.22.21-.23Zm0 0 .22-.22-.22-.21-.19.21Zm0 0L7 15.63Zm2.92-3.08-.21-.22Zm.45 0 .22-.21Zm0 .46-.21.21.21.21.22-.21Zm0 0 .22-.21-.22-.22-.21.22Zm0 0-.22-.23Zm-2.68 2.83v.29H8l.07-.08Zm-.11 0-.1-.28Zm-.34 0-.21.22Zm-.27-.18-.23-.19-.26.31.37.16Zm.24-.24-.4.42Zm-.42 0H7l.43.41Zm2.91-3.08L7 15.63l.43.41 2.9-3.04Zm.89 0a.61.61 0 0 0-.44-.19.6.6 0 0 0-.44.18l.42.43Zm0 .88A.66.66 0 0 0 11 13a.64.64 0 0 0-.19-.44l-.43.42Zm-.43 0 .43-.42Zm.42 0-.42-.44ZM8.1 16.26l2.67-2.82-.43-.44-2.68 2.85Zm-.28-.5-.15.05.19.56h.07Zm-.15.05-.43.43a.54.54 0 0 0 .38.16.66.66 0 0 0 .26-.06Zm0 0a1.22 1.22 0 0 0-.37-.24l-.3.58a.41.41 0 0 1 .18.12ZM7 15.63l.46.39Z"></path>
+                                            <path fill="#23405f" fill-rule="evenodd" d="M9.77 18.22a.38.38 0 0 1 0-.49l2.73-3a.38.38 0 0 1 .47-.06.41.41 0 0 1 0 .48l-2.73 3a.47.47 0 0 1-.09.1h-.26a.36.36 0 0 1-.12-.03Z"></path>
+                                            <path fill="#23405f" d="m9.72 17.73-.22-.21Zm0 .49-.21.22Zm2.68-3.46-.21-.22Zm.47-.06.23-.19Zm0 .48.22.2Zm-2.73 3L10 18Zm0 0L10 18Zm0 0-.25-.17Zm-.09.1.15.26Zm0 0-.14-.26Zm0 0 .06.3Zm-.18 0-.11.28Zm-.42-.74a.7.7 0 0 0 .09.88L10 18a.1.1 0 0 1 0-.12Zm2.75-3-2.72 3 .44.41 2.73-3Zm.86-.1a.68.68 0 0 0-.84.09l.41.43a.1.1 0 0 1 .12 0Zm.12.89a.69.69 0 0 0 0-.83l-.46.39a.09.09 0 0 1 0 .11Zm-2.76 3 2.73-3-.42-.33L10 18Zm0 0L10 18Zm0 0L9.94 18Zm-.19.2a.61.61 0 0 0 .19-.2l-.5-.33Zm0 0-.29-.52Zm-.1 0h.1l-.29-.52H10Zm-.13 0h.13L10 18Zm-.22-.05a.82.82 0 0 0 .22.05V18Zm-.22-.14a.64.64 0 0 0 .22.14L10 18Z"></path>
+                                            <path fill="#23405f" fill-rule="evenodd" d="M5.1 13.43 9 9.34a.33.33 0 0 1 .46.46l-3.9 4.09a.39.39 0 0 1-.11.08.25.25 0 0 1-.12 0 .24.24 0 0 1-.11 0l-.12-.07a.3.3 0 0 1 0-.47Z"></path>
+                                            <path fill="#23405f" d="m5.1 13.43-.21.21.21.22.22-.23Zm0 0 .21-.22L5.1 13l-.21.21Zm0 0 .21.21ZM9 9.34l-.21-.22Zm.46 0-.21.21Zm0 .46-.19.2.21.22.21-.22Zm0 0 .21-.21-.21-.22-.22.22Zm0 0-.2-.2Zm-3.9 4.09.21.21Zm-.11.11.12.28Zm-.23 0-.11.28Zm-.12-.07-.21.21Zm.21-.68-.42.43Zm-.42 0 .44.41Zm3.92-4.12-3.92 4.08.43.42 3.92-4.09Zm.88 0a.6.6 0 0 0-.44-.19.65.65 0 0 0-.44.18l.42.43Zm0 .88a.6.6 0 0 0 .19-.44.61.61 0 0 0-.19-.44l-.42.42Zm-.42 0 .42-.42Zm.42 0-.44-.42ZM5.77 14.1 9.69 10l-.43-.4-3.92 4.08Zm-.2.15a.65.65 0 0 0 .2-.15l-.42-.42Zm-.24 0a.75.75 0 0 0 .24 0l-.24-.55Zm-.22 0a.55.55 0 0 0 .22 0v-.6Zm-.22-.14a.64.64 0 0 0 .22.14l.23-.55Zm0-.89a.64.64 0 0 0-.19.45.61.61 0 0 0 .19.44l.42-.43Z"></path>
+                                            <path fill="#23405f" d="M12 20a1.63 1.63 0 0 1-.73-.13 5.16 5.16 0 0 1-1.41-.77l-.3-.21A17.39 17.39 0 0 1 8 17.69c-1-.88-1.9-1.73-2.74-2.66a9.93 9.93 0 0 1-2.83-4.39A5.61 5.61 0 0 1 4.53 5a5.43 5.43 0 0 1 6.09-.09c.13.08.25.18.37.27s.18.15.29.22a1.89 1.89 0 0 1 .21.12h.21l.14.07a.38.38 0 0 0 .41 0l.19-.07h.2c.09 0 .17-.11.28-.16l.22-.18c.12-.09.24-.19.38-.28A5.62 5.62 0 0 1 17 4a5.4 5.4 0 0 1 2.67 1 5.94 5.94 0 0 1 1.91 5.67 10.41 10.41 0 0 1-2.52 4l-.28.33A26.6 26.6 0 0 1 16 17.68a18.63 18.63 0 0 1-1.55 1.21l-.31.21a4.91 4.91 0 0 1-1.41.77A1.63 1.63 0 0 1 12 20ZM7.66 5.3H7.3a4 4 0 0 0-2 .7 4.36 4.36 0 0 0-1.59 4.34 8.93 8.93 0 0 0 2.48 3.75C7 15 8 15.87 8.83 16.68c.51.42 1 .81 1.45 1.13l.33.23a4.15 4.15 0 0 0 1.07.6h.11a1 1 0 0 0 .42 0h.11a4 4 0 0 0 1.07-.6l.34-.23c.46-.32.93-.71 1.43-1.12a26.21 26.21 0 0 0 2.62-2.53l.27-.32a9.61 9.61 0 0 0 2.24-3.49A4.54 4.54 0 0 0 18.85 6a4 4 0 0 0-2-.69 4.23 4.23 0 0 0-2.58.69 2.92 2.92 0 0 0-.28.21 4.17 4.17 0 0 1-.38.28l-.21.13a2.14 2.14 0 0 1-.27.16l-.13.04-.16.06a1.71 1.71 0 0 1-1.4 0l-.16-.06h-.05L11 6.75a2.14 2.14 0 0 1-.27-.16l-.14-.09a5.11 5.11 0 0 1-.45-.32C10.09 6.11 10 6 9.89 6a3.88 3.88 0 0 0-2.23-.7Z"></path>
+                                        </svg>
+                                        <span class="MuiTypography-root MuiTypography-body1">Senior care</span>
+                                        <svg class="MuiSvgIcon-root jss477" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#223f5f" d="M8 5.79a.91.91 0 0 1 0-1.2.91.91 0 0 1 1.2 0l6.8 6.8a.91.91 0 0 1 0 1.2l-6.8 6.8a.91.91 0 0 1-1.2 0 .91.91 0 0 1 0-1.2L14.2 12Z"></path>
+                                            <path fill="#223f5f" d="M8.6 19.77a1 1 0 0 1-.71-.27 1.08 1.08 0 0 1 0-1.41L14 12 7.89 5.9a1.08 1.08 0 0 1 0-1.41 1.12 1.12 0 0 1 1.42 0l6.79 6.8a1.06 1.06 0 0 1 0 1.41l-6.79 6.8a1 1 0 0 1-.71.27Zm0-15.25a.74.74 0 0 0-.5.18.77.77 0 0 0 0 1l6.31 6.3-.1.11L8.1 18.3a.77.77 0 0 0 0 1 .77.77 0 0 0 1 0l6.8-6.8a.7.7 0 0 0 .18-.5.69.69 0 0 0-.18-.49L9.09 4.7a.7.7 0 0 0-.49-.18Z"></path>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button aria-controls="pet care content" aria-label="pet care button" aria-selected="false" class="MW" legacy-id="pet care content" role="tab" type="button" onclick={handlePetCareClick}>
+                                        <svg class="MuiSvgIcon-root jss321" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#23405f" d="M11.35 20.85a3.43 3.43 0 0 1-2.22-1A6.24 6.24 0 0 1 8.5 19a3.66 3.66 0 0 0-.59-.7c-.2-.14-.48-.09-.83-.09a4.33 4.33 0 0 1-.72 0A3.52 3.52 0 0 1 3.83 17 3.82 3.82 0 0 1 3 14.46a5.59 5.59 0 0 1 .91-3c2-2.87 5.26-2.82 7.64-1.54a7.24 7.24 0 0 1 3.8 5.59 4.75 4.75 0 0 1-3.53 5.29ZM7.43 17a1.86 1.86 0 0 1 1.07.27 4.33 4.33 0 0 1 .95 1 3.66 3.66 0 0 0 .47.57 2 2 0 0 0 1.67.66 3.39 3.39 0 0 0 2.57-3.83A5.84 5.84 0 0 0 11 11.11C9.05 10.05 6.4 10 4.82 12.26a3.88 3.88 0 0 0-.63 2.2 2.76 2.76 0 0 0 .51 1.72 2.54 2.54 0 0 0 1.78.82h.95Zm-1.7-7.87a2.06 2.06 0 0 1-1.46-.71 3.46 3.46 0 0 1-.91-3.3 2.65 2.65 0 0 1 2.25-1.94A2 2 0 0 1 8 4.86a4.17 4.17 0 0 1-1.39 4 1.74 1.74 0 0 1-.88.27Zm.36-4.67h-.28A1.49 1.49 0 0 0 4.5 5.52a2 2 0 0 0 .6 1.94c.51.52.83.3 1 .26a2.83 2.83 0 0 0 .83-2.56.75.75 0 0 0-.84-.7ZM11 9.13a2 2 0 0 1-1.54-.88 3.48 3.48 0 0 1-.63-3.39 2.58 2.58 0 0 1 2.45-1.68 2 2 0 0 1 2.26 1.94A4.1 4.1 0 0 1 11.78 9a2.71 2.71 0 0 1-.78.13Zm.36-4.67h-.08a1.45 1.45 0 0 0-1.38.88 2 2 0 0 0 .43 2c.48.58.79.44.91.36a2.76 2.76 0 0 0 1.06-2.49c-.04-.31-.2-.75-.95-.75Zm6.87 12.29a3.17 3.17 0 0 1-.67-.09 2 2 0 0 1-1.7-1.89A4 4 0 0 1 18 11.16c1.07-.49 2.05-.05 2.65 1.19a3.21 3.21 0 0 1-.08 3.21 2.65 2.65 0 0 1-2.34 1.19Zm.16-4.32a2.67 2.67 0 0 0-1.34 2.25c0 .13 0 .57.75.7a1.62 1.62 0 0 0 1.78-.61 1.73 1.73 0 0 0 0-1.81c-.44-.75-.87-.66-1.19-.53Zm-3.01-1.05a1.93 1.93 0 0 1-2-1.5 4.12 4.12 0 0 1 1.46-4 1.85 1.85 0 0 1 2.77.62A3.23 3.23 0 0 1 18 9.7a2.71 2.71 0 0 1-2.62 1.68Zm.56-4.54a1.16 1.16 0 0 0-.48.17 3 3 0 0 0-1 2.52c0 .13.16.52.84.52a1.68 1.68 0 0 0 1.7-.92 1.74 1.74 0 0 0-.32-1.76c-.27-.37-.5-.53-.74-.53Z"></path>
+                                        </svg>
+                                        <span class="MuiTypography-root MuiTypography-body1">Pet care</span>
+                                        <svg class="MuiSvgIcon-root jss478" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#223f5f" d="M8 5.79a.91.91 0 0 1 0-1.2.91.91 0 0 1 1.2 0l6.8 6.8a.91.91 0 0 1 0 1.2l-6.8 6.8a.91.91 0 0 1-1.2 0 .91.91 0 0 1 0-1.2L14.2 12Z"></path>
+                                            <path fill="#223f5f" d="M8.6 19.77a1 1 0 0 1-.71-.27 1.08 1.08 0 0 1 0-1.41L14 12 7.89 5.9a1.08 1.08 0 0 1 0-1.41 1.12 1.12 0 0 1 1.42 0l6.79 6.8a1.06 1.06 0 0 1 0 1.41l-6.79 6.8a1 1 0 0 1-.71.27Zm0-15.25a.74.74 0 0 0-.5.18.77.77 0 0 0 0 1l6.31 6.3-.1.11L8.1 18.3a.77.77 0 0 0 0 1 .77.77 0 0 0 1 0l6.8-6.8a.7.7 0 0 0 .18-.5.69.69 0 0 0-.18-.49L9.09 4.7a.7.7 0 0 0-.49-.18Z"></path>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button aria-controls="housekeeping content" aria-label="housekeeping button" aria-selected="false" class="MW" legacy-id="housekeeping content" role="tab" type="button" onclick={handleHousekeepingClick}>
+                                        <svg class="MuiSvgIcon-root jss323" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#23405f" d="M16.47 21H7.39a.84.84 0 0 1-.39-.16.6.6 0 0 1-.16-.44v-3.1a17.16 17.16 0 0 1 .72-5 21.2 21.2 0 0 0 .68-4.8v-.16A.21.21 0 0 0 8 7.26h-.73a.61.61 0 0 1-.6-.52 3.68 3.68 0 0 1 .64-3.1A2.27 2.27 0 0 1 9 3h6.55A1.88 1.88 0 0 1 16 6.7a6.84 6.84 0 0 0-3 1.8 4 4 0 0 0 1.69 4.38 5.63 5.63 0 0 1 2.57 4.3A15.82 15.82 0 0 1 17 20.6a.58.58 0 0 1-.53.4ZM8 19.79h8a12 12 0 0 0 .12-2.57A4.43 4.43 0 0 0 14 13.85a5.28 5.28 0 0 1-2.17-5.79.35.35 0 0 1 .17-.24 7.31 7.31 0 0 1 3.74-2.29.67.67 0 0 0 .52-.64.74.74 0 0 0-.72-.68H8.92a.92.92 0 0 0-.68.32 2 2 0 0 0-.4 1.56H8a1.28 1.28 0 0 1 1 .45 1.42 1.42 0 0 1 .4 1 22.39 22.39 0 0 1-.76 5.06A16.05 16.05 0 0 0 8 17.3Z"></path>
+                                            <path fill="#23405f" d="M12 9.07H8.92a.61.61 0 0 1 0-1.21H12a.61.61 0 1 1 0 1.21Zm-1.31 7.23h-.16a4.24 4.24 0 0 1-3.34-2.21.58.58 0 0 1 .28-.8.59.59 0 0 1 .81.28 2.75 2.75 0 0 0 2.33 1.52 3.2 3.2 0 0 0 1.89-.72 3.46 3.46 0 0 1 3.13-.68.59.59 0 1 1-.4 1.12c-.72-.24-1.29 0-2.13.57a4 4 0 0 1-2.41.92Z"></path>
+                                        </svg>
+                                        <span class="MuiTypography-root MuiTypography-body1">Housekeeping</span>
+                                        <svg class="MuiSvgIcon-root jss479" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#223f5f" d="M8 5.79a.91.91 0 0 1 0-1.2.91.91 0 0 1 1.2 0l6.8 6.8a.91.91 0 0 1 0 1.2l-6.8 6.8a.91.91 0 0 1-1.2 0 .91.91 0 0 1 0-1.2L14.2 12Z"></path>
+                                            <path fill="#223f5f" d="M8.6 19.77a1 1 0 0 1-.71-.27 1.08 1.08 0 0 1 0-1.41L14 12 7.89 5.9a1.08 1.08 0 0 1 0-1.41 1.12 1.12 0 0 1 1.42 0l6.79 6.8a1.06 1.06 0 0 1 0 1.41l-6.79 6.8a1 1 0 0 1-.71.27Zm0-15.25a.74.74 0 0 0-.5.18.77.77 0 0 0 0 1l6.31 6.3-.1.11L8.1 18.3a.77.77 0 0 0 0 1 .77.77 0 0 0 1 0l6.8-6.8a.7.7 0 0 0 .18-.5.69.69 0 0 0-.18-.49L9.09 4.7a.7.7 0 0 0-.49-.18Z"></path>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button aria-controls="jobs content" aria-label="jobs button" aria-selected="false" class="MW" legacy-id="jobs content" role="tab" type="button" onclick={handleJobsClick}>
+                                        <svg class="MuiSvgIcon-root jss325" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#182c42" d="M2 12a10 10 0 1 1 10 10A10 10 0 0 1 2 12Zm1.32 0a8.64 8.64 0 1 0 8.59-8.68A8.68 8.68 0 0 0 3.32 12Z"></path>
+                                            <rect width="1.3" height="6.8" x="11.35" y="7.35" fill="#182c42" rx=".65"></rect>
+                                            <path fill="#182c42" d="M12 14.3a.8.8 0 0 1-.8-.8V8a.8.8 0 0 1 1.6 0v5.5a.8.8 0 0 1-.8.8Zm0-6.8a.5.5 0 0 0-.5.5v5.5a.5.5 0 0 0 1 0V8a.5.5 0 0 0-.5-.5Z"></path>
+                                            <rect width="5.3" height="1.3" x="11.35" y="12.85" fill="#182c42" rx=".65"></rect>
+                                            <path fill="#182c42" d="M16 14.3h-4a.8.8 0 0 1 0-1.6h4a.8.8 0 0 1 0 1.6ZM12 13a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1Z"></path>
+                                        </svg>
+                                        <span class="MuiTypography-root MuiTypography-body1">Jobs</span>
+                                        <svg class="MuiSvgIcon-root jss480" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#223f5f" d="M8 5.79a.91.91 0 0 1 0-1.2.91.91 0 0 1 1.2 0l6.8 6.8a.91.91 0 0 1 0 1.2l-6.8 6.8a.91.91 0 0 1-1.2 0 .91.91 0 0 1 0-1.2L14.2 12Z"></path>
+                                            <path fill="#223f5f" d="M8.6 19.77a1 1 0 0 1-.71-.27 1.08 1.08 0 0 1 0-1.41L14 12 7.89 5.9a1.08 1.08 0 0 1 0-1.41 1.12 1.12 0 0 1 1.42 0l6.79 6.8a1.06 1.06 0 0 1 0 1.41l-6.79 6.8a1 1 0 0 1-.71.27Zm0-15.25a.74.74 0 0 0-.5.18.77.77 0 0 0 0 1l6.31 6.3-.1.11L8.1 18.3a.77.77 0 0 0 0 1 .77.77 0 0 0 1 0l6.8-6.8a.7.7 0 0 0 .18-.5.69.69 0 0 0-.18-.49L9.09 4.7a.7.7 0 0 0-.49-.18Z"></path>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                            <ul class="applyToJobs">
+                                <template if:true={showApplyToJobsLink}>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href={localeSettings.Apply_to_Jobs__c}><span class="MuiTypography-root MuiTypography-body1">Apply to Jobs</span></a></li>
+                                </template>
+                
+                            </ul>
+                        </div>
+                        <div aria-label="extended menu content" class={secondLevelMenuMWClass} data-testid="internal-linking-menu-content">
+                            <button aria-label="back" class="jss14" type="button" onclick={handleBackClick}>
+                                <svg class="MuiSvgIcon-root jss481" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="#223f5f" d="M16 18.2a.85.85 0 0 1-1.2 1.2L8 12.6a.91.91 0 0 1 0-1.2l6.8-6.8a.91.91 0 0 1 1.2 0 .91.91 0 0 1 0 1.2L9.8 12Z"></path>
+                                <path fill="#223f5f" d="M15.4 19.77a1.05 1.05 0 0 1-.71-.26l-6.8-6.8a1.09 1.09 0 0 1 0-1.42l6.8-6.8a1.09 1.09 0 0 1 1.42 0 1.09 1.09 0 0 1 0 1.42L10 12l6.1 6.09a1.09 1.09 0 0 1 0 1.42 1.05 1.05 0 0 1-.7.26Zm0-15.24a.69.69 0 0 0-.49.18l-6.8 6.8a.76.76 0 0 0 0 1l6.8 6.8a.78.78 0 0 0 1 0 .76.76 0 0 0 0-1L9.59 12l.1-.11 6.2-6.2a.76.76 0 0 0 0-1 .69.69 0 0 0-.49-.16Z"></path>
+                                </svg>
+                                <span class="MuiTypography-root MuiTypography-body1">Back</span>
+                            </button>
+                        <span class="MuiTypography-root jss17 MuiTypography-body1">{secondLevelMenuHeader}</span>
+                        <div aria-label="child care content" role="tabpanel" class={childCareContentClassMW}>
+                            <ul>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/babysitters"><span class="MuiTypography-root MuiTypography-body1">Babysitters</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/overnight-babysitters"><span class="MuiTypography-root MuiTypography-body1">Date night sitters</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/mothers-helpers"><span class="MuiTypography-root MuiTypography-body1">Mother's helpers</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/nannies"><span class="MuiTypography-root MuiTypography-body1">Nannies</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/night-nannies"><span class="MuiTypography-root MuiTypography-body1">Night nannies</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/newborn-nannies"><span class="MuiTypography-root MuiTypography-body1">Newborn nannies</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/live-in-nannies"><span class="MuiTypography-root MuiTypography-body1">Live-in nannies</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/day-care"><span class="MuiTypography-root MuiTypography-body1">Daycares</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/family-day-care"><span class="MuiTypography-root MuiTypography-body1">Family daycares</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/preschools"><span class="MuiTypography-root MuiTypography-body1">Preschools</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/child-care"><span class="MuiTypography-root MuiTypography-body1">Child care</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/child-care-centers"><span class="MuiTypography-root MuiTypography-body1">Child care centers</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/after-school-child-care"><span class="MuiTypography-root MuiTypography-body1">After school child care</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/drop-in-child-care"><span class="MuiTypography-root MuiTypography-body1">Drop-in child care</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/special-needs-child-care"><span class="MuiTypography-root MuiTypography-body1">Special needs child care</span></a></li><li><a class="MuiTypography-root MuiLink-root jss56 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/care-directory#care"><span class="MuiTypography-root MuiTypography-body1">See all categories</span></a></li>
+                            </ul>
+                        </div>
+                        <div aria-label="tutoring content" class={tutoringContentClassMW} role="tabpanel">
+                            <ul>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/tutors "><span class="MuiTypography-root MuiTypography-body1">Tutors</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/biology-tutors"><span class="MuiTypography-root MuiTypography-body1">Biology tutors</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/chemistry-tutors"><span class="MuiTypography-root MuiTypography-body1">Chemistry tutors</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/english-tutor"><span class="MuiTypography-root MuiTypography-body1">English tutors</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/math-tutors"><span class="MuiTypography-root MuiTypography-body1">Math tutors</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/piano-lessons"><span class="MuiTypography-root MuiTypography-body1">Piano lessons</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/reading-tutors"><span class="MuiTypography-root MuiTypography-body1">Reading tutors</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/sat-tutors"><span class="MuiTypography-root MuiTypography-body1">SAT tutors</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/spanish-tutors"><span class="MuiTypography-root MuiTypography-body1">Spanish tutors</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/writing-tutors"><span class="MuiTypography-root MuiTypography-body1">Writing tutors</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/homeschool-teachers"><span class="MuiTypography-root MuiTypography-body1">Homeschool teachers</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/private-tutors"><span class="MuiTypography-root MuiTypography-body1">Private tutors</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/test-prep-tutors"><span class="MuiTypography-root MuiTypography-body1">Test prep tutors</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss56 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/care-directory#care"><span class="MuiTypography-root MuiTypography-body1">See all categories</span></a></li>
+                            </ul>
+                        </div>
+                        <div aria-label="senior care content" class={seniorCareContentClassMW} role="tabpanel">
+                            <ul>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/caregivers"><span class="MuiTypography-root MuiTypography-body1">Caregivers</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/companion-care"><span class="MuiTypography-root MuiTypography-body1">Companion care</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dementia-care"><span class="MuiTypography-root MuiTypography-body1">Dementia care	</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/home-care"><span class="MuiTypography-root MuiTypography-body1">Home care</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/home-health-aides"><span class="MuiTypography-root MuiTypography-body1">Home health aides</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/hospice-care"><span class="MuiTypography-root MuiTypography-body1">Hospice care</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/nursing-assistant"><span class="MuiTypography-root MuiTypography-body1">Nursing assistants</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/respite-care"><span class="MuiTypography-root MuiTypography-body1">Respite care</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/senior-care"><span class="MuiTypography-root MuiTypography-body1">Senior care</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/senior-food-delivery"><span class="MuiTypography-root MuiTypography-body1">Senior food delivery</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/senior-transportation"><span class="MuiTypography-root MuiTypography-body1">Senior transportation</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/special-needs-adult-care"><span class="MuiTypography-root MuiTypography-body1">Special needs adult care</span></a></li><li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/adult-daycare"><span class="MuiTypography-root MuiTypography-body1">Adult daycare</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/assisted-living"><span class="MuiTypography-root MuiTypography-body1">Assisted living</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/nursing-homes"><span class="MuiTypography-root MuiTypography-body1">Nursing homes</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/senior-apartments"><span class="MuiTypography-root MuiTypography-body1">Senior apartments</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss56 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/care-directory#care"><span class="MuiTypography-root MuiTypography-body1">See all categories</span></a></li>
+                            </ul>
+                        </div>
+                        <div aria-label="pet care content" class={petCareContentClassMW} role="tabpanel">
+                            <ul>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/bird-sitters"><span class="MuiTypography-root MuiTypography-body1">Bird sitters</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/cat-boarding"><span class="MuiTypography-root MuiTypography-body1">Cat boarding</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/cat-sitters"><span class="MuiTypography-root MuiTypography-body1">Cat sitters</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dog-boarding"><span class="MuiTypography-root MuiTypography-body1">Dog boarding</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dog-boarding-kennels"><span class="MuiTypography-root MuiTypography-body1">Dog boarding kennels</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dog-grooming-services"><span class="MuiTypography-root MuiTypography-body1">Dog grooming services</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dog-sitters"><span class="MuiTypography-root MuiTypography-body1">Dog sitters</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dog-walkers"><span class="MuiTypography-root MuiTypography-body1">Dog walkers</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/doggy-day-care"><span class="MuiTypography-root MuiTypography-body1">Doggy daycare</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/home-pet-sitting"><span class="MuiTypography-root MuiTypography-body1">Home pet sitting</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/pet-boarding"><span class="MuiTypography-root MuiTypography-body1">Pet boarding</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/pet-care"><span class="MuiTypography-root MuiTypography-body1">Pet care</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/pet-sitters"><span class="MuiTypography-root MuiTypography-body1">Pet sitters</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/pet-trainers"><span class="MuiTypography-root MuiTypography-body1">Pet trainers</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss56 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/care-directory#care"><span class="MuiTypography-root MuiTypography-body1">See all categories</span></a></li>
+                            </ul>
+                        </div>
+                        <div aria-label="housekeeping content" class={housekeepingContentClassMW} role="tabpanel">
+                            <ul>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/cleaning-lady"><span class="MuiTypography-root MuiTypography-body1">Cleaning ladies</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/errand-runners"><span class="MuiTypography-root MuiTypography-body1">Errand runners</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/grocery-helper"><span class="MuiTypography-root MuiTypography-body1">Grocery helpers</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/house-cleaning"><span class="MuiTypography-root MuiTypography-body1">House cleaning</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/house-managers"><span class="MuiTypography-root MuiTypography-body1">House managers</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/house-sitters"><span class="MuiTypography-root MuiTypography-body1">House sitters</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/housekeepers"><span class="MuiTypography-root MuiTypography-body1">Housekeepers</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/housekeeper-cooks"><span class="MuiTypography-root MuiTypography-body1">Housekeeper cooks</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/housekeeping"><span class="MuiTypography-root MuiTypography-body1">Housekeeping</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/laundry-services"><span class="MuiTypography-root MuiTypography-body1">Laundry services</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/live-in-housekeepers"><span class="MuiTypography-root MuiTypography-body1">Live-in housekeepers</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/maids"><span class="MuiTypography-root MuiTypography-body1">Maids</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/odd-job-helpers"><span class="MuiTypography-root MuiTypography-body1">Odd job helpers</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/personal-assistants"><span class="MuiTypography-root MuiTypography-body1">Personal assistants</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss56 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/care-directory#care"><span class="MuiTypography-root MuiTypography-body1">See all categories</span></a></li>
+                            </ul>
+                        </div>
+                        <div aria-label="jobs content" class={jobsContentClassMW} role="tabpanel">
+                            <ul>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/jobs"><span class="MuiTypography-root MuiTypography-body1">All jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/full-time-jobs"><span class="MuiTypography-root MuiTypography-body1">Full time jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/part-time-jobs"><span class="MuiTypography-root MuiTypography-body1">Part time jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/child-care-jobs"><span class="MuiTypography-root MuiTypography-body1">Child care jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/babysitting-jobs"><span class="MuiTypography-root MuiTypography-body1">Babysitting jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/nanny-jobs"><span class="MuiTypography-root MuiTypography-body1">Nanny jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/tutoring-jobs"><span class="MuiTypography-root MuiTypography-body1">Tutoring jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/senior-care-jobs"><span class="MuiTypography-root MuiTypography-body1">Senior care jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/caregiver-jobs"><span class="MuiTypography-root MuiTypography-body1">Caregiver jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/pet-care-jobs"><span class="MuiTypography-root MuiTypography-body1">Pet care jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/pet-sitting-jobs"><span class="MuiTypography-root MuiTypography-body1">Pet sitting jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dog-walking-jobs"><span class="MuiTypography-root MuiTypography-body1">Dog walking jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/house-cleaning-jobs"><span class="MuiTypography-root MuiTypography-body1">House cleaning jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/housekeeping-jobs"><span class="MuiTypography-root MuiTypography-body1">Housekeeping jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/house-sitting-jobs"><span class="MuiTypography-root MuiTypography-body1">House sitting jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/odd-jobs"><span class="MuiTypography-root MuiTypography-body1">Odd jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/personal-assistant-jobs"><span class="MuiTypography-root MuiTypography-body1">Personal assistant jobs</span></a></li>
+                                <li><a class="MuiTypography-root MuiLink-root jss56 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/care-directory#jobs"><span class="MuiTypography-root MuiTypography-body1">See all job categories</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabMenuWrapper">
+                    <div class="tabMenu">
+                        <template if:true={showLoginLink}>
+                            <a href={loginUrl}>
+                                <div class={loginLinkClass}>
+                                    {label.hc_log_in}
+                                </div>
+                            </a>
+                        </template>
+                        
+                        <template if:true={showJoinNowLink}>
+                            <a href={localeSettings.Join_Now__c}>
+                                <div class="selected">
+                                    {label.hc_join_now}
+                                </div>
+                            </a>
+                        </template>
+
+                        <template if:true={showUpgradeLink}>
+                            <a href={localeSettings.Upgrade__c}>
+                                <div class="selected">
+                                    {label.hc_upgrade}
+                                </div>
+                            </a>
+                        </template>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        
+
+
+
+
+    </template>
+    
+    <template lwc:else>
+        <div class="jss10" lwc:if={isEnUs}>
+            <div class="jss11">
+                <div>
+                    <!-- Old EM Launcher button, which I could not get to work so replaced w/lightning-button-icon below
+                        
+                        <button aria-label="extended menu" aria-haspopup="true" class="jss18" data-testid="internal-linking-menu-button" name="extended-menu-button" type="button" onclick={handleEMClick}><span aria-hidden="true" class="icon"></span></button> 
+                    -->
+
+                    <lightning-button-icon 
+                    icon-name={emLauncherIconName}
+                    variant="bare" size="large" class="jss18 em-launcher"                    
+                    onclick={handleEMClick}
+                    aria-label="extended menu" aria-haspopup="true"	>                        
+                    </lightning-button-icon>
+
+                    <div aria-expanded={ariaExpanded} aria-label="extended menu" class={emClass} data-testid="internal-linking-menu">
+                        <div aria-label="extended menu navigation" aria-orientation="vertical" class="jss15 DW" data-testid="internal-linking-menu-navigation" role="tablist">
+                            <ul>
+                                <li>
+                                    <button aria-controls="child care content" aria-label="child care button" aria-selected={childCareSelected} class={childCareButtonClass} legacy-id="child care content" role="tab" type="button" onclick={handleChildCareClick}>
+                                    <svg class="MuiSvgIcon-root jss19" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill="#23405f" d="M12 18.83a4.19 4.19 0 0 1-2.49-.93.63.63 0 1 1 .8-1c.17.12 1.69 1.35 3 0a.61.61 0 0 1 .89 0 .62.62 0 0 1 0 .89 2.91 2.91 0 0 1-2.2 1.04Zm-3-4.31a.64.64 0 0 0 .63-.64.63.63 0 0 0-.63-.63.64.64 0 0 0-.64.63.64.64 0 0 0 .64.64Zm6.07 0a.64.64 0 0 0 .63-.64.63.63 0 0 0-.63-.63.64.64 0 0 0-.64.63.64.64 0 0 0 .64.64ZM4.11 12.66a.62.62 0 0 1-.55-.34.63.63 0 0 1 .26-.85 19.25 19.25 0 0 1 8.33-1.77c.84 0 1.69 0 2.49.08a1 1 0 0 0 .21-.3c.26-.38.64-.84 1.19-.8s.8.55 1.05 1.06c.05.12.13.25.17.34a11 11 0 0 1 2.63.67.65.65 0 0 1 .29.85.64.64 0 0 1-.84.29 10.23 10.23 0 0 0-2.46-.59c-.46-.08-.72-.51-.93-1v-.13c-.3.38-.63.89-1.23.85a23.77 23.77 0 0 0-2.57-.02 18.32 18.32 0 0 0-7.74 1.61.8.8 0 0 1-.3.05Z"></path>
+                                    <path fill="#23405f" d="M12 22A8.71 8.71 0 0 1 7.71 5.72a.62.62 0 0 1 .59 1.1 7.46 7.46 0 1 0 7.4 0 .62.62 0 0 1 .59-1.1 8.76 8.76 0 0 1 4.4 7.57A8.66 8.66 0 0 1 12 22Z"></path>
+                                    <path fill="#23405f" d="M16 6.9a.66.66 0 0 1-.3-.08 7.66 7.66 0 0 0-7.4 0 .62.62 0 0 1-.55 0 .67.67 0 0 1-.38-.38 2.51 2.51 0 0 1-.17-.93C7.24 3.56 9.36 2 12 2s4.8 1.56 4.8 3.55a2.52 2.52 0 0 1-.17 1 .78.78 0 0 1-.38.38Zm-4-2.32a8.89 8.89 0 0 1 3.51.72c-.21-1.14-1.73-2-3.51-2s-3.3.89-3.51 2A8.92 8.92 0 0 1 12 4.58Z"></path>
+                                    </svg>
+
+                                    <span class="MuiTypography-root MuiTypography-body1">Child care</span>
+                                    <svg class={firstLevelMenuSVGIcon} focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill="#223f5f" d="M8 5.79a.91.91 0 0 1 0-1.2.91.91 0 0 1 1.2 0l6.8 6.8a.91.91 0 0 1 0 1.2l-6.8 6.8a.91.91 0 0 1-1.2 0 .91.91 0 0 1 0-1.2L14.2 12Z"></path>
+                                    <path fill="#223f5f" d="M8.6 19.77a1 1 0 0 1-.71-.27 1.08 1.08 0 0 1 0-1.41L14 12 7.89 5.9a1.08 1.08 0 0 1 0-1.41 1.12 1.12 0 0 1 1.42 0l6.79 6.8a1.06 1.06 0 0 1 0 1.41l-6.79 6.8a1 1 0 0 1-.71.27Zm0-15.25a.74.74 0 0 0-.5.18.77.77 0 0 0 0 1l6.31 6.3-.1.11L8.1 18.3a.77.77 0 0 0 0 1 .77.77 0 0 0 1 0l6.8-6.8a.7.7 0 0 0 .18-.5.69.69 0 0 0-.18-.49L9.09 4.7a.7.7 0 0 0-.49-.18Z"></path>
+                                    </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button aria-controls="tutoring content" aria-label="tutoring button" aria-selected={tutoringSelected} class={tutoringButtonClass} legacy-id="tutoring content" role="tab" type="button" onclick={handleTutoringClick}>
+                                        <svg class="MuiSvgIcon-root jss43" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#23405f" d="M8.68 15.12h-.09L7.77 15A6.24 6.24 0 0 1 6 14.25a1.74 1.74 0 0 0-1.18-.14l-1.14.32A1.34 1.34 0 0 1 2.27 14a1.38 1.38 0 0 1-.09-1.5l.5-.87a1.72 1.72 0 0 0 .14-1.23 5.24 5.24 0 0 1 0-2.91 6.36 6.36 0 0 1 7.92-4.23 6.55 6.55 0 0 1 5.14 6 .68.68 0 0 1-.69.68.67.67 0 0 1-.68-.68 5.17 5.17 0 0 0-4.09-4.73C7.6 3.84 4.78 5.3 4.14 7.8a4 4 0 0 0 0 2.19 2.9 2.9 0 0 1-.32 2.27l-.46.74 1.05-.27a2.86 2.86 0 0 1 2.23.27 5.89 5.89 0 0 0 1.45.59l.69.14a.71.71 0 0 1-.1 1.41Z"></path>
+                            <path fill="#23405f" d="M14.92 21a6.6 6.6 0 0 1-3.73-1.09 5.67 5.67 0 0 1-2.64-4c-.5-3.27 2-6.41 5.64-7a6.21 6.21 0 0 1 .91-.09 6.33 6.33 0 0 1 6.59 5 5.71 5.71 0 0 1-.27 2.78 1.68 1.68 0 0 0 0 1.32l.46.91a1.32 1.32 0 0 1-.23 1.45 1.37 1.37 0 0 1-1.46.37l-1.09-.41a1.88 1.88 0 0 0-1.32 0 7.31 7.31 0 0 1-1.73.5 3 3 0 0 1-1.13.26Zm.41-10.73h-.19a4.56 4.56 0 0 0-.77.09c-2.87.45-4.91 2.91-4.5 5.46a4.38 4.38 0 0 0 2 3 5.51 5.51 0 0 0 3.91.77 6.55 6.55 0 0 0 1.41-.41 3.22 3.22 0 0 1 2.32-.09l1 .37-.41-.87a3 3 0 0 1-.09-2.36 4.86 4.86 0 0 0 .22-2.1 4.76 4.76 0 0 0-4.9-3.88ZM8.68 11a.7.7 0 0 1-.68-.66V7.16a.69.69 0 1 1 1.37 0v3.18a.7.7 0 0 1-.69.66Z"></path>
+                            <path fill="#23405f" d="M10.28 9.43H7.09a.69.69 0 0 1 0-1.37h3.19a.69.69 0 0 1 0 1.37Zm6.82 6.5h-3.91a.68.68 0 1 1 0-1.36h3.91a.7.7 0 0 1 .68.68.69.69 0 0 1-.68.68Zm-1.96 1.96a.68.68 0 1 0 0-1.36.68.68 0 0 0 0 1.36Zm0-3.89a.69.69 0 1 0-.68-.68.69.69 0 0 0 .68.68Z"></path>
+                                        </svg>
+                                        <span class="MuiTypography-root MuiTypography-body1">Tutoring</span>
+                                        <svg class={firstLevelMenuSVGIcon} focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#223f5f" d="M8 5.79a.91.91 0 0 1 0-1.2.91.91 0 0 1 1.2 0l6.8 6.8a.91.91 0 0 1 0 1.2l-6.8 6.8a.91.91 0 0 1-1.2 0 .91.91 0 0 1 0-1.2L14.2 12Z"></path>
+                                            <path fill="#223f5f" d="M8.6 19.77a1 1 0 0 1-.71-.27 1.08 1.08 0 0 1 0-1.41L14 12 7.89 5.9a1.08 1.08 0 0 1 0-1.41 1.12 1.12 0 0 1 1.42 0l6.79 6.8a1.06 1.06 0 0 1 0 1.41l-6.79 6.8a1 1 0 0 1-.71.27Zm0-15.25a.74.74 0 0 0-.5.18.77.77 0 0 0 0 1l6.31 6.3-.1.11L8.1 18.3a.77.77 0 0 0 0 1 .77.77 0 0 0 1 0l6.8-6.8a.7.7 0 0 0 .18-.5.69.69 0 0 0-.18-.49L9.09 4.7a.7.7 0 0 0-.49-.18Z"></path>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button aria-controls="senior care content" aria-label="senior care button" aria-selected={seniorCareSelected} class={seniorCareButtonClass} legacy-id="senior care content" role="tab" type="button" onclick={handleSeniorCareClick}>
+                                        <svg class="MuiSvgIcon-root jss45" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#23405f" fill-rule="evenodd" d="m7 10.27-1.15-1A.47.47 0 0 1 5.7 9a.21.21 0 0 1 .07-.18.46.46 0 0 1 .28-.15.19.19 0 0 1 .18.07l1.15 1a.82.82 0 0 0 .68.22.89.89 0 0 0 .51-.23l.34-.34H9a1.54 1.54 0 0 1 1.95-.24l2.49 1.58a1.15 1.15 0 0 0 .78.16 1.18 1.18 0 0 0 .68-.31l.06-.06v-.07a1.57 1.57 0 0 0 .2-.69 1 1 0 0 0-.49-.85l-3.9-2.65a.32.32 0 0 1-.08-.48.31.31 0 0 1 .47-.08l3.9 2.65a1.87 1.87 0 0 1 .79 1.24A1.64 1.64 0 0 1 15.4 11a1.73 1.73 0 0 1-1.28.48 1.86 1.86 0 0 1-1-.26L10.6 9.65a.89.89 0 0 0-1.08.18l-.33.33a1.49 1.49 0 0 1-2.19.12Z"></path>
+                                            <path fill="#23405f" d="m5.84 9.29-.22.2Zm1.15 1 .2-.22ZM5.7 9h-.3Zm.07-.18-.21-.21Zm.28-.15v-.3H6Zm.18.07L6 9Zm0 0L6 9Zm0 0L6.06 9Zm1.15 1 .21-.21Zm.68.22v.3ZM9 9.41l.21.22Zm0 0 .22.2Zm1.95-.24.16-.25Zm2.49 1.58.16-.25Zm.78.16v.3Zm.68-.31.21.21Zm.06-.06.21.22Zm0-.07-.27-.13Zm0 0-.27-.13Zm-.29-1.54-.17.25Zm-3.9-2.65-.17.25Zm0 0 .17-.28Zm0 0-.16.26Zm-.08-.48-.26-.15Zm.47-.08.17-.25Zm3.9 2.65.18-.24Zm.79 1.24h.3ZM15.4 11l-.21-.21Zm0 0-.21-.21Zm0 0 .23.19Zm-2.27.22-.16.25ZM10.6 9.65l-.16.25Zm0 0 .16-.25Zm0 0-.14.27Zm-.6-.13v.3Zm-.54.28.21.21Zm-.33.33.21.22Zm0 0-.21-.21Zm0 0 .22.2ZM7 10.28l-.22-.2-.2.23.22.2Zm0 0 .22.2.21-.22-.24-.21Zm-1.36-.76 1.16 1 .39-.45L6 9.06Zm-.24-.47a.77.77 0 0 0 .22.44l.44-.41A.13.13 0 0 1 6 9Zm.16-.42a.5.5 0 0 0-.16.42L6 9ZM6 8.39a.77.77 0 0 0-.46.24l.46.42.05-.05Zm.42.15A.52.52 0 0 0 6 8.39l.06.6H6Zm0 0L6 9Zm0 0L6.05 9Zm1.16 1-1.16-1-.36.46 1.16 1Zm.44.15a.57.57 0 0 1-.43-.14l-.38.45a1.11 1.11 0 0 0 .91.3Zm.34-.16a.64.64 0 0 1-.34.16l.07.59a1.18 1.18 0 0 0 .7-.32Zm.33-.33-.33.33.43.43.33-.33Zm0 0 .43.43Zm0 0 .45.4Zm2.33-.3a1.85 1.85 0 0 0-2.33.3l.45.4a1.23 1.23 0 0 1 1.57-.18Zm2.5 1.59-2.45-1.58-.32.51L13.24 11Zm.59.11a.83.83 0 0 1-.59-.11l-.33.5a1.52 1.52 0 0 0 1 .21Zm.5-.22a.91.91 0 0 1-.5.22l.07.6a1.51 1.51 0 0 0 .85-.4Zm0-.06v.06l.42.42.06-.05Zm0 0v.07l.53.27v-.07Zm0 0 .54.27Zm.17-.56a1.37 1.37 0 0 1-.17.56l.53.27a1.87 1.87 0 0 0 .24-.83Zm-.34-.59a.67.67 0 0 1 .34.59h.6a1.25 1.25 0 0 0-.65-1.11Zm-3.83-2.68 3.9 2.65.34-.5L11 6Zm0 0L11 6Zm0 0 .32-.49Zm-.18-.89a.71.71 0 0 0-.1.51.61.61 0 0 0 .28.38l.3-.49a.15.15 0 0 1 0-.06Zm.88-.19a.64.64 0 0 0-.5-.09.61.61 0 0 0-.38.28l.52.31h.06Zm3.92 2.66-3.9-2.65-.33.48 3.9 2.66Zm.92 1.45a2.2 2.2 0 0 0-.91-1.44l-.35.49a1.63 1.63 0 0 1 .67 1Zm-.53 1.67a1.93 1.93 0 0 0 .53-1.66l-.59.07a1.4 1.4 0 0 1-.36 1.17Zm0 0-.42-.42Zm0 0-.47-.38Zm-1.51.59a2 2 0 0 0 1.51-.59l-.47-.38a1.41 1.41 0 0 1-1 .37ZM13 11.49a2.17 2.17 0 0 0 1.14.3v-.6a1.58 1.58 0 0 1-.84-.22ZM10.44 9.9l2.5 1.58.32-.5-2.5-1.59Zm0 0 .32-.51Zm0 0 .26-.53Zm-.36-.07a.62.62 0 0 1 .36.07l.27-.53a1.24 1.24 0 0 0-.7-.14Zm-.39.17a.63.63 0 0 1 .37-.19L10 9.22a1.25 1.25 0 0 0-.72.37Zm-.33.34.33-.34-.42-.42-.34.33Zm0 0-.43-.43Zm0 0-.45-.4Zm-2.55.16a1.79 1.79 0 0 0 2.55-.16L8.91 10a1.19 1.19 0 0 1-1.71.11Zm0-.43.44.4Zm0 .42.39-.46Z"></path>
+                                            <path fill="#23405f" fill-rule="evenodd" d="m7.18 15.85 2.92-3.08a.29.29 0 0 1 .45 0 .3.3 0 0 1 0 .46l-2.67 2.83h-.11a.29.29 0 0 1-.34 0 1 1 0 0 0-.27-.18Z"></path>
+                                            <path fill="#23405f" d="m7.19 15.85-.19.21.22.22.21-.23Zm0 0 .22-.22-.22-.21-.19.21Zm0 0L7 15.63Zm2.92-3.08-.21-.22Zm.45 0 .22-.21Zm0 .46-.21.21.21.21.22-.21Zm0 0 .22-.21-.22-.22-.21.22Zm0 0-.22-.23Zm-2.68 2.83v.29H8l.07-.08Zm-.11 0-.1-.28Zm-.34 0-.21.22Zm-.27-.18-.23-.19-.26.31.37.16Zm.24-.24-.4.42Zm-.42 0H7l.43.41Zm2.91-3.08L7 15.63l.43.41 2.9-3.04Zm.89 0a.61.61 0 0 0-.44-.19.6.6 0 0 0-.44.18l.42.43Zm0 .88A.66.66 0 0 0 11 13a.64.64 0 0 0-.19-.44l-.43.42Zm-.43 0 .43-.42Zm.42 0-.42-.44ZM8.1 16.26l2.67-2.82-.43-.44-2.68 2.85Zm-.28-.5-.15.05.19.56h.07Zm-.15.05-.43.43a.54.54 0 0 0 .38.16.66.66 0 0 0 .26-.06Zm0 0a1.22 1.22 0 0 0-.37-.24l-.3.58a.41.41 0 0 1 .18.12ZM7 15.63l.46.39Z"></path>
+                                            <path fill="#23405f" fill-rule="evenodd" d="M9.77 18.22a.38.38 0 0 1 0-.49l2.73-3a.38.38 0 0 1 .47-.06.41.41 0 0 1 0 .48l-2.73 3a.47.47 0 0 1-.09.1h-.26a.36.36 0 0 1-.12-.03Z"></path>
+                                            <path fill="#23405f" d="m9.72 17.73-.22-.21Zm0 .49-.21.22Zm2.68-3.46-.21-.22Zm.47-.06.23-.19Zm0 .48.22.2Zm-2.73 3L10 18Zm0 0L10 18Zm0 0-.25-.17Zm-.09.1.15.26Zm0 0-.14-.26Zm0 0 .06.3Zm-.18 0-.11.28Zm-.42-.74a.7.7 0 0 0 .09.88L10 18a.1.1 0 0 1 0-.12Zm2.75-3-2.72 3 .44.41 2.73-3Zm.86-.1a.68.68 0 0 0-.84.09l.41.43a.1.1 0 0 1 .12 0Zm.12.89a.69.69 0 0 0 0-.83l-.46.39a.09.09 0 0 1 0 .11Zm-2.76 3 2.73-3-.42-.33L10 18Zm0 0L10 18Zm0 0L9.94 18Zm-.19.2a.61.61 0 0 0 .19-.2l-.5-.33Zm0 0-.29-.52Zm-.1 0h.1l-.29-.52H10Zm-.13 0h.13L10 18Zm-.22-.05a.82.82 0 0 0 .22.05V18Zm-.22-.14a.64.64 0 0 0 .22.14L10 18Z"></path>
+                                            <path fill="#23405f" fill-rule="evenodd" d="M5.1 13.43 9 9.34a.33.33 0 0 1 .46.46l-3.9 4.09a.39.39 0 0 1-.11.08.25.25 0 0 1-.12 0 .24.24 0 0 1-.11 0l-.12-.07a.3.3 0 0 1 0-.47Z"></path>
+                                            <path fill="#23405f" d="m5.1 13.43-.21.21.21.22.22-.23Zm0 0 .21-.22L5.1 13l-.21.21Zm0 0 .21.21ZM9 9.34l-.21-.22Zm.46 0-.21.21Zm0 .46-.19.2.21.22.21-.22Zm0 0 .21-.21-.21-.22-.22.22Zm0 0-.2-.2Zm-3.9 4.09.21.21Zm-.11.11.12.28Zm-.23 0-.11.28Zm-.12-.07-.21.21Zm.21-.68-.42.43Zm-.42 0 .44.41Zm3.92-4.12-3.92 4.08.43.42 3.92-4.09Zm.88 0a.6.6 0 0 0-.44-.19.65.65 0 0 0-.44.18l.42.43Zm0 .88a.6.6 0 0 0 .19-.44.61.61 0 0 0-.19-.44l-.42.42Zm-.42 0 .42-.42Zm.42 0-.44-.42ZM5.77 14.1 9.69 10l-.43-.4-3.92 4.08Zm-.2.15a.65.65 0 0 0 .2-.15l-.42-.42Zm-.24 0a.75.75 0 0 0 .24 0l-.24-.55Zm-.22 0a.55.55 0 0 0 .22 0v-.6Zm-.22-.14a.64.64 0 0 0 .22.14l.23-.55Zm0-.89a.64.64 0 0 0-.19.45.61.61 0 0 0 .19.44l.42-.43Z"></path>
+                                            <path fill="#23405f" d="M12 20a1.63 1.63 0 0 1-.73-.13 5.16 5.16 0 0 1-1.41-.77l-.3-.21A17.39 17.39 0 0 1 8 17.69c-1-.88-1.9-1.73-2.74-2.66a9.93 9.93 0 0 1-2.83-4.39A5.61 5.61 0 0 1 4.53 5a5.43 5.43 0 0 1 6.09-.09c.13.08.25.18.37.27s.18.15.29.22a1.89 1.89 0 0 1 .21.12h.21l.14.07a.38.38 0 0 0 .41 0l.19-.07h.2c.09 0 .17-.11.28-.16l.22-.18c.12-.09.24-.19.38-.28A5.62 5.62 0 0 1 17 4a5.4 5.4 0 0 1 2.67 1 5.94 5.94 0 0 1 1.91 5.67 10.41 10.41 0 0 1-2.52 4l-.28.33A26.6 26.6 0 0 1 16 17.68a18.63 18.63 0 0 1-1.55 1.21l-.31.21a4.91 4.91 0 0 1-1.41.77A1.63 1.63 0 0 1 12 20ZM7.66 5.3H7.3a4 4 0 0 0-2 .7 4.36 4.36 0 0 0-1.59 4.34 8.93 8.93 0 0 0 2.48 3.75C7 15 8 15.87 8.83 16.68c.51.42 1 .81 1.45 1.13l.33.23a4.15 4.15 0 0 0 1.07.6h.11a1 1 0 0 0 .42 0h.11a4 4 0 0 0 1.07-.6l.34-.23c.46-.32.93-.71 1.43-1.12a26.21 26.21 0 0 0 2.62-2.53l.27-.32a9.61 9.61 0 0 0 2.24-3.49A4.54 4.54 0 0 0 18.85 6a4 4 0 0 0-2-.69 4.23 4.23 0 0 0-2.58.69 2.92 2.92 0 0 0-.28.21 4.17 4.17 0 0 1-.38.28l-.21.13a2.14 2.14 0 0 1-.27.16l-.13.04-.16.06a1.71 1.71 0 0 1-1.4 0l-.16-.06h-.05L11 6.75a2.14 2.14 0 0 1-.27-.16l-.14-.09a5.11 5.11 0 0 1-.45-.32C10.09 6.11 10 6 9.89 6a3.88 3.88 0 0 0-2.23-.7Z"></path>
+                                        </svg>
+                                        <span class="MuiTypography-root MuiTypography-body1">Senior care</span>
+                                        <svg class={firstLevelMenuSVGIcon} focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#223f5f" d="M8 5.79a.91.91 0 0 1 0-1.2.91.91 0 0 1 1.2 0l6.8 6.8a.91.91 0 0 1 0 1.2l-6.8 6.8a.91.91 0 0 1-1.2 0 .91.91 0 0 1 0-1.2L14.2 12Z"></path>
+                                            <path fill="#223f5f" d="M8.6 19.77a1 1 0 0 1-.71-.27 1.08 1.08 0 0 1 0-1.41L14 12 7.89 5.9a1.08 1.08 0 0 1 0-1.41 1.12 1.12 0 0 1 1.42 0l6.79 6.8a1.06 1.06 0 0 1 0 1.41l-6.79 6.8a1 1 0 0 1-.71.27Zm0-15.25a.74.74 0 0 0-.5.18.77.77 0 0 0 0 1l6.31 6.3-.1.11L8.1 18.3a.77.77 0 0 0 0 1 .77.77 0 0 0 1 0l6.8-6.8a.7.7 0 0 0 .18-.5.69.69 0 0 0-.18-.49L9.09 4.7a.7.7 0 0 0-.49-.18Z"></path>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button aria-controls="pet care content" aria-label="pet care button" aria-selected={petCareSelected} class={petCareButtonClass} legacy-id="pet care content" role="tab" type="button" onclick={handlePetCareClick}>
+                                        <svg class="MuiSvgIcon-root jss47" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#23405f" d="M11.35 20.85a3.43 3.43 0 0 1-2.22-1A6.24 6.24 0 0 1 8.5 19a3.66 3.66 0 0 0-.59-.7c-.2-.14-.48-.09-.83-.09a4.33 4.33 0 0 1-.72 0A3.52 3.52 0 0 1 3.83 17 3.82 3.82 0 0 1 3 14.46a5.59 5.59 0 0 1 .91-3c2-2.87 5.26-2.82 7.64-1.54a7.24 7.24 0 0 1 3.8 5.59 4.75 4.75 0 0 1-3.53 5.29ZM7.43 17a1.86 1.86 0 0 1 1.07.27 4.33 4.33 0 0 1 .95 1 3.66 3.66 0 0 0 .47.57 2 2 0 0 0 1.67.66 3.39 3.39 0 0 0 2.57-3.83A5.84 5.84 0 0 0 11 11.11C9.05 10.05 6.4 10 4.82 12.26a3.88 3.88 0 0 0-.63 2.2 2.76 2.76 0 0 0 .51 1.72 2.54 2.54 0 0 0 1.78.82h.95Zm-1.7-7.87a2.06 2.06 0 0 1-1.46-.71 3.46 3.46 0 0 1-.91-3.3 2.65 2.65 0 0 1 2.25-1.94A2 2 0 0 1 8 4.86a4.17 4.17 0 0 1-1.39 4 1.74 1.74 0 0 1-.88.27Zm.36-4.67h-.28A1.49 1.49 0 0 0 4.5 5.52a2 2 0 0 0 .6 1.94c.51.52.83.3 1 .26a2.83 2.83 0 0 0 .83-2.56.75.75 0 0 0-.84-.7ZM11 9.13a2 2 0 0 1-1.54-.88 3.48 3.48 0 0 1-.63-3.39 2.58 2.58 0 0 1 2.45-1.68 2 2 0 0 1 2.26 1.94A4.1 4.1 0 0 1 11.78 9a2.71 2.71 0 0 1-.78.13Zm.36-4.67h-.08a1.45 1.45 0 0 0-1.38.88 2 2 0 0 0 .43 2c.48.58.79.44.91.36a2.76 2.76 0 0 0 1.06-2.49c-.04-.31-.2-.75-.95-.75Zm6.87 12.29a3.17 3.17 0 0 1-.67-.09 2 2 0 0 1-1.7-1.89A4 4 0 0 1 18 11.16c1.07-.49 2.05-.05 2.65 1.19a3.21 3.21 0 0 1-.08 3.21 2.65 2.65 0 0 1-2.34 1.19Zm.16-4.32a2.67 2.67 0 0 0-1.34 2.25c0 .13 0 .57.75.7a1.62 1.62 0 0 0 1.78-.61 1.73 1.73 0 0 0 0-1.81c-.44-.75-.87-.66-1.19-.53Zm-3.01-1.05a1.93 1.93 0 0 1-2-1.5 4.12 4.12 0 0 1 1.46-4 1.85 1.85 0 0 1 2.77.62A3.23 3.23 0 0 1 18 9.7a2.71 2.71 0 0 1-2.62 1.68Zm.56-4.54a1.16 1.16 0 0 0-.48.17 3 3 0 0 0-1 2.52c0 .13.16.52.84.52a1.68 1.68 0 0 0 1.7-.92 1.74 1.74 0 0 0-.32-1.76c-.27-.37-.5-.53-.74-.53Z"></path>
+                                        </svg>
+                                        <span class="MuiTypography-root MuiTypography-body1">Pet care</span>
+                                        <svg class={firstLevelMenuSVGIcon} focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path fill="#223f5f" d="M8 5.79a.91.91 0 0 1 0-1.2.91.91 0 0 1 1.2 0l6.8 6.8a.91.91 0 0 1 0 1.2l-6.8 6.8a.91.91 0 0 1-1.2 0 .91.91 0 0 1 0-1.2L14.2 12Z"></path>
+                                        <path fill="#223f5f" d="M8.6 19.77a1 1 0 0 1-.71-.27 1.08 1.08 0 0 1 0-1.41L14 12 7.89 5.9a1.08 1.08 0 0 1 0-1.41 1.12 1.12 0 0 1 1.42 0l6.79 6.8a1.06 1.06 0 0 1 0 1.41l-6.79 6.8a1 1 0 0 1-.71.27Zm0-15.25a.74.74 0 0 0-.5.18.77.77 0 0 0 0 1l6.31 6.3-.1.11L8.1 18.3a.77.77 0 0 0 0 1 .77.77 0 0 0 1 0l6.8-6.8a.7.7 0 0 0 .18-.5.69.69 0 0 0-.18-.49L9.09 4.7a.7.7 0 0 0-.49-.18Z"></path>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button aria-controls="housekeeping content" aria-label="housekeeping button" aria-selected={housekeepingSelected} class={housekeepingButtonClass} legacy-id="housekeeping content" role="tab" type="button" onclick={handleHousekeepingClick}>
+                                        <svg class="MuiSvgIcon-root jss49" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#23405f" d="M16.47 21H7.39a.84.84 0 0 1-.39-.16.6.6 0 0 1-.16-.44v-3.1a17.16 17.16 0 0 1 .72-5 21.2 21.2 0 0 0 .68-4.8v-.16A.21.21 0 0 0 8 7.26h-.73a.61.61 0 0 1-.6-.52 3.68 3.68 0 0 1 .64-3.1A2.27 2.27 0 0 1 9 3h6.55A1.88 1.88 0 0 1 16 6.7a6.84 6.84 0 0 0-3 1.8 4 4 0 0 0 1.69 4.38 5.63 5.63 0 0 1 2.57 4.3A15.82 15.82 0 0 1 17 20.6a.58.58 0 0 1-.53.4ZM8 19.79h8a12 12 0 0 0 .12-2.57A4.43 4.43 0 0 0 14 13.85a5.28 5.28 0 0 1-2.17-5.79.35.35 0 0 1 .17-.24 7.31 7.31 0 0 1 3.74-2.29.67.67 0 0 0 .52-.64.74.74 0 0 0-.72-.68H8.92a.92.92 0 0 0-.68.32 2 2 0 0 0-.4 1.56H8a1.28 1.28 0 0 1 1 .45 1.42 1.42 0 0 1 .4 1 22.39 22.39 0 0 1-.76 5.06A16.05 16.05 0 0 0 8 17.3Z"></path>
+                                            <path fill="#23405f" d="M12 9.07H8.92a.61.61 0 0 1 0-1.21H12a.61.61 0 1 1 0 1.21Zm-1.31 7.23h-.16a4.24 4.24 0 0 1-3.34-2.21.58.58 0 0 1 .28-.8.59.59 0 0 1 .81.28 2.75 2.75 0 0 0 2.33 1.52 3.2 3.2 0 0 0 1.89-.72 3.46 3.46 0 0 1 3.13-.68.59.59 0 1 1-.4 1.12c-.72-.24-1.29 0-2.13.57a4 4 0 0 1-2.41.92Z"></path>
+                                        </svg>
+                                        <span class="MuiTypography-root MuiTypography-body1">Housekeeping</span>
+                                        <svg class={firstLevelMenuSVGIcon} focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#223f5f" d="M8 5.79a.91.91 0 0 1 0-1.2.91.91 0 0 1 1.2 0l6.8 6.8a.91.91 0 0 1 0 1.2l-6.8 6.8a.91.91 0 0 1-1.2 0 .91.91 0 0 1 0-1.2L14.2 12Z"></path>
+                                            <path fill="#223f5f" d="M8.6 19.77a1 1 0 0 1-.71-.27 1.08 1.08 0 0 1 0-1.41L14 12 7.89 5.9a1.08 1.08 0 0 1 0-1.41 1.12 1.12 0 0 1 1.42 0l6.79 6.8a1.06 1.06 0 0 1 0 1.41l-6.79 6.8a1 1 0 0 1-.71.27Zm0-15.25a.74.74 0 0 0-.5.18.77.77 0 0 0 0 1l6.31 6.3-.1.11L8.1 18.3a.77.77 0 0 0 0 1 .77.77 0 0 0 1 0l6.8-6.8a.7.7 0 0 0 .18-.5.69.69 0 0 0-.18-.49L9.09 4.7a.7.7 0 0 0-.49-.18Z"></path>
+                                        </svg>
+                                </button>
+                                </li>
+                                <li>
+                                    <button aria-controls="jobs content" aria-label="jobs button" aria-selected="false" class={jobsButtonClass} legacy-id="jobs content" role="tab" type="button" onclick={handleJobsClick}>
+                                        <svg class="MuiSvgIcon-root jss51" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#182c42" d="M2 12a10 10 0 1 1 10 10A10 10 0 0 1 2 12Zm1.32 0a8.64 8.64 0 1 0 8.59-8.68A8.68 8.68 0 0 0 3.32 12Z"></path>
+                                            <rect width="1.3" height="6.8" x="11.35" y="7.35" fill="#182c42" rx=".65"></rect>
+                                            <path fill="#182c42" d="M12 14.3a.8.8 0 0 1-.8-.8V8a.8.8 0 0 1 1.6 0v5.5a.8.8 0 0 1-.8.8Zm0-6.8a.5.5 0 0 0-.5.5v5.5a.5.5 0 0 0 1 0V8a.5.5 0 0 0-.5-.5Z"></path>
+                                            <rect width="5.3" height="1.3" x="11.35" y="12.85" fill="#182c42" rx=".65"></rect>
+                                            <path fill="#182c42" d="M16 14.3h-4a.8.8 0 0 1 0-1.6h4a.8.8 0 0 1 0 1.6ZM12 13a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1Z"></path>
+                                        </svg>
+                                        <span class="MuiTypography-root MuiTypography-body1">Jobs</span>
+                                        <svg class={firstLevelMenuSVGIcon} focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill="#223f5f" d="M8 5.79a.91.91 0 0 1 0-1.2.91.91 0 0 1 1.2 0l6.8 6.8a.91.91 0 0 1 0 1.2l-6.8 6.8a.91.91 0 0 1-1.2 0 .91.91 0 0 1 0-1.2L14.2 12Z"></path>
+                                        <path fill="#223f5f" d="M8.6 19.77a1 1 0 0 1-.71-.27 1.08 1.08 0 0 1 0-1.41L14 12 7.89 5.9a1.08 1.08 0 0 1 0-1.41 1.12 1.12 0 0 1 1.42 0l6.79 6.8a1.06 1.06 0 0 1 0 1.41l-6.79 6.8a1 1 0 0 1-.71.27Zm0-15.25a.74.74 0 0 0-.5.18.77.77 0 0 0 0 1l6.31 6.3-.1.11L8.1 18.3a.77.77 0 0 0 0 1 .77.77 0 0 0 1 0l6.8-6.8a.7.7 0 0 0 .18-.5.69.69 0 0 0-.18-.49L9.09 4.7a.7.7 0 0 0-.49-.18Z"></path>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div aria-label="extended menu content" class="jss16 DW" data-testid="internal-linking-menu-content">
+                            <div aria-label="child care content" class={childCareContentClass} role="tabpanel">
+                                <ul>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/babysitters"><span class="MuiTypography-root MuiTypography-body1">Babysitters</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/overnight-babysitters"><span class="MuiTypography-root MuiTypography-body1">Date night sitters</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/mothers-helpers"><span class="MuiTypography-root MuiTypography-body1">Mother's helpers</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/nannies"><span class="MuiTypography-root MuiTypography-body1">Nannies</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/night-nannies"><span class="MuiTypography-root MuiTypography-body1">Night nannies</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/newborn-nannies"><span class="MuiTypography-root MuiTypography-body1">Newborn nannies</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/live-in-nannies"><span class="MuiTypography-root MuiTypography-body1">Live-in nannies</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/day-care"><span class="MuiTypography-root MuiTypography-body1">Daycares</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/family-day-care"><span class="MuiTypography-root MuiTypography-body1">Family daycares</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/preschools"><span class="MuiTypography-root MuiTypography-body1">Preschools</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/child-care"><span class="MuiTypography-root MuiTypography-body1">Child care</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/child-care-centers"><span class="MuiTypography-root MuiTypography-body1">Child care centers</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/after-school-child-care"><span class="MuiTypography-root MuiTypography-body1">After school child care</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/drop-in-child-care"><span class="MuiTypography-root MuiTypography-body1">Drop-in child care</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/special-needs-child-care"><span class="MuiTypography-root MuiTypography-body1">Special needs child care</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss56 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/care-directory#care"><span class="MuiTypography-root MuiTypography-body1">See all categories</span></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div aria-label="tutoring content" class={tutoringContentClass} role="tabpanel">
+                                <ul>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/tutors "><span class="MuiTypography-root MuiTypography-body1">Tutors</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/biology-tutors"><span class="MuiTypography-root MuiTypography-body1">Biology tutors</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/chemistry-tutors"><span class="MuiTypography-root MuiTypography-body1">Chemistry tutors</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/english-tutor"><span class="MuiTypography-root MuiTypography-body1">English tutors</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/math-tutors"><span class="MuiTypography-root MuiTypography-body1">Math tutors</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/piano-lessons"><span class="MuiTypography-root MuiTypography-body1">Piano lessons</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/reading-tutors"><span class="MuiTypography-root MuiTypography-body1">Reading tutors</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/sat-tutors"><span class="MuiTypography-root MuiTypography-body1">SAT tutors</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/spanish-tutors"><span class="MuiTypography-root MuiTypography-body1">Spanish tutors</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/writing-tutors"><span class="MuiTypography-root MuiTypography-body1">Writing tutors</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/homeschool-teachers"><span class="MuiTypography-root MuiTypography-body1">Homeschool teachers</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/private-tutors"><span class="MuiTypography-root MuiTypography-body1">Private tutors</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/test-prep-tutors"><span class="MuiTypography-root MuiTypography-body1">Test prep tutors</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss56 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/care-directory#care"><span class="MuiTypography-root MuiTypography-body1">See all categories</span></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div aria-label="senior care content" class={seniorCareContentClass} role="tabpanel">
+                                <ul>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/caregivers"><span class="MuiTypography-root MuiTypography-body1">Caregivers</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/companion-care"><span class="MuiTypography-root MuiTypography-body1">Companion care</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dementia-care"><span class="MuiTypography-root MuiTypography-body1">Dementia care	</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/home-care"><span class="MuiTypography-root MuiTypography-body1">Home care</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/home-health-aides"><span class="MuiTypography-root MuiTypography-body1">Home health aides</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/hospice-care"><span class="MuiTypography-root MuiTypography-body1">Hospice care</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/nursing-assistant"><span class="MuiTypography-root MuiTypography-body1">Nursing assistants</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/respite-care"><span class="MuiTypography-root MuiTypography-body1">Respite care</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/senior-care"><span class="MuiTypography-root MuiTypography-body1">Senior care</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/senior-food-delivery"><span class="MuiTypography-root MuiTypography-body1">Senior food delivery</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/senior-transportation"><span class="MuiTypography-root MuiTypography-body1">Senior transportation</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/special-needs-adult-care"><span class="MuiTypography-root MuiTypography-body1">Special needs adult care</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/adult-daycare"><span class="MuiTypography-root MuiTypography-body1">Adult daycare</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/assisted-living"><span class="MuiTypography-root MuiTypography-body1">Assisted living</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/nursing-homes"><span class="MuiTypography-root MuiTypography-body1">Nursing homes</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/senior-apartments"><span class="MuiTypography-root MuiTypography-body1">Senior apartments</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss56 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/care-directory#care"><span class="MuiTypography-root MuiTypography-body1">See all categories</span></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div aria-label="pet care content" class={petCareContentClass} role="tabpanel">
+                                <ul>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/bird-sitters"><span class="MuiTypography-root MuiTypography-body1">Bird sitters</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/cat-boarding"><span class="MuiTypography-root MuiTypography-body1">Cat boarding</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/cat-sitters"><span class="MuiTypography-root MuiTypography-body1">Cat sitters</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dog-boarding"><span class="MuiTypography-root MuiTypography-body1">Dog boarding</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dog-boarding-kennels"><span class="MuiTypography-root MuiTypography-body1">Dog boarding kennels</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dog-grooming-services"><span class="MuiTypography-root MuiTypography-body1">Dog grooming services</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dog-sitters"><span class="MuiTypography-root MuiTypography-body1">Dog sitters</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dog-walkers"><span class="MuiTypography-root MuiTypography-body1">Dog walkers</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/doggy-day-care"><span class="MuiTypography-root MuiTypography-body1">Doggy daycare</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/home-pet-sitting"><span class="MuiTypography-root MuiTypography-body1">Home pet sitting</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/pet-boarding"><span class="MuiTypography-root MuiTypography-body1">Pet boarding</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/pet-care"><span class="MuiTypography-root MuiTypography-body1">Pet care</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/pet-sitters"><span class="MuiTypography-root MuiTypography-body1">Pet sitters</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/pet-trainers"><span class="MuiTypography-root MuiTypography-body1">Pet trainers</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss56 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/care-directory#care"><span class="MuiTypography-root MuiTypography-body1">See all categories</span></a></li>
+                                </ul>
+                            </div>
+                        
+                        
+                            <div aria-label="housekeeping content" class={housekeepingContentClass} role="tabpanel">
+                                <ul>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/cleaning-lady"><span class="MuiTypography-root MuiTypography-body1">Cleaning ladies</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/errand-runners"><span class="MuiTypography-root MuiTypography-body1">Errand runners</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/grocery-helper"><span class="MuiTypography-root MuiTypography-body1">Grocery helpers</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/house-cleaning"><span class="MuiTypography-root MuiTypography-body1">House cleaning</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/house-managers"><span class="MuiTypography-root MuiTypography-body1">House managers</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/house-sitters"><span class="MuiTypography-root MuiTypography-body1">House sitters</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/housekeepers"><span class="MuiTypography-root MuiTypography-body1">Housekeepers</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/housekeeper-cooks"><span class="MuiTypography-root MuiTypography-body1">Housekeeper cooks</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/housekeeping"><span class="MuiTypography-root MuiTypography-body1">Housekeeping</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/laundry-services"><span class="MuiTypography-root MuiTypography-body1">Laundry services</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/live-in-housekeepers"><span class="MuiTypography-root MuiTypography-body1">Live-in housekeepers</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/maids"><span class="MuiTypography-root MuiTypography-body1">Maids</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/odd-job-helpers"><span class="MuiTypography-root MuiTypography-body1">Odd job helpers</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/personal-assistants"><span class="MuiTypography-root MuiTypography-body1">Personal assistants</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss56 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/care-directory#care"><span class="MuiTypography-root MuiTypography-body1">See all categories</span></a></li>
+                                </ul>
+                            </div>
+
+                            <div aria-label="jobs content" class={jobsContentClass} role="tabpanel">
+                                <ul>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/jobs"><span class="MuiTypography-root MuiTypography-body1">All jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/full-time-jobs"><span class="MuiTypography-root MuiTypography-body1">Full time jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/part-time-jobs"><span class="MuiTypography-root MuiTypography-body1">Part time jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/child-care-jobs"><span class="MuiTypography-root MuiTypography-body1">Child care jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/babysitting-jobs"><span class="MuiTypography-root MuiTypography-body1">Babysitting jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/nanny-jobs"><span class="MuiTypography-root MuiTypography-body1">Nanny jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/tutoring-jobs"><span class="MuiTypography-root MuiTypography-body1">Tutoring jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/senior-care-jobs"><span class="MuiTypography-root MuiTypography-body1">Senior care jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/caregiver-jobs"><span class="MuiTypography-root MuiTypography-body1">Caregiver jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/pet-care-jobs"><span class="MuiTypography-root MuiTypography-body1">Pet care jobs</span></a>
+                                    </li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/pet-sitting-jobs"><span class="MuiTypography-root MuiTypography-body1">Pet sitting jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/dog-walking-jobs"><span class="MuiTypography-root MuiTypography-body1">Dog walking jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/house-cleaning-jobs"><span class="MuiTypography-root MuiTypography-body1">House cleaning jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/housekeeping-jobs"><span class="MuiTypography-root MuiTypography-body1">Housekeeping jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/house-sitting-jobs"><span class="MuiTypography-root MuiTypography-body1">House sitting jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/odd-jobs"><span class="MuiTypography-root MuiTypography-body1">Odd jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss54 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/personal-assistant-jobs"><span class="MuiTypography-root MuiTypography-body1">Personal assistant jobs</span></a></li>
+                                    <li><a class="MuiTypography-root MuiLink-root jss56 MuiLink-underlineNone MuiTypography-colorPrimary" href="https://www.care.com/care-directory#jobs"><span class="MuiTypography-root MuiTypography-body1">See all job categories</span></a></li>
+                                </ul>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </template>
+</template>

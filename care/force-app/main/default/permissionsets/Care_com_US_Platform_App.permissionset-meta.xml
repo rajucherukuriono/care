@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Users assigned this permission set are able to use the Care.com US Platform App to connect to Salesforce.  Designed to be used by the Care.com Salesforce Admin User.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Care.com US Platform App</label>
+    <license>Salesforce</license>
+</PermissionSet>

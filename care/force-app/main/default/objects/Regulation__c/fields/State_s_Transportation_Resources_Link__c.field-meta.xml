@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State_s_Transportation_Resources_Link__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>(Massachusetts)</inlineHelpText>
+    <label>State&apos;s Transportation Resources Link</label>
+    <referenceTo>Senior_Care_Companies__c</referenceTo>
+    <relationshipLabel>Regulations (State&apos;s Transportation Resources Link)</relationshipLabel>
+    <relationshipName>Regulations2</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

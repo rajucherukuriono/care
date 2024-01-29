@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Aid_CPR_Training__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Are you First Aid and CPR trained or willing to be trained?</inlineHelpText>
+    <label>First Aid/CPR Training</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>First Aid Trained</fullName>
+                <default>false</default>
+                <label>First Aid Trained</label>
+            </value>
+            <value>
+                <fullName>First Aid Certified</fullName>
+                <default>false</default>
+                <label>First Aid Certified</label>
+            </value>
+            <value>
+                <fullName>CPR Trained</fullName>
+                <default>false</default>
+                <label>CPR Trained</label>
+            </value>
+            <value>
+                <fullName>CPR Certified</fullName>
+                <default>false</default>
+                <label>CPR Certified</label>
+            </value>
+            <value>
+                <fullName>Infant First Aid Trained</fullName>
+                <default>false</default>
+                <label>Infant First Aid Trained</label>
+            </value>
+            <value>
+                <fullName>Infant First Aid Certified</fullName>
+                <default>false</default>
+                <label>Infant First Aid Certified</label>
+            </value>
+            <value>
+                <fullName>Willing to be trained</fullName>
+                <default>false</default>
+                <label>Willing to be trained</label>
+            </value>
+            <value>
+                <fullName>Erste Hilfe</fullName>
+                <default>false</default>
+                <label>Erste Hilfe</label>
+            </value>
+            <value>
+                <fullName>Erste Hilfe am Kind</fullName>
+                <default>false</default>
+                <label>Erste Hilfe am Kind</label>
+            </value>
+            <value>
+                <fullName>Tagespflege Qualifikation</fullName>
+                <default>false</default>
+                <label>Tagespflege Qualifikation</label>
+            </value>
+            <value>
+                <fullName>Babysittediplom</fullName>
+                <default>false</default>
+                <label>Babysittediplom</label>
+            </value>
+            <value>
+                <fullName>JuLeiCa</fullName>
+                <default>false</default>
+                <label>JuLeiCa</label>
+            </value>
+            <value>
+                <fullName>Andere Zeugnisse</fullName>
+                <default>false</default>
+                <label>Andere Zeugnisse</label>
+            </value>
+            <value>
+                <fullName>Pass/Personalausweis</fullName>
+                <default>false</default>
+                <label>Pass/Personalausweis</label>
+            </value>
+            <value>
+                <fullName>Lebenslauf</fullName>
+                <default>false</default>
+                <label>Lebenslauf</label>
+            </value>
+            <value>
+                <fullName>Führungszeugnis</fullName>
+                <default>false</default>
+                <label>Führungszeugnis</label>
+            </value>
+            <value>
+                <fullName>Schriftliche Bestätigung über die Beantragung eines polizeilichen Führungszeugnises</fullName>
+                <default>false</default>
+                <label>Schriftliche Bestätigung über die Beantragung eines polizeilichen Führungszeugnises</label>
+            </value>
+            <value>
+                <fullName>Abgeschlossene pädagogisch Ausbildung</fullName>
+                <default>false</default>
+                <label>Abgeschlossene pädagogisch Ausbildung</label>
+            </value>
+            <value>
+                <fullName>Abgeschlossenes pädagogisches Studium</fullName>
+                <default>false</default>
+                <label>Abgeschlossenes pädagogisches Studium</label>
+            </value>
+            <value>
+                <fullName>Laufende pädagogische Ausbildung</fullName>
+                <default>false</default>
+                <label>Laufende pädagogische Ausbildung</label>
+            </value>
+            <value>
+                <fullName>Laufendes pädagogisches Studium</fullName>
+                <default>false</default>
+                <label>Laufendes pädagogisches Studium</label>
+            </value>
+            <value>
+                <fullName>Sonstige laufende Ausbildung/Studium</fullName>
+                <default>false</default>
+                <label>Sonstige laufende Ausbildung/Studium</label>
+            </value>
+            <value>
+                <fullName>Sonstige abgeschlossene Ausbildung</fullName>
+                <default>false</default>
+                <label>Sonstige abgeschlossene Ausbildung</label>
+            </value>
+            <value>
+                <fullName>Rettungsschwimmer</fullName>
+                <default>false</default>
+                <label>Rettungsschwimmer</label>
+            </value>
+            <value>
+                <fullName>Referenzen</fullName>
+                <default>false</default>
+                <label>Referenzen</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

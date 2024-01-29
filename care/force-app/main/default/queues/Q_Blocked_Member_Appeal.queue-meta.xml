@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>fakeemail@example.com.invalid</email>
+    <name>Safety - Blocked Member Appeal</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>G_Global_Safety</publicGroup>
+        </publicGroups>
+        <users>
+            <user>allison.decoff@care.com</user>
+            <user>dmitry.sharanov@care.com</user>
+            <user>gabriel.cordova-nosal@care.com</user>
+            <user>jonaville.onggay@care.com</user>
+            <user>ricky.bandoy@care.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

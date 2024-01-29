@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Action_Plan_Need_Senior_Care</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Action Plan Need: Senior Care</label>
+        <sharedTo>
+            <group>Share_Senior_Care</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Elder Law,In Home Skilled Care,Aging Life Care Manager,ABUC - Non-Medical Home Care,Nursing Home,Task Management Request,Assisted Living,Non-Medical Home Care</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Support Groups,Home Modifications,Adult Day Program,Senior Move Managers,Transportation,State Record Data Entry</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Daily Money Manager</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

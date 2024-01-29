@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Set_Overall_Score</name>
+        <label>Set Overall Score</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Overall_Score__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Update_Overall_Score_On_Account_NetworkFormula</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Migrated from the: Update Overall Score On Account(Network Center) workflow rule
+Workflow rule description: Update Overall Score On Account(Network Center)&quot;</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Update_Overall_Score_On_Account_NetworkFormula</name>
+        <dataType>Number</dataType>
+        <expression>if(OR($Record.Vetting_Records_Present__c == 0,ISBLANK($Record.Vetting_Records_Present__c)),null,
+(100- If(ISBLANK($Record.Sum_Of_Automatic_Fail_Violations__c),0,$Record.Sum_Of_Automatic_Fail_Violations__c)*21-If(ISBLANK($Record.Sum_Of_Critical_Violations__c),0,$Record.Sum_Of_Critical_Violations__c)*7-If(ISBLANK($Record.Sum_Of_Sub_Critical_Violations__c),0,$Record.Sum_Of_Sub_Critical_Violations__c)*3))</expression>
+        <scale>0</scale>
+    </formulas>
+    <label>Update Overall Score On Account(Network Center)</label>
+    <migratedFromWorkflowRuleName>Update Overall Score On Account(Network Center)</migratedFromWorkflowRuleName>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Overall_Score</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01239000000UaszAAC</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Override_Overall_Score__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

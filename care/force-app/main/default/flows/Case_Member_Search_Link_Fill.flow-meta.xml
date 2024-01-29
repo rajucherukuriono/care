@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <description>This will determine if the Member Search field needs to be updated or not.</description>
+        <name>Update_Member_Search_field_decision</name>
+        <label>Update Member Search field Decision?</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>No Update Needed</defaultConnectorLabel>
+        <rules>
+            <name>Update_Member_Search</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>MemberSearchNull</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>UpdateMemberSearchField</targetReference>
+            </connector>
+            <label>Update Member Search</label>
+        </rules>
+    </decisions>
+    <description>Migrated from the: Case - Member Search Link Fill workflow rule
+Workflow rule description: Fill the Member Search Link, if Member ID is not empty. Part of Careus-15336/SFORCE-1095&quot;</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>If Case.Member_Search__c is null AND Case.Member_ID__c is not null - then display a TRUE value, otherwise FALSE value</description>
+        <name>MemberSearchNull</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+ISBLANK($Record.Member_Search__c),
+NOT(ISBLANK($Record.Member_ID__c)),
+($Setup.Override_Validation_Rules__c.Override_Case_Workflow_Rules__c = FALSE)
+)</expression>
+    </formulas>
+    <formulas>
+        <description>This is the url that will be populated in the field &quot;Member Search&quot;</description>
+        <name>MemberSearchURL</name>
+        <dataType>String</dataType>
+        <expression>&quot;https://www.care.com/csr/captureMemberSearch.do?memberId=&quot; + {!$Record.Member_ID__c} + &quot;&amp;searchType=specificSearch&quot;</expression>
+    </formulas>
+    <label>Case - Member Search Link Fill</label>
+    <migratedFromWorkflowRuleName>Case - Member Search Link Fill</migratedFromWorkflowRuleName>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update the Member Search Field with the US CSR Link, if Member Search is empty, but Member ID is populated</description>
+        <name>UpdateMemberSearchField</name>
+        <label>Update Member Search Field</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <inputAssignments>
+            <field>Member_Search__c</field>
+            <value>
+                <elementReference>MemberSearchURL</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Member_Search_field_decision</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>C_W_Categorization</fullName>
+    <booleanFilter>((1 AND 3) OR (4 AND 5) OR 6) AND 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Case__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>OWNER.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>Assisted Search CSAT Survey,Senior Care Planning Survey</value>
+    </filters>
+    <filters>
+        <field>Feedback_Type__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>8/31/2016 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>Backup Care Fulfilled Survey,Backup Care Unfulfilled Survey</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>9/30/2019 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>Backup Care Micro Survey</value>
+    </filters>
+    <label>C@W Categorization</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>VOC_NPS</group>
+    </sharedTo>
+</ListView>

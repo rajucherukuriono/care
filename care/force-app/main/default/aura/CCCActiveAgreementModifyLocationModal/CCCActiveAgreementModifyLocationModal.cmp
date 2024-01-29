@@ -1,0 +1,117 @@
+<aura:component extends="c:CCCBase" controller="CCCActiveAgreementController">
+
+    <!-- Aura Attributes - Public -->
+    <aura:attribute name="locationRecord" type="Map" default="{}" access="public" />
+    <aura:attribute name="saveClicked" type="Boolean" default="false" access="public" />
+
+    <!-- Aura Attributes - Private -->
+    <aura:attribute name="validationErrors" type="List" default="[]" access="private" />
+    <aura:attribute name="closeButtonDisabled" type="Boolean" default="false" access="private" />
+
+    <div class="slds-m-top_medium">
+
+        <div class="slds-text-heading_medium slds-text-align_center slds-m-bottom_large">
+            <strong>Modify Location</strong>
+        </div>
+
+        <article class="slds-card slds-card_boundary slds-m-bottom_large">
+            <div class="slds-card__header slds-page-header locationHeader">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body slds-grid slds-wrap">
+
+                        <div class="slds-col slds-size_1-of-1">
+                            <h2 class="slds-card__header-title">
+                                <div class="slds-m-bottom_xx-small">
+                                    <strong>{!v.locationRecord.name}</strong>
+                                </div>
+                            </h2>
+                        </div>
+
+                        <div class="slds-col slds-size_1-of-2">
+
+                            <!-- Location - Address -->
+                            <lightning:formattedAddress street="{! if(not(empty(v.locationRecord.address.line2)), join(' ',v.locationRecord.address.line1,
+                                        v.locationRecord.address.line2), v.locationRecord.address.line1)}"
+                                city="{!v.locationRecord.address.city}" province="{!v.locationRecord.address.state}"
+                                postalCode="{!v.locationRecord.address.postal_code}" disabled="true" />
+                        </div>
+
+                        <div class="slds-col slds-size_1-of-2">
+
+                            <!-- Location - Active toggle -->
+                            <lightning:input aura:id="toggleCmps" type="toggle" label="{!v.locationRecord.name}"
+                                name="{!v.locationRecord.name}" value="{!v.locationRecord.uuid}"
+                                checked="{!v.locationRecord.active}"
+                                onchange="{!c.onLocationActiveToggled}" class="toggleComponent" variant="label-hidden"/>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            <div class="slds-card__body slds-card__body_inner locationServicesTableContainer">
+
+                <table class="slds-table slds-table_bordered locationServicesTable" role="grid">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+
+                            <!-- Column Header - Service -->
+                            <th class="slds-text-title_caps" scope="col">
+                                <div class="slds-truncate slds-p-around_x-small" title="Service">Service</div>
+                            </th>
+
+                            <!-- Column Header - Active -->
+                            <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                                <div class="slds-truncate slds-p-around_x-small" title="Active">Active</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <aura:iteration items="{!v.locationRecord.offerings}" var="offering">
+                            <tr class="slds-hint-parent">
+
+                                <!-- Offering - Name-->
+                                <td role="gridcell" scope="col" style="width: 100%;">
+                                    <div class="slds-truncate slds-p-around_x-small capitalize">
+                                        {!offering.service}
+                                    </div>
+                                </td>
+
+                                <!-- Offering - Active toggle -->
+                                <td role="gridcell" scope="col">
+                                    <div class="slds-p-around_x-small slds-text-align_right">
+
+                                        <lightning:input aura:id="toggleCmps" type="toggle" label="{!offering.name}"
+                                            name="{!offering.name}" value="{!offering.uuid}"
+                                            checked="{!offering.active}" onchange="{!c.onOfferingActiveToggled}"
+                                            class="toggleComponent" />
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </aura:iteration>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </article>
+
+    </div>
+
+    <!-- Button Management -->
+    <div class="slds-clearfix">
+
+        <c:CCCStaticPopover headerText="Save is disabled due to the following reason(s):" type="error"
+            messages="{!v.validationErrors}" cssClass="slds-nubbin_bottom-right slds-m-bottom_medium" />
+
+        <div class="slds-float_right">
+            <lightning:button label="Close" onclick="{!c.onCloseButtonClicked}"
+                disabled="{! or(v.closeButtonDisabled,not(empty(v.validationErrors)))}" />
+        </div>
+    </div>
+
+</aura:component>

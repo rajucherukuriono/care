@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Round_Robin_Member_Compact_Layout</fullName>
+    <fields>User__c</fields>
+    <fields>Round_Robin__c</fields>
+    <fields>Round_Robin_Name__c</fields>
+    <fields>Active__c</fields>
+    <fields>Round_Robin_Vertical__c</fields>
+    <fields>Task_Counter__c</fields>
+    <fields>Name</fields>
+    <label>Round Robin Member Compact Layout</label>
+</CompactLayout>

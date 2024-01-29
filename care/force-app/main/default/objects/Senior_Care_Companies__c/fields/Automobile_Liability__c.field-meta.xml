@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Automobile_Liability__c</fullName>
+    <description>Edited for NMHC Canada, SFORCE-1587</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For NMHC Canada: Automobile limit of $1,000,000 (In Canada Cg have 6A coverage on personal vehicles. It allows to carry passengers for business purposes. Some agencies have company vehicles &amp; need riders on their policy).</inlineHelpText>
+    <label>Automobile Liability</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

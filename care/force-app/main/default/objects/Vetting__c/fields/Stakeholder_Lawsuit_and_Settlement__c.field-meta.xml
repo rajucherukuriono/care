@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stakeholder_Lawsuit_and_Settlement__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SFORCE-2848
+Modify Vetting Custom Object</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When there is a &quot;Hit&quot; click on the Checkbox</inlineHelpText>
+    <label>Stakeholder: Lawsuit and Settlement</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

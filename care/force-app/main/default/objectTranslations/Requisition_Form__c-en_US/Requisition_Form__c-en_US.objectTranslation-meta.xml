@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Requisition Form</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Requisition Forms</value>
+    </caseValues>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Zip_Code_File</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>In_Center_Comments</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>In_Center_Comments_In_Home_Comments</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>In_Home_Comments</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>In_Home_In_Center</name>
+    </validationRules>
+</CustomObjectTranslation>

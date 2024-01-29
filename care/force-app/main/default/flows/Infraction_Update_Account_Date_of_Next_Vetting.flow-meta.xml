@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <description>This decision looks at the related Account field &quot;Account Type&quot; and will make a different update depending on it&apos;s value.</description>
+        <name>Account_Type</name>
+        <label>Account Type</label>
+        <locationX>798</locationX>
+        <locationY>971</locationY>
+        <defaultConnectorLabel>Other</defaultConnectorLabel>
+        <rules>
+            <name>Small_Brand</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.BUC_Center_Name__r.Account_Type_Multi_Pick__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Small Brand</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Date_of_Next_Vetting_183_Days</targetReference>
+            </connector>
+            <label>Small Brand</label>
+        </rules>
+        <rules>
+            <name>Regional_or_Large</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.BUC_Center_Name__r.Account_Type_Multi_Pick__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Regional Brand</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.BUC_Center_Name__r.Account_Type_Multi_Pick__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Large Brand</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Date_of_Next_Vetting_366_Days</targetReference>
+            </connector>
+            <label>Regional or Large</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>This checks the if the Formula resource &quot;NewOrIschangedViolationDateFormula&quot; has a TRUE value.</description>
+        <name>Is_New_or_did_Violation_Date_change</name>
+        <label>Is New or did Violation Date change?</label>
+        <locationX>1111</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_New_or_Violation_Date_was_changed</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Violation_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>IsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Related_Account</targetReference>
+            </connector>
+            <label>Is New or Violation Date was changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>This looks at the current Infraction&apos;s Violation Date and compares it to existing Automatic Fail Infractions-we want to know if this new one has a more &quot;recent&quot; chronological Violation Date?</description>
+        <name>Is_the_new_AF_Violation_Date_more_recent</name>
+        <label>Is the new AF Violation Date more recent?</label>
+        <locationX>50</locationX>
+        <locationY>971</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>AF_Violation_Date_More_Recent_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Violation_Date__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>automatic_fail_infraction_var.Violation_Date__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <isGoTo>true</isGoTo>
+                <targetReference>Update_Date_of_Next_Vetting_366_Days</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>This checks the new Infraction record to see if the value in the &quot;Violation Date&quot; field is more recent than any other Infraction record related to this Account.</description>
+        <name>Is_the_new_Violation_Date_more_recent</name>
+        <label>Is the new &quot;Violation Date&quot; more recent?</label>
+        <locationX>1062</locationX>
+        <locationY>863</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Violation_Date__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>infraction_var.Violation_Date__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Account_Type</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>This looks at the record that was returned in the previous Get Records Element that finds an Infraction with a status of Automatic Fail-and determines if the Violation Date was within the last 365 Days</description>
+        <name>Is_there_an_existing_Automatic_Fail_record_within_the_last_365_Days</name>
+        <label>Is there an existing Automatic Fail record within the last 365 Days?</label>
+        <locationX>633</locationX>
+        <locationY>755</locationY>
+        <defaultConnector>
+            <targetReference>Is_the_new_Violation_Date_more_recent</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Automatic_Fail_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ViolationDateInLast365Days</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_this_Infraction_an_AF</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>This decision looks at the Violation Level on the current Infraction being evaluated to determine if it is an Automatic Fail.</description>
+        <name>Is_this_Infraction_an_AF</name>
+        <label>Is this Infraction an AF?</label>
+        <locationX>204</locationX>
+        <locationY>863</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>New_AF_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Violation_Level__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Automatic Fail</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_the_new_AF_Violation_Date_more_recent</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>If an Infraction record is created or edited and the Violation Date is populated, then this fires and updates the related Account record&apos;s field &quot;Date of Next Vetting&quot; with a formula value.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>This calculates the date value that will be populated in the Account field &quot;Date of Next Vetting&quot;.  This will take the date value from the Infraction field &quot;Violation Date&quot; and then add 183 Days.</description>
+        <name>DateofNextVetting_Add_183_Days</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.Violation_Date__c}+183</expression>
+    </formulas>
+    <formulas>
+        <description>This calculates the date value that will be populated in the Account field &quot;Date of Next Vetting&quot;. This will take the date value from the Infraction field &quot;Violation Date&quot; and then add 366 Days.</description>
+        <name>DateofNextVetting_Add_366_Days</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.Violation_Date__c} + 366</expression>
+    </formulas>
+    <formulas>
+        <description>This formula checks to see if the record is New.</description>
+        <name>IsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <description>This looks at the value in the Automatic Fail Infraction&apos;s Violation Date and checks to see if that date was within the last 365 Days.</description>
+        <name>ViolationDateInLast365Days</name>
+        <dataType>Boolean</dataType>
+        <expression>TODAY() - {!automatic_fail_infraction_var.Violation_Date__c} &lt; 365</expression>
+    </formulas>
+    <interviewLabel>Infraction - Update Account Date of Next Vetting {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Infraction - Update Account Date of Next Vetting</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Is there a related Infraction record where the Violation Level = Automatic Fail and the Violation Date is within the last 365 Days?</description>
+        <name>Find_Automatic_Fail_Infraction</name>
+        <label>Find Automatic Fail Infraction</label>
+        <locationX>633</locationX>
+        <locationY>647</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_there_an_existing_Automatic_Fail_record_within_the_last_365_Days</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Violation_Level__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Automatic Fail</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>BUC_Center_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Related_Account.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <object>Infraction__c</object>
+        <outputReference>automatic_fail_infraction_var</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Violation_Date__c</queriedFields>
+        <sortField>Violation_Date__c</sortField>
+        <sortOrder>Desc</sortOrder>
+    </recordLookups>
+    <recordLookups>
+        <description>This will return all Infraction Records related to the Account and find the one with the most recent Violation Date.</description>
+        <name>Get_All_Related_Infraction_Records</name>
+        <label>Get Infraction with most recent Violation Date</label>
+        <locationX>633</locationX>
+        <locationY>539</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Find_Automatic_Fail_Infraction</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>BUC_Center_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Related_Account.Id</elementReference>
+            </value>
+        </filters>
+        <object>Infraction__c</object>
+        <outputAssignments>
+            <assignToReference>infraction_var.Violation_Date__c</assignToReference>
+            <field>Violation_Date__c</field>
+        </outputAssignments>
+        <sortField>Violation_Date__c</sortField>
+        <sortOrder>Desc</sortOrder>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Related_Account</name>
+        <label>Get Related Account</label>
+        <locationX>633</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_All_Related_Infraction_Records</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Vetting_Object__r.BUC_Center_Name__r.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>This will update the Account field &quot;Date of Next Vetting&quot; with the formula resource &quot;DateofNextVetting_Add_183_Days&quot;.  It takes the date value of the Infraction field &quot;Violation Date&quot; and adds 183 Days.</description>
+        <name>Update_Date_of_Next_Vetting_183_Days</name>
+        <label>Update Date of Next Vetting + 183 Days</label>
+        <locationX>534</locationX>
+        <locationY>1079</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Related_Account.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Date_Of_Next_Vetting__c</field>
+            <value>
+                <elementReference>DateofNextVetting_Add_183_Days</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>This will update the Account field &quot;Date of Next Vetting&quot; with the formula resource &quot;DateofNextVetting_Add_366_Days&quot;.  It takes the date value of the Infraction field &quot;Violation Date&quot; and adds 366 Days.</description>
+        <name>Update_Date_of_Next_Vetting_366_Days</name>
+        <label>Update Date of Next Vetting + 366 Days</label>
+        <locationX>798</locationX>
+        <locationY>1079</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Related_Account.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Date_Of_Next_Vetting__c</field>
+            <value>
+                <elementReference>DateofNextVetting_Add_366_Days</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <start>
+        <locationX>985</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_New_or_did_Violation_Date_change</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Violation_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Infraction__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>This is the variable for a related Infraction record where the Violation Level is &quot;Automatic Fail&quot; and the &quot;Violation Date&quot; is within the last 365 Days.</description>
+        <name>automatic_fail_infraction_var</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Infraction__c</objectType>
+    </variables>
+    <variables>
+        <name>infraction_var</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Infraction__c</objectType>
+    </variables>
+    <variables>
+        <description>This is the most recent Violation Date in all of the related Infraction records.</description>
+        <name>MostRecentViolationDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

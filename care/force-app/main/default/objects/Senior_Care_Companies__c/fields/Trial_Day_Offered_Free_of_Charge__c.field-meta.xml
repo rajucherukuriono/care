@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trial_Day_Offered_Free_of_Charge__c</fullName>
+    <description>for SFORCE-1918 Adult Day Care</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Are prospective participants welcome to participate for a half or full day prior to signing up?</inlineHelpText>
+    <label>Trial Day Offered Free of Charge</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

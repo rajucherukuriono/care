@@ -1,0 +1,62 @@
+{
+  "appPageId" : "2d058e16-187e-4e83-97b0-fa718366cc99",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "59049111-4730-4195-8602-b87fa96efdc0",
+  "label" : "Topic Catalog",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "bannerText" : "",
+        "bannerTextWithKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineArticles\">articles</a> and <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "bannerTextWithoutKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "pageType" : "",
+        "showSubTopics" : true,
+        "title" : "Topics",
+        "uniqueNameOrId" : ""
+      },
+      "componentName" : "forceCommunity:headline",
+      "id" : "1eaa05ef-2057-43c0-88f4-414a3663c66d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e18365db-fdb2-4cbb-998a-4ff2fb1a9ff9",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "forceCommunity:topicCatalog",
+      "id" : "07498ead-f2de-4d52-bccb-6c92107fb549",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "05258b2e-8ae0-4bf2-ba9f-29721c377efc",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "4123d086-54f1-479f-8288-2bfd9aa093c8",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Topic Catalog"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "442c7ec5-091e-4266-9716-c6fc76fc3a0a",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "226cd2d9-26f3-40b4-b1cd-101cf6595702",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "topic-catalog"
+}

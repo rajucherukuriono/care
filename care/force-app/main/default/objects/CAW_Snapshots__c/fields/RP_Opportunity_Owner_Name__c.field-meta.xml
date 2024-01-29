@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RP_Opportunity_Owner_Name__c</fullName>
+    <description>RP_Opportunity Owner Name</description>
+    <externalId>false</externalId>
+    <inlineHelpText>RP_Opportunity Owner Name</inlineHelpText>
+    <label>RP_Opportunity Owner Name</label>
+    <length>100</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

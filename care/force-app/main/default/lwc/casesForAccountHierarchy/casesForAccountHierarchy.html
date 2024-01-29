@@ -1,0 +1,11 @@
+<template>
+    <div>
+        <div class="slds-align_absolute-center slds-text-title_bold slds-p-bottom_small">{titleText}</div>
+        <lightning-datatable
+                key-field="Id"
+                hide-checkbox-column="true"
+                data={tableData}
+                columns={columns}>
+        </lightning-datatable>
+    </div>
+</template>

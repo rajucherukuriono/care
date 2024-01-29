@@ -1,0 +1,32 @@
+/* Prevent resizing the textarea box */
+.THIS textarea {
+	resize: none;
+}
+
+/* Bump up the vertical spacing between elements */
+.THIS .nameCmp .slds-form-element__row {
+	margin-top: var(--lwc-spacingSmall,0.75rem);
+}
+
+/* Bump up the vertical spacing between elements */
+.THIS .addressCmp .slds-form-element__row {
+	margin-top: var(--lwc-spacingSmall,0.75rem);
+}
+
+/* Adds a required (*) before the First Name label */
+.THIS [data-field=firstName] LABEL:before {
+	content: "*";
+	margin: 0 0.125rem 0 0.125rem;
+	color: rgb(194, 57, 52);
+	float: left;
+}
+
+/* Adds a required (*) before the Country label */
+/*
+.THIS [data-field=country] LABEL:before {
+	content: "*";
+	margin: 0 0.125rem 0 0.125rem;
+	color: rgb(194, 57, 52);
+	float: left;
+}
+*/

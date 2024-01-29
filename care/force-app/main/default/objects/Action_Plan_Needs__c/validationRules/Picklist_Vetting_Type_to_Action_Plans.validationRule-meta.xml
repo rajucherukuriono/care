@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Picklist_Vetting_Type_to_Action_Plans</fullName>
+    <active>false</active>
+    <description>picklist required for all action plan needs created after Dec 15, 2017. Sforce 1714</description>
+    <errorConditionFormula>AND($Setup.Override_Validation_Rules__c.Override_ActionPlanNeed_Validation__c = False, $Permission.C_Ops_Senior_Care,  RecordType.DeveloperName  &lt;&gt;  &quot;Task_Management_Request&quot;,	(IF(ISNEW(),today(),DateValue(CreatedDate))&gt; DATE(2017,12,15)), ISBLANK(Text(Vetting_Type__c)))</errorConditionFormula>
+    <errorDisplayField>Vetting_Type__c</errorDisplayField>
+    <errorMessage>Required for all action plan needs created after Dec 15, 2017</errorMessage>
+</ValidationRule>

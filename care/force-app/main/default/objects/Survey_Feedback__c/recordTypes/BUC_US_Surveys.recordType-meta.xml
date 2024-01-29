@@ -1,0 +1,2265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BUC_US_Surveys</fullName>
+    <active>true</active>
+    <description>for BUC Fullfilled, Unfilled and Micro Services</description>
+    <label>BUC US Surveys</label>
+    <picklistValues>
+        <picklist>Adequate_number_of_providers__c</picklist>
+        <values>
+            <fullName>I would have liked more provider options%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The number of provider options was adequate%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The number of provider options was too many%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Agent_CSAT_Rating__c</picklist>
+        <values>
+            <fullName>Bad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Good</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Bad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Good</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Anticipate_using_service_again__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Aware_of_other_options_available__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BUC_Survey_Type__c</picklist>
+        <values>
+            <fullName>Fulfilled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unfulfilled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Bucket__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program and Benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality of Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UX%2FProcess</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Business_Model__c</picklist>
+        <values>
+            <fullName>GBB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hybrid 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hybrid 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscription</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transaction</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CSAT_Rating__c</picklist>
+        <values>
+            <fullName>Extremely Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I am not satisfied %E2%80%93 You didn%E2%80%99t provide the help I needed%2E I expected more%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I am satisfied %E2%80%93 You were helpful%2C but this could have been better%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I am very satisfied %E2%80%93 You answered my question in a fast%2C friendly way%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CallSurvey_MC_Survey_1__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CallSurvey_MC_Survey_2__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CallSurvey_MC_Survey_3__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CallSurvey_MC_Survey_4__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Carecom_first_choice__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Assisted Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Background Checks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backup Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefits Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefits Fair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C%40W App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C%40W Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Backup Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Pay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Policies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Privacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Quality %28Digital%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Quality %28Placements%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider%2FSeeker Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senior Care Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Messages</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Competitor_Mentioned__c</picklist>
+        <values>
+            <fullName>Angie%27s List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Craigslist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Handy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nextdoor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sittercity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TaskRabbit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thumbtack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urban Sitter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Device_Specific__c</picklist>
+        <values>
+            <fullName>Android App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Care%40Work App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caregiver App Android</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caregiver App iOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Date Night</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desktop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spot App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS App</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Did_agent_make_you_feel_valued__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Did_caregiver_arrive_on_time__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Did_caregiver_follow_instructions__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Did_we_resolve_your_issue__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Did_you_hire_a_Care_com_caregiver__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Feedback_Type__c</picklist>
+        <values>
+            <fullName>Bug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kudo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suggestion</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_easy_to_solve_your_problem__c</picklist>
+        <values>
+            <fullName>Difficult</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Easy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Difficult</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Easy</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_satisfied_BUC_Rep__c</picklist>
+        <values>
+            <fullName>Extremely Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_satisfied_dropoff_pickup_process__c</picklist>
+        <values>
+            <fullName>Extremely Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_satisfied_enrollment_process__c</picklist>
+        <values>
+            <fullName>Extremely Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_satisfied_quality_of_care__c</picklist>
+        <values>
+            <fullName>Extremely Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Information_shared_by_the_Member__c</picklist>
+        <values>
+            <fullName>Email Address</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I haven%27t shared my information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Number</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Key_Features__c</picklist>
+        <values>
+            <fullName>Benefits - Benefit Bucks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefits - Health %26 Dental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefits - LifeMart Discounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBUC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HomePay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M2T</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tiering</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Location__c</picklist>
+        <values>
+            <fullName>Austria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ireland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Method_Communication_was_Received__c</picklist>
+        <values>
+            <fullName>Care%2Ecom Messaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Text</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NPS_Group__c</picklist>
+        <values>
+            <fullName>Detractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Passive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promoter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Number_Provider_Options__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Overall_Satisfaction_Backup_Care_Service__c</picklist>
+        <values>
+            <fullName>Extremely dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat satisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Personal_Network_v_Care_Work_s_network__c</picklist>
+        <values>
+            <fullName>Either suits me</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I prefer to use Care%40Work%27s Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I prefer using my Personal Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28Specify below%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Preference_utilizing_backup_care__c</picklist>
+        <values>
+            <fullName>At a center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In my home</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Productive_work_time_saved__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Provider_Rating_1__c</picklist>
+        <values>
+            <fullName>Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Provider_Rating_2__c</picklist>
+        <values>
+            <fullName>Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Provider_Rating_3__c</picklist>
+        <values>
+            <fullName>Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Provider_Utilization_Reasons__c</picklist>
+        <values>
+            <fullName>I was not satisfied with the provider options given%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My loved one does not have care needs at this time%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My loved one is not willing to accept care from any formal resources%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My loved one was not ready to initiate care%2C though they do have care needs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My loved one%E2%80%99s care needs have changed%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The cost is too great%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Provider_Utilization__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>QA_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disqualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rate_your_satisfaction_with_your_caregiv__c</picklist>
+        <values>
+            <fullName>Extremely Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely Satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Dissatisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Recommend_to_colleague__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Revised_Overall_Satisfaction__c</picklist>
+        <values>
+            <fullName>Entered in Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out of Scope</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rated Partner%2FVendor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rated Provider</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Satisfaction_Rating__c</picklist>
+        <values>
+            <fullName>Extremely Dissatisfied%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extremely Satisfied%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Dissatisfied%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Satisfied%C2%A0</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Testimonial__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Theme__c</picklist>
+        <values>
+            <fullName>Able to post specific needs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Above and beyond</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Affordable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>App Lacks Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>App Not User Friendly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>App User Friendly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apply with Credits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approval takes too long</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Jobs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Availability calendar is hard to use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Availability not accurate%2Fupdated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BGC on Seeker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Better planning for centers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blocking Phone Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booking on desktop is not a good experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bookings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBUC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Can%27t Access Messages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Can%27t Leave VM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled and still charged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Candidates  not screened well enough</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannot Understand rep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannot personalize messages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Care Assistant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Care Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Care Check</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caregiver App Changeover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caregiver Profile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cares about members</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caring response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carrier Not Supported</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Center was not secure enough</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charged when not using</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Combined Seeker%2FProvider Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communication needs improvement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complicated Registration%2FEnrollment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complicated and too long</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confusing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confusing process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confusion over suppression</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Hidden After Downgrade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delays in Receiving Messages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deleting messages%2FDeclining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desktop%2FMobile Discrepancy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailed Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Did not find care%2Fjob</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Did not follow instructions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Did not like caregiver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Did not meet expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Did not meet needs%2Frequirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Didn%27t Receive Verification Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Didn%27t receive Text Confirmation Code</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Difficult to Navigate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Difficult to send</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Difficult to unsubscribe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Difficulty downgrading through iTunes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Difficulty posting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Difficuly Upgrading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disappointing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discrimination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dislikes Autorenew Feature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do not want to pay to contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doesn%27t Understand Feature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t want information shared</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Easy process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Easy to edit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Easy to schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Easy to use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ebureau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Edits do not appear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Excellent care provider%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Excellent facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expected higher quality of caregivers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Explained things clearly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fake ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fast response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Found Care%2FJob</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Free Time Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Free Trial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Friendly Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Generic response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Good Value</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Good experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Good opportunities%2Fjobs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Good resource</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Good response to safety concern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Good way to promote profile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Good way to reach families%2Fconnect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great benefit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great company</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hard to Cancel%2FDowngrade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hard to edit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hard to find a job</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hard to manage account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hard to reach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hard to understand when new message received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Have to Enroll on a New System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Helpful</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Helpful and polite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High quality care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Devices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HomePay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ID Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inexperienced%2FUnprofessional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Informative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insufficient Credits Returned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insufficient Refund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insufficient help</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insufficient response to safety concern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intake process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intuitive site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Issue not resolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jobs Auto Close</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jobs Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jobs Quantity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jobs too far away</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keep%2FDecline Messages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kind%2C caring and helpful</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Knowledgeable reps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Limit reached too quickly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Limited applicants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Long wait time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Many qualified candidates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Member Eligibility Checks Consent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Message Limit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Misleading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Money App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Contacts to Resolve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nanny Share</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need more availability for scheduling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newsletter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Cell Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Good Candidates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No contact info available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Clear About Charges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Enough Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Responsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Worth it%2FToo many scams</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not a good match</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not affordable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not aware of benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not engaging with Child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not enough details in the Job post</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not enough info about family</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not receiving messages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not user friendly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not what expected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Number of credits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Old Charges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On the Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Indicator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outdated NJNY or NCNY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outdated listings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pay to apply to jobs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pay to get messages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pay2Unlock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Confusion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payments Take Too Long</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paypal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Auth Holds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personalized response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photo guidelines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Posting job is confusing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proactive about scams</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Process takes too long</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Profile not updated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provide shorter terms%2Fprorate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Disclosure Consent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Payment Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualified care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quantity of Responses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question not addressed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quizlet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quotes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Read Receipt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reasonable price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>References</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referrals Concerns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund Process Too Slow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund refused</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejections</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reliable care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reputable site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Response rating confusing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Results Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review Removal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review%2FReference Process is confusing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rich Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safe place to apply</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfied with refund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scams on site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Search Filters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seeker Failed Authentication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Should be a Choice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Should be included in membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Should be linked to email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Should be notified first</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Should not have to pay extra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Errors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slow response time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sound Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscription Options Unclear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension%2FRemoval from site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switching Verticals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Takes too long</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teen Enrollment Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Templated Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Text message fraud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tiering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time Consuming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time Tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tinder Browsing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Too Expensive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Too many emails</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Too much competition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unfair Review Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unprofessional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unreliable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Interface%2FLayout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Not Enrolled Yet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User friendly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Value for money%2FNot Worth It</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very satisfied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Was Not Aware of Change</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>User_Rating_Clear_Explanation__c</picklist>
+        <values>
+            <fullName>Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Disagree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>User_Rating_Expectations__c</picklist>
+        <values>
+            <fullName>Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Disagree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>User_Rating_Helpful_Polite__c</picklist>
+        <values>
+            <fullName>Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Disagree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>User_Rating_Knowledge__c</picklist>
+        <values>
+            <fullName>Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Disagree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>User_Rating_Understanding__c</picklist>
+        <values>
+            <fullName>Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somewhat Disagree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vertical_Specific__c</picklist>
+        <values>
+            <fullName>Child Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Errands Odd Jobs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Housekeeping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pet Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senior Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Needs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tutoring</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Want_team_contact__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Why_prefer_type_of_care__c</picklist>
+        <values>
+            <fullName>1-on-1 care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accomodates sick child</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple children</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Socialization with others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time flexibility</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Work_with_Suggested_Partner__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

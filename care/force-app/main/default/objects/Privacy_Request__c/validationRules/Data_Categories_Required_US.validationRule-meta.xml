@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Categories_Required_US</fullName>
+    <active>true</active>
+    <description>US Data Category requests require that the Data Category field is not blank to set the status to &quot;Queued - Salesforce Platform&quot;</description>
+    <errorConditionFormula>ISPICKVAL(Source_System__c, &apos;US Platform&apos;) &amp;&amp;
+ISPICKVAL(Request_Type__c, &apos;Data Categories&apos;) &amp;&amp;
+ISPICKVAL(Request_Status__c, &apos;Queued - Salesforce Platform&apos;) &amp;&amp;
+ISBLANK( Data_Categories__c )</errorConditionFormula>
+    <errorDisplayField>Data_Categories__c</errorDisplayField>
+    <errorMessage>Data Categories are required before setting the status to &quot;Queued - Salesforce Platform&quot;.</errorMessage>
+</ValidationRule>

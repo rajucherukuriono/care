@@ -1,0 +1,113 @@
+<apex:page standardController="BREeze__RuleName__c" extensions="RuleNameTesterExtControllerAddOn" title="Rule Engine Tester for : {!BREeze__RuleName__c.Name}">
+    
+    <BREeze:jQueryIncludeComponent />
+    <BREeze:BREezeStylesheet />
+    
+    <script type="text/javascript"> 
+        var jQuery = jQuery.noConflict();
+        function showTestStatusPanel() {
+            var top = (jQuery(window).height() - jQuery('#teststatusPanel').outerHeight()) / 2 + jQuery(window).scrollTop();
+            var left = (jQuery(window).width() - jQuery('#teststatusPanel').outerWidth()) / 2 + jQuery(window).scrollLeft();
+            jQuery('#teststatusPanel').appendTo('body').css({top: (top > 0 ? top : 0) + 'px', left: (left > 0 ? left : 0) + 'px'});
+        }
+
+        function hideTestStatusPanel() {
+            jQuery('#teststatusPanel').css({top: '-9999em', left: '-9999em'}); 
+        }
+        
+        function openRM()
+        {
+            window.open('/apex/BREeze__RuleMaintenanceV2?ID={!BREeze__RuleName__c.ID}','_self'); 
+        }
+        
+        function pick(devName) 
+        {
+            if(!document.getElementById(devName).style.display) 
+            {
+                document.getElementById(devName).style.display = 'none';
+            }
+            else if(document.getElementById(devName).style.display == 'none') 
+            {
+                document.getElementById(devName).style.display = 'block';
+            }   
+            else 
+            {
+                document.getElementById(devName).style.display = 'none';   
+            } 
+        }
+          
+    </script>
+    
+    <apex:actionStatus onstart="showTestStatusPanel();" onstop="hideTestStatusPanel();" id="teststatus" >
+        <apex:facet name="start">
+            <div id="teststatusPanel"><img src="{!URLFOR($Resource.BREeze__Spinner)}" width="16" height="16" style="vertical-align: middle;"/> Loading Test Results...</div>
+        </apex:facet>
+    </apex:actionStatus>
+    
+    <apex:sectionHeader title="Rules Engine Test Rule Page" subtitle="Rule : {!BREeze__RuleName__c.Name}"/>
+        Set up rules and use this page to test them by providing a test Id. The test Id provided should be a valid Id for the Rule's object type.
+    <br/>    <br/>
+    <a id="theCommandLink" href="/apex/BREeze__RuleMaintenanceV2?ID={!BREeze__RuleName__c.ID}"> &lt;&lt; Back To Rule Maintenance</a>
+    <br/>    <br/>
+    <apex:form >
+    
+     
+    
+        <apex:pageMessages escape="false" />
+        <apex:pageBlock title="Rule Name Details" id="pgbruleNameDetails" >
+            <apex:pageBlockButtons location="top"> 
+                <apex:commandButton action="{!runTestForRule}" value="Test Rule" rerender="pgbruleNameDetails" status="teststatus"/>
+            </apex:pageBlockButtons>
+           
+            <apex:pageBlockSection id="ruleNameSection" columns="1">
+                <apex:outputField value="{!BREeze__RuleName__c.Name}"/> 
+                <apex:outputField value="{!BREeze__RuleName__c.BREeze__isActive__c}"/>  
+                <apex:outputField value="{!BREeze__RuleName__c.BREeze__Object_Name__c}"/>
+
+                <apex:pageBlockSectionItem >             
+                    <apex:outputLabel value="Created By" for="createdBy"/> 
+                    <apex:outputText id="createdBy" value="{!CreatedBy}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Last Modified By"  for="updatedBy"/> 
+                    <apex:outputText id="updatedBy" value="{!UpdatedBy}" />  
+                </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+           
+            <apex:pageBlockSection title="Test" id="TestSection" columns="1">
+                <apex:pageblockSectionItem >
+                    <apex:outputText value="Test IDs" />
+                    <apex:outputPanel styleClass="requiredInput" layout="block" id="pwPanel" >
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+	                        <apex:inputTextArea style="width:50%" value="{!TestID}"/><br/>
+                          Multiple IDs may be tested at once provided they are separated by a comma.
+	                        	<!--&nbsp;
+	                             <a href="javascript:collapseAll();">Collapse All</a>  
+	                             |  <a href="javascript:expandAll();">Show All</a>
+	                             -->
+                        </apex:outputPanel>
+
+                </apex:pageblockSectionItem>
+                
+                <apex:pageblockSectionItem >
+                    <apex:outputText value="Test Rule Numbers to Run" />
+                    <apex:outputPanel >
+                        <apex:inputTextArea style="width:50%" value="{!TestNumbers}"/><br/>
+                        Multiple Rule Numbers or Ranges of Rule Numbers may be tested all at once provided they are separated by a comma.  If no values or invalid values are input, all active rules are evaluated.
+                    </apex:outputPanel>                          
+                </apex:pageblockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                    <apex:outputText value="Show positive rule hits only" />
+                    <apex:inputcheckbox value="{!positiveResultsOnly}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageblockSectionItem >
+                  <apex:outputLabel escape="false" value="{!results}"/>
+                </apex:pageblockSectionItem> 
+           </apex:pageBlockSection>         
+        </apex:pageBlock>
+    </apex:form>
+    
+    
+</apex:page>

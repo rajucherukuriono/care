@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Business Account for CAW Client Onsite Events, without required Benefit for Employees checked. SFORCE-1936 Benefits Fair requests.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Plese provide the Business Account for CAW Client Onsite Events.</inlineHelpText>
+    <label>Business Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>WPS Events (CAW Business Account)</relationshipLabel>
+    <relationshipName>WPS_Events_Business_Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

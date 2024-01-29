@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>AS_Child_Care_Center</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>used for the Assisted Search Team</description>
+        <label>AS Child Care Center</label>
+        <sharedTo>
+            <group>G_Assisted_Search</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Child Care Center Account</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Accounts_HubSpot_HomePay_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Accounts: HubSpot - HomePay - Edit</label>
+        <sharedTo>
+            <group>Share_HubSpot_HomePay</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Homepay Business Account</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CAW_B2B_BUC_Accounts_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Share BUC Network Agency, BUC Network Center Account Record Types</description>
+        <label>CAW: B2B BUC Accounts: Edit</label>
+        <sharedTo>
+            <group>BUC_Agency_Center</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>BUC Network Center,BUC Network Agency</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CAW_Sales_B2B_Care_Accounts_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>CAW Sales: B2B Care Accounts: Edit</label>
+        <sharedTo>
+            <group>Share_CAWMKP_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CAW Broker Account,Business Account,International WPS Business Account</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Care_Ops_B2B_Care_Accounts_Read</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Gives Operations access to view business account information</description>
+        <label>Care Ops: B2B Care Accounts: Read</label>
+        <sharedTo>
+            <group>Share_Care_Operations</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Business Account,International WPS Business Account,Homepay Business Account,CAW Broker Account,HomePay Client</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Care_Ops_B2C_Care_Accounts_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Care Ops: B2C Care Accounts: Edit</label>
+        <sharedTo>
+            <group>Share_Care_Operations</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Seeker,Social Media,International Provider,Person Account,Lite,International Seeker,SMB_Provider,Provider</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Edit_Seeker_Accounts</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Edit Seeker Account, and Person Account for VIP Field by LifeCare Managers</description>
+        <label>Edit Seeker Accounts</label>
+        <sharedTo>
+            <group>LifeCare_Account_Managers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Person Account,Seeker</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HomePay_B2B_Care_Account_Read</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>HomePay: B2B Care Account: Read</label>
+        <sharedTo>
+            <group>Share_HomePay_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Business Account,International WPS Business Account,Seeker,CAW Broker Account,SMB_Provider</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HomePay_HomePay_Account_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>HomePay: HomePay Account: Edit</label>
+        <sharedTo>
+            <group>Share_HomePay</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Homepay Business Account,HomePay Client</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Hubspot_Sharing_Account</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Hubspot Sharing Account</label>
+        <sharedTo>
+            <role>Hubspot_Integration_User</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Homepay Business Account</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>ISR_MKP_B2C_Care_Accounts_Read</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>ISR MKP: B2C Care Accounts: Read</label>
+        <sharedTo>
+            <group>Share_ISR_MKP</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Seeker,SMB_Provider,Provider</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>International_Agency</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>SFORCE-2447
+BUC UK - Establish Operational Flow to Support BUC in UK &amp; IRE - Phase I</description>
+        <label>International Agency</label>
+        <sharedTo>
+            <group>Share_Intl_CAW_Ops</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>International Agency,International WPS Business Account,International Seeker,International Person Account</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MC_Marketing_Solutions_Accounts</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <description>This will grant Read access to any Account record with a Marketing Solutions Record Type to a group of MemberCare users</description>
+        <label>MC - Marketing Solutions Accounts</label>
+        <sharedTo>
+            <group>MC_Galore</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Marketing Solutions</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MS_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>MS Sharing</label>
+        <sharedTo>
+            <group>G_Galore_Marketing_Solutions</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Marketing Solutions</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Marketing_Solutions_Editor</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>Grants read/write permissions to Accounts and Opportunities of record type Marketing Solutions.</description>
+        <label>Marketing Solutions Editor</label>
+        <sharedTo>
+            <group>Marketing_Solutions_Account_Admin</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Marketing Solutions</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Marketing_Solutions_Resting_Account_Access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>Shares accounts owned by PPL API User with members of the Marketing Solutions Manager group</description>
+        <label>Marketing Solutions Resting Account Access</label>
+        <sharedTo>
+            <group>Marketing_Solutions_Rest_Account_Manager</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0055Y00000He1ylQAB</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Marketing_Solutions_to_BUC_Center_RM</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions to BUC Center RM</label>
+        <sharedTo>
+            <group>BUC_Center_Relationship_Management</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Marketing Solutions</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Partner_Network_Safety</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Partner Network Safety</label>
+        <sharedTo>
+            <group>Partner_Network_Safety</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>BUC Network Center,Senior Home Care,BUC Network Agency</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Seeker_RO_Access_for_HP_B2C</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Grant HomePay B2C team read only access to Seeker records.</description>
+        <label>Seeker RO Access for HP B2C</label>
+        <sharedTo>
+            <group>Share_HomePay_B2C_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Seeker</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>CAWMKP_Sales_Ops_Role_Sharing_Accounts</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>CAWMKP: Sales Ops Role Sharing Accounts</label>
+        <sharedTo>
+            <role>CAWMKP_Sales_Ops</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CAWMKP_Sales_Ops</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CAWMKP_Sales_Ops_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>CAWMKP: Sales Ops Sharing</label>
+        <sharedTo>
+            <role>CAWMKP_Sales_Ops</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>CAWMKP_Sales_Ops</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Executive</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>This will allow Marketing Executive Users to be able to edit each others Accounts.</description>
+        <label>Marketing Solutions Executive</label>
+        <sharedTo>
+            <role>ISR_Inside_Sales_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>ISR_Inside_Sales_Manager</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_MGR_Account_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions MGR Account Sharing</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_MGR_Account_Sharing_2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions MGR Account Sharing 2</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_2</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_MGR_Account_Sharing_3</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions MGR Account Sharing 3</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_3</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_MGR_Account_Sharing_4</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions MGR Account Sharing 4</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_4</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_MGR_Account_Sharing_5</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions MGR Account Sharing 5</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_5</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Manager_10</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions Manager 9</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_10</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Manager_8</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions Manager 8</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_8</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Manager_9</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions Manager 9</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_9</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Manager_Sharing_6</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions Manager Sharing 6</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_6</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Manager_Sharing_7a</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions Manager Sharing 7</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_7</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Training_Manager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions Training Manager</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Training_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Training_Manager_2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions Training Manager 2</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Training_Manager_2</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_View_All</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Marketing Solutions View All</label>
+        <sharedTo>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

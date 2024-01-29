@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Account Management</fullName>
+        <default>false</default>
+        <label>Account Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Autorenewal</fullName>
+        <default>false</default>
+        <label>Autorenewal</label>
+    </customValue>
+    <customValue>
+        <fullName>Background Checks</fullName>
+        <default>false</default>
+        <label>Background Checks</label>
+    </customValue>
+    <customValue>
+        <fullName>Bookings</fullName>
+        <default>false</default>
+        <label>Bookings</label>
+    </customValue>
+    <customValue>
+        <fullName>Brand/Reputation</fullName>
+        <default>false</default>
+        <label>Brand/Reputation</label>
+    </customValue>
+    <customValue>
+        <fullName>Care@Work</fullName>
+        <default>false</default>
+        <label>Care@Work</label>
+    </customValue>
+    <customValue>
+        <fullName>Care4Business</fullName>
+        <default>false</default>
+        <label>Care4Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Care Check</fullName>
+        <default>false</default>
+        <label>Care Check</label>
+    </customValue>
+    <customValue>
+        <fullName>Communication</fullName>
+        <default>false</default>
+        <label>Communication</label>
+    </customValue>
+    <customValue>
+        <fullName>Concerns/Safety Incidents</fullName>
+        <default>false</default>
+        <label>Concerns/Safety Incidents</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate</fullName>
+        <default>false</default>
+        <label>Corporate</label>
+    </customValue>
+    <customValue>
+        <fullName>COVID-19</fullName>
+        <default>false</default>
+        <label>COVID-19</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Security/Privacy</fullName>
+        <default>false</default>
+        <label>Data Security/Privacy</label>
+    </customValue>
+    <customValue>
+        <fullName>Enrollment/Account Creation</fullName>
+        <default>false</default>
+        <label>Enrollment/Account Creation</label>
+    </customValue>
+    <customValue>
+        <fullName>Hiring Tools</fullName>
+        <default>false</default>
+        <label>Hiring Tools</label>
+    </customValue>
+    <customValue>
+        <fullName>iOS Subscriptions</fullName>
+        <default>false</default>
+        <label>iOS Subscriptions</label>
+    </customValue>
+    <customValue>
+        <fullName>Job Management</fullName>
+        <default>false</default>
+        <label>Job Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing and Admin Communication</fullName>
+        <default>false</default>
+        <label>Marketing and Admin Communication</label>
+    </customValue>
+    <customValue>
+        <fullName>Matching Quality</fullName>
+        <default>false</default>
+        <label>Matching Quality</label>
+    </customValue>
+    <customValue>
+        <fullName>Message Masking</fullName>
+        <default>false</default>
+        <label>Message Masking</label>
+    </customValue>
+    <customValue>
+        <fullName>Messaging</fullName>
+        <default>false</default>
+        <label>Messaging</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Payment Options</fullName>
+        <default>false</default>
+        <label>Payment Options</label>
+    </customValue>
+    <customValue>
+        <fullName>Payments</fullName>
+        <default>false</default>
+        <label>Payments</label>
+    </customValue>
+    <customValue>
+        <fullName>Policy/Procedure?</fullName>
+        <default>false</default>
+        <label>Policy/Procedure?</label>
+    </customValue>
+    <customValue>
+        <fullName>Post-Match Features</fullName>
+        <default>false</default>
+        <label>Post-Match Features</label>
+    </customValue>
+    <customValue>
+        <fullName>Price</fullName>
+        <default>false</default>
+        <label>Price</label>
+    </customValue>
+    <customValue>
+        <fullName>Profile Management</fullName>
+        <default>false</default>
+        <label>Profile Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Quality of Applicants</fullName>
+        <default>false</default>
+        <label>Quality of Applicants</label>
+    </customValue>
+    <customValue>
+        <fullName>Quality of Jobs/Seekers</fullName>
+        <default>false</default>
+        <label>Quality of Jobs/Seekers</label>
+    </customValue>
+    <customValue>
+        <fullName>Quantity of Applicants</fullName>
+        <default>false</default>
+        <label>Quantity of Applicants</label>
+    </customValue>
+    <customValue>
+        <fullName>Quantity of Jobs</fullName>
+        <default>false</default>
+        <label>Quantity of Jobs</label>
+    </customValue>
+    <customValue>
+        <fullName>Resolution</fullName>
+        <default>false</default>
+        <label>Resolution</label>
+    </customValue>
+    <customValue>
+        <fullName>Reviews</fullName>
+        <default>false</default>
+        <label>Reviews</label>
+    </customValue>
+    <customValue>
+        <fullName>Safety Communication</fullName>
+        <default>false</default>
+        <label>Safety Communication</label>
+    </customValue>
+    <customValue>
+        <fullName>Safety Tools</fullName>
+        <default>false</default>
+        <label>Safety Tools</label>
+    </customValue>
+    <customValue>
+        <fullName>Search</fullName>
+        <default>false</default>
+        <label>Search</label>
+    </customValue>
+    <customValue>
+        <fullName>Solicitor Contact</fullName>
+        <default>false</default>
+        <label>Solicitor Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Speed/SLA</fullName>
+        <default>false</default>
+        <label>Speed/SLA</label>
+    </customValue>
+    <customValue>
+        <fullName>Subscription Packages</fullName>
+        <default>false</default>
+        <label>Subscription Packages</label>
+    </customValue>
+    <customValue>
+        <fullName>Technical Issues</fullName>
+        <default>false</default>
+        <label>Technical Issues</label>
+    </customValue>
+    <customValue>
+        <fullName>Terms of Use Violation</fullName>
+        <default>false</default>
+        <label>Terms of Use Violation</label>
+    </customValue>
+    <customValue>
+        <fullName>Transaction Payments</fullName>
+        <default>false</default>
+        <label>Transaction Payments</label>
+    </customValue>
+    <customValue>
+        <fullName>Trust and Safety</fullName>
+        <default>false</default>
+        <label>Trust and Safety</label>
+    </customValue>
+    <customValue>
+        <fullName>Value Prop and Premium Features</fullName>
+        <default>false</default>
+        <label>Value Prop and Premium Features</label>
+    </customValue>
+    <customValue>
+        <fullName>Review Approved</fullName>
+        <default>false</default>
+        <label>Review Approved</label>
+    </customValue>
+    <customValue>
+        <fullName>Review Rejected</fullName>
+        <default>false</default>
+        <label>Review Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>Review Edited</fullName>
+        <default>false</default>
+        <label>Review Edited</label>
+    </customValue>
+    <masterLabel>Contact Reason</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

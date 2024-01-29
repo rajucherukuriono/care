@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_Level__c</fullName>
+    <description>License level of the vertical being serviced, or Category</description>
+    <externalId>false</externalId>
+    <label>License Level</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Vertical__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Centers</fullName>
+                <default>false</default>
+                <label>Centers</label>
+            </value>
+            <value>
+                <fullName>Nanny Agencies</fullName>
+                <default>false</default>
+                <label>Nanny Agencies</label>
+            </value>
+            <value>
+                <fullName>FCCs</fullName>
+                <default>false</default>
+                <label>FCCs</label>
+            </value>
+            <value>
+                <fullName>Camps</fullName>
+                <default>false</default>
+                <label>Camps</label>
+            </value>
+            <value>
+                <fullName>Activities</fullName>
+                <default>false</default>
+                <label>Activities</label>
+            </value>
+            <value>
+                <fullName>Home Care</fullName>
+                <default>false</default>
+                <label>Home Care</label>
+            </value>
+            <value>
+                <fullName>Housing</fullName>
+                <default>false</default>
+                <label>Housing</label>
+            </value>
+            <value>
+                <fullName>Adult Day Care</fullName>
+                <default>false</default>
+                <label>Adult Day Care</label>
+            </value>
+            <value>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+                <label>Quarterly</label>
+            </value>
+            <value>
+                <fullName>Annual</fullName>
+                <default>false</default>
+                <label>Annual</label>
+            </value>
+            <value>
+                <fullName>Flat Rate</fullName>
+                <default>false</default>
+                <label>Flat Rate</label>
+            </value>
+            <value>
+                <fullName>Camps &amp; Activities</fullName>
+                <default>false</default>
+                <label>Camps &amp; Activities</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Childcare</controllingFieldValue>
+            <controllingFieldValue>Childcare Flat Rate</controllingFieldValue>
+            <valueName>Centers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Childcare</controllingFieldValue>
+            <controllingFieldValue>Childcare Flat Rate</controllingFieldValue>
+            <valueName>Nanny Agencies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Childcare</controllingFieldValue>
+            <controllingFieldValue>Childcare Flat Rate</controllingFieldValue>
+            <valueName>FCCs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Childcare</controllingFieldValue>
+            <controllingFieldValue>Childcare Flat Rate</controllingFieldValue>
+            <valueName>Camps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Childcare</controllingFieldValue>
+            <controllingFieldValue>Childcare Flat Rate</controllingFieldValue>
+            <valueName>Activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Childcare</controllingFieldValue>
+            <controllingFieldValue>Childcare Flat Rate</controllingFieldValue>
+            <valueName>Flat Rate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Childcare</controllingFieldValue>
+            <valueName>Camps &amp; Activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Senior Care</controllingFieldValue>
+            <valueName>Home Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Senior Care</controllingFieldValue>
+            <valueName>Housing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Senior Care</controllingFieldValue>
+            <valueName>Adult Day Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recruiting Solutions</controllingFieldValue>
+            <valueName>Quarterly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recruiting Solutions</controllingFieldValue>
+            <valueName>Annual</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

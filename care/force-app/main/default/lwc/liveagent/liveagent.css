@@ -1,0 +1,95 @@
+.toastMessage.forceActionsText{
+     white-space : pre-line;
+}
+
+div {
+    display: block;
+}
+
+.chat-wrapper{
+    width: 238px;
+    color: #333;
+    font: 12px arial,sans-serif;
+    margin-bottom: 20px;
+}
+
+.left {
+    float: left;
+    width: 140px;
+}
+
+.right {
+    float: right;
+}
+
+.bottom {
+    clear: both;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.off .dot {
+    background-color: #888;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: #27e4c4;
+    display: inline-block;
+    margin-right: 8px;
+    margin-top: 5px;
+    position: relative;
+    top: .5px;
+}
+
+.on,  .off {
+    font-size: 10px;
+}
+
+.label {
+    font-size: 120%;
+/*    
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+    letter-spacing: .5px;
+    */
+}
+
+.btn {
+    background-image: none;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.btn-primary-2{
+    color: #fff;
+    background-color: #444;
+    border-color: #444;
+    will-change: transform;
+    transform: scale(1);
+    transition: transform 300ms ease-out, background 300ms ease-out, -webkit-transform 300ms ease-out;
+}
+
+.btn-sm{
+    font-size: 16px;
+    min-height: 30px;
+    min-width: 100px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn{
+    border-radius: 50px;
+    line-height: 23px;
+    background-repeat: repeat-x;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: inline-block;    
+    margin-bottom: 0;
+    vertical-align: middle;
+}

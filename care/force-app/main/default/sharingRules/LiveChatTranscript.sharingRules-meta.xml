@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Chat_Transcripts_for_EMail_Rep</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Chat Transcripts for EMail Rep</label>
+        <sharedTo>
+            <role>E_Mail_Team</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>E_Mail_Team</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

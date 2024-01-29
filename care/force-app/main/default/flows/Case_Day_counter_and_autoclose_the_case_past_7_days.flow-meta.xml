@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Sends the email to contact email</description>
+        <name>MemberCare_AutocloseCase</name>
+        <label>MemberCare-AutocloseCase</label>
+        <locationX>842</locationX>
+        <locationY>492</locationY>
+        <actionName>Case.MemberCare_AutocloseCase</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>EmailMessage</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.MemberCare_AutocloseCase</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Check_if_Contact_Exist</name>
+        <label>Check if Contact Exist</label>
+        <locationX>974</locationX>
+        <locationY>384</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_if_Contact_Exist1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contact.Email</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ContactId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MemberCare_AutocloseCase</targetReference>
+            </connector>
+            <label>Check if Contact Exist</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Once Case Status is updated to “On Hold (Auto-Close)” and Email Status is updated to  “Agent Responded” or “Agent Read”</description>
+        <name>Is_Case_Status_On_Hold_Auto_Close</name>
+        <label>Is Case Status On Hold (Auto-Close)</label>
+        <locationX>314</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Case_Status_On_Hold_and_Email_Status_is_Agent_Responded_or_Agent_Read</name>
+            <conditionLogic>(1 AND 2 AND 3) AND ( 4 OR 5 )</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>On Hold (Auto-Close)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Status</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Email_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Agent Read</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Email_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Agent Responded</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_On_Hold_Day_Counter_to_timestamp</targetReference>
+            </connector>
+            <label>Case Status On Hold and  Email Status is “Agent Responded” or “Agent Read”</label>
+        </rules>
+        <rules>
+            <name>Email_Status_is_Updated_to_Customer_Responded</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Email_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer Responded</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Email Status is Updated to Customer Responded</label>
+        </rules>
+    </decisions>
+    <description>Counts 7 days from today when Case Status is “On Hold (Auto-Close)” and Email Status is “Agent Responded” or “Agent Read”, this will help to Auto Close the Case after 7 days.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Number of days the case is on Hold</description>
+        <name>NumberofDaysPassed</name>
+        <dataType>Number</dataType>
+        <expression>Now() - {!$Record.On_Hold_Day_Counter__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>captures the current timestamp</description>
+        <name>varDT_HoldStatusTime</name>
+        <dataType>DateTime</dataType>
+        <expression>Now()</expression>
+    </formulas>
+    <interviewLabel>Case Day counter and autoclose the case past 7 days {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case Day counter and autoclose the case past 7 days</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Email_Message</name>
+        <label>Email Message</label>
+        <locationX>842</locationX>
+        <locationY>708</locationY>
+        <inputAssignments>
+            <field>EmailMessageId</field>
+            <value>
+                <elementReference>EmailMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RelationAddress</field>
+            <value>
+                <elementReference>$Record.Contact.Email</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RelationType</field>
+            <value>
+                <stringValue>ToAddress</stringValue>
+            </value>
+        </inputAssignments>
+        <object>EmailMessageRelation</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>creating email message</description>
+        <name>EmailMessage</name>
+        <label>EmailMessage</label>
+        <locationX>842</locationX>
+        <locationY>600</locationY>
+        <connector>
+            <targetReference>Email_Message</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>FromAddress</field>
+            <value>
+                <elementReference>$User.Email</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>HtmlBody</field>
+            <value>
+                <elementReference>emailBody</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>3</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>emailSubject</elementReference>
+            </value>
+        </inputAssignments>
+        <object>EmailMessage</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <description>Auto closes the case</description>
+        <name>Auto_Close_the_Case</name>
+        <label>Auto Close the Case</label>
+        <locationX>974</locationX>
+        <locationY>276</locationY>
+        <connector>
+            <targetReference>Check_if_Contact_Exist</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update the field On Hold Day Counter on Case  triggering record with the timestamp</description>
+        <name>Update_On_Hold_Day_Counter_to_timestamp</name>
+        <label>Update On Hold Day Counter to timestamp</label>
+        <locationX>50</locationX>
+        <locationY>384</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>On Hold (Auto-Close)</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>On_Hold_Day_Counter__c</field>
+            <value>
+                <elementReference>varDT_HoldStatusTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>518</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Case_Status_On_Hold_Auto_Close</targetReference>
+        </connector>
+        <filterLogic>(4 AND (5 OR 6 OR 7 OR 8 ) ) OR ( 1 AND ( 2 OR 3)  AND (5 OR 6 OR 7 OR 8 ) )</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>On Hold (Auto-Close)</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Email_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Agent Read</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Email_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Agent Responded</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Email_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Customer Responded</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01270000000HmqbAAC</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01270000000HmqcAAC</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01270000000DxzjAAC</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01270000000Dq7EAAS</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <name>Auto_close_the_case_once_it_Past_7_days</name>
+            <connector>
+                <targetReference>Auto_Close_the_Case</targetReference>
+            </connector>
+            <label>Auto close the case once it Past 7 days</label>
+            <offsetNumber>7</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>On_Hold_Day_Counter__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <description>Email Body for autoclose</description>
+        <name>emailBody</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;font-family: arial;&quot;&gt;Dear Customer,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial;&quot;&gt;Thank you for contacting Care.com.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial;&quot;&gt;This case has now been closed. If you have any additional questions, please visit our Help Center &amp;lt;link to:&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://www.care.com/help-faqs-p1009.html&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: arial;&quot;&gt;http://www.care.com/help-faqs-p1009.html&lt;/a&gt;&lt;span style=&quot;font-family: arial;&quot;&gt;&amp;nbsp;&amp;gt;. To reach out to our Member Care team, please click on the Contact Us button in the bottom right corner of any page in our Help Center.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial;&quot;&gt;Thank you!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Sincerely,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Member Care Services&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <description>email subject</description>
+        <name>emailSubject</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Thank you for contacting Member Care.&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <variables>
+        <description>captures the current timestamp</description>
+        <name>varDT_StatusUpdateTime</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

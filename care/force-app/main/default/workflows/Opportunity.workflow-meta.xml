@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Billed_Date</fullName>
+        <field>Billed_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Billed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Close_Date_Today</fullName>
+        <field>CloseDate</field>
+        <formula>Today()</formula>
+        <name>Close Date: Today</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Contract_Status_Last_Change_Update</fullName>
+        <description>Update Field Contract Status on WPS Opportunity with actual datetime.</description>
+        <field>Contract_Status_Last_Change__c</field>
+        <formula>NOW()</formula>
+        <name>Contract Status Last Change_Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_Referral_Fee_from_Account_to_Opport</fullName>
+        <field>Referral_Fee__c</field>
+        <formula>Account.Referral_Fee__c</formula>
+        <name>Copy Referral Fee from Account to Opport</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Forecast_Update_with_Probability</fullName>
+        <field>Manager_Forecast__c</field>
+        <formula>IF(ISCHANGED(Probability), Probability, Manager_Forecast__c)</formula>
+        <name>Forecast Update with Probability</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IT_Security_Review_Status_Update</fullName>
+        <description>Updates IT_Security_Status_Last_Changed__c field whenever IT_Security_Review_Status_Update field value changes.</description>
+        <field>IT_Security_Status_Last_Changed__c</field>
+        <formula>NOW()</formula>
+        <name>IT_Security_Review_Status_Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NDA_Status_Update</fullName>
+        <description>Update Field NDA_Status_Last_Changed__c to current date upon every time value change for the field NDA_Status_Update</description>
+        <field>NDA_Status_Last_Changed__c</field>
+        <formula>NOW()</formula>
+        <name>NDA_Status_Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_Default_Provider_Stage</fullName>
+        <description>JC 11/23 - Default stage for the Opportunity</description>
+        <field>StageName</field>
+        <literalValue>Unassigned</literalValue>
+        <name>Opportunity: Default Provider Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_Override_Date</fullName>
+        <field>Override_Date__c</field>
+        <formula>CloseDate</formula>
+        <name>Populate Override Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Qualified</fullName>
+        <field>StageName</field>
+        <literalValue>Qualified</literalValue>
+        <name>Qualified</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Opportunity_Gift_to_True</fullName>
+        <description>This field sets the Opportunity.Gift__c field to true.</description>
+        <field>Gift__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Opportunity Gift to True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Date_Contract_Negotiation_Initiat</fullName>
+        <field>WPS_Date_Contract_Negotiation_Initiated__c</field>
+        <formula>TODAY()</formula>
+        <name>Update Date Contract Negotiation Initiat</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>WPS_Initial_Meeting_Happened</fullName>
+        <field>Initial_Meeting_Happened__c</field>
+        <literalValue>1</literalValue>
+        <name>WPS Initial Meeting Happened</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Base_Rate</fullName>
+        <field>Base_Rate_Currency__c</field>
+        <formula>IF( ISNULL(Base_Rate_Currency__c)  , Winning_Provider__r.Base_Rate_Currency__c, Base_Rate_Currency__c)</formula>
+        <name>update Base Rate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Base_Rate_percent</fullName>
+        <field>Base_Rate_Per__c</field>
+        <formula>IF(  ISNULL(  Base_Rate_Per__c ) , Winning_Provider__r.Base_Rate_Percent__c,Base_Rate_Per__c)</formula>
+        <name>update Base Rate percent</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Care_Charge</fullName>
+        <field>Care_Charge_Currency__c</field>
+        <formula>IF(  ISNULL(Care_Charge_Currency__c ) , Winning_Provider__r.Care_Charge_Currency__c, Care_Charge_Currency__c )</formula>
+        <name>update Care Charge</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Care_Charge_Per</fullName>
+        <field>Care_Charge_Per__c</field>
+        <formula>IF( ISNULL(  Care_Charge_Per__c  ) , Winning_Provider__r.Care_Charge_Percent__c, Care_Charge_Per__c)</formula>
+        <name>update Care Charge Per</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Flat_Fee</fullName>
+        <field>Flat_Fee_per__c</field>
+        <formula>IF( ISNULL(Flat_Fee_per__c), Winning_Provider__r.Flat_Fee__c, Flat_Fee_per__c)</formula>
+        <name>update Flat Fee</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Authorized Contact</fullName>
+        <actions>
+            <name>HomePay_Authorized_Contact_Outreach</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <description>HP Sforce 1826 -- When a new AC Opportunity &gt; Product Type = Authorized Contact is created, we would like SF to Auto-create the following new Follow-Up Task</description>
+        <formula>$Setup.Override_Validation_Rules__c.Override_Opportunity_Validation__c  = false &amp;&amp;  RecordType.Name=&apos;HomePay Referral&apos; &amp;&amp; ISPICKVAL(Product_Type__c,&apos;Authorized Contact&apos;) &amp;&amp;  (ISNEW() || ISCHANGED( StageName ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto-Populate Override Date</fullName>
+        <actions>
+            <name>Populate_Override_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>true</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Billed Date</fullName>
+        <actions>
+            <name>Billed_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>SC - Jason Cooke (Innoveer) 10/24/11 - Set the Billed Date on the Opportunity when the Billed Flag is checked</description>
+        <formula>AND(Billed__c = true,  ISNULL(Billed_Date__c), $RecordType.DeveloperName = &apos;SCR_Seeker&apos; )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Business Development Referrall</fullName>
+        <actions>
+            <name>Home_Pay_BD_Referral_TY</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <description>HP - Sforce 1826 -- When a new Referral Opportunity &gt; Product Type = Referral is created and the Referral Opportunity &gt; How did you hear about us? = Business Development, we would like SF to Auto-create the following new Follow-Up Task:</description>
+        <formula>$Setup.Override_Validation_Rules__c.Override_Opportunity_Validation__c  = false  &amp;&amp; RecordType.Name=&apos;HomePay Referral&apos; &amp;&amp; ISPICKVAL(Product_Type__c,&apos;Referral&apos;) &amp;&amp; ISPICKVAL(How_did_you_hear_about_Care_com__c,&apos;Business Development&apos;) &amp;&amp; Account.Name &lt;&gt;  &apos;HomePay Holding Account&apos;  &amp;&amp;  (ISNEW() || ISCHANGED( StageName ) || (ISCHANGED(How_did_you_hear_about_Care_com__c) &amp;&amp; ISPICKVAL(How_did_you_hear_about_Care_com__c,&apos;Business Development&apos;)) || ( ISCHANGED(AccountId) &amp;&amp; Account.Name &lt;&gt;  &apos;HomePay Holding Account&apos; ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CAW%3A Set Close Date For Stage 10</fullName>
+        <actions>
+            <name>Close_Date_Today</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>10-Dead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WPS Opportunity,International WPS Opportunity</value>
+        </criteriaItems>
+        <description>Set the Close Date to (TODAY) when the opportunities are moved to 10-Dead for WPS Opportunity Record Type and International WPS Opportunity Record Type</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>CAW%3A Set Close Date For Stage 8</fullName>
+        <actions>
+            <name>Close_Date_Today</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>8-Closed-Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WPS Opportunity,International WPS Opportunity</value>
+        </criteriaItems>
+        <description>Set the Close Date to (TODAY) when the opportunities are moved to 8-Closed-Lost  for WPS Opportunity Record Type and International WPS Opportunity Record Type</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Capture the Billing details from the Provider on the Opportunity</fullName>
+        <actions>
+            <name>update_Base_Rate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>update_Base_Rate_percent</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>update_Care_Charge</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>update_Care_Charge_Per</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>update_Flat_Fee</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>SC - Vaibhav Kulkarni (10/24/2011) Capture the Billing details from the Provider on the Opportunity.</description>
+        <formula>AND($RecordType.DeveloperName = &apos;SCR_Seeker&apos;, !(ISNULL(Winning_Provider__c)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Closed Pending tasks</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed pending</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Provider</value>
+        </criteriaItems>
+        <description>Auto create tasks when provider opportunity set to &quot;closed pending&quot;</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contract_Status_Date_Update</fullName>
+        <actions>
+            <name>Contract_Status_Last_Change_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Sets the datetime everytime the field contract_status__c is changed.</description>
+        <formula>ISCHANGED(Contract_Status__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Converted Lead - Provider Opportunity</fullName>
+        <actions>
+            <name>Opportunity_Default_Provider_Stage</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Converted_Lead_Record_Type__c</field>
+            <operation>equals</operation>
+            <value>SCR Provider</value>
+        </criteriaItems>
+        <description>Jason Cooke (Innoveer) 10/18/11 - Set the Opportunity Record Type to Provider for converted Provider leads</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Converted Lead - Seeker Opportunity</fullName>
+        <actions>
+            <name>Qualified</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Converted_Lead_Record_Type__c</field>
+            <operation>equals</operation>
+            <value>SCR Seeker</value>
+        </criteriaItems>
+        <description>Jason Cooke (Innoveer) 10/18/11 - Set the Opportunity Record Type for converted Seeker Leads</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Forecast Update with Probability</fullName>
+        <actions>
+            <name>Forecast_Update_with_Probability</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WPS Opportunity (KCE Lead),WPS Opportunity,MKP National Opportunity,KU Opportunity,International WPS Opportunity</value>
+        </criteriaItems>
+        <description>Sforce 1800 -- Manager Forecast% is updated with the Probability%</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>IT_Security_Review_Status_Update</fullName>
+        <actions>
+            <name>IT_Security_Review_Status_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Sets the datetime everytime the field IT_Security_Review_Status__c is changed.</description>
+        <formula>ISCHANGED(IT_Security_Review_Status__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>NDA_Status_Update</fullName>
+        <actions>
+            <name>NDA_Status_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Sets the datetime everytime the field NDA_Status_Update is changed.</description>
+        <formula>ISCHANGED(NDA_Status__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Referral Member Has Changed</fullName>
+        <active>false</active>
+        <description>A rule that runs whenever the Referral_Member__c is added or changed.</description>
+        <formula>ISNEW() ||  ISCHANGED( Referral_Member__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Alert to Contracts Manager Upon SLA Check</fullName>
+        <active>false</active>
+        <description>Created as part of &apos;SFORCE-1955 SLA check box&apos;. It sends notification email to all Contract managers upon checking the SLA checkbox.</description>
+        <formula>IF(ISNEW(),SLA_s__c=true,PRIORVALUE(SLA_s__c) =false &amp;&amp; SLA_s__c=true)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Date Contract Negotiation Initiated</fullName>
+        <actions>
+            <name>Update_Date_Contract_Negotiation_Initiat</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WPS Opportunity,MKP National Opportunity</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>4-Negotiation/Review</value>
+        </criteriaItems>
+        <description>This field will populate to TODAY() when WPS opportunities are updated to Stage: 4-Negotiation/Review</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>WPS Initial Meeting Happened</fullName>
+        <actions>
+            <name>WPS_Initial_Meeting_Happened</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>SFORCE-2428 6/17/19.  2/12/19 changed to fire at stages 2 to 3.
+SFORCE-1104 1/8/2016</description>
+        <formula>AND(OR(ISPICKVAL(Qualified_By__c,&quot;Paulina Towner&quot;),  ISPICKVAL(Qualified_By__c,&quot;Jacob Puccio&quot;),  ISPICKVAL(Qualified_By__c,&quot;Ali Thomas&quot;)),   OR(RecordTypeId = &quot;01270000000Hl9b&quot;,  RecordTypeId = &quot;01270000000UQHH&quot;,  RecordTypeId = &quot;01239000000UQYr&quot;,  RecordTypeId = &quot;01270000000UQG9&quot;),  ISPICKVAL(PRIORVALUE(StageName),&quot;2-Qualify/Needs Analysis&quot;),(ISPICKVAL(StageName,&quot;3-Proposal/Price Quote&quot;)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WPS Oppty stage 5</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>5-Acceptance of Proposal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WPS Opportunity</value>
+        </criteriaItems>
+        <description>Fires when WPS Opportunity hits stage 5 to Alert Maria Sanez, Ben Zemlin, Sarah Sylvain and Chrissi Antilus</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>WPS Oppty stage 6</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>6-Closed-Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WPS Opportunity</value>
+        </criteriaItems>
+        <description>Fires when WPS opportunity hits stage 6 to Alert Maria Sanez, Ben Zemlin, Sarah Sylvain and Chrissi Antilus</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>XWPS_Oppty_Renewal_120day_Alerts</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WPS Opportunity</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>6-Closed-Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Type</field>
+            <operation>equals</operation>
+            <value>Existing Business</value>
+        </criteriaItems>
+        <description>Email notification for WPS Opportunity renewal in 120 days</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Opportunity.Effective_Date__c</offsetFromField>
+            <timeLength>240</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <tasks>
+        <fullName>HomePay_Agency_Referral_TY</fullName>
+        <assignedTo>carolyn.livingston@myhomepay.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>HomePay Agency Referral TY</subject>
+    </tasks>
+    <tasks>
+        <fullName>HomePay_Authorized_Contact_Outreach</fullName>
+        <assignedTo>czsfadmin@care.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>HomePay Authorized Contact Outreach</subject>
+    </tasks>
+    <tasks>
+        <fullName>Home_Pay_BD_Referral_TY</fullName>
+        <assignedTo>ramaganesh.guttula@care.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Home Pay BD Referral TY</subject>
+    </tasks>
+</Workflow>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Utilities__c</fullName>
+    <description>Sforce 1856 -- Senior Care - Create new record page for Life Plan Communities</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Are there additional costs for cable, internet, phone?</inlineHelpText>
+    <label>Utilities</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

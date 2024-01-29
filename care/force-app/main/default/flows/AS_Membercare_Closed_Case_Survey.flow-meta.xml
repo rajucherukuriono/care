@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Send_Closed_Case_Survey_Email_to_AS_Member_who_Hired</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A1</name>
+        <label>Send Survey when Hired</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <actionName>Case.Send_Closed_Case_Survey_Email_to_AS_Member_who_Hired</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Send_Closed_Case_Survey_Email_to_AS_Member_who_Hired</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Send_Close_Case_Survey_to_AS_Member_who_did_not_hire</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_3_A1</name>
+        <label>Send Survey, when not hired</label>
+        <locationX>300</locationX>
+        <locationY>200</locationY>
+        <actionName>Case.Send_Close_Case_Survey_to_AS_Member_who_did_not_hire</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Send_Close_Case_Survey_to_AS_Member_who_did_not_hire</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Hired</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision2</name>
+        <label>myDecision2</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_3</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_3</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_3_A1</targetReference>
+            </connector>
+            <label>Not Hired</label>
+        </rules>
+    </decisions>
+    <description>Sends automated Closed Case Survey to member for AS Cases. SFORCE-942. added EmailCheck</description>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND(
+TEXT([Case].STATUS)=&apos;Closed&apos;,	
+OR([Case].RecordType.Name=&apos;AS - Child Care&apos;,
+[Case].RecordType.Name=&apos;AS - Tutor&apos;,
+[Case].RecordType.Name=&apos;AS - Housekeeping&apos;,
+[Case].RecordType.Name=&apos;AS - Pet Care&apos;,
+[Case].RecordType.Name=&apos;AS - Personal Assistant&apos;),
+TEXT([Case].Completed_Status__c)=&apos;Hired via Assisted Search&apos;,
+NOT(ISBLANK([Case].ContactEmail)),
+($Setup.Override_Validation_Rules__c.Override_Case_Processes__c= FALSE)
+)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_1</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+TEXT({!myVariable_current.Status})=&apos;Closed&apos;,	
+OR({!myVariable_current.RecordType.Name}=&apos;AS - Child Care&apos;,
+{!myVariable_current.RecordType.Name}=&apos;AS - Tutor&apos;,
+{!myVariable_current.RecordType.Name}=&apos;AS - Housekeeping&apos;,
+{!myVariable_current.RecordType.Name}=&apos;AS - Pet Care&apos;,
+{!myVariable_current.RecordType.Name}=&apos;AS - Personal Assistant&apos;),
+TEXT({!myVariable_current.Completed_Status__c})=&apos;Hired via Assisted Search&apos;,
+NOT(ISBLANK({!myVariable_current.ContactEmail})),
+({!$Setup.Override_Validation_Rules__c.Override_Case_Processes__c}= FALSE)
+)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>AND(
+TEXT([Case].STATUS)=&apos;Closed&apos;,	
+OR([Case].RecordType.Name=&apos;AS - Child Care&apos;,
+[Case].RecordType.Name=&apos;AS - Tutor&apos;,
+[Case].RecordType.Name=&apos;AS - Housekeeping&apos;,
+[Case].RecordType.Name=&apos;AS - Pet Care&apos;,
+[Case].RecordType.Name=&apos;AS - Personal Assistant&apos;),
+OR(TEXT([Case].Completed_Status__c)=&apos;Hired Externally&apos;,TEXT([Case].Completed_Status__c)=&apos;Stopped Responding&apos;,TEXT([Case].Completed_Status__c)=&apos;Needs Changed&apos;,ISBLANK(TEXT([Case].Completed_Status__c))),
+NOT(ISBLANK([Case].ContactEmail)),
+($Setup.Override_Validation_Rules__c.Override_Case_Processes__c= FALSE)
+)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_3</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+TEXT({!myVariable_current.Status})=&apos;Closed&apos;,	
+OR({!myVariable_current.RecordType.Name}=&apos;AS - Child Care&apos;,
+{!myVariable_current.RecordType.Name}=&apos;AS - Tutor&apos;,
+{!myVariable_current.RecordType.Name}=&apos;AS - Housekeeping&apos;,
+{!myVariable_current.RecordType.Name}=&apos;AS - Pet Care&apos;,
+{!myVariable_current.RecordType.Name}=&apos;AS - Personal Assistant&apos;),
+OR(TEXT({!myVariable_current.Completed_Status__c})=&apos;Hired Externally&apos;,TEXT({!myVariable_current.Completed_Status__c})=&apos;Stopped Responding&apos;,TEXT({!myVariable_current.Completed_Status__c})=&apos;Needs Changed&apos;,ISBLANK(TEXT({!myVariable_current.Completed_Status__c}))),
+NOT(ISBLANK({!myVariable_current.ContactEmail})),
+({!$Setup.Override_Validation_Rules__c.Override_Case_Processes__c}= FALSE)
+)</expression>
+    </formulas>
+    <interviewLabel>AS_Membercare_Closed_Case_Survey-5_InterviewLabel</interviewLabel>
+    <label>AS Membercare Closed Case Survey</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>Case</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <startElementReference>myDecision</startElementReference>
+    <status>Draft</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+</Flow>

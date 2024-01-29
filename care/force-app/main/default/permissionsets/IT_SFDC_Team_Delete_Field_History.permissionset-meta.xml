@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>To grant  “Delete from Field History” and “Delete from Field History Archive” permissions to SFDC TEam members. For temporarily use.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>IT: SFDC Team - Delete Field History</label>
+</PermissionSet>

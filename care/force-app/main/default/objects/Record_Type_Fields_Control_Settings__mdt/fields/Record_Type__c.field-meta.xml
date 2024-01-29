@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Type__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Record Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BUC</fullName>
+                <default>false</default>
+                <label>BUC</label>
+            </value>
+            <value>
+                <fullName>Senior Care Consult</fullName>
+                <default>false</default>
+                <label>Senior Care Consult</label>
+            </value>
+            <value>
+                <fullName>AS - Standard</fullName>
+                <default>false</default>
+                <label>AS - Standard</label>
+            </value>
+            <value>
+                <fullName>AS - Child Care</fullName>
+                <default>false</default>
+                <label>AS - Child Care</label>
+            </value>
+            <value>
+                <fullName>AS - Housekeeping</fullName>
+                <default>false</default>
+                <label>AS - Housekeeping</label>
+            </value>
+            <value>
+                <fullName>AS - Personal Assistant</fullName>
+                <default>false</default>
+                <label>AS - Personal Assistant</label>
+            </value>
+            <value>
+                <fullName>AS - Pet Care</fullName>
+                <default>false</default>
+                <label>AS - Pet Care</label>
+            </value>
+            <value>
+                <fullName>AS - Tutor</fullName>
+                <default>false</default>
+                <label>AS - Tutor</label>
+            </value>
+            <value>
+                <fullName>AS - Child Care Center</fullName>
+                <default>false</default>
+                <label>AS - Child Care Center</label>
+            </value>
+            <value>
+                <fullName>Social Media US</fullName>
+                <default>false</default>
+                <label>Social Media US</label>
+            </value>
+            <value>
+                <fullName>Chargeback</fullName>
+                <default>false</default>
+                <label>Chargeback</label>
+            </value>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Mobile Help</fullName>
+                <default>false</default>
+                <label>Mobile Help</label>
+            </value>
+            <value>
+                <fullName>Call Center</fullName>
+                <default>false</default>
+                <label>Call Center</label>
+            </value>
+            <value>
+                <fullName>Senior Care Case Survey</fullName>
+                <default>false</default>
+                <label>Senior Care Case Survey</label>
+            </value>
+            <value>
+                <fullName>Senior Care Event Survey</fullName>
+                <default>false</default>
+                <label>Senior Care Event Survey</label>
+            </value>
+            <value>
+                <fullName>Senior Care Provider Feedback Survey</fullName>
+                <default>false</default>
+                <label>Senior Care Provider Feedback Survey</label>
+            </value>
+            <value>
+                <fullName>BUC US Surveys</fullName>
+                <default>false</default>
+                <label>BUC US Surveys</label>
+            </value>
+            <value>
+                <fullName>Member Care Case Survey</fullName>
+                <default>false</default>
+                <label>Member Care Case Survey</label>
+            </value>
+            <value>
+                <fullName>Assisted Search Survey</fullName>
+                <default>false</default>
+                <label>Assisted Search Survey</label>
+            </value>
+            <value>
+                <fullName>Assisted Search Survey - Provider</fullName>
+                <default>false</default>
+                <label>Assisted Search Survey - Provider</label>
+            </value>
+            <value>
+                <fullName>Member Surveys</fullName>
+                <default>false</default>
+                <label>Member Surveys</label>
+            </value>
+            <value>
+                <fullName>Not Selected</fullName>
+                <default>false</default>
+                <label>Not Selected</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

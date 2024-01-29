@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Aging</fullName>
+        <default>false</default>
+        <label>Aging</label>
+    </customValue>
+    <customValue>
+        <fullName>ATW</fullName>
+        <default>false</default>
+        <label>ATW</label>
+    </customValue>
+    <customValue>
+        <fullName>Breastfeeding Support</fullName>
+        <default>false</default>
+        <label>Breastfeeding Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Child Care</fullName>
+        <default>false</default>
+        <label>Child Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Combo</fullName>
+        <default>false</default>
+        <label>Combo</label>
+    </customValue>
+    <customValue>
+        <fullName>Combo + Persona</fullName>
+        <default>false</default>
+        <label>Combo + Persona</label>
+    </customValue>
+    <customValue>
+        <fullName>Commerce</fullName>
+        <default>false</default>
+        <label>Commerce</label>
+    </customValue>
+    <customValue>
+        <fullName>Concierge</fullName>
+        <default>false</default>
+        <label>Concierge</label>
+    </customValue>
+    <customValue>
+        <fullName>Daily Needs</fullName>
+        <default>false</default>
+        <label>Daily Needs</label>
+    </customValue>
+    <customValue>
+        <fullName>Domestic Help</fullName>
+        <default>false</default>
+        <label>Domestic Help</label>
+    </customValue>
+    <customValue>
+        <fullName>EAP Services</fullName>
+        <default>false</default>
+        <label>EAP Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Education</fullName>
+        <default>false</default>
+        <label>Education</label>
+    </customValue>
+    <customValue>
+        <fullName>Event</fullName>
+        <default>false</default>
+        <label>Event</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance ATW</fullName>
+        <default>false</default>
+        <label>Finance ATW</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance SFCG</fullName>
+        <default>false</default>
+        <label>Finance SFCG</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance Web</fullName>
+        <default>false</default>
+        <label>Finance Web</label>
+    </customValue>
+    <customValue>
+        <fullName>Help Desk</fullName>
+        <default>false</default>
+        <label>Help Desk</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal/Financial</fullName>
+        <default>false</default>
+        <label>Legal/Financial</label>
+    </customValue>
+    <customValue>
+        <fullName>Order Pubs</fullName>
+        <default>false</default>
+        <label>Order Pubs</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal</fullName>
+        <default>false</default>
+        <label>Personal</label>
+    </customValue>
+    <customValue>
+        <fullName>Retirement</fullName>
+        <default>false</default>
+        <label>Retirement</label>
+    </customValue>
+    <customValue>
+        <fullName>Seminar</fullName>
+        <default>false</default>
+        <label>Seminar</label>
+    </customValue>
+    <customValue>
+        <fullName>Successful Age</fullName>
+        <default>false</default>
+        <label>Successful Age</label>
+    </customValue>
+    <customValue>
+        <fullName>Telephone</fullName>
+        <default>false</default>
+        <label>Telephone</label>
+    </customValue>
+    <customValue>
+        <fullName>Telephone w/Per</fullName>
+        <default>false</default>
+        <label>Telephone w/Per</label>
+    </customValue>
+    <customValue>
+        <fullName>Unfulfilled</fullName>
+        <default>false</default>
+        <label>Unfulfilled</label>
+    </customValue>
+    <customValue>
+        <fullName>WEB LR-No Cases</fullName>
+        <default>false</default>
+        <label>WEB LR-No Cases</label>
+    </customValue>
+    <customValue>
+        <fullName>Web - No Cases</fullName>
+        <default>false</default>
+        <label>Web - No Cases</label>
+    </customValue>
+    <customValue>
+        <fullName>EAP</fullName>
+        <default>false</default>
+        <label>EAP</label>
+    </customValue>
+    <customValue>
+        <fullName>Health &amp; Wellness</fullName>
+        <default>false</default>
+        <label>Health &amp; Wellness</label>
+    </customValue>
+    <customValue>
+        <fullName>Health and Wellness</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Health and Wellness</label>
+    </customValue>
+    <customValue>
+        <fullName>TEST</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>TEST</label>
+    </customValue>
+    <masterLabel>Service Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

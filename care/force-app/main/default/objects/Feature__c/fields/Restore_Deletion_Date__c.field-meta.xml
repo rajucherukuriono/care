@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restore_Deletion_Date__c</fullName>
+    <description>used to indicate the date the record should be deleted or has been deleted.</description>
+    <externalId>false</externalId>
+    <label>Restore-Deletion-Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

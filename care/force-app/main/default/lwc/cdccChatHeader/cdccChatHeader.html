@@ -1,0 +1,16 @@
+<template>
+    <div class={containerClass}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="116" height="32" viewBox="0 0 136 32">
+            <use xlink:href={svgLogoUrl}></use>
+        </svg>
+        <h2 aria-live="polite">
+            {text}
+        </h2>
+        <button onclick={minimize} aria-live="off">
+            <lightning-icon class={iconClass} icon-name="utility:minimize_window" size="x-small"></lightning-icon>
+        </button>
+        <button onclick={close} aria-live="off">
+            <lightning-icon class={iconClass} icon-name="utility:close" size="x-small"></lightning-icon>
+        </button>
+    </div>
+</template>

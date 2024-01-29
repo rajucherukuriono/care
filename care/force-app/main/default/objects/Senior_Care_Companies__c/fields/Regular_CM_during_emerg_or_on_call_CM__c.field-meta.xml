@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regular_CM_during_emerg_or_on_call_CM__c</fullName>
+    <description>added for SFORCE-1922  RT Aging Life Care Manager  06/2018.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is the client’s ongoing CM available in the case of an emergency or is there one on-call CM for all clients?</inlineHelpText>
+    <label>Regular CM during emerg. or on call CM?</label>
+    <length>2048</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

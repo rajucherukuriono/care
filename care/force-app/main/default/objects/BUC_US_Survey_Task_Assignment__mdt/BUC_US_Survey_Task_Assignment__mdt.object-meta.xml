@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Holds the recordtype and assignee of the task that should be created from a BUC US Survey. SFORCE-2425</description>
+    <label>BUC US Survey Task Assignment</label>
+    <pluralLabel>BUC US Survey Task Assignments</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

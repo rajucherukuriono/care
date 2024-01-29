@@ -1,0 +1,28 @@
+<apex:page controller="OnLoadController" showHeader="false" sidebar="false" lightningstylesheets="true">
+
+<apex:includeScript value="/support/console/48.0/integration.js" />
+<apex:includeScript value="/canvas/sdk/js/48.0/publisher.js" />
+<apex:includeScript value="{!$Resource.CareDotComConsoleConroller}" />
+
+<apex:form id="all" style="width:100%">
+    <div align="center">
+        <apex:commandButton action="{!returnLinkAction}" 
+            disabled="true"
+            value="Next MC Case" 
+            oncomplete="moveToNextCaseFromHome('{!dispError}', '{!DesiredURL}','{!tryAgain}');"
+            styleClass="slds-vf-button_brand"/>
+        
+        <apex:commandButton action="{!switchLanguage}" 
+            reRender="executeSwitchBlock" 
+            id="executeSwitchBlock1" 
+            rendered="{!switchUserToGerman}" 
+            value="Switch me to the German Team"/>
+        <apex:commandButton action="{!switchLanguage}" 
+            reRender="executeSwitchBlock"   
+            id="executeSwitchBlock2" 
+            rendered="{!switchUserToEnglish}" 
+            value="Switch me to the English Team"/>
+    </div>
+
+</apex:form>
+</apex:page>

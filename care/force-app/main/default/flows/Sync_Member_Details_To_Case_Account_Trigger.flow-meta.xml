@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Pass Cases to Apex Action that will invoke the logic for SyncMemberDetailsToCase.</description>
+        <name>Sync_Member_Details_to_Case_Action</name>
+        <label>Sync Member Details to Case Action</label>
+        <locationX>308</locationX>
+        <locationY>408</locationY>
+        <actionName>SyncMemberDetailsToCase</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Update_Child_Cases_that_match_TLM_criteria</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>Cases</name>
+            <value>
+                <elementReference>Get_Child_Cases_that_match_TLM_criteria</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>SyncMemberDetailsToCase</nameSegment>
+        <outputParameters>
+            <assignToReference>Get_Child_Cases_that_match_TLM_criteria</assignToReference>
+            <name>output</name>
+        </outputParameters>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <description>When Instant ODS creates an Account, it&apos;s missing member details (because those details are not currently returned via API).  This results in a situation where Cases associated with these Accounts never get Member Details either.  This flow is intended to mitigate this issue.  It is invoked whenever member details are added to an Account &amp; it looks for Cases with blank member details created in the last 7 days.  If it finds any, it will update the member details of those Cases.
+
+If we ever update Instant ODS so that it&apos;s able to add member details on insert, this flow can be retired.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>LastModifiedDateCritera</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() - 7</expression>
+    </formulas>
+    <interviewLabel>Sync Member Details To Case Account Trigger {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Sync Member Details To Case (Instant ODS Helper)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get Cases related to Account that triggered the flow that have blank member details &amp; have been modified in the last 7 days.
+
+After review, we decided to add a Record Type filter, so that it only applies to the standard cases.  If we become more confident in the future, we can remove or change that filter.</description>
+        <name>Get_Child_Cases_that_match_TLM_criteria</name>
+        <label>Get Child Cases that match TLM criteria</label>
+        <locationX>308</locationX>
+        <locationY>288</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Sync_Member_Details_to_Case_Action</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Member_Type__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Member_Account_Type__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Member_Status__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>LastModifiedDate</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <elementReference>LastModifiedDateCritera</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01270000000Dq7EAAS</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update the Cases returned by the Apex Action.  These cases should have updated member details.</description>
+        <name>Update_Child_Cases_that_match_TLM_criteria</name>
+        <label>Update Child Cases that match TLM criteria</label>
+        <locationX>308</locationX>
+        <locationY>528</locationY>
+        <inputReference>Get_Child_Cases_that_match_TLM_criteria</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>MemberType__pc</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type__pc</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__pc</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Get_Child_Cases_that_match_TLM_criteria</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

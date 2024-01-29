@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Certification_standards_met_for_pers_CGs__c</name>
+    <picklistValues>
+        <masterLabel>No: the above standards are not met for all workers who provide personal care.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes: the above standards are met for all workers who provide personal care.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

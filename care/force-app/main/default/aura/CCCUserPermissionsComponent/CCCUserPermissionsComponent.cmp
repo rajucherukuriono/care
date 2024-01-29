@@ -1,0 +1,108 @@
+<aura:component controller="CCCUserPermissionsController" implements="force:appHostable" extends="c:CCCBase">
+
+    <!-- Public Attributes -->
+    <aura:attribute name="confirmSaveClicked" type="Boolean" default="false" access="public" />
+
+    <!-- Private Attributes -->
+    <aura:attribute name="userRecords" type="List" access="private" />
+    <aura:attribute name="composerServiceRecords" type="List" access="private" />
+
+    <!-- Aura Attributes - Modal Attributes -->
+    <aura:attribute name="userRecord" type="User" access="public" />
+    <aura:attribute name="saveClicked" type="Boolean" default="false" access="public" />
+
+    <!-- Init -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <!-- Main Body -->
+    <div class="slds-var-m-top_large">
+
+        <div class="slds-grid slds-grid_vertical-align-start slds-gutters slds-wrap">
+
+            <div class="slds-col slds-size_1-of-1">
+                <div class="slds-text-heading_small slds-var-m-bottom_x-small">Contract Composer User-Vertical Permissions</div>
+            </div>
+
+            <aura:if isTrue="{!not(empty(v.userRecords))}">
+                <div class="slds-col slds-size_1-of-1 slds-var-m-top_medium">
+
+                    <table class="slds-table slds-table_bordered slds-border_right slds-border_left" role="grid">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+
+                                <!-- Column Header - Name -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-var-p-around_x-small" title="Name">
+                                        Name
+                                    </div>
+                                </th>
+
+                                <!-- Column Header - Username -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-var-p-around_x-small" title="Username">
+                                        Username
+                                    </div>
+                                </th>
+
+                                <!-- Column Header - Permitted Verticals -->
+                                <th class="slds-text-title_caps" scope="col">
+                                    <div class="slds-truncate slds-var-p-around_x-small" title="Permitted Verticals">
+                                        Permitted Verticals
+                                    </div>
+                                </th>
+
+                                <!-- Column Header - Actions -->
+                                <th class="slds-text-title_caps slds-text-align_right" scope="col">
+                                    <div class="slds-truncate slds-var-p-around_x-small" title="Actions">
+                                        &nbsp;
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <aura:iteration items="{!v.userRecords}" var="u">
+                                <tr class="slds-hint-parent">
+
+                                    <!-- Name -->
+                                    <th scope="row" tabindex="0">
+                                        <div class="slds-truncate slds-var-p-around_x-small">
+                                            {!u.Name}
+                                        </div>
+                                    </th>
+
+                                    <!-- Username -->
+                                    <th scope="row" tabindex="0">
+                                        <div class="slds-truncate slds-var-p-around_x-small">
+                                            {!u.Username}
+                                        </div>
+                                    </th>
+
+                                    <!-- Permitted Verticals -->
+                                    <td role="gridcell" scope="col" class="slds-cell-wrap">
+                                        <div class="slds-wrap slds-var-p-around_x-small">
+                                            {!u.Contract_Composer_Permitted_Verticals__c}
+                                        </div>
+                                    </td>
+
+                                    <!-- Actions -->
+                                    <td role="gridcell">
+                                        <div class="slds-var-p-around_x-small slds-text-align_right">
+                                            <lightning:button variant="brand" label="Modify" iconName="utility:edit"
+                                                iconPosition="left" onclick="{!c.handleModifyUserClicked}" value="{!u.Id}" />
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </aura:iteration>
+
+                        </tbody>
+                    </table>
+                </div>
+            </aura:if>
+
+        </div>
+
+    </div>
+
+</aura:component>

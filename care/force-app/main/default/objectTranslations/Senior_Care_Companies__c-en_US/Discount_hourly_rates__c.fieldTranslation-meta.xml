@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Discount_hourly_rates__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No, I am not willing to discount my rates.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes, I am willing to discount my rates.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

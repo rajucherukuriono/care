@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BUC_Surveys</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>BUC_Survey_Type__c</columns>
+    <columns>BUC_Account_ID__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>BUC_Job_ID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>backup</value>
+    </filters>
+    <filters>
+        <field>BUC_Survey_Type__c</field>
+        <operation>equals</operation>
+        <value>Fulfilled,Unfulfilled,Micro</value>
+    </filters>
+    <label>BUC Surveys</label>
+</ListView>

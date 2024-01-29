@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>All_Sales_CAW_Oppty_Read</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>All Sales: CAW Oppty - Read</label>
+        <sharedTo>
+            <group>Share_All_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Marketplace ISR Opportunity,MKP National Opportunity</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HomePay_HomePay_Opportunities_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HomePay: HomePay Opportunities - Edit</label>
+        <sharedTo>
+            <group>Share_HomePay</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>HomePay Partner,HomePay Referral</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Hubspot_Sharing_Opp</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Hubspot Sharing Opp</label>
+        <sharedTo>
+            <role>Hubspot_Integration_User</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>HomePay Partner,HomePay Referral</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Operations_Center_Network_Dev_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Operations: Center Network Dev - Edit</label>
+        <sharedTo>
+            <group>Share_Care_Operations</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Center Network Development</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solution_Rep_2</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Marketing Solution Rep 2</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Rep_2</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Marketing_Solutions_Rep_2</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solution_Rep_3</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Marketing Solution Rep 3</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Rep_3</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Marketing_Solutions_Rep_3</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solution_Rep_4</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Marketing Solution Rep 4</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Rep_4</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Marketing_Solutions_Rep_4</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solution_Rep_5</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Marketing Solution Rep 5</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Rep_5</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Marketing_Solutions_Rep_5</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solution_Rep_6</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Marketing Solution Rep 6</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Rep_6</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Marketing_Solutions_Rep_6</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solution_Reps</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Grants View Access to Opportunities owned by Marketing Solution Reps to  other Marketing Solution Reps</description>
+        <label>Marketing Solution Reps</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Rep</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Marketing_Solutions_Rep</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Manager_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketing Solutions Manager Sharing</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Manager_Sharing_2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketing Solutions Manager Sharing 2</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_2</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Manager_Sharing_3</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketing Solutions Manager Sharing 3</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_3</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Manager_Sharing_4</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketing Solutions Manager Sharing 4</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_4</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Manager_Sharing_5</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketing Solutions Manager Sharing 5</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_5</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Manager_Sharing_6</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketing Solutions Manager Sharing 6</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_6</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Manager_Sharing_7</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketing Solutions Manager Sharing 7</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Manager_7</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Rep_7</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Marketing Solutions Rep 7</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Rep_7</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Marketing_Solutions_Rep_7</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Training_Manager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketing Solutions Training Manager</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Training_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Training_Manager_2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketing Solutions Training Manager 2</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Training_Manager_2</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>ISR_Inside_Sales_Manager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Training_Team</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Marketing Solutions Training Team</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Rep_Training_Team</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Marketing_Solutions_Rep_Training_Team</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Marketing_Solutions_Training_Team_2</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Marketing Solutions Training Team 2</label>
+        <sharedTo>
+            <role>Marketing_Solutions_Rep_Training_Team_2</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Marketing_Solutions_Rep_Training_Team_2</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

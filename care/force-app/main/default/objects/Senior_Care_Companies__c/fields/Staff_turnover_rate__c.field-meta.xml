@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Staff_turnover_rate__c</fullName>
+    <externalId>false</externalId>
+    <label>Staff turnover rate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Low (0-20%)</fullName>
+                <default>false</default>
+                <label>Low (0-20%)</label>
+            </value>
+            <value>
+                <fullName>Med (20-50%)</fullName>
+                <default>false</default>
+                <label>Med (20-50%)</label>
+            </value>
+            <value>
+                <fullName>High (50% or more)</fullName>
+                <default>false</default>
+                <label>High (50% or more)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

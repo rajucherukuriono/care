@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSAT_Surveys</fullName>
+    <columns>NAME</columns>
+    <columns>Case__c</columns>
+    <columns>Contact__c</columns>
+    <columns>CSAT_Rating__c</columns>
+    <columns>NPS_Score__c</columns>
+    <columns>Rating_comments__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>US Member Care CSAT - Closed Case Survey</value>
+    </filters>
+    <label>US CSAT Surveys</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,15 @@
+.THIS .leftPaddingClass {
+    padding-left: 2rem;
+}
+
+.THIS .pillSize{
+    width: 100%;
+}
+
+.THIS .hideLabel label {
+    display: none;
+}
+
+.THIS .highlighted li {
+    background-color: #f9f9fa
+}

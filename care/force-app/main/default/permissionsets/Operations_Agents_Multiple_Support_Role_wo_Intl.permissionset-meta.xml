@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Agents that need to handle and support different cases within Ops US, see all US Member care and Safety, Quality, and also Assisted Search and Backup Care. This is without International cases</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Member_ID_CSR__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Operations Agents - Multiple Support Role without International</label>
+    <license>Salesforce</license>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Case</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <recordTypeVisibilities>
+        <recordType>Case.AS_Child_Care</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.AS_Housekeeping</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.AS_Personal_Assistant</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.AS_Pet_Care</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.AS_Tutor</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.Call_Center</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.Safety_Alert</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.Standard</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

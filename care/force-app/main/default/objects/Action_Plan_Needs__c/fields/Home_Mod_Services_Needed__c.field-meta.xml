@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Home_Mod_Services_Needed__c</fullName>
+    <externalId>false</externalId>
+    <label>Home Mod Services Needed</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Chair/stair lift - curved</fullName>
+                <default>false</default>
+                <label>Chair/stair lift - curved</label>
+            </value>
+            <value>
+                <fullName>Chair/stair lift - straight</fullName>
+                <default>false</default>
+                <label>Chair/stair lift - straight</label>
+            </value>
+            <value>
+                <fullName>Elevator/lifts</fullName>
+                <default>false</default>
+                <label>Elevator/lifts</label>
+            </value>
+            <value>
+                <fullName>Emergency response systems</fullName>
+                <default>false</default>
+                <label>Emergency response systems</label>
+            </value>
+            <value>
+                <fullName>Grab bars/bathroom safety</fullName>
+                <default>false</default>
+                <label>Grab bars/bathroom safety</label>
+            </value>
+            <value>
+                <fullName>Safety tub/shower</fullName>
+                <default>false</default>
+                <label>Safety tub/shower</label>
+            </value>
+            <value>
+                <fullName>Wheelchair ramp</fullName>
+                <default>false</default>
+                <label>Wheelchair ramp</label>
+            </value>
+            <value>
+                <fullName>Widen doorways</fullName>
+                <default>false</default>
+                <label>Widen doorways</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

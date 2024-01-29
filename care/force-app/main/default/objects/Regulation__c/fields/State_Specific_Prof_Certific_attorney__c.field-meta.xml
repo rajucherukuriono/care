@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State_Specific_Prof_Certific_attorney__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>State-Specifc Professional Certifications - attorney</inlineHelpText>
+    <label>State-Specific Prof. Certific.-attorney</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

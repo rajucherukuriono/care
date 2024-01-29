@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hours_of_Event__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Provide requested start/end time of event, i.e. 1:00-3:00 pm EST</inlineHelpText>
+    <label>Hours of Event</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

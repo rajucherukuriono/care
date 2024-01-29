@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requests_Approaching_Fulfillment_Date</fullName>
+    <columns>NAME</columns>
+    <columns>Name__c</columns>
+    <columns>Email__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Request_Date__c</columns>
+    <columns>Fulfillment_Date__c</columns>
+    <columns>Request_Status__c</columns>
+    <columns>Case__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Fulfillment_Date__c</field>
+        <operation>equals</operation>
+        <value>NEXT_N_DAYS:5</value>
+    </filters>
+    <filters>
+        <field>Request_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed - Failed - Verification Failure,Completed - Declined - Remote Platform,Completed - Declined - Salesforce Platform,Completed - Success</value>
+    </filters>
+    <label>Requests Approaching Fulfillment Date</label>
+</ListView>

@@ -1,0 +1,8 @@
+/* adjusting help text position */
+.THIS .helptext div {
+    vertical-align: top !important;
+}
+ 
+.THIS.helptext div {
+    vertical-align: top !important;
+}

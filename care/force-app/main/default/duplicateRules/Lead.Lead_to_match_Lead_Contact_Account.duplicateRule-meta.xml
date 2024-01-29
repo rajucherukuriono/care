@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionOnInsert>Allow</actionOnInsert>
+    <actionOnUpdate>Allow</actionOnUpdate>
+    <alertText>Records might already exists. The red boxes indicate duplicate values. You can use one of the duplicate records shown.</alertText>
+    <description>SFORCE-2430 Fix Duplicate Rules</description>
+    <duplicateRuleFilter>
+        <booleanFilter xsi:nil="true"/>
+        <duplicateRuleFilterItems>
+            <field>Bypass_Duplicate_Rules__c</field>
+            <operation>equals</operation>
+            <value>false</value>
+            <sortOrder>1</sortOrder>
+            <table>User</table>
+        </duplicateRuleFilterItems>
+    </duplicateRuleFilter>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Lead</matchRuleSObjectType>
+        <matchingRule>Lead_to_Lead</matchingRule>
+        <objectMapping xsi:nil="true"/>
+    </duplicateRuleMatchRules>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Account</matchRuleSObjectType>
+        <matchingRule>Lead_to_Account_Fuzzy</matchingRule>
+        <objectMapping>
+            <inputObject>Lead</inputObject>
+            <mappingFields>
+                <inputField>Company</inputField>
+                <outputField>Name</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>Street</inputField>
+                <outputField>BillingStreet</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>Lead_Account_Type__c</inputField>
+                <outputField>Converted_Lead_B2B_Account_Record_Type__c</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>Phone</inputField>
+                <outputField>Phone</outputField>
+            </mappingFields>
+            <outputObject>Account</outputObject>
+        </objectMapping>
+    </duplicateRuleMatchRules>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Contact</matchRuleSObjectType>
+        <matchingRule>Lead_to_Contact</matchingRule>
+        <objectMapping>
+            <inputObject>Lead</inputObject>
+            <mappingFields>
+                <inputField>Company</inputField>
+                <outputField>AccountId</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>Contact_Record_Type__c</inputField>
+                <outputField>Converted_Lead_Record_Type__c</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>Email</inputField>
+                <outputField>Email</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>FirstName</inputField>
+                <outputField>FirstName</outputField>
+            </mappingFields>
+            <mappingFields>
+                <inputField>LastName</inputField>
+                <outputField>LastName</outputField>
+            </mappingFields>
+            <outputObject>Contact</outputObject>
+        </objectMapping>
+    </duplicateRuleMatchRules>
+    <isActive>true</isActive>
+    <masterLabel>Lead to match Lead/Contact/Account</masterLabel>
+    <operationsOnInsert>Alert</operationsOnInsert>
+    <operationsOnInsert>Report</operationsOnInsert>
+    <operationsOnUpdate>Alert</operationsOnUpdate>
+    <operationsOnUpdate>Report</operationsOnUpdate>
+    <securityOption>BypassSharingRules</securityOption>
+    <sortOrder>4</sortOrder>
+</DuplicateRule>

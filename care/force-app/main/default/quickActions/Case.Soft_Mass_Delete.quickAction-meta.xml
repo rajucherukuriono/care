@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Action_Time__c</field>
+        <literalValue>No action</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Contact_Reason__c</field>
+        <literalValue>Marketing and Admin Communication</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Contact_Secondary_Reason__c</field>
+        <literalValue>Spam</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Contact_Theme__c</field>
+        <literalValue>User Experience</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Current_Member_Type__c</field>
+        <literalValue>Unknown</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Reason</field>
+        <literalValue>Spam</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Secondary_Case_Reason__c</field>
+        <literalValue>Closing Spam</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Sentiment__c</field>
+        <literalValue>Neutral</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+    </fieldOverrides>
+    <label>Soft Mass Delete</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>OwnerId</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>CaseNumber</field>
+                <uiBehavior>Readonly</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Origin</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>CreatedDate</field>
+                <uiBehavior>Readonly</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <type>Update</type>
+</QuickAction>

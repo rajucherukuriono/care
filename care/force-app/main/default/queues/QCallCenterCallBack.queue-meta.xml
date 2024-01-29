@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>fake@e.mail</email>
+    <name>Member Care - Call Center Call B</name>
+    <queueMembers>
+        <roleAndSubordinates>
+            <roleAndSubordinate>Operations_Manager</roleAndSubordinate>
+        </roleAndSubordinates>
+        <users>
+            <user>jonaville.onggay@care.com</user>
+            <user>ricky.bandoy@care.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

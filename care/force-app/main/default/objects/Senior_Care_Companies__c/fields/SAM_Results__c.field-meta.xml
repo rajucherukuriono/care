@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAM_Results__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Assisted Living Communities: SAM Results on assisted living and owner.
+Geriatric Care Manager: SAM Results on agency and owner.
+Nursing Homes: SAM Results on nursing home and owner.</inlineHelpText>
+    <label>SAM Results</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Match</fullName>
+                <default>false</default>
+                <label>Match</label>
+            </value>
+            <value>
+                <fullName>No Match</fullName>
+                <default>false</default>
+                <label>No Match</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Common_Questions_Asked__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>What were some of the common questions visitors asked you during the event?</inlineHelpText>
+    <label>Common Questions Asked</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

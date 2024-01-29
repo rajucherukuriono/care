@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Error_Threshold__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Indicates what percentage of errors should generate an email alert from the Error Montor (see wiki for more details).</inlineHelpText>
+    <label>Error Threshold</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Percent</type>
+</CustomField>

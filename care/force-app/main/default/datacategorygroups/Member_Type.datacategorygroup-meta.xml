@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>Seeker</label>
+            <name>Seeker</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Provider</label>
+            <name>Provider</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Marketplace</label>
+                <name>Marketplace</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Marketing Solutions</label>
+                <name>Marketing_Solutions</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Recruiting Solutions</label>
+                <name>Recruiting_Solutions</name>
+            </dataCategory>
+            <label>Company</label>
+            <name>Company</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Member Type</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

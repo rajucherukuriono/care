@@ -1,0 +1,17 @@
+<aura:component>
+
+    <ltng:require
+        styles="{!$Resource.nouislider  + '/nouislider.min.css'}"
+        scripts="{!$Resource.nouislider + '/nouislider.min.js'}"
+        afterScriptsLoaded="{!c.scriptsLoaded}" />
+
+    <aura:attribute name="minimumAge" type="Integer" access="public" />
+    <aura:attribute name="maximumAge" type="Integer" access="public" />
+    <aura:attribute name="formattedMinimumAge" type="String" access="public" />
+    <aura:attribute name="formattedMaximumAge" type="String" access="public" />
+
+    <aura:method name="updateSlider" action="{!c.handleUpdateSlider}" />
+
+    <div aura:id="slider"></div>
+
+</aura:component>

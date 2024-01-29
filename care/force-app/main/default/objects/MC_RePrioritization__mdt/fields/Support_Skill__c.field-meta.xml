@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Support_Skill__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Support Skill</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Skill Matched</fullName>
+                <default>false</default>
+                <label>No Skill Matched</label>
+            </value>
+            <value>
+                <fullName>Member Care - EN Sales</fullName>
+                <default>false</default>
+                <label>Member Care - EN Sales</label>
+            </value>
+            <value>
+                <fullName>Member Care - EN Tier 1</fullName>
+                <default>false</default>
+                <label>Member Care - EN Tier 1</label>
+            </value>
+            <value>
+                <fullName>Member Care - ROW Tier 1</fullName>
+                <default>false</default>
+                <label>Member Care - ROW Tier 1</label>
+            </value>
+            <value>
+                <fullName>Member Care - EN Tier 2</fullName>
+                <default>false</default>
+                <label>Member Care - EN Tier 2</label>
+            </value>
+            <value>
+                <fullName>Member Care - ROW Tier 2</fullName>
+                <default>false</default>
+                <label>Member Care - ROW Tier 2</label>
+            </value>
+            <value>
+                <fullName>MC Email</fullName>
+                <default>false</default>
+                <label>MC Email</label>
+            </value>
+            <value>
+                <fullName>Social US</fullName>
+                <default>false</default>
+                <label>Social US</label>
+            </value>
+            <value>
+                <fullName>Social International</fullName>
+                <default>false</default>
+                <label>Social International</label>
+            </value>
+            <value>
+                <fullName>Member Care - EN SM</fullName>
+                <default>false</default>
+                <label>Member Care - EN SM</label>
+            </value>
+            <value>
+                <fullName>Member Care - ROW SM</fullName>
+                <default>false</default>
+                <label>Member Care - ROW SM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

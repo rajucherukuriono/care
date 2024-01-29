@@ -1,0 +1,14 @@
+<template>
+    <div class="container">
+        <h3 class="heading">{heading}</h3>
+        <div class="topics">
+            <template if:true={topics}>
+                <template for:each={topics} for:item="topic">
+                    <div class="topic" key={topic.index}>
+                        <c-cdcc-popular-topic type={topic.type} id={topic.id} title={topic.title} url-name={topic.urlName} icon-url={topic.iconUrl}></c-cdcc-popular-topic>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </div>
+</template>

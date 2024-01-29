@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stop_Sending_Notification_To_Sterling__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this to stop sending notification to sterling after salesforce rtbf processing</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Check this to stop sending notification to sterling after salesforce rtbf processing</inlineHelpText>
+    <label>Process Sending Notification To Sterling</label>
+    <type>Checkbox</type>
+</CustomField>

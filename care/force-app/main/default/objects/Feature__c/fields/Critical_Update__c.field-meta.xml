@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Critical_Update__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>To check, if a feature is announced as a Critical Update</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check, if a feature is announced as a Critical Update</inlineHelpText>
+    <label>Critical Update</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,44 @@
+{
+  "isFilteredComponentsView" : false,
+  "isProgressiveRenderingEnabled" : false,
+  "mainAppPageId" : "b040d84e-9c82-4aea-b263-8e3486fad169",
+  "preferredDomain" : "help.care.com",
+  "trustedSitesForScript" : [ {
+    "id" : "f40023a0-d259-4ebe-a1ef-2b2be19c933d",
+    "isActive" : false,
+    "trustedSiteName" : "Google Analytics (old)",
+    "trustedSiteUrl" : "https://*.google-analytics.com",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "eb8accc2-1229-4322-bc6b-b03d36f38c02",
+    "isActive" : true,
+    "trustedSiteName" : "stats.g.doubleclick.net",
+    "trustedSiteUrl" : "https://stats.g.doubleclick.net",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "b0f48b9d-e42e-485f-9950-d4401c100a0e",
+    "isActive" : true,
+    "trustedSiteName" : "www.googletagmanager.com",
+    "trustedSiteUrl" : "https://www.googletagmanager.com/",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "03e36cc8-9473-46de-8b1e-116909318714",
+    "isActive" : true,
+    "trustedSiteName" : "Chat",
+    "trustedSiteUrl" : "https://*.salesforceliveagent.com",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "aaf15ada-f81f-4062-8d16-12e9ea892c87",
+    "isActive" : true,
+    "trustedSiteName" : "Google Analytics (New)",
+    "trustedSiteUrl" : "https://analytics.google.com",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "2f45b2d1-f743-403b-b62c-65f684ad6cbb",
+    "isActive" : true,
+    "trustedSiteName" : "NF Static Resource Hosting",
+    "trustedSiteUrl" : "https://caredotcom.my.site.com",
+    "type" : "trustedSitesForScripts"
+  } ],
+  "type" : "site"
+}

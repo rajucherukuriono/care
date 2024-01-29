@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>URL__c</fullName>
+    <description>The full URL to the end point. May contain placeholder tags {}, that can be replaced programmatically in code</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The full URL to the end point. May contain placeholder tags {}, that can be replaced programmatically in code</inlineHelpText>
+    <label>URL</label>
+    <required>true</required>
+    <type>Url</type>
+</CustomField>

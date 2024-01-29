@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Using Your Account - Seeker</label>
+    <protected>false</protected>
+    <values>
+        <field>Button_Id__c</field>
+        <value xsi:type="xsd:string">57339000000PCq7</value>
+    </values>
+    <values>
+        <field>Case_Type__c</field>
+        <value xsi:type="xsd:string">Q: Seeker: Website Help</value>
+    </values>
+    <values>
+        <field>Member_Type__c</field>
+        <value xsi:type="xsd:string">Seeker</value>
+    </values>
+    <values>
+        <field>Member_Visibility__c</field>
+        <value xsi:type="xsd:string">No</value>
+    </values>
+    <values>
+        <field>Skill__c</field>
+        <value xsi:type="xsd:string">US: Website Help</value>
+    </values>
+    <values>
+        <field>Topic__c</field>
+        <value xsi:type="xsd:string">Using Your Account</value>
+    </values>
+    <values>
+        <field>Visitor_Visibility__c</field>
+        <value xsi:type="xsd:string">No</value>
+    </values>
+</CustomMetadata>

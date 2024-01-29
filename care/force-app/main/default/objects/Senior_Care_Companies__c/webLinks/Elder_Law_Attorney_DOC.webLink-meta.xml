@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Elder_Law_Attorney_DOC</fullName>
+    <availability>online</availability>
+    <description>Editable Elder Law Attorney provider profile attached with correlating field labels from Salesforce.</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Elder Law Attorney DOC</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/SDOC__SDCreate1?id={!Senior_Care_Companies__c.ID__c}&amp;Object=Senior_Care_Companies__c&amp;doclist=a113900000BwXhB</url>
+</WebLink>

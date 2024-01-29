@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BUC_Center_Name__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Center Name</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Center Name</inlineHelpText>
+    <label>Center Name</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>BUC Network Center, BUC Network Agency</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Reviews</relationshipLabel>
+    <relationshipName>Reviews_Escalations</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

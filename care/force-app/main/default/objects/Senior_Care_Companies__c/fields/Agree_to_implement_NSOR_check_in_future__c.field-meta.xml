@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agree_to_implement_NSOR_check_in_future__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Agree to implement NSOR checks going forward?</inlineHelpText>
+    <label>Agree to implement NSOR check in future?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes - I agree to check the NSOR</fullName>
+                <default>false</default>
+                <label>Yes - I agree to check the NSOR</label>
+            </value>
+            <value>
+                <fullName>No - I do not agree to check the NSOR</fullName>
+                <default>false</default>
+                <label>No - I do not agree to check the NSOR</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

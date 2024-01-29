@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Business_Priorities_a__c</columns>
+    <columns>Business_Priorities_b__c</columns>
+    <columns>Channel_Partner__c</columns>
+    <columns>Comments__c</columns>
+    <columns>Company_Name__c</columns>
+    <columns>Cross_Functional_Opportunities__c</columns>
+    <columns>Key_solutions_a__c</columns>
+    <columns>Key_solutions_b__c</columns>
+    <columns>Key_strategic_milestones__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Opportunity_Seleted__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

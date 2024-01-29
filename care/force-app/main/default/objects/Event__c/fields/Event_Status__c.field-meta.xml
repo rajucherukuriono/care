@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please Select the Event Status</inlineHelpText>
+    <label>Event Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Requested</fullName>
+                <default>true</default>
+                <label>Requested</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Fulfilled</fullName>
+                <default>false</default>
+                <label>Fulfilled</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Declined</fullName>
+                <default>false</default>
+                <label>Declined</label>
+            </value>
+            <value>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+                <label>Canceled</label>
+            </value>
+            <value>
+                <fullName>Inquiry</fullName>
+                <default>false</default>
+                <label>Inquiry</label>
+            </value>
+            <value>
+                <fullName>Client unresponsive</fullName>
+                <default>false</default>
+                <label>Client unresponsive</label>
+            </value>
+            <value>
+                <fullName>Review Call</fullName>
+                <default>false</default>
+                <label>Review Call</label>
+            </value>
+            <value>
+                <fullName>Price calculator approval pending</fullName>
+                <default>false</default>
+                <label>Price calculator approval pending</label>
+            </value>
+            <value>
+                <fullName>Quote sent</fullName>
+                <default>false</default>
+                <label>Quote sent</label>
+            </value>
+            <value>
+                <fullName>Client decline</fullName>
+                <default>false</default>
+                <label>Client decline</label>
+            </value>
+            <value>
+                <fullName>Agreement sent to client</fullName>
+                <default>false</default>
+                <label>Agreement sent to client</label>
+            </value>
+            <value>
+                <fullName>Agreement &amp; DR sent to legal</fullName>
+                <default>false</default>
+                <label>Agreement &amp; DR sent to legal</label>
+            </value>
+            <value>
+                <fullName>Fully executed agreement to client</fullName>
+                <default>false</default>
+                <label>Fully executed agreement to client</label>
+            </value>
+            <value>
+                <fullName>In process</fullName>
+                <default>false</default>
+                <label>In process</label>
+            </value>
+            <value>
+                <fullName>Invoice sent to AR</fullName>
+                <default>false</default>
+                <label>Invoice sent to AR</label>
+            </value>
+            <value>
+                <fullName>Invoice sent to client by AR</fullName>
+                <default>false</default>
+                <label>Invoice sent to client by AR</label>
+            </value>
+            <value>
+                <fullName>Agreement sent to AM for filling</fullName>
+                <default>false</default>
+                <label>Agreement sent to AM for filling</label>
+            </value>
+            <value>
+                <fullName>Survey sent</fullName>
+                <default>false</default>
+                <label>Survey sent</label>
+            </value>
+            <value>
+                <fullName>Coverage not available/closed</fullName>
+                <default>false</default>
+                <label>Coverage not available/closed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

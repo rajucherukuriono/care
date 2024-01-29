@@ -1,0 +1,113 @@
+.container {
+    /*padding: 60px 120px;*/
+    background-color: #f9f9f9;
+    padding-top: 40px;
+    margin-top: 40px;
+}
+.social-links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.social-links > div {
+    padding: 10px;
+}
+.care-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--lwc-colorBorder);
+    margin-left: auto;
+    margin-right: auto;
+    max-width:960px;
+    flex-flow: row wrap;
+}
+.care-links a {
+    color: #505D6D;
+}
+.care-links a:hover {  
+    color: #083093;
+    text-decoration: none;
+}
+.care-links > div {
+    min-width: 25%;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #666666;
+    display: inline-flex;
+    flex-flow: column wrap;
+}
+
+.care-links > div > h4 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #505D6D;
+}
+.legal {
+    padding: 40px 0;
+    font-size: 12px;
+    line-height: 16px;
+    color: #666666;
+}
+.termsAndConditions{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+}
+
+@media screen and (max-device-width: 1023px), (max-width: 1023px) {
+    .container {
+        padding-left: 24px;
+		padding-right: 24px;
+    }
+    .care-links > div {
+        padding: 10px 0;
+    }
+}
+@media screen and (max-device-width: 767px), (max-width: 767px) {
+    .care-links > div {
+        flex-basis: 50%;
+    }
+}
+
+/* Styles for international Footer */
+.footer-container{
+}
+
+.footer {
+    /*padding-left: 2rem;*/
+    /*padding-right: 2rem;*/
+}
+
+.footer__links {
+    --gap: 1.5rem;
+    flex-wrap: wrap;
+    display: inline-flex;
+    justify-content: center;
+    width: calc(100% + var(--gap));
+    margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+    font-size: 16px;
+}
+
+.footer__links > a {
+    line-height: 1.375;
+    text-decoration: none;
+    color: var(--color-neutral-grey);
+    margin-top: 1rem;
+    margin: var(--gap) 0 0 var(--gap);
+}
+
+.link4--inline {
+    font-size: 12px;
+    line-height: 1.333;
+    text-decoration: underline;
+}
+
+.footer__links > a:hover, .footer__links > a:active {
+    text-decoration: underline;
+}

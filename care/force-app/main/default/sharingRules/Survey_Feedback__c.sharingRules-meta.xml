@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>IT_Fraud_Survey</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>IT Fraud Survey</label>
+        <sharedTo>
+            <group>IT_Fraud_Survey</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>IT Fraud Survey</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>LifeCare_QA_Survey</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>LifeCare QA Survey</label>
+        <sharedTo>
+            <group>LifeCare_QA</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>LifeCare Case Survey</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Intl_WPS_Member_Surveys</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Surveys created for the Int. WPS Service team</description>
+        <label>Share Intl WPS Member Surveys</label>
+        <sharedTo>
+            <group>Share_CAW_Ops</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Member Surveys</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_VOC_NOP</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share : VOC/NOP</label>
+        <sharedTo>
+            <group>VOC_NPS</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>IT Fraud Survey</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Survey_Feedback</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Survey Feedback</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>IT Fraud Survey</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

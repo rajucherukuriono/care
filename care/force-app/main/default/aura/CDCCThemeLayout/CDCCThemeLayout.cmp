@@ -1,0 +1,21 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Custom Care.com Community Theme Layout">
+    <!--<aura:attribute name="themeHeader" type="Aura.Component[]" required="false"/>-->
+    <aura:attribute name="themeHero" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="themeFooter" type="Aura.Component[]" required="false"/>
+    <div>
+        <div>
+            <!--{!v.themeHeader}-->
+            <c:cdccHeader></c:cdccHeader>
+        </div>
+        <div>
+            {!v.themeHero}
+        </div>
+        <div class="bodyContainer">
+            {!v.body}
+        </div>
+        <div>
+            <!--{!v.themeFooter}-->
+            <c:cdccFooter></c:cdccFooter>            
+        </div>
+    </div>
+</aura:component>

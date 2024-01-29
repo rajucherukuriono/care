@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Diagnoses_you_are_familiar__c</fullName>
+    <description>What Diagnoses you are familiar with ? field used by AS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What Diagnoses you are familiar with ?</inlineHelpText>
+    <label>Diagnoses you are familiar</label>
+    <length>1000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

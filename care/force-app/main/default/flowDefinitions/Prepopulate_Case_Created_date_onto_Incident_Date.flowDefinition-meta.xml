@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>Populate Case Created date onto Incident date field on case. This flow is converted from workflow to Flow Sforce-6883</description>
+    <masterLabel>Prepopulate Case Created date onto Incident Date</masterLabel>
+</FlowDefinition>

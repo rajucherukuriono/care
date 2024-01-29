@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Whos_Car_Caregiver_Drive__c</fullName>
+    <externalId>false</externalId>
+    <label>Who&apos;s Car does Caregiver Drive?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Caregiver&apos;s Car</fullName>
+                <default>false</default>
+                <label>Caregiver&apos;s Car</label>
+            </value>
+            <value>
+                <fullName>Client&apos;s Car</fullName>
+                <default>false</default>
+                <label>Client&apos;s Car</label>
+            </value>
+            <value>
+                <fullName>Both</fullName>
+                <default>false</default>
+                <label>Both</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

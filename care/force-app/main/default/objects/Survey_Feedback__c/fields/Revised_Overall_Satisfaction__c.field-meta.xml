@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revised_Overall_Satisfaction__c</fullName>
+    <description>Please select/identify/Modify/Revised the dissatisfaction reasons, Related to LifeCare QA process.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select/identify/Modify/Revised the dissatisfaction reasons, Related to LifeCare QA process.</inlineHelpText>
+    <label>Revised Overall Satisfaction</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Out of Scope</fullName>
+                <default>false</default>
+                <label>Out of Scope</label>
+            </value>
+            <value>
+                <fullName>Entered in Error</fullName>
+                <default>false</default>
+                <label>Entered in Error</label>
+            </value>
+            <value>
+                <fullName>Rated Partner/Vendor</fullName>
+                <default>false</default>
+                <label>Rated Partner/Vendor</label>
+            </value>
+            <value>
+                <fullName>Rated Provider</fullName>
+                <default>false</default>
+                <label>Rated Provider</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

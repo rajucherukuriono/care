@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>US_Operations</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>US Operations</label>
+        <sharedTo>
+            <group>Share_US_Operations</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Share_US_Operations</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

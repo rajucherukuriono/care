@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A1_Areas_of_specialization__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Attorney 1 Areas of specialization</inlineHelpText>
+    <label>Att.1 Areas of specialization</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

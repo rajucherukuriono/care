@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_URL_Required_US</fullName>
+    <active>true</active>
+    <description>For US Requests, Data URL must be provided before setting status to &quot;Queued - Salesforce Platform&quot;.</description>
+    <errorConditionFormula>ISPICKVAL(Source_System__c, &apos;US Platform&apos;) &amp;&amp;
+ISPICKVAL(Request_Type__c, &apos;Access Data&apos;) &amp;&amp;
+ISPICKVAL(Request_Status__c, &apos;Queued - Salesforce Platform&apos;) &amp;&amp;
+ISBLANK(  Data_URL__c )</errorConditionFormula>
+    <errorDisplayField>Data_URL__c</errorDisplayField>
+    <errorMessage>Data URL must not be blank when setting status to &quot;Queued - Salesforce Platform&quot;</errorMessage>
+</ValidationRule>

@@ -1,0 +1,169 @@
+:host, .container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;    
+}
+:focus {
+    outline: 1px solid #e6e8ea;
+}
+input:focus {
+    outline: 0 !important;
+}
+h3 {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-bottom: 12px;
+}
+h5 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
+p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+label {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 4px;
+}
+input, select, textarea {
+    background-color: var(--lwc-colorBackground);
+    border: 1px solid #e6e8ea;
+    border-radius: 8px;
+    width: 100%;
+    transition: border 0.1s linear, background-color 0.1s linear;
+    display: inline-block;
+    padding: 0 8px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #808b98;
+    margin-bottom: 4px;
+}
+input, select {
+    min-height: 40px;
+}
+textarea {
+    min-height: 76px;
+}
+.body {
+    flex: 1 0 auto;
+    padding: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    /*justify-content: space-between;*/
+    justify-content: flex-start;
+    align-items: stretch;
+
+}
+.body.space-evenly {
+    justify-content: space-evenly;
+}
+.button-footer {
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-top: 1px solid #e6e8ea
+}
+.link-footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #e6e8ea
+}
+.icon {
+    text-align: center;
+}
+.text {
+    text-align: left;
+}
+.text > p {
+    margin-bottom: 12px;
+}
+.text > p:last-child {
+    margin-bottom: 0;
+}
+.text.error {
+    text-align: center;
+    color: red;
+}
+.button {
+    min-width: 115px;
+    border: 1px solid var(--lwc-colorBrand);
+    border-radius: 20px;
+    color: var(--lwc-colorBrand);
+    background-color: var(--lwc-colorBackground);
+    font-size: 16px;
+    line-height: 24px;
+    padding: 3px 9px;
+    /*margin-right: 20px;*/
+}
+
+lightning-spinner {
+    background-color: #ffffff; /* removes transparency; hardcoded color because token didn't work on care.com site */
+}
+
+/* Oriignal CSS
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: var(--lwc-zIndexSpinner,9050);
+    background-color: var(--slds-g-color-neutral-100-opacity-75, var(--lwc-colorBackgroundTempModalTintAlt,rgba(255, 255, 255, 0.75)));
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .2s ease,visibility 0s;
+    transition-delay: 0s,.3s;
+
+    */
+
+/*
+
+    lightning-spinner .slds-spinner_small, .slds-spinner--small {
+    width: 1.25rem;
+}
+
+lightning-spinner .slds-spinner, .slds-spinner__dot-a, .slds-spinner__dot-b {
+    transform-origin: 50% 50%;
+    will-change: transform;
+}
+
+lightning-spinner .slds-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9051;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+lightning-spinner *, *:before, *:after {
+    box-sizing: border-box;
+}
+
+lightning-spinner .slds-spinner__dot-a {
+    transform: rotate(60deg);
+}
+
+lightning-spinner .slds-spinner__dot-a, .slds-spinner__dot-b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+lightning-spinner .slds-spinner__dot-b {
+    transform: rotate(120deg);
+}
+
+*/

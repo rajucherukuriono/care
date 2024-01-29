@@ -1,0 +1,41 @@
+.tabMenuWrapper{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.tabMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px;    
+    width: 100%;
+    height: 56px;    
+    background: #F3F4F6;
+    border-radius: 56px;
+}
+
+.tabMenu div, .tabMenu a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 8px;
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+}
+
+.tabMenu a:hover{
+    background: #E6E8EA;
+}
+
+.tabMenu div.selected {
+    background: #213F5F;
+    color: var(--lwc-colorTextInverse);
+}
+
+.tabMenu > a {
+    text-decoration: none;
+    color: var(--colorTextDefault);
+}

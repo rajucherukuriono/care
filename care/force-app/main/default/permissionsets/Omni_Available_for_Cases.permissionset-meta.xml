@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grants users Presence Status: Available for Cases</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Omni - Available for Cases</label>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Macro</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>QuickText</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>BulkMacrosAllowed</name>
+    </userPermissions>
+</PermissionSet>

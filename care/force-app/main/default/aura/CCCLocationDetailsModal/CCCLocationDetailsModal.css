@@ -1,0 +1,9 @@
+.THIS input::placeholder {
+     color: transparent;
+}
+.THIS input[name=country] {
+    display: none;
+}
+.THIS .noUi-value {
+    display: none;
+}

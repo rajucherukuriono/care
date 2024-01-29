@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>myRule_1_A1</name>
+        <label>Send Error Email Alert</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>Case.ODS_Error_Email_Alert</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.ODS_Error_Email_Alert</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>myRule_3_A1</name>
+        <label>Send Error Email Alert</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>Case.ODS_Error_Email_Alert_INTL</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.ODS_Error_Email_Alert_INTL</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>myRule_1</name>
+        <label>Error generated from US Case?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myRule_3</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Error generated from US Case?</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_1</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4 OR 5) AND 6</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Is_ODS_Complete__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ODS_Request_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Error - Salesforce</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ODS_Request_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Error - US Platform</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ODS_Request_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Error - Unknown</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ODS_Request_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Error - International Platform</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ODS_Request_Platform__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>US</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>TRUE_Error generated from US Case?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_3</name>
+        <label>Error generated from INTL Case?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>FALSE_Error generated from INTL Case?</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_3</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4 OR 5) AND 6</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Is_ODS_Complete__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ODS_Request_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Error - Salesforce</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ODS_Request_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Error - US Platform</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ODS_Request_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Error - International Platform</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ODS_Request_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Error - Unknown</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ODS_Request_Platform__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>International</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_3_A1</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>TRUE_Error generated from INTL Case?</label>
+        </rules>
+    </decisions>
+    <description>Migrated from the ODS Error Email Alert process using multiple criteria.
+Sends an Email alert every time an ODS error is generated.  May be turned off in favor of the Error Monitor if this is generating too many errors.</description>
+    <label>ODS Error Email Alert_1</label>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>myRule_1</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

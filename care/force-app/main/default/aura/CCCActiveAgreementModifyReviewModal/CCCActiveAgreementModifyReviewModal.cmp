@@ -1,0 +1,106 @@
+<aura:component controller="CCCActiveAgreementController" extends="c:CCCBase">
+
+    <!-- Aura Attributes - Public -->
+    <aura:attribute name="locationRecords" type="List" default="[]" access="public" />
+    <aura:attribute name="reviewRecord" type="Map" default="{}" access="public" />
+    <aura:attribute name="saveClicked" type="Boolean" default="false" access="public" />
+    <aura:attribute name="title" type="String" default="" access="public" />
+
+    <!-- Aura Attributes - Private -->
+    <aura:attribute name="validationErrors" type="List" default="[]" access="private" />
+    <aura:attribute name="saveDisabled" type="Boolean" default="false" access="private" />
+    <aura:attribute name="locationOptions" type="List" default="[]" access="private" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <div class="slds-m-top_medium">
+
+        <div class="slds-text-heading_medium slds-text-align_center slds-m-bottom_large">
+            <strong>{!v.title}</strong>
+        </div>
+
+        <!-- Form -->
+        <div class="slds-p-around_xx-small">
+            <div class="slds-grid slds-gutters slds-wrap">
+
+                <!-- First Name -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div class="slds-m-top_medium">
+                        <lightning:input aura:id="inputFirstName" name="inputFirstName" label="First Name"
+                            required="true" value="{!v.reviewRecord.first_name}" maxlength="80" />
+                    </div>
+                </div>
+
+                <!-- Last Name -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div class="slds-m-top_medium">
+                        <lightning:input aura:id="inputLastName" name="inputLastName" label="Last Name" required="true"
+                            value="{!v.reviewRecord.last_name}" maxlength="100" />
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div class="slds-m-top_medium">
+                        <lightning:input aura:id="inputEmail" type="email" name="inputEmail" label="Email"
+                            required="true" value="{!v.reviewRecord.email}" />
+                    </div>
+                </div>
+
+                <!-- Spacer -->
+                <div class="slds-col slds-size_1-of-2">&nbsp;</div>
+
+                <!-- Phone -->
+                <div class="slds-col slds-size_1-of-2">
+                    <div class="slds-m-top_medium">
+                        <lightning:input aura:id="inputPhone" type="tel" name="inputPhone" label="Phone" required="true"
+                            value="{!v.reviewRecord.phone}" />
+                    </div>
+                </div>
+
+                <!-- Spacer -->
+                <div class="slds-col slds-size_1-of-2">&nbsp;</div>
+
+                <!-- Locations -->
+                <aura:if isTrue="{! not(empty(v.locationRecords)) }">
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="slds-m-top_medium">
+                            <lightning:select aura:id="inputLocation" name="inputLocation" label="Location"
+                                value="{!v.reviewRecord.location_name}" variant="standard" required="false">
+
+                                <!-- Only show this option if creating a new record, after creation there should always be a value for location_name, even if it's "none" -->
+                                <aura:if isTrue="{!empty(v.reviewRecord.location_name)}">
+                                    <option text="Select a Location" value="" />
+                                </aura:if>
+
+                                <aura:iteration items="{!v.locationOptions}" var="option">
+                                    <option text="{!option.label}" value="{!option.value}"
+                                        selected="{! equals(v.reviewRecord.location_name, option.value)}">
+                                    </option>
+                                </aura:iteration>
+
+                            </lightning:select>
+                        </div>
+                    </div>
+                </aura:if>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Button Management -->
+    <div class="slds-clearfix slds-m-top_large">
+
+        <c:CCCStaticPopover headerText="Save is disabled due to the following reason(s):" type="error"
+            messages="{!v.validationErrors}" cssClass="slds-nubbin_bottom-right slds-m-bottom_medium" />
+
+        <div class="slds-float_right">
+            <lightning:button label="Cancel" onclick="{!c.onCancelButtonClicked}" class="slds-m-horizontal_xx-small" />
+            <lightning:button variant="brand" label="Save" onclick="{!c.onSaveButtonClicked}"
+                class="slds-m-horizontal_xx-small" disabled="{!v.saveDisabled}"/>
+        </div>
+    </div>
+
+</aura:component>

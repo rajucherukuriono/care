@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rates_Payment_Options__c</fullName>
+    <externalId>false</externalId>
+    <label>Payment Options</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cash</fullName>
+                <default>false</default>
+                <label>Cash</label>
+            </value>
+            <value>
+                <fullName>Check</fullName>
+                <default>false</default>
+                <label>Check</label>
+            </value>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>Long term care insurance</fullName>
+                <default>false</default>
+                <label>Long term care insurance</label>
+            </value>
+            <value>
+                <fullName>Medicaid</fullName>
+                <default>false</default>
+                <label>Medicaid</label>
+            </value>
+            <value>
+                <fullName>Medicare</fullName>
+                <default>false</default>
+                <label>Medicare</label>
+            </value>
+            <value>
+                <fullName>Private pay</fullName>
+                <default>false</default>
+                <label>Private pay</label>
+            </value>
+            <value>
+                <fullName>Veterans benefits</fullName>
+                <default>false</default>
+                <label>Veterans benefits</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

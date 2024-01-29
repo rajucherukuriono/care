@@ -1,0 +1,102 @@
+<aura:component controller="CCCScoreboardController" extends="c:CCCBase">
+
+    <lightning:messageChannel type="CCCMessageChannel__c" onMessage="{!c.onCCCMessageEvent}" scope="APPLICATION" />
+
+    <!-- Common attributes for all Record Types -->
+    <aura:attribute name="totalPlatformFee" type="Decimal" access="private" default="0.00" />
+    <aura:attribute name="advertisingBudgetTotalAmount" type="Decimal" access="private" default="0.00" />
+    <aura:attribute name="numLocations" type="Integer" access="private" default="0" />
+    <aura:attribute name="ofLocations" type="Integer" access="private" />
+
+    <!-- Attributes for Sales Origination Record Types -->
+    <aura:attribute name="basePoints" type="Integer" access="private" default="0" />
+    <aura:attribute name="bonusPoints" type="Integer" access="private" default="0" />
+    <aura:attribute name="totalPoints" type="Integer" access="private" default="0" />
+
+    <!-- Init -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <div class="slds-m-bottom_medium slds-border_top slds-border_bottom slds-border_right slds-border_left slds-theme_default"
+        style="border-radius: .25rem;">
+        <div class="slds-grid slds-m-around_medium slds-gutters slds-grid_align-spread">
+
+            <!-- Column 1 of 5 -->
+            <div class="slds-col slds-grid slds-grid_vertical">
+
+                <!-- Locations -->
+                <div class="slds-col">
+                    <div class="slds-text-title_bold slds-text-align_center" title="Locations">Locations</div>
+                    <div class="slds-text-heading_small slds-text-align_center slds-m-top_x-small">
+                        <aura:if isTrue="{! lessthan(v.numLocations,1) }">
+                            <span class="slds-text-color_error"><strong>{!v.numLocations}</strong></span>
+                            <aura:set attribute="else">
+                                {!v.numLocations}
+                                <aura:if isTrue="{! not(empty(v.ofLocations)) }">
+                                    / {!v.ofLocations}
+                                </aura:if>
+                            </aura:set>
+                    </aura:if>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Column 2 of 5 -->
+            <div class="slds-col slds-grid slds-grid_vertical">
+
+                <!-- Monthly Ad Budget -->
+                <div class="slds-col">
+                    <div class="slds-text-title_bold slds-text-align_center" title="Monthly Ad Budget">Monthly Ad Budget
+                    </div>
+                    <div class="slds-text-heading_small slds-text-align_center slds-m-top_x-small">
+                        <aura:if isTrue="{! lessthan(v.advertisingBudgetTotalAmount,1) }">
+                            <strong>
+                                <lightning:formattedNumber value="{!v.advertisingBudgetTotalAmount}" style="currency"
+                                    currencyCode="USD" class="slds-text-color_error" /></strong>
+
+                            <aura:set attribute="else">
+
+                                <lightning:formattedNumber value="{!v.advertisingBudgetTotalAmount}" style="currency"
+                                    currencyCode="USD" />
+
+                            </aura:set>
+                        </aura:if>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Column 3 of 5 -->
+            <div class="slds-col slds-grid slds-grid_vertical">
+
+                <!-- Annual Platform Fee -->
+                <div class="slds-col">
+                    <div class="slds-text-title_bold slds-text-align_center" title="Annual Platform Fee">
+                        Annual Platform Fee
+                    </div>
+                    <div class="slds-text-heading_small slds-text-align_center slds-m-top_x-small">
+                        <lightning:formattedNumber value="{!v.totalPlatformFee}" style="currency" currencyCode="USD" />
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Column 4 of 5 -->
+            <div class="slds-col slds-grid slds-grid_vertical">
+
+                <div class="slds-col">
+                    <div class="slds-text-title_bold slds-text-align_center" title="Points">Points</div>
+                    <div class="slds-text-heading_small slds-text-align_center slds-m-top_x-small">
+                        <span title="{! v.basePoints + ' Base Points' }">{!v.basePoints}</span>
+                        <span title="{! v.bonusPoints + ' Bonus Points' }" class="slds-text-color_success"> + {!v.bonusPoints}</span>
+                        <span title="{! v.totalPoints + ' Total Points' }"> = {!v.totalPoints}</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</aura:component>

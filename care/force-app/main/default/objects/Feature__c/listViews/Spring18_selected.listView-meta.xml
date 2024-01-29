@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Spring18_selected</fullName>
+    <booleanFilter>1 AND (2 OR 3 OR 4)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Section__c</columns>
+    <columns>Subsection__c</columns>
+    <columns>Action_Notes__c</columns>
+    <columns>Availability_Type__c</columns>
+    <columns>SF_Variant__c</columns>
+    <columns>Include_In_User_Info_Email__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Release_Version__c</field>
+        <operation>equals</operation>
+        <value>Spring18</value>
+    </filters>
+    <filters>
+        <field>Include_In_User_Info_Email__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Section__c</field>
+        <operation>equals</operation>
+        <value>Critical Updates</value>
+    </filters>
+    <label>Spring18 Selected</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>SystemAdmin</role>
+    </sharedTo>
+</ListView>

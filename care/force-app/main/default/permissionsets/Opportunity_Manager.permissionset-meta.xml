@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>standard__LightningSalesConsole</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <description>permission set Create/Read/Write/Delete permissions to the object Opportunity and ability to create Opportunity Record Type Sales Origination</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Lost_Reasons__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Opportunity Manager</label>
+    <license>Salesforce</license>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Opportunity</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <recordTypeVisibilities>
+        <recordType>Opportunity.Sales_Origination</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

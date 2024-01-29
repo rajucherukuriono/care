@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Origin_to_Exclude__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the origin&apos;s of a case that should NOT have a first response milestone created</inlineHelpText>
+    <label>Case Origins to Exclude</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

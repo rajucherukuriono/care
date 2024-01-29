@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enrollment_Increase__c</fullName>
+    <description>SFORCE-2306
+C@W benefit fair object improvements - part 1</description>
+    <externalId>false</externalId>
+    <formula>IF(
+Pre_Fair_Enrollment__c = 0,
+0,
+( Post_Show_Enrollment__c  /  Pre_Fair_Enrollment__c))</formula>
+    <label>Enrollment Increase (%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

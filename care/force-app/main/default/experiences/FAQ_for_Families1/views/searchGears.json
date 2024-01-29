@@ -1,0 +1,85 @@
+{
+  "appPageId" : "b040d84e-9c82-4aea-b263-8e3486fad169",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "52c69e30-effb-4029-80bb-673453f27a87",
+  "label" : "SearchGears",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "6729c9ac-7ea0-4a6d-a6f6-44f527869e36",
+          "columns" : [ {
+            "UUID" : "8b3d3869-c6a9-460a-af28-0a8dd6f42ac8",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "9",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1cadde94-9f89-4889-9326-a1203fc7b721",
+            "columnKey" : "ff08a",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6729c9ac-7ea0-4a6d-a6f6-44f527869e36",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "scopes" : [ {
+              "isPublic" : true,
+              "name" : "KnowledgeArticleVersion"
+            } ],
+            "searchResultFiltering" : true,
+            "searchTerm" : "{!term}",
+            "showTopResults" : false
+          },
+          "componentName" : "forceCommunity:search",
+          "id" : "cd2cec05-119a-4140-b1c3-7ea27046a55b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8b3d3869-c6a9-460a-af28-0a8dd6f42ac8",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "numberOfArticles" : 5,
+            "title" : "Trending Articles",
+            "topicId" : "{!topicId}"
+          },
+          "componentName" : "selfService:topicTrendingArticles42",
+          "id" : "4d20a51f-acd3-4655-8f29-69ccb3be0283",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "1cadde94-9f89-4889-9326-a1203fc7b721",
+        "regionLabel" : "Column 2",
+        "regionName" : "ff08a",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c4a31787-9552-4617-a75a-f296f1254fab",
+    "regionName" : "content",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "global-search"
+}

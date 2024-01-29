@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Awaiting_Berlin_Rep_Notification</name>
+        <label>Awaiting_Berlin_Rep_Notification</label>
+        <locationX>314</locationX>
+        <locationY>455</locationY>
+        <actionName>Case.Awaiting_Berlin_Rep_Notification</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Awaiting_Berlin_Rep_Notification</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Awaiting_U_S_Rep_Notification</name>
+        <label>Awaiting U.S. Rep - Notification</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <actionName>Case.Awaiting_U_S_Rep_Notification</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Awaiting_U_S_Rep_Notification</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <name>Status_Check</name>
+        <label>Status Check</label>
+        <locationX>314</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Awaiting_U_S_Rep</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Awaiting U.S. Rep</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Awaiting_U_S_Rep_Notification</targetReference>
+            </connector>
+            <label>Awaiting U.S. Rep</label>
+        </rules>
+        <rules>
+            <name>Awaiting_Berlin_Rep</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Awaiting Berlin Rep</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Awaiting_Berlin_Rep_Notification</targetReference>
+            </connector>
+            <label>Awaiting Berlin Rep</label>
+        </rules>
+    </decisions>
+    <description>For Cases with a Record Type &quot;International Senior Care Consult&quot; when the Status is updated, sends email notifications</description>
+    <environments>Default</environments>
+    <interviewLabel>International Senior Care Consult Email Notifications {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>International Senior Care Consult Email Notifications</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Status_Check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0121O000001ZYXQQA4</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

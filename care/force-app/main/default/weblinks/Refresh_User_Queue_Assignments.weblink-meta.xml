@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <description>Click on this will refresh user queue assignments as per user tier,language</description>
+    <displayType>link</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Refresh User Queue Assignments</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)} 
+
+sforce.apex.execute(&quot;FutureUserQueueAssignment&quot;,&quot;RefreshUserQueueAssignments&quot;,{});</url>
+</CustomPageWebLink>

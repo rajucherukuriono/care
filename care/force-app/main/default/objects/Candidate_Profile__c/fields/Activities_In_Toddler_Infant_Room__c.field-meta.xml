@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activities_In_Toddler_Infant_Room__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please provide examples of activities available in the toddler/infant room</inlineHelpText>
+    <label>Activities In Toddler/Infant Room?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

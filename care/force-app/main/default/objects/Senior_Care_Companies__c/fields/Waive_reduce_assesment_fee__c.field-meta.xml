@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Waive_reduce_assesment_fee__c</fullName>
+    <externalId>false</externalId>
+    <label>Willing to waive/reduce assesment fee?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Waive</fullName>
+                <default>false</default>
+                <label>Waive</label>
+            </value>
+            <value>
+                <fullName>I do not wish to waive or reduce the assessment fee at this time.</fullName>
+                <default>false</default>
+                <label>I do not wish to waive or reduce the assessment fee at this time.</label>
+            </value>
+            <value>
+                <fullName>Reduce fee</fullName>
+                <default>false</default>
+                <label>Reduce fee</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

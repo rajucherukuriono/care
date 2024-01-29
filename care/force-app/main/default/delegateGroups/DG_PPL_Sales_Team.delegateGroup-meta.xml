@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DelegateGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>DG: PPL Sales Team</label>
+    <loginAccess>false</loginAccess>
+    <permissionSets>Sales: Record Transfer</permissionSets>
+    <permissionSets>Reporting and Dashboard Management</permissionSets>
+    <permissionSets>Five9 Open CTI user</permissionSets>
+    <profiles>Sales Origination Rep</profiles>
+    <profiles>Sales Origination Manager</profiles>
+    <profiles>Sales Origination Executive</profiles>
+    <roles>Marketing Solutions Manager</roles>
+    <roles>Marketing Solutions Manager 2</roles>
+    <roles>Marketing Solutions Manager 3</roles>
+    <roles>Marketing Solutions Manager 4</roles>
+    <roles>Marketing Solutions Manager 5</roles>
+    <roles>Marketing Solutions Training Manager</roles>
+    <roles>Marketing Solutions Manager 6</roles>
+    <roles>Marketing Solutions Training Manager 2</roles>
+    <roles>Marketing Solutions Manager 7</roles>
+</DelegateGroup>

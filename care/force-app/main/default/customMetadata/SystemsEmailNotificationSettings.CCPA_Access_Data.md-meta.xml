@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>CCPA Access Data</label>
+    <protected>false</protected>
+    <values>
+        <field>Email_Notification_List__c</field>
+        <value xsi:type="xsd:string">sfadmin@care.com;</value>
+    </values>
+    <values>
+        <field>Process_Name__c</field>
+        <value xsi:type="xsd:string">CCPA Access Data</value>
+    </values>
+</CustomMetadata>

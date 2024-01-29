@@ -1,0 +1,1131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaseSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAutoProcUser>true</caseAutoProcUser>
+    <caseFeedItemSettings>
+        <characterLimit>400</characterLimit>
+        <displayFormat>Default</displayFormat>
+        <feedItemType>EmailMessageEvent</feedItemType>
+    </caseFeedItemSettings>
+    <caseFeedReadUnreadLtng>false</caseFeedReadUnreadLtng>
+    <caseMergeInLightning>false</caseMergeInLightning>
+    <closeCaseThroughStatusChange>true</closeCaseThroughStatusChange>
+    <defaultCaseFeedLayoutOn>false</defaultCaseFeedLayoutOn>
+    <defaultCaseOwner>Not_monitored_Operations</defaultCaseOwner>
+    <defaultCaseOwnerType>Queue</defaultCaseOwnerType>
+    <defaultCaseUser>czsfadmin@care.com</defaultCaseUser>
+    <emailActionDefaultsHandlerClass>DefaultEmailPublisherSettings</emailActionDefaultsHandlerClass>
+    <emailToCase>
+        <enableE2CAttachmentAsFile>false</enableE2CAttachmentAsFile>
+        <enableE2CSourceTracking>true</enableE2CSourceTracking>
+        <enableEmailToCase>true</enableEmailToCase>
+        <enableHtmlEmail>true</enableHtmlEmail>
+        <enableOnDemandEmailToCase>true</enableOnDemandEmailToCase>
+        <enableThreadIDInBody>true</enableThreadIDInBody>
+        <enableThreadIDInSubject>false</enableThreadIDInSubject>
+        <notifyOwnerOnNewCaseEmail>false</notifyOwnerOnNewCaseEmail>
+        <overEmailLimitAction>Bounce</overEmailLimitAction>
+        <preQuoteSignature>false</preQuoteSignature>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>premiumplus@care.com</emailAddress>
+            <emailServicesAddress>premiumplus@1-fuge92d70oqxnvharw374nn0u2iljk3b0f5mf6mlo1fehnbfg.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Assisted Search</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>Outlook</addressType>
+            <authorizedSenders>jlandon@care.com</authorizedSenders>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Q_Assisted_Search</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <emailServicesAddress>ra1444758937313@1j42t6q2mrop0bpg256a1ss083yjh4cyv8dp9se48nucf0xu1u.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>false</isVerified>
+            <routingName>Assisted Search Create Case</routingName>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - BUC Servicing1</caseOrigin>
+            <caseOwner>Q_BUC_Servicing</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>1bucservicing@care.com</emailAddress>
+            <emailServicesAddress>1bucservicing@1f1ttxwilt6cq5v24y7u9dq616u6hkd8kt445y5h6r8e387p5q.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>BUC servicing1</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - BUC Servicing2</caseOrigin>
+            <caseOwner>Q_BUC_Servicing</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>2bucservicing@care.com</emailAddress>
+            <emailServicesAddress>2bucservicing@i-11u6pwfnd8of7sfigdlavmu86ykjsq73rnvb34v4qfa7bjayt1.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>BUC servicing2</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - AT - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>datenschutz@betreut.at</emailAddress>
+            <emailServicesAddress>datenschutz@z-13vw6jmaa0rbf1gunt1l4x9swet13y6a8tcixzkysd6ixmgw4a.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Betreut.at Datenschutz</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - AT</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>info@betreut.at</emailAddress>
+            <emailServicesAddress>info@a-29l47qv1uecf6059fzqgaio3o8pqcg29zjmitwkdq23ajlrinj.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Betreut.at Kundenservice</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - CH - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>datenschutz-de-ch@care.com</emailAddress>
+            <emailServicesAddress>datenschutz-de-ch@1big8x43ez9h5q8ios1edwq7nh3mlvabbe2t54fg72ux7b6iqv.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Betreut.ch Datenschutz</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - FRCH</caseOrigin>
+            <casePriority>1</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>infofr-ch@care.com</emailAddress>
+            <emailServicesAddress>infofr-ch@y-2oab6v2c8fv839cfite8m26tnjamz85siriddb9mtlr19pxpj9.7-8kooeay.na79.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Betreut.ch Service Client</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - CH - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>datenschutz-fr-ch@care.com</emailAddress>
+            <emailServicesAddress>datenschutz-fr-ch@s-2gqpatvmlf10c3y31xzcmx6jh3llhicaaq627532pq55ww3tmq.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Betreut.ch Protection des données</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - DE - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>datenschutz@betreut.de</emailAddress>
+            <emailServicesAddress>datenschutz@2-wep2ifpuxq0ioq402mnslx406u7wjyh9z8o4qjms2tb4m6ux0.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Betreut.de Datenschutz</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - DE</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>info@betreut.de</emailAddress>
+            <emailServicesAddress>info@2z3jlram66t5ru8wh6ra7lr3hra8o6yfgs1jfp09l9weswog0i.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Betreut.de Kundenservice</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - FI - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-fi@care.com</emailAddress>
+            <emailServicesAddress>privacy-fi@3fjk17zfyhocxrgeua5xygzpi01mggq386thh1kqvivsdf5ik.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Car.ecom Tietosuoja</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>carespecialist@care.com</emailAddress>
+            <emailServicesAddress>carespecialist@1dnzd51kqqxmdu4xg0mdgxycoh8ifuak324rsbiq64w7qaj3wo.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care Specialist</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - AU</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>membercareau@care.com</emailAddress>
+            <emailServicesAddress>membercareau@k-i5xpnz1ubfyer0pcu1jgbaai1eqpa205ig6mha3gkfoxjkydx.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com AU Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - FI</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>1</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>infofi@care.com</emailAddress>
+            <emailServicesAddress>infofi@29gzgz968vebo1at8erx75zp7iuaiwtrdrik0l8ssmfdb09rpa.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Asiakaspalvelu</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>assistedsearch@care.com</emailAddress>
+            <emailServicesAddress>assistedsearch@1bvib9f8ngy1fo06u8ndeg1o3bbyo43tsezas0gk0qa3qbqwf8.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Assisted Search</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Q_BUC_Dana_Farber</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>danafarberbuc@care.com</emailAddress>
+            <emailServicesAddress>danafarberbuc@w-1o24aoyj2by9hvodpurdow3hofy941oxx85p3ruz5a6vbkdnb.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com BUC Dana Farber</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - Centers</caseOrigin>
+            <caseOwner>Q_BUC_Centers</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>buccenters@care.com</emailAddress>
+            <emailServicesAddress>buccenters@28qw223k2ctx1gtrzhar2gyq7phj6tblo62h7q8l08cy5mvwpr.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Backup Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - CBUC</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>backupcareteam@care.com</emailAddress>
+            <emailServicesAddress>backupcareteam@i-1rnitz5pce45mvgcz18v8wo8kkrvrx82v8wsj12vjf800t3m0c.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Backup Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - Google</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>googlebuc@care.com</emailAddress>
+            <emailServicesAddress>googlebuc@bn18rjydgzcgjdhqd4gb0b9q61k3qjpv2vjxrj2rud227979e.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Backup Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>backupcare@care.com</emailAddress>
+            <emailServicesAddress>backupcare@22dvdwrralyf50c09sjpjv2wlwc6sy7qbqvxdvtsao14lglt99.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Backup Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email – BestBuy</caseOrigin>
+            <caseOwner>Q_BUC_BestBuy</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>carebby@care.com</emailAddress>
+            <emailServicesAddress>carebby@hgatewemkzli3dni5mucxfcps51w52388j012g4y9jg76foyw.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Backup Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email – Starbucks</caseOrigin>
+            <caseOwner>Q_BUC_Starbucks</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>starbucks@care.com</emailAddress>
+            <emailServicesAddress>starbucks@r2ojr06ugeglcs6yltl2lgru06btoe2ce4z99u6tgn6g20m65.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Backup Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - Nike</caseOrigin>
+            <caseOwner>Q_BUC_Nike</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>nikebuc@care.com</emailAddress>
+            <emailServicesAddress>nikebuc@a-umji93xe72t3s6mrfjwrkjzjuh0v73bv02emm4i7txgwws1kn.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Backup Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>ABUC</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>adultbackupcare@care.com</emailAddress>
+            <emailServicesAddress>adultbackupcare@sbmzywb8o1d0yq68a0fluao5m0xgmaur0gaanazxmu5pe0zw9.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Backup Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - Provider</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>bucproviders@care.com</emailAddress>
+            <emailServicesAddress>bucproviders@284487dqt272lm0nkdz9s8t4ttvlgrpbxw6yhko2k9bll8aor.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Backup Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - Provider</caseOrigin>
+            <caseOwner>Q_BUC_Providers</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>agencybuc@care.com</emailAddress>
+            <emailServicesAddress>agencybuc@g-1567nr6nhhtlmc7kjxw4eyc70pa90zeec1fdl19ozw73336oqc.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Backup Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - IntlCAW Agency</caseOrigin>
+            <caseOwner>Q_Intl_CAW_Agency</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>ukbuc@care.com</emailAddress>
+            <emailServicesAddress>ukbuc@26xhowc1601n29xan3utqosxd808zlwrvnu67lsm3c55j3uvra.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Backup Care UK Agency</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - UK</caseOrigin>
+            <caseOwner>Q_BUC_UK_IRE</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>requestbackupcare@care.com</emailAddress>
+            <emailServicesAddress>requestbackupcare@19tjbo91uy036dk9eprevgg9emzdfl97esz1mdudqqcktjocjf.7-8kooeay.na79.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Backup Care UK/IRE</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - CH</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>infoch-de@care.com</emailAddress>
+            <emailServicesAddress>infoch-de@fjw49y0dkd7tw3iunv2dxox55pp8nl394dwud78hkuaerwprt.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com CH Kundenservice</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - IE - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-ie@care.com</emailAddress>
+            <emailServicesAddress>privacy-ie@19ad2eb2g3o6zqwz1ymko9kvfzzfb2eff9jclutxc6931hled4.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Data Privacy</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - DK - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-dk@care.com</emailAddress>
+            <emailServicesAddress>privacy-dk@n-2vok0runwkbfsb8qv93fdlmdlv1ajohp69m4bz06putk4tcawv.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Databeskyttelse</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - ENCA</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>membercareca@care.com</emailAddress>
+            <emailServicesAddress>membercareca@a-2l4rhyh6lqux7ci0qimjbm2oy73hv3o8nerurhl454aczqpc85.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com ENCA Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - ES</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>infoes@care.com</emailAddress>
+            <emailServicesAddress>infoes@17z7s1e9fbrp51fjjek66m3hp4og0ukkdxmx309f9n7ofnkikc.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com ES Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - UK - Covid</caseOrigin>
+            <caseOwner>Q_EU_Covid</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>covid.care@care.com</emailAddress>
+            <emailServicesAddress>covid.care@n-2w9r9xq5i8rf5ggvdgbdkc9xmnemxw34159aeensmikea8kvwp.7-8kooeay.na79.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com EU Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - FRCA</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>1</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>infofr-ca@care.com</emailAddress>
+            <emailServicesAddress>infofr-ca@o-18j3f8j49abmr4n5fgah1b7845dku2o9doanpupigzo4mjvy6j.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com FR-CA Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - IE</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>membercareie@care.com</emailAddress>
+            <emailServicesAddress>membercareie@4-lrjtxrw7j3zwi191877na9cnhmgauhggp800slxc2l2bm4dhb.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com IE Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - NL</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>infonl@care.com</emailAddress>
+            <emailServicesAddress>infonl@2x89sitpg3xpp1mfaydy63lgmkuegjq0a2c7gbojdlm6cowfo6.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Klantenservice</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - BE</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>infobe@care.com</emailAddress>
+            <emailServicesAddress>infobe@7-1yyvqcjt2odfc2s2mrqppon9jcrblg10kk6m7j1tz2p47yq51.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Klantenservice</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - DK</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>infodk@care.com</emailAddress>
+            <emailServicesAddress>infodk@i-2jiue7k1al92guyvqaofeni5d8psu5ucs963r58fe41sn1jzt4.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Kundeservice</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - SE</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>infose@care.com</emailAddress>
+            <emailServicesAddress>infose@r-1ghyy1qhksaluatjjpk7k1fil4bno35mpxzm1kjsdfilp6129z.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Kundtjänst</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>copyright@care.com</emailAddress>
+            <emailServicesAddress>copyright@26ci3geyrrdsyfarrrnq9dximwjtsbsf7lx98uw5tgudoh7kzu.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>1</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>support@care.com</emailAddress>
+            <emailServicesAddress>support@c-2ff0t0l4zerywpi2gha5k38dxgxqf24p5g33a422vx8fc4hydh.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>carestitution@care.com</emailAddress>
+            <emailServicesAddress>carestitution@o-64r4zg2rwuev6gph907nth002bjnqgkgmlsp33xwynxk9r21r.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy@care.com</emailAddress>
+            <emailServicesAddress>privacy@y-ljm3nwktm0f863wcwclc29jgbdcxkbdp8jgjtmbqunlpop6hh.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>careteam@care.com</emailAddress>
+            <emailServicesAddress>careteam@1io70ewg6oh9xvny6cwi9bap0n0e50xs9yhzm4i3bfsyc2g8o0.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - NO</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>infono@care.com</emailAddress>
+            <emailServicesAddress>infono@k-2y80qirk0ghrypl22zqgxlw14hyn0e3zx54ipldj771axordgd.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com NO Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - NZ</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>membercarenz@care.com</emailAddress>
+            <emailServicesAddress>membercarenz@2lry8yibob9eosl96n7wrvpfkqeoq7knamyv2y3uqbvobu1043.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com NZ Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - NO - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-no@care.com</emailAddress>
+            <emailServicesAddress>privacy-no@a-2d7l6rmxf90vh0u1p14bcu5m7qylxetqb950hm38cx46hayerr.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Personverninformasjon</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - UK - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-uk@care.com</emailAddress>
+            <emailServicesAddress>privacy-uk@u-7a61pio4pjfaikgq8d2zoi58fudrkw4alzt50yzct8ks5cwde.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Privacy</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - ENCA - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-en-ca@care.com</emailAddress>
+            <emailServicesAddress>privacy-en-ca@14a7lwnluvnepcrpjc7frqp5ectgc4bfohzitk4a4ikck56bg9.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Privacy</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - AU - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-au@care.com</emailAddress>
+            <emailServicesAddress>privacy-au@iykm1b4jikhpzwhz3ceqjt5lp67vpggoshe2czdr4myieucqc.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Privacy</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - NZ - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-nz@care.com</emailAddress>
+            <emailServicesAddress>privacy-nz@8-2k9y9bihma2fjlde7bd9d3ukrhoc3lx2fk5bl1jhn4xqun73kg.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Privacy</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>privacy-ccpa@care.com</emailAddress>
+            <emailServicesAddress>privacy-ccpa@a-2f2dhrgsnd5nly6g6a0iz20m61t7oo44boy3lw4kzfrla0qqu6.7-8kooeay.na79.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Privacy</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - ES - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-es@care.com</emailAddress>
+            <emailServicesAddress>privacy-es@1l4nmii5k1na5qg3kwsdoxz19yud2zcvuxixcyn9bg3ww75ekk.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Protección de datos</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - FR - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-fr@care.com</emailAddress>
+            <emailServicesAddress>privacy-fr@24ayck1c2h6c0qbxn7tson6uiohrodd7t6ohctwo3stgr9nbpp.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Protection des données</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - FRBE - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-fr-be@care.com</emailAddress>
+            <emailServicesAddress>privacy-fr-be@1skhr05eyqk0np2r9wp99w1fh0wzk2jqdoghkeb7326otcgvxv.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Protection des données</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - FRCA - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-fr-ca@care.com</emailAddress>
+            <emailServicesAddress>privacy-fr-ca@p-t55svstx6qdk6t3wtp8nokxwvfd89bcnlzrb34bis4o0qw40.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Protection des données</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>pfcresults@care.com</emailAddress>
+            <emailServicesAddress>pfcresults@l1rbeibtc0924k4pjbg0zr5ggb38nk934myjhachlv74u3sc5.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Safety Team</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - FRBE</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>info-be@care.com</emailAddress>
+            <emailServicesAddress>info-be@2e266rvhmlycc9n1d3oqtjlqdu3rvo6353fa4lcc9cmh7f6vc3.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com Service Client</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - UK</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>membercareuk@care.com</emailAddress>
+            <emailServicesAddress>membercareuk@266q51ii3ubrwwh4jdb2rwgbdyvzcmpszoyy0s8h06xod4io5o.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com UK Member Care</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - SE - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-se@care.com</emailAddress>
+            <emailServicesAddress>privacy-se@g-2dazr85fm21no8mz7lmodhfm5i5qrd14gkp6lohvmkw507iawz.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care.com  Dataskydds </routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - Care Benefits</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>carebenefits@care.com</emailAddress>
+            <emailServicesAddress>carebenefits@2yvsu6ndq6eus8e4iqewtz4dxrvy17h8vr5ap8cf25xmmsskcu.7-8kooeay.na79.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Care@Work</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>expertassistance@care.com</emailAddress>
+            <emailServicesAddress>expertassistance@j-1utmm1bxtrx82cdzmydi0ylxtcf74v7cz9t46sawi0eriepo9c.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Expert Assistance</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Q_Provider_Marketing_Solutions</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>5</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mssupport@care.com</emailAddress>
+            <emailServicesAddress>mssupport@10edp9iz1yvmhqgt1pa14sjesmc6ckd7ypqdepna2jvdzj516m.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Galore Marketing Solutions</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Q_Galore_Operations</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>privacy-ccpa-connect@care.com</emailAddress>
+            <emailServicesAddress>privacy-ccpa-connect@u-1i9db93rvdpu7yjvki98xn0cyka9zqm7qi8r4d6k0cnbdxzylv.7-8kooeay.na79.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Galore Privacy</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - BE - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-nl-be@care.com</emailAddress>
+            <emailServicesAddress>privacy-nl-be@q3hrmsctk61aubn65e6cr2opsnn34ecdyeeuuvj1ngqmpijqu.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Gegevens Privacy</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - NL - Privacy</caseOrigin>
+            <casePriority>2</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>privacy-nl@care.com</emailAddress>
+            <emailServicesAddress>privacy-nl@p-1v8ip9xkgbdg98kgmu39m67mg84hzl98rrrlf99fqzewn6m6ne.7-8kooeay.na33.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Gegevens Privacy</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Q_HP_Operations</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>privacy-ccpa@myhomepay.com</emailAddress>
+            <emailServicesAddress>privacy-ccpa@ws2xzjv0gw53xe0o29gcrayipeoe9gcv4yexpv1nrpm1htbpx.7-8kooeay.na79.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>HomePay Privacy</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - IntlCAW</caseOrigin>
+            <caseOwner>Q_International_CAW</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>internationalcareatwork@care.com</emailAddress>
+            <emailServicesAddress>internationalcareatwork@e9tczdkmjvpe8492jeryyx8u8jpx8wx2de184y3ju298mkuar.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>International Care@Work</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - IntlCAW Amazon</caseOrigin>
+            <caseOwner>Q_International_CAW</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>internationalamazon@care.com</emailAddress>
+            <emailServicesAddress>internationalamazon@19r5qb1ifu3pw05kjj1dtcq6pzc1wexa94gyz02htbuhfkcamg.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>International Care@Work Amazon</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Q_International_Senior_Care_Consult</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>globalseniorcare@care.com</emailAddress>
+            <emailServicesAddress>globalseniorcare@4-1o04amh2gq77ecfh9q3rgdn4m2wd5wstp371kadh4lqz7adpa0.7-8kooeay.na79.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>International Senior care Consult Cases</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - AT - Imprint</caseOrigin>
+            <casePriority>1</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mcimprint-rowat@care.com</emailAddress>
+            <emailServicesAddress>mcimprint-rowat@5-6gf2lgl8ws4nd6qrg17x9cbvfqpagn1ewft6zs5hownbwobij.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>MemberCare Imprint Inquiries - Austria</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - Imprint</caseOrigin>
+            <casePriority>1</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mcimprint-en@care.com</emailAddress>
+            <emailServicesAddress>mcimprint-en@5-25ygcth3vfm3yli0msrg7a4a7ywz2cbo8surcrzuycg8oadejl.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>MemberCare Imprint Inquiries - English</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - FR - Imprint</caseOrigin>
+            <casePriority>1</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mcimprint-rowfr@care.com</emailAddress>
+            <emailServicesAddress>mcimprint-rowfr@pmyqtyf44fqjiwvnfee8ftiib9p1s7i8vjbulih1piwqdh7v5.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>MemberCare Imprint Inquiries - French</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - DE - Imprint</caseOrigin>
+            <casePriority>1</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mcimprint-rowde@care.com</emailAddress>
+            <emailServicesAddress>mcimprint-rowde@1h9xi5s66fxi307l36523ufiguxn1rqhhr7zlv6nd0u47xfful.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>MemberCare Imprint Inquiries - Germany</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - ES - Imprint</caseOrigin>
+            <casePriority>1</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mcimprint-rowes@care.com</emailAddress>
+            <emailServicesAddress>mcimprint-rowes@s-1qt5eyyp1zvuu19i7qtvdiykgzmueordomi834pvx70ctlznm4.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>MemberCare Imprint Inquiries - Spain</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - CH - Imprint</caseOrigin>
+            <casePriority>1</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>mcimprint-rowch@care.com</emailAddress>
+            <emailServicesAddress>mcimprint-rowch@12s3sqdmvrf6hbr63rrnh2b8iphb3n372p6zz0gitsj0mt559y.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>MemberCare Imprint Inquiries - Switzerland</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>S_Safety_Reviews</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>3</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>reviewsplatformsafetycase@care.com</emailAddress>
+            <emailServicesAddress>reviewsplatformsafetycase@e-24vixo4owfpgl6jpo9u4wqkpmf5e42b5a00ajslk34j9o24b3k.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Reviews Platform Escalation</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - DE</caseOrigin>
+            <caseOwner>yuenan.jiang@care.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Low</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>sfdctestinbox@care.com</emailAddress>
+            <emailServicesAddress>sfdctestinbox@1fwr0z5pvjyaiospl26xuwcj57h0if8zbgquk7yd8jyy1sikp7.7-8kooeay.na79.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>SFDC E2C Testing</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - AS Senior Care</caseOrigin>
+            <caseOwner>Q_AS_Senior_Care</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>seniorcareassistance@care.com</emailAddress>
+            <emailServicesAddress>seniorcareassistance@150d4wc946dajwxvjs0aw25lnibduwqa9l6ijrdkbf2bt340ku.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Senior Care Assistance</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email - FR</caseOrigin>
+            <caseOwner>Careteam_care_com_Sunset</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>0</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>infofr@care.com</emailAddress>
+            <emailServicesAddress>infofr@33eqc41shiemcwjzdx41j84lvx6ygjruxhidtxm02ferds3zya.7-8kooeay.na5.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Support Client Care.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>Not Started</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Q_International_CAW</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>internationalcareforbusiness@care.com</emailAddress>
+            <emailServicesAddress>internationalcareforbusiness@m-2jffhfuhmlkwaqjqbz27w7acl9grr6up74yerarhnq4qz9ym7t.7-8kooeay.na156.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>internationalcareforbusiness@care.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <unauthorizedSenderAction>Discard</unauthorizedSenderAction>
+    </emailToCase>
+    <enableCaseFeed>true</enableCaseFeed>
+    <enableCaseSwarming>false</enableCaseSwarming>
+    <enableCollapseEmailThread>false</enableCollapseEmailThread>
+    <enableDraftEmails>true</enableDraftEmails>
+    <enableEarlyEscalationRuleTriggers>false</enableEarlyEscalationRuleTriggers>
+    <enableEmailActionDefaultsHandler>true</enableEmailActionDefaultsHandler>
+    <enableEscalateQfiToCaseInternal>false</enableEscalateQfiToCaseInternal>
+    <enableEscalateQfiToCaseNetworks>false</enableEscalateQfiToCaseNetworks>
+    <enableExtNetworksCaseFeedEnabled>false</enableExtNetworksCaseFeedEnabled>
+    <enableMultiLangSolnSrchCSS>false</enableMultiLangSolnSrchCSS>
+    <enableMultiLangSolnSrchPKB>false</enableMultiLangSolnSrchPKB>
+    <enableMultiLangSolution>false</enableMultiLangSolution>
+    <enableSolutionCategory>true</enableSolutionCategory>
+    <enableSolutionInlineCategory>true</enableSolutionInlineCategory>
+    <enableSolutionShortSummary>false</enableSolutionShortSummary>
+    <enableSuggestedArticlesApplication>false</enableSuggestedArticlesApplication>
+    <enableSuggestedArticlesCustomerPortal>false</enableSuggestedArticlesCustomerPortal>
+    <enableSuggestedArticlesPartnerPortal>false</enableSuggestedArticlesPartnerPortal>
+    <enableSuggestedSolutions>true</enableSuggestedSolutions>
+    <escalateCaseBefore>false</escalateCaseBefore>
+    <keepRecordTypeOnAssignmentRule>true</keepRecordTypeOnAssignmentRule>
+    <notifyContactOnCaseComment>false</notifyContactOnCaseComment>
+    <notifyDefaultCaseOwner>false</notifyDefaultCaseOwner>
+    <notifyOwnerOnCaseComment>false</notifyOwnerOnCaseComment>
+    <notifyOwnerOnCaseOwnerChange>false</notifyOwnerOnCaseOwnerChange>
+    <showEmailAttachmentsInCaseAttachmentsRL>true</showEmailAttachmentsInCaseAttachmentsRL>
+    <showFewerCloseActions>false</showFewerCloseActions>
+    <systemUserEmail>automatedcase@00d700000008kooeay.ext</systemUserEmail>
+    <useSystemEmailAddress>false</useSystemEmailAddress>
+    <useSystemUserAsDefaultCaseUser>false</useSystemUserAsDefaultCaseUser>
+    <visibleInCssCheckbox>false</visibleInCssCheckbox>
+    <webToCase>
+        <caseOrigin>Web</caseOrigin>
+        <enableWebToCase>true</enableWebToCase>
+    </webToCase>
+</CaseSettings>

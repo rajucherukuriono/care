@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Care_Needed__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of Care Needed</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Adult Day Program</fullName>
+                <default>false</default>
+                <label>Adult Day Program</label>
+            </value>
+            <value>
+                <fullName>Aging Life Care Manager</fullName>
+                <default>false</default>
+                <label>Aging Life Care Manager</label>
+            </value>
+            <value>
+                <fullName>Assisted Living Community</fullName>
+                <default>false</default>
+                <label>Assisted Living Community</label>
+            </value>
+            <value>
+                <fullName>Associations</fullName>
+                <default>false</default>
+                <label>Associations</label>
+            </value>
+            <value>
+                <fullName>Cont. Care Retirement Community</fullName>
+                <default>false</default>
+                <label>Cont. Care Retirement Community</label>
+            </value>
+            <value>
+                <fullName>Daily Money Manager</fullName>
+                <default>false</default>
+                <label>Daily Money Manager</label>
+            </value>
+            <value>
+                <fullName>Durable Medical Supplies</fullName>
+                <default>false</default>
+                <label>Durable Medical Supplies</label>
+            </value>
+            <value>
+                <fullName>Elder Law Attorney</fullName>
+                <default>false</default>
+                <label>Elder Law Attorney</label>
+            </value>
+            <value>
+                <fullName>Emergency Response System</fullName>
+                <default>false</default>
+                <label>Emergency Response System</label>
+            </value>
+            <value>
+                <fullName>Financial Assistance</fullName>
+                <default>false</default>
+                <label>Financial Assistance</label>
+            </value>
+            <value>
+                <fullName>Funeral Services</fullName>
+                <default>false</default>
+                <label>Funeral Services</label>
+            </value>
+            <value>
+                <fullName>Home Health Care</fullName>
+                <default>false</default>
+                <label>Home Health Care</label>
+            </value>
+            <value>
+                <fullName>Home Modification</fullName>
+                <default>false</default>
+                <label>Home Modification</label>
+            </value>
+            <value>
+                <fullName>Hospice</fullName>
+                <default>false</default>
+                <label>Hospice</label>
+            </value>
+            <value>
+                <fullName>Independent Living</fullName>
+                <default>false</default>
+                <label>Independent Living</label>
+            </value>
+            <value>
+                <fullName>In-Patient Rehab</fullName>
+                <default>false</default>
+                <label>In-Patient Rehab</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Meals on Wheels/Food Service</fullName>
+                <default>false</default>
+                <label>Meals on Wheels/Food Service</label>
+            </value>
+            <value>
+                <fullName>Medical Providers</fullName>
+                <default>false</default>
+                <label>Medical Providers</label>
+            </value>
+            <value>
+                <fullName>Medical Services/DME</fullName>
+                <default>false</default>
+                <label>Medical Services/DME</label>
+            </value>
+            <value>
+                <fullName>Non-Medical Home Care</fullName>
+                <default>false</default>
+                <label>Non-Medical Home Care</label>
+            </value>
+            <value>
+                <fullName>Nursing Home</fullName>
+                <default>false</default>
+                <label>Nursing Home</label>
+            </value>
+            <value>
+                <fullName>Nutrition Program</fullName>
+                <default>false</default>
+                <label>Nutrition Program</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Senior Center</fullName>
+                <default>false</default>
+                <label>Senior Center</label>
+            </value>
+            <value>
+                <fullName>Senior Move Manager</fullName>
+                <default>false</default>
+                <label>Senior Move Manager</label>
+            </value>
+            <value>
+                <fullName>Senior Moving Services</fullName>
+                <default>false</default>
+                <label>Senior Moving Services</label>
+            </value>
+            <value>
+                <fullName>State/County Agencies</fullName>
+                <default>false</default>
+                <label>State/County Agencies</label>
+            </value>
+            <value>
+                <fullName>Subsidized Housing</fullName>
+                <default>false</default>
+                <label>Subsidized Housing</label>
+            </value>
+            <value>
+                <fullName>Support Groups</fullName>
+                <default>false</default>
+                <label>Support Groups</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

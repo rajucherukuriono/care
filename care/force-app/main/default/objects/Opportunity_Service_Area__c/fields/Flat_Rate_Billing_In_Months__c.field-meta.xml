@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flat_Rate_Billing_In_Months__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Flat_Rate_Billing_Cadence__c, &apos;Annually&apos;), 12,
+   IF(ISPICKVAL(Flat_Rate_Billing_Cadence__c, &apos;Quarterly&apos;), 3,
+      IF(ISPICKVAL(Flat_Rate_Billing_Cadence__c, &apos;Monthly&apos;), 1, 1)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Flat Rate Billing In Months</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

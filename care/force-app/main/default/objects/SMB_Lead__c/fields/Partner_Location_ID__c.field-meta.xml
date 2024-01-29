@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Location_ID__c</fullName>
+    <description>Care.com SMB location ID</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Care.com SMB location ID</inlineHelpText>
+    <label>Partner Location ID</label>
+    <length>16</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

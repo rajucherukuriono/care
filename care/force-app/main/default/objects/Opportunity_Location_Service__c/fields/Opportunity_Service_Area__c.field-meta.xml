@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Service_Area__c</fullName>
+    <description>Opportunity Service Area</description>
+    <externalId>false</externalId>
+    <label>Opportunity Service Area</label>
+    <referenceTo>Opportunity_Service_Area__c</referenceTo>
+    <relationshipLabel>Opportunity Location Services</relationshipLabel>
+    <relationshipName>Opportunity_Location_Services</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

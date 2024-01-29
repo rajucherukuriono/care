@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overall_Satisfaction_Backup_Care_Service__c</fullName>
+    <externalId>false</externalId>
+    <label>Overall Satisfaction Backup Care Service</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Extremely satisfied</fullName>
+                <default>false</default>
+                <label>Extremely satisfied</label>
+            </value>
+            <value>
+                <fullName>Somewhat satisfied</fullName>
+                <default>false</default>
+                <label>Somewhat satisfied</label>
+            </value>
+            <value>
+                <fullName>Neutral</fullName>
+                <default>false</default>
+                <label>Neutral</label>
+            </value>
+            <value>
+                <fullName>Somewhat dissatisfied</fullName>
+                <default>false</default>
+                <label>Somewhat dissatisfied</label>
+            </value>
+            <value>
+                <fullName>Extremely dissatisfied</fullName>
+                <default>false</default>
+                <label>Extremely dissatisfied</label>
+            </value>
+            <value>
+                <fullName>Sehr zufrieden</fullName>
+                <default>false</default>
+                <label>Sehr zufrieden</label>
+            </value>
+            <value>
+                <fullName>Etwas zufrieden</fullName>
+                <default>false</default>
+                <label>Etwas zufrieden</label>
+            </value>
+            <value>
+                <fullName>Weder zufrieden noch unzufrieden</fullName>
+                <default>false</default>
+                <label>Weder zufrieden noch unzufrieden</label>
+            </value>
+            <value>
+                <fullName>Etwas unzufrieden</fullName>
+                <default>false</default>
+                <label>Etwas unzufrieden</label>
+            </value>
+            <value>
+                <fullName>Sehr unzufrieden</fullName>
+                <default>false</default>
+                <label>Sehr unzufrieden</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

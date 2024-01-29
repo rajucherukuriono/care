@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onsite_Group__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Onsite Group</label>
+    <referenceTo>Event__c</referenceTo>
+    <relationshipLabel>Event Members</relationshipLabel>
+    <relationshipName>Event_Members</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Benefit_Type__c</fullName>
+    <description>Created for SFORCE-8328</description>
+    <externalId>false</externalId>
+    <label>Benefit Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Adoption Subsidy</fullName>
+                <default>false</default>
+                <label>Adoption Subsidy</label>
+            </value>
+            <value>
+                <fullName>Backup Care</fullName>
+                <default>false</default>
+                <label>Backup Care</label>
+            </value>
+            <value>
+                <fullName>Behavioral Support for Parents</fullName>
+                <default>false</default>
+                <label>Behavioral Support for Parents</label>
+            </value>
+            <value>
+                <fullName>Benefit Plan Inquiries</fullName>
+                <default>false</default>
+                <label>Benefit Plan Inquiries</label>
+            </value>
+            <value>
+                <fullName>College Support</fullName>
+                <default>false</default>
+                <label>College Support</label>
+            </value>
+            <value>
+                <fullName>EAP</fullName>
+                <default>false</default>
+                <label>EAP</label>
+            </value>
+            <value>
+                <fullName>Family Resource Platform</fullName>
+                <default>false</default>
+                <label>Family Resource Platform</label>
+            </value>
+            <value>
+                <fullName>Fertility Assistance</fullName>
+                <default>false</default>
+                <label>Fertility Assistance</label>
+            </value>
+            <value>
+                <fullName>Health and Wellness App</fullName>
+                <default>false</default>
+                <label>Health and Wellness App</label>
+            </value>
+            <value>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+                <label>Healthcare</label>
+            </value>
+            <value>
+                <fullName>Internal Benefit Resource</fullName>
+                <default>false</default>
+                <label>Internal Benefit Resource</label>
+            </value>
+            <value>
+                <fullName>Lactation Support</fullName>
+                <default>false</default>
+                <label>Lactation Support</label>
+            </value>
+            <value>
+                <fullName>Legal Plans</fullName>
+                <default>false</default>
+                <label>Legal Plans</label>
+            </value>
+            <value>
+                <fullName>LGBTQ+ Care Concierge Service</fullName>
+                <default>false</default>
+                <label>LGBTQ+ Care Concierge Service</label>
+            </value>
+            <value>
+                <fullName>Parental Success</fullName>
+                <default>false</default>
+                <label>Parental Success</label>
+            </value>
+            <value>
+                <fullName>Pet Care</fullName>
+                <default>false</default>
+                <label>Pet Care</label>
+            </value>
+            <value>
+                <fullName>Pet Insurance</fullName>
+                <default>false</default>
+                <label>Pet Insurance</label>
+            </value>
+            <value>
+                <fullName>Wellbeing</fullName>
+                <default>false</default>
+                <label>Wellbeing</label>
+            </value>
+            <value>
+                <fullName>Women&apos;s Healthcare</fullName>
+                <default>false</default>
+                <label>Women&apos;s Healthcare</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

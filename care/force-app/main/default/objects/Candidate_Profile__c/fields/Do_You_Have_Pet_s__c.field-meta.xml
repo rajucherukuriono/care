@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_You_Have_Pet_s__c</fullName>
+    <description>field used by Expert Assist Users.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Do you have any pet(s) ? if Yes, please add the details.</inlineHelpText>
+    <label>Do You Have Pet(s) ?</label>
+    <length>1000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

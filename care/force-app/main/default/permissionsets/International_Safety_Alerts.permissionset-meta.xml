@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This allows users to create international Safety cases and International Cases. Used for individuals who need the ability to work across platforms (US &amp; Int)</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>International Safety Alerts</label>
+    <license>Salesforce</license>
+    <recordTypeVisibilities>
+        <recordType>Case.International_Call_Center</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.International_Email</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Case.International_Safety_Alert</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

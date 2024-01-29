@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Access to Omni Supervisor Dashboard Tab</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Omni - OmniSupervisor</label>
+    <license>Salesforce</license>
+    <tabSettings>
+        <tab>standard-OmniSupervisor</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>standard-OmniSupervisorLightning</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>

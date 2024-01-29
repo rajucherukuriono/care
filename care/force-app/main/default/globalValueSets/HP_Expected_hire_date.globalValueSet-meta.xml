@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Have already hired</fullName>
+        <default>false</default>
+        <label>Have already hired</label>
+    </customValue>
+    <customValue>
+        <fullName>Within 1 month</fullName>
+        <default>false</default>
+        <label>Within 1 month</label>
+    </customValue>
+    <customValue>
+        <fullName>1-3 months</fullName>
+        <default>false</default>
+        <label>1-3 months</label>
+    </customValue>
+    <customValue>
+        <fullName>3-6 months</fullName>
+        <default>false</default>
+        <label>3-6 months</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Applicable - I&apos;m the employee</fullName>
+        <default>false</default>
+        <label>Not Applicable - I&apos;m the employee</label>
+    </customValue>
+    <description>A marketing flag used by the HomePay team.</description>
+    <masterLabel>HP: Expected hire date</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

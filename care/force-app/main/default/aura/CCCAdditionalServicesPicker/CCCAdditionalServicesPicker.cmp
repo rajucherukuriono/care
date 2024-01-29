@@ -1,0 +1,46 @@
+<aura:component extends="c:CCCBase">
+
+    <!-- Aura Attributes - Public -->
+    <aura:attribute name="composerServiceRecords" type="List" access="public" />
+    <aura:attribute name="selectedComposerServiceRecordIds" type="List" default="[]" access="public" />
+    <aura:attribute name="primaryServiceVerticalName" type="String" access="public" default="Senior Care" />
+
+    <!-- Aura Attributes - Private -->
+    <aura:attribute name="verticals" type="List" default="[]" access="private" />
+
+    <!-- Aura Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <div class="slds-tree_container">
+        <ul aria-labelledby="treeheading" class="slds-tree" role="tree">
+
+            <aura:iteration items="{!v.verticals}" var="vertical">
+                <li aria-expanded="{!vertical.expanded}" aria-label="{!vertical.name}" aria-level="1" role="treeitem">
+                    <div class="slds-tree__item">
+                        <lightning:buttonIcon value="{!vertical.name}" iconName="utility:chevronright" variant="bare" onclick="{!c.handleChevronClick}" alternativeText="Expand" />
+                        <span class="slds-has-flexi-truncate">
+                            <span class="slds-tree__item-label slds-truncate" title="{!vertical.name}">{!vertical.name}</span>
+                        </span>
+                    </div>
+                    
+                    <ul role="group">
+                        <aura:iteration items="{!vertical.services}" var="service">
+                            <li aria-level="2" role="treeitem">
+                                <div class="slds-tree__item">
+                                    <lightning:input type="checkbox" value="{!service.id}" checked="{!service.checked}"
+                                        onchange="{!c.onComposerServiceChange}" disabled="{!not(v.allowEdit)}" />
+                                    <span class="slds-has-flexi-truncate">
+                                        <span class="slds-tree__item-label slds-truncate" title="{!service.licenseLevel}">{!service.licenseLevel}</span>
+                                    </span>
+                                </div>
+                            </li>
+                        </aura:iteration>
+                    </ul>
+
+                </li>
+            </aura:iteration>
+
+        </ul>
+    </div>
+
+</aura:component>

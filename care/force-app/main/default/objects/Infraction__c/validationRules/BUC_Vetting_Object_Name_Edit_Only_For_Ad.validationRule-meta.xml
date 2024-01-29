@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BUC_Vetting_Object_Name_Edit_Only_For_Ad</fullName>
+    <active>true</active>
+    <description>BUC_Vetting_Object_Name_Edit_Only_For_Admins</description>
+    <errorConditionFormula>AND(
+   $Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+   ISCHANGED(Vetting_Object__c)
+	)</errorConditionFormula>
+    <errorMessage>Insufficient previleges to edit Vetting Name. Please contact administrator.</errorMessage>
+</ValidationRule>

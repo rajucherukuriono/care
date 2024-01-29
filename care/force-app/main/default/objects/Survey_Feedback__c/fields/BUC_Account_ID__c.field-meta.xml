@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BUC_Account_ID__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Used to connect US Seeker Account to BUC Surveys. Added for SFORCE-2425</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Account Id of the BUC Member .</inlineHelpText>
+    <label>BUC Account ID</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>BUC Survey Feedbacks</relationshipLabel>
+    <relationshipName>BUC_Survey_Feedbacks</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

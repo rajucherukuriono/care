@@ -1,0 +1,196 @@
+<template>
+    <div class="container">
+        <template if:true={showLoginStartScreen}>
+            <div class="body space-evenly">
+                <div class="icon">
+                    <img src={chatIcon} />
+                </div>
+                <div class="text">
+                    <h3>{label.HC_Pre_Chat_Visitor_Heading}</h3>
+                    <p>{label.HC_Pre_Chat_Visitor_Prompt}</p>
+                </div>
+            </div>
+            <div class="button-footer">
+                <button class="button" type="button" onclick={navigateToLogIn}>{label.HC_Log_In}</button>
+                <button class="button" type="button" onclick={navigateToJoinNow}>{label.HC_Join_Now}</button>
+            </div>
+        </template>
+        <template if:true={showEmailAndChatStartScreen}>
+            <template if:true={showEmailAndChatSpinner}>
+                <lightning-spinner variant="brand" size="small"></lightning-spinner>
+            </template>
+            <div class="body">
+                <div class="text">
+                    <h3>{label.HC_Pre_Chat_Prompt}</h3>
+                    <template if:true={showEmail}>
+                        <h5>{label.HC_Pre_Chat_Email_Heading}</h5>
+                        <p>{label.HC_Pre_Chat_Email_Prompt}</p>
+                    </template>
+                    <template if:false={showEmail}>
+                        <p>{label.HC_Pre_Chat_Basic_Prompt}</p>
+                    </template>
+                    <template if:true={showChat}> 
+                        <template if:true={showChatLang}>
+                            <h5>{label.HC_Pre_Chat_Chat_Heading}</h5>
+                            <p>{label.HC_Pre_Chat_Chat_Prompt}</p>
+                        </template>
+                    </template>
+                </div>
+            </div>
+            <div class="button-footer">
+                <template if:true={showEmail}>
+                    <button class="button" type="button" onclick={navigateToEmail1Screen}>{label.HC_Pre_Chat_Email_Button}</button>
+                </template>
+                <template if:true={showChat}>
+                    <template if:true={showChatLang}>
+                        <button class="button" type="button" onclick={navigateToPreChatScreen}>{label.HC_Pre_Chat_Chat_Button}</button>
+                    </template>
+                </template>
+            </div>
+        </template>
+        <template if:true={showEmailScreen1}>
+            <template if:true={showEmailSpinner}>
+                <lightning-spinner variant="brand" size="small"></lightning-spinner>
+            </template>
+            <div class="body">
+                <div class="text email-fields">
+                    <h3>{label.HC_Form_Prompt}</h3>
+                    <label><abbr class="slds-required" title="required">* </abbr>{label.HC_Form_Name}</label>
+                    <input name="name" type="text" placeholder={label.HC_Form_Name_Prompt} required/>
+                    <label><abbr class="slds-required" title="required">* </abbr>{label.HC_Form_Email}</label>
+                    <input name="email" type="email" placeholder={label.HC_Form_Email_Prompt} required/>
+                    <label><abbr class="slds-required" title="Phone">* </abbr>{label.HC_Form_Phone}</label>
+                    <input name="phone" type="phone" placeholder={label.HC_Form_Phone_Prompt} required/>
+                    <label><abbr class="slds-required" title="required">* </abbr>{label.HC_Form_Topic}</label>
+                    <select name="topic" required>
+                        <template if:true={isTopicTrustAndSafety}>
+                            <option value="Trust &amp; Safety" selected>{label.HC_Topic_Trust_Safety}</option>
+                        </template>
+                        <template if:false={isTopicTrustAndSafety}>
+                            <option value="Trust &amp; Safety">{label.HC_Topic_Trust_Safety}</option>
+                        </template>
+                        <template if:true={isTopicUsingYourAccount}>
+                            <option value="Using Your Account" selected>{label.HC_Topic_Using_Your_Account}</option>
+                        </template>
+                        <template if:false={isTopicUsingYourAccount}>
+                            <option value="Using Your Account">{label.HC_Topic_Using_Your_Account}</option>
+                        </template>
+                        <template if:true={isTopicSubscriptionAndBilling}>
+                            <option value="Subscription &amp; Billing" selected>{label.HC_Topic_Subscription_Billing}</option>
+                        </template>
+                        <template if:false={isTopicSubscriptionAndBilling}>
+                            <option value="Subscription &amp; Billing">{label.HC_Topic_Subscription_Billing}</option>
+                        </template>
+                        <template if:true={isAccountAndProfile}>
+                            <option value="Account and Profile" selected>{label.HC_Topic_Account_and_Profile}</option>
+                        </template>
+                        <template if:false={isAccountAndProfile}>
+                            <option value="Account and Profile">{label.HC_Topic_Account_and_Profile}</option>
+                        </template>
+                        <template if:true={isFindingACareGiver}>
+                            <option value="Finding A Caregiver" selected>{label.HC_Topic_Finding_a_Caregiver}</option>
+                        </template>
+                        <template if:false={isFindingACareGiver}>
+                            <option value="Finding A Caregiver">{label.HC_Topic_Finding_a_Caregiver}</option>
+                        </template>
+                        <template if:true={isRunningABusiness}>
+                            <option value="Running a Business" selected>{label.HC_Topic_Running_My_Business}</option>
+                        </template>
+                        <template if:false={isRunningABusiness}>
+                            <option value="Running a Business">{label.HC_Topic_Running_My_Business}</option>
+                        </template>
+                        <template if:true={isBookingsAndFullTimeJobs}>
+                            <option value="Bookings And Full Time Jobs" selected>{label.HC_Topic_Bookings_and_Full_Time_Jobs}</option>
+                        </template>
+                        <template if:false={isBookingsAndFullTimeJobs}>
+                            <option value="Bookings And Full Time Jobs">{label.HC_Topic_Bookings_and_Full_Time_Jobs}</option>
+                        </template>
+                        <template if:true={isPayments}>
+                            <option value="Payments" selected>{label.HC_Topic_Payments}</option>
+                        </template>
+                        <template if:false={isPayments}>
+                            <option value="Payments">{label.HC_Topic_Payments}</option>
+                        </template>
+                        <template if:true={isMyProfileAndServices}>
+                            <option value="My Profile and Services" selected>{label.HC_Topic_My_Profile_and_Services}</option>
+                        </template>
+                        <template if:false={isMyProfileAndServices}>
+                            <option value="My Profile and Services">{label.HC_Topic_My_Profile_and_Services}</option>
+                        </template>
+                        <template if:true={isGettingStarted}>
+                            <option value="Getting Started" selected>{label.HC_Topic_Getting_Started}</option>
+                        </template>
+                        <template if:false={isGettingStarted}>
+                            <option value="Getting Started">{label.HC_Topic_Getting_Started}</option>
+                        </template>
+                        <option value="Other">Other</option>
+                    </select>
+                    <template if:false={areWeOnAnArticlePage}>
+                        <label><abbr class="slds-required" title="required">* </abbr>{label.HC_Form_Subject}</label>
+                        <input name="subject" type="text" placeholder={label.HC_Form_Subject_Prompt} value={emailFormSubjectValue} required/>
+                    </template>
+                    <label><abbr class="slds-required" title="required">* </abbr>{label.HC_Form_Message}</label>
+                    <textarea name="message" placeholder={label.HC_Form_Message_Prompt} required></textarea>
+                </div>
+                <template if:true={errorMessage}>
+                    <div class="text error">
+                        <p>{errorMessage}</p>
+                    </div>
+                </template>
+            </div>
+            <div class="button-footer">
+                <button class="button" type="button" onclick={navigateToPreviousScreen}>{label.HC_Back}</button>
+                <button class="button" type="button" onclick={handleSendEmail}>{label.HC_Form_Send_Email}</button>
+            </div>
+        </template>
+        <template if:true={showEmailScreen2}>
+            <div class="body space-evenly">
+                <div class="icon">
+                    <img src={successIcon} />
+                </div>
+                <div class="text">
+                    <h3>{label.HC_Form_Message_Sent}</h3>
+                    <p>{label.HC_Form_Message_Sent_Thanks}</p>
+                </div>
+            </div>
+            <div class="link-footer">
+                <a href="javascript:void(0);" onclick={closeChat}>Got it</a>
+            </div>
+        </template>
+        <template if:true={showPreChatScreen}>
+            <template if:true={showChatSpinner}>
+                <lightning-spinner variant="brand" size="small"></lightning-spinner>
+            </template>
+            <div class="body">
+                <div class="text prechat-fields">
+                    <h3>{label.HC_Chat_Form_Prompt}</h3>
+                    <template for:each={fields} for:item="field">
+                        <template if:false={field.hidden}>
+                            <template if:true={field.required}>
+                                <div key={field.name}>
+                                    <label><abbr class="slds-required" title="required">* </abbr>{field.displayLabel}</label>
+                                    <input type={field.type} name={field.name} placeholder={field.displayLabel} required/>
+                                </div>
+                            </template>
+                            <template if:false={field.required}>
+                                <div key={field.name}>
+                                    <label>{field.displayLabel}</label>
+                                    <input type={field.type} name={field.name} placeholder={field.displayLabel} />
+                                </div>
+                            </template>
+                        </template>
+                    </template>
+                </div>
+                <template if:true={errorMessage}>
+                    <div class="text error">
+                        <p>{errorMessage}</p>
+                    </div>
+                </template>
+            </div>
+            <div class="button-footer">
+                <button class="button" type="button" onclick={navigateToPreviousScreen}>{label.HC_Back}</button>
+                <button class="button" type="button" onclick={handleStartChat}>{label.HC_Chat_Form_Start}</button>
+            </div>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Satisfaction_Comments__c</fullName>
+    <complianceGroup>CCPA</complianceGroup>
+    <description>Comments about the Satisfaction Rating. Also used for BUC US Surveys: SFORCE-2425</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Comments about the Satisfaction Rating. BUC US Survey Question: Is there anything else you would like to tell us about our services?</inlineHelpText>
+    <label>Satisfaction Comments</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

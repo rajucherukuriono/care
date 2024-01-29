@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>fake@e.mail</email>
+    <name>Q: NZ: English</name>
+    <queueMembers>
+        <users>
+            <user>ana.rincon@care.com</user>
+            <user>bernardita.maturana@care.com</user>
+            <user>dennis.irjon@care.com</user>
+            <user>gonzalo.conde@care.com</user>
+            <user>isanez@care.com</user>
+            <user>kasia.szomborg@care.com</user>
+            <user>lois.cook@care.com</user>
+            <user>max.cherubini@care.com</user>
+            <user>miranda.lundin@care.com</user>
+            <user>olivia.harding@care.com</user>
+            <user>tanya.thao@care.com</user>
+            <user>valerie.perkins@care.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

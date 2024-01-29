@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used in Console for Senior Care cases.  Should include they most commonly edited fields whenever the update a case.</description>
+    <label>Update Senior Care Case</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>OwnerId</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Care_Consult_Narrative__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Care_Plan_Type__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Primary_Concern__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Medical_Issues__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Functional_Issues__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Status</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+    </quickActionLayout>
+    <type>Update</type>
+</QuickAction>

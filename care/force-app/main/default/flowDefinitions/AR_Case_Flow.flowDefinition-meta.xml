@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>Determines whether Case should be passed to subflows.  Also handles suppression of ARs (B2B relationships &amp; auto responders). This is Converted from Process Builder to Flow.</description>
+    <masterLabel>AR Case Flow</masterLabel>
+</FlowDefinition>

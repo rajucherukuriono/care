@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>for User, who are importing records on a regular basis.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>User.Bypass_Duplicate_Rules__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Acces User.Bypass Duplicate  Rule</label>
+</PermissionSet>

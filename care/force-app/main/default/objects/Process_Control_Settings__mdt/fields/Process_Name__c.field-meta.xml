@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Process_Name__c</fullName>
+    <description>Describes the process name Ex: GDPR</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Process Name</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GDPR</fullName>
+                <default>true</default>
+                <label>GDPR</label>
+            </value>
+            <value>
+                <fullName>GDPR Fail Over</fullName>
+                <default>false</default>
+                <label>GDPR Fail Over</label>
+            </value>
+            <value>
+                <fullName>Intl Retention</fullName>
+                <default>false</default>
+                <label>Intl Retention</label>
+            </value>
+            <value>
+                <fullName>Intl Retention Fail Over</fullName>
+                <default>false</default>
+                <label>Intl Retention Fail Over</label>
+            </value>
+            <value>
+                <fullName>Intl Retention Batch</fullName>
+                <default>false</default>
+                <label>Intl Retention Batch</label>
+            </value>
+            <value>
+                <fullName>Intl Retention Admin Notification</fullName>
+                <default>false</default>
+                <label>Intl Retention Admin Notification</label>
+            </value>
+            <value>
+                <fullName>GDPR Admin Notification</fullName>
+                <default>false</default>
+                <label>GDPR Admin Notification</label>
+            </value>
+            <value>
+                <fullName>GDPR Sterling Sync</fullName>
+                <default>false</default>
+                <label>GDPR Sterling Sync</label>
+            </value>
+            <value>
+                <fullName>Intl Retention Sterling Sync</fullName>
+                <default>false</default>
+                <label>Intl Retention Sterling Sync</label>
+            </value>
+            <value>
+                <fullName>Update Salesforce Last Action Date</fullName>
+                <default>false</default>
+                <label>Update Salesforce Last Action Date</label>
+            </value>
+            <value>
+                <fullName>Integration User</fullName>
+                <default>false</default>
+                <label>Integration User</label>
+            </value>
+            <value>
+                <fullName>CCPA Deletion</fullName>
+                <default>false</default>
+                <label>CCPA Deletion</label>
+            </value>
+            <value>
+                <fullName>CCPA Access Data</fullName>
+                <default>false</default>
+                <label>CCPA Access Data</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

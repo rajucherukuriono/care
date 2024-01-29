@@ -1,0 +1,126 @@
+<aura:component controller="AutocompleteController" access="global">
+    <!-- Much of the design for this component is based on the example found here: http://sfdcmonkey.com/2017/07/17/re-usable-custom-lookup/ -->
+
+    <!-- public attributes -->
+    <aura:attribute name="selectedRecord" type="sObject" default="{}" required="true"
+        description="Stores selected record" />
+    <aura:attribute name="dataSource" type="Object"
+        description="Set this attribute to use a custom data source rather than a SOQL query" />
+    <aura:attribute name="objectAPIName" type="String" default="" description="The name of the sObject to query" />
+    <aura:attribute name="fieldAPIName" type="String" default="Name"
+        description="The field to query; This is optional since it defaults to 'Name'" />
+    <aura:attribute name="iconName" type="String" default="" description="The icon to display next to each record" />
+    <aura:attribute name="label" type="String" default=""
+        description="The label text to display by the input element" />
+    <aura:attribute name="width" type="String" default="" description="The width of the element container" />
+    <aura:attribute name="maxWidth" type="String" default="" description="The max-width of the element container" />
+    <aura:attribute name="placeholder" type="String" default="Search..." />
+    <aura:attribute name="required" type="Boolean" default="false" />
+    <aura:attribute name="wildcardPosition" type="String" default=""
+        description="Indicates where the wildcards are added around the keyword in the SOQL query. Possible values are 'before', 'after', ''." />
+
+    <!-- private attributes -->
+    <aura:attribute name="searchResultRecords" type="List" access="private" />
+    <aura:attribute name="searchKeyword" type="String" access="private" />
+    <aura:attribute name="Message" type="String" default="" access="private" />
+    <aura:attribute name="highlightedIndex" type="Integer" default="-1" access="private" />
+    <aura:attribute name="timeoutReference" type="Integer" access="private" />
+    <aura:attribute name="hasMouseFocus" type="Boolean" default="false" access="private" />
+    <aura:attribute name="errorMessage" type="String" access="private" />
+
+    <!-- events -->
+    <aura:registerEvent name="recordSelectedEvent" type="c:AutocompleteRecordSelectedEvent" />
+
+    <!-- event handlers -->
+    <aura:handler name="recordSelectedEvent" event="c:AutocompleteRecordSelectedEvent"
+        action="{!c.onRecordSelectedEvent}" />
+    <aura:handler name="change" value="{!v.highlightedIndex}" action="{!c.onHighlightedIndexChanged}" />
+    <aura:handler name="change" value="{!v.selectedRecord}" action="{!c.onSelectedRecordChanged}" />
+    <aura:handler name="change" value="{!v.searchResultRecords}" action="{!c.onSearchResultRecordsChanged}" />
+
+    <!-- methods -->
+    <aura:method name="setCustomValidity" action="{!c.setCustomValidity}">
+        <aura:attribute name="message" type="String" />
+    </aura:method>
+
+    <aura:method name="focus" action="{!c.setFocusOnInput}" />
+
+    <!-- Initilization Handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <!-- https://www.lightningdesignsystem.com/components/lookups/ -->
+
+    <div onmouseenter="{!c.onMouseEnter}" onmouseleave="{!c.onMouseLeave}" aura:id="searchRes"
+        class="slds-form-element slds-lookup slds-is-close" data-select="single">
+        <aura:if isTrue="{!!empty(v.label)}">
+            <label class="slds-form-element__label">
+                <aura:if isTrue="{!equals(v.required,true)}">
+                    <abbr class="slds-required" title="required">*</abbr>
+                </aura:if>
+                <span>{!v.label}</span>
+            </label>
+        </aura:if>
+
+        <div class="slds-form-element__control">
+            <div class="slds-input-has-icon slds-input-has-icon--right"
+                style="{!(v.maxWidth != '' ? 'max-width:' + v.maxWidth : '') + (v.width != '' ? 'width:' + v.width : '')}">
+
+                <!-- This pill will show the selected record -->
+                <div aura:id="lookup-pill" class="slds-pill-container slds-hide" title="{!v.selectedRecord.Name}">
+                    <aura:if isTrue="{!v.iconName != ''}">
+                        <lightning:pill class="pillSize" label="{!v.selectedRecord.Name}"
+                            name="{!v.selectedRecord.Name}" onremove="{!c.onSelectedRecordRemove}">
+                            <aura:set attribute="media">
+                                <lightning:icon iconName="{!v.iconName}" size="x-small"
+                                    alternativeText="{!v.iconName}" />
+                            </aura:set>
+                        </lightning:pill>
+                    </aura:if>
+                    <aura:if isTrue="{!v.iconName == ''}">
+                        <lightning:pill class="pillSize slds-truncate" label="{!v.selectedRecord.Name}"
+                            name="{!v.selectedRecord.Name}" onremove="{!c.onSelectedRecordRemove}">
+                        </lightning:pill>
+                    </aura:if>
+                </div>
+
+                <div aura:id="lookupField" class="slds-show">
+                    <aura:if isTrue="{!v.iconName != ''}">
+                        <span class="slds-icon_container  slds-combobox__input-entity-icon" title="record">
+                            <lightning:icon class="slds-icon slds-icon slds-icon_small slds-icon-text-default"
+                                iconName="{!v.iconName}" size="x-small" alternativeText="icon" />
+                            <span class="slds-assistive-text"></span>
+                        </span>
+                    </aura:if>
+
+                    <div aura:id="searchInputElementContainer" class="slds-form-element">
+                        <div class="slds-form-element__control slds-grow">
+                            <input aura:id="searchInputElement" type="text" autocomplete="off" updateOn="keyup"
+                                onkeyup="{!c.onSearchInputKeyUp}" onclick="{!c.onSearchInputClick}"
+                                onblur="{!c.onSearchInputBlur}" placeholder="{!v.placeholder}"
+                                class="{!'slds-input ' + (v.iconName != '' ? 'leftPaddingClass' : '')}" />
+                        </div>
+                        <div aura:id="errorMessageContainer" role="alert" class="slds-form-element__help slds-hide">
+                            {!v.errorMessage}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- List of records for Autocomplete -->
+        <ul style="min-height:40px;margin-top:0px !important"
+            class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-lookup__menu slds"
+            role="listbox">
+            <lightning:spinner class="slds-hide" variant="brand" size="small" aura:id="theSpinner" />
+            <center>{!v.Message}</center>
+            <aura:iteration items="{!v.searchResultRecords}" var="singleRec" indexVar="index">
+                <span aura:id="resultContainer" class="resultContainer" id="{!'record_' + index}" data-index="{!index}"
+                    data-id="{!singleRec.Id}">
+                    <c:AutocompleteRecord oRecord="{!singleRec}" iconName="{!v.iconName}" />
+                </span>
+            </aura:iteration>
+        </ul>
+
+    </div>
+</aura:component>

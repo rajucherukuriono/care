@@ -1,0 +1,107 @@
+{
+  "appPageId" : "372b8d47-e2cd-405f-817c-9731a6b8defe",
+  "componentName" : "siteforce:sldsThreeCol444Layout",
+  "dataProviders" : [ ],
+  "id" : "d1be6764-5300-4170-8d25-8e82f17cd039",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p><a href=\"https://www.care.com/safety\" target=\"_blank\"><img class=\"sfdcCbImage\" style=\"width: 403.234px; height: 245.281px;\" src=\"{!contentAsset.TrustandSafety_411x248_PDG261.1}\" /></a> <a href=\"https://help.care.com/companies/s/topic/0TO1O0000026iYVWAY/account-management\" target=\"_self\"><img class=\"sfdcCbImage\" style=\"width: 402.141px; height: 244.625px;\" src=\"{!contentAsset.AccountManagement_411x248_PDG26.1}\" /></a> <a href=\"https://help.care.com/companies/s/topic/0TO1O0000026iYpWAI/subscription-billing\" target=\"_self\"><img class=\"sfdcCbImage\" style=\"width: 402.953px; height: 245.109px;\" src=\"{!contentAsset.SubscriptionandBilling_411x248_PDG2.1}\" /></a></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "e18ca8dd-7386-40fb-b27c-5778edc02e54",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4786a932-8565-4dd5-8852-4fe84bcc1492",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "numberOfArticles" : 5,
+        "showTitle" : false,
+        "title" : "Top Articles",
+        "topicList" : [ {
+          "isPublic" : true,
+          "name" : "0TO1O0000026iYfWAI"
+        }, {
+          "isPublic" : true,
+          "name" : "0TO1O0000026iYaWAI"
+        } ]
+      },
+      "componentName" : "forceCommunity:topArticleList",
+      "id" : "969fac9a-3654-4b81-8b03-6904eb3dca9f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1d1597c7-e105-45f3-b9dc-816330136315",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "numberOfArticles" : 10,
+        "showTitle" : false,
+        "title" : "Top Articles",
+        "topicList" : [ {
+          "isPublic" : true,
+          "name" : "0TO1O0000026iYVWAY"
+        } ]
+      },
+      "componentName" : "forceCommunity:topArticleList",
+      "id" : "fbb6ec2b-5015-4e4b-90b5-65f70e27ef8a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "79ecb778-0772-490a-81f9-8355155c5e3f",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "numberOfArticles" : 10,
+        "showTitle" : false,
+        "title" : "Top Articles",
+        "topicList" : [ {
+          "isPublic" : true,
+          "name" : "0TO1O0000026iYpWAI"
+        } ]
+      },
+      "componentName" : "forceCommunity:topArticleList",
+      "id" : "6fd37504-4349-415f-acfd-4db2d5551299",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "23c51a4f-0726-43bc-b5eb-6b39761d0903",
+    "regionName" : "sidebarAlt",
+    "type" : "region"
+  }, {
+    "id" : "3511e287-7323-46c3-a797-e70b688e55c5",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Care Help Center for Families, Caregivers & Partners"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "1a49ee00-b1bf-4951-a999-a8a22740c7b8",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b27111ef-a088-4716-93ae-028797c16b7f",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

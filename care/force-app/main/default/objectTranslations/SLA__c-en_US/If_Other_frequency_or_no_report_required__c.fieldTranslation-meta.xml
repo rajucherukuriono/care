@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>If_Other_frequency_or_no_report_required__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Q_WPS_INTL_Provider_Survey_Feedback</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Q: WPS INTL Provider</label>
+    <queue>Q_WPS_INTL_Provider</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

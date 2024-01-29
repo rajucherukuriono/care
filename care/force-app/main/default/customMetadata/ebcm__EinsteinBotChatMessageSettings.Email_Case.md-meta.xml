@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Email Case</label>
+    <protected>false</protected>
+    <values>
+        <field>ebcm__Bot_Name__c</field>
+        <value xsi:type="xsd:string">Digital Assistant</value>
+    </values>
+    <values>
+        <field>ebcm__Dialog_Request_Payload__c</field>
+        <value xsi:type="xsd:string">{
+  &quot;title&quot;: &quot;What&apos;s going on?&quot;,
+  &quot;syncDialogCall&quot;: true,
+  &quot;class&quot;: &quot;formcard_transfeConnectrAdvocate&quot;,
+  &quot;disableOnSubmit&quot;: true,
+  &quot;actions&quot;: [
+    {
+      &quot;type&quot;: &quot;button&quot;,
+      &quot;label&quot;: &quot;Send Email&quot;,
+      &quot;params&quot;: &quot;#bot_handle_return_dialog_email_case#&quot;,
+      &quot;disableOnSubmit&quot;: true
+    }
+  ],
+  &quot;inputs&quot;: [
+    {
+      &quot;isRequired&quot;: true,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;validateOn&quot;: &quot;input&quot;,
+      &quot;messageWhenValueMissing&quot;: &quot;Please enter name&quot;,
+      &quot;label&quot;: &quot;Name&quot;,
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;fApi&quot;: &quot;Customer_Name__c&quot;,
+      &quot;placeholder&quot;: &quot;What&apos;s your name?&quot;
+    },
+    {
+      &quot;isRequired&quot;: true,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;validateOn&quot;: &quot;input&quot;,
+      &quot;messageWhenValueMissing&quot;: &quot;Please enter email&quot;,
+      &quot;label&quot;: &quot;Email&quot;,
+      &quot;type&quot;: &quot;email&quot;,
+      &quot;fApi&quot;: &quot;Given_Email__c&quot;,
+      &quot;placeholder&quot;: &quot;What&apos;s your email?&quot;,
+      &quot;pattern&quot;: &quot;[a-z0-9._%+\\-]+@[a-z0-9.\\-]+\\.[a-z]{2,}$&quot;
+    },
+    {
+      &quot;isRequired&quot;: true,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;validateOn&quot;: &quot;input&quot;,
+      &quot;messageWhenValueMissing&quot;: &quot;Please enter phone&quot;,
+      &quot;label&quot;: &quot;Phone&quot;,
+      &quot;type&quot;: &quot;telephone&quot;,
+      &quot;fApi&quot;: &quot;Given_Phone__c&quot;,
+      &quot;placeholder&quot;: &quot;What&apos;s your phone number?&quot;
+    },
+    {
+      &quot;isRequired&quot;: true,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;validateOn&quot;: &quot;input&quot;,
+      &quot;messageWhenValueMissing&quot;: &quot;Please select topic&quot;,
+      &quot;label&quot;: &quot;Topic&quot;,
+      &quot;type&quot;: &quot;picklist&quot;,
+      &quot;fApi&quot;: &quot;Issue_Topic__c&quot;,
+      &quot;placeholder&quot;: &quot;Billing &amp; Payments&quot;,
+      &quot;options&quot;: [
+        {
+          &quot;label&quot;: &quot;Trust &amp; Safety&quot;,
+          &quot;value&quot;: &quot;Trust &amp; Safety&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Using Your Account&quot;,
+          &quot;value&quot;: &quot;Using Your Account&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Subscription&quot;,
+          &quot;value&quot;: &quot;Subscription&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Account and Profile&quot;,
+          &quot;value&quot;: &quot;Account and Profile&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Finding A Caregiver&quot;,
+          &quot;value&quot;: &quot;Finding A Caregiver&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Running a Business&quot;,
+          &quot;value&quot;: &quot;Running a Business&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Bookings And Full Time Jobs&quot;,
+          &quot;value&quot;: &quot;Bookings And Full Time Jobs&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Payments&quot;,
+          &quot;value&quot;: &quot;Payments&quot;
+        },
+        {
+          &quot;label&quot;: &quot;My Profile and Services&quot;,
+          &quot;value&quot;: &quot;My Profile and Services&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Getting Started&quot;,
+          &quot;value&quot;: &quot;Getting Started&quot;
+        },
+        {
+          &quot;label&quot;: &quot;Other&quot;,
+          &quot;value&quot;: &quot;Other&quot;
+        }
+      ]
+    },
+    {
+      &quot;isRequired&quot;: true,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;validateOn&quot;: &quot;input&quot;,
+      &quot;messageWhenValueMissing&quot;: &quot;Please enter subject&quot;,
+      &quot;label&quot;: &quot;Subject&quot;,
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;fApi&quot;: &quot;Issue_Subject__c&quot;,
+      &quot;placeholder&quot;: &quot;What&apos;s the subject of this message?&quot;
+    },
+    {
+      &quot;isRequired&quot;: true,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;validateOn&quot;: &quot;input&quot;,
+      &quot;messageWhenValueMissing&quot;: &quot;Please enter message&quot;,
+      &quot;label&quot;: &quot;Message&quot;,
+      &quot;type&quot;: &quot;textarea&quot;,
+      &quot;fApi&quot;: &quot;IssueDescription__c&quot;,
+      &quot;placeholder&quot;: &quot;Give us the details.&quot;
+    }
+  ],
+  &quot;submission&quot;: {
+    &quot;server&quot;: &quot;*&quot;,
+    &quot;browser&quot;: &quot;*&quot;
+  }
+}</value>
+    </values>
+    <values>
+        <field>ebcm__Type__c</field>
+        <value xsi:type="xsd:string">Form</value>
+    </values>
+</CustomMetadata>

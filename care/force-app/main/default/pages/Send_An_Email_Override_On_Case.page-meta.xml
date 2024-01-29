@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>41.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>This button overrides the default Feed view email action whose  purpose is to Display the description column while choosing email emplate</description>
+    <label>Send An Email Override On Case</label>
+</ApexPage>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_API_Name__c</fullName>
+    <description>The API Name of the Salesforce field</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Salesforce Field API Name</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Primary_Vertical__c</fullName>
+                <default>true</default>
+                <label>Primary_Vertical__c</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

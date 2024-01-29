@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enter_Into_IL_Needed_for_Action_PlanType</fullName>
+    <active>true</active>
+    <description>Ensures that when Record Type is Assisted Living and Action Plan Type is &apos;Life Plan Community&apos;, &apos;Enter into IL&apos; field is populated</description>
+    <errorConditionFormula>AND(
+($Setup.Override_Validation_Rules__c.Override_ActionPlanNeed_Validation__c = False),
+(RecordType.DeveloperName = &quot;Assisted_Living&quot;),
+ISCHANGED(Action_Plan_Type__c),
+ISPICKVAL(Action_Plan_Type__c, &quot;Life Plan Community&quot;),
+ISBLANK(TEXT(Enter_into_IL__c)))</errorConditionFormula>
+    <errorMessage>&quot;When Action Plan Type is &apos;Life Plan Community&apos;,  &apos;Enter into IL&apos; field must be populated.&quot;</errorMessage>
+</ValidationRule>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>CaseVariable</name>
+        <label>CaseVariable</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <actionName>Case.New_IBUC_Case_from_SurveyMonkey</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Owner_Q_INTL_BUC</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.New_IBUC_Case_from_SurveyMonkey</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <name>Record_Criteria</name>
+        <label>Record Criteria</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>International_BUC_From_SurveyMonkey</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LastModifiedById</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0055Y00000GlHpVQAV</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0121O000001ZY2YQAW</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CaseVariable</targetReference>
+            </connector>
+            <label>International BUC - From SurveyMonkey</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Case Update Email Alerts {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case Update Email Alerts</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>This will change ownership of the record to the queue &quot;Q: INTL BUC&quot;</description>
+        <name>Owner_Q_INTL_BUC</name>
+        <label>Owner - Q:INTL BUC</label>
+        <locationX>50</locationX>
+        <locationY>575</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G1O0000056HFa</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Record_Criteria</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

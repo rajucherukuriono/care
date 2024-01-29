@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Lock US Safety Case</label>
+    <protected>false</protected>
+    <values>
+        <field>Error_Message__c</field>
+        <value xsi:type="xsd:string">You will need to have access to delete US Safety Alert
+
+https://caredotcom.my.salesforce.com/m071O0000008Of9</value>
+    </values>
+    <values>
+        <field>Override_Data_Deletion__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Permission_Set_Name__c</field>
+        <value xsi:type="xsd:string">API: Modify All</value>
+    </values>
+    <values>
+        <field>Profile_Name__c</field>
+        <value xsi:type="xsd:string">System Administrator</value>
+    </values>
+    <values>
+        <field>Record_Type__c</field>
+        <value xsi:type="xsd:string">Safety Alert</value>
+    </values>
+    <values>
+        <field>SObject_Name__c</field>
+        <value xsi:type="xsd:string">Case</value>
+    </values>
+    <values>
+        <field>User_Name__c</field>
+        <value xsi:type="xsd:string">yuenan.jiang@care.com;ngozi.madubuko@care.com</value>
+    </values>
+</CustomMetadata>

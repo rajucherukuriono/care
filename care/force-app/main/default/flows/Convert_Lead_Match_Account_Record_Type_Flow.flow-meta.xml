@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Decision_Criteria</name>
+        <label>Decision Criteria</label>
+        <locationX>842</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>HomePay_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_B2B_Account_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Homepay Business Account</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Homepay_Business_Account</targetReference>
+            </connector>
+            <label>HomePay Lead</label>
+        </rules>
+        <rules>
+            <name>US_CAW_Leads</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_B2B_Account_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Business Account</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Business_Account</targetReference>
+            </connector>
+            <label>US CAW Leads</label>
+        </rules>
+        <rules>
+            <name>International_CAW_Leads</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_B2B_Account_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>International WPS Business Account</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>International_WPS_Business_Account</targetReference>
+            </connector>
+            <label>International CAW Leads</label>
+        </rules>
+        <rules>
+            <name>HomePay_Clients</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_B2B_Account_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Homepay Business Account</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>HomePay_Client_Account</targetReference>
+            </connector>
+            <label>HomePay Clients</label>
+        </rules>
+        <rules>
+            <name>Agency_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_B2B_Account_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>BUC Network Agency</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Agency_Account_Record_Type</targetReference>
+            </connector>
+            <label>Agency Lead</label>
+        </rules>
+        <rules>
+            <name>Center_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Converted_Lead_B2B_Account_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>BUC Network Center</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Center_Lead_Record_Type</targetReference>
+            </connector>
+            <label>Center Lead</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Convert Lead - Match Account Record Type {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Convert Lead - Match Account Record Type Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Agency_Account_Record_Type</name>
+        <label>Agency Account Record Type</label>
+        <locationX>1106</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>01239000000UasyAAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Business_Account</name>
+        <label>Business Account</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>01270000000HjBFAA0</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Center_Lead_Record_Type</name>
+        <label>Center Lead Record Type</label>
+        <locationX>1370</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>01239000000UaszAAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Homepay_Business_Account</name>
+        <label>Homepay Business Account</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>012390000001jmnAAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>HomePay_Client_Account</name>
+        <label>HomePay Client Account</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>01270000000Hn8DAAS</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>International_WPS_Business_Account</name>
+        <label>International WPS Business Account</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>01270000000UQCRAA4</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>716</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Decision_Criteria</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Converted_Lead_B2B_Account_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Homepay Business Account</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Converted_Lead_B2B_Account_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Business Account</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Converted_Lead_B2B_Account_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>International WPS Business Account</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Converted_Lead_B2B_Account_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>HomePay Client</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Converted_Lead_B2B_Account_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BUC Network Agency</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Converted_Lead_B2B_Account_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BUC Network Center</stringValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,11 @@
+{
+  "cmsSettings" : { },
+  "currentThemeId" : "166eb236-8bfa-4241-8ad2-8335012f45ee",
+  "headMarkup" : "<link rel=\"shortcut icon\" href=\"/families/s/sfsites/c/resource/1682970651000/FavIcon\" />\n<meta name=\"google-site-verification\" content=\"roIH15EFVQzqHqODBVrKLrvtFjnW5hKA2jBJ8-zJ8So\" />\n<script src=\"/families/s/sfsites/c/resource/1669151008000/cookieController?cg=1\"></script>\n<script src=\"/families/s/sfsites/c/resource/1651157668000/ga\"></script>\n<link rel=\"stylesheet\" href=\"/sfsites/c/resource/CDCC_CssOverrides?cg=16\">",
+  "id" : "69e852b7-4ea0-40f9-8d13-19c7c8c11258",
+  "isLockerServiceEnabled" : true,
+  "isRelaxedCSPLevel" : true,
+  "label" : "main",
+  "templateName" : "Help Center Template",
+  "type" : "appPage"
+}

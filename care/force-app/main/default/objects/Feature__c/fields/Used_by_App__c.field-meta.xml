@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Used_by_App__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If known, check if an installed App is based on this feature.</description>
+    <externalId>false</externalId>
+    <label>Used by App</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

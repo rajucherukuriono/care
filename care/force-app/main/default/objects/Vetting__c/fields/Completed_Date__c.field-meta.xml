@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_Date__c</fullName>
+    <description>Sforce 2497 -- Establish BUC Agency Audit/Verification Process and Reporting for Best Buy</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the date the audit was completed</inlineHelpText>
+    <label>Completed Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <description>concatenateJiraNumberandSubject</description>
+        <name>concatenateJiraNumberandSubject</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Jira_Ticket_Number__c} + &quot; &quot; + {!$Record.Jira_Subject__c}</expression>
+    </formulas>
+    <formulas>
+        <description>concatenate the Jira-number and Subject(first65 caract)</description>
+        <name>concatenatetheJiranumberandSubject</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Jira_Ticket_Number__c} + &quot; &quot; + LEFT({!$Record.Jira_Subject__c}, 65)</expression>
+    </formulas>
+    <formulas>
+        <name>UpdatetheRecordName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Jira_Ticket_Number__c} + &quot;&quot; + {!$Record.Jira_Subject__c}</expression>
+    </formulas>
+    <interviewLabel>Update the SF Jira Tracker Name {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update the SF Jira Tracker Name</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_the_SF_Jira_Tracker_Name</name>
+        <label>Update the SF Jira Tracker Name</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>concatenatetheJiranumberandSubject</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_the_SF_Jira_Tracker_Name</targetReference>
+        </connector>
+        <object>SF_Jira_Tracker__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

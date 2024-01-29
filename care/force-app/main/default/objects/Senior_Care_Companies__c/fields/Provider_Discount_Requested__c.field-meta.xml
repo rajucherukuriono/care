@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provider_Discount_Requested__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SFORCE-2936
+Dev - Add fields to Senior Care Companies object</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Did you ask the provider for a discount?</inlineHelpText>
+    <label>Provider Discount Requested</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

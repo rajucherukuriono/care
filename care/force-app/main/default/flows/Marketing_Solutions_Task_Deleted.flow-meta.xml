@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Notify_Owner</name>
+        <label>Notify Owner</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Owner:User.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>EmailSubject</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <description>Notifies the owner of a Task that their task was deleted.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>EmailBody</name>
+        <dataType>String</dataType>
+        <expression>&quot;A task you owned in Salesforce was deleted&quot; &amp; BR() &amp; 
+&quot;Subject: &quot; &amp; {!$Record.Subject} &amp; BR() &amp; 
+&quot;Account: &quot; &amp; {!GetAccount.Name} &amp; BR() &amp; 
+&quot;Status: &quot; &amp; TEXT({!$Record.Status}) &amp; BR() &amp; 
+&quot;Created Date: &quot; &amp; TEXT( MONTH( DATEVALUE({!$Record.Created_Date_Time__c}) ) ) &amp; &quot;/&quot; &amp; TEXT( DAY( DATEVALUE({!$Record.Created_Date_Time__c}) ) ) &amp; &quot;/&quot; &amp; TEXT( YEAR( DATEVALUE({!$Record.Created_Date_Time__c}) ) ) &amp; BR() &amp;  
+&quot;Due Date: &quot; &amp; TEXT( MONTH( {!$Record.ActivityDate}) ) &amp; &quot;/&quot; &amp; TEXT( DAY( {!$Record.ActivityDate}) ) &amp; &quot;/&quot; &amp; TEXT( YEAR( {!$Record.ActivityDate}) ) &amp; BR() &amp; 
+&quot;Description: &quot; &amp; {!$Record.Description}</expression>
+    </formulas>
+    <formulas>
+        <name>EmailSubject</name>
+        <dataType>String</dataType>
+        <expression>&quot;Your Salesforce task was deleted&quot;</expression>
+    </formulas>
+    <interviewLabel>Marketing Solutions Task Deleted {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Marketing Solutions Task Deleted</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>GetAccount</name>
+        <label>GetAccount</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Notify_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetAccount</targetReference>
+        </connector>
+        <filterFormula>AND({!$Record.OwnerId} != {!$User.Id},
+CONTAINS({!$Record.Owner:User.Profile.Name}, &quot;Sales Origination&quot;),
+BEGINS({!$Record.WhatId}, &quot;001&quot;))</filterFormula>
+        <object>Task</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

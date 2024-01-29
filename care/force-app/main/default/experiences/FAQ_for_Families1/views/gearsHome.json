@@ -1,0 +1,314 @@
+{
+  "appPageId" : "b040d84e-9c82-4aea-b263-8e3486fad169",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "3c7f2ded-02c5-4dcb-b7d5-fda50420c08f",
+  "label" : "GearsHome",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "d5708df0-e35d-487e-b82d-1976feb0ebad",
+          "columns" : [ {
+            "UUID" : "122b30d6-35f2-490c-93a9-6687b7b96ea2",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d5708df0-e35d-487e-b82d-1976feb0ebad",
+      "regions" : [ {
+        "id" : "122b30d6-35f2-490c-93a9-6687b7b96ea2",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : {
+        "small" : "b9f14b79-f094-429b-804a-6c0afdd66ac6"
+      },
+      "renditions" : [ {
+        "id" : "b9f14b79-f094-429b-804a-6c0afdd66ac6",
+        "renditionValue" : {
+          "isVisible" : true
+        },
+        "type" : "renditionComponent"
+      } ],
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(255,255,255,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "292d020f-4fc6-4d02-9b48-3f3239737e70",
+          "columns" : [ {
+            "UUID" : "360966cc-9086-46e7-bc00-8834d0fa6c84",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "292d020f-4fc6-4d02-9b48-3f3239737e70",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:tabMenu",
+          "id" : "0bbe0698-84b5-4bbc-a795-c8538b631d61",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "360966cc-9086-46e7-bc00-8834d0fa6c84",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(255,255,255,0)",
+        "backgroundOverlay" : "rgba(0, 0, 0, 0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "744eac8c-fc1e-4d52-b4e7-7d08e39f6198",
+          "columns" : [ {
+            "UUID" : "ccdeab30-3195-4a99-aac4-4ed0939d350a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 85
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "744eac8c-fc1e-4d52-b4e7-7d08e39f6198",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"faq-container\">\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\">Getting Started</div>\n        <div class=\"slds-m-bottom_small\">\n            <a href=\"/families/s/article/Why-is-Care-com-right-for-my-family?language=en_US\" >Why is Care.com right for my family?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\">\n            <a href=\"/families/s/article/How-do-I-sign-up-as-a-family?language=en_US\">How do I sign up?</a>\n        </div>\n        <div class=\"slds-m-bottom_small\">\n            <a href=\"/families/s/article/What-is-the-difference-between-a-basic-and-premium-membership?language=en_US\" >What's the difference between a basic and premium subscription?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uHWAQ/\" >View All Articles&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Finding a Caregiver</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/What-services-are-offered-on-Care-com?language=en_US\" >What services are offered on Care.com?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-post-a-job-1560430846998?language=en_US\" >How do I post a job?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-choose-the-right-caregiver?language=en_US\" >How do I choose the right caregiver?</a> \n        </div>\n        <div class=\"slds-m-top_small\" >\n            <a href=\"/families/s/topic/0TO5Y000009m2uRWAQ/\" >View All Articles&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Payments</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-upgrade-my-account-1560430847004?language=en_US\" >How do I upgrade my account to a Premium subscription?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-view-the-payments-I-ve-made-to-Care-com?language=en_US\" >How do I view the payments I’ve made to Care.com?</a>\n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/what-is-the-care-com-refund-policy-for-families?language=en_US\" >What is Care.com's refund policy for families?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uMWAQ/\" >View All Articles&nbsp; &gt;</a>\n        </div>\n    </div>\n\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Bookings &amp; Full-Time Jobs</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-book-a-babysitter-and-pay-through-Care-com?language=en_US\" >How do I book a babysitter?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-rebook-a-caregiver?language=en_US\" >How do I rebook a caregiver?</a>\n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/What-do-the-booking-request-statuses-mean-for-families?language=en_US\" >What do the booking request statuses mean for families?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uJWAQ/\" >View All Articles&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Trust &amp; Safety</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-families-can-report-safety-concerns-on-care-com?language=en_US\" >How do I report a safety concern?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/What-is-a-CareCheck-1?language=en_US\" >What is a CareCheck?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-request-a-background-check-on-a-caregiver-1560430848058?language=en_US\" >How do I request a background check on a caregiver?</a> \n        </div>\n        <div class=\"slds-m-top_small\" >\n            <a href=\"/families/s/topic/0TO1O0000026iXwWAI/\" >View All Articles&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Account &amp; Profile</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-reset-my-password-1560430847002?language=en_US\" >How do I reset my password?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/Why-wasn-t-my-photo-approved?language=en_US\" >Why wasn't my photo approved?</a>\n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-can-I-post-a-recommendation-on-a-caregiver?language=en_US\" >How do I review a caregiver?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uWWAQ/\" >View All Articles&nbsp; &gt;</a>\n        </div>\n    </div>\n\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "084b666d-fae2-4dfa-85ff-d0a55a3dbda1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : {
+            "de" : "7afd227f-98fa-4610-a14d-567cc5b269da",
+            "en_gb" : "db444b7c-3fcb-4e1a-8d03-e3f0372fa05d",
+            "es" : "d07d5d88-7759-4cae-8372-e592429516d2",
+            "fr" : "021ef3c7-7ab8-4bf9-b4f4-08598198d1d4"
+          },
+          "renditions" : [ {
+            "id" : "021ef3c7-7ab8-4bf9-b4f4-08598198d1d4",
+            "renditionValue" : {
+              "componentAttributes" : {
+                "richTextValue" : "<div class=\"faq-container\">\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Commencer</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/Why-is-Care-com-right-for-my-family?language=fr\" >Pourquoi Care.com convient-il à ma famille ?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-sign-up-as-a-family?language=fr\" >Comment s'inscrire en famille ?</a>\n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/What-is-the-difference-between-a-basic-and-premium-membership?language=fr\" >L'utilisation de Care.com est-elle payante ?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uHWAQ/\" >Voir tous les articles&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Chercher des soignants</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/What-services-are-offered-on-Care-com?language=fr\" >Quels services sont proposés sur Care.com ?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-post-a-job-1560430846998?language=fr\" >Comment publier une offre d'emploi ?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-can-I-search-for-a-caregiver-1560430847005?language=fr\" >Comment puis-je rechercher des personnes pour m'aider qui me conviennent ?</a> \n        </div>\n        <div class=\"slds-m-top_small\" >\n            <a href=\"/families/s/topic/0TO5Y000009m2uRWAQ/\" >Voir tous les articles&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Paiements</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-edit-or-remove-my-credit-card-on-Care-com?language=fr\" >Comment puis-je mettre à jour mes données de paiement ?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-view-the-payments-I-ve-made-to-Care-com?language=fr\" >Comment puis-je consulter mes factures ?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uMWAQ/\" >Voir tous les articles&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Compte et Profil</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-reset-my-password-1560430847002?language=fr\" >Je ne peux pas me connecter ou j'ai oublié mon mot de passe.</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-edit-my-job-1560430847001?language=fr\" >Comment puis-je modifier mon offre d'emploi ?</a>\n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-can-I-post-a-recommendation-on-a-caregiver?language=fr\" >Comment puis-je donner une évaluation / un avis à une personne ?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uWWAQ/\" >Voir tous les articles&nbsp; &gt;</a>\n        </div>\n    </div>\n</div>"
+              }
+            },
+            "type" : "renditionComponent"
+          }, {
+            "id" : "d07d5d88-7759-4cae-8372-e592429516d2",
+            "renditionValue" : {
+              "componentAttributes" : {
+                "richTextValue" : "<div class=\"faq-container\">\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Empezando</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/Why-is-Care-com-right-for-my-family?language=es\" >¿Por qué Care.com es adecuado para mi familia?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-sign-up-as-a-family?language=es\" >¿Cómo me registro como familia?</a>\n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/What-is-the-difference-between-a-basic-and-premium-membership?language=es\" >¿Tiene algún coste el uso de Care.com?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uHWAQ/\" >Ver todos los artículos&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Buscar cuidado</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/What-services-are-offered-on-Care-com?language=es\" >¿Qué servicios se ofrecen en Care.com?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-post-a-job-1560430846998?language=es\" >¿Cómo publico un anuncio de trabajo?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-can-I-search-for-a-caregiver-1560430847005?language=es\" >¿Cómo puedo buscar supervisores adecuados?</a> \n        </div>\n        <div class=\"slds-m-top_small\" >\n            <a href=\"/families/s/topic/0TO5Y000009m2uRWAQ/\" >Ver todos los artículos&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Pagos</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-edit-or-remove-my-credit-card-on-Care-com?language=es\" >¿Cómo puedo actualizar mis datos de pago?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-view-the-payments-I-ve-made-to-Care-com?language=es\" >¿Cómo puedo ver mis facturas?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uMWAQ/\" >Ver todos los artículos&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Cuenta y perfil</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-reset-my-password-1560430847002?language=es\" >No puedo iniciar sesión o olvidé mi contraseña.</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-edit-my-job-1560430847001?language=es\" >¿Cómo puedo editar mi anuncio de trabajo?</a>\n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-can-I-post-a-recommendation-on-a-caregiver?language=es\" >¿Cómo puedo enviar una reseña para un supervisor?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uWWAQ/\" >Ver todos los artículos&nbsp; &gt;</a>\n        </div>\n    </div>\n</div>"
+              }
+            },
+            "type" : "renditionComponent"
+          }, {
+            "id" : "7afd227f-98fa-4610-a14d-567cc5b269da",
+            "renditionValue" : {
+              "componentAttributes" : {
+                "richTextValue" : "<div class=\"faq-container\">\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Erste Schritte</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/Why-is-Care-com-right-for-my-family?language=de\" >Warum ist Betreut das Richtige für meine Familie?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-sign-up-as-a-family?language=de\" >Wie registriere ich mich als Familie?</a>\n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/What-is-the-difference-between-a-basic-and-premium-membership?language=de\" >Kostet die Nutzung von Betreut.de etwas?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uHWAQ/\" >alle Artikel ansehen&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Eine Pflegekraft finden</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/What-services-are-offered-on-Care-com?language=de\" >Welche Dienstleistungen werden auf Betreut angeboten?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-post-a-job-1560430846998?language=de\" >Wie schalte ich eine Job-Anzeige?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-can-I-search-for-a-caregiver-1560430847005?language=de\" >Wie kann ich nach passenden Betreuern suchen?</a> \n        </div>\n        <div class=\"slds-m-top_small\" >\n            <a href=\"/families/s/topic/0TO5Y000009m2uRWAQ/\" >alle Artikel ansehen&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Zahlungen</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-edit-or-remove-my-credit-card-on-Care-com?language=de\" >Wie kann ich meine Bezahldaten aktualisieren?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-view-the-payments-I-ve-made-to-Care-com?language=de\" >Wie kann ich meine Rechnungen einsehen?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uMWAQ/\" >alle Artikel ansehen&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Konto und Profil</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-reset-my-password-1560430847002?language=de\" >Ich kann mich nicht einloggen oder habe mein Passwort vergessen.</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-edit-my-job-1560430847001?language=de\" >Wie kann ich meine Job-Anzeige bearbeiten?</a>\n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-can-I-post-a-recommendation-on-a-caregiver?language=de\" >Wie kann ich eine Bewertung für einen Betreuer abgeben?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uWWAQ/\" >alle Artikel ansehen&nbsp; &gt;</a>\n        </div>\n    </div>\n</div>"
+              }
+            },
+            "type" : "renditionComponent"
+          }, {
+            "id" : "db444b7c-3fcb-4e1a-8d03-e3f0372fa05d",
+            "renditionValue" : {
+              "componentAttributes" : {
+                "richTextValue" : "<div class=\"faq-container\">\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Getting Started</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/Why-is-Care-com-right-for-my-family?language=en_GB\" >Why is Care.com right for my family?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-sign-up-as-a-family?language=en_GB\" >How do I sign up?</a>\n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/What-is-the-difference-between-a-basic-and-premium-membership?language=en_GB\" >What's the difference between a basic and premium subscription?</a>\n        </div>\n        <div >\n            <a href=\"/families/s/topic/0TO5Y000009m2uHWAQ/\" >View All Articles&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Finding a Caregiver</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/What-services-are-offered-on-Care-com?language=en_GB\" >What services are offered on Care.com?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-post-a-job-1560430846998?language=en_GB\" >How do I post a job?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-can-I-search-for-a-caregiver-1560430847005?language=en_GB\" >How do I search for a caregiver?</a> \n        </div>\n        <div class=\"\" >\n            <a href=\"/families/s/topic/0TO5Y000009m2uRWAQ/\" >View All Articles&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Payments</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-edit-my-credit-card-1560430847676?language=en_GB\" >How do I update my payment method?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-view-the-payments-I-ve-made-to-Care-com?language=en_GB\" >How do I view the payments I’ve made to Care.com?</a>\n        </div>\n        <div >\n            <a href=\"/families/s/topic/0TO5Y000009m2uMWAQ/\" >View All Articles&nbsp; &gt;</a>\n        </div>\n    </div>\n    <div class=\"faq-sub-container\">\n        <div class=\"slds-m-bottom_small\" >Account &amp; Profile</div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-reset-my-password-1560430847002?language=en_GB\" >How do I reset my password?</a> \n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-do-I-edit-my-job-1560430847001?language=en_GB\" >How do I edit a job posting?</a>\n        </div>\n        <div class=\"slds-m-bottom_small\" >\n            <a href=\"/families/s/article/How-can-I-post-a-recommendation-on-a-caregiver?language=en_GB\" >How do I review a caregiver?</a>\n        </div>\n        <div class=\"slds-m-top_small\">\n            <a href=\"/families/s/topic/0TO5Y000009m2uWWAQ/\" >View All Articles&nbsp; &gt;</a>\n        </div>\n    </div>\n</div>"
+              }
+            },
+            "type" : "renditionComponent"
+          } ],
+          "type" : "component"
+        } ],
+        "id" : "ccdeab30-3195-4a99-aac4-4ed0939d350a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "732dbe9a-810c-4d91-a17a-756273dce117",
+          "columns" : [ {
+            "UUID" : "9b326bde-b05a-41d1-a076-edc07a220ccb",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "732dbe9a-810c-4d91-a17a-756273dce117",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "f75927c2-dcc4-4619-96ed-2cb271635fea",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "allowPrepopulatePrechatFields" : true,
+            "avatarImgURL" : "",
+            "codeSettingsName" : "",
+            "defaultMinimizedText" : "Contact Us",
+            "displayHelpButton" : true,
+            "eswConfigurationJSON" : {
+              "baseCoreURL" : "https://caredotcom.my.salesforce.com",
+              "baseLiveAgentContentURL" : "https://c.la3-c2-ia5.salesforceliveagent.com/content",
+              "baseLiveAgentURL" : "https://d.la3-c2-ia5.salesforceliveagent.com/chat",
+              "buttonId" : "5735Y000000oLkU",
+              "deploymentId" : "5725Y000000oLke",
+              "enabledFeatures" : [ "LiveAgent" ],
+              "entryFeature" : "LiveAgent",
+              "eswConfigDevName" : "Help_Center_Chat",
+              "eswConfigId" : "04I5Y000000oLkjUAE",
+              "eswLiveAgentDevName" : "EmbeddedServiceLiveAgent_Parent04I5Y000000oLkjUAE_17784ad95fa",
+              "gslbBaseURL" : "https://service.force.com",
+              "isOfflineCasesEnabled" : "0",
+              "orgId" : "00D700000008kOO"
+            },
+            "externalScripts" : "",
+            "externalStyles" : "",
+            "fallbackRouting" : "",
+            "offlineSupportMinimizedText" : "Contact Us",
+            "offlineText" : "Contact Us",
+            "onlineLoadingText" : "Loading",
+            "prechatBackgroundImgURL" : "",
+            "smallCompanyLogoImgURL" : "",
+            "snippetSettingsFile" : "ChatSnippetSettingsFile",
+            "storageDomain" : "",
+            "waitingStateBackgroundImgURL" : ""
+          },
+          "componentName" : "forceCommunity:embeddedService",
+          "id" : "693edaa4-e4c3-4b07-8424-cafe73a441df",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : {
+            "de" : "d3f80362-acd0-45cf-baae-c7fcdf63cc55",
+            "es" : "3810c4e5-ee7b-4798-8e44-1995d661cff9",
+            "fr" : "780101fc-ea3e-4db5-ab19-7f05df6a80ec"
+          },
+          "renditions" : [ {
+            "id" : "3810c4e5-ee7b-4798-8e44-1995d661cff9",
+            "renditionValue" : {
+              "componentAttributes" : {
+                "defaultMinimizedText" : "Contacta con nosotros",
+                "offlineSupportMinimizedText" : "Contacta con nosotros",
+                "offlineText" : "Contacta con nosotros"
+              }
+            },
+            "type" : "renditionComponent"
+          }, {
+            "id" : "780101fc-ea3e-4db5-ab19-7f05df6a80ec",
+            "renditionValue" : {
+              "componentAttributes" : {
+                "defaultMinimizedText" : "Nous contacter",
+                "offlineSupportMinimizedText" : "Nous contacter",
+                "offlineText" : "Nous contacter"
+              }
+            },
+            "type" : "renditionComponent"
+          }, {
+            "id" : "d3f80362-acd0-45cf-baae-c7fcdf63cc55",
+            "renditionValue" : {
+              "componentAttributes" : {
+                "defaultMinimizedText" : "Kontaktieren Sie uns",
+                "offlineSupportMinimizedText" : "Kontaktieren Sie uns",
+                "offlineText" : "Kontaktieren Sie uns"
+              }
+            },
+            "type" : "renditionComponent"
+          } ],
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : ""
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "0d0b5746-f935-40ac-bb95-eafd50ba5c4d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : ""
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "d80e955a-0df3-49ac-8a58-a33a240e4775",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9b326bde-b05a-41d1-a076-edc07a220ccb",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1731c39b-44d7-46fd-824d-54fdc0373eca",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Care Help Center for Families, Caregivers & Partners"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "cf11642b-d14f-4050-a513-2cabb0c3be6e",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0fe304c3-f633-43ea-9e8b-88956b512b52",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

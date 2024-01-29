@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <description>Is this a new record or did the  Record Owner value change?</description>
+        <name>New_or_Owner_Changed</name>
+        <label>New or Owner Changed?</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IsNeworRecordOwnerChanged</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Name_field</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>(This was created to replicate the Process named PPL Sales Goals.  Details are in Jira Ticket SFORCE-7152)</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Formula to evaluate if the record is New or the Owner changed or either of the Date fields changed.</description>
+        <name>IsNeworRecordOwnerChanged</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW() ||
+ISCHANGED({!$Record.OwnerId}) ||
+ISCHANGED({!$Record.Pay_Period_Start__c}) ||
+ISCHANGED({!$Record.Pay_Period_End__c})</expression>
+    </formulas>
+    <formulas>
+        <description>This formula determines the syntax for the naming convention of the PPL Sales Goal record.</description>
+        <name>PPL_Sales_Goal_Name_Formula</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Owner:User.FirstName} + &quot; &quot; +{!$Record.Owner:User.LastName} + &quot;: &quot; +
+TEXT(MONTH({!$Record.Pay_Period_Start__c})) &amp; &quot;/&quot; &amp;
+TEXT(DAY({!$Record.Pay_Period_Start__c})) &amp; &quot;/&quot; &amp;
+TEXT(YEAR({!$Record.Pay_Period_Start__c})) &amp; &quot;-&quot; &amp;
+TEXT(MONTH({!$Record.Pay_Period_End__c})) &amp; &quot;/&quot; &amp;
+TEXT(DAY({!$Record.Pay_Period_End__c})) &amp; &quot;/&quot; &amp;
+TEXT(YEAR({!$Record.Pay_Period_End__c}))</expression>
+    </formulas>
+    <interviewLabel>PPL Sales Goals {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PPL Sales Goals</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>This will update the PPL Sales Goal Name field with the value in the Formula Variable &quot;PPL_Sales_Goal_Name_Formula&quot;.</description>
+        <name>Update_Name_field</name>
+        <label>Update Name field</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>PPL_Sales_Goal_Name_Formula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>New_or_Owner_Changed</targetReference>
+        </connector>
+        <object>PPL_Sales_Goal__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>Auto_Complete_DataRequests_US</name>
+        <label>Auto Complete DataRequests (US)</label>
+        <locationX>2822</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Auto_Complete_Data_Requests_US_Platform</name>
+            <conditionLogic>1 AND (2 OR 3) AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Request_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Queued - Salesforce Platform</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Data Categories</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Access Data</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Source_System__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>US Platform</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Status_to_Completed_Success</targetReference>
+            </connector>
+            <label>Auto Complete Data Requests US Platform</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Auto_Complete_for_HomePay_and_Galore</name>
+        <label>Auto Complete for HomePay and Galore</label>
+        <locationX>2294</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Auto_Complete_Data_Requests_HomePay_Galore</name>
+            <conditionLogic>1 AND (2 OR 3)  AND (4 OR 5)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Request_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Request Accepted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Access Data</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Data Categories</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Source_System__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Galore</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Source_System__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>HomePay</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Status_to_Completed</targetReference>
+            </connector>
+            <label>Auto Complete Data Requests (HomePay+Galore)</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Auto_Expire_USP</name>
+        <label>Auto Expire - USP</label>
+        <locationX>1238</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Auto_Expire_US_Platform</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Source_System__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>US Platform</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Requested</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Expire_Request</targetReference>
+            </connector>
+            <label>Auto Expire - US Platform</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Completed_FulfillmentDate</name>
+        <label>Is Completed FulfillmentDate</label>
+        <locationX>1766</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IsCompleted</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Fulfillment_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_Status__c</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <elementReference>CompletedText</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Fulfillment_Date</targetReference>
+            </connector>
+            <label>IsCompleted</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Notification_US</name>
+        <label>Notification - US</label>
+        <locationX>446</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>US_Platform</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>USPlatform</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Privacy_Request_US_Platform</targetReference>
+            </connector>
+            <label>US Platform</label>
+        </rules>
+        <rules>
+            <name>HomePay_PR</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>HomePay</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Privacy_Request_Home_Pay</targetReference>
+            </connector>
+            <label>HomePay PR</label>
+        </rules>
+        <rules>
+            <name>Galore_PR</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Galore</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Privacy_Request_Galore</targetReference>
+            </connector>
+            <label>Galore PR</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>Completed</name>
+        <dataType>String</dataType>
+        <expression>&apos;Completed&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>CompletedText</name>
+        <dataType>String</dataType>
+        <expression>&apos;Completed&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>Galore</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(AND(AND(ISNEW(),NOT(ISBLANK(TEXT({!$Record.Request_Status__c})))),
+    ISPICKVAL({!$Record.Source_System__c}, &apos;Galore&apos;),
+    NOT(ISBLANK({!$Record.Email__c}))),
+    AND(ISCHANGED({!$Record.Request_Status__c}),
+    NOT(ISBLANK(TEXT({!$Record.Request_Status__c})))))</expression>
+    </formulas>
+    <formulas>
+        <name>HomePay</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(AND(AND(ISNEW(),NOT(ISBLANK(TEXT({!$Record.Request_Status__c})))),
+      ISPICKVAL({!$Record.Source_System__c}, &apos;HomePay&apos;),
+      NOT(ISBLANK({!$Record.Email__c}))),
+     AND(ISCHANGED({!$Record.Request_Status__c}),
+     NOT(ISBLANK(TEXT({!$Record.Request_Status__c})))))</expression>
+    </formulas>
+    <formulas>
+        <name>TodaysDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
+        <name>USPlatform</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(AND(AND(ISNEW(),NOT(ISBLANK(TEXT({!$Record.Request_Status__c})))), ISPICKVAL({!$Record.Source_System__c}, &apos;US Platform&apos;),
+    NOT(ISBLANK({!$Record.Email__c}))), AND(ISCHANGED({!$Record.Request_Status__c}), 
+   NOT(ISBLANK(TEXT({!$Record.Request_Status__c})))))</expression>
+    </formulas>
+    <interviewLabel>Privacy Trigger {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Privacy Request Trigger</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Expire_Request</name>
+        <label>Expire Request</label>
+        <locationX>1106</locationX>
+        <locationY>384</locationY>
+        <inputAssignments>
+            <field>Fail_Decline_Reason__c</field>
+            <value>
+                <stringValue>Expired</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Request_Status__c</field>
+            <value>
+                <stringValue>Completed - Declined - Salesforce Platform</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Fulfillment_Date</name>
+        <label>Set Fulfillment Date</label>
+        <locationX>1634</locationX>
+        <locationY>384</locationY>
+        <inputAssignments>
+            <field>Fulfillment_Date__c</field>
+            <value>
+                <elementReference>TodaysDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Status_to_Completed</name>
+        <label>Set Status to Completed</label>
+        <locationX>2162</locationX>
+        <locationY>384</locationY>
+        <inputAssignments>
+            <field>Request_Status__c</field>
+            <value>
+                <stringValue>Completed - Success</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Status_to_Completed_Success</name>
+        <label>Set Status to Completed - Success</label>
+        <locationX>2690</locationX>
+        <locationY>384</locationY>
+        <inputAssignments>
+            <field>Request_Status__c</field>
+            <value>
+                <stringValue>Completed - Success</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>1508</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Notification_US</targetReference>
+        </connector>
+        <object>Privacy_Request__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>Auto_Expire_US</name>
+            <connector>
+                <targetReference>Auto_Expire_USP</targetReference>
+            </connector>
+            <label>Auto Expire - US</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>Auto_Expire__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Is_Completed</name>
+            <connector>
+                <targetReference>Is_Completed_FulfillmentDate</targetReference>
+            </connector>
+            <label>Is Completed</label>
+            <offsetNumber>-1</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>CreatedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Auto_Complete_Data_Requests_HP_Gal</name>
+            <connector>
+                <targetReference>Auto_Complete_for_HomePay_and_Galore</targetReference>
+            </connector>
+            <label>Auto Complete Data Requests (HP+Gal)</label>
+            <offsetNumber>-1</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>CreatedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Auto_Complete_Data_Requests_US</name>
+            <connector>
+                <targetReference>Auto_Complete_DataRequests_US</targetReference>
+            </connector>
+            <label>Auto Complete Data Requests (US)</label>
+            <offsetNumber>-1</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>CreatedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Privacy_Request_Galore</name>
+        <label>Privacy Request Galore</label>
+        <locationX>578</locationX>
+        <locationY>384</locationY>
+        <flowName>Privacy_Request_Galore</flowName>
+        <inputAssignments>
+            <name>GetPrivacyRequestID</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Privacy_Request_Home_Pay</name>
+        <label>Privacy Request - Home Pay</label>
+        <locationX>314</locationX>
+        <locationY>384</locationY>
+        <flowName>Privacy_Request_Home_Pay</flowName>
+        <inputAssignments>
+            <name>GetPrivacyRequestID</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Privacy_Request_US_Platform</name>
+        <label>Privacy Request US Platform</label>
+        <locationX>50</locationX>
+        <locationY>384</locationY>
+        <flowName>Privacy_Request_US_Platform</flowName>
+        <inputAssignments>
+            <name>GetPrivacyRequestID</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

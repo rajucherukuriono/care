@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="createCaseFromArticle">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Contact Us Form for Article Detail</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="recordId" label="Knowledge Article id" type="String" description="The Knowledge Article Id of the page where the component is being placed."/>
+            <property name="memberType" label="Member Type" datasource="Seeker,Provider,Company" default="Seeker" type="String" description="The member for the community where this component is being placed"/>
+            <property name="displayPhoneProperty" label="Show Call Center Phone?" type="Boolean" default="true" description="Determines whether to show the Call Center Phone and hours.  Even if this is turned on, Call Center Phone will be hiden outside of work hours and on holidays."/>
+            <property name="displayLiveAgentProperty" label="Show Live Agent?" type="Boolean" description="Determines whether to show Live Agent on the Contact Us Form.  Live Agent will only be shown if a Member Id is known (member id is passed by Care.com website links)."/>
+            <property name="deploymentId" label="Deployment Id" type="String" description="The Live Agent Deployment Id.  The code is hardcoded to use '572390000008Q9d' but this setting is being provided to allow admins to override it if necessary."/>
+            <property name="chatInitUrl" label="Chat Init URL" type="String" description="The URL Salesforce uses to initialize a chat.  If the value changes, you can set the new value here.  Get the 'Chat API Endpoint' value in 'Chat Settings.' and strip out the '/rest/' portion of the URL so that it ends in '/chat'.  After that you'll also need to update the URL in the 'SalesforceLiveAgent' entry in the CSP Trusted Sites section."/>
+            <property name="liveAgentSiteUrl" label="Live Agent URL" type="String" description="Defaults to production value.  If value changes or you want to use a sandbox value, provide new URL here (use HTTPS)."/>
+            <property name="holidayMonth1" label="First Holiday Month" type="String" datasource="January, February, March, April, May, June, July, August, September, October, November, December"/>
+            <property name="holidayDate1" label="First Holiday Date" type="Integer" min="1" max="31"/>
+            <property name="holidayMonth2" label="Second Holiday Month" type="String" datasource="January, February, March, April, May, June, July, August, September, October, November, December"/>
+            <property name="holidayDate2" label="Second Holiday Date" type="Integer" min="1" max="31"/>
+            <property name="holidayMonth3" label="Third Holiday Month" type="String" datasource="January, February, March, April, May, June, July, August, September, October, November, December"/>
+            <property name="holidayDate3" label="Third Holiday Date" type="Integer" min="1" max="31"/>
+            <property name="holidayMonth4" label="Fourth Holiday Month" type="String" datasource="January, February, March, April, May, June, July, August, September, October, November, December"/>
+            <property name="holidayDate4" label="Fourth Holiday Date" type="Integer" min="1" max="31"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

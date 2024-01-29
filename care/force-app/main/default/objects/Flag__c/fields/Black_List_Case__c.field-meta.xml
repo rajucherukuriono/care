@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Black_List_Case__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Blocklist flag match generates more then one safety case for one member</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please choose the Safety alert case</inlineHelpText>
+    <label>Block List Case</label>
+    <referenceTo>Case</referenceTo>
+    <relationshipLabel>Blocklist Flags</relationshipLabel>
+    <relationshipName>Flags</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

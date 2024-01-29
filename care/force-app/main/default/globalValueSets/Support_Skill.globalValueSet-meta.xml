@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Accused List Match</fullName>
+        <default>false</default>
+        <label>Accused List Match</label>
+    </customValue>
+    <customValue>
+        <fullName>All Member Types Other</fullName>
+        <default>false</default>
+        <label>All Member Types Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Blocked Member Appeal</fullName>
+        <default>false</default>
+        <label>Blocked Member Appeal</label>
+    </customValue>
+    <customValue>
+        <fullName>Blocklisted Member Appeals</fullName>
+        <default>false</default>
+        <label>Blocklisted Member Appeals</label>
+    </customValue>
+    <customValue>
+        <fullName>Blocklist Partial Match</fullName>
+        <default>false</default>
+        <label>Blocklist Partial Match</label>
+    </customValue>
+    <customValue>
+        <fullName>Fraud Detection</fullName>
+        <default>false</default>
+        <label>Fraud Detection</label>
+    </customValue>
+    <customValue>
+        <fullName>Identity Verification</fullName>
+        <default>false</default>
+        <label>Identity Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>Inappropriate Activity</fullName>
+        <default>false</default>
+        <label>Inappropriate Activity</label>
+    </customValue>
+    <customValue>
+        <fullName>MC Email</fullName>
+        <default>false</default>
+        <label>MC Email</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Care - EN Default</fullName>
+        <default>false</default>
+        <label>Member Care - EN Default</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Care - EN Sales</fullName>
+        <default>false</default>
+        <label>Member Care - EN Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Care - EN SM</fullName>
+        <default>false</default>
+        <label>Member Care - EN SM</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Care - EN Tier 1</fullName>
+        <default>false</default>
+        <label>Member Care - EN Tier 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Care - EN Tier 2</fullName>
+        <default>false</default>
+        <label>Member Care - EN Tier 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Care - ROW Default</fullName>
+        <default>false</default>
+        <label>Member Care - ROW Default</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Care - ROW SM</fullName>
+        <default>false</default>
+        <label>Member Care - ROW SM</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Care - ROW Tier 1</fullName>
+        <default>false</default>
+        <label>Member Care - ROW Tier 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Care - ROW Tier 2</fullName>
+        <default>false</default>
+        <label>Member Care - ROW Tier 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Flags</fullName>
+        <default>false</default>
+        <label>Member Flags</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Review Escalations</fullName>
+        <default>false</default>
+        <label>Member Review Escalations</label>
+    </customValue>
+    <customValue>
+        <fullName>Negative Media</fullName>
+        <default>false</default>
+        <label>Negative Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Non Member All Contacts</fullName>
+        <default>false</default>
+        <label>Non Member All Contacts</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Member SMB Other</fullName>
+        <default>false</default>
+        <label>Non-Member SMB Other</label>
+    </customValue>
+    <customValue>
+        <fullName>No Skill Matched</fullName>
+        <default>false</default>
+        <label>No Skill Matched</label>
+    </customValue>
+    <customValue>
+        <fullName>Premier Background Check</fullName>
+        <default>false</default>
+        <label>Premier Background Check</label>
+    </customValue>
+    <customValue>
+        <fullName>Provider Account management</fullName>
+        <default>false</default>
+        <label>Provider Account management</label>
+    </customValue>
+    <customValue>
+        <fullName>Provider Other</fullName>
+        <default>false</default>
+        <label>Provider Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Provider Subscription &amp; Billing</fullName>
+        <default>false</default>
+        <label>Provider Subscription &amp; Billing</label>
+    </customValue>
+    <customValue>
+        <fullName>Provider Trust &amp; Safety</fullName>
+        <default>false</default>
+        <label>Provider Trust &amp; Safety</label>
+    </customValue>
+    <customValue>
+        <fullName>Provider Using your account</fullName>
+        <default>false</default>
+        <label>Provider Using your account</label>
+    </customValue>
+    <customValue>
+        <fullName>ROW</fullName>
+        <default>false</default>
+        <label>ROW</label>
+    </customValue>
+    <customValue>
+        <fullName>Safety</fullName>
+        <default>false</default>
+        <label>Safety</label>
+    </customValue>
+    <customValue>
+        <fullName>Safety Email</fullName>
+        <default>false</default>
+        <label>Safety Email</label>
+    </customValue>
+    <customValue>
+        <fullName>Safety Review</fullName>
+        <default>false</default>
+        <label>Safety Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Seeker Account management</fullName>
+        <default>false</default>
+        <label>Seeker Account management</label>
+    </customValue>
+    <customValue>
+        <fullName>Seeker Other</fullName>
+        <default>false</default>
+        <label>Seeker Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Seeker Subscription &amp; Billing</fullName>
+        <default>false</default>
+        <label>Seeker Subscription &amp; Billing</label>
+    </customValue>
+    <customValue>
+        <fullName>Seeker Trust &amp; Safety</fullName>
+        <default>false</default>
+        <label>Seeker Trust &amp; Safety</label>
+    </customValue>
+    <customValue>
+        <fullName>Seeker Using your account</fullName>
+        <default>false</default>
+        <label>Seeker Using your account</label>
+    </customValue>
+    <customValue>
+        <fullName>SMB Account management</fullName>
+        <default>false</default>
+        <label>SMB Account management</label>
+    </customValue>
+    <customValue>
+        <fullName>SMB Marketing Solutions</fullName>
+        <default>false</default>
+        <label>SMB Marketing Solutions</label>
+    </customValue>
+    <customValue>
+        <fullName>SMB Other</fullName>
+        <default>false</default>
+        <label>SMB Other</label>
+    </customValue>
+    <customValue>
+        <fullName>SMB Subscription &amp; Billing</fullName>
+        <default>false</default>
+        <label>SMB Subscription &amp; Billing</label>
+    </customValue>
+    <customValue>
+        <fullName>SMB Trust &amp; Safety</fullName>
+        <default>false</default>
+        <label>SMB Trust &amp; Safety</label>
+    </customValue>
+    <customValue>
+        <fullName>SMB Using your account</fullName>
+        <default>false</default>
+        <label>SMB Using your account</label>
+    </customValue>
+    <customValue>
+        <fullName>Social</fullName>
+        <default>false</default>
+        <label>Social</label>
+    </customValue>
+    <customValue>
+        <fullName>Social International</fullName>
+        <default>false</default>
+        <label>Social International</label>
+    </customValue>
+    <customValue>
+        <fullName>Social US</fullName>
+        <default>false</default>
+        <label>Social US</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Care - EN SM Private</fullName>
+        <default>false</default>
+        <label>Member Care - EN SM Private</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Care - EN SM Public</fullName>
+        <default>false</default>
+        <label>Member Care - EN SM Public</label>
+    </customValue>
+    <customValue>
+        <fullName>MC: EN SM</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MC: EN SM</label>
+    </customValue>
+    <customValue>
+        <fullName>MC: ROW SM</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MC: ROW SM</label>
+    </customValue>
+    <customValue>
+        <fullName>MC: Sales</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MC: Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Member Care - Client Support</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Member Care - Client Support</label>
+    </customValue>
+    <customValue>
+        <fullName>MC:  EN Tier 1</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MC:  EN Tier 1</label>
+    </customValue>
+    <description>Used for Case Object, Mapped in Omni Skill Based Routing</description>
+    <masterLabel>Support Skill</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

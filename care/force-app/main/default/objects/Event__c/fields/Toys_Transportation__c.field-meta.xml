@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Toys_Transportation__c</fullName>
+    <description>SFORCE-1845 Event Care process transition to Salesforce</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Who will provide transportation for toys?</inlineHelpText>
+    <label>Toys Transportation</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

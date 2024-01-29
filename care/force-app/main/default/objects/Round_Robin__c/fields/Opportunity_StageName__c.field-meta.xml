@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_StageName__c</fullName>
+    <defaultValue>&quot;Prospecting&quot;</defaultValue>
+    <externalId>false</externalId>
+    <label>Opportunity Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0-Future Opportunity</fullName>
+                <default>false</default>
+                <label>0-Future Opportunity</label>
+            </value>
+            <value>
+                <fullName>1-Evaluation</fullName>
+                <default>false</default>
+                <label>1-Evaluation</label>
+            </value>
+            <value>
+                <fullName>2-Qualify/Needs Analysis</fullName>
+                <default>false</default>
+                <label>2-Qualify/Needs Analysis</label>
+            </value>
+            <value>
+                <fullName>3-Proposal/Price Quote</fullName>
+                <default>false</default>
+                <label>3-Proposal/Price Quote</label>
+            </value>
+            <value>
+                <fullName>4-Negotiation/Review</fullName>
+                <default>false</default>
+                <label>4-Negotiation/Review</label>
+            </value>
+            <value>
+                <fullName>5-Acceptance of Proposal</fullName>
+                <default>false</default>
+                <label>5-Acceptance of Proposal</label>
+            </value>
+            <value>
+                <fullName>6-Closed-Won</fullName>
+                <default>false</default>
+                <label>6-Closed-Won</label>
+            </value>
+            <value>
+                <fullName>7-Launched</fullName>
+                <default>false</default>
+                <label>7-Launched</label>
+            </value>
+            <value>
+                <fullName>8-Closed-Lost</fullName>
+                <default>false</default>
+                <label>8-Closed-Lost</label>
+            </value>
+            <value>
+                <fullName>9-Closed Upsell Opportunity</fullName>
+                <default>false</default>
+                <label>9-Closed Upsell Opportunity</label>
+            </value>
+            <value>
+                <fullName>10-Lost/Dead</fullName>
+                <default>false</default>
+                <label>10-Lost/Dead</label>
+            </value>
+            <value>
+                <fullName>Prospecting</fullName>
+                <default>false</default>
+                <label>Prospecting</label>
+            </value>
+            <value>
+                <fullName>Qualification</fullName>
+                <default>false</default>
+                <label>Qualification</label>
+            </value>
+            <value>
+                <fullName>Needs Analysis</fullName>
+                <default>false</default>
+                <label>Needs Analysis</label>
+            </value>
+            <value>
+                <fullName>Value Proposition</fullName>
+                <default>false</default>
+                <label>Value Proposition</label>
+            </value>
+            <value>
+                <fullName>Id. Decision Makers</fullName>
+                <default>false</default>
+                <label>Id. Decision Makers</label>
+            </value>
+            <value>
+                <fullName>Perception Analysis</fullName>
+                <default>false</default>
+                <label>Perception Analysis</label>
+            </value>
+            <value>
+                <fullName>Proposal/Price Quote</fullName>
+                <default>false</default>
+                <label>Proposal/Price Quote</label>
+            </value>
+            <value>
+                <fullName>Negotiation/Review</fullName>
+                <default>false</default>
+                <label>Negotiation/Review</label>
+            </value>
+            <value>
+                <fullName>Unassigned</fullName>
+                <default>false</default>
+                <label>Unassigned</label>
+            </value>
+            <value>
+                <fullName>Assigned</fullName>
+                <default>false</default>
+                <label>Assigned</label>
+            </value>
+            <value>
+                <fullName>Prospects</fullName>
+                <default>false</default>
+                <label>Prospects</label>
+            </value>
+            <value>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+                <label>Follow-up</label>
+            </value>
+            <value>
+                <fullName>Interested</fullName>
+                <default>false</default>
+                <label>Interested</label>
+            </value>
+            <value>
+                <fullName>Maintain</fullName>
+                <default>false</default>
+                <label>Maintain</label>
+            </value>
+            <value>
+                <fullName>Closed pending</fullName>
+                <default>false</default>
+                <label>Closed pending</label>
+            </value>
+            <value>
+                <fullName>Qualified</fullName>
+                <default>false</default>
+                <label>Qualified</label>
+            </value>
+            <value>
+                <fullName>Referrals Sent</fullName>
+                <default>false</default>
+                <label>Referrals Sent</label>
+            </value>
+            <value>
+                <fullName>Visits Scheduled</fullName>
+                <default>false</default>
+                <label>Visits Scheduled</label>
+            </value>
+            <value>
+                <fullName>Move/start scheduled</fullName>
+                <default>false</default>
+                <label>Move/start scheduled</label>
+            </value>
+            <value>
+                <fullName>Placement</fullName>
+                <default>false</default>
+                <label>Placement</label>
+            </value>
+            <value>
+                <fullName>Closed Unplaced</fullName>
+                <default>false</default>
+                <label>Closed Unplaced</label>
+            </value>
+            <value>
+                <fullName>Long-term Prospect</fullName>
+                <default>false</default>
+                <label>Long-term Prospect</label>
+            </value>
+            <value>
+                <fullName>2-Opportunity Qualified</fullName>
+                <default>false</default>
+                <label>2-Opportunity Qualified</label>
+            </value>
+            <value>
+                <fullName>3.1-Proposal Without All Steps</fullName>
+                <default>false</default>
+                <label>3.1-Proposal Without All Steps</label>
+            </value>
+            <value>
+                <fullName>3.2-Proposal With All Steps</fullName>
+                <default>false</default>
+                <label>3.2-Proposal With All Steps</label>
+            </value>
+            <value>
+                <fullName>4-Finalist</fullName>
+                <default>false</default>
+                <label>4-Finalist</label>
+            </value>
+            <value>
+                <fullName>5-Pilot</fullName>
+                <default>false</default>
+                <label>5-Pilot</label>
+            </value>
+            <value>
+                <fullName>6-Negotiations Underway</fullName>
+                <default>false</default>
+                <label>6-Negotiations Underway</label>
+            </value>
+            <value>
+                <fullName>7-1-Closed – Won</fullName>
+                <default>false</default>
+                <label>7-1-Closed – Won</label>
+            </value>
+            <value>
+                <fullName>7-2-Closed – Rejected</fullName>
+                <default>false</default>
+                <label>7-2-Closed – Rejected</label>
+            </value>
+            <value>
+                <fullName>7-3-Closed – Lost</fullName>
+                <default>false</default>
+                <label>7-3-Closed – Lost</label>
+            </value>
+            <value>
+                <fullName>7-4-Closed – Lost to No Decision</fullName>
+                <default>false</default>
+                <label>7-4-Closed – Lost to No Decision</label>
+            </value>
+            <value>
+                <fullName>Closed/Contract Ended</fullName>
+                <default>false</default>
+                <label>Closed/Contract Ended</label>
+            </value>
+            <value>
+                <fullName>Contract Pending</fullName>
+                <default>false</default>
+                <label>Contract Pending</label>
+            </value>
+            <value>
+                <fullName>Fulfilled</fullName>
+                <default>false</default>
+                <label>Fulfilled</label>
+            </value>
+            <value>
+                <fullName>Follow Up 10%</fullName>
+                <default>false</default>
+                <label>Follow Up 10%</label>
+            </value>
+            <value>
+                <fullName>Interested 30%</fullName>
+                <default>false</default>
+                <label>Interested 30%</label>
+            </value>
+            <value>
+                <fullName>Demo 50%</fullName>
+                <default>false</default>
+                <label>Demo 50%</label>
+            </value>
+            <value>
+                <fullName>Closed/Maintenance 0%</fullName>
+                <default>false</default>
+                <label>Closed/Maintenance 0%</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Awaiting Payment</fullName>
+                <default>false</default>
+                <label>Awaiting Payment</label>
+            </value>
+            <value>
+                <fullName>Contract Needed</fullName>
+                <default>false</default>
+                <label>Contract Needed</label>
+            </value>
+            <value>
+                <fullName>Contract is Pending</fullName>
+                <default>false</default>
+                <label>Contract is Pending</label>
+            </value>
+            <value>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+                <label>Scheduled</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>10-Dead</fullName>
+                <default>false</default>
+                <label>10-Dead</label>
+            </value>
+            <value>
+                <fullName>Contract Sent</fullName>
+                <default>false</default>
+                <label>Contract Sent</label>
+            </value>
+            <value>
+                <fullName>Contract Under Review</fullName>
+                <default>false</default>
+                <label>Contract Under Review</label>
+            </value>
+            <value>
+                <fullName>Contract Signed-Pending Activation</fullName>
+                <default>false</default>
+                <label>Contract Signed-Pending Activation</label>
+            </value>
+            <value>
+                <fullName>Contract Signed-Payment Failure</fullName>
+                <default>false</default>
+                <label>Contract Signed-Payment Failure</label>
+            </value>
+            <value>
+                <fullName>Contract Signed-License Failure</fullName>
+                <default>false</default>
+                <label>Contract Signed-License Failure</label>
+            </value>
+            <value>
+                <fullName>Closed/Won 100%</fullName>
+                <default>false</default>
+                <label>Closed/Won 100%</label>
+            </value>
+            <value>
+                <fullName>Closed/Lost 0%</fullName>
+                <default>false</default>
+                <label>Closed/Lost 0%</label>
+            </value>
+            <value>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+                <label>Closed Won</label>
+            </value>
+            <value>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+                <label>Closed Lost</label>
+            </value>
+            <value>
+                <fullName>Future Opportunity</fullName>
+                <default>false</default>
+                <label>Future Opportunity</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

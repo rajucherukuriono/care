@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Check_Case_recordType</name>
+        <label>Check Case recordType</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Member_Care_RT</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>International_Email</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Standard</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Auto_Close_testing_example_com_Cases</targetReference>
+            </connector>
+            <label>Member Care RT</label>
+        </rules>
+    </decisions>
+    <description>A troll/bot using the name tsSLAueP and email testing@example.com is creating test cases with Subject as Visitor Downgrade Request and Extraordinary Downgrade, These test cases need to be auto closed at SF Side</description>
+    <environments>Default</environments>
+    <interviewLabel>Auto Close Extraordinary {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Auto Close bot created downgrade requests</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Auto_Close_testing_example_com_Cases</name>
+        <label>Auto Close testing@example.com Cases</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>No_Agent_for_Live_Chat__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G5Y000005PcSpUAK</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Auto-Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Case_recordType</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2) AND 3 AND 4</filterLogic>
+        <filters>
+            <field>Subject</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Visitor Downgrade Request</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Subject</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Extraordinary Downgrade Request</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SuppliedEmail</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>testing@example.com</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>IsClosed</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

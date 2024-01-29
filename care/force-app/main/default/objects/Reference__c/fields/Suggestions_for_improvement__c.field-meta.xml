@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Suggestions_for_improvement__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Was there anything you would suggest to this person for improvement as a care provider?</inlineHelpText>
+    <label>Suggestions for improvement</label>
+    <length>1000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

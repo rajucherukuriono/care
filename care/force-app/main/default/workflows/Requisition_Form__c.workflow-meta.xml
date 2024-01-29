@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Notify_Sales_Ops</fullName>
+        <ccEmails>jacquelyn.booth@care.com</ccEmails>
+        <ccEmails>vivian.chan@care.com</ccEmails>
+        <description>Notify Sales Ops</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jbannon@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>msanez@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sara.pedersen@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Requisition_Forms/Requisition_Forms_Zip_Code_File_Approval_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>Requisition_Form_Zip_Code_File_Approved</fullName>
+        <description>Requisition Form - Zip Code File - Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Requisition_Forms/Requisition_Forms_Zip_Code_File_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Requisition_Form_Zip_Code_File_In_Progress</fullName>
+        <description>Requisition Form - Zip Code File - Pending Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Requisition_Forms/Requisition_Forms_Zip_Code_File_In_Progress</template>
+    </alerts>
+    <alerts>
+        <fullName>Requisition_Form_Zip_Code_File_Incomplete</fullName>
+        <description>Requisition Form - Zip Code File - Incomplete</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Requisition_Forms/Requisition_Forms_Zip_Code_File_Incomplete</template>
+    </alerts>
+    <alerts>
+        <fullName>Requisition_Forms_Zip_Code_File_Complete</fullName>
+        <ccEmails>vivian.chan@care.com</ccEmails>
+        <description>Requisition Forms - Zip Code File - Complete</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>cantilus@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>claudio.amaral@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jaime.ortiz@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jbannon@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>msanez@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sakina.tawawalla@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tara.mcerlean@care.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Requisition_Forms/Requisition_Forms_Zip_Code_File_Complete</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Complete</fullName>
+        <field>Status__c</field>
+        <literalValue>Complete</literalValue>
+        <name>Complete</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>In_Progress</fullName>
+        <field>Status__c</field>
+        <literalValue>In Progress</literalValue>
+        <name>In Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Incomplete</fullName>
+        <field>Status__c</field>
+        <literalValue>Incomplete</literalValue>
+        <name>Incomplete</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending_Approval</fullName>
+        <field>Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Pending Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Zip Code File Complete</fullName>
+        <actions>
+            <name>Requisition_Forms_Zip_Code_File_Complete</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Requisition_Form__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Zip Code File</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Requisition_Form__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Complete</value>
+        </criteriaItems>
+        <description>Send the completed notification out to the owner of the zip code file requisition.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

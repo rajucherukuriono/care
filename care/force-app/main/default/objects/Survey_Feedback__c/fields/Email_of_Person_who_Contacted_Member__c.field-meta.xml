@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_of_Person_who_Contacted_Member__c</fullName>
+    <description>Security/IT/Safety teams launching a Fraud Follow up survey to capture additional information on cases where the member has reported fraud. Sforce - 1634</description>
+    <externalId>false</externalId>
+    <label>Email of Person who Contacted Member</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

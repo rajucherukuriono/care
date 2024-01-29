@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Selection_Priorities__c</fullName>
+    <externalId>false</externalId>
+    <label>Facility Selection Priorities</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Cost</fullName>
+                <default>false</default>
+                <label>Cost</label>
+            </value>
+            <value>
+                <fullName>Dementia Care</fullName>
+                <default>false</default>
+                <label>Dementia Care</label>
+            </value>
+            <value>
+                <fullName>Location</fullName>
+                <default>false</default>
+                <label>Location</label>
+            </value>
+            <value>
+                <fullName>Other Services</fullName>
+                <default>false</default>
+                <label>Other Services</label>
+            </value>
+            <value>
+                <fullName>Quality</fullName>
+                <default>false</default>
+                <label>Quality</label>
+            </value>
+            <value>
+                <fullName>Time</fullName>
+                <default>false</default>
+                <label>Time</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

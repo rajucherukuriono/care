@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SMM_Services_Offered__c</fullName>
+    <externalId>false</externalId>
+    <label>SMM Services Offered</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Develop comprehensive plan</fullName>
+                <default>false</default>
+                <label>Develop comprehensive plan</label>
+            </value>
+            <value>
+                <fullName>Organize, sort, and downsize</fullName>
+                <default>false</default>
+                <label>Organize, sort, and downsize</label>
+            </value>
+            <value>
+                <fullName>Customize floor plans for new home</fullName>
+                <default>false</default>
+                <label>Customize floor plans for new home</label>
+            </value>
+            <value>
+                <fullName>Arrange for disposal of unwanted items</fullName>
+                <default>false</default>
+                <label>Arrange for disposal of unwanted items</label>
+            </value>
+            <value>
+                <fullName>Coordinate and oversee movers</fullName>
+                <default>false</default>
+                <label>Coordinate and oversee movers</label>
+            </value>
+            <value>
+                <fullName>Arrange shipments/storage</fullName>
+                <default>false</default>
+                <label>Arrange shipments/storage</label>
+            </value>
+            <value>
+                <fullName>Supervise and oversee packing</fullName>
+                <default>false</default>
+                <label>Supervise and oversee packing</label>
+            </value>
+            <value>
+                <fullName>Unpack and settle in new home</fullName>
+                <default>false</default>
+                <label>Unpack and settle in new home</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

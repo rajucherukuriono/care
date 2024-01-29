@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Access to Social Media International  Record Type</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Access to Social Media International</label>
+    <recordTypeVisibilities>
+        <recordType>Case.Social_Media_International</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

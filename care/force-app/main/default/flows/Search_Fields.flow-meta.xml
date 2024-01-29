@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>Migrated from the: Search Fields workflow rule
+Workflow rule description:  Copy the Type field to a custom field to enable this on the Global Search</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Search_Field_1_TypeFormula</name>
+        <dataType>String</dataType>
+        <expression>TEXT( $Record.Type)</expression>
+    </formulas>
+    <interviewLabel>Search Fields {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Search Fields</label>
+    <migratedFromWorkflowRuleName>Search Fields</migratedFromWorkflowRuleName>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>This updates the &quot;Search Field 1 - Type&quot;</description>
+        <name>Field_Update_Search_Field_1_Type</name>
+        <label>Field Update - Search Field 1 Type</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>Search_Field_1_Type__c</field>
+            <value>
+                <elementReference>Search_Field_1_TypeFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Field_Update_Search_Field_1_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>InvalidDraft</status>
+</Flow>

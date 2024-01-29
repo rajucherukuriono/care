@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>fake@e.mail</email>
+    <name>Safety - French</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>G_French_Safety</publicGroup>
+        </publicGroups>
+        <roles>
+            <role>French_Team_Agent</role>
+            <role>International_Operations_Manager</role>
+            <role>Non_DACH_Team_Manager</role>
+        </roles>
+        <users>
+            <user>farah.belhadj@care.com</user>
+            <user>gonzalo.conde@care.com</user>
+            <user>isanez@care.com</user>
+            <user>sarah.hamou@care.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

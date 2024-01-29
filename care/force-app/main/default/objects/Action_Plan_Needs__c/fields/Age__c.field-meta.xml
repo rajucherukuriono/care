@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Age__c</fullName>
+    <externalId>false</externalId>
+    <formula>if((DST__c &amp;&amp;  (value(MID(TEXT( CreatedDate ) , 12, 2))-4) &gt;= 17 )||(!DST__c &amp;&amp;  (value(MID(TEXT( CreatedDate ) , 12, 2))-5) &gt;= 17),
+
+/* If created after 5pm EST */
+(IF(
+OR(ISPICKVAL(Status__c,&quot;Closed&quot;),ISPICKVAL(Status__c,&quot;Request Canceled&quot;)), 
+(Action_Plan_Completed_Date__c - Action_Plan_Created_date__c) - 
+( FLOOR ( ( ( (Action_Plan_Completed_Date__c) - Action_Plan_Created_date__c) / 7 ) ) * 2 ) + 
+CASE(MOD ( Action_Plan_Created_date__c - DATE( 1900,1,6 ),7), 
+0,CASE( MOD ((Action_Plan_Completed_Date__c) - DATE( 1900,1,6 ),7),0,1,2 ), 
+1,CASE( MOD ((Action_Plan_Completed_Date__c) - DATE( 1900,1,6 ),7),0,2,1 ), 
+IF(MOD(Action_Plan_Created_date__c - DATE( 1900,1,6 ),7) - MOD((Action_Plan_Completed_Date__c) - DATE( 1900,1,6 ),7) &lt;= 0 ,0, 
+IF(MOD((Action_Plan_Completed_Date__c) - DATE( 1900,1,6 ),7) = 0,1,-2 ) ) ) 
+, 
+((TODAY()) - Action_Plan_Created_date__c ) - 
+( FLOOR ( ( ( (TODAY()) - Action_Plan_Created_date__c) / 7 ) ) * 2 ) + 
+CASE(MOD ( Action_Plan_Created_date__c - DATE( 1900,1,6 ),7), 
+0,CASE( MOD ((TODAY()) - DATE( 1900,1,6 ),7),0,1,2 ), 
+1,CASE( MOD ((TODAY()) - DATE( 1900,1,6 ),7),0,2,1 ), 
+IF(MOD(Action_Plan_Created_date__c - DATE( 1900,1,6 ),7) - MOD((TODAY()) - DATE( 1900,1,6 ),7) &lt;= 0 ,0, 
+IF(MOD((TODAY()) - DATE( 1900,1,6 ),7) = 0,1,-2 ) ) ) )),
+
+/* If created before 5pm EST */
+(IF(
+OR(ISPICKVAL(Status__c,&quot;Closed&quot;),ISPICKVAL(Status__c,&quot;Request Canceled&quot;)), 
+(Action_Plan_Completed_Date__c - Action_Plan_Created_date__c) - 
+( FLOOR ( ( ( (Action_Plan_Completed_Date__c) - Action_Plan_Created_date__c) / 7 ) ) * 2 ) + 
+CASE(MOD ( Action_Plan_Created_date__c - DATE( 1900,1,6 ),7), 
+0,CASE( MOD ((Action_Plan_Completed_Date__c) - DATE( 1900,1,6 ),7),0,1,2 ), 
+1,CASE( MOD ((Action_Plan_Completed_Date__c) - DATE( 1900,1,6 ),7),0,2,1 ), 
+IF(MOD(Action_Plan_Created_date__c - DATE( 1900,1,6 ),7) - MOD((Action_Plan_Completed_Date__c) - DATE( 1900,1,6 ),7) &lt;= 0 ,0, 
+IF(MOD((Action_Plan_Completed_Date__c) - DATE( 1900,1,6 ),7) = 0,1,-2 ) ) ) 
+, 
+((TODAY()) - Action_Plan_Created_date__c ) - 
+( FLOOR ( ( ( (TODAY()) - Action_Plan_Created_date__c) / 7 ) ) * 2 ) + 
+CASE(MOD ( Action_Plan_Created_date__c - DATE( 1900,1,6 ),7), 
+0,CASE( MOD ((TODAY()) - DATE( 1900,1,6 ),7),0,1,2 ), 
+1,CASE( MOD ((TODAY()) - DATE( 1900,1,6 ),7),0,2,1 ), 
+IF(MOD(Action_Plan_Created_date__c - DATE( 1900,1,6 ),7) - MOD((TODAY()) - DATE( 1900,1,6 ),7) &lt;= 0 ,0, 
+IF(MOD((TODAY()) - DATE( 1900,1,6 ),7) = 0,1,-2 ) ) ) )+1)
+)</formula>
+    <inlineHelpText>Action Plan Age in Business Days</inlineHelpText>
+    <label>Age</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

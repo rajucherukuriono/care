@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>Migrated from the: Violation record name and count update workflow rule
+Workflow rule description: This rule updates the Violation record count on account and updates Violation record name in the format VIOL-YYYYMMDD-1&quot;</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Update_Violation_Record_NameFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;VIOL-&apos;+if(YEAR(DateValue($Record.CreatedDate))&lt;10,&apos;0&apos;,&apos;&apos;)+Text(YEAR(DateValue($Record.CreatedDate)))+if(MONTH(DateValue($Record.CreatedDate))&lt;10,&apos;0&apos;,&apos;&apos;)+Text(MONTH(DateValue($Record.CreatedDate)))+if(DAY(DateValue($Record.CreatedDate))&lt;10,&apos;0&apos;,&apos;&apos;)+Text(DAY(DateValue($Record.CreatedDate)))+&apos;-&apos;+Text( if($Record.BUC_Center_Name__r.Violation_Record_Count__c==null,1,$Record.BUC_Center_Name__r.Violation_Record_Count__c))</expression>
+    </formulas>
+    <label>Violation record name and count update</label>
+    <migratedFromWorkflowRuleName>Violation record name and count update</migratedFromWorkflowRuleName>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update Violation Record Name</description>
+        <name>Update_Violation_Record_Name</name>
+        <label>Update Violation Record Name</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>Update_Violation_Record_NameFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Violation_Record_Name</targetReference>
+        </connector>
+        <object>Infraction__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

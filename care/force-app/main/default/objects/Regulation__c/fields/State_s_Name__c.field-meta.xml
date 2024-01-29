@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State_s_Name__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
+    <label>State&apos;s Name</label>
+    <referenceTo>Senior_Care_Companies__c</referenceTo>
+    <relationshipLabel>Regulations</relationshipLabel>
+    <relationshipName>Regulations</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

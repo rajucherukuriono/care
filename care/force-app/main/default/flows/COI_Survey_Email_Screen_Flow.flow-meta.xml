@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Test_SFDC</name>
+        <label>Test SFDC</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <actionName>Account.COI_Survey_Email</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Update_Account_Fields</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>AccountId_From_Account_Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Account.COI_Survey_Email</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>COI Survey Email - Screen Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>COI Survey Email - Screen Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <description>This will update the &quot;Date COI Email was sent&quot; field with the current date/time and update the field &quot;COI Survey Sent By&quot; with the email address of the user who sent the survey.</description>
+        <name>Update_Account_Fields</name>
+        <label>Update Account Fields</label>
+        <locationX>176</locationX>
+        <locationY>458</locationY>
+        <connector>
+            <targetReference>Confirmation_Screen</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>AccountId_From_Account_Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>COI_Survey_Sent_By__c</field>
+            <value>
+                <elementReference>$User.Email</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Date_COI_Email_was_sent__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <screens>
+        <name>Confirm_Before_Sending</name>
+        <label>Confirm Before Sending</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Test_SFDC</targetReference>
+        </connector>
+        <fields>
+            <name>Confirmation_Before_Send_Text</name>
+            <fieldText>&lt;p&gt;Are you sure you want to send the COI Survey Email?  Click Next to Proceed.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Confirmation_Screen</name>
+        <label>Confirmation Screen</label>
+        <locationX>176</locationX>
+        <locationY>566</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Confirmation_Message</name>
+            <fieldText>&lt;p&gt;The email was sent!&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>First_Screen</name>
+        <label>First Screen</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Confirm_Before_Sending</targetReference>
+        </connector>
+        <fields>
+            <name>Send_COI_Survey</name>
+            <fieldText>&lt;p&gt;Click Next to s&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;end COI Survey Email.  &lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>First_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>AccountId_From_Account_Record</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+</Flow>

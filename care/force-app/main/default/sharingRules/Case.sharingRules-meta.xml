@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>AS_Senior_Care</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>AS - Senior Care</label>
+        <sharedTo>
+            <group>Senior_Care</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>AS - Senior Care</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Galore_Marketing_Solutions_cases</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This will share Cases with the Record Type of Galore Marketing Solutions to the Role Marketing Solutions Executive</description>
+        <label>Galore Marketing Solutions cases</label>
+        <sharedTo>
+            <role>ISR_Inside_Sales_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Galore Marketing Solutions</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Galore_Privacy</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Rule Created for Galore</description>
+        <label>Galore Privacy</label>
+        <sharedTo>
+            <group>Share_Galore_Operations</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Galore Privacy</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HomePay_Privacy</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>HomePay Privacy</label>
+        <sharedTo>
+            <group>Share_HP_Operations</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>HomePay Privacy</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>International_BUC</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>SFORCE-2447
+BUC UK - Establish Operational Flow to Support BUC in UK &amp; IRE - Phase I. Added Intl CAW BUC for SFORCE-3752</description>
+        <label>International BUC</label>
+        <sharedTo>
+            <group>Share_Intl_CAW_Ops</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>International CAW Agency,International BUC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>International Personal Network,International CAW</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>International_Senior_Care_Consult_Cases</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>International Senior Care Consult Cases</label>
+        <sharedTo>
+            <group>G_International_Senior_Care</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>International Senior Care Consult</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>LifeCare_Cases_Sharing_Rule</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Access to LifeCare Cases</description>
+        <label>LifeCare Cases Sharing Rule</label>
+        <sharedTo>
+            <group>LifeCare_Cases_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>LifeCare</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Ops_Ops_Cases_Edit_Clone</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Ops: Ops Cases - Edit Clone</label>
+        <sharedTo>
+            <group>Share_Care_Operations</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>AS - Tutor,AS - Pet Care,BUC,AS - Personal Assistant,Chargeback,Standard,AS - Housekeeping,Call Center,AS - Child Care,External Feedback,AS - Standard</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>International Email,International Call Center,Social Media,Social Media US,Social Media International,Premier Background Check</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>AS - Child Care Center,International CAW Agency,International Personal Network,International WPS Services,International BUC,International CAW</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Enrollment,Galore Marketing Solutions</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Safety_Cases</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>If the Case Record Type involves Safety, then share with the Safety Public Group</description>
+        <label>Safety Cases</label>
+        <sharedTo>
+            <group>Safety</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Safety Alert,International Safety Alert</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Sales_Expert_Assistance_Read</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Sales: Expert Assistance - Read</label>
+        <sharedTo>
+            <group>Share_CAWMKP_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>AS - Tutor,AS - Pet Care,AS - Personal Assistant,AS - Housekeeping,AS - Standard,AS - Child Care</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Sales_ISR_MKP_Read</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Sales: ISR MKP - Read</label>
+        <sharedTo>
+            <group>Share_ISR_MKP</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Subject</field>
+            <operation>contains</operation>
+            <value>recruiting,Recruiting</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>International Email,Standard,International Call Center,Call Center</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>IsClosed</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Senior_Care_SC_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Senior Care: SC - Edit</label>
+        <sharedTo>
+            <group>Share_Senior_Care</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Senior Care Consult</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

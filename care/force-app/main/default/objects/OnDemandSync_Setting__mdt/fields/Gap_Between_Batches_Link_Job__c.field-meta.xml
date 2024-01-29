@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gap_Between_Batches_Link_Job__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Indicates how often the LinkAccountToCase job should run (in minutes). Rule of thumb: in Apex Jobs, measure the average job duration (gap between Submitted Date &amp; Completion Date) &amp; pad that by 1 or 2 minutes to ensure the job never run concurrently.</inlineHelpText>
+    <label>Gap Between Batches (Link Job)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

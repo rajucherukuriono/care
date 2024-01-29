@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_URL_Required_Galore</fullName>
+    <active>true</active>
+    <description>For Galore Requests, Data URL is required before they set data requests to &quot;Request Accepted&quot;.</description>
+    <errorConditionFormula>ISPICKVAL(Source_System__c, &apos;Galore&apos;) &amp;&amp;
+ISPICKVAL(Request_Type__c, &apos;Access Data&apos;) &amp;&amp;
+ISPICKVAL(Request_Status__c, &apos;Request Accepted&apos;) &amp;&amp;
+ISBLANK( Data_URL__c )</errorConditionFormula>
+    <errorDisplayField>Data_URL__c</errorDisplayField>
+    <errorMessage>Data URL required before request can be set to &quot;Request Accepted&quot;</errorMessage>
+</ValidationRule>
